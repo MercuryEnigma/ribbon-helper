@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import type { PokemonDatabase } from './types';
 import { GAME_GROUPS, filterPokemonByGames } from './utils';
+import { getPokemonIconProps } from './iconUtils';
 
 interface AvailablePokemonProps {
   pokemonDb: PokemonDatabase;
@@ -65,11 +66,19 @@ export default function AvailablePokemon({ pokemonDb }: AvailablePokemonProps) {
               <p className="no-results">No Pokémon found that are available in all selected games.</p>
             ) : (
               <ul>
-                {filteredPokemon.map(pokemon => (
-                  <li key={pokemon.key}>
-                    {pokemon.name}
-                  </li>
-                ))}
+                {filteredPokemon.map(pokemon => {
+                  const iconProps = getPokemonIconProps(pokemon.key, pokemon.data, pokemonDb);
+                  return (
+                    <li key={pokemon.key}>
+                      <img
+                        className="pokemon-icon"
+                        alt={pokemon.name}
+                        {...iconProps}
+                      />
+                      <span className="pokemon-name">{pokemon.name}</span>
+                    </li>
+                  );
+                })}
               </ul>
             )}
           </div>

@@ -162,11 +162,35 @@
   font-weight: 500;
   color: #212121;
   transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .pokemon-list li:hover {
   border-color: #0056b3;
   box-shadow: 0 2px 4px rgba(0, 86, 179, 0.2);
+}
+
+/* Pokemon Icons */
+.pokemon-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.pokemon-icon-small {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+}
+
+.pokemon-name {
+  flex: 1;
+  min-width: 0;
 }
 
 /* By Species */
@@ -242,13 +266,16 @@
 }
 
 .combobox-option {
-  padding: 1rem 1.25rem;
+  padding: 0.75rem 1rem;
   cursor: pointer;
   transition: all 0.2s;
   font-size: 1rem;
   font-weight: 500;
   color: #212121;
   border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .combobox-option:last-child {

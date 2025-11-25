@@ -128,6 +128,7 @@ export function filterPokemonByGames(
     });
 
     // Post-process: Remove form names if only one form of a species exists in results
+    // BUT only if that one form is the base form (not a regional variant)
     const speciesCounts = new Map<number, number>();
 
     // Count how many entries exist for each natdex
@@ -141,7 +142,7 @@ export function filterPokemonByGames(
       }
     }
 
-    // Update display names - remove form suffix if only one form
+    // Update display names - remove form suffix if only one form AND it's the base form
     for (const result of results) {
       let natdex = result.data.natdex;
       if (!natdex && result.data['data-source']) {
@@ -149,13 +150,14 @@ export function filterPokemonByGames(
       }
 
       if (natdex && speciesCounts.get(natdex) === 1) {
-        // Only one form - use base name only
-        if (result.data['data-source']) {
-          const baseData = pokemonDb[result.data['data-source']];
-          result.name = baseData?.names?.en || result.name;
-        } else if (result.data.names?.en) {
-          result.name = result.data.names.en;
+        // Only one form exists in results
+        // Only remove form name if this IS the base form (no data-source)
+        // Keep form name if this is a regional variant (has data-source)
+        if (!result.data['data-source']) {
+          // This is the base form - use base name without form suffix
+          result.name = result.data.names?.en || result.name;
         }
+        // If it has data-source, keep the form name (e.g., "Typhlosion (Hisui)")
       }
     }
   } catch (error) {

@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import type { PokemonDatabase } from './types';
 import { getGamesForPokemon, getGameGroupNames, searchPokemonByName } from './utils';
+import { getPokemonIconProps } from './iconUtils';
 
 interface BySpeciesProps {
   pokemonDb: PokemonDatabase;
@@ -59,15 +60,25 @@ export default function BySpecies({ pokemonDb }: BySpeciesProps) {
           />
           {showDropdown && searchResults.length > 0 && (
             <ul className="combobox-dropdown">
-              {searchResults.map(result => (
-                <li
-                  key={result.key}
-                  onMouseDown={() => handleSelect(result.key, result.name)}
-                  className="combobox-option"
-                >
-                  {result.name}
-                </li>
-              ))}
+              {searchResults.map(result => {
+                const pokemonData = pokemonDb[result.key];
+                if (!pokemonData) return null;
+                const iconProps = getPokemonIconProps(result.key, pokemonData, pokemonDb);
+                return (
+                  <li
+                    key={result.key}
+                    onMouseDown={() => handleSelect(result.key, result.name)}
+                    className="combobox-option"
+                  >
+                    <img
+                      className="pokemon-icon-small"
+                      alt={result.name}
+                      {...iconProps}
+                    />
+                    <span>{result.name}</span>
+                  </li>
+                );
+              })}
             </ul>
           )}
         </div>

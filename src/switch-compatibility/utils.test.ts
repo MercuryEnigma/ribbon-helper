@@ -108,6 +108,79 @@ describe('filterPokemonByGames', () => {
     expect(result[1].key).toBe('pikachu');
     expect(result[2].key).toBe('meowth');
   });
+
+  it('should keep form name when only regional variant is available (not base form)', () => {
+    // Simulates PLA where only Typhlosion (Hisui) exists, not base Typhlosion
+    const dbWithRegionalOnly: PokemonDatabase = {
+      typhlosion: {
+        names: { en: 'Typhlosion', 'es-es': '', fr: '', de: '', it: '', ja: '', ko: '', 'zh-Hans': '', 'zh-Hant': '' },
+        gender: 'both',
+        natdex: 157,
+        games: ['gold', 'silver', 'sw', 'sh'], // Not in pla
+      },
+      'typhlosion-hisui': {
+        'data-source': 'typhlosion',
+        'form-source': 'hisui',
+        gender: 'both',
+        games: ['pla', 'scar', 'vio'], // Only in pla
+      },
+    };
+
+    const result = filterPokemonByGames(dbWithRegionalOnly, ['pla']);
+    expect(result).toHaveLength(1);
+    expect(result[0].key).toBe('typhlosion-hisui');
+    // Should show "Typhlosion (Hisui)", not just "Typhlosion"
+    expect(result[0].name).toBe('Typhlosion (Hisui)');
+  });
+
+  it('should remove form name when only base form is available', () => {
+    // When only the base form exists (like Burmy with only Plant Cloak shown)
+    const dbWithBaseOnly: PokemonDatabase = {
+      burmy: {
+        names: { en: 'Burmy', 'es-es': '', fr: '', de: '', it: '', ja: '', ko: '', 'zh-Hans': '', 'zh-Hant': '' },
+        gender: 'both',
+        natdex: 412,
+        games: ['sw', 'sh'],
+      },
+      'burmy-sandy': {
+        'data-source': 'burmy',
+        forms: { en: 'Sandy Cloak', 'es-es': '', fr: '', de: '', it: '', ja: '', ko: '', 'zh-Hans': '', 'zh-Hant': '' },
+        gender: 'both',
+        games: ['diamond', 'pearl'], // Not in sw/sh
+      },
+    };
+
+    const result = filterPokemonByGames(dbWithBaseOnly, ['sw', 'sh']);
+    expect(result).toHaveLength(1);
+    expect(result[0].key).toBe('burmy');
+    // Should show just "Burmy", not "Burmy (Plant Cloak)" since only one form
+    expect(result[0].name).toBe('Burmy');
+  });
+
+  it('should show both forms when base and regional variant are both available', () => {
+    const dbWithBothForms: PokemonDatabase = {
+      vulpix: {
+        names: { en: 'Vulpix', 'es-es': '', fr: '', de: '', it: '', ja: '', ko: '', 'zh-Hans': '', 'zh-Hant': '' },
+        gender: 'both',
+        natdex: 37,
+        games: ['sw', 'sh'],
+      },
+      'vulpix-alola': {
+        'data-source': 'vulpix',
+        'form-source': 'alola',
+        gender: 'both',
+        games: ['sw', 'sh'],
+      },
+    };
+
+    const result = filterPokemonByGames(dbWithBothForms, ['sw', 'sh']);
+    expect(result).toHaveLength(2);
+    expect(result[0].key).toBe('vulpix');
+    expect(result[1].key).toBe('vulpix-alola');
+    // Both should show their names
+    expect(result[0].name).toBe('Vulpix');
+    expect(result[1].name).toBe('Vulpix (Alola)');
+  });
 });
 
 describe('getGamesForPokemon', () => {
