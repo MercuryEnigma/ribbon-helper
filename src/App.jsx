@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
+import SwitchCompatibility from './switch-compatibility'
 
 export default function App() {
   const [sel, setSel] = useState('switch')
 
   const content = {
-    switch: 'Switch Compatibility functionality coming soon.',
     berry: 'Berry blending functionality coming soon.',
     contest: 'Contest move planning functionality coming soon.'
   }
@@ -22,7 +22,11 @@ export default function App() {
 
       <main className="main">
         <section className="panel">
-          <p className="coming">{content[sel]}</p>
+          {sel === 'switch' ? (
+            <SwitchCompatibility />
+          ) : (
+            <p className="coming">{content[sel]}</p>
+          )}
         </section>
       </main>
     </div>

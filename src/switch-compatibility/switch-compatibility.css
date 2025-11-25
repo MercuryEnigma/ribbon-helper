@@ -1,0 +1,475 @@
+/* Switch Compatibility Styles - WCAG AA Compliant */
+.switch-compatibility {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+}
+
+/* Mode Selector */
+.mode-selector {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #757575;
+  padding-bottom: 0;
+}
+
+.mode-selector button {
+  padding: 1rem 2rem;
+  background: #e0e0e0;
+  border: 2px solid #757575;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #212121;
+  transition: all 0.2s;
+  position: relative;
+  top: 3px;
+}
+
+.mode-selector button:hover {
+  background: #d0d0d0;
+  color: #000;
+  border-color: #424242;
+}
+
+.mode-selector button.active {
+  background: #fff;
+  color: #0056b3;
+  border-color: #0056b3;
+  border-bottom-color: #fff;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Mode Content */
+.mode-content {
+  padding: 1.5rem 0;
+}
+
+/* Available Pokemon */
+.available-pokemon {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.game-selector h3,
+.pokemon-results h3,
+.pokemon-search h3,
+.game-results h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000;
+  background: #f0f7ff;
+  border: 2px solid #0056b3;
+  border-radius: 6px 6px 0 0;
+  border-bottom: 4px solid #0056b3;
+  padding: 1rem 1.25rem;
+  letter-spacing: -0.01em;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Game Checkboxes */
+.game-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.game-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid #e0e0e0;
+  background: #fff;
+  transition: all 0.2s;
+}
+
+.game-checkbox:hover {
+  background: #f5f5f5;
+  border-color: #0056b3;
+}
+
+.game-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #0056b3;
+}
+
+.game-checkbox span {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #212121;
+}
+
+/* Pokemon Results */
+.pokemon-results {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 2px solid #757575;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-list {
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.pokemon-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.pokemon-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.pokemon-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.pokemon-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.pokemon-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.pokemon-list li {
+  padding: 0.875rem 1rem;
+  background: #fff;
+  border-radius: 6px;
+  border: 2px solid #757575;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #212121;
+  transition: all 0.2s;
+}
+
+.pokemon-list li:hover {
+  border-color: #0056b3;
+  box-shadow: 0 2px 4px rgba(0, 86, 179, 0.2);
+}
+
+/* By Species */
+.by-species {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Combobox */
+.combobox-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.combobox-input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #212121;
+  border: 2px solid #757575;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.2s;
+  background: #fff;
+}
+
+.combobox-input:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+}
+
+.combobox-input::placeholder {
+  color: #757575;
+}
+
+.combobox-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 350px;
+  overflow-y: auto;
+  background: #fff;
+  border: 2px solid #0056b3;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: -2px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.combobox-dropdown::-webkit-scrollbar {
+  width: 8px;
+}
+
+.combobox-dropdown::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.combobox-dropdown::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.combobox-dropdown::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.combobox-option {
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #212121;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.combobox-option:last-child {
+  border-bottom: none;
+}
+
+.combobox-option:hover {
+  background: #e3f2fd;
+  color: #0056b3;
+}
+
+/* Game Results */
+.game-results {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 2px solid #757575;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.game-list li {
+  padding: 1rem 1.25rem;
+  background: #f5f5f5;
+  border-radius: 6px;
+  border: 2px solid #757575;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #212121;
+  transition: all 0.2s;
+}
+
+.game-list li:hover {
+  background: #e3f2fd;
+  border-color: #0056b3;
+  color: #0056b3;
+}
+
+/* Hints and Messages */
+.hint {
+  color: #424242;
+  font-style: italic;
+  margin: 1.5rem 0;
+  font-size: 1.125rem;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-left: 4px solid #757575;
+  border-radius: 4px;
+}
+
+.no-results {
+  color: #424242;
+  font-style: italic;
+  margin: 1.5rem 0;
+  font-size: 1.125rem;
+  padding: 1rem;
+  background: #fff3e0;
+  border-left: 4px solid #f57c00;
+  border-radius: 4px;
+}
+
+/* Error Boundary */
+.error-boundary {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.error-message {
+  max-width: 700px;
+  background: #fff3cd;
+  border: 3px solid #cc7a00;
+  border-radius: 8px;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.error-message h3 {
+  margin: 0 0 1rem 0;
+  color: #6d4c00;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.error-message p {
+  margin: 0 0 1.5rem 0;
+  color: #6d4c00;
+  font-size: 1.125rem;
+}
+
+.error-message details {
+  margin: 1.5rem 0;
+  text-align: left;
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 6px;
+  border: 2px solid #cc7a00;
+}
+
+.error-message summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #424242;
+  font-size: 1rem;
+}
+
+.error-message summary:hover {
+  color: #212121;
+}
+
+.error-message pre {
+  margin: 1rem 0 0 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.875rem;
+  color: #c62828;
+  background: #ffebee;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ef9a9a;
+}
+
+.error-message button {
+  padding: 0.875rem 2rem;
+  background: #cc7a00;
+  border: 2px solid #b36a00;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.error-message button:hover {
+  background: #b36a00;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.error-message button:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .switch-compatibility {
+    padding: 1rem;
+  }
+
+  .pokemon-list ul {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .mode-selector {
+    flex-direction: column;
+    border-bottom: none;
+    gap: 0.5rem;
+  }
+
+  .mode-selector button {
+    top: 0;
+    border: 2px solid #757575;
+    border-radius: 6px;
+  }
+
+  .mode-selector button.active {
+    border: 2px solid #0056b3;
+  }
+
+  .pokemon-list ul {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .combobox-container {
+    max-width: 100%;
+  }
+
+  .game-selector h3,
+  .pokemon-results h3,
+  .pokemon-search h3,
+  .game-results h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pokemon-list ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Focus styles for accessibility */
+.mode-selector button:focus-visible,
+.game-checkbox input:focus-visible,
+.combobox-input:focus-visible,
+.error-message button:focus-visible {
+  outline: 3px solid #0056b3;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .mode-selector {
+    display: none;
+  }
+
+  .pokemon-list {
+    max-height: none;
+  }
+}
