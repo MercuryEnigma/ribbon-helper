@@ -1,3 +1,7 @@
 node_modules
 dist
 .env
+src/data/Gen 3 Pokeblock and Contest Lookup - Efficient Blocks.tsv
+src/data/icon_index.html
+.gitignore
+src/data/Gen 3 Pokeblock and Contest Lookup - Example Block Kits.tsv

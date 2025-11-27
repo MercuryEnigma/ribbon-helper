@@ -1,0 +1,395 @@
+/* Berry Blending Styles - aligned with Switch Compatibility */
+.berry-blending {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+}
+
+.berry-header h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000;
+  letter-spacing: -0.01em;
+}
+
+.berry-header p {
+  margin: 0.35rem 0 1.5rem 0;
+  color: #424242;
+  font-size: 1.05rem;
+}
+
+/* Mode Selector */
+.berry-mode-selector {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #757575;
+  padding-bottom: 0;
+  flex-wrap: wrap;
+}
+
+.berry-mode-selector button {
+  padding: 1rem 1.5rem;
+  background: #e0e0e0;
+  border: 2px solid #757575;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #212121;
+  transition: all 0.2s;
+  position: relative;
+  top: 3px;
+}
+
+.berry-mode-selector button:hover {
+  background: #d0d0d0;
+  color: #000;
+  border-color: #424242;
+}
+
+.berry-mode-selector button.active {
+  background: #fff;
+  color: #0056b3;
+  border-color: #0056b3;
+  border-bottom-color: #fff;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.berry-mode-content {
+  padding: 1.5rem 0;
+}
+
+/* Cards and Messages */
+.berry-blending .hint {
+  color: #424242;
+  font-style: italic;
+  margin: 1.25rem 0;
+  font-size: 1.05rem;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-left: 4px solid #757575;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.berry-coming-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 2px solid #757575;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.berry-coming-card h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0056b3;
+}
+
+.berry-coming-card p {
+  margin: 0;
+  color: #424242;
+  font-size: 1.05rem;
+}
+
+/* RSE Blending */
+.rse-blending h3 {
+  margin: 0 0 1.25rem 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000;
+  background: #f0f7ff;
+  border: 2px solid #0056b3;
+  border-radius: 6px 6px 0 0;
+  border-bottom: 4px solid #0056b3;
+  padding: 1rem 1.25rem;
+  letter-spacing: -0.01em;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.blending-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  border: 2px solid #757575;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.option-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.option-group.inline {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.option-group label {
+  font-weight: 700;
+  color: #212121;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.option-group select {
+  padding: 0.75rem 1rem;
+  border: 2px solid #757575;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fff;
+  cursor: pointer;
+  min-width: 220px;
+  transition: all 0.2s;
+}
+
+.option-group select:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+}
+
+/* Player Buttons */
+.player-buttons {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.player-buttons button {
+  padding: 0.65rem 1.1rem;
+  background: #fff;
+  border: 2px solid #757575;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #212121;
+  transition: all 0.2s;
+  min-width: 52px;
+}
+
+.player-buttons button:hover {
+  background: #e3f2fd;
+  border-color: #0056b3;
+  color: #0056b3;
+}
+
+.player-buttons button.active {
+  background: #0056b3;
+  color: #fff;
+  border-color: #004494;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Option Checkboxes */
+.option-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 0.75rem 0.9rem;
+  background: #f8f8f8;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  transition: all 0.2s;
+}
+
+.option-checkbox:hover {
+  border-color: #0056b3;
+  background: #f0f7ff;
+}
+
+.option-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #0056b3;
+}
+
+.option-checkbox input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.option-checkbox:has(input:disabled) {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.option-checkbox span {
+  font-size: 1rem;
+  color: #212121;
+}
+
+/* Berry Kit Display */
+.berry-kit {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 2px solid #757575;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.berry-kit h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0056b3;
+}
+
+.kit-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: #f8f8f8;
+  border-radius: 6px;
+}
+
+.block-item {
+  padding: 0.75rem 0.9rem;
+  background: #fff;
+  border: 2px solid #757575;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: center;
+  min-width: 130px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.block-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0056b3;
+  text-align: center;
+}
+
+.block-berry {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #424242;
+}
+
+.kit-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  flex-wrap: wrap;
+}
+
+.stat-label {
+  font-weight: 700;
+  color: #212121;
+  min-width: 130px;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.stat {
+  padding: 0.35rem 0.6rem;
+  background: #f0f0f0;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  border: 1px solid #ddd;
+}
+
+.stat.spicy { background: #ffe0e0; color: #c62828; }
+.stat.dry { background: #e0f2ff; color: #0277bd; }
+.stat.sweet { background: #fff0e0; color: #e65100; }
+.stat.bitter { background: #e8f5e9; color: #2e7d32; }
+.stat.sour { background: #f3e5f5; color: #6a1b9a; }
+
+.berry-blending .no-results {
+  color: #424242;
+  font-style: italic;
+  margin: 1.25rem 0;
+  font-size: 1.05rem;
+  padding: 1rem;
+  background: #fff3e0;
+  border-left: 4px solid #f57c00;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .berry-blending {
+    padding: 1rem;
+  }
+
+  .berry-mode-selector {
+    flex-direction: column;
+    border-bottom: none;
+  }
+
+  .berry-mode-selector button {
+    top: 0;
+    border: 2px solid #757575;
+    border-radius: 6px;
+  }
+
+  .berry-mode-selector button.active {
+    border: 2px solid #0056b3;
+  }
+
+  .option-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .option-group.inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .option-group select {
+    width: 100%;
+  }
+
+  .stat-label {
+    min-width: auto;
+  }
+}
+
+/* Focus styles for accessibility */
+.berry-mode-selector button:focus-visible,
+.berry-blending .player-buttons button:focus-visible,
+.berry-blending .option-checkbox input:focus-visible,
+.berry-blending select:focus-visible {
+  outline: 3px solid #0056b3;
+  outline-offset: 2px;
+}

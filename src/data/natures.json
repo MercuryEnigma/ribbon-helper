@@ -1,0 +1,31 @@
+{
+  "Hardy":   { "likes": "",     "dislikes": "" },
+  "Lonely":  { "likes": "spicy",  "dislikes": "sour" },
+  "Brave":   { "likes": "spicy",  "dislikes": "sweet" },
+  "Adamant": { "likes": "spicy",  "dislikes": "dry" },
+  "Naughty": { "likes": "spicy",  "dislikes": "bitter" },
+
+  "Bold":    { "likes": "sour",   "dislikes": "spicy" },
+  "Docile":  { "likes": "",     "dislikes": "" },
+  "Relaxed": { "likes": "sour",   "dislikes": "sweet" },
+  "Impish":  { "likes": "sour",   "dislikes": "dry" },
+  "Lax":     { "likes": "sour",   "dislikes": "bitter" },
+
+  "Timid":   { "likes": "sweet",  "dislikes": "spicy" },
+  "Hasty":   { "likes": "sweet",  "dislikes": "sour" },
+  "Serious": { "likes": "",     "dislikes": "" },
+  "Jolly":   { "likes": "sweet",  "dislikes": "dry" },
+  "Naive":   { "likes": "sweet",  "dislikes": "bitter" },
+
+  "Modest":  { "likes": "dry",    "dislikes": "spicy" },
+  "Mild":    { "likes": "dry",    "dislikes": "sour" },
+  "Quiet":   { "likes": "dry",    "dislikes": "sweet" },
+  "Bashful": { "likes": "",     "dislikes": "" },
+  "Rash":    { "likes": "dry",    "dislikes": "bitter" },
+
+  "Calm":    { "likes": "bitter", "dislikes": "spicy" },
+  "Gentle":  { "likes": "bitter", "dislikes": "sour" },
+  "Sassy":   { "likes": "bitter", "dislikes": "sweet" },
+  "Careful": { "likes": "bitter", "dislikes": "dry" },
+  "Quirky":  { "likes": "",     "dislikes": "" }
+}
