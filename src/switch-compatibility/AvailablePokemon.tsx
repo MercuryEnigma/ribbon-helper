@@ -61,27 +61,45 @@ export default function AvailablePokemon({ pokemonDb }: AvailablePokemonProps) {
         {selectedGames.length === 0 ? (
           <p className="hint">Select one or more games above to see which Pokémon are available in all of them.</p>
         ) : (
-          <div className="pokemon-list">
+          <>
             {filteredPokemon.length === 0 ? (
               <p className="no-results">No Pokémon found that are available in all selected games.</p>
             ) : (
-              <ul>
-                {filteredPokemon.map(pokemon => {
-                  const iconProps = getPokemonIconProps(pokemon.key, pokemon.data, pokemonDb);
-                  return (
-                    <li key={pokemon.key}>
+              <>
+                <div className="pokemon-icon-grid">
+                  {filteredPokemon.map(pokemon => {
+                    const iconProps = getPokemonIconProps(pokemon.key, pokemon.data, pokemonDb);
+                    return (
                       <img
-                        className="pokemon-icon"
+                        key={pokemon.key}
+                        className="pokemon-icon-grid-item"
                         alt={pokemon.name}
+                        title={pokemon.name}
                         {...iconProps}
                       />
-                      <span className="pokemon-name">{pokemon.name}</span>
-                    </li>
-                  );
-                })}
-              </ul>
+                    );
+                  })}
+                </div>
+                <div className="pokemon-list">
+                  <ul>
+                    {filteredPokemon.map(pokemon => {
+                      const iconProps = getPokemonIconProps(pokemon.key, pokemon.data, pokemonDb);
+                      return (
+                        <li key={pokemon.key}>
+                          <img
+                            className="pokemon-icon"
+                            alt={pokemon.name}
+                            {...iconProps}
+                          />
+                          <span className="pokemon-name">{pokemon.name}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </>
             )}
-          </div>
+          </>
         )}
       </div>
     </div>

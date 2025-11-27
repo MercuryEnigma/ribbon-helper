@@ -33,7 +33,7 @@ export interface Flavors {
 }
 
 export interface BerryKit {
-  blocks: Array<{ name: string; berry: string; count: number }>;
+  blocks: Array<{ name: string; berry: string; players: number; npc: number }>;
   totalStats: Flavors;
   totalFeel: number;
   averageStat: number;
@@ -213,7 +213,7 @@ export function calculateOptimalBerryKit(
   // Current state
   const stats = { spicy: 0, dry: 0, sweet: 0, bitter: 0, sour: 0 };
   let totalFeel = 0;
-  const kit: Array<{ name: string; berry: string; count: number }> = [];
+  const kit: Array<{ name: string; berry: string; players: number; npc: number }> = [];
 
   // Greedy approach: repeatedly add the most efficient block
   while (totalFeel < FEEL_LIMIT) {
@@ -237,13 +237,16 @@ export function calculateOptimalBerryKit(
     }
 
     // Add the best block
-    const adjustedBestBlock = applyNatureModifiers({
-      spicy: bestBlock.block.spicy,
-      dry: bestBlock.block.dry,
-      sweet: bestBlock.block.sweet,
-      bitter: bestBlock.block.bitter,
-      sour: bestBlock.block.bitter,
-      }, nature);
+    const adjustedBestBlock = applyNatureModifiers(
+      {
+        spicy: bestBlock.block.spicy,
+        dry: bestBlock.block.dry,
+        sweet: bestBlock.block.sweet,
+        bitter: bestBlock.block.bitter,
+        sour: bestBlock.block.sour,
+      },
+      nature
+    );
     stats.spicy = Math.min(STAT_LIMIT, stats.spicy + adjustedBestBlock.spicy);
     stats.dry = Math.min(STAT_LIMIT, stats.dry + adjustedBestBlock.dry);
     stats.sweet = Math.min(STAT_LIMIT, stats.sweet + adjustedBestBlock.sweet);
@@ -251,45 +254,50 @@ export function calculateOptimalBerryKit(
     stats.sour = Math.min(STAT_LIMIT, stats.sour + adjustedBestBlock.sour);
     totalFeel += bestBlock.block.feel;
 
-    const existing = kit.find(b => b.name === bestBlock!.name);
-    if (existing) {
-      existing.count++;
-    } else {
-      kit.push({ name: bestBlock.name, berry: bestBlock.block.berry, count: 1 });
-    }
+    kit.push({
+      name: bestBlock.name,
+      berry: bestBlock.block.berry,
+      players: bestBlock.block.players,
+      npc: bestBlock.block.npc
+    });
   }
 
   // Try to add one more block if we have room (can exceed feel limit on last block)
   // Consider ALL blocks (both regular and finishing) for the last position
   if (totalFeel < FEEL_LIMIT) {
     let bestLast: { name: string; block: Pokeblock; score: number } | null = null;
+    const finishingEntries = Object.entries(finishing);
+    const masterFinishingEntries = finishingEntries.filter(([, block]) => block['blend-master']);
+    const finishingPool =
+      withBerryMaster && masterFinishingEntries.length > 0
+        ? masterFinishingEntries
+        : finishingEntries;
+    const candidateSets =
+      withBerryMaster && finishingPool.length > 0
+        ? [finishingPool]
+        : [Object.entries(regular), finishingPool];
 
-    // Consider all regular blocks
-    for (const [name, block] of Object.entries(regular)) {
-      const score = calculateBlockScore(block, stats, nature);
+    for (const entries of candidateSets) {
+      for (const [name, block] of entries) {
+        const score = calculateBlockScore(block, stats, nature);
 
-      if (!bestLast || score > bestLast.score) {
-        bestLast = { name, block, score };
-      }
-    }
-
-    // Also consider all finishing blocks (they can only be used last)
-    for (const [name, block] of Object.entries(finishing)) {
-      const score = calculateBlockScore(block, stats, nature);
-
-      if (!bestLast || score > bestLast.score) {
-        bestLast = { name, block, score };
+        if (!bestLast || score > bestLast.score) {
+          bestLast = { name, block, score };
+        }
       }
     }
 
     if (bestLast && bestLast.score > 0) {
-      const adjustedBestLast = applyNatureModifiers({
-        spicy: bestLast.block.spicy,
-        dry: bestLast.block.dry,
-        sweet: bestLast.block.sweet,
-        bitter: bestLast.block.bitter,
-        sour: bestLast.block.bitter,
-        }, nature);
+      const adjustedBestLast = applyNatureModifiers(
+        {
+          spicy: bestLast.block.spicy,
+          dry: bestLast.block.dry,
+          sweet: bestLast.block.sweet,
+          bitter: bestLast.block.bitter,
+          sour: bestLast.block.sour,
+        },
+        nature
+      );
       stats.spicy = Math.min(STAT_LIMIT, stats.spicy + adjustedBestLast.spicy);
       stats.dry = Math.min(STAT_LIMIT, stats.dry + adjustedBestLast.dry);
       stats.sweet = Math.min(STAT_LIMIT, stats.sweet + adjustedBestLast.sweet);
@@ -297,7 +305,12 @@ export function calculateOptimalBerryKit(
       stats.sour = Math.min(STAT_LIMIT, stats.sour + adjustedBestLast.sour);
       totalFeel += bestLast.block.feel;
 
-      kit.push({ name: bestLast.name, berry: bestLast.block.berry, count: 1 });
+      kit.push({
+        name: bestLast.name,
+        berry: bestLast.block.berry,
+        players: bestLast.block.players,
+        npc: bestLast.block.npc
+      });
     }
   }
 

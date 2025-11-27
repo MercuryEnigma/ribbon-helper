@@ -69,6 +69,11 @@ export function filterPokemonByGames(
         continue;
       }
 
+      // Exclude specific forms to avoid duplicates
+      if (key === 'unown-exclamation' || key === 'unown-question' || key === 'zygarde-10') {
+        continue;
+      }
+
       // Check if this Pokemon is available in ALL selected games
       const availableInAll = selectedGameIds.every(gameId =>
         data.games.includes(gameId)
@@ -196,6 +201,7 @@ export function getGamesForPokemon(
 
 /**
  * Get unique game group names from game IDs
+ * Returns in the order: Let's Go -> Sword/Shield -> BDSP -> Legends Arceus -> Scarlet/Violet
  */
 export function getGameGroupNames(gameIds: string[]): string[] {
   const groupNames = new Set<string>();
@@ -207,7 +213,13 @@ export function getGameGroupNames(gameIds: string[]): string[] {
     }
   }
 
-  return Array.from(groupNames).sort();
+  // Sort by GAME_GROUPS order instead of alphabetically
+  const uniqueNames = Array.from(groupNames);
+  return uniqueNames.sort((a, b) => {
+    const aIndex = GAME_GROUPS.findIndex(g => g.name === a);
+    const bIndex = GAME_GROUPS.findIndex(g => g.name === b);
+    return aIndex - bIndex;
+  });
 }
 
 /**

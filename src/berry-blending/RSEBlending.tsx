@@ -4,7 +4,7 @@ import natures from '../data/natures.json';
 
 export default function RSEBlending() {
   const [playerCount, setPlayerCount] = useState<1 | 2 | 3 | 4>(1);
-  const [withGamecube, setWithGamecube] = useState(false);
+  const [withGamecube, setWithGamecube] = useState(true);
   const [withMirageIsland, setWithMirageIsland] = useState(false);
   const [withBerryMaster, setWithBerryMaster] = useState(false);
   const [nature, setNature] = useState<string>('');
@@ -58,13 +58,7 @@ export default function RSEBlending() {
             <input
               type="checkbox"
               checked={withGamecube}
-              onChange={(e) => {
-                setWithGamecube(e.target.checked);
-                if (!e.target.checked) {
-                  setWithMirageIsland(false);
-                  setWithBerryMaster(false);
-                }
-              }}
+              onChange={(e) => setWithGamecube(e.target.checked)}
             />
             <span>GameCube (Colosseum/XD berries)</span>
           </label>
@@ -74,7 +68,6 @@ export default function RSEBlending() {
               type="checkbox"
               checked={withMirageIsland}
               onChange={(e) => setWithMirageIsland(e.target.checked)}
-              disabled={!withGamecube}
             />
             <span>Mirage Island (Liechi berry)</span>
           </label>
@@ -84,7 +77,6 @@ export default function RSEBlending() {
               type="checkbox"
               checked={withBerryMaster}
               onChange={(e) => setWithBerryMaster(e.target.checked)}
-              disabled={!withGamecube || playerCount !== 1}
             />
             <span>Berry Master (Emerald only, 1 player)</span>
           </label>
@@ -97,8 +89,9 @@ export default function RSEBlending() {
           <div className="kit-blocks">
             {berryKit.blocks.map((block, index) => (
               <div key={index} className="block-item">
-                <div className="block-name">
-                  {block.count > 1 ? `${block.count}× ` : ''}{block.name}
+                <div className="block-name">{block.name}</div>
+                <div className="block-meta">
+                  {block.npc > 0 ? `${block.npc} NPC` : `${block.players}-player`}
                 </div>
                 <div className="block-berry">{block.berry}</div>
               </div>
@@ -117,10 +110,10 @@ export default function RSEBlending() {
               </div>
             </div>
 
-            <div className="stat-row">
+            {/* <div className="stat-row">
               <span className="stat-label">Feel:</span>
               <span>{berryKit.totalFeel} / 255</span>
-            </div>
+            </div> */}
 
             <div className="stat-row">
               <span className="stat-label">Average Stat:</span>
