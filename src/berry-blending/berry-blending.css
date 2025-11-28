@@ -113,6 +113,20 @@
   letter-spacing: -0.01em;
 }
 
+/* RSE Blending */
+.dppt-blending h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000;
+  background: #f0f7ff;
+  border: 2px solid #0056b3;
+  border-radius: 4px 4px 0 0;
+  border-bottom: 3px solid #0056b3;
+  padding: 0.6rem 0.9rem;
+  letter-spacing: -0.01em;
+}
+
 .blending-options {
   display: flex;
   flex-direction: column;
@@ -127,7 +141,7 @@
 
 .option-row {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 1rem;
   flex-wrap: wrap;
 }
@@ -211,6 +225,8 @@
   border-radius: 4px;
   border: 1px solid #ddd;
   transition: all 0.2s;
+  flex: 1;
+  min-height: 42px;
 }
 
 .option-checkbox:hover {
@@ -307,6 +323,7 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.85rem;
+  color: #000;
 }
 
 .stat-label {

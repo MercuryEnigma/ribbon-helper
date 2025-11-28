@@ -129,60 +129,44 @@ function getAvailablePokeblocks(
 }
 
 /**
- * Calculate efficiency score for a block by focusing on improving the lowest stat
+ * Calculate efficiency score for a block based on weighted stat improvements
  */
 function calculateBlockScore(
   block: Pokeblock,
   currentStats: Flavors,
   nature: string | null
 ): number {
-  // Apply nature modifiers to current stats to find the true lowest stat
-  // const currentAdjusted = applyNatureModifiers(currentStats, nature);
-  const lowestFlavor = lowestFlavorKey(currentStats);
-  const lowestFlavorValue = currentStats[lowestFlavor];
-
-  // // Find the current lowest stat value  
-  // const currentLowest = Math.min(
-  //   currentAdjusted.spicy,
-  //   currentAdjusted.dry,
-  //   currentAdjusted.sweet,
-  //   currentAdjusted.bitter,
-  //   currentAdjusted.sour
-  // );
-
-  // Calculate what stats would be AFTER adding this block (capped at 255 per stat)
+  // Apply nature modifiers to the block stats
   const adjustedBlock = applyNatureModifiers(
-    {spicy: block.spicy,
+    {
+      spicy: block.spicy,
       dry: block.dry,
       sweet: block.sweet,
       bitter: block.bitter,
       sour: block.sour
     },
-      nature);
-  const newStats = {
-    spicy: Math.min(STAT_LIMIT, currentStats.spicy + adjustedBlock.spicy),
-    dry: Math.min(STAT_LIMIT, currentStats.dry + adjustedBlock.dry),
-    sweet: Math.min(STAT_LIMIT, currentStats.sweet + adjustedBlock.sweet),
-    bitter: Math.min(STAT_LIMIT, currentStats.bitter + adjustedBlock.bitter),
-    sour: Math.min(STAT_LIMIT, currentStats.sour + adjustedBlock.sour)
-  };
-  const newFlavorValue = newStats[lowestFlavor];
+    nature
+  );
 
-  // Apply nature modifiers to new stats
-  // const newAdjusted = applyNatureModifiers(newStats, nature);
+  // Calculate weighted efficiency score
+  // Lower stats get higher weight - we weight by percentage improvement
+  let weightedScore = 0;
+  const stats: Array<keyof Flavors> = ['spicy', 'dry', 'sweet', 'bitter', 'sour'];
 
-  // // Find the new lowest stat value
-  // const newLowest = Math.min(
-  //   newAdjusted.spicy,
-  //   newAdjusted.dry,
-  //   newAdjusted.sweet,
-  //   newAdjusted.bitter,
-  //   newAdjusted.sour
-  // );
+  for (const stat of stats) {
+    const currentValue = currentStats[stat];
+    const blockValue = adjustedBlock[stat];
 
-  // Efficiency: improvement to lowest stat per feel point
-  const improvement = newFlavorValue - lowestFlavorValue;
-  return improvement / block.feel;
+    if (blockValue > 0) {
+      // Weight is higher when current stat is lower
+      // Use 1 + (255 - current) to give more weight to improving low stats
+      const weight = 1 + (STAT_LIMIT - currentValue);
+      weightedScore += blockValue * weight;
+    }
+  }
+
+  // Return efficiency: weighted score per feel point
+  return weightedScore / block.feel;
 }
 
 /**

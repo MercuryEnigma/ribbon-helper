@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import RSEBlending from './RSEBlending';
+import DPPtBlending from './DPPtBlending';
 import './berry-blending.css';
 
 type GameSelection = 'rse' | 'dppt' | 'oras' | 'bdsp';
@@ -43,9 +44,18 @@ export default function BerryBlending() {
 
         {selectedGame === 'rse' && <RSEBlending />}
 
-        {(selectedGame === 'dppt' || selectedGame === 'oras' || selectedGame === 'bdsp') && (
+        {selectedGame === 'dppt' && <DPPtBlending />}
+
+        {(selectedGame === 'oras') && (
           <div className="coming-soon berry-coming-card">
-            <h3>{selectedGame?.toUpperCase()} Berry Blending</h3>
+            <h3>{selectedGame?.toUpperCase()} Pokeblock Making</h3>
+            <p>Mixing details for this game are coming soon.</p>
+          </div>
+        )}
+
+        {(selectedGame === 'bdsp') && (
+          <div className="coming-soon berry-coming-card">
+            <h3>{selectedGame?.toUpperCase()} Poffin Making</h3>
             <p>Mixing details for this game are coming soon.</p>
           </div>
         )}

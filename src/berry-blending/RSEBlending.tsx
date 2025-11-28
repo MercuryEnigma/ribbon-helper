@@ -110,14 +110,10 @@ export default function RSEBlending() {
               </div>
             </div>
 
-            {/* <div className="stat-row">
-              <span className="stat-label">Feel:</span>
-              <span>{berryKit.totalFeel} / 255</span>
-            </div> */}
-
             <div className="stat-row">
               <span className="stat-label">Average Stat:</span>
               <span>{berryKit.averageStat.toFixed(1)}</span>
+              <span className="stat-label">(at 85+ PRM)</span>
             </div>
           </div>
         </div>
