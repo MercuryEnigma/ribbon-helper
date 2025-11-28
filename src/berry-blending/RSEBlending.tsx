@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { calculateOptimalBerryKit } from './berryCalculator';
+import { calculateOptimalPokeblockKit } from './pokeblockCalculator';
 import natures from '../data/natures.json';
 
 export default function RSEBlending() {
@@ -10,7 +10,7 @@ export default function RSEBlending() {
   const [nature, setNature] = useState<string>('');
 
   const berryKit = useMemo(() => {
-    return calculateOptimalBerryKit(
+    return calculateOptimalPokeblockKit(
       playerCount,
       withGamecube,
       withMirageIsland,

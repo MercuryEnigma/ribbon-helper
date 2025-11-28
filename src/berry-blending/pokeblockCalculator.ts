@@ -172,7 +172,7 @@ function calculateBlockScore(
 /**
  * Greedy algorithm to find optimal berry kit
  */
-export function calculateOptimalBerryKit(
+export function calculateOptimalPokeblockKit(
   playerCount: 1 | 2 | 3 | 4,
   withGamecube: boolean,
   withMirageIsland: boolean,

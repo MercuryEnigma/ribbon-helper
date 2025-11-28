@@ -213,13 +213,7 @@ export function getGameGroupNames(gameIds: string[]): string[] {
     }
   }
 
-  // Sort by GAME_GROUPS order instead of alphabetically
-  const uniqueNames = Array.from(groupNames);
-  return uniqueNames.sort((a, b) => {
-    const aIndex = GAME_GROUPS.findIndex(g => g.name === a);
-    const bIndex = GAME_GROUPS.findIndex(g => g.name === b);
-    return aIndex - bIndex;
-  });
+  return Array.from(groupNames).sort((a, b) => a.localeCompare(b));
 }
 
 /**

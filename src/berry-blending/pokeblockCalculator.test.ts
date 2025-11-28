@@ -1,12 +1,12 @@
 import { describe, it, expect } from 'vitest';
-import { calculateOptimalBerryKit, type Pokeblock } from './berryCalculator';
+import { calculateOptimalPokeblockKit, type Pokeblock } from './pokeblockCalculator';
 import pokeblocks from '../data/pokeblocks.json';
 
 const blockData = pokeblocks as Record<string, Pokeblock>;
 
-describe('calculateOptimalBerryKit', () => {
+describe('calculateOptimalPokeblockKit', () => {
   it('accumulates flavor stats correctly (including sour)', () => {
-    const kit = calculateOptimalBerryKit(1, true, false, false, null);
+    const kit = calculateOptimalPokeblockKit(1, true, false, false, null);
     expect(kit).not.toBeNull();
     if (!kit) return;
 
@@ -27,7 +27,7 @@ describe('calculateOptimalBerryKit', () => {
   });
 
   it('uses a Berry Master finishing block when enabled', () => {
-    const kit = calculateOptimalBerryKit(1, true, false, true, null);
+    const kit = calculateOptimalPokeblockKit(1, true, false, true, null);
     expect(kit).not.toBeNull();
     if (!kit) return;
 
