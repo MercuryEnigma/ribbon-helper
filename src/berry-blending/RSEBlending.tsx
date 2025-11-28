@@ -107,6 +107,7 @@ export default function RSEBlending() {
                 <span className="stat sweet">Sweet: {berryKit.totalStats.sweet}</span>
                 <span className="stat bitter">Bitter: {berryKit.totalStats.bitter}</span>
                 <span className="stat sour">Sour: {berryKit.totalStats.sour}</span>
+                <span className="stat sheen">Sheen: {berryKit.totalFeel}</span>
               </div>
             </div>
 

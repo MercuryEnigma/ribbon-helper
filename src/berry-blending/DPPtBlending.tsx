@@ -129,6 +129,7 @@ export default function DPPtBlending() {
                 <span className="stat sweet">Sweet: {poffinKit.totalStats.sweet}</span>
                 <span className="stat bitter">Bitter: {poffinKit.totalStats.bitter}</span>
                 <span className="stat sour">Sour: {poffinKit.totalStats.sour}</span>
+                <span className="stat sheen">Sheen: {poffinKit.totalFeel}</span>
               </div>
             </div>
 
