@@ -3,7 +3,7 @@ import React from 'react';
 export default function ORASBlending() {
   return (
     <div className="oras-blending">
-      <h3>Omega Ruby / Alpha Sapphire Pokeblock Making</h3>
+      <h3><span>Omega Ruby / Alpha Sapphire Pokeblock Making</span></h3>
 
       <div className="oras-info-card">
         <p>

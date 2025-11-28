@@ -14,6 +14,19 @@ export default function BerryBlending() {
     <div className="berry-blending">
       <div className="berry-mode-selector">
         <button
+          className="nav-arrow nav-arrow-left"
+          aria-label="Previous"
+          onClick={() => {
+            if (selectedGame === 'rse') setSelectedGame('bdsp');
+            else if (selectedGame === 'dppt') setSelectedGame('rse');
+            else if (selectedGame === 'oras') setSelectedGame('dppt');
+            else if (selectedGame === 'bdsp') setSelectedGame('oras');
+          }}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+        <button
           className={selectedGame === 'rse' ? 'active' : ''}
           onClick={() => setSelectedGame('rse')}
         >
@@ -36,6 +49,19 @@ export default function BerryBlending() {
           onClick={() => setSelectedGame('bdsp')}
         >
           BDSP
+        </button>
+        <button
+          className="nav-arrow nav-arrow-right"
+          aria-label="Next"
+          onClick={() => {
+            if (selectedGame === 'rse') setSelectedGame('dppt');
+            else if (selectedGame === 'dppt') setSelectedGame('oras');
+            else if (selectedGame === 'oras') setSelectedGame('bdsp');
+            else if (selectedGame === 'bdsp') setSelectedGame('rse');
+          }}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         </button>
       </div>
 

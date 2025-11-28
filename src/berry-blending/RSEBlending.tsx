@@ -23,7 +23,7 @@ export default function RSEBlending() {
 
   return (
     <div className="rse-blending">
-      <h3>Ruby / Sapphire / Emerald Berry Blending</h3>
+      <h3><span>Ruby / Sapphire / Emerald Berry Blending</span></h3>
 
       <div className="blending-options">
         <div className="option-row">
