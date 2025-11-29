@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import type { PokemonDatabase } from './types';
 import { getGamesForPokemon, getGameGroupNames, searchPokemonByName, getPokemonDisplayName } from './utils';
 import { getPokemonIconProps } from './iconUtils';
+import games from '../data/games.json';
 
 interface BySpeciesProps {
   pokemonDb: PokemonDatabase;
@@ -99,6 +100,36 @@ export default function BySpecies({ pokemonDb, initialPokemonKey }: BySpeciesPro
     return getPokemonIconProps(selectedPokemon, selectedPokemonData, pokemonDb);
   }, [pokemonDb, selectedPokemon, selectedPokemonData]);
 
+  const earliestGen = useMemo(() => {
+    if (!pokemonDb || !selectedPokemonData) return '';
+    try {
+      const gameIds = (() => {
+        const ownGames = Array.isArray(selectedPokemonData.games) ? selectedPokemonData.games : [];
+
+        // If the form has explicit games, use them; otherwise, fall back to the base form's games.
+        if (ownGames.length > 0 || !selectedPokemonData['data-source']) {
+          return ownGames;
+        }
+
+        const baseKey = selectedPokemonData['data-source'];
+        const baseGames = baseKey && pokemonDb[baseKey]?.games;
+        return Array.isArray(baseGames) ? baseGames : [];
+      })();
+
+      let minGen: number | null = null;
+      for (const id of gameIds) {
+        const entry = (games as any)[id];
+        const gen = entry?.gen ?? ((entry?.partOf && (games as any)[entry.partOf]?.gen) || null);
+        if (gen !== null && (minGen === null || gen < minGen)) {
+          minGen = gen;
+        }
+      }
+      return minGen ? `Gen ${minGen}` : '';
+    } catch {
+      return '';
+    }
+  }, [pokemonDb, selectedPokemon, selectedPokemonData]);
+
   return (
     <div className="by-species">
       <div className="pokemon-search">
@@ -172,6 +203,9 @@ export default function BySpecies({ pokemonDb, initialPokemonKey }: BySpeciesPro
                 <span className="pokedex-entry-title-number">{natdexNumber}</span>
                 <span className="pokedex-entry-title-name">{displayName}</span>
               </div>
+              {earliestGen && (
+                <div className="pokedex-entry-gen">{earliestGen}</div>
+              )}
             </div>
             <div className="pokedex-entry-rows">
               {availableGames.length === 0 ? (

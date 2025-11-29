@@ -486,6 +486,19 @@
   letter-spacing: 0.1px;
 }
 
+.pokedex-entry-gen {
+  margin-left: auto;
+  padding: 0.35rem 0.7rem;
+  background: linear-gradient(180deg, #f6c48a 0%, #e59a4a 100%);
+  border: 1px solid #ad4f10;
+  border-radius: 12px;
+  font-weight: 800;
+  color: #2b1a00;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
 .pokedex-entry-title-number {
   font-weight: 800;
 }
