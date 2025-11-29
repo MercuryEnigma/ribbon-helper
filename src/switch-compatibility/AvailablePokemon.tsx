@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useLayoutEffect, useRef } from 'react';
 import type { PokemonDatabase } from './types';
 import { GAME_GROUPS, filterPokemonByGames } from './utils';
 import { getPokemonIconProps } from './iconUtils';
@@ -9,6 +9,8 @@ interface AvailablePokemonProps {
 
 export default function AvailablePokemon({ pokemonDb }: AvailablePokemonProps) {
   const [selectedGames, setSelectedGames] = useState<string[]>([]);
+  const [gridHeight, setGridHeight] = useState<number | null>(null);
+  const iconGridRef = useRef<HTMLDivElement | null>(null);
 
   const toggleGame = (gameIds: string[]) => {
     setSelectedGames(prev => {
@@ -32,6 +34,18 @@ export default function AvailablePokemon({ pokemonDb }: AvailablePokemonProps) {
     if (!pokemonDb) return [];
     return filterPokemonByGames(pokemonDb, selectedGames);
   }, [pokemonDb, selectedGames]);
+
+  useLayoutEffect(() => {
+    const measure = () => {
+      if (iconGridRef.current) {
+        setGridHeight(iconGridRef.current.getBoundingClientRect().height);
+      }
+    };
+
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
+  }, [filteredPokemon.length]);
 
   return (
     <div className="available-pokemon">
@@ -65,8 +79,8 @@ export default function AvailablePokemon({ pokemonDb }: AvailablePokemonProps) {
             {filteredPokemon.length === 0 ? (
               <p className="no-results">No Pokémon found that are available in all selected games.</p>
             ) : (
-              <>
-                <div className="pokemon-icon-grid">
+              <div className="pokemon-results-content">
+                <div className="pokemon-icon-grid" ref={iconGridRef}>
                   {filteredPokemon.map(pokemon => {
                     const iconProps = getPokemonIconProps(pokemon.key, pokemon.data, pokemonDb);
                     return (
@@ -80,10 +94,21 @@ export default function AvailablePokemon({ pokemonDb }: AvailablePokemonProps) {
                     );
                   })}
                 </div>
-                <div className="pokemon-list">
+                <div
+                  className="pokemon-list"
+                  style={gridHeight ? { height: gridHeight } : undefined}
+                >
                   <ul>
                     {filteredPokemon.map(pokemon => {
                       const iconProps = getPokemonIconProps(pokemon.key, pokemon.data, pokemonDb);
+
+                      // Get natdex - if form, look up base Pokemon's natdex
+                      let natdex = pokemon.data.natdex;
+                      if (!natdex && pokemon.data['data-source']) {
+                        natdex = pokemonDb[pokemon.data['data-source']]?.natdex;
+                      }
+                      const displayNumber = natdex ? `No. ${natdex.toString().padStart(3, '0')}` : '';
+
                       return (
                         <li key={pokemon.key}>
                           <img
@@ -91,13 +116,14 @@ export default function AvailablePokemon({ pokemonDb }: AvailablePokemonProps) {
                             alt={pokemon.name}
                             {...iconProps}
                           />
+                          <span className="pokemon-number">{displayNumber}</span>
                           <span className="pokemon-name">{pokemon.name}</span>
                         </li>
                       );
                     })}
                   </ul>
                 </div>
-              </>
+              </div>
             )}
           </>
         )}
