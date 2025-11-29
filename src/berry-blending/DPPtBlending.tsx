@@ -64,7 +64,7 @@ export default function DPPtBlending() {
               checked={withPlatinum}
               onChange={(e) => setWithPlatinum(e.target.checked)}
             />
-            <span>Platinum (Veilstone Dept. Score)</span>
+            <span>Veilstone Dept. store poffins (Platinum only)</span>
           </label>
 
           <label className="option-checkbox">
@@ -73,7 +73,7 @@ export default function DPPtBlending() {
               checked={withMild}
               onChange={(e) => setWithMild(e.target.checked)}
             />
-            <span>Include Mild Gift</span>
+            <span>Include Mild poffin gift</span>
           </label>
         </div>
 
@@ -84,7 +84,7 @@ export default function DPPtBlending() {
               checked={withFrontier}
               onChange={(e) => setWithFrontier(e.target.checked)}
             />
-            <span>Battle Frontier (Pt/HG/SS only)</span>
+            <span>Battle Frontier (Pt/HG/SS)</span>
           </label>
 
           <label className="option-checkbox">

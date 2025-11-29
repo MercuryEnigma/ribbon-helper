@@ -23,7 +23,7 @@ export default function RSEBlending() {
 
   return (
     <div className="rse-blending">
-      <h3><span>Ruby / Sapphire / Emerald Berry Blending</span></h3>
+      <h3><span>Ruby / Sapphire / Emerald Pokeblock Blending</span></h3>
 
       <div className="blending-options">
         <div className="option-row">
@@ -60,7 +60,7 @@ export default function RSEBlending() {
               checked={withGamecube}
               onChange={(e) => setWithGamecube(e.target.checked)}
             />
-            <span>GameCube (Colosseum/XD berries)</span>
+            <span>Pinch berries (Gamecube)</span>
           </label>
 
           <label className="option-checkbox">
@@ -69,7 +69,7 @@ export default function RSEBlending() {
               checked={withMirageIsland}
               onChange={(e) => setWithMirageIsland(e.target.checked)}
             />
-            <span>Mirage Island (Liechi berry)</span>
+            <span>Liechi (Mirage Island)</span>
           </label>
 
           <label className="option-checkbox">
@@ -78,7 +78,7 @@ export default function RSEBlending() {
               checked={withBerryMaster}
               onChange={(e) => setWithBerryMaster(e.target.checked)}
             />
-            <span>Berry Master (Emerald only, 1 player)</span>
+            <span>Blend Master (Emerald)</span>
           </label>
         </div>
       </div>

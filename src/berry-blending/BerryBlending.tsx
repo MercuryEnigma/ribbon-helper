@@ -22,8 +22,8 @@ export default function BerryBlending() {
             else if (selectedGame === 'oras') setSelectedGame('dppt');
             else if (selectedGame === 'bdsp') setSelectedGame('oras');
           }}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="15,6 9,12 15,18"/>
           </svg>
         </button>
         <button
@@ -59,8 +59,8 @@ export default function BerryBlending() {
             else if (selectedGame === 'oras') setSelectedGame('bdsp');
             else if (selectedGame === 'bdsp') setSelectedGame('rse');
           }}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="9,6 15,12 9,18"/>
           </svg>
         </button>
       </div>
