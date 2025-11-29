@@ -1,16 +1,40 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import type { PokemonDatabase } from './types';
-import { getGamesForPokemon, getGameGroupNames, searchPokemonByName } from './utils';
+import { getGamesForPokemon, getGameGroupNames, searchPokemonByName, getPokemonDisplayName } from './utils';
 import { getPokemonIconProps } from './iconUtils';
 
 interface BySpeciesProps {
   pokemonDb: PokemonDatabase;
+  initialPokemonKey?: string;
 }
 
-export default function BySpecies({ pokemonDb }: BySpeciesProps) {
+export default function BySpecies({ pokemonDb, initialPokemonKey }: BySpeciesProps) {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedPokemon, setSelectedPokemon] = useState<string>('');
+  const [selectedPokemon, setSelectedPokemon] = useState<string>(initialPokemonKey || '');
   const [showDropdown, setShowDropdown] = useState(false);
+
+  useEffect(() => {
+    if (initialPokemonKey && pokemonDb[initialPokemonKey]) {
+      setSelectedPokemon(initialPokemonKey);
+      const pokemonData = pokemonDb[initialPokemonKey];
+
+      // For forms with data-source, we need to get the base name from the source Pokemon
+      let displayName = '';
+      if (pokemonData['data-source']) {
+        const sourceData = pokemonDb[pokemonData['data-source']];
+        if (sourceData) {
+          displayName = getPokemonDisplayName(initialPokemonKey, {
+            ...pokemonData,
+            names: sourceData.names
+          });
+        }
+      } else {
+        displayName = getPokemonDisplayName(initialPokemonKey, pokemonData);
+      }
+
+      setSearchTerm(displayName);
+    }
+  }, [initialPokemonKey, pokemonDb]);
 
   const searchResults = useMemo(() => {
     if (!pokemonDb || searchTerm.length < 2) return [];

@@ -10,7 +10,13 @@ type Mode = 'filter-by-games' | 'lookup-by-species';
 
 export default function SwitchCompatibility() {
   const [mode, setMode] = useState<Mode>('filter-by-games');
+  const [selectedPokemonKey, setSelectedPokemonKey] = useState<string>('');
   const pokemonDb = pokemonData as PokemonDatabase;
+
+  const handlePokemonSelect = (key: string) => {
+    setSelectedPokemonKey(key);
+    setMode('lookup-by-species');
+  };
 
   if (!pokemonDb || typeof pokemonDb !== 'object') {
     return (
@@ -43,9 +49,9 @@ export default function SwitchCompatibility() {
       <div className="mode-content">
         <ErrorBoundary key={mode}>
           {mode === 'filter-by-games' ? (
-            <AvailablePokemon pokemonDb={pokemonDb} />
+            <AvailablePokemon pokemonDb={pokemonDb} onPokemonSelect={handlePokemonSelect} />
           ) : (
-            <BySpecies pokemonDb={pokemonDb} />
+            <BySpecies pokemonDb={pokemonDb} initialPokemonKey={selectedPokemonKey} />
           )}
         </ErrorBoundary>
       </div>

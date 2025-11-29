@@ -5,12 +5,15 @@ import { getPokemonIconProps } from './iconUtils';
 
 interface AvailablePokemonProps {
   pokemonDb: PokemonDatabase;
+  onPokemonSelect: (key: string) => void;
 }
 
-export default function AvailablePokemon({ pokemonDb }: AvailablePokemonProps) {
+export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: AvailablePokemonProps) {
   const [selectedGames, setSelectedGames] = useState<string[]>([]);
   const [gridHeight, setGridHeight] = useState<number | null>(null);
+  const [highlightedPokemon, setHighlightedPokemon] = useState<string | null>(null);
   const iconGridRef = useRef<HTMLDivElement | null>(null);
+  const listItemRefs = useRef<Map<string, HTMLLIElement>>(new Map());
 
   const toggleGame = (gameIds: string[]) => {
     setSelectedGames(prev => {
@@ -46,6 +49,44 @@ export default function AvailablePokemon({ pokemonDb }: AvailablePokemonProps) {
     window.addEventListener('resize', measure);
     return () => window.removeEventListener('resize', measure);
   }, [filteredPokemon.length]);
+
+  const handlePokemonClick = (pokemonKey: string) => {
+    const listItem = listItemRefs.current.get(pokemonKey);
+    if (listItem) {
+      const container = listItem.closest('.pokemon-list ul');
+      if (container) {
+        const containerRect = container.getBoundingClientRect();
+        const itemRect = listItem.getBoundingClientRect();
+        const scrollOffset = itemRect.top - containerRect.top - (containerRect.height / 2) + (itemRect.height / 2);
+        const startPosition = container.scrollTop;
+        const duration = 800; // ms
+        const startTime = performance.now();
+
+        const smoothScroll = (currentTime: number) => {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const easeInOutQuad = progress < 0.5
+            ? 2 * progress * progress
+            : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+          container.scrollTop = startPosition + (scrollOffset * easeInOutQuad);
+
+          if (progress < 1) {
+            requestAnimationFrame(smoothScroll);
+          }
+        };
+
+        requestAnimationFrame(smoothScroll);
+      }
+
+      setHighlightedPokemon(pokemonKey);
+
+      // Remove highlight after animation
+      setTimeout(() => {
+        setHighlightedPokemon(null);
+      }, 2000);
+    }
+  };
 
   return (
     <div className="available-pokemon">
@@ -89,6 +130,8 @@ export default function AvailablePokemon({ pokemonDb }: AvailablePokemonProps) {
                         className="pokemon-icon-grid-item"
                         alt={pokemon.name}
                         title={pokemon.name}
+                        onClick={() => handlePokemonClick(pokemon.key)}
+                        style={{ cursor: 'pointer' }}
                         {...iconProps}
                       />
                     );
@@ -110,7 +153,19 @@ export default function AvailablePokemon({ pokemonDb }: AvailablePokemonProps) {
                       const displayNumber = natdex ? `No. ${natdex.toString().padStart(3, '0')}` : '';
 
                       return (
-                        <li key={pokemon.key}>
+                        <li
+                          key={pokemon.key}
+                          ref={el => {
+                            if (el) {
+                              listItemRefs.current.set(pokemon.key, el);
+                            } else {
+                              listItemRefs.current.delete(pokemon.key);
+                            }
+                          }}
+                          className={highlightedPokemon === pokemon.key ? 'highlighted' : ''}
+                          onClick={() => onPokemonSelect(pokemon.key)}
+                          style={{ cursor: 'pointer' }}
+                        >
                           <img
                             className="pokemon-icon"
                             alt={pokemon.name}
