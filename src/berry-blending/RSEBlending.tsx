@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { calculateOptimalPokeblockKit } from './pokeblockCalculator';
 import natures from '../data/natures.json';
+import { getBerryImageUrl } from './berryImageHelper';
 
 export default function RSEBlending() {
   const [playerCount, setPlayerCount] = useState<1 | 2 | 3 | 4>(1);
@@ -87,15 +88,23 @@ export default function RSEBlending() {
         <div className="berry-kit">
           <h4>Optimal Berry Kit:</h4>
           <div className="kit-blocks">
-            {berryKit.blocks.map((block, index) => (
-              <div key={index} className="block-item">
-                <div className="block-name">{block.name}</div>
-                <div className="block-meta">
-                  {block.npc > 0 ? `${block.npc} NPC` : `${block.players}-player`}
+            {berryKit.blocks.map((block, index) => {
+              const imageUrl = getBerryImageUrl(block.berry);
+              return (
+                <div key={index} className="block-item">
+                  {imageUrl && (
+                    <img src={imageUrl} alt={block.berry} title={block.berry} className="berry-icon" />
+                  )}
+                  <div className="block-content">
+                    <div className="block-name">{block.name}</div>
+                    <div className="block-meta">
+                      {block.npc > 0 ? `${block.npc} NPC` : `${block.players}-player`}
+                    </div>
+                    <div className="block-berry">{block.berry}</div>
+                  </div>
                 </div>
-                <div className="block-berry">{block.berry}</div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="kit-stats">

@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { calculateOptimalPoffinKit } from './poffinCalculator';
 import natures from '../data/natures.json';
+import { getBerryImageUrl } from './berryImageHelper';
 
 export default function DPPtBlending() {
   const [playerCount, setPlayerCount] = useState<1 | 2 | 3 | 4>(1);
@@ -111,13 +112,29 @@ export default function DPPtBlending() {
         <div className="berry-kit">
           <h4>Optimal Poffin Kit:</h4>
           <div className="kit-blocks">
-            {poffinKit.poffins.map((poffin, index) => (
-              <div key={index} className="block-item">
-                <div className="block-name">{poffin.name}</div>
-                <div className="block-meta">{poffin.players}-player</div>
-                <div className="block-berry">{poffin.berries}</div>
-              </div>
-            ))}
+            {poffinKit.poffins.map((poffin, index) => {
+              const imageUrl = getBerryImageUrl(poffin.berries);
+              let berryDescription = poffin.berries;
+
+              if (poffin.mild) {
+                berryDescription += ' poffin (1 per save file)';
+              } else if (poffin.platinum) {
+                berryDescription += ' poffin (buy from Veilstone Dept. Store)';
+              }
+
+              return (
+                <div key={index} className="block-item">
+                  {imageUrl && (
+                    <img src={imageUrl} alt={poffin.berries} title={poffin.berries} className="berry-icon" />
+                  )}
+                  <div className="block-content">
+                    <div className="block-name">{poffin.name}</div>
+                    <div className="block-meta">{poffin.players}-player</div>
+                    <div className="block-berry">{berryDescription}</div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           <div className="kit-stats">

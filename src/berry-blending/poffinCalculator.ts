@@ -32,7 +32,7 @@ export interface Flavors {
 }
 
 export interface PoffinKit {
-  poffins: Array<{ name: string; berries: string; players: number }>;
+  poffins: Array<{ name: string; berries: string; players: number; platinum: boolean; mild: boolean }>;
   totalStats: Flavors;
   totalFeel: number;
   averageStat: number;
@@ -208,7 +208,7 @@ export function calculateOptimalPoffinKit(
   // Current state
   const stats = { spicy: 0, dry: 0, sweet: 0, bitter: 0, sour: 0 };
   let totalFeel = 0;
-  const kit: Array<{ name: string; berries: string; players: number }> = [];
+  const kit: Array<{ name: string; berries: string; players: number; platinum: boolean; mild: boolean }> = [];
 
   // Greedy approach: repeatedly add the most efficient poffin
   while (totalFeel < FEEL_LIMIT) {
@@ -252,7 +252,9 @@ export function calculateOptimalPoffinKit(
     kit.push({
       name: bestPoffin.name,
       berries: bestPoffin.poffin.berries,
-      players: bestPoffin.poffin.players
+      players: bestPoffin.poffin.players,
+      platinum: bestPoffin.poffin.platinum,
+      mild: bestPoffin.poffin.mild
     });
   }
 
@@ -291,7 +293,9 @@ export function calculateOptimalPoffinKit(
       kit.push({
         name: bestLast.name,
         berries: bestLast.poffin.berries,
-        players: bestLast.poffin.players
+        players: bestLast.poffin.players,
+        platinum: bestLast.poffin.platinum,
+        mild: bestLast.poffin.mild
       });
     }
   }

@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { calculateOptimalBDSPPoffinKit } from './bdspPoffinCalculator';
 import natures from '../data/natures.json';
+import { getBerryImageUrl } from './berryImageHelper';
 
 export default function BDSPBlending() {
   const [onlyCommon, setOnlyCommon] = useState(false);
@@ -89,12 +90,20 @@ export default function BDSPBlending() {
               <div key={cycleIndex} className="bdsp-set-group-wrapper">
                 <div className="bdsp-set-label">Set {cycle.set}</div>
                 <div className="bdsp-set-items">
-                  {cycle.poffins.map((poffin, index) => (
-                    <div key={index} className="block-item">
-                      <div className="block-name">{poffin.name}</div>
-                      <div className="block-berry">{poffin.berries}</div>
-                    </div>
-                  ))}
+                  {cycle.poffins.map((poffin, index) => {
+                    const imageUrl = getBerryImageUrl(poffin.berries);
+                    return (
+                      <div key={index} className="block-item">
+                        {imageUrl && (
+                          <img src={imageUrl} alt={poffin.berries} title={poffin.berries} className="berry-icon" />
+                        )}
+                        <div className="block-content">
+                          <div className="block-name">{poffin.name}</div>
+                          <div className="block-berry">{poffin.berries}</div>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             ))}

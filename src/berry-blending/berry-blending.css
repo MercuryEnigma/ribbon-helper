@@ -490,11 +490,26 @@
   background: #fffbf5;
   border: 2px solid #d66020;
   border-radius: 10px;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.berry-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+  image-rendering: pixelated;
+}
+
+.block-content {
   display: grid;
   grid-template-columns: 140px 1fr auto;
   gap: 1rem;
   align-items: center;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  flex: 1;
 }
 
 .block-name {
@@ -618,6 +633,11 @@
   }
 
   .block-item {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .block-content {
     grid-template-columns: 1fr;
     gap: 0.3rem;
   }
@@ -822,6 +842,6 @@
   gap: 0.4rem;
 }
 
-.bdsp-set-items .block-item {
+.bdsp-set-items .block-content {
   grid-template-columns: 140px 1fr;
 }

@@ -63,7 +63,15 @@ export default function BySpecies({ pokemonDb, initialPokemonKey }: BySpeciesPro
     if (!pokemonDb || !selectedPokemon) return [];
     try {
       const gameIds = getGamesForPokemon(pokemonDb, selectedPokemon);
-      return getGameGroupNames(gameIds);
+      const names = getGameGroupNames(gameIds);
+      const order = ['Let\'s Go Pikachu / Eevee', 'Sword / Shield', 'Brilliant Diamond / Shining Pearl', 'Legends: Arceus', 'Scarlet / Violet'];
+      return names.sort((a, b) => {
+        const ai = order.indexOf(a);
+        const bi = order.indexOf(b);
+        const ao = ai === -1 ? Number.MAX_SAFE_INTEGER : ai;
+        const bo = bi === -1 ? Number.MAX_SAFE_INTEGER : bi;
+        return ao - bo || a.localeCompare(b);
+      });
     } catch (error) {
       console.error('Error getting available games:', error);
       return [];

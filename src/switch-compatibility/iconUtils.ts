@@ -36,6 +36,11 @@ export function getPokemonIconUrl(
   // Use natdex as-is (no padding) - files are named like "10.png", not "010.png"
   const natdexStr = String(natdex);
 
+  // Special case: Unown base should use the "A" form icon
+  if (key === 'unown' && FORM_ICONS['unown']) {
+    return `${ICON_BASE_URL}/${FORM_ICONS['unown']}`;
+  }
+
   // If this is a base form (no data-source), use base icon
   if (!data['data-source']) {
     return `${ICON_BASE_URL}/${natdexStr}.png`;

@@ -368,7 +368,7 @@
     "finishing": false
   },
   "Mild gift": {
-    "berries": "Mild Gift (1 per save file)",
+    "berries": "Mild",
     "spicy": 60,
     "dry": 30,
     "sweet": 30,
@@ -384,7 +384,7 @@
     "finishing": true
   },
   "Spicy-Dry": {
-    "berries": "Spicy-Dry (buy from Veilstone Dept. Store)",
+    "berries": "Spicy-Dry",
     "spicy": 32,
     "dry": 32,
     "sweet": 0,
@@ -400,7 +400,7 @@
     "finishing": false
   },
   "Spicy-Sweet": {
-    "berries": "Spicy-Sweet (buy from Veilstone Dept. Store)",
+    "berries": "Spicy-Sweet",
     "spicy": 32,
     "dry": 0,
     "sweet": 32,
@@ -416,7 +416,7 @@
     "finishing": false
   },
   "Spicy-Bitter": {
-    "berries": "Spicy-Bitter (buy from Veilstone Dept. Store)",
+    "berries": "Spicy-Bitter",
     "spicy": 32,
     "dry": 0,
     "sweet": 0,
@@ -432,7 +432,7 @@
     "finishing": false
   },
   "Spicy-Sour": {
-    "berries": "Spicy-Sour (buy from Veilstone Dept. Store)",
+    "berries": "Spicy-Sour",
     "spicy": 32,
     "dry": 0,
     "sweet": 0,
@@ -448,7 +448,7 @@
     "finishing": false
   },
   "Dry-Sweet": {
-    "berries": "Dry-Sweet (buy from Veilstone Dept. Store)",
+    "berries": "Dry-Sweet",
     "spicy": 0,
     "dry": 32,
     "sweet": 32,
@@ -464,7 +464,7 @@
     "finishing": false
   },
   "Dry-Bitter": {
-    "berries": "Dry-Bitter (buy from Veilstone Dept. Store)",
+    "berries": "Dry-Bitter",
     "spicy": 0,
     "dry": 32,
     "sweet": 0,
@@ -480,7 +480,7 @@
     "finishing": false
   },
   "Dry-Sour": {
-    "berries": "Dry-Sour (buy from Veilstone Dept. Store)",
+    "berries": "Dry-Sour",
     "spicy": 0,
     "dry": 32,
     "sweet": 0,
@@ -496,7 +496,7 @@
     "finishing": false
   },
   "Sweet-Bitter": {
-    "berries": "Sweet-Bitter (buy from Veilstone Dept. Store)",
+    "berries": "Sweet-Bitter",
     "spicy": 0,
     "dry": 0,
     "sweet": 32,
@@ -512,7 +512,7 @@
     "finishing": false
   },
   "Sweet-Sour": {
-    "berries": "Sweet-Sour (buy from Veilstone Dept. Store)",
+    "berries": "Sweet-Sour",
     "spicy": 0,
     "dry": 0,
     "sweet": 32,
@@ -528,7 +528,7 @@
     "finishing": false
   },
   "Bitter-Sour": {
-    "berries": "Bitter-Sour (buy from Veilstone Dept. Store)",
+    "berries": "Bitter-Sour",
     "spicy": 0,
     "dry": 0,
     "sweet": 0,
