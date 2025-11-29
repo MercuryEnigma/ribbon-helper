@@ -13,6 +13,11 @@ export default function BySpecies({ pokemonDb, initialPokemonKey }: BySpeciesPro
   const [selectedPokemon, setSelectedPokemon] = useState<string>(initialPokemonKey || '');
   const [showDropdown, setShowDropdown] = useState(false);
 
+  const selectedPokemonData = useMemo(() => {
+    if (!pokemonDb || !selectedPokemon) return null;
+    return pokemonDb[selectedPokemon] || null;
+  }, [pokemonDb, selectedPokemon]);
+
   useEffect(() => {
     if (initialPokemonKey && pokemonDb[initialPokemonKey]) {
       setSelectedPokemon(initialPokemonKey);
@@ -64,6 +69,36 @@ export default function BySpecies({ pokemonDb, initialPokemonKey }: BySpeciesPro
     }
   }, [pokemonDb, selectedPokemon]);
 
+  const displayName = useMemo(() => {
+    if (!pokemonDb || !selectedPokemonData) return '';
+
+    if (selectedPokemonData['data-source']) {
+      const sourceData = pokemonDb[selectedPokemonData['data-source']];
+      if (sourceData) {
+        return getPokemonDisplayName(selectedPokemon, {
+          ...selectedPokemonData,
+          names: sourceData.names
+        });
+      }
+    }
+
+    return getPokemonDisplayName(selectedPokemon, selectedPokemonData);
+  }, [pokemonDb, selectedPokemon, selectedPokemonData]);
+
+  const natdexNumber = useMemo(() => {
+    if (!pokemonDb || !selectedPokemonData) return '';
+    let natdex = selectedPokemonData.natdex;
+    if (!natdex && selectedPokemonData['data-source']) {
+      natdex = pokemonDb[selectedPokemonData['data-source']]?.natdex;
+    }
+    return natdex ? `No. ${natdex.toString().padStart(3, '0')}` : '';
+  }, [pokemonDb, selectedPokemonData]);
+
+  const largeIconProps = useMemo(() => {
+    if (!selectedPokemonData) return null;
+    return getPokemonIconProps(selectedPokemon, selectedPokemonData, pokemonDb);
+  }, [pokemonDb, selectedPokemon, selectedPokemonData]);
+
   return (
     <div className="by-species">
       <div className="pokemon-search">
@@ -109,17 +144,54 @@ export default function BySpecies({ pokemonDb, initialPokemonKey }: BySpeciesPro
       </div>
 
       {selectedPokemon && (
-        <div className="game-results">
-          <h3>Available in:</h3>
-          {availableGames.length === 0 ? (
-            <p className="no-results">This Pokémon is not available in any Switch games.</p>
-          ) : (
-            <ul className="game-list">
-              {availableGames.map(game => (
-                <li key={game}>{game}</li>
-              ))}
-            </ul>
-          )}
+        <div className="pokedex-entry">
+          <div className="pokedex-entry-left">
+            <div className="pokedex-entry-frame">
+              <div className="pokedex-entry-bg">
+                {largeIconProps && (
+                  <img
+                    className="pokedex-entry-image"
+                    alt={displayName}
+                    {...largeIconProps}
+                  />
+                )}
+              </div>
+            </div>
+          </div>
+
+          <div className="pokedex-entry-right">
+            <div className="pokedex-entry-header">
+              {largeIconProps && (
+                <img
+                  className="pokedex-entry-header-icon"
+                  alt={displayName}
+                  {...largeIconProps}
+                />
+              )}
+              <div className="pokedex-entry-title">
+                <span className="pokedex-entry-title-number">{natdexNumber}</span>
+                <span className="pokedex-entry-title-name">{displayName}</span>
+              </div>
+            </div>
+            <div className="pokedex-entry-rows">
+              {availableGames.length === 0 ? (
+                <div className="pokedex-row">
+                  <div className="pokedex-row-label">Game</div>
+                  <div className="pokedex-row-value">Not in Switch titles</div>
+                </div>
+              ) : (
+                availableGames.slice(0, 5).map(game => (
+                  <div className="pokedex-row" key={game}>
+                    <div className="pokedex-row-label">Game</div>
+                    <div className="pokedex-row-value">{game}</div>
+                  </div>
+                ))
+              )}
+            </div>
+            {/* <div className="pokedex-entry-notes">
+              Reserved for Pokédex entry text
+            </div> */}
+          </div>
         </div>
       )}
 
