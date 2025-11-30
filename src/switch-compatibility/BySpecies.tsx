@@ -138,6 +138,11 @@ export default function BySpecies({ pokemonDb, initialPokemonKey }: BySpeciesPro
     }
   }, [pokemonDb, selectedPokemon, selectedPokemonData]);
 
+  const isShadowPokemon = useMemo(() => {
+    if (!selectedPokemonData?.flags) return false;
+    return selectedPokemonData.flags.includes('colShadow') || selectedPokemonData.flags.includes('xdShadow');
+  }, [selectedPokemonData]);
+
   return (
     <div className="by-species">
       <div className="pokemon-search">
@@ -211,6 +216,9 @@ export default function BySpecies({ pokemonDb, initialPokemonKey }: BySpeciesPro
                 <span className="pokedex-entry-title-number">{natdexNumber}</span>
                 <span className="pokedex-entry-title-name">{displayName}</span>
               </div>
+              {isShadowPokemon && (
+                <div className="shadow-pill">Shadow</div>
+              )}
               {earliestGen && (
                 <div className="pokedex-entry-gen">{earliestGen}</div>
               )}
