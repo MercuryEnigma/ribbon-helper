@@ -22,6 +22,30 @@ export const GAME_GROUPS = [
 ];
 
 /**
+ * List of Pokemon forms that should be excluded from listings
+ * These are cosmetic variations that have the same game availability as their base forms
+ */
+const EXCLUDED_COSMETIC_FORMS = new Set([
+  'unown-exclamation',
+  'unown-question',
+  'zygarde-10',
+  'maushold-three',
+  'squawkabilly-blue',
+  'squawkabilly-white',
+  'squawkabilly-yellow',
+  'tatsugiri-droopy',
+  'tatsugiri-stretchy',
+  'dudunsparce-three-segment',
+]);
+
+/**
+ * Check if a Pokemon key should be excluded from listings
+ */
+function shouldExcludePokemon(key: string): boolean {
+  return EXCLUDED_COSMETIC_FORMS.has(key);
+}
+
+/**
  * Get the display name for a Pokemon (handling both regular and form variants)
  */
 export function getPokemonDisplayName(key: string, data: PokemonData): string {
@@ -64,19 +88,30 @@ export function filterPokemonByGames(
 
   try {
     for (const [key, data] of Object.entries(pokemonDb)) {
-      if (!data || !Array.isArray(data.games)) {
-        console.warn(`Pokemon ${key} has invalid games data`);
-        continue;
+      // Get the games array - for special forms like basculin-blue-striped, inherit from base
+      let games = data?.games;
+      if (!Array.isArray(games)) {
+        // Special case: basculin-blue-striped should use base form's games
+        if (key === 'basculin-blue-striped' && data?.['data-source']) {
+          const baseData = pokemonDb[data['data-source']];
+          games = baseData?.games;
+        }
+
+        if (!Array.isArray(games)) {
+          console.warn(`Pokemon ${key} has invalid games data`);
+          continue;
+        }
       }
 
       // Exclude specific forms to avoid duplicates
-      if (key === 'unown-exclamation' || key === 'unown-question' || key === 'zygarde-10') {
+      // These are cosmetic variations that shouldn't appear separately
+      if (shouldExcludePokemon(key)) {
         continue;
       }
 
       // Check if this Pokemon is available in ALL selected games
       const availableInAll = selectedGameIds.every(gameId =>
-        data.games.includes(gameId)
+        games.includes(gameId)
       );
 
       if (availableInAll) {
@@ -234,6 +269,18 @@ export function searchPokemonByName(
     for (const [key, data] of Object.entries(pokemonDb)) {
       if (!data) continue;
 
+      // Exclude cosmetic forms that shouldn't appear in listings
+      if (shouldExcludePokemon(key)) {
+        continue;
+      }
+
+      // Exclude forms without games data (cosmetic variants that inherit from base form)
+      // Same logic as filterPokemonByGames - only show forms with explicit game data
+      // Exception: basculin-blue-striped is a meaningful form despite lacking games data
+      if (data['data-source'] && !Array.isArray(data.games) && key !== 'basculin-blue-striped') {
+        continue;
+      }
+
       let displayName = '';
       if (data['data-source']) {
         const baseData = pokemonDb[data['data-source']];
@@ -287,6 +334,42 @@ export function searchPokemonByName(
 
       return a.key.localeCompare(b.key);
     });
+
+    // Post-process: Remove form names if only one form of a species exists in results
+    // BUT only if that one form is the base form (not a regional variant)
+    const speciesCounts = new Map<number, number>();
+
+    // Count how many entries exist for each natdex
+    for (const result of results) {
+      const resultData = pokemonDb[result.key];
+      let natdex = resultData?.natdex;
+      if (!natdex && resultData?.['data-source']) {
+        natdex = pokemonDb[resultData['data-source']]?.natdex;
+      }
+      if (natdex) {
+        speciesCounts.set(natdex, (speciesCounts.get(natdex) || 0) + 1);
+      }
+    }
+
+    // Update display names - remove form suffix if only one form AND it's the base form
+    for (const result of results) {
+      const resultData = pokemonDb[result.key];
+      let natdex = resultData?.natdex;
+      if (!natdex && resultData?.['data-source']) {
+        natdex = pokemonDb[resultData['data-source']]?.natdex;
+      }
+
+      if (natdex && speciesCounts.get(natdex) === 1) {
+        // Only one form exists in results
+        // Only remove form name if this IS the base form (no data-source)
+        // Keep form name if this is a regional variant (has data-source)
+        if (!resultData?.['data-source']) {
+          // This is the base form - use base name without form suffix
+          result.name = resultData?.names?.en || result.name;
+        }
+        // If it has data-source, keep the form name (e.g., "Typhlosion (Hisui)")
+      }
+    }
 
     return results;
   } catch (error) {

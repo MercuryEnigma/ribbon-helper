@@ -306,7 +306,7 @@ export function calculateOptimalPokeblockKit(
   return {
     blocks: kit,
     totalStats: stats,
-    totalFeel,
+    totalFeel: Math.min(FEEL_LIMIT, totalFeel),
     averageStat
   };
 }
