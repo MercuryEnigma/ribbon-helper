@@ -30,14 +30,26 @@ function ShadowSection() {
 }
 
 function SpeciesSection() {
+  const navigate = useNavigate();
   const pokemonDb = pokemonData as PokemonDatabase;
-  return <BySpecies pokemonDb={pokemonDb} />;
+
+  const handlePokemonSelect = (key: string) => {
+    navigate(`/game-compatibility/species/${key}`);
+  };
+
+  return <BySpecies pokemonDb={pokemonDb} onPokemonSelect={handlePokemonSelect} />;
 }
 
 function SpeciesPokemon() {
+  const navigate = useNavigate();
   const { pokemonKey } = useParams<{ pokemonKey: string }>();
   const pokemonDb = pokemonData as PokemonDatabase;
-  return <BySpecies pokemonDb={pokemonDb} initialPokemonKey={pokemonKey} />;
+
+  const handlePokemonSelect = (key: string) => {
+    navigate(`/game-compatibility/species/${key}`);
+  };
+
+  return <BySpecies pokemonDb={pokemonDb} initialPokemonKey={pokemonKey} onPokemonSelect={handlePokemonSelect} />;
 }
 
 export default function SwitchCompatibility() {

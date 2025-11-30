@@ -7,9 +7,10 @@ import games from '../data/games.json';
 interface BySpeciesProps {
   pokemonDb: PokemonDatabase;
   initialPokemonKey?: string;
+  onPokemonSelect?: (key: string) => void;
 }
 
-export default function BySpecies({ pokemonDb, initialPokemonKey }: BySpeciesProps) {
+export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelect }: BySpeciesProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedPokemon, setSelectedPokemon] = useState<string>(initialPokemonKey || '');
   const [showDropdown, setShowDropdown] = useState(false);
@@ -57,6 +58,10 @@ export default function BySpecies({ pokemonDb, initialPokemonKey }: BySpeciesPro
     setSelectedPokemon(key);
     setSearchTerm(name);
     setShowDropdown(false);
+    // Update URL when a Pokemon is selected
+    if (onPokemonSelect) {
+      onPokemonSelect(key);
+    }
   };
 
   const availableGames = useMemo(() => {

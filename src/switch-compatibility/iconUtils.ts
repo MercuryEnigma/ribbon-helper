@@ -41,6 +41,11 @@ export function getPokemonIconUrl(
     return `${ICON_BASE_URL}/${FORM_ICONS['unown']}`;
   }
 
+  // Special case: Gimmighoul base should use the "chest" form icon
+  if (key === 'gimmighoul' && FORM_ICONS['gimmighoul-chest']) {
+    return `${ICON_BASE_URL}/${FORM_ICONS['gimmighoul-chest']}`;
+  }
+
   // If this is a base form (no data-source), use base icon
   if (!data['data-source']) {
     return `${ICON_BASE_URL}/${natdexStr}.png`;

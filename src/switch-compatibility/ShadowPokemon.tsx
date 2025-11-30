@@ -12,6 +12,7 @@ interface FilteredPokemon {
   key: string;
   name: string;
   data: PokemonData;
+  shadowSource?: 'colosseum' | 'xd'; // Track which game the shadow version is from
 }
 
 function filterShadowPokemonByGames(
@@ -34,41 +35,62 @@ function filterShadowPokemonByGames(
     const hasColShadow = data.flags.includes('colShadow');
     const hasXdShadow = data.flags.includes('xdShadow');
 
-    let matchesShadowFilter = false;
-    if (shadowFilter === 'colosseum') {
-      matchesShadowFilter = hasColShadow;
-    } else if (shadowFilter === 'xd') {
-      matchesShadowFilter = hasXdShadow;
-    } else { // 'either'
-      matchesShadowFilter = hasColShadow || hasXdShadow;
-    }
-
-    if (!matchesShadowFilter) {
-      continue;
-    }
-
     const pokemonGames = Array.isArray(data.games) ? data.games : [];
 
     // Check if Pokemon has all selected games
     const hasAllGames = selectedGames.every(gameId => pokemonGames.includes(gameId));
 
-    if (hasAllGames) {
-      let displayName = '';
+    if (!hasAllGames) {
+      continue;
+    }
 
-      // Handle forms with data-source
-      if (data['data-source']) {
-        const sourceData = pokemonDb[data['data-source']];
-        if (sourceData) {
-          displayName = getPokemonDisplayName(key, {
-            ...data,
-            names: sourceData.names
-          });
+    let displayName = '';
+
+    // Handle forms with data-source
+    if (data['data-source']) {
+      const sourceData = pokemonDb[data['data-source']];
+      if (sourceData) {
+        displayName = getPokemonDisplayName(key, {
+          ...data,
+          names: sourceData.names
+        });
+      }
+    } else {
+      displayName = getPokemonDisplayName(key, data);
+    }
+
+    // Special handling for Togepi when "either" is selected
+    if (key === 'togepi' && shadowFilter === 'either' && hasColShadow && hasXdShadow) {
+      // Add Colosseum version (e-reader)
+      results.push({ key, name: displayName, data, shadowSource: 'colosseum' });
+      // Add XD version (non e-reader)
+      results.push({ key, name: displayName, data, shadowSource: 'xd' });
+    } else {
+      // Normal filtering logic
+      let matchesShadowFilter = false;
+      let shadowSource: 'colosseum' | 'xd' | undefined;
+
+      if (shadowFilter === 'colosseum') {
+        matchesShadowFilter = hasColShadow;
+        shadowSource = 'colosseum';
+      } else if (shadowFilter === 'xd') {
+        matchesShadowFilter = hasXdShadow;
+        shadowSource = 'xd';
+      } else { // 'either'
+        matchesShadowFilter = hasColShadow || hasXdShadow;
+        // Determine which version
+        if (hasColShadow && hasXdShadow) {
+          shadowSource = 'colosseum'; // Default to colosseum if both
+        } else if (hasColShadow) {
+          shadowSource = 'colosseum';
+        } else if (hasXdShadow) {
+          shadowSource = 'xd';
         }
-      } else {
-        displayName = getPokemonDisplayName(key, data);
       }
 
-      results.push({ key, name: displayName, data });
+      if (matchesShadowFilter) {
+        results.push({ key, name: displayName, data, shadowSource });
+      }
     }
   }
 
@@ -104,7 +126,7 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
   const [shadowFilter, setShadowFilter] = useState<ShadowFilter>('either');
   const [gridHeight, setGridHeight] = useState<number | null>(null);
   const [highlightedPokemon, setHighlightedPokemon] = useState<string | null>(null);
-  const iconGridRef = useRef<HTMLDivElement | null>(null);
+  const iconGridContainerRef = useRef<HTMLDivElement | null>(null);
   const listItemRefs = useRef<Map<string, HTMLLIElement>>(new Map());
 
   const toggleGame = (gameIds: string[]) => {
@@ -132,8 +154,8 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
 
   useLayoutEffect(() => {
     const measure = () => {
-      if (iconGridRef.current) {
-        setGridHeight(iconGridRef.current.getBoundingClientRect().height);
+      if (iconGridContainerRef.current) {
+        setGridHeight(iconGridContainerRef.current.getBoundingClientRect().height);
       }
     };
 
@@ -236,29 +258,59 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
               <p className="no-results shadow-no-results">No Shadow Pokémon found that are available in all selected games.</p>
             ) : (
               <div className="pokemon-results-content">
-                <div className="pokemon-icon-grid shadow-grid" ref={iconGridRef}>
-                  {filteredPokemon.map(pokemon => {
-                    const iconProps = getPokemonIconProps(pokemon.key, pokemon.data, pokemonDb);
-                    return (
-                      <img
-                        key={pokemon.key}
-                        className="pokemon-icon-grid-item"
-                        alt={pokemon.name}
-                        title={pokemon.name}
-                        onClick={() => handlePokemonClick(pokemon.key)}
-                        style={{ cursor: 'pointer' }}
-                        {...iconProps}
-                      />
-                    );
-                  })}
+                <div ref={iconGridContainerRef}>
+                  <div className="pokemon-icon-grid shadow-grid">
+                    {filteredPokemon.map((pokemon, index) => {
+                      const iconProps = getPokemonIconProps(pokemon.key, pokemon.data, pokemonDb);
+                      const hasOverFifty = pokemon.data.flags?.includes('overFifty');
+                      const hasRestricted = pokemon.data.flags?.includes('restricted');
+                      // Check if e-reader exclusive based on shadowSource
+                      const isEReader = pokemon.shadowSource === 'colosseum' && ['mareep', 'scizor', 'togepi'].includes(pokemon.key);
+                      const classNames = ['pokemon-icon-grid-item'];
+                      if (hasOverFifty) classNames.push('over-fifty');
+                      if (hasRestricted) classNames.push('restricted');
+                      if (isEReader) classNames.push('ereader');
+                      // Use index in key to handle duplicate Togepi entries
+                      const uniqueKey = pokemon.shadowSource ? `${pokemon.key}-${pokemon.shadowSource}` : `${pokemon.key}-${index}`;
+                      return (
+                        <img
+                          key={uniqueKey}
+                          className={classNames.join(' ')}
+                          alt={pokemon.name}
+                          title={pokemon.name}
+                          onClick={() => handlePokemonClick(uniqueKey)}
+                          style={{ cursor: 'pointer' }}
+                          {...iconProps}
+                        />
+                      );
+                    })}
+                  </div>
+                  <div className="border-legend">
+                    <div className="legend-item">
+                      <div className="legend-color over-fifty"></div>
+                      <span>Over lvl 50</span>
+                    </div>
+                    <div className="legend-item">
+                      <div className="legend-color ereader"></div>
+                      <span>e-Reader</span>
+                    </div>
+                    <div className="legend-item">
+                      <div className="legend-color restricted"></div>
+                      <span>Restricted</span>
+                    </div>
+                  </div>
                 </div>
                 <div
                   className="pokemon-list shadow-list"
                   style={gridHeight ? { height: gridHeight } : undefined}
                 >
                   <ul>
-                    {filteredPokemon.map(pokemon => {
+                    {filteredPokemon.map((pokemon, index) => {
                       const iconProps = getPokemonIconProps(pokemon.key, pokemon.data, pokemonDb);
+                      const hasOverFifty = pokemon.data.flags?.includes('overFifty');
+                      const hasRestricted = pokemon.data.flags?.includes('restricted');
+                      // Check if e-reader exclusive based on shadowSource
+                      const isEReader = pokemon.shadowSource === 'colosseum' && ['mareep', 'scizor', 'togepi'].includes(pokemon.key);
 
                       // Get natdex - if form, look up base Pokemon's natdex
                       let natdex = pokemon.data.natdex;
@@ -267,17 +319,20 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
                       }
                       const displayNumber = natdex ? `No. ${natdex.toString().padStart(3, '0')}` : '';
 
+                      // Use unique key to handle duplicate Togepi entries
+                      const uniqueKey = pokemon.shadowSource ? `${pokemon.key}-${pokemon.shadowSource}` : `${pokemon.key}-${index}`;
+
                       return (
                         <li
-                          key={pokemon.key}
+                          key={uniqueKey}
                           ref={el => {
                             if (el) {
-                              listItemRefs.current.set(pokemon.key, el);
+                              listItemRefs.current.set(uniqueKey, el);
                             } else {
-                              listItemRefs.current.delete(pokemon.key);
+                              listItemRefs.current.delete(uniqueKey);
                             }
                           }}
-                          className={highlightedPokemon === pokemon.key ? 'highlighted' : ''}
+                          className={highlightedPokemon === uniqueKey ? 'highlighted' : ''}
                           onClick={() => onPokemonSelect(pokemon.key)}
                           style={{ cursor: 'pointer' }}
                         >
@@ -288,6 +343,9 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
                           />
                           <span className="pokemon-number">{displayNumber}</span>
                           <span className="pokemon-name">{pokemon.name}</span>
+                          {hasOverFifty && <span className="over-fifty-pill">over lvl 50</span>}
+                          {hasRestricted && <span className="restricted-pill">Restricted</span>}
+                          {isEReader && <span className="ereader-pill">e-reader</span>}
                         </li>
                       );
                     })}
