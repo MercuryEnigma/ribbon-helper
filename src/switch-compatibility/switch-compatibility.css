@@ -868,18 +868,20 @@
     flex-direction: column;
     border-bottom: none;
     gap: 0.4rem;
+    align-items: stretch;
   }
 
   .mode-selector button,
   .mode-selector a {
     top: 0;
-    border: 2px solid #757575;
-    border-radius: 4px;
+    border: 2px solid #c26b1a;
+    border-radius: 50px;
+    width: 100%;
   }
 
   .mode-selector button.active,
   .mode-selector a.active {
-    border: 2px solid #0056b3;
+    border: 2px solid #c26b1a;
   }
 
   .game-checkboxes {
