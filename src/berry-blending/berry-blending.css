@@ -38,7 +38,8 @@
   justify-content: center;
 }
 
-.berry-mode-selector button {
+.berry-mode-selector button,
+.berry-mode-selector a {
   padding: 0.5rem 1rem;
   background: #fffbf5;
   border: 2px solid #8b6914;
@@ -51,6 +52,9 @@
   text-transform: uppercase;
   letter-spacing: 0.3px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
 .berry-mode-selector .nav-arrow {
@@ -77,14 +81,16 @@
   transform: scale(0.95);
 }
 
-.berry-mode-selector button:hover:not(.active) {
+.berry-mode-selector button:hover:not(.active),
+.berry-mode-selector a:hover:not(.active) {
   background: #fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   border-color: #b8461a;
   transform: translateY(-2px);
 }
 
-.berry-mode-selector button.active {
+.berry-mode-selector button.active,
+.berry-mode-selector a.active {
   background: #fff;
   color: #d66020;
   border-color: #d66020;
@@ -630,13 +636,15 @@
     display: none;
   }
 
-  .berry-mode-selector button {
+  .berry-mode-selector button,
+  .berry-mode-selector a {
     top: 0;
     border: 2px solid #757575;
     border-radius: 4px;
   }
 
-  .berry-mode-selector button.active {
+  .berry-mode-selector button.active,
+  .berry-mode-selector a.active {
     border: 2px solid #d66020;
   }
 
@@ -680,6 +688,7 @@
 
 /* Focus styles for accessibility */
 .berry-mode-selector button:focus-visible,
+.berry-mode-selector a:focus-visible,
 .berry-blending .player-buttons button:focus-visible,
 .berry-blending .option-checkbox input:focus-visible,
 .berry-blending select:focus-visible {

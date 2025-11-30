@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { Routes, Route, NavLink, Navigate, useNavigate, useParams } from 'react-router-dom';
 import AvailablePokemon from './AvailablePokemon';
 import BySpecies from './BySpecies';
 import ErrorBoundary from './ErrorBoundary';
@@ -6,17 +6,30 @@ import pokemonData from '../data/pokemon.json';
 import type { PokemonDatabase } from './types';
 import './switch-compatibility.css';
 
-type Mode = 'filter-by-games' | 'lookup-by-species';
-
-export default function SwitchCompatibility() {
-  const [mode, setMode] = useState<Mode>('filter-by-games');
-  const [selectedPokemonKey, setSelectedPokemonKey] = useState<string>('');
+function GamesSection() {
+  const navigate = useNavigate();
   const pokemonDb = pokemonData as PokemonDatabase;
 
   const handlePokemonSelect = (key: string) => {
-    setSelectedPokemonKey(key);
-    setMode('lookup-by-species');
+    navigate(`/game-compatibility/species/${key}`);
   };
+
+  return <AvailablePokemon pokemonDb={pokemonDb} onPokemonSelect={handlePokemonSelect} />;
+}
+
+function SpeciesSection() {
+  const pokemonDb = pokemonData as PokemonDatabase;
+  return <BySpecies pokemonDb={pokemonDb} />;
+}
+
+function SpeciesPokemon() {
+  const { pokemonKey } = useParams<{ pokemonKey: string }>();
+  const pokemonDb = pokemonData as PokemonDatabase;
+  return <BySpecies pokemonDb={pokemonDb} initialPokemonKey={pokemonKey} />;
+}
+
+export default function SwitchCompatibility() {
+  const pokemonDb = pokemonData as PokemonDatabase;
 
   if (!pokemonDb || typeof pokemonDb !== 'object') {
     return (
@@ -32,27 +45,28 @@ export default function SwitchCompatibility() {
   return (
     <div className="switch-compatibility">
       <div className="mode-selector">
-        <button
-          className={mode === 'filter-by-games' ? 'active' : ''}
-          onClick={() => setMode('filter-by-games')}
+        <NavLink
+          to="/game-compatibility/games"
+          className={({ isActive }) => isActive ? 'active' : ''}
         >
           Filter by Games
-        </button>
-        <button
-          className={mode === 'lookup-by-species' ? 'active' : ''}
-          onClick={() => setMode('lookup-by-species')}
+        </NavLink>
+        <NavLink
+          to="/game-compatibility/species"
+          className={({ isActive }) => isActive ? 'active' : ''}
         >
           Lookup by Species
-        </button>
+        </NavLink>
       </div>
 
       <div className="mode-content">
-        <ErrorBoundary key={mode}>
-          {mode === 'filter-by-games' ? (
-            <AvailablePokemon pokemonDb={pokemonDb} onPokemonSelect={handlePokemonSelect} />
-          ) : (
-            <BySpecies pokemonDb={pokemonDb} initialPokemonKey={selectedPokemonKey} />
-          )}
+        <ErrorBoundary>
+          <Routes>
+            <Route path="/" element={<Navigate to="/game-compatibility/games" replace />} />
+            <Route path="/games" element={<GamesSection />} />
+            <Route path="/species" element={<SpeciesSection />} />
+            <Route path="/species/:pokemonKey" element={<SpeciesPokemon />} />
+          </Routes>
         </ErrorBoundary>
       </div>
     </div>

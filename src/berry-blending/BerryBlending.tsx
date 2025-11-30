@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { Routes, Route, NavLink, Navigate, useNavigate, useParams } from 'react-router-dom';
 import RSEBlending from './RSEBlending';
 import DPPtBlending from './DPPtBlending';
 import ORASBlending from './ORASBlending';
@@ -7,58 +7,64 @@ import './berry-blending.css';
 
 type GameSelection = 'rse' | 'dppt' | 'oras' | 'bdsp';
 
-export default function BerryBlending() {
-  const [selectedGame, setSelectedGame] = useState<GameSelection>('rse');
+function GameSelector() {
+  const navigate = useNavigate();
+  const params = useParams();
+  const selectedGame = (params['*'] || 'rse') as GameSelection;
+
+  const handlePrevious = () => {
+    if (selectedGame === 'rse') navigate('/berry-blending/bdsp');
+    else if (selectedGame === 'dppt') navigate('/berry-blending/rse');
+    else if (selectedGame === 'oras') navigate('/berry-blending/dppt');
+    else if (selectedGame === 'bdsp') navigate('/berry-blending/oras');
+  };
+
+  const handleNext = () => {
+    if (selectedGame === 'rse') navigate('/berry-blending/dppt');
+    else if (selectedGame === 'dppt') navigate('/berry-blending/oras');
+    else if (selectedGame === 'oras') navigate('/berry-blending/bdsp');
+    else if (selectedGame === 'bdsp') navigate('/berry-blending/rse');
+  };
 
   return (
-    <div className="berry-blending">
+    <>
       <div className="berry-mode-selector">
         <button
           className="nav-arrow nav-arrow-left"
           aria-label="Previous"
-          onClick={() => {
-            if (selectedGame === 'rse') setSelectedGame('bdsp');
-            else if (selectedGame === 'dppt') setSelectedGame('rse');
-            else if (selectedGame === 'oras') setSelectedGame('dppt');
-            else if (selectedGame === 'bdsp') setSelectedGame('oras');
-          }}>
+          onClick={handlePrevious}>
           <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
             <polygon points="15,6 9,12 15,18"/>
           </svg>
         </button>
-        <button
-          className={selectedGame === 'rse' ? 'active' : ''}
-          onClick={() => setSelectedGame('rse')}
+        <NavLink
+          to="/berry-blending/rse"
+          className={({ isActive }) => isActive ? 'active' : ''}
         >
           RSE
-        </button>
-        <button
-          className={selectedGame === 'dppt' ? 'active' : ''}
-          onClick={() => setSelectedGame('dppt')}
+        </NavLink>
+        <NavLink
+          to="/berry-blending/dppt"
+          className={({ isActive }) => isActive ? 'active' : ''}
         >
           DPPt
-        </button>
-        <button
-          className={selectedGame === 'oras' ? 'active' : ''}
-          onClick={() => setSelectedGame('oras')}
+        </NavLink>
+        <NavLink
+          to="/berry-blending/oras"
+          className={({ isActive }) => isActive ? 'active' : ''}
         >
           ORAS
-        </button>
-        <button
-          className={selectedGame === 'bdsp' ? 'active' : ''}
-          onClick={() => setSelectedGame('bdsp')}
+        </NavLink>
+        <NavLink
+          to="/berry-blending/bdsp"
+          className={({ isActive }) => isActive ? 'active' : ''}
         >
           BDSP
-        </button>
+        </NavLink>
         <button
           className="nav-arrow nav-arrow-right"
           aria-label="Next"
-          onClick={() => {
-            if (selectedGame === 'rse') setSelectedGame('dppt');
-            else if (selectedGame === 'dppt') setSelectedGame('oras');
-            else if (selectedGame === 'oras') setSelectedGame('bdsp');
-            else if (selectedGame === 'bdsp') setSelectedGame('rse');
-          }}>
+          onClick={handleNext}>
           <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
             <polygon points="9,6 15,12 9,18"/>
           </svg>
@@ -66,18 +72,22 @@ export default function BerryBlending() {
       </div>
 
       <div className="berry-mode-content">
-        {!selectedGame && (
-          <p className="hint berry-hint">Choose a game above to see berry blending options.</p>
-        )}
-
-        {selectedGame === 'rse' && <RSEBlending />}
-
-        {selectedGame === 'dppt' && <DPPtBlending />}
-
-        {selectedGame === 'oras' && <ORASBlending />}
-
-        {selectedGame === 'bdsp' && <BDSPBlending />}
+        <Routes>
+          <Route path="/" element={<Navigate to="/berry-blending/rse" replace />} />
+          <Route path="/rse" element={<RSEBlending />} />
+          <Route path="/dppt" element={<DPPtBlending />} />
+          <Route path="/oras" element={<ORASBlending />} />
+          <Route path="/bdsp" element={<BDSPBlending />} />
+        </Routes>
       </div>
+    </>
+  );
+}
+
+export default function BerryBlending() {
+  return (
+    <div className="berry-blending">
+      <GameSelector />
     </div>
   );
 }
