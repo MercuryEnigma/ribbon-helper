@@ -14,7 +14,7 @@ export default function App() {
       <header className="header">
         <div className="title">Ribbon Helper</div>
         <nav className="nav">
-          <button className={sel === 'switch' ? 'active' : ''} onClick={() => setSel('switch')}>Switch Compatibility</button>
+          <button className={sel === 'switch' ? 'active' : ''} onClick={() => setSel('switch')}>Game Compatibility</button>
           <button className={sel === 'berry' ? 'active' : ''} onClick={() => setSel('berry')}>Berry blending</button>
           <button className={sel === 'contest' ? 'active' : ''} onClick={() => setSel('contest')}>Contest Moves</button>
         </nav>

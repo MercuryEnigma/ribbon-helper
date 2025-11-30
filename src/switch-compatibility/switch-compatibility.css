@@ -148,46 +148,84 @@
 
 .game-checkbox {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  padding: 0.5rem 0.65rem 0.55rem 0.65rem;
   cursor: pointer;
-  border-radius: 10px;
-  border: 2px solid #c26b1a;
-  background: linear-gradient(180deg, #f6c48a 0%, #e59a4a 60%, #c86c1d 100%);
+  border-radius: 12px;
+  border: 1px solid #c26b1a;
+  background: #ffe9d2;
   transition: all 0.2s;
   box-shadow:
-    inset 0 2px 4px rgba(0, 0, 0, 0.12),
-    0 1px 3px rgba(0, 0, 0, 0.2);
+    inset 0 1px 2px rgba(255, 255, 255, 0.4),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  min-height: 60px;
 }
 
 .game-checkbox:hover {
-  background: linear-gradient(180deg, #ffd8b0 0%, #f2ae63 60%, #d0742c 100%);
+  background: #ffd9b3;
   border-color: #9c5312;
-  box-shadow:
-    inset 0 3px 5px rgba(0, 0, 0, 0.14),
-    0 2px 5px rgba(0, 0, 0, 0.25);
-  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+}
+
+.game-checkbox:has(input:checked) {
+  background: #ffd1a0;
+  border-color: #c26b1a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.5);
 }
 
 .game-checkbox input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
   cursor: pointer;
-  accent-color: #d45f1e;
+}
+
+.game-checkbox .toggle-track {
+  width: 54px;
+  height: 26px;
+  background: linear-gradient(180deg, #dcdcdc 0%, #b8b8b8 100%);
+  border-radius: 999px;
+  border: 2px solid #9c5312;
+  position: relative;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
   flex-shrink: 0;
 }
 
-.game-checkbox span {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #2b1a00;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+.game-checkbox .toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(180deg, #fff7ed 0%, #f4b86a 100%);
+  border-radius: 50%;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.7);
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.game-checkbox input[type="checkbox"]:checked + span {
-  color: #1f1300;
+.game-checkbox input[type="checkbox"]:checked ~ .toggle-track .toggle-thumb {
+  transform: translateX(26px);
+  background: linear-gradient(180deg, #f6c48a 0%, #df8641 100%);
+}
+
+.game-checkbox .toggle-label {
+  font-size: 0.9rem;
   font-weight: 700;
+  color: #2b1a00;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  line-height: 1.25;
+  min-height: 40px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.game-checkbox input[type="checkbox"]:checked ~ .toggle-label {
+  color: #1f1300;
 }
 
 /* Pokemon Results */

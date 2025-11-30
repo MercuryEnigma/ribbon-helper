@@ -61,7 +61,8 @@ export default function RSEBlending() {
               checked={withGamecube}
               onChange={(e) => setWithGamecube(e.target.checked)}
             />
-            <span>Pinch berries (Gamecube)</span>
+            <span className="toggle-label">Pinch berries (Gamecube)</span>
+            <span className="toggle-track"><span className="toggle-thumb" /></span>
           </label>
 
           <label className="option-checkbox">
@@ -70,7 +71,8 @@ export default function RSEBlending() {
               checked={withMirageIsland}
               onChange={(e) => setWithMirageIsland(e.target.checked)}
             />
-            <span>Liechi (Mirage Island)</span>
+            <span className="toggle-label">Liechi (Mirage Island)</span>
+            <span className="toggle-track"><span className="toggle-thumb" /></span>
           </label>
 
           <label className="option-checkbox">
@@ -79,7 +81,8 @@ export default function RSEBlending() {
               checked={withBerryMaster}
               onChange={(e) => setWithBerryMaster(e.target.checked)}
             />
-            <span>Blend Master (Emerald)</span>
+            <span className="toggle-label">Blend Master (Emerald)</span>
+            <span className="toggle-track"><span className="toggle-thumb" /></span>
           </label>
         </div>
       </div>

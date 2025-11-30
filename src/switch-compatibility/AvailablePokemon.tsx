@@ -102,7 +102,10 @@ export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: Availab
                   checked={allChecked}
                   onChange={() => toggleGame(group.ids)}
                 />
-                <span>{group.name}</span>
+                <span className="toggle-label">{group.name}</span>
+                <span className="toggle-track">
+                  <span className="toggle-thumb" />
+                </span>
               </label>
             );
           })}

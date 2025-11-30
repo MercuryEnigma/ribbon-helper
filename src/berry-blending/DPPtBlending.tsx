@@ -65,7 +65,8 @@ export default function DPPtBlending() {
               checked={withPlatinum}
               onChange={(e) => setWithPlatinum(e.target.checked)}
             />
-            <span>Veilstone Dept. store poffins (Platinum only)</span>
+            <span className="toggle-label">Veilstone Dept. store poffins (Platinum only)</span>
+            <span className="toggle-track"><span className="toggle-thumb" /></span>
           </label>
 
           <label className="option-checkbox">
@@ -74,7 +75,8 @@ export default function DPPtBlending() {
               checked={withMild}
               onChange={(e) => setWithMild(e.target.checked)}
             />
-            <span>Include Mild poffin gift</span>
+            <span className="toggle-label">Include Mild poffin gift</span>
+            <span className="toggle-track"><span className="toggle-thumb" /></span>
           </label>
         </div>
 
@@ -85,7 +87,8 @@ export default function DPPtBlending() {
               checked={withFrontier}
               onChange={(e) => setWithFrontier(e.target.checked)}
             />
-            <span>Battle Frontier (Pt/HG/SS)</span>
+            <span className="toggle-label">Battle Frontier (Pt/HG/SS)</span>
+            <span className="toggle-track"><span className="toggle-thumb" /></span>
           </label>
 
           <label className="option-checkbox">
@@ -94,7 +97,8 @@ export default function DPPtBlending() {
               checked={withPDR}
               onChange={(e) => setWithPDR(e.target.checked)}
             />
-            <span>Pokémon Battle Revolution</span>
+            <span className="toggle-label">Pokémon Battle Revolution</span>
+            <span className="toggle-track"><span className="toggle-thumb" /></span>
           </label>
 
           <label className="option-checkbox">
@@ -103,7 +107,8 @@ export default function DPPtBlending() {
               checked={withEvent}
               onChange={(e) => setWithEvent(e.target.checked)}
             />
-            <span>Event-only berries</span>
+            <span className="toggle-label">Event-only berries</span>
+            <span className="toggle-track"><span className="toggle-thumb" /></span>
           </label>
         </div>
       </div>

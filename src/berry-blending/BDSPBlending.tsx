@@ -67,7 +67,8 @@ export default function BDSPBlending() {
               checked={maxFriendship}
               onChange={(e) => setMaxFriendship(e.target.checked)}
             />
-            <span>Use 6 max friendship Pokémon in Amity Square</span>
+            <span className="toggle-label">Use 6 max friendship Pokémon in Amity Square</span>
+            <span className="toggle-track"><span className="toggle-thumb" /></span>
           </label>
 
           <label className="option-checkbox">
@@ -76,7 +77,8 @@ export default function BDSPBlending() {
               checked={onlyCommon}
               onChange={(e) => setOnlyCommon(e.target.checked)}
             />
-            <span>Only common berries (sets D, E, F)</span>
+            <span className="toggle-label">Only common berries (sets D, E, F)</span>
+            <span className="toggle-track"><span className="toggle-thumb" /></span>
           </label>
         </div>
       </div>
