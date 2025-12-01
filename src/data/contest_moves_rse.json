@@ -1,0 +1,3525 @@
+{
+  "absorb": {
+    "type": "smart",
+    "effect": 9,
+    "combos": {
+      "before": [],
+      "after": [
+        "growth"
+      ]
+    }
+  },
+  "acid": {
+    "type": "smart",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "acid-armor": {
+    "type": "tough",
+    "effect": 32,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "aerial-ace": {
+    "type": "cool",
+    "effect": 27,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "aeroblast": {
+    "type": "cool",
+    "effect": 2,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "agility": {
+    "type": "cool",
+    "effect": 30,
+    "combos": {
+      "before": [],
+      "after": [
+        "double-team"
+      ]
+    }
+  },
+  "air-cutter": {
+    "type": "cool",
+    "effect": 23,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "amnesia": {
+    "type": "cute",
+    "effect": 32,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "ancient-power": {
+    "type": "tough",
+    "effect": 32,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "arm-thrust": {
+    "type": "tough",
+    "effect": 10,
+    "combos": {
+      "before": [],
+      "after": [
+        "focus-energy",
+        "fake-out"
+      ]
+    }
+  },
+  "aromatherapy": {
+    "type": "smart",
+    "effect": 28,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "assist": {
+    "type": "cute",
+    "effect": 25,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "astonish": {
+    "type": "smart",
+    "effect": 9,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "attract": {
+    "type": "cute",
+    "effect": 18,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "aurora-beam": {
+    "type": "beauty",
+    "effect": 23,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "barrage": {
+    "type": "tough",
+    "effect": 12,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "barrier": {
+    "type": "cool",
+    "effect": 15,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "baton-pass": {
+    "type": "cute",
+    "effect": 18,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "beat-up": {
+    "type": "smart",
+    "effect": 14,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "belly-drum": {
+    "type": "cute",
+    "effect": 32,
+    "combos": {
+      "before": [
+        "rest"
+      ],
+      "after": []
+    }
+  },
+  "bide": {
+    "type": "tough",
+    "effect": 15,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "bind": {
+    "type": "tough",
+    "effect": 24,
+    "combos": {
+      "before": [],
+      "after": [
+        "vice-grip"
+      ]
+    }
+  },
+  "bite": {
+    "type": "tough",
+    "effect": 5,
+    "combos": {
+      "before": [],
+      "after": [
+        "leer",
+        "scary-face"
+      ]
+    }
+  },
+  "blast-burn": {
+    "type": "beauty",
+    "effect": 6,
+    "combos": {
+      "before": [],
+      "after": [
+        "sunny-day"
+      ]
+    }
+  },
+  "blaze-kick": {
+    "type": "beauty",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "sunny-day"
+      ]
+    }
+  },
+  "blizzard": {
+    "type": "beauty",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "powder-snow",
+        "hail"
+      ]
+    }
+  },
+  "block": {
+    "type": "cute",
+    "effect": 18,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "body-slam": {
+    "type": "tough",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "bone-club": {
+    "type": "tough",
+    "effect": 10,
+    "combos": {
+      "before": [
+        "bonemerang",
+        "bone-rush"
+      ],
+      "after": [
+        "bonemerang",
+        "bone-rush"
+      ]
+    }
+  },
+  "bone-rush": {
+    "type": "tough",
+    "effect": 1,
+    "combos": {
+      "before": [
+        "bone-club",
+        "bonemerang"
+      ],
+      "after": [
+        "focus-energy",
+        "bone-club",
+        "bonemerang"
+      ]
+    }
+  },
+  "bonemerang": {
+    "type": "tough",
+    "effect": 1,
+    "combos": {
+      "before": [
+        "bone-club",
+        "bone-rush"
+      ],
+      "after": [
+        "bone-club",
+        "bone-rush"
+      ]
+    }
+  },
+  "bounce": {
+    "type": "cute",
+    "effect": 15,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "brick-break": {
+    "type": "cool",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": [
+        "focus-energy"
+      ]
+    }
+  },
+  "bubble": {
+    "type": "cute",
+    "effect": 8,
+    "combos": {
+      "before": [],
+      "after": [
+        "rain-dance"
+      ]
+    }
+  },
+  "bubble-beam": {
+    "type": "beauty",
+    "effect": 5,
+    "combos": {
+      "before": [],
+      "after": [
+        "rain-dance"
+      ]
+    }
+  },
+  "bulk-up": {
+    "type": "beauty",
+    "effect": 32,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "bullet-seed": {
+    "type": "cool",
+    "effect": 14,
+    "combos": {
+      "before": [],
+      "after": [
+        "growth"
+      ]
+    }
+  },
+  "calm-mind": {
+    "type": "smart",
+    "effect": 16,
+    "combos": {
+      "before": [
+        "psybeam",
+        "confusion",
+        "psychic",
+        "meditate",
+        "light-screen",
+        "reflect",
+        "dream-eater",
+        "psywave",
+        "future-sight",
+        "luster-purge",
+        "mist-ball",
+        "psycho-boost"
+      ],
+      "after": []
+    }
+  },
+  "camouflage": {
+    "type": "smart",
+    "effect": 2,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "charge": {
+    "type": "smart",
+    "effect": 12,
+    "combos": {
+      "before": [
+        "thunder-punch",
+        "thunder-shock",
+        "thunderbolt",
+        "thunder-wave",
+        "thunder",
+        "spark",
+        "volt-tackle",
+        "shock-wave"
+      ],
+      "after": []
+    }
+  },
+  "charm": {
+    "type": "cute",
+    "effect": 23,
+    "combos": {
+      "before": [
+        "tail-whip",
+        "growl",
+        "rest",
+        "sweet-kiss",
+        "flatter"
+      ],
+      "after": []
+    }
+  },
+  "clamp": {
+    "type": "tough",
+    "effect": 24,
+    "combos": {
+      "before": [],
+      "after": [
+        "rain-dance"
+      ]
+    }
+  },
+  "comet-punch": {
+    "type": "tough",
+    "effect": 12,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "confuse-ray": {
+    "type": "smart",
+    "effect": 21,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "confusion": {
+    "type": "smart",
+    "effect": 9,
+    "combos": {
+      "before": [
+        "psychic",
+        "teleport",
+        "kinesis",
+        "future-sight"
+      ],
+      "after": [
+        "psychic",
+        "kinesis",
+        "calm-mind"
+      ]
+    }
+  },
+  "constrict": {
+    "type": "tough",
+    "effect": 9,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "conversion": {
+    "type": "beauty",
+    "effect": 12,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "conversion-2": {
+    "type": "beauty",
+    "effect": 12,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "cosmic-power": {
+    "type": "cool",
+    "effect": 32,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "cotton-spore": {
+    "type": "beauty",
+    "effect": 10,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "counter": {
+    "type": "tough",
+    "effect": 16,
+    "combos": {
+      "before": [],
+      "after": [
+        "taunt"
+      ]
+    }
+  },
+  "covet": {
+    "type": "cute",
+    "effect": 20,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "crabhammer": {
+    "type": "tough",
+    "effect": 2,
+    "combos": {
+      "before": [],
+      "after": [
+        "swords-dance",
+        "rain-dance"
+      ]
+    }
+  },
+  "cross-chop": {
+    "type": "cool",
+    "effect": 2,
+    "combos": {
+      "before": [],
+      "after": [
+        "focus-energy"
+      ]
+    }
+  },
+  "crunch": {
+    "type": "tough",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": [
+        "scary-face"
+      ]
+    }
+  },
+  "crush-claw": {
+    "type": "cool",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": [
+        "swords-dance"
+      ]
+    }
+  },
+  "curse": {
+    "type": "tough",
+    "effect": 31,
+    "combos": {
+      "before": [
+        "spite",
+        "destiny-bond",
+        "mean-look",
+        "grudge"
+      ],
+      "after": []
+    }
+  },
+  "cut": {
+    "type": "cool",
+    "effect": 14,
+    "combos": {
+      "before": [],
+      "after": [
+        "swords-dance"
+      ]
+    }
+  },
+  "defense-curl": {
+    "type": "cute",
+    "effect": 16,
+    "combos": {
+      "before": [
+        "tackle",
+        "rollout"
+      ],
+      "after": []
+    }
+  },
+  "destiny-bond": {
+    "type": "smart",
+    "effect": 7,
+    "combos": {
+      "before": [],
+      "after": [
+        "curse",
+        "endure",
+        "mean-look"
+      ]
+    }
+  },
+  "detect": {
+    "type": "cool",
+    "effect": 16,
+    "combos": {
+      "before": [],
+      "after": [
+        "taunt"
+      ]
+    }
+  },
+  "dig": {
+    "type": "smart",
+    "effect": 15,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "disable": {
+    "type": "smart",
+    "effect": 18,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "dive": {
+    "type": "beauty",
+    "effect": 16,
+    "combos": {
+      "before": [
+        "surf"
+      ],
+      "after": [
+        "surf",
+        "rain-dance"
+      ]
+    }
+  },
+  "dizzy-punch": {
+    "type": "cool",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "doom-desire": {
+    "type": "cool",
+    "effect": 24,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "double-edge": {
+    "type": "tough",
+    "effect": 3,
+    "combos": {
+      "before": [],
+      "after": [
+        "harden",
+        "focus-energy"
+      ]
+    }
+  },
+  "double-kick": {
+    "type": "cool",
+    "effect": 12,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "double-slap": {
+    "type": "tough",
+    "effect": 10,
+    "combos": {
+      "before": [],
+      "after": [
+        "pound"
+      ]
+    }
+  },
+  "double-team": {
+    "type": "cool",
+    "effect": 16,
+    "combos": {
+      "before": [
+        "agility",
+        "quick-attack",
+        "teleport"
+      ],
+      "after": []
+    }
+  },
+  "dragon-breath": {
+    "type": "cool",
+    "effect": 5,
+    "combos": {
+      "before": [
+        "dragon-rage",
+        "dragon-claw",
+        "dragon-dance"
+      ],
+      "after": [
+        "dragon-rage",
+        "dragon-dance"
+      ]
+    }
+  },
+  "dragon-claw": {
+    "type": "cool",
+    "effect": 23,
+    "combos": {
+      "before": [],
+      "after": [
+        "dragon-rage",
+        "dragon-breath",
+        "dragon-dance"
+      ]
+    }
+  },
+  "dragon-dance": {
+    "type": "cool",
+    "effect": 32,
+    "combos": {
+      "before": [
+        "dragon-rage",
+        "dragon-breath",
+        "dragon-claw"
+      ],
+      "after": [
+        "dragon-rage",
+        "dragon-breath"
+      ]
+    }
+  },
+  "dragon-rage": {
+    "type": "cool",
+    "effect": 26,
+    "combos": {
+      "before": [
+        "dragon-breath",
+        "dragon-claw",
+        "dragon-dance"
+      ],
+      "after": [
+        "dragon-breath",
+        "dragon-dance"
+      ]
+    }
+  },
+  "dream-eater": {
+    "type": "smart",
+    "effect": 8,
+    "combos": {
+      "before": [],
+      "after": [
+        "hypnosis",
+        "calm-mind"
+      ]
+    }
+  },
+  "drill-peck": {
+    "type": "cool",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "peck"
+      ]
+    }
+  },
+  "dynamic-punch": {
+    "type": "cool",
+    "effect": 10,
+    "combos": {
+      "before": [],
+      "after": [
+        "focus-energy",
+        "mind-reader"
+      ]
+    }
+  },
+  "earthquake": {
+    "type": "tough",
+    "effect": 5,
+    "combos": {
+      "before": [
+        "fissure",
+        "eruption"
+      ],
+      "after": []
+    }
+  },
+  "egg-bomb": {
+    "type": "tough",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "soft-boiled"
+      ]
+    }
+  },
+  "ember": {
+    "type": "beauty",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "sunny-day"
+      ]
+    }
+  },
+  "encore": {
+    "type": "cute",
+    "effect": 18,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "endeavor": {
+    "type": "tough",
+    "effect": 28,
+    "combos": {
+      "before": [],
+      "after": [
+        "endure"
+      ]
+    }
+  },
+  "endure": {
+    "type": "tough",
+    "effect": 16,
+    "combos": {
+      "before": [
+        "flail",
+        "reversal",
+        "destiny-bond",
+        "pain-split",
+        "endeavor",
+        "eruption"
+      ],
+      "after": []
+    }
+  },
+  "eruption": {
+    "type": "beauty",
+    "effect": 26,
+    "combos": {
+      "before": [],
+      "after": [
+        "earthquake",
+        "endure",
+        "sunny-day"
+      ]
+    }
+  },
+  "explosion": {
+    "type": "beauty",
+    "effect": 7,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "extrasensory": {
+    "type": "cool",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "extreme-speed": {
+    "type": "cool",
+    "effect": 30,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "facade": {
+    "type": "cute",
+    "effect": 28,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "fake-out": {
+    "type": "cute",
+    "effect": 23,
+    "combos": {
+      "before": [
+        "seismic-toss",
+        "feint-attack",
+        "vital-throw",
+        "knock-off",
+        "arm-thrust"
+      ],
+      "after": []
+    }
+  },
+  "fake-tears": {
+    "type": "smart",
+    "effect": 28,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "false-swipe": {
+    "type": "cool",
+    "effect": 5,
+    "combos": {
+      "before": [],
+      "after": [
+        "swords-dance"
+      ]
+    }
+  },
+  "feather-dance": {
+    "type": "beauty",
+    "effect": 28,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "feint-attack": {
+    "type": "smart",
+    "effect": 27,
+    "combos": {
+      "before": [],
+      "after": [
+        "pound",
+        "leer",
+        "fake-out"
+      ]
+    }
+  },
+  "fire-blast": {
+    "type": "beauty",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "sunny-day"
+      ]
+    }
+  },
+  "fire-punch": {
+    "type": "beauty",
+    "effect": 1,
+    "combos": {
+      "before": [
+        "ice-punch",
+        "thunder-punch"
+      ],
+      "after": [
+        "ice-punch",
+        "thunder-punch",
+        "sunny-day"
+      ]
+    }
+  },
+  "fire-spin": {
+    "type": "beauty",
+    "effect": 24,
+    "combos": {
+      "before": [],
+      "after": [
+        "sunny-day"
+      ]
+    }
+  },
+  "fissure": {
+    "type": "tough",
+    "effect": 14,
+    "combos": {
+      "before": [],
+      "after": [
+        "earthquake"
+      ]
+    }
+  },
+  "flail": {
+    "type": "cute",
+    "effect": 26,
+    "combos": {
+      "before": [],
+      "after": [
+        "endure"
+      ]
+    }
+  },
+  "flame-wheel": {
+    "type": "beauty",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "sunny-day"
+      ]
+    }
+  },
+  "flamethrower": {
+    "type": "beauty",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "sunny-day"
+      ]
+    }
+  },
+  "flash": {
+    "type": "beauty",
+    "effect": 22,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "flatter": {
+    "type": "smart",
+    "effect": 18,
+    "combos": {
+      "before": [],
+      "after": [
+        "charm"
+      ]
+    }
+  },
+  "fly": {
+    "type": "smart",
+    "effect": 15,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "focus-energy": {
+    "type": "cool",
+    "effect": 5,
+    "combos": {
+      "before": [
+        "karate-chop",
+        "mega-punch",
+        "mega-kick",
+        "headbutt",
+        "take-down",
+        "double-edge",
+        "triple-kick",
+        "bone-rush",
+        "dynamic-punch",
+        "cross-chop",
+        "focus-punch",
+        "brick-break",
+        "arm-thrust",
+        "sky-uppercut"
+      ],
+      "after": []
+    }
+  },
+  "focus-punch": {
+    "type": "tough",
+    "effect": 31,
+    "combos": {
+      "before": [],
+      "after": [
+        "focus-energy"
+      ]
+    }
+  },
+  "follow-me": {
+    "type": "cute",
+    "effect": 24,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "foresight": {
+    "type": "smart",
+    "effect": 33,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "frenzy-plant": {
+    "type": "cool",
+    "effect": 6,
+    "combos": {
+      "before": [],
+      "after": [
+        "growth"
+      ]
+    }
+  },
+  "frustration": {
+    "type": "cute",
+    "effect": 13,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "fury-attack": {
+    "type": "cool",
+    "effect": 10,
+    "combos": {
+      "before": [],
+      "after": [
+        "horn-attack",
+        "peck"
+      ]
+    }
+  },
+  "fury-cutter": {
+    "type": "cool",
+    "effect": 17,
+    "combos": {
+      "before": [],
+      "after": [
+        "swords-dance"
+      ]
+    }
+  },
+  "fury-swipes": {
+    "type": "tough",
+    "effect": 10,
+    "combos": {
+      "before": [],
+      "after": [
+        "scratch"
+      ]
+    }
+  },
+  "future-sight": {
+    "type": "smart",
+    "effect": 24,
+    "combos": {
+      "before": [],
+      "after": [
+        "confusion",
+        "psychic",
+        "kinesis",
+        "calm-mind"
+      ]
+    }
+  },
+  "giga-drain": {
+    "type": "smart",
+    "effect": 10,
+    "combos": {
+      "before": [],
+      "after": [
+        "growth"
+      ]
+    }
+  },
+  "glare": {
+    "type": "tough",
+    "effect": 5,
+    "combos": {
+      "before": [],
+      "after": [
+        "leer"
+      ]
+    }
+  },
+  "grass-whistle": {
+    "type": "smart",
+    "effect": 5,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "growl": {
+    "type": "cute",
+    "effect": 28,
+    "combos": {
+      "before": [],
+      "after": [
+        "charm"
+      ]
+    }
+  },
+  "growth": {
+    "type": "beauty",
+    "effect": 32,
+    "combos": {
+      "before": [
+        "vine-whip",
+        "absorb",
+        "mega-drain",
+        "razor-leaf",
+        "solar-beam",
+        "petal-dance",
+        "giga-drain",
+        "bullet-seed",
+        "frenzy-plant",
+        "magical-leaf"
+      ],
+      "after": []
+    }
+  },
+  "grudge": {
+    "type": "tough",
+    "effect": 26,
+    "combos": {
+      "before": [],
+      "after": [
+        "curse"
+      ]
+    }
+  },
+  "guillotine": {
+    "type": "cool",
+    "effect": 14,
+    "combos": {
+      "before": [],
+      "after": [
+        "vice-grip"
+      ]
+    }
+  },
+  "gust": {
+    "type": "smart",
+    "effect": 21,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "hail": {
+    "type": "beauty",
+    "effect": 5,
+    "combos": {
+      "before": [
+        "blizzard",
+        "powder-snow",
+        "weather-ball"
+      ],
+      "after": []
+    }
+  },
+  "harden": {
+    "type": "tough",
+    "effect": 16,
+    "combos": {
+      "before": [
+        "tackle",
+        "take-down",
+        "double-edge",
+        "protect",
+        "rollout"
+      ],
+      "after": []
+    }
+  },
+  "haze": {
+    "type": "beauty",
+    "effect": 33,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "headbutt": {
+    "type": "tough",
+    "effect": 9,
+    "combos": {
+      "before": [],
+      "after": [
+        "focus-energy"
+      ]
+    }
+  },
+  "heal-bell": {
+    "type": "beauty",
+    "effect": 28,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "heat-wave": {
+    "type": "beauty",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "sunny-day"
+      ]
+    }
+  },
+  "helping-hand": {
+    "type": "smart",
+    "effect": 18,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "hidden-power": {
+    "type": "smart",
+    "effect": 17,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "high-jump-kick": {
+    "type": "cool",
+    "effect": 3,
+    "combos": {
+      "before": [],
+      "after": [
+        "mind-reader"
+      ]
+    }
+  },
+  "horn-attack": {
+    "type": "cool",
+    "effect": 1,
+    "combos": {
+      "before": [
+        "fury-attack",
+        "horn-drill"
+      ],
+      "after": [
+        "leer"
+      ]
+    }
+  },
+  "horn-drill": {
+    "type": "cool",
+    "effect": 14,
+    "combos": {
+      "before": [],
+      "after": [
+        "horn-attack"
+      ]
+    }
+  },
+  "howl": {
+    "type": "cool",
+    "effect": 32,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "hydro-cannon": {
+    "type": "beauty",
+    "effect": 6,
+    "combos": {
+      "before": [],
+      "after": [
+        "rain-dance"
+      ]
+    }
+  },
+  "hydro-pump": {
+    "type": "beauty",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "rain-dance"
+      ]
+    }
+  },
+  "hyper-beam": {
+    "type": "cool",
+    "effect": 6,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "hyper-fang": {
+    "type": "cool",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "hyper-voice": {
+    "type": "cool",
+    "effect": 5,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "hypnosis": {
+    "type": "smart",
+    "effect": 5,
+    "combos": {
+      "before": [
+        "dream-eater",
+        "nightmare"
+      ],
+      "after": []
+    }
+  },
+  "ice-ball": {
+    "type": "beauty",
+    "effect": 24,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "ice-beam": {
+    "type": "beauty",
+    "effect": 23,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "ice-punch": {
+    "type": "beauty",
+    "effect": 1,
+    "combos": {
+      "before": [
+        "fire-punch",
+        "thunder-punch"
+      ],
+      "after": [
+        "fire-punch",
+        "thunder-punch"
+      ]
+    }
+  },
+  "icicle-spear": {
+    "type": "beauty",
+    "effect": 23,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "icy-wind": {
+    "type": "beauty",
+    "effect": 5,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "imprison": {
+    "type": "smart",
+    "effect": 33,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "ingrain": {
+    "type": "smart",
+    "effect": 15,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "iron-defense": {
+    "type": "tough",
+    "effect": 15,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "iron-tail": {
+    "type": "cool",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "jump-kick": {
+    "type": "cool",
+    "effect": 3,
+    "combos": {
+      "before": [],
+      "after": [
+        "mind-reader"
+      ]
+    }
+  },
+  "karate-chop": {
+    "type": "tough",
+    "effect": 2,
+    "combos": {
+      "before": [],
+      "after": [
+        "focus-energy"
+      ]
+    }
+  },
+  "kinesis": {
+    "type": "smart",
+    "effect": 24,
+    "combos": {
+      "before": [
+        "confusion",
+        "psychic",
+        "teleport",
+        "future-sight"
+      ],
+      "after": [
+        "confusion",
+        "psychic"
+      ]
+    }
+  },
+  "knock-off": {
+    "type": "smart",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": [
+        "fake-out"
+      ]
+    }
+  },
+  "leaf-blade": {
+    "type": "cool",
+    "effect": 2,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "leech-life": {
+    "type": "smart",
+    "effect": 9,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "leech-seed": {
+    "type": "smart",
+    "effect": 8,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "leer": {
+    "type": "cool",
+    "effect": 24,
+    "combos": {
+      "before": [
+        "scratch",
+        "stomp",
+        "horn-attack",
+        "tackle",
+        "bite",
+        "glare",
+        "scary-face",
+        "feint-attack"
+      ],
+      "after": [
+        "rage",
+        "scary-face"
+      ]
+    }
+  },
+  "lick": {
+    "type": "tough",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "light-screen": {
+    "type": "beauty",
+    "effect": 15,
+    "combos": {
+      "before": [],
+      "after": [
+        "calm-mind"
+      ]
+    }
+  },
+  "lock-on": {
+    "type": "smart",
+    "effect": 24,
+    "combos": {
+      "before": [
+        "thunder",
+        "tri-attack",
+        "octazooka",
+        "zap-cannon",
+        "superpower"
+      ],
+      "after": []
+    }
+  },
+  "lovely-kiss": {
+    "type": "beauty",
+    "effect": 5,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "low-kick": {
+    "type": "tough",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "luster-purge": {
+    "type": "smart",
+    "effect": 9,
+    "combos": {
+      "before": [],
+      "after": [
+        "calm-mind"
+      ]
+    }
+  },
+  "mach-punch": {
+    "type": "cool",
+    "effect": 30,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "magic-coat": {
+    "type": "beauty",
+    "effect": 15,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "magical-leaf": {
+    "type": "beauty",
+    "effect": 27,
+    "combos": {
+      "before": [],
+      "after": [
+        "growth"
+      ]
+    }
+  },
+  "magnitude": {
+    "type": "tough",
+    "effect": 11,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "mean-look": {
+    "type": "beauty",
+    "effect": 18,
+    "combos": {
+      "before": [
+        "destiny-bond",
+        "perish-song"
+      ],
+      "after": [
+        "curse"
+      ]
+    }
+  },
+  "meditate": {
+    "type": "beauty",
+    "effect": 32,
+    "combos": {
+      "before": [],
+      "after": [
+        "calm-mind"
+      ]
+    }
+  },
+  "mega-drain": {
+    "type": "smart",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": [
+        "growth"
+      ]
+    }
+  },
+  "mega-kick": {
+    "type": "cool",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "focus-energy",
+        "mind-reader"
+      ]
+    }
+  },
+  "mega-punch": {
+    "type": "tough",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "focus-energy",
+        "mind-reader"
+      ]
+    }
+  },
+  "megahorn": {
+    "type": "cool",
+    "effect": 12,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "memento": {
+    "type": "tough",
+    "effect": 7,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "metal-claw": {
+    "type": "cool",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "metal-sound"
+      ]
+    }
+  },
+  "metal-sound": {
+    "type": "smart",
+    "effect": 5,
+    "combos": {
+      "before": [
+        "metal-claw"
+      ],
+      "after": []
+    }
+  },
+  "meteor-mash": {
+    "type": "cool",
+    "effect": 12,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "metronome": {
+    "type": "cute",
+    "effect": 17,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "milk-drink": {
+    "type": "cute",
+    "effect": 12,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "mimic": {
+    "type": "cute",
+    "effect": 19,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "mind-reader": {
+    "type": "smart",
+    "effect": 24,
+    "combos": {
+      "before": [
+        "mega-punch",
+        "mega-kick",
+        "jump-kick",
+        "submission",
+        "high-jump-kick",
+        "dynamic-punch"
+      ],
+      "after": []
+    }
+  },
+  "minimize": {
+    "type": "cute",
+    "effect": 16,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "mirror-coat": {
+    "type": "beauty",
+    "effect": 16,
+    "combos": {
+      "before": [],
+      "after": [
+        "taunt"
+      ]
+    }
+  },
+  "mirror-move": {
+    "type": "smart",
+    "effect": 19,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "mist": {
+    "type": "beauty",
+    "effect": 15,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "mist-ball": {
+    "type": "smart",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": [
+        "calm-mind"
+      ]
+    }
+  },
+  "moonlight": {
+    "type": "beauty",
+    "effect": 25,
+    "combos": {
+      "before": [],
+      "after": [
+        "sunny-day"
+      ]
+    }
+  },
+  "morning-sun": {
+    "type": "beauty",
+    "effect": 25,
+    "combos": {
+      "before": [],
+      "after": [
+        "sunny-day"
+      ]
+    }
+  },
+  "mud-shot": {
+    "type": "tough",
+    "effect": 5,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "mud-slap": {
+    "type": "cute",
+    "effect": 10,
+    "combos": {
+      "before": [
+        "sand-attack",
+        "mud-sport"
+      ],
+      "after": [
+        "sand-attack",
+        "sandstorm",
+        "mud-sport"
+      ]
+    }
+  },
+  "mud-sport": {
+    "type": "cute",
+    "effect": 1,
+    "combos": {
+      "before": [
+        "water-gun",
+        "mud-slap",
+        "water-sport"
+      ],
+      "after": [
+        "mud-slap",
+        "water-sport"
+      ]
+    }
+  },
+  "muddy-water": {
+    "type": "tough",
+    "effect": 10,
+    "combos": {
+      "before": [],
+      "after": [
+        "rain-dance"
+      ]
+    }
+  },
+  "nature-power": {
+    "type": "beauty",
+    "effect": 11,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "needle-arm": {
+    "type": "smart",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "night-shade": {
+    "type": "smart",
+    "effect": 23,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "nightmare": {
+    "type": "smart",
+    "effect": 5,
+    "combos": {
+      "before": [],
+      "after": [
+        "hypnosis"
+      ]
+    }
+  },
+  "octazooka": {
+    "type": "tough",
+    "effect": 10,
+    "combos": {
+      "before": [],
+      "after": [
+        "lock-on",
+        "rain-dance"
+      ]
+    }
+  },
+  "odor-sleuth": {
+    "type": "smart",
+    "effect": 33,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "outrage": {
+    "type": "cool",
+    "effect": 6,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "overheat": {
+    "type": "beauty",
+    "effect": 3,
+    "combos": {
+      "before": [],
+      "after": [
+        "sunny-day"
+      ]
+    }
+  },
+  "pain-split": {
+    "type": "smart",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": [
+        "endure"
+      ]
+    }
+  },
+  "pay-day": {
+    "type": "smart",
+    "effect": 11,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "peck": {
+    "type": "cool",
+    "effect": 1,
+    "combos": {
+      "before": [
+        "fury-attack",
+        "drill-peck"
+      ],
+      "after": []
+    }
+  },
+  "perish-song": {
+    "type": "beauty",
+    "effect": 14,
+    "combos": {
+      "before": [],
+      "after": [
+        "sing",
+        "mean-look"
+      ]
+    }
+  },
+  "petal-dance": {
+    "type": "beauty",
+    "effect": 6,
+    "combos": {
+      "before": [],
+      "after": [
+        "growth"
+      ]
+    }
+  },
+  "pin-missile": {
+    "type": "cool",
+    "effect": 10,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "poison-fang": {
+    "type": "smart",
+    "effect": 33,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "poison-gas": {
+    "type": "smart",
+    "effect": 33,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "poison-powder": {
+    "type": "smart",
+    "effect": 33,
+    "combos": {
+      "before": [],
+      "after": [
+        "sweet-scent"
+      ]
+    }
+  },
+  "poison-sting": {
+    "type": "smart",
+    "effect": 9,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "poison-tail": {
+    "type": "smart",
+    "effect": 33,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "pound": {
+    "type": "tough",
+    "effect": 1,
+    "combos": {
+      "before": [
+        "double-slap",
+        "slam",
+        "feint-attack"
+      ],
+      "after": []
+    }
+  },
+  "powder-snow": {
+    "type": "beauty",
+    "effect": 1,
+    "combos": {
+      "before": [
+        "blizzard"
+      ],
+      "after": [
+        "hail"
+      ]
+    }
+  },
+  "present": {
+    "type": "cute",
+    "effect": 17,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "protect": {
+    "type": "cute",
+    "effect": 15,
+    "combos": {
+      "before": [],
+      "after": [
+        "harden"
+      ]
+    }
+  },
+  "psybeam": {
+    "type": "beauty",
+    "effect": 21,
+    "combos": {
+      "before": [],
+      "after": [
+        "calm-mind"
+      ]
+    }
+  },
+  "psych-up": {
+    "type": "smart",
+    "effect": 12,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "psychic": {
+    "type": "smart",
+    "effect": 5,
+    "combos": {
+      "before": [
+        "confusion",
+        "teleport",
+        "kinesis",
+        "future-sight"
+      ],
+      "after": [
+        "confusion",
+        "kinesis",
+        "calm-mind"
+      ]
+    }
+  },
+  "psycho-boost": { 
+    "type": "smart",
+    "effect": 3,
+    "combos": {
+      "before": [],
+      "after": [
+        "calm-mind"
+      ]
+    }
+},
+  "psywave": {
+    "type": "smart",
+    "effect": 14,
+    "combos": {
+      "before": [],
+      "after": [
+        "calm-mind"
+      ]
+    }
+  },
+  "pursuit": {
+    "type": "smart",
+    "effect": 14,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "quick-attack": {
+    "type": "cool",
+    "effect": 30,
+    "combos": {
+      "before": [],
+      "after": [
+        "double-team"
+      ]
+    }
+  },
+  "rage": {
+    "type": "cool",
+    "effect": 17,
+    "combos": {
+      "before": [
+        "thrash",
+        "leer",
+        "scary-face"
+      ],
+      "after": []
+    }
+  },
+  "rain-dance": {
+    "type": "tough",
+    "effect": 11,
+    "combos": {
+      "before": [
+        "water-gun",
+        "hydro-pump",
+        "surf",
+        "bubble-beam",
+        "thunder",
+        "withdraw",
+        "waterfall",
+        "clamp",
+        "bubble",
+        "crabhammer",
+        "octazooka",
+        "whirlpool",
+        "dive",
+        "hydro-cannon",
+        "weather-ball",
+        "water-spout",
+        "muddy-water",
+        "water-sport",
+        "water-pulse"
+      ],
+      "after": []
+    }
+  },
+  "rapid-spin": {
+    "type": "cool",
+    "effect": 16,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "razor-leaf": {
+    "type": "cool",
+    "effect": 2,
+    "combos": {
+      "before": [],
+      "after": [
+        "growth"
+      ]
+    }
+  },
+  "razor-wind": {
+    "type": "cool",
+    "effect": 2,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "recover": {
+    "type": "smart",
+    "effect": 23,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "recycle": {
+    "type": "smart",
+    "effect": 17,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "reflect": {
+    "type": "smart",
+    "effect": 15,
+    "combos": {
+      "before": [],
+      "after": [
+        "calm-mind"
+      ]
+    }
+  },
+  "refresh": {
+    "type": "cute",
+    "effect": 32,
+    "combos": {
+      "before": [],
+      "after": [
+        "sing",
+        "water-sport"
+      ]
+    }
+  },
+  "rest": {
+    "type": "cute",
+    "effect": 16,
+    "combos": {
+      "before": [
+        "snore",
+        "sleep-talk"
+      ],
+      "after": [
+        "belly-drum",
+        "charm",
+        "yawn"
+      ]
+    }
+  },
+  "return": {
+    "type": "cute",
+    "effect": 13,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "revenge": {
+    "type": "tough",
+    "effect": 31,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "reversal": {
+    "type": "cool",
+    "effect": 28,
+    "combos": {
+      "before": [],
+      "after": [
+        "endure"
+      ]
+    }
+  },
+  "roar": {
+    "type": "cool",
+    "effect": 21,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "rock-blast": {
+    "type": "tough",
+    "effect": 12,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "rock-slide": {
+    "type": "tough",
+    "effect": 5,
+    "combos": {
+      "before": [],
+      "after": [
+        "rock-throw"
+      ]
+    }
+  },
+  "rock-smash": {
+    "type": "tough",
+    "effect": 29,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "rock-throw": {
+    "type": "tough",
+    "effect": 12,
+    "combos": {
+      "before": [
+        "rock-slide",
+        "rock-tomb"
+      ],
+      "after": []
+    }
+  },
+  "rock-tomb": {
+    "type": "smart",
+    "effect": 24,
+    "combos": {
+      "before": [],
+      "after": [
+        "rock-throw"
+      ]
+    }
+  },
+  "role-play": {
+    "type": "cute",
+    "effect": 20,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "rolling-kick": {
+    "type": "cool",
+    "effect": 5,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "rollout": {
+    "type": "tough",
+    "effect": 24,
+    "combos": {
+      "before": [],
+      "after": [
+        "harden",
+        "defense-curl"
+      ]
+    }
+  },
+  "sacred-fire": {
+    "type": "beauty",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "sunny-day"
+      ]
+    }
+  },
+  "safeguard": {
+    "type": "beauty",
+    "effect": 15,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "sand-attack": {
+    "type": "cute",
+    "effect": 10,
+    "combos": {
+      "before": [
+        "mud-slap"
+      ],
+      "after": [
+        "mud-slap",
+        "sandstorm"
+      ]
+    }
+  },
+  "sand-tomb": {
+    "type": "smart",
+    "effect": 24,
+    "combos": {
+      "before": [],
+      "after": [
+        "sandstorm"
+      ]
+    }
+  },
+  "sandstorm": {
+    "type": "tough",
+    "effect": 21,
+    "combos": {
+      "before": [
+        "sand-attack",
+        "mud-slap",
+        "weather-ball",
+        "sand-tomb"
+      ],
+      "after": []
+    }
+  },
+  "scary-face": {
+    "type": "tough",
+    "effect": 10,
+    "combos": {
+      "before": [
+        "leer",
+        "bite",
+        "super-fang",
+        "crunch"
+      ],
+      "after": [
+        "leer",
+        "rage"
+      ]
+    }
+  },
+  "scratch": {
+    "type": "tough",
+    "effect": 1,
+    "combos": {
+      "before": [
+        "fury-swipes",
+        "slash"
+      ],
+      "after": [
+        "leer"
+      ]
+    }
+  },
+  "screech": {
+    "type": "smart",
+    "effect": 5,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "secret-power": {
+    "type": "smart",
+    "effect": 29,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "seismic-toss": {
+    "type": "tough",
+    "effect": 23,
+    "combos": {
+      "before": [],
+      "after": [
+        "fake-out"
+      ]
+    }
+  },
+  "self-destruct": {
+    "type": "beauty",
+    "effect": 7,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "shadow-ball": {
+    "type": "smart",
+    "effect": 22,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "shadow-punch": {
+    "type": "smart",
+    "effect": 27,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "sharpen": {
+    "type": "cute",
+    "effect": 32,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "sheer-cold": {
+    "type": "beauty",
+    "effect": 14,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "shock-wave": {
+    "type": "cool",
+    "effect": 27,
+    "combos": {
+      "before": [],
+      "after": [
+        "charge"
+      ]
+    }
+  },
+  "signal-beam": {
+    "type": "beauty",
+    "effect": 21,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "silver-wind": {
+    "type": "beauty",
+    "effect": 32,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "sing": {
+    "type": "cute",
+    "effect": 18,
+    "combos": {
+      "before": [
+        "perish-song",
+        "refresh"
+      ],
+      "after": []
+    }
+  },
+  "sketch": {
+    "type": "smart",
+    "effect": 19,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "skill-swap": {
+    "type": "smart",
+    "effect": 20,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "skull-bash": {
+    "type": "tough",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "sky-attack": {
+    "type": "cool",
+    "effect": 2,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "sky-uppercut": {
+    "type": "cool",
+    "effect": 23,
+    "combos": {
+      "before": [],
+      "after": [
+        "focus-energy"
+      ]
+    }
+  },
+  "slack-off": {
+    "type": "cute",
+    "effect": 26,
+    "combos": {
+      "before": [],
+      "after": [
+        "yawn"
+      ]
+    }
+  },
+  "slam": {
+    "type": "tough",
+    "effect": 23,
+    "combos": {
+      "before": [],
+      "after": [
+        "pound"
+      ]
+    }
+  },
+  "slash": {
+    "type": "cool",
+    "effect": 2,
+    "combos": {
+      "before": [],
+      "after": [
+        "scratch",
+        "swords-dance"
+      ]
+    }
+  },
+  "sleep-powder": {
+    "type": "smart",
+    "effect": 5,
+    "combos": {
+      "before": [],
+      "after": [
+        "sweet-scent"
+      ]
+    }
+  },
+  "sleep-talk": {
+    "type": "cute",
+    "effect": 17,
+    "combos": {
+      "before": [],
+      "after": [
+        "rest"
+      ]
+    }
+  },
+  "sludge": {
+    "type": "tough",
+    "effect": 4,
+    "combos": {
+      "before": [
+        "sludge-bomb"
+      ],
+      "after": [
+        "sludge-bomb"
+      ]
+    }
+  },
+  "sludge-bomb": {
+    "type": "tough",
+    "effect": 10,
+    "combos": {
+      "before": [
+        "sludge"
+      ],
+      "after": [
+        "sludge"
+      ]
+    }
+  },
+  "smelling-salts": {
+    "type": "smart",
+    "effect": 9,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "smog": {
+    "type": "tough",
+    "effect": 5,
+    "combos": {
+      "before": [
+        "smokescreen"
+      ],
+      "after": []
+    }
+  },
+  "smokescreen": {
+    "type": "smart",
+    "effect": 22,
+    "combos": {
+      "before": [],
+      "after": [
+        "smog"
+      ]
+    }
+  },
+  "snatch": {
+    "type": "smart",
+    "effect": 14,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "snore": {
+    "type": "cute",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "rest"
+      ]
+    }
+  },
+  "soft-boiled": {
+    "type": "beauty",
+    "effect": 1,
+    "combos": {
+      "before": [
+        "egg-bomb"
+      ],
+      "after": []
+    }
+  },
+  "solar-beam": {
+    "type": "cool",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "growth",
+        "sunny-day"
+      ]
+    }
+  },
+  "sonic-boom": {
+    "type": "cool",
+    "effect": 12,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "spark": {
+    "type": "cool",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": [
+        "charge"
+      ]
+    }
+  },
+  "spider-web": {
+    "type": "smart",
+    "effect": 18,
+    "combos": {
+      "before": [],
+      "after": [
+        "string-shot"
+      ]
+    }
+  },
+  "spike-cannon": {
+    "type": "cool",
+    "effect": 10,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "spikes": {
+    "type": "smart",
+    "effect": 18,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "spit-up": {
+    "type": "tough",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "stockpile"
+      ]
+    }
+  },
+  "spite": {
+    "type": "tough",
+    "effect": 26,
+    "combos": {
+      "before": [],
+      "after": [
+        "curse"
+      ]
+    }
+  },
+  "splash": {
+    "type": "cute",
+    "effect": 28,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "spore": {
+    "type": "beauty",
+    "effect": 5,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "steel-wing": {
+    "type": "cool",
+    "effect": 12,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "stockpile": {
+    "type": "tough",
+    "effect": 16,
+    "combos": {
+      "before": [
+        "spit-up",
+        "swallow"
+      ],
+      "after": []
+    }
+  },
+  "stomp": {
+    "type": "tough",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": [
+        "leer"
+      ]
+    }
+  },
+  "strength": {
+    "type": "tough",
+    "effect": 23,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "string-shot": {
+    "type": "smart",
+    "effect": 9,
+    "combos": {
+      "before": [
+        "spider-web"
+      ],
+      "after": []
+    }
+  },
+  "stun-spore": {
+    "type": "smart",
+    "effect": 14,
+    "combos": {
+      "before": [],
+      "after": [
+        "sweet-scent"
+      ]
+    }
+  },
+  "submission": {
+    "type": "cool",
+    "effect": 3,
+    "combos": {
+      "before": [],
+      "after": [
+        "mind-reader"
+      ]
+    }
+  },
+  "substitute": {
+    "type": "smart",
+    "effect": 16,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "sunny-day": {
+    "type": "beauty",
+    "effect": 11,
+    "combos": {
+      "before": [
+        "fire-punch",
+        "ember",
+        "flamethrower",
+        "solar-beam",
+        "fire-spin",
+        "fire-blast",
+        "flame-wheel",
+        "sacred-fire",
+        "morning-sun",
+        "synthesis",
+        "moonlight",
+        "heat-wave",
+        "will-o-wisp",
+        "eruption",
+        "blaze-kick",
+        "blast-burn",
+        "weather-ball",
+        "overheat"
+      ],
+      "after": []
+    }
+  },
+  "super-fang": {
+    "type": "tough",
+    "effect": 14,
+    "combos": {
+      "before": [],
+      "after": [
+        "scary-face"
+      ]
+    }
+  },
+  "superpower": {
+    "type": "tough",
+    "effect": 3,
+    "combos": {
+      "before": [],
+      "after": [
+        "lock-on"
+      ]
+    }
+  },
+  "supersonic": {
+    "type": "smart",
+    "effect": 21,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "surf": {
+    "type": "beauty",
+    "effect": 2,
+    "combos": {
+      "before": [
+        "dive"
+      ],
+      "after": [
+        "rain-dance",
+        "dive"
+      ]
+    }
+  },
+  "swagger": {
+    "type": "cute",
+    "effect": 27,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "swallow": {
+    "type": "tough",
+    "effect": 32,
+    "combos": {
+      "before": [],
+      "after": [
+        "stockpile"
+      ]
+    }
+  },
+  "sweet-kiss": {
+    "type": "cute",
+    "effect": 18,
+    "combos": {
+      "before": [],
+      "after": [
+        "charm"
+      ]
+    }
+  },
+  "sweet-scent": {
+    "type": "cute",
+    "effect": 5,
+    "combos": {
+      "before": [
+        "poison-powder",
+        "stun-spore",
+        "sleep-powder"
+      ],
+      "after": []
+    }
+  },
+  "swift": {
+    "type": "cool",
+    "effect": 27,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "swords-dance": {
+    "type": "beauty",
+    "effect": 32,
+    "combos": {
+      "before": [
+        "cut",
+        "crabhammer",
+        "slash",
+        "false-swipe",
+        "fury-cutter",
+        "crush-claw"
+      ],
+      "after": []
+    }
+  },
+  "synthesis": {
+    "type": "smart",
+    "effect": 25,
+    "combos": {
+      "before": [],
+      "after": [
+        "sunny-day"
+      ]
+    }
+  },
+  "tackle": {
+    "type": "tough",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "leer",
+        "harden",
+        "defense-curl"
+      ]
+    }
+  },
+  "tail-glow": {
+    "type": "beauty",
+    "effect": 32,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "tail-whip": {
+    "type": "cute",
+    "effect": 28,
+    "combos": {
+      "before": [],
+      "after": [
+        "charm"
+      ]
+    }
+  },
+  "take-down": {
+    "type": "tough",
+    "effect": 3,
+    "combos": {
+      "before": [],
+      "after": [
+        "harden",
+        "focus-energy"
+      ]
+    }
+  },
+  "taunt": {
+    "type": "smart",
+    "effect": 18,
+    "combos": {
+      "before": [
+        "counter",
+        "detect",
+        "mirror-coat"
+      ],
+      "after": []
+    }
+  },
+  "teeter-dance": {
+    "type": "cute",
+    "effect": 6,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "teleport": {
+    "type": "cool",
+    "effect": 15,
+    "combos": {
+      "before": [],
+      "after": [
+        "confusion",
+        "psychic",
+        "double-team",
+        "kinesis"
+      ]
+    }
+  },
+  "thief": {
+    "type": "tough",
+    "effect": 20,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "thrash": {
+    "type": "tough",
+    "effect": 6,
+    "combos": {
+      "before": [],
+      "after": [
+        "rage"
+      ]
+    }
+  },
+  "thunder": {
+    "type": "cool",
+    "effect": 8,
+    "combos": {
+      "before": [],
+      "after": [
+        "lock-on",
+        "rain-dance",
+        "charge"
+      ]
+    }
+  },
+  "thunder-punch": {
+    "type": "cool",
+    "effect": 1,
+    "combos": {
+      "before": [
+        "fire-punch",
+        "ice-punch"
+      ],
+      "after": [
+        "fire-punch",
+        "ice-punch",
+        "charge"
+      ]
+    }
+  },
+  "thunder-shock": {
+    "type": "cool",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "charge"
+      ]
+    }
+  },
+  "thunder-wave": {
+    "type": "cool",
+    "effect": 14,
+    "combos": {
+      "before": [],
+      "after": [
+        "charge"
+      ]
+    }
+  },
+  "thunderbolt": {
+    "type": "cool",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "charge"
+      ]
+    }
+  },
+  "tickle": {
+    "type": "cute",
+    "effect": 33,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "torment": {
+    "type": "tough",
+    "effect": 18,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "toxic": {
+    "type": "smart",
+    "effect": 33,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "transform": {
+    "type": "smart",
+    "effect": 17,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "tri-attack": {
+    "type": "beauty",
+    "effect": 8,
+    "combos": {
+      "before": [],
+      "after": [
+        "lock-on"
+      ]
+    }
+  },
+  "trick": {
+    "type": "smart",
+    "effect": 12,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "triple-kick": {
+    "type": "cool",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "focus-energy"
+      ]
+    }
+  },
+  "twineedle": {
+    "type": "cool",
+    "effect": 9,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "twister": {
+    "type": "cool",
+    "effect": 21,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "uproar": {
+    "type": "cute",
+    "effect": 21,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "vice-grip": {
+    "type": "tough",
+    "effect": 1,
+    "combos": {
+      "before": [
+        "guillotine",
+        "bind"
+      ],
+      "after": []
+    }
+  },
+  "vine-whip": {
+    "type": "cool",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "growth"
+      ]
+    }
+  },
+  "vital-throw": {
+    "type": "cool",
+    "effect": 31,
+    "combos": {
+      "before": [],
+      "after": [
+        "fake-out"
+      ]
+    }
+  },
+  "volt-tackle": {
+    "type": "cool",
+    "effect": 3,
+    "combos": {
+      "before": [],
+      "after": [
+        "charge"
+      ]
+    }
+  },
+  "water-gun": {
+    "type": "cute",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "rain-dance",
+        "mud-sport",
+        "water-sport"
+      ]
+    }
+  },
+  "water-pulse": {
+    "type": "beauty",
+    "effect": 21,
+    "combos": {
+      "before": [],
+      "after": [
+        "rain-dance"
+      ]
+    }
+  },
+  "water-sport": {
+    "type": "cute",
+    "effect": 1,
+    "combos": {
+      "before": [
+        "water-gun",
+        "refresh",
+        "mud-sport"
+      ],
+      "after": [
+        "rain-dance",
+        "mud-sport"
+      ]
+    }
+  },
+  "water-spout": {
+    "type": "beauty",
+    "effect": 26,
+    "combos": {
+      "before": [],
+      "after": [
+        "rain-dance"
+      ]
+    }
+  },
+  "waterfall": {
+    "type": "tough",
+    "effect": 28,
+    "combos": {
+      "before": [],
+      "after": [
+        "rain-dance"
+      ]
+    }
+  },
+  "weather-ball": {
+    "type": "smart",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "sandstorm",
+        "rain-dance",
+        "sunny-day",
+        "hail"
+      ]
+    }
+  },
+  "whirlpool": {
+    "type": "beauty",
+    "effect": 24,
+    "combos": {
+      "before": [],
+      "after": [
+        "rain-dance"
+      ]
+    }
+  },
+  "whirlwind": {
+    "type": "smart",
+    "effect": 21,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "will-o-wisp": {
+    "type": "beauty",
+    "effect": 4,
+    "combos": {
+      "before": [],
+      "after": [
+        "sunny-day"
+      ]
+    }
+  },
+  "wing-attack": {
+    "type": "cool",
+    "effect": 12,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "wish": {
+    "type": "cute",
+    "effect": 24,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "withdraw": {
+    "type": "cute",
+    "effect": 15,
+    "combos": {
+      "before": [],
+      "after": [
+        "rain-dance"
+      ]
+    }
+  },
+  "wrap": {
+    "type": "tough",
+    "effect": 24,
+    "combos": {
+      "before": [],
+      "after": []
+    }
+  },
+  "yawn": {
+    "type": "cute",
+    "effect": 18,
+    "combos": {
+      "before": [
+        "rest",
+        "slack-off"
+      ],
+      "after": []
+    }
+  },
+  "zap-cannon": {
+    "type": "cool",
+    "effect": 1,
+    "combos": {
+      "before": [],
+      "after": [
+        "lock-on"
+      ]
+    }
+  }
+}
