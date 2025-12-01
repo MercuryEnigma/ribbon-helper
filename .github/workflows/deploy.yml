@@ -37,5 +37,5 @@ jobs:
         run: |
           npx gh-pages \
             -d dist \
-            -u "github-actions[bot] <github-actions[bot]@users.noreply.github.com>" \
+            -u "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>" \
             -r https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
