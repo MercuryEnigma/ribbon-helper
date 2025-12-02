@@ -3,10 +3,7 @@ import { Routes, Route, NavLink, Navigate, useLocation } from 'react-router-dom'
 import SwitchCompatibility from './switch-compatibility'
 import BerryBlending from './berry-blending/BerryBlending'
 import Acknowledgements from './components/Acknowledgements'
-
-function ContestMoves() {
-  return <p className="coming">Contest move planning functionality coming soon.</p>
-}
+import ContestMoves from './contest-moves/ContestMoves'
 
 export default function App() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false)
@@ -59,6 +56,9 @@ export default function App() {
     <div className="app">
       <header className="header">
         <div className="title">Ribbon Helper</div>
+        <button className="settings-button" onClick={() => setIsSettingsOpen(true)} aria-label="Open settings">
+          ⚙️ Settings
+        </button>
         <div className="header-actions">
           <nav className="nav">
             <NavLink to="/game-compatibility" className={({ isActive }) => isActive ? 'active' : ''}>
@@ -71,9 +71,6 @@ export default function App() {
               Contest Moves
             </NavLink>
           </nav>
-          <button className="settings-button" onClick={() => setIsSettingsOpen(true)} aria-label="Open settings">
-            ⚙️ Settings
-          </button>
         </div>
       </header>
 
@@ -83,7 +80,7 @@ export default function App() {
             <Route path="/" element={<Navigate to="/game-compatibility" replace />} />
             <Route path="/game-compatibility/*" element={<SwitchCompatibility />} />
             <Route path="/berry-blending/*" element={<BerryBlending />} />
-            <Route path="/contest-moves" element={<ContestMoves />} />
+            <Route path="/contest-moves/*" element={<ContestMoves />} />
             <Route path="*" element={<Navigate to="/game-compatibility" replace />} />
           </Routes>
 

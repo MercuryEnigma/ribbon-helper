@@ -38,6 +38,7 @@
     "id": 6,
     "appeal": 4,
     "jam": 4,
+    "skip": true,
     "effect_description": "Attempts to jam the other Pokémon.  The user cannot make an appeal on the next turn, but it cannot be jammed either.",
     "flavor_text": "Jams the others, and misses one turn of appeals."
   },
@@ -221,7 +222,7 @@
     "id": 31,
     "appeal": 3,
     "jam": 0,
-    "next": 2,
+    "next": 4,
     "effect_description": "User will go last next turn.",
     "flavor_text": "The next appeal can be made later next turn."
   },
