@@ -4,6 +4,7 @@ import SwitchCompatibility from './switch-compatibility'
 import BerryBlending from './berry-blending/BerryBlending'
 import Acknowledgements from './components/Acknowledgements'
 import ContestMoves from './contest-moves/ContestMoves'
+import VisualDecoration from './visual-decoration/VisualDecoration'
 
 export default function App() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false)
@@ -70,6 +71,9 @@ export default function App() {
             <NavLink to="/contest-moves" className={({ isActive }) => isActive ? 'active' : ''}>
               Contest Moves
             </NavLink>
+            <NavLink to="/visual-decoration" className={({ isActive }) => isActive ? 'active' : ''}>
+              Visual Decoration
+            </NavLink>
           </nav>
         </div>
       </header>
@@ -81,6 +85,7 @@ export default function App() {
             <Route path="/game-compatibility/*" element={<SwitchCompatibility />} />
             <Route path="/berry-blending/*" element={<BerryBlending />} />
             <Route path="/contest-moves/*" element={<ContestMoves />} />
+            <Route path="/visual-decoration/*" element={<VisualDecoration />} />
             <Route path="*" element={<Navigate to="/game-compatibility" replace />} />
           </Routes>
 
