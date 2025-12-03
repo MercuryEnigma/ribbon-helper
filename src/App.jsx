@@ -57,9 +57,9 @@ export default function App() {
     <div className="app">
       <header className="header">
         <div className="title">Ribbon Helper</div>
-        <button className="settings-button" onClick={() => setIsSettingsOpen(true)} aria-label="Open settings">
+        {/* <button className="settings-button" onClick={() => setIsSettingsOpen(true)} aria-label="Open settings">
           ⚙️ Settings
-        </button>
+        </button> */}
         <div className="header-actions">
           <nav className="nav">
             <NavLink to="/game-compatibility" className={({ isActive }) => isActive ? 'active' : ''}>

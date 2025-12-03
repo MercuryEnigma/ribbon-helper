@@ -25,39 +25,3 @@
 .acknowledgements a:hover {
   text-decoration: underline;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root:not(.theme-light) .acknowledgements {
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    color: #cbd7ed;
-  }
-
-  :root:not(.theme-light) .acknowledgements h4 {
-    color: #e6edf9;
-  }
-
-  :root:not(.theme-light) .acknowledgements a {
-    color: #8bb8ff;
-  }
-
-  :root:not(.theme-light) .acknowledgements a:hover {
-    color: #f0ad63;
-  }
-}
-
-.theme-dark .acknowledgements {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  color: #cbd7ed;
-}
-
-.theme-dark .acknowledgements h4 {
-  color: #e6edf9;
-}
-
-.theme-dark .acknowledgements a {
-  color: #8bb8ff;
-}
-
-.theme-dark .acknowledgements a:hover {
-  color: #f0ad63;
-}

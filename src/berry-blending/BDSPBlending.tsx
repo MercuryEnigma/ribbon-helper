@@ -45,7 +45,7 @@ export default function BDSPBlending() {
 
   return (
     <div className="bdsp-blending">
-      <h3><span>Brilliant Diamond / Shining Pearl Poffin Making</span></h3>
+      <h3><span>Brilliant Diamond / Shining Pearl Poffin making</span></h3>
 
       <div className="blending-options">
         <div className="option-row">

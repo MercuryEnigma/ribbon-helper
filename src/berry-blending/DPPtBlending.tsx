@@ -28,7 +28,7 @@ export default function DPPtBlending() {
 
   return (
     <div className="dppt-blending">
-      <h3><span>Diamond / Pearl / Platinum Poffin Making</span></h3>
+      <h3><span>Diamond / Pearl / Platinum Poffin making</span></h3>
 
       <div className="blending-options">
         <div className="option-row">

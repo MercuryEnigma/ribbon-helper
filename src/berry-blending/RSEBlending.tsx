@@ -24,7 +24,7 @@ export default function RSEBlending() {
 
   return (
     <div className="rse-blending">
-      <h3><span>Ruby / Sapphire / Emerald Pokeblock Blending</span></h3>
+      <h3><span>Ruby / Sapphire / Emerald Pokeblock making</span></h3>
 
       <div className="blending-options">
         <div className="option-row">

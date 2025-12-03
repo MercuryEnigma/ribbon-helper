@@ -75,19 +75,19 @@ export default function SwitchCompatibility() {
           to="/game-compatibility/games"
           className={({ isActive }) => isActive ? 'active' : ''}
         >
-          Availability by Games
+          Availability by games
         </NavLink>
         <NavLink
           to="/game-compatibility/shadow"
           className={({ isActive }) => isActive ? 'active' : ''}
         >
-          Shadow by Games
+          Shadow Pokemon by games
         </NavLink>
         <NavLink
           to="/game-compatibility/species"
           className={({ isActive }) => isActive ? 'active' : ''}
         >
-          Lookup by Species
+          Lookup by species
         </NavLink>
       </div>
 
