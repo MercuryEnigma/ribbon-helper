@@ -46,7 +46,7 @@ export default function RSEBlending() {
           <div className="option-group inline">
             <label>Nature:</label>
             <select value={nature} onChange={(e) => setNature(e.target.value)}>
-              <option value="">None (maximize all stats)</option>
+              <option value="">None (neutral nature)</option>
               {natureOptions.map((nat) => (
                 <option key={nat} value={nat}>{nat}</option>
               ))}
@@ -62,7 +62,9 @@ export default function RSEBlending() {
               onChange={(e) => setWithGamecube(e.target.checked)}
             />
             <span className="toggle-label">Pinch berries (Gamecube)</span>
-            <span className="toggle-track"><span className="toggle-thumb" /></span>
+            <span className="toggle-track" aria-hidden="true">
+              {withGamecube && <span className="toggle-check">✓</span>}
+            </span>
           </label>
 
           <label className="option-checkbox">
@@ -72,7 +74,9 @@ export default function RSEBlending() {
               onChange={(e) => setWithMirageIsland(e.target.checked)}
             />
             <span className="toggle-label">Liechi (Mirage Island)</span>
-            <span className="toggle-track"><span className="toggle-thumb" /></span>
+            <span className="toggle-track" aria-hidden="true">
+              {withMirageIsland && <span className="toggle-check">✓</span>}
+            </span>
           </label>
 
           <label className="option-checkbox">
@@ -82,7 +86,9 @@ export default function RSEBlending() {
               onChange={(e) => setWithBerryMaster(e.target.checked)}
             />
             <span className="toggle-label">Blend Master (Emerald)</span>
-            <span className="toggle-track"><span className="toggle-thumb" /></span>
+            <span className="toggle-track" aria-hidden="true">
+              {withBerryMaster && <span className="toggle-check">✓</span>}
+            </span>
           </label>
         </div>
       </div>

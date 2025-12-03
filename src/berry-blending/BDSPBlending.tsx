@@ -4,17 +4,17 @@ import natures from '../data/natures.json';
 import { getBerryImageUrl } from './berryImageHelper';
 
 export default function BDSPBlending() {
-  const [onlyCommon, setOnlyCommon] = useState(false);
+  const [useRare, setUseRare] = useState(true);
   const [maxFriendship, setMaxFriendship] = useState(true);
   const [nature, setNature] = useState<string>('');
 
   const poffinKit = useMemo(() => {
     return calculateOptimalBDSPPoffinKit(
-      onlyCommon,
+      !useRare, // only common when rare are not allowed
       maxFriendship,
       nature || null
     );
-  }, [onlyCommon, maxFriendship, nature]);
+  }, [useRare, maxFriendship, nature]);
 
   const natureOptions = Object.keys(natures).sort();
 
@@ -52,7 +52,7 @@ export default function BDSPBlending() {
           <div className="option-group inline">
             <label>Nature:</label>
             <select value={nature} onChange={(e) => setNature(e.target.value)}>
-              <option value="">None (maximize all stats)</option>
+              <option value="">None (neutral nature)</option>
               {natureOptions.map((nat) => (
                 <option key={nat} value={nat}>{nat}</option>
               ))}
@@ -68,17 +68,21 @@ export default function BDSPBlending() {
               onChange={(e) => setMaxFriendship(e.target.checked)}
             />
             <span className="toggle-label">Use 6 max friendship Pokémon in Amity Square</span>
-            <span className="toggle-track"><span className="toggle-thumb" /></span>
+            <span className="toggle-track" aria-hidden="true">
+              {maxFriendship && <span className="toggle-check">✓</span>}
+            </span>
           </label>
 
           <label className="option-checkbox">
             <input
               type="checkbox"
-              checked={onlyCommon}
-              onChange={(e) => setOnlyCommon(e.target.checked)}
+              checked={useRare}
+              onChange={(e) => setUseRare(e.target.checked)}
             />
-            <span className="toggle-label">Only common berries (sets D, E, F)</span>
-            <span className="toggle-track"><span className="toggle-thumb" /></span>
+            <span className="toggle-label">Use rare berries</span>
+            <span className="toggle-track" aria-hidden="true">
+              {useRare && <span className="toggle-check">✓</span>}
+            </span>
           </label>
         </div>
       </div>

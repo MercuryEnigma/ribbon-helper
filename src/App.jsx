@@ -72,7 +72,7 @@ export default function App() {
               Contest Moves
             </NavLink>
             <NavLink to="/visual-decoration" className={({ isActive }) => isActive ? 'active' : ''}>
-              Visual Decoration
+              Contest Visuals
             </NavLink>
           </nav>
         </div>

@@ -151,7 +151,7 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
   return (
     <div className="by-species">
       <div className="pokemon-search">
-        <h3>Select a Pokémon:</h3>
+        <h3>Choose a Pokémon:</h3>
         <div className="combobox-container">
           <input
             type="text"
@@ -231,13 +231,13 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
             <div className="pokedex-entry-rows">
               {availableGames.length === 0 ? (
                 <div className="pokedex-row">
-                  <div className="pokedex-row-label">Game</div>
+                  <div className="pokedex-row-label">Available in</div>
                   <div className="pokedex-row-value">Not in Switch titles</div>
                 </div>
               ) : (
                 availableGames.slice(0, 5).map(game => (
                   <div className="pokedex-row" key={game}>
-                    <div className="pokedex-row-label">Game</div>
+                    <div className="pokedex-row-label">Available in</div>
                     <div className="pokedex-row-value">{game}</div>
                   </div>
                 ))

@@ -205,7 +205,7 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
   return (
     <div className="available-pokemon shadow-pokemon">
       <div className="game-selector shadow-selector">
-        <h3>Select Games:</h3>
+        <h3>Choose Games:</h3>
         <div className="shadow-filter-toggle">
           <button
             className={shadowFilter === 'colosseum' ? 'active' : ''}
@@ -237,8 +237,8 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
                   onChange={() => toggleGame(group.ids)}
                 />
                 <span className="toggle-label">{group.name}</span>
-                <span className="toggle-track">
-                  <span className="toggle-thumb" />
+                <span className="toggle-track" aria-hidden="true">
+                  {allChecked && <span className="toggle-check">✓</span>}
                 </span>
               </label>
             );

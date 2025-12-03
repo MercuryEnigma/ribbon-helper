@@ -93,7 +93,7 @@ export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: Availab
   return (
     <div className="available-pokemon">
       <div className="game-selector">
-        <h3>Select Games:</h3>
+        <h3>Choose Games:</h3>
         <div className="game-checkboxes">
           {GAME_GROUPS.map(group => {
             const allChecked = group.ids.every(id => selectedGamesSet.has(id));
@@ -105,8 +105,9 @@ export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: Availab
                   onChange={() => toggleGame(group.ids)}
                 />
                 <span className="toggle-label">{group.name}</span>
-                <span className="toggle-track">
-                  <span className="toggle-thumb" />
+                <span className="toggle-track" aria-hidden="true">
+                  {allChecked && 
+                  (<span className="toggle-word require">✓</span>)}
                 </span>
               </label>
             );

@@ -10,10 +10,10 @@
 /* Mode Selector */
 .mode-selector {
   display: flex;
-  gap: 0;
+  gap: 0.5rem;
   margin-bottom: 0;
   padding: 0.5rem;
-  background: linear-gradient(180deg, #f7c27a 0%, #f09535 100%);
+  background: #f4a54d;
   border-radius: 30px 30px 0px 0px;
   border: 3px solid #c26b1a;
   flex-wrap: nowrap;
@@ -26,12 +26,12 @@
 .mode-selector a {
   flex: 1;
   padding: 0.6rem 1.5rem;
-  background: transparent;
-  border: none;
+  background: #f6b86a;
+  border: 2px solid #d2842f;
   border-radius: 50px;
   cursor: pointer;
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #2d2d2d;
   transition: all 0.2s;
   white-space: nowrap;
@@ -43,20 +43,23 @@
 .mode-selector button:hover:not(.active),
 .mode-selector a:hover:not(.active) {
   color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px rgba(63, 115, 196, 0.28);
 }
 
 .mode-selector button.active,
 .mode-selector a.active {
-  background: linear-gradient(135deg, #ffe9d2 0%, #ffd9b3 100%);
+  background: #ffe9d2;
   color: #2d2d2d;
   border: 2px solid #c26b1a;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  font-weight: 700;
 }
 
 /* Mode Content */
 .mode-content {
   padding: 1rem;
-  background:
+    background:
     linear-gradient(
       to bottom,
       rgba(45, 79, 140, 0.7) 0%,
@@ -103,18 +106,18 @@
 }
 
 .game-selector {
-  background: linear-gradient(135deg, #ffe6ca 0%, #f6b86a 100%);
+  background: #f6cda2;
   padding: 1rem;
   border-radius: 12px;
-  border: 2px solid #d2842f;
+  border: 2px solid #d45a1b;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .pokemon-search {
-  background: linear-gradient(135deg, #ffe6ca 0%, #f6b86a 100%);
+  background: #f6cda2;
   padding: 1rem;
   border-radius: 12px;
-  border: 2px solid #d2842f;
+  border: 2px solid #d45a1b;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -124,7 +127,7 @@
   font-weight: 700;
   color: #2d2d2d;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #d2842f;
+  border-bottom: 2px solid #d45a1b;
 }
 
 .pokemon-search h3 {
@@ -133,7 +136,7 @@
   font-weight: 700;
   color: #2d2d2d;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #d2842f;
+  border-bottom: 2px solid #d45a1b;
 }
 
 .pokemon-results h3,
@@ -160,8 +163,8 @@
   padding: 0.5rem 0.65rem 0.55rem 0.65rem;
   cursor: pointer;
   border-radius: 12px;
-  border: 1px solid #c26b1a;
-  background: #ffe9d2;
+  border: 1px solid rgba(210, 138, 69, 0.55);
+  background: #f6cda2;
   transition: all 0.2s;
   box-shadow:
     inset 0 1px 2px rgba(255, 255, 255, 0.4),
@@ -171,15 +174,23 @@
 }
 
 .game-checkbox:hover {
-  background: #ffd9b3;
-  border-color: #9c5312;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+  background: #ffe2c3;
+  border-color: #d28a45;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
 }
 
 .game-checkbox:has(input:checked) {
-  background: #ffd1a0;
+  background: #ffe9d2;
   border-color: #c26b1a;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.4),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.game-checkbox:has(input:checked):hover {
+  background: #ffd9b3;
+  border-color: #9c5312;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
 }
 
 .game-checkbox input[type="checkbox"] {
@@ -190,38 +201,40 @@
 }
 
 .game-checkbox .toggle-track {
-  width: 54px;
-  height: 26px;
-  background: linear-gradient(180deg, #dcdcdc 0%, #b8b8b8 100%);
-  border-radius: 999px;
-  border: 2px solid #9c5312;
-  position: relative;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
-  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  align-self: center;
 }
 
-.game-checkbox .toggle-thumb {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 18px;
-  height: 18px;
-  background: linear-gradient(180deg, #fff7ed 0%, #f4b86a 100%);
-  border-radius: 50%;
-  box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.25),
-    inset 0 1px 1px rgba(255, 255, 255, 0.7);
-  transition: transform 0.2s ease, background 0.2s ease;
+.game-checkbox .toggle-word {
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: #8a735b;
+  transition: color 0.2s ease;
 }
 
-.game-checkbox input[type="checkbox"]:checked ~ .toggle-track .toggle-thumb {
-  transform: translateX(26px);
-  background: linear-gradient(180deg, #f6c48a 0%, #df8641 100%);
+.game-checkbox .toggle-word.ignore {
+  color: #0b0b0b;
+}
+
+.game-checkbox:has(input:checked) .toggle-word.require {
+  color: #0b0b0b;
+}
+
+.game-checkbox:has(input:checked) .toggle-word.ignore {
+  color: #8a735b;
 }
 
 .game-checkbox .toggle-label {
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #2b1a00;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
   line-height: 1.25;
@@ -231,7 +244,13 @@
 }
 
 .game-checkbox input[type="checkbox"]:checked ~ .toggle-label {
-  color: #1f1300;
+  color: #2b1a00;
+  font-weight: 700;
+}
+
+.game-checkbox:not(:has(input:checked)) .toggle-label {
+  color: #7a6a52;
+  font-weight: 500;
 }
 
 /* Pokemon Results */
@@ -265,6 +284,7 @@
       #eef4ff 5px,
       #eef4ff 18px
     );
+  /* background: #eef4ff; */
   border-radius: 12px;
   border: 6px solid #f09a38;
   box-shadow:
@@ -404,9 +424,9 @@
   width: 100%;
   box-sizing: border-box;
   padding: 0.15rem 0.26rem 0.15rem 0.26rem;
-  background: linear-gradient(135deg, #ffe1c7 0%, #f6cda2 100%);
+  background: #ffe9d2;
   border-radius: 36px 0 0 36px;
-  border: 1.3px solid #d28a45;
+  border: 1.3px solid #d45a1b;
   font-size: 0.75rem;
   font-weight: 600;
   color: #2d2d2d;
@@ -421,14 +441,14 @@
 }
 
 .pokemon-list li:hover {
-  background: linear-gradient(135deg, #f58a3a 0%, #d45a1b 100%);
+  background: #d45a1b;
   border-color: #b33f12;
   box-shadow: 0 2px 6px rgba(179, 63, 18, 0.35);
   transform: translateX(2px);
 }
 
 .pokemon-list li.highlighted {
-  background: linear-gradient(135deg, #f58a3a 0%, #d45a1b 100%);
+  background: #d45a1b;
   border-color: #b33f12;
   box-shadow: 0 0 12px rgba(179, 63, 18, 0.8);
   transform: translateX(4px);
@@ -468,7 +488,7 @@
 
 .pokemon-list .over-fifty-pill {
   padding: 0.25rem 0.5rem;
-  background: linear-gradient(135deg, #ef5350 0%, #c62828 100%);
+  background: #c62828;
   border: 1px solid #b71c1c;
   border-radius: 12px;
   font-weight: 700;
@@ -486,7 +506,7 @@
 
 .pokemon-list .restricted-pill {
   padding: 0.25rem 0.5rem;
-  background: linear-gradient(135deg, #26c6da 0%, #00bcd4 100%);
+  background: #00bcd4;
   border: 1px solid #00acc1;
   border-radius: 12px;
   font-weight: 700;
@@ -504,7 +524,7 @@
 
 .pokemon-list .ereader-pill {
   padding: 0.25rem 0.5rem;
-  background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+  background: #1565c0;
   border: 1px solid #0d47a1;
   border-radius: 12px;
   font-weight: 700;
@@ -552,13 +572,11 @@
   display: grid;
   grid-template-columns: 40% 60%;
   gap: 1rem;
-  background: linear-gradient(135deg, #ffe9d2 0%, #ffd9b3 100%);
-  border: 3px solid #c26b1a;
+  background: #ffe9d2;
+  border: 2px solid #d45a1b;
   border-radius: 12px;
   padding: 1rem 1.75rem 1rem 1rem;
-  box-shadow:
-    inset 0 0 0 3px rgba(255, 255, 255, 0.3),
-    0 3px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .pokedex-entry-left {
@@ -569,7 +587,7 @@
 
 .pokedex-entry-frame {
   background: #fefaf5;
-  border: 4px solid #f09a38;
+  border: 4px solid #d45a1b;
   border-radius: 12px;
   box-shadow:
     inset 0 0 0 4px #5a8cc8,
@@ -602,7 +620,7 @@
 
 .pokedex-entry-notes {
   min-height: 120px;
-  background: linear-gradient(135deg, #f9f5ee 0%, #f2e7d5 100%);
+  background: #f2e7d5;
   border: 2px solid #d2842f;
   border-radius: 10px;
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
@@ -618,15 +636,11 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(180deg, #f4b86a 0%, #df8641 65%, #be5f1c 100%);
-  border: 2px solid #ad4f10;
+  background: #d45a1b;
+  border: 2px solid #b33f12;
   border-radius: 24px;
   padding: 0.35rem 0.85rem;
-  color: #2b1a00;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.4),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.15),
-    0 2px 5px rgba(0, 0, 0, 0.18);
+  color: #fff6eb;
 }
 
 .pokedex-entry-header-icon {
@@ -648,11 +662,11 @@
 .pokedex-entry-gen {
   margin-left: auto;
   padding: 0.35rem 0.7rem;
-  background: linear-gradient(180deg, #f6c48a 0%, #e59a4a 100%);
-  border: 1px solid #ad4f10;
+  background: #f6cda2;
+  border: 1px solid #d28a45;
   border-radius: 12px;
   font-weight: 800;
-  color: #2b1a00;
+  color: #2d2d2d;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.35),
     0 1px 2px rgba(0, 0, 0, 0.15);
@@ -689,7 +703,7 @@
 
 .pokedex-row {
   display: grid;
-  grid-template-columns: 70px 1fr;
+  grid-template-columns: auto 1fr;
   align-items: center;
   background: transparent;
   border: none;
@@ -699,11 +713,12 @@
 }
 
 .pokedex-row-label {
-  background: linear-gradient(180deg, #f4b86a 0%, #df8641 100%);
-  color: #2b1a00;
+  background: #f6cda2;
+  color: #2d2d2d;
+  border: 1px solid #d28a45;
   font-weight: 800;
-  padding: 0.45rem 0.7rem;
-  border-right: none;
+  padding: 0.5rem 0.85rem;
+  margin-right: 0.2rem;
   border-radius: 8px;
   letter-spacing: 0.15px;
   font-size: 0.88rem;
@@ -733,16 +748,16 @@
   font-size: 0.9rem;
   font-weight: 500;
   color: #212121;
-  border: 2px solid #d2842f;
+  border: 2px solid #c26b1a;
   border-radius: 8px;
   outline: none;
   transition: all 0.2s;
-  background: linear-gradient(135deg, #fff8f2 0%, #fff0e4 100%);
+  background: #ffe9d2;
 }
 
 .combobox-input:focus {
-  border-color: #be5f1c;
-  box-shadow: 0 0 0 3px rgba(190, 95, 28, 0.15);
+  border-color: #c26b1a;
+  box-shadow: 0 0 0 3px rgba(194, 107, 26, 0.2);
 }
 
 .combobox-input::placeholder {
@@ -857,7 +872,7 @@
   margin: 0.75rem 0;
   font-size: 0.9rem;
   padding: 0.75rem;
-  background: linear-gradient(135deg, #ffe7cf 0%, #fff2e6 100%);
+  background: #f6cda2;
   border: 2px solid #d2842f;
   border-radius: 10px;
   text-align: center;
@@ -870,7 +885,7 @@
   margin: 0.75rem 0;
   font-size: 0.9rem;
   padding: 0.75rem;
-  background: linear-gradient(135deg, #ffe7cf 0%, #fff2e6 100%);
+  background: #fff2e6;
   border: 2px solid #d2842f;
   border-radius: 10px;
   text-align: center;
@@ -965,58 +980,30 @@
   }
 
   :root:not(.theme-light) .mode-selector {
-    background: linear-gradient(180deg, #2a3548 0%, #1e2636 100%);
+    background: #1e2636;
     border-color: #f0ad63;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
   }
 
   :root:not(.theme-light) .mode-selector button,
   :root:not(.theme-light) .mode-selector a {
+    background: #2a3548;
+    border: 2px solid #f0ad63;
     color: #e6edf9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
   }
 
   :root:not(.theme-light) .mode-selector button.active,
   :root:not(.theme-light) .mode-selector a.active {
-    background: linear-gradient(135deg, #39455e 0%, #2b3448 100%);
-    color: #ffe9c7;
+    background: #192333;
+    color: #e6edf9;
     border-color: #f0ad63;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.08);
   }
 
   :root:not(.theme-light) .mode-content {
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(20, 33, 53, 0.85) 0%,
-        rgba(20, 33, 53, 0.85) 6%,
-        transparent 6%,
-        transparent 12%,
-        rgba(17, 29, 47, 0.7) 12%,
-        rgba(17, 29, 47, 0.7) 14%,
-        transparent 14%,
-        transparent 26%,
-        rgba(17, 29, 47, 0.6) 26%,
-        rgba(17, 29, 47, 0.6) 28%,
-        transparent 28%,
-        transparent 42%,
-        rgba(17, 29, 47, 0.6) 42%,
-        rgba(17, 29, 47, 0.6) 44%,
-        transparent 44%,
-        transparent 58%,
-        rgba(17, 29, 47, 0.65) 58%,
-        rgba(17, 29, 47, 0.65) 60%,
-        transparent 60%,
-        transparent 74%,
-        rgba(17, 29, 47, 0.72) 74%,
-        rgba(17, 29, 47, 0.72) 78%,
-        transparent 78%,
-        transparent 90%,
-        rgba(20, 33, 53, 0.85) 90%,
-        rgba(20, 33, 53, 0.85) 100%
-      ),
-    #132136;
-  border-radius: 0 0 12px 12px;
-  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.35);
+    background: #132136;
+    border-radius: 0 0 12px 12px;
     border: 2px solid #f0ad63;
     border-top: 0;
     box-shadow:
@@ -1034,7 +1021,7 @@
 
   :root:not(.theme-light) .game-selector,
   :root:not(.theme-light) .pokemon-search {
-    background: linear-gradient(135deg, #1b2434 0%, #243148 100%);
+    background: #27364b;
     border-color: #f0ad63;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
   }
@@ -1052,6 +1039,18 @@
   }
 
   :root:not(.theme-light) .game-checkbox {
+    background: #27364b;
+    border-color: rgba(240, 173, 99, 0.6);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  }
+
+  :root:not(.theme-light) .game-checkbox:hover {
+    background: #2e3f5a;
+    border-color: #f0ad63;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  :root:not(.theme-light) .game-checkbox:has(input:checked) {
     background: #192333;
     border-color: #f0ad63;
     box-shadow:
@@ -1059,44 +1058,45 @@
       0 2px 4px rgba(0, 0, 0, 0.35);
   }
 
-  :root:not(.theme-light) .game-checkbox:hover {
+  :root:not(.theme-light) .game-checkbox:has(input:checked):hover {
     background: #223044;
     border-color: #f6c27c;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   }
 
-  :root:not(.theme-light) .game-checkbox:has(input:checked) {
-    background: #2b3a55;
-    border-color: #f6c27c;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.08);
-  }
-
   :root:not(.theme-light) .game-checkbox .toggle-track {
-    background: linear-gradient(180deg, #0f1522 0%, #18233a 100%);
-    border-color: #f6c27c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
   }
 
-  :root:not(.theme-light) .game-checkbox .toggle-thumb {
-    background: linear-gradient(180deg, #f7d9a3 0%, #d88c3f 100%);
-    box-shadow:
-      0 1px 2px rgba(0, 0, 0, 0.3),
-      inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  :root:not(.theme-light) .game-checkbox .toggle-word {
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: #9fb4d3;
+    transition: color 0.2s ease;
   }
 
-  :root:not(.theme-light) .game-checkbox .toggle-label {
-    color: #f2e6d9;
-    text-shadow: none;
+  :root:not(.theme-light) .game-checkbox .toggle-word.ignore {
+    color: #e6edf9;
+  }
+
+  :root:not(.theme-light) .game-checkbox:has(input:checked) .toggle-word.require {
+    color: #e6edf9;
+  }
+
+  :root:not(.theme-light) .game-checkbox:has(input:checked) .toggle-word.ignore {
+    color: #9fb4d3;
   }
 
   :root:not(.theme-light) .pokemon-icon-grid {
-    background:
-      repeating-linear-gradient(
-        to bottom,
-        #0f1726 0px,
-        #0f1726 5px,
-        #161f32 5px,
-        #161f32 18px
-      );
+    background: #161f32;
     border: 6px solid #f0ad63;
     box-shadow:
       inset 0 0 0 4px #3c5c8f,
@@ -1138,21 +1138,21 @@
   }
 
   :root:not(.theme-light) .pokemon-list li {
-    background: linear-gradient(135deg, #1f2a3c 0%, #27364b 100%);
-    border-color: #f0ad63;
+    background: #1c2740;
+    border-color: #d28a45;
     color: #e6edf9;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
   }
 
   :root:not(.theme-light) .pokemon-list li:hover {
-    background: linear-gradient(135deg, #d0711f 0%, #b35614 100%);
+    background: #b35614;
     border-color: #f0ad63;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
     color: #fff;
   }
 
   :root:not(.theme-light) .pokemon-list li.highlighted {
-    background: linear-gradient(135deg, #d0711f 0%, #b35614 100%);
+    background: #b35614;
     border-color: #f0ad63;
     box-shadow: 0 0 14px rgba(240, 173, 99, 0.6);
   }
@@ -1166,24 +1166,22 @@
   }
 
   :root:not(.theme-light) .pokemon-list .over-fifty-pill {
-    background: linear-gradient(135deg, #b83232 0%, #8b1f1f 100%);
+    background: #8b1f1f;
     border-color: #e68787;
   }
 
   :root:not(.theme-light) .pokemon-list .restricted-pill {
-    background: linear-gradient(135deg, #22b8c3 0%, #0d8da3 100%);
+    background: #0d8da3;
   }
 
   :root:not(.theme-light) .pokemon-list .ereader-pill {
-    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+    background: #1565c0;
   }
 
   :root:not(.theme-light) .pokedex-entry {
-    background: linear-gradient(135deg, #161f30 0%, #1e2c44 100%);
+    background: #c46418;
     border-color: #f0ad63;
-    box-shadow:
-      inset 0 0 0 3px rgba(255, 255, 255, 0.08),
-      0 4px 14px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
   }
 
   :root:not(.theme-light) .pokedex-entry-frame {
@@ -1195,33 +1193,26 @@
   }
 
   :root:not(.theme-light) .pokedex-entry-bg {
-    background:
-      repeating-linear-gradient(
-        to bottom,
-        #0f1726 0px,
-        #0f1726 5px,
-        #161f32 5px,
-        #161f32 18px
-      );
+    background: #161f32;
   }
 
   :root:not(.theme-light) .pokedex-entry-notes {
-    background: linear-gradient(135deg, #121b2d 0%, #1a2436 100%);
+    background: #1a2436;
     border-color: #f0ad63;
     box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.04);
     color: #e6edf9;
   }
 
   :root:not(.theme-light) .pokedex-entry-header {
-    background: linear-gradient(180deg, #d0711f 0%, #b35614 65%, #8a3e0f 100%);
+    background: #b35614;
     border-color: #f0ad63;
-    color: #fff;
+    color: #fff6eb;
   }
 
   :root:not(.theme-light) .pokedex-entry-gen {
-    background: linear-gradient(180deg, #f5c076 0%, #d99745 100%);
+    background: #27364b;
     border-color: #f0ad63;
-    color: #1b1205;
+    color: #e6edf9;
   }
 
   :root:not(.theme-light) .shadow-pill {
@@ -1231,8 +1222,11 @@
   }
 
   :root:not(.theme-light) .pokedex-row-label {
-    background: linear-gradient(180deg, #d0711f 0%, #b35614 100%);
-    color: #fff8ed;
+    background: #27364b;
+    border: 1px solid #f0ad63;
+    color: #e6edf9;
+    padding: 0.5rem 0.85rem;
+    margin-right: 0.2rem;
   }
 
   :root:not(.theme-light) .pokedex-row-value {
@@ -1240,14 +1234,14 @@
   }
 
   :root:not(.theme-light) .combobox-input {
-    background: linear-gradient(135deg, #0f1626 0%, #162033 100%);
+    background: #27364b;
     border-color: #f0ad63;
     color: #e6edf9;
   }
 
   :root:not(.theme-light) .combobox-input:focus {
-    border-color: #f6c27c;
-    box-shadow: 0 0 0 3px rgba(240, 173, 99, 0.2);
+    border-color: #f0ad63;
+    box-shadow: 0 0 0 3px rgba(240, 173, 99, 0.25);
   }
 
   :root:not(.theme-light) .combobox-input::placeholder {
@@ -1281,14 +1275,14 @@
   }
 
   :root:not(.theme-light) .game-list li {
-    background: linear-gradient(135deg, #d0711f 0%, #b35614 100%);
+    background: #b35614;
     border-color: #f0ad63;
     color: #fff6eb;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   }
 
   :root:not(.theme-light) .game-list li:hover {
-    background: linear-gradient(135deg, #e08a35 0%, #c7691c 100%);
+    background: #c7691c;
     border-color: #f6c27c;
     color: #fff;
   }
@@ -1296,7 +1290,7 @@
   :root:not(.theme-light) .hint,
   :root:not(.theme-light) .no-results {
     color: #d8e2f4;
-    background: linear-gradient(135deg, #182339 0%, #1f2b45 100%);
+    background: #1f2b45;
     border-color: #f0ad63;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
   }
@@ -1325,13 +1319,13 @@
   }
 
   :root:not(.theme-light) .error-message button {
-    background: linear-gradient(135deg, #d0711f 0%, #b35614 100%);
+    background: #b35614;
     border-color: #f0ad63;
     color: #fff6eb;
   }
 
   :root:not(.theme-light) .error-message button:hover {
-    background: linear-gradient(135deg, #e08a35 0%, #c7691c 100%);
+    background: #c7691c;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
   }
 }
@@ -1341,56 +1335,29 @@
 }
 
 .theme-dark .mode-selector {
-  background: linear-gradient(180deg, #2a3548 0%, #1e2636 100%);
+  background: #1e2636;
   border-color: #f0ad63;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
 }
 
 .theme-dark .mode-selector button,
 .theme-dark .mode-selector a {
+  background: #2f3d56;
+  border: 2px solid #f0ad63;
   color: #e6edf9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
 .theme-dark .mode-selector button.active,
 .theme-dark .mode-selector a.active {
-  background: linear-gradient(135deg, #39455e 0%, #2b3448 100%);
-  color: #ffe9c7;
+  background: #192333;
+  color: #e6edf9;
   border-color: #f0ad63;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.08);
 }
 
 .theme-dark .mode-content {
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(20, 33, 53, 0.85) 0%,
-      rgba(20, 33, 53, 0.85) 6%,
-      transparent 6%,
-      transparent 12%,
-      rgba(17, 29, 47, 0.7) 12%,
-      rgba(17, 29, 47, 0.7) 14%,
-      transparent 14%,
-      transparent 26%,
-      rgba(17, 29, 47, 0.6) 26%,
-      rgba(17, 29, 47, 0.6) 28%,
-      transparent 28%,
-      transparent 42%,
-      rgba(17, 29, 47, 0.6) 42%,
-      rgba(17, 29, 47, 0.6) 44%,
-      transparent 44%,
-      transparent 58%,
-      rgba(17, 29, 47, 0.65) 58%,
-      rgba(17, 29, 47, 0.65) 60%,
-      transparent 60%,
-      transparent 74%,
-      rgba(17, 29, 47, 0.72) 74%,
-      rgba(17, 29, 47, 0.72) 78%,
-      transparent 78%,
-      transparent 90%,
-      rgba(20, 33, 53, 0.85) 90%,
-      rgba(20, 33, 53, 0.85) 100%
-      ),
-    #132136;
+  background: #132136;
   border-radius: 0 0 12px 12px;
   box-shadow:
     inset 0 2px 6px rgba(0, 0, 0, 0.35),
@@ -1409,7 +1376,7 @@
 
 .theme-dark .game-selector,
 .theme-dark .pokemon-search {
-  background: linear-gradient(135deg, #1b2434 0%, #243148 100%);
+  background: #c46418;
   border-color: #f0ad63;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
 }
@@ -1441,21 +1408,26 @@
 }
 
 .theme-dark .game-checkbox:has(input:checked) {
-  background: #2b3a55;
-  border-color: #f6c27c;
+  background: #27364b;
+  border-color: #f0ad63;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.08);
 }
 
-.theme-dark .game-checkbox .toggle-track {
-  background: linear-gradient(180deg, #0f1522 0%, #18233a 100%);
-  border-color: #f6c27c;
+.theme-dark .game-checkbox:has(input:checked):hover {
+  background: #2e3f5a;
+  border-color: #f0ad63;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
-.theme-dark .game-checkbox .toggle-thumb {
-  background: linear-gradient(180deg, #f7d9a3 0%, #d88c3f 100%);
-  box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.3),
-    inset 0 1px 1px rgba(255, 255, 255, 0.6);
+.theme-dark .game-checkbox .toggle-track {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
 }
 
 .theme-dark .game-checkbox .toggle-label {
@@ -1463,15 +1435,27 @@
   text-shadow: none;
 }
 
+.theme-dark .game-checkbox .toggle-word {
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: #9fb4d3;
+  transition: color 0.2s ease;
+}
+
+.theme-dark .game-checkbox .toggle-word.ignore {
+  color: #e6edf9;
+}
+
+.theme-dark .game-checkbox:has(input:checked) .toggle-word.require {
+  color: #e6edf9;
+}
+
+.theme-dark .game-checkbox:has(input:checked) .toggle-word.ignore {
+  color: #9fb4d3;
+}
+
 .theme-dark .pokemon-icon-grid {
-  background:
-    repeating-linear-gradient(
-      to bottom,
-      #0f1726 0px,
-      #0f1726 5px,
-      #161f32 5px,
-      #161f32 18px
-    );
+  background: #161f32;
   border: 6px solid #f0ad63;
   box-shadow:
     inset 0 0 0 4px #3c5c8f,
@@ -1513,21 +1497,21 @@
 }
 
 .theme-dark .pokemon-list li {
-  background: linear-gradient(135deg, #1f2a3c 0%, #27364b 100%);
+  background: #27364b;
   border-color: #f0ad63;
   color: #e6edf9;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
 }
 
 .theme-dark .pokemon-list li:hover {
-  background: linear-gradient(135deg, #d0711f 0%, #b35614 100%);
+  background: #b35614;
   border-color: #f0ad63;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
   color: #fff;
 }
 
 .theme-dark .pokemon-list li.highlighted {
-  background: linear-gradient(135deg, #d0711f 0%, #b35614 100%);
+  background: #b35614;
   border-color: #f0ad63;
   box-shadow: 0 0 14px rgba(240, 173, 99, 0.6);
 }
@@ -1541,24 +1525,22 @@
 }
 
 .theme-dark .pokemon-list .over-fifty-pill {
-  background: linear-gradient(135deg, #b83232 0%, #8b1f1f 100%);
+  background: #8b1f1f;
   border-color: #e68787;
 }
 
 .theme-dark .pokemon-list .restricted-pill {
-  background: linear-gradient(135deg, #22b8c3 0%, #0d8da3 100%);
+  background: #0d8da3;
 }
 
 .theme-dark .pokemon-list .ereader-pill {
-  background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+  background: #1565c0;
 }
 
 .theme-dark .pokedex-entry {
-  background: linear-gradient(135deg, #161f30 0%, #1e2c44 100%);
+  background: #c46418;
   border-color: #f0ad63;
-  box-shadow:
-    inset 0 0 0 3px rgba(255, 255, 255, 0.08),
-    0 4px 14px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
 }
 
 .theme-dark .pokedex-entry-frame {
@@ -1570,31 +1552,24 @@
 }
 
 .theme-dark .pokedex-entry-bg {
-  background:
-    repeating-linear-gradient(
-      to bottom,
-      #0f1726 0px,
-      #0f1726 5px,
-      #161f32 5px,
-      #161f32 18px
-    );
+  background: #161f32;
 }
 
 .theme-dark .pokedex-entry-notes {
-  background: linear-gradient(135deg, #121b2d 0%, #1a2436 100%);
+  background: #1a2436;
   border-color: #f0ad63;
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.04);
   color: #e6edf9;
 }
 
 .theme-dark .pokedex-entry-header {
-  background: linear-gradient(180deg, #d0711f 0%, #b35614 65%, #8a3e0f 100%);
+  background: #8a3e0f;
   border-color: #f0ad63;
   color: #fff;
 }
 
 .theme-dark .pokedex-entry-gen {
-  background: linear-gradient(180deg, #f5c076 0%, #d99745 100%);
+  background: #d99745;
   border-color: #f0ad63;
   color: #1b1205;
 }
@@ -1606,8 +1581,11 @@
 }
 
 .theme-dark .pokedex-row-label {
-  background: linear-gradient(180deg, #d0711f 0%, #b35614 100%);
-  color: #fff8ed;
+  background: #27364b;
+  border: 1px solid #f0ad63;
+  color: #e6edf9;
+  padding: 0.5rem 0.85rem;
+  margin-right: 0.2rem;
 }
 
 .theme-dark .pokedex-row-value {
@@ -1615,7 +1593,7 @@
 }
 
 .theme-dark .combobox-input {
-  background: linear-gradient(135deg, #0f1626 0%, #162033 100%);
+  background: #162033;
   border-color: #f0ad63;
   color: #e6edf9;
 }
@@ -1656,14 +1634,14 @@
 }
 
 .theme-dark .game-list li {
-  background: linear-gradient(135deg, #d0711f 0%, #b35614 100%);
+  background: #b35614;
   border-color: #f0ad63;
   color: #fff6eb;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .theme-dark .game-list li:hover {
-  background: linear-gradient(135deg, #e08a35 0%, #c7691c 100%);
+  background: #c7691c;
   border-color: #f6c27c;
   color: #fff;
 }
@@ -1671,7 +1649,7 @@
 .theme-dark .hint,
 .theme-dark .no-results {
   color: #d8e2f4;
-  background: linear-gradient(135deg, #182339 0%, #1f2b45 100%);
+  background: #1f2b45;
   border-color: #f0ad63;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
 }
@@ -1700,13 +1678,13 @@
 }
 
 .theme-dark .error-message button {
-  background: linear-gradient(135deg, #d0711f 0%, #b35614 100%);
+  background: #b35614;
   border-color: #f0ad63;
   color: #fff6eb;
 }
 
 .theme-dark .error-message button:hover {
-  background: linear-gradient(135deg, #e08a35 0%, #c7691c 100%);
+  background: #c7691c;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
 }
 
@@ -1796,12 +1774,19 @@
 
 /* Shadow Mode - Header Styling */
 .shadow-mode .mode-selector {
-  background: linear-gradient(180deg, #c8b3f0 0%, #9b6cc9 100%);
+  background: #b896e8;
   border-color: #6b2f9a;
 }
 
+.shadow-mode .mode-selector button,
+.shadow-mode .mode-selector a {
+  background: #d9c2ff;
+  border: 2px solid #9b6cc9;
+  color: #2d2d2d;
+}
+
 .shadow-mode .mode-selector a.active {
-  background: linear-gradient(135deg, #f3edff 0%, #e8dff9 100%);
+  background: #e8dff9;
   color: #2d2d2d;
   border-color: #6b2f9a;
 }
@@ -1809,9 +1794,9 @@
 /* Shadow Pokemon Styles */
 
 .shadow-pokemon .shadow-selector {
-  background: linear-gradient(135deg, #d4c5f9 0%, #b896e8 100%);
+  background: #d4c5f9;
   border-color: #6b2f9a;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .shadow-pokemon .shadow-selector h3 {
@@ -1828,11 +1813,11 @@
   display: flex;
   gap: 0;
   margin: 0.75rem 0;
-  background: rgba(107, 47, 154, 0.2);
+  background: #d4c5f9;
   border-radius: 50px;
   padding: 4px;
   border: 2px solid #6b2f9a;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .shadow-filter-toggle button {
@@ -1843,53 +1828,88 @@
   border-radius: 50px;
   cursor: pointer;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 500;
   color: #2d2d2d;
   transition: all 0.2s;
   white-space: nowrap;
 }
 
 .shadow-filter-toggle button:hover:not(.active) {
-  background: rgba(155, 108, 201, 0.2);
+  background: #e4ddfb;
 }
 
 .shadow-filter-toggle button.active {
-  background: linear-gradient(135deg, #9b6cc9 0%, #7e52a8 100%);
-  color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background: #e8dff9;
+  color: #2d2d2d;
+  border: 1px solid #9b6cc9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  font-weight: 700;
 }
 
 .shadow-pokemon .shadow-checkbox {
-  background: #e8dff9;
-  border-color: #6b2f9a;
+  background: #d4c5f9;
+  border-color: rgba(107, 47, 154, 0.45);
   color: #2d2d2d;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .shadow-pokemon .shadow-checkbox:hover {
-  background: #d4c5f9;
-  border-color: #5a1f7a;
+  background: #e4ddfb;
+  border-color: #9b6cc9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
 }
 
 .shadow-pokemon .shadow-checkbox:has(input:checked) {
-  background: #c8b3f0;
-  border-color: #6b2f9a;
+  background: #e8dff9;
+  border-color: #9b6cc9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+.shadow-pokemon .shadow-checkbox:has(input:checked):hover {
+  background: #d7caf7;
+  border-color: #7e52a8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
 }
 
 .shadow-pokemon .shadow-checkbox .toggle-track {
-  border-color: #5a1f7a;
-  background: linear-gradient(180deg, #e5e2dd 0%, #cfc8c0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  min-height: 24px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  color: #2d2d2d;
 }
 
-.shadow-pokemon .shadow-checkbox .toggle-thumb {
-  background: linear-gradient(180deg, #f9f5ff 0%, #e8dff9 100%);
+.shadow-pokemon .shadow-checkbox input[type="checkbox"]:checked ~ .toggle-track {
+  background: transparent;
+  border-color: transparent;
 }
 
-.shadow-pokemon .shadow-checkbox input[type="checkbox"]:checked ~ .toggle-track .toggle-thumb {
-  background: linear-gradient(180deg, #d4c5f9 0%, #9b6cc9 100%);
+.shadow-pokemon .shadow-checkbox input[type="checkbox"]:checked ~ .toggle-label {
+  color: #2d2d2d;
+  font-weight: 700;
+}
+
+.shadow-pokemon .shadow-checkbox .toggle-check {
+  font-size: 0.85rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #0b0b0b;
 }
 
 .shadow-pokemon .shadow-checkbox .toggle-label {
   color: #2d2d2d;
+  font-weight: 500;
+}
+
+.shadow-pokemon .shadow-checkbox:not(:has(input:checked)) .toggle-label {
+  color: #6f6b78;
+  font-weight: 500;
 }
 
 .shadow-pokemon .shadow-grid {
@@ -1941,13 +1961,13 @@
 }
 
 .shadow-pokemon .shadow-list li {
-  background: linear-gradient(135deg, #e8dff9 0%, #d4c5f9 100%);
+  background: #e8dff9;
   border-color: #9b6cc9;
   color: #2d2d2d;
 }
 
 .shadow-pokemon .shadow-list li:hover {
-  background: linear-gradient(135deg, #9b6cc9 0%, #7e52a8 100%);
+  background: #7e52a8;
   border-color: #6b2f9a;
   box-shadow: 0 2px 6px rgba(107, 47, 154, 0.45);
   color: #fff;
@@ -1958,7 +1978,7 @@
 }
 
 .shadow-pokemon .shadow-list li.highlighted {
-  background: linear-gradient(135deg, #9b6cc9 0%, #7e52a8 100%);
+  background: #7e52a8;
   border-color: #6b2f9a;
   box-shadow: 0 0 12px rgba(107, 47, 154, 0.9);
   color: #fff;
@@ -1970,29 +1990,37 @@
 
 .shadow-pokemon .shadow-hint,
 .shadow-pokemon .shadow-no-results {
-  background: linear-gradient(135deg, #f0ebf9 0%, #f9f5ff 100%);
+  background: #f9f5ff;
   border-color: #6b2f9a;
   color: #2d2d2d;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not(.theme-light) .shadow-mode .mode-selector {
-    background: linear-gradient(135deg, #0f1626 0%, #111c30 100%);
+    background: #111c30;
     border-color: #b896e8;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
   }
 
   :root:not(.theme-light) .shadow-mode .mode-selector a.active {
-    background: linear-gradient(135deg, #8a61c2 0%, #6b2f9a 100%);
+    background: #6b2f9a;
     color: #f5f1ff;
     border-color: #d9c2ff;
     box-shadow: 0 0 12px rgba(107, 47, 154, 0.5);
   }
 
+  :root:not(.theme-light) .shadow-mode .mode-selector button,
+  :root:not(.theme-light) .shadow-mode .mode-selector a {
+    background: #2d3650;
+    border: 2px solid #b896e8;
+    color: #e6edf9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  }
+
   :root:not(.theme-light) .shadow-pokemon .shadow-selector {
-    background: linear-gradient(135deg, #0f1626 0%, #141e32 100%);
+    background: #10192c;
     border-color: #b896e8;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18), 0 0 0 2px rgba(184, 150, 232, 0.18);
   }
 
   :root:not(.theme-light) .shadow-pokemon .shadow-selector h3 {
@@ -2005,9 +2033,9 @@
   }
 
   :root:not(.theme-light) .shadow-filter-toggle {
-    background: #0f1626;
+    background: #10192c;
     border-color: #b896e8;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18), 0 0 0 2px rgba(184, 150, 232, 0.18);
   }
 
   :root:not(.theme-light) .shadow-filter-toggle button {
@@ -2015,13 +2043,14 @@
   }
 
   :root:not(.theme-light) .shadow-filter-toggle button:hover:not(.active) {
-    background: rgba(184, 150, 232, 0.12);
+    background: #1a2338;
   }
 
   :root:not(.theme-light) .shadow-filter-toggle button.active {
-    background: linear-gradient(135deg, #8a61c2 0%, #6b2f9a 100%);
-    color: #fff6ff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    background: #6b2f9a;
+    color: #e6edf9;
+    border: 1px solid #d9c2ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
   :root:not(.theme-light) .shadow-pokemon .shadow-checkbox {
@@ -2031,30 +2060,44 @@
   }
 
   :root:not(.theme-light) .shadow-pokemon .shadow-checkbox:hover {
-    background: #162338;
+    background: #1a2338;
     border-color: #d9c2ff;
   }
 
   :root:not(.theme-light) .shadow-pokemon .shadow-checkbox:has(input:checked) {
-    background: #1d2a44;
+    background: #1f2b45;
     border-color: #d9c2ff;
   }
 
+  :root:not(.theme-light) .shadow-pokemon .shadow-checkbox:has(input:checked):hover {
+    background: #24314e;
+    border-color: #e5d5ff;
+  }
+
   :root:not(.theme-light) .shadow-pokemon .shadow-checkbox .toggle-track {
-    border-color: #b896e8;
-    background: linear-gradient(180deg, #0c1323 0%, #131e34 100%);
+    border-color: transparent;
+    background: transparent;
+    color: #e6edf9;
   }
 
-  :root:not(.theme-light) .shadow-pokemon .shadow-checkbox .toggle-thumb {
-    background: linear-gradient(180deg, #e8dff9 0%, #b896e8 100%);
+  :root:not(.theme-light) .shadow-pokemon .shadow-checkbox input[type="checkbox"]:checked ~ .toggle-track {
+    background: transparent;
+    border-color: transparent;
   }
 
-  :root:not(.theme-light) .shadow-pokemon .shadow-checkbox input[type="checkbox"]:checked ~ .toggle-track .toggle-thumb {
-    background: linear-gradient(180deg, #b896e8 0%, #7e52a8 100%);
+  :root:not(.theme-light) .shadow-pokemon .shadow-checkbox .toggle-check {
+    color: #e6edf9;
+    font-weight: 800;
   }
 
   :root:not(.theme-light) .shadow-pokemon .shadow-checkbox .toggle-label {
     color: #e6edf9;
+    font-weight: 700;
+  }
+
+  :root:not(.theme-light) .shadow-pokemon .shadow-checkbox:not(:has(input:checked)) .toggle-label {
+    color: #a9a3b8;
+    font-weight: 600;
   }
 
   :root:not(.theme-light) .shadow-pokemon .shadow-grid {
@@ -2062,14 +2105,7 @@
     box-shadow:
       inset 0 0 0 4px #6b2f9a,
       0 2px 10px rgba(0, 0, 0, 0.4);
-    background:
-      repeating-linear-gradient(
-        to bottom,
-        #0f1726 0px,
-        #0f1726 5px,
-        #162338 5px,
-        #162338 18px
-      );
+    background: #162338;
   }
 
   :root:not(.theme-light) .shadow-pokemon .border-legend {
@@ -2103,13 +2139,13 @@
   }
 
   :root:not(.theme-light) .shadow-pokemon .shadow-list li {
-    background: linear-gradient(135deg, #161f32 0%, #1c2740 100%);
+    background: #1c2740;
     border-color: #b896e8;
     color: #e6edf9;
   }
 
   :root:not(.theme-light) .shadow-pokemon .shadow-list li:hover {
-    background: linear-gradient(135deg, #8a61c2 0%, #6b2f9a 100%);
+    background: #6b2f9a;
     border-color: #d9c2ff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
     color: #fff6ff;
@@ -2120,7 +2156,7 @@
   }
 
   :root:not(.theme-light) .shadow-pokemon .shadow-list li.highlighted {
-    background: linear-gradient(135deg, #8a61c2 0%, #6b2f9a 100%);
+    background: #6b2f9a;
     border-color: #d9c2ff;
     box-shadow: 0 0 14px rgba(184, 150, 232, 0.65);
     color: #fff6ff;
@@ -2132,27 +2168,35 @@
 
   :root:not(.theme-light) .shadow-pokemon .shadow-hint,
   :root:not(.theme-light) .shadow-pokemon .shadow-no-results {
-    background: linear-gradient(135deg, #0f1626 0%, #141e32 100%);
+    background: #141e32;
     border-color: #b896e8;
     color: #dbe7ff;
   }
 }
 
 .theme-dark .shadow-mode .mode-selector {
-  background: linear-gradient(135deg, #0f1626 0%, #111c30 100%);
-  border-color: #b896e8;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
+  background: #6b2f9a;
+  border-color: #d9c2ff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.theme-dark .shadow-mode .mode-selector button,
+.theme-dark .shadow-mode .mode-selector a {
+  background: #2d3650;
+  border: 2px solid #b896e8;
+  color: #e6edf9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .theme-dark .shadow-mode .mode-selector a.active {
-  background: linear-gradient(135deg, #8a61c2 0%, #6b2f9a 100%);
+  background: #6b2f9a;
   color: #f5f1ff;
   border-color: #d9c2ff;
   box-shadow: 0 0 12px rgba(107, 47, 154, 0.5);
 }
 
 .theme-dark .shadow-pokemon .shadow-selector {
-  background: linear-gradient(135deg, #0f1626 0%, #141e32 100%);
+  background: #10192c;
   border-color: #b896e8;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
@@ -2167,9 +2211,9 @@
 }
 
 .theme-dark .shadow-filter-toggle {
-  background: #0f1626;
+  background: #10192c;
   border-color: #b896e8;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(184, 150, 232, 0.25);
 }
 
 .theme-dark .shadow-filter-toggle button {
@@ -2177,12 +2221,13 @@
 }
 
 .theme-dark .shadow-filter-toggle button:hover:not(.active) {
-  background: rgba(184, 150, 232, 0.12);
+  background: #1a2338;
 }
 
 .theme-dark .shadow-filter-toggle button.active {
-  background: linear-gradient(135deg, #8a61c2 0%, #6b2f9a 100%);
-  color: #fff6ff;
+  background: #6b2f9a;
+  color: #e6edf9;
+  border: 1px solid #d9c2ff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -2193,30 +2238,48 @@
 }
 
 .theme-dark .shadow-pokemon .shadow-checkbox:hover {
-  background: #162338;
+  background: #1a2338;
   border-color: #d9c2ff;
 }
 
 .theme-dark .shadow-pokemon .shadow-checkbox:has(input:checked) {
-  background: #1d2a44;
+  background: #1f2b45;
   border-color: #d9c2ff;
 }
 
+.theme-dark .shadow-pokemon .shadow-checkbox:has(input:checked):hover {
+  background: #24314e;
+  border-color: #e5d5ff;
+}
+
 .theme-dark .shadow-pokemon .shadow-checkbox .toggle-track {
-  border-color: #b896e8;
-  background: linear-gradient(180deg, #0c1323 0%, #131e34 100%);
-}
-
-.theme-dark .shadow-pokemon .shadow-checkbox .toggle-thumb {
-  background: linear-gradient(180deg, #e8dff9 0%, #b896e8 100%);
-}
-
-.theme-dark .shadow-pokemon .shadow-checkbox input[type="checkbox"]:checked ~ .toggle-track .toggle-thumb {
-  background: linear-gradient(180deg, #b896e8 0%, #7e52a8 100%);
+  border: none;
+  background: transparent;
+  color: #e6edf9;
 }
 
 .theme-dark .shadow-pokemon .shadow-checkbox .toggle-label {
   color: #e6edf9;
+}
+
+.theme-dark .shadow-pokemon .shadow-checkbox input[type="checkbox"]:checked ~ .toggle-track {
+  background: transparent;
+  border-color: transparent;
+}
+
+.theme-dark .shadow-pokemon .shadow-checkbox .toggle-check {
+  color: #e6edf9;
+  font-weight: 800;
+}
+
+.theme-dark .shadow-pokemon .shadow-checkbox:not(:has(input:checked)) .toggle-label {
+  color: #a9a3b8;
+  font-weight: 600;
+}
+
+.theme-dark .shadow-pokemon .shadow-checkbox input[type="checkbox"]:checked ~ .toggle-label {
+  color: #e6edf9;
+  font-weight: 700;
 }
 
 .theme-dark .shadow-pokemon .shadow-grid {
@@ -2224,14 +2287,7 @@
   box-shadow:
     inset 0 0 0 4px #6b2f9a,
     0 2px 10px rgba(0, 0, 0, 0.4);
-  background:
-    repeating-linear-gradient(
-      to bottom,
-      #0f1726 0px,
-      #0f1726 5px,
-      #162338 5px,
-      #162338 18px
-    );
+  background: #162338;
 }
 
 .theme-dark .shadow-pokemon .border-legend {
@@ -2265,13 +2321,13 @@
 }
 
 .theme-dark .shadow-pokemon .shadow-list li {
-  background: linear-gradient(135deg, #161f32 0%, #1c2740 100%);
+  background: #1c2740;
   border-color: #b896e8;
   color: #e6edf9;
 }
 
 .theme-dark .shadow-pokemon .shadow-list li:hover {
-  background: linear-gradient(135deg, #8a61c2 0%, #6b2f9a 100%);
+  background: #6b2f9a;
   border-color: #d9c2ff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
   color: #fff6ff;
@@ -2282,7 +2338,7 @@
 }
 
 .theme-dark .shadow-pokemon .shadow-list li.highlighted {
-  background: linear-gradient(135deg, #8a61c2 0%, #6b2f9a 100%);
+  background: #6b2f9a;
   border-color: #d9c2ff;
   box-shadow: 0 0 14px rgba(184, 150, 232, 0.65);
   color: #fff6ff;
@@ -2294,7 +2350,7 @@
 
 .theme-dark .shadow-pokemon .shadow-hint,
 .theme-dark .shadow-pokemon .shadow-no-results {
-  background: linear-gradient(135deg, #0f1626 0%, #141e32 100%);
+  background: #141e32;
   border-color: #b896e8;
   color: #dbe7ff;
 }

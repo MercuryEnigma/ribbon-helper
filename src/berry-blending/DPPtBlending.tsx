@@ -50,7 +50,7 @@ export default function DPPtBlending() {
           <div className="option-group inline">
             <label>Nature:</label>
             <select value={nature} onChange={(e) => setNature(e.target.value)}>
-              <option value="">None (maximize all stats)</option>
+              <option value="">None (neutral nature)</option>
               {natureOptions.map((nat) => (
                 <option key={nat} value={nat}>{nat}</option>
               ))}
@@ -66,7 +66,9 @@ export default function DPPtBlending() {
               onChange={(e) => setWithPlatinum(e.target.checked)}
             />
             <span className="toggle-label">Veilstone Dept. store poffins (Platinum only)</span>
-            <span className="toggle-track"><span className="toggle-thumb" /></span>
+            <span className="toggle-track" aria-hidden="true">
+              {withPlatinum && <span className="toggle-check">✓</span>}
+            </span>
           </label>
 
           <label className="option-checkbox">
@@ -76,7 +78,9 @@ export default function DPPtBlending() {
               onChange={(e) => setWithMild(e.target.checked)}
             />
             <span className="toggle-label">Include Mild poffin gift</span>
-            <span className="toggle-track"><span className="toggle-thumb" /></span>
+            <span className="toggle-track" aria-hidden="true">
+              {withMild && <span className="toggle-check">✓</span>}
+            </span>
           </label>
         </div>
 
@@ -88,7 +92,9 @@ export default function DPPtBlending() {
               onChange={(e) => setWithFrontier(e.target.checked)}
             />
             <span className="toggle-label">Battle Frontier (Pt/HG/SS)</span>
-            <span className="toggle-track"><span className="toggle-thumb" /></span>
+            <span className="toggle-track" aria-hidden="true">
+              {withFrontier && <span className="toggle-check">✓</span>}
+            </span>
           </label>
 
           <label className="option-checkbox">
@@ -98,7 +104,9 @@ export default function DPPtBlending() {
               onChange={(e) => setWithPDR(e.target.checked)}
             />
             <span className="toggle-label">Pokémon Battle Revolution</span>
-            <span className="toggle-track"><span className="toggle-thumb" /></span>
+            <span className="toggle-track" aria-hidden="true">
+              {withPDR && <span className="toggle-check">✓</span>}
+            </span>
           </label>
 
           <label className="option-checkbox">
@@ -108,7 +116,9 @@ export default function DPPtBlending() {
               onChange={(e) => setWithEvent(e.target.checked)}
             />
             <span className="toggle-label">Event-only berries</span>
-            <span className="toggle-track"><span className="toggle-thumb" /></span>
+            <span className="toggle-track" aria-hidden="true">
+              {withEvent && <span className="toggle-check">✓</span>}
+            </span>
           </label>
         </div>
       </div>
