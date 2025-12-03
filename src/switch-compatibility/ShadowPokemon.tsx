@@ -126,7 +126,7 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
   const [shadowFilter, setShadowFilter] = useState<ShadowFilter>('either');
   const [gridHeight, setGridHeight] = useState<number | null>(null);
   const [highlightedPokemon, setHighlightedPokemon] = useState<string | null>(null);
-  const iconGridContainerRef = useRef<HTMLDivElement | null>(null);
+  const gridWrapperRef = useRef<HTMLDivElement | null>(null);
   const listItemRefs = useRef<Map<string, HTMLLIElement>>(new Map());
 
   const toggleGame = (gameIds: string[]) => {
@@ -154,8 +154,8 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
 
   useLayoutEffect(() => {
     const measure = () => {
-      if (iconGridContainerRef.current) {
-        setGridHeight(iconGridContainerRef.current.getBoundingClientRect().height);
+      if (gridWrapperRef.current) {
+        setGridHeight(gridWrapperRef.current.getBoundingClientRect().height);
       }
     };
 
@@ -258,7 +258,7 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
               <p className="no-results shadow-no-results">No Shadow Pokémon found that are available in all selected games.</p>
             ) : (
               <div className="pokemon-results-content">
-                <div ref={iconGridContainerRef}>
+                <div className="pokemon-grid-wrapper" ref={gridWrapperRef}>
                   <div className="pokemon-icon-grid shadow-grid">
                     {filteredPokemon.map((pokemon, index) => {
                       const iconProps = getPokemonIconProps(pokemon.key, pokemon.data, pokemonDb);

@@ -14,7 +14,7 @@ export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: Availab
   );
   const [gridHeight, setGridHeight] = useState<number | null>(null);
   const [highlightedPokemon, setHighlightedPokemon] = useState<string | null>(null);
-  const iconGridRef = useRef<HTMLDivElement | null>(null);
+  const gridWrapperRef = useRef<HTMLDivElement | null>(null);
   const listItemRefs = useRef<Map<string, HTMLLIElement>>(new Map());
 
   const toggleGame = (gameIds: string[]) => {
@@ -42,8 +42,8 @@ export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: Availab
 
   useLayoutEffect(() => {
     const measure = () => {
-      if (iconGridRef.current) {
-        setGridHeight(iconGridRef.current.getBoundingClientRect().height);
+      if (gridWrapperRef.current) {
+        setGridHeight(gridWrapperRef.current.getBoundingClientRect().height);
       }
     };
 
@@ -127,21 +127,23 @@ export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: Availab
               <p className="no-results">No Pokémon found that are available in all selected games.</p>
             ) : (
               <div className="pokemon-results-content">
-                <div className="pokemon-icon-grid" ref={iconGridRef}>
-                  {filteredPokemon.map(pokemon => {
-                    const iconProps = getPokemonIconProps(pokemon.key, pokemon.data, pokemonDb);
-                    return (
-                      <img
-                        key={pokemon.key}
-                        className="pokemon-icon-grid-item"
-                        alt={pokemon.name}
-                        title={pokemon.name}
-                        onClick={() => handlePokemonClick(pokemon.key)}
-                        style={{ cursor: 'pointer' }}
-                        {...iconProps}
-                      />
-                    );
-                  })}
+                <div className="pokemon-grid-wrapper" ref={gridWrapperRef}>
+                  <div className="pokemon-icon-grid">
+                    {filteredPokemon.map(pokemon => {
+                      const iconProps = getPokemonIconProps(pokemon.key, pokemon.data, pokemonDb);
+                      return (
+                        <img
+                          key={pokemon.key}
+                          className="pokemon-icon-grid-item"
+                          alt={pokemon.name}
+                          title={pokemon.name}
+                          onClick={() => handlePokemonClick(pokemon.key)}
+                          style={{ cursor: 'pointer' }}
+                          {...iconProps}
+                        />
+                      );
+                    })}
+                  </div>
                 </div>
                 <div
                   className="pokemon-list"
