@@ -15,9 +15,9 @@ export interface PokemonData {
   forms?: PokemonNames;
   'data-source'?: string;
   'form-source'?: string;
-  gender: string;
+  gender?: string;
   natdex?: number;
-  games: string[];
+  games?: string[];
   evolvesFrom?: string | null;
   femsprite?: boolean;
   flags?: string[];
