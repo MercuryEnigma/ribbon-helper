@@ -44,6 +44,14 @@ type StatKey = 'spicy' | 'dry' | 'sweet' | 'bitter' | 'sour';
 const FEEL_LIMIT = 255;
 const STAT_LIMIT = 255;
 
+/*
+* Tried different greedy scoring types
+* 0: v0 -> total max: 119
+* 1: v1 -> simple weight = 1 + (STAT_LIMIT - currentValue): 189
+* 2: v2 -> geometric weight = (newMaxValue - currentValue)^2: 180
+*/
+const SCORE_TYPE: number = 1;
+
 /**
  * Apply nature modifiers to stats
  */
@@ -75,19 +83,6 @@ function applyNatureModifiers(
   }
 
   return adjusted;
-}
-
-function lowestFlavorKey(obj: Flavors): keyof Flavors {
-  const keys = Object.keys(obj) as (keyof Flavors)[];
-  let minKey = keys[0];
-
-  for (const key of keys) {
-    if (obj[key] < obj[minKey]) {
-      minKey = key;
-    }
-  }
-
-  return minKey;
 }
 
 
@@ -148,25 +143,57 @@ function calculateBlockScore(
     nature
   );
 
-  // Calculate weighted efficiency score
-  // Lower stats get higher weight - we weight by percentage improvement
-  let weightedScore = 0;
-  const stats: Array<keyof Flavors> = ['spicy', 'dry', 'sweet', 'bitter', 'sour'];
+  if (SCORE_TYPE === 1) {
+    // Calculate weighted efficiency score
+    // Lower stats get higher weight - we weight by percentage improvement
+    let weightedScore = 0;
+    const stats: Array<keyof Flavors> = ['spicy', 'dry', 'sweet', 'bitter', 'sour'];
 
-  for (const stat of stats) {
-    const currentValue = currentStats[stat];
-    const blockValue = adjustedBlock[stat];
+    for (const stat of stats) {
+      const currentValue = currentStats[stat];
+      const blockValue = adjustedBlock[stat];
 
-    if (blockValue > 0) {
       // Weight is higher when current stat is lower
       // Use 1 + (255 - current) to give more weight to improving low stats
       const weight = 1 + (STAT_LIMIT - currentValue);
       weightedScore += blockValue * weight;
     }
-  }
 
-  // Return efficiency: weighted score per feel point
-  return weightedScore / block.feel;
+    // Return efficiency: weighted score per feel point
+    return weightedScore / block.feel;
+  }
+  else if(SCORE_TYPE === 2) {
+    let weightedScore = 0;
+
+    const stats: Array<keyof Flavors> = ['spicy', 'dry', 'sweet', 'bitter', 'sour'];
+    let newMaxValue: number = 0;
+    for (const stat of stats) {
+      const newValue = currentStats[stat] + block[stat];
+      if (newValue > newMaxValue) {
+        newMaxValue = newValue;
+      }
+    }
+
+    for (const stat of stats) {
+      const currentValue = currentStats[stat];
+      const blockValue = adjustedBlock[stat];
+
+      // Weight is higher to lowest current stat compared against new max stat
+      // Use value_diff ^ 2 to give much more weight to improving low stats
+      const weight = 1 + (newMaxValue - currentValue) * (newMaxValue - currentValue);
+      weightedScore += (blockValue * weight);
+    }
+    // Return efficiency: weighted score per feel point
+    return weightedScore / block.feel;
+
+  }
+  return (
+    adjustedBlock.spicy + 
+    adjustedBlock.dry + 
+    adjustedBlock.sweet + 
+    adjustedBlock.bitter + 
+    adjustedBlock.sour
+  ) / block.feel;
 }
 
 /**

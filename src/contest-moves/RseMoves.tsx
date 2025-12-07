@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import pokemonData from '../data/pokemon.json';
 import pokemonMovesRse from '../data/pokemon_moves_rse.json';
@@ -7,10 +7,12 @@ import { getPokemonIconProps } from '../switch-compatibility/iconUtils';
 import type { PokemonDatabase, PokemonData } from '../switch-compatibility/types';
 import ContestTabs from './ContestTabs';
 import type { ContestType } from './types';
-import { getRseContestMoves, type ContestMove } from './contestCalculator';
+import { getRseContestMoves } from './contestCalculator';
+import { getAvailableMovesForPokemon, filterAvailableMoves, type LearnMethod } from './moveUtils';
 
+/** Contest type options for filtering moves */
 const TYPE_FILTERS: Array<{ value: 'all' | ContestType; label: string }> = [
-  { value: 'all', label: 'All' },
+  { value: 'all', label: 'All (recommended)' },
   { value: 'cool', label: 'Cool' },
   { value: 'beauty', label: 'Beauty' },
   { value: 'cute', label: 'Sweet' },
@@ -18,18 +20,22 @@ const TYPE_FILTERS: Array<{ value: 'all' | ContestType; label: string }> = [
   { value: 'tough', label: 'Tough' },
 ];
 
-type OptionFilter = 'level-up' | 'TM/HM' | 'Tutor' | 'Egg' | 'Purify' | 'Other';
-type MoveFilterState = Record<OptionFilter, boolean>;
+/** Learn method categories for filtering which moves to display */
+type MoveFilterState = Record<LearnMethod, boolean>;
 
-const OPTION_FILTERS: Array<{ key: OptionFilter; label: string }> = [
-  { key: 'level-up', label: 'level-up' },
-  { key: 'TM/HM', label: 'TM/HM' },
-  { key: 'Tutor', label: 'Tutor' },
-  { key: 'Egg', label: 'Egg' },
-  { key: 'Purify', label: 'Purify' },
-  { key: 'Other', label: 'Other' },
+const OPTION_FILTERS: Array<{ key: LearnMethod; label: string }> = [
+  { key: 'level-up', label: 'Level-up' },
+  { key: 'machine', label: 'TM/HM' },
+  { key: 'tutor', label: 'Tutor' },
+  { key: 'egg', label: 'Egg' },
+  { key: 'purify', label: 'Purify' },
+  { key: 'other', label: 'Other' },
 ];
 
+/**
+ * Gets the display name for a Pokémon, handling cases where the name data
+ * is referenced from another entry via 'data-source'.
+ */
 function getDisplayNameForPokemon(
   key: string,
   data: PokemonData | undefined,
@@ -66,9 +72,6 @@ export default function RseMoves() {
       .sort((a, b) => a.natdex - b.natdex || a.name.localeCompare(b.name));
   }, [availablePokemonKeys, pokemonDb]);
 
-  const defaultPokemonKey = pokemonOptions[0]?.key || '';
-  const defaultPokemonName = pokemonOptions[0]?.name || '';
-
   const allowedPokemonKeys = useMemo(() => new Set(availablePokemonKeys), [availablePokemonKeys]);
 
   const selectedKey = (pokemonKey && allowedPokemonKeys.has(pokemonKey)) ? pokemonKey : '';
@@ -84,7 +87,6 @@ export default function RseMoves() {
       return acc;
     }, {} as MoveFilterState);
   });
-  const optionFiltersKey = useMemo(() => JSON.stringify(optionFilters), [optionFilters]);
 
   useEffect(() => {
     if (pokemonKey && allowedPokemonKeys.has(pokemonKey)) {
@@ -124,34 +126,31 @@ export default function RseMoves() {
     ? getPokemonIconProps(selectedPokemon, selectedPokemonData, pokemonDb)
     : null;
 
+  /**
+   * Step 1: Extract all available moves for the selected Pokémon, organized by learn method.
+   * This only updates when the selected Pokémon changes.
+   */
   const availableMoves = useMemo(() => {
-    if (!selectedPokemon) return [];
-    const data = (pokemonMovesRse as any)[selectedPokemon];
-    if (!data) return [];
+    if (!selectedPokemon) return {};
+    return getAvailableMovesForPokemon(selectedPokemon, pokemonMovesRse as Record<string, any>);
+  }, [selectedPokemon]);
 
-    const moveSet = new Set<string>();
-    for (const [methodKey, entry] of Object.entries<any>(data)) {
-      if (methodKey.startsWith('level-up-') && !optionFilters['level-up']) continue;
-      if (methodKey.startsWith('machine-') && !optionFilters['TM/HM']) continue;
-      if (methodKey.startsWith('tutor-') && !optionFilters['Tutor']) continue;
-      if (methodKey.startsWith('egg-') && !optionFilters['Egg']) continue;
-      if (methodKey.startsWith('purification') && !optionFilters['Purify']) continue;
-      if (methodKey.startsWith('light-ball-egg-') && !optionFilters['Other']) continue;
-
-      const moves = (entry as any)?.moves;
-      if (Array.isArray(moves)) {
-        moves.forEach((m: string) => moveSet.add(m));
-      } else if (moves && typeof moves === 'object') {
-        Object.keys(moves).forEach(m => moveSet.add(m));
-      }
-    }
-    return Array.from(moveSet);
-  }, [optionFiltersKey, selectedPokemon]);
-
+  /**
+   * Step 2: Filter moves based on which learn methods are enabled.
+   * This updates when availableMoves or optionFilters change.
+   */
   const filteredMoves = useMemo(() => {
-    if (!selectedPokemon) return [];
-    return getRseContestMoves(availableMoves, typeFilter);
-  }, [availableMoves, selectedPokemon, typeFilter]);
+    return filterAvailableMoves(availableMoves, optionFilters);
+  }, [availableMoves, optionFilters]);
+
+  /**
+   * Step 3: Calculate optimal 5-move sequence for contests.
+   * This updates when filteredMoves or typeFilter change.
+   */
+  const optimalMoves = useMemo(() => {
+    if (Object.keys(filteredMoves).length === 0) return [];
+    return getRseContestMoves(filteredMoves, typeFilter);
+  }, [filteredMoves, typeFilter]);
 
   return (
     <div className="contest-layout">
@@ -163,14 +162,14 @@ export default function RseMoves() {
                 {!selectedPokemon && (
                   <div className="move-empty">Start typing a Pokémon name to see contest moves.</div>
                 )}
-                {selectedPokemon && filteredMoves.map(move => (
-                  <div className="move-row" key={`${move.move}-${move.appeal}-${move.type}`}>
+                {selectedPokemon && optimalMoves.map((move, index) => (
+                  <div className="move-row" key={index}>
                     <div className={`type-pill type-${move.type}`}>{TYPE_FILTERS.find(t => t.value === move.type)?.label || move.type}</div>
                     <div className="move-name">{move.move}</div>
                     <div className="move-appeal">{move.appeal}</div>
                   </div>
                 ))}
-                {selectedPokemon && filteredMoves.length === 0 && (
+                {selectedPokemon && optimalMoves.length === 0 && (
                   <div className="move-empty">No moves for this contest type yet.</div>
                 )}
               </div>
