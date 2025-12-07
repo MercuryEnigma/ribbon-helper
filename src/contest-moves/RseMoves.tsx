@@ -79,7 +79,7 @@ export default function RseMoves() {
   const [selectedPokemon, setSelectedPokemon] = useState<string>(selectedKey);
   const [searchTerm, setSearchTerm] = useState<string>(selectedKey ? getDisplayNameForPokemon(selectedKey, pokemonDb[selectedKey], pokemonDb) : '');
   const [showDropdown, setShowDropdown] = useState(false);
-  const [typeFilter, setTypeFilter] = useState<'all' | ContestType>('all');
+  const [chosenContestType, setChosenContestType] = useState<'all' | ContestType>('all');
   const [showOptions, setShowOptions] = useState(false);
   const [optionFilters, setOptionFilters] = useState<MoveFilterState>(() => {
     return OPTION_FILTERS.reduce((acc, opt) => {
@@ -145,12 +145,12 @@ export default function RseMoves() {
 
   /**
    * Step 3: Calculate optimal 5-move sequence for contests.
-   * This updates when filteredMoves or typeFilter change.
+   * This updates when filteredMoves or chosenContestType change.
    */
   const optimalMoves = useMemo(() => {
     if (Object.keys(filteredMoves).length === 0) return [];
-    return getRseContestMoves(filteredMoves, typeFilter);
-  }, [filteredMoves, typeFilter]);
+    return getRseContestMoves(filteredMoves, chosenContestType);
+  }, [filteredMoves, chosenContestType]);
 
   return (
     <div className="contest-layout">
@@ -236,8 +236,8 @@ export default function RseMoves() {
                 <select
                   id="contest-type"
                   aria-label="Contest type"
-                  value={typeFilter}
-                  onChange={e => setTypeFilter(e.target.value as typeof typeFilter)}
+                  value={chosenContestType}
+                  onChange={e => setChosenContestType(e.target.value as typeof chosenContestType)}
                 >
                   {TYPE_FILTERS.map(option => (
                     <option key={option.value} value={option.value}>{option.label}</option>

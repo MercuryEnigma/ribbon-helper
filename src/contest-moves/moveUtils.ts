@@ -5,21 +5,24 @@
 /** Learn method categories */
 export type LearnMethod = 'level-up' | 'machine' | 'tutor' | 'egg' | 'purify' | 'other';
 
-/** Map of moves with their learn method values (e.g., level number, TM number, etc.) */
-export type MovesMap = Record<string, string>;
+/** Map of moves to their set of learn method strings (e.g., {"rest": Set{"lvl 25", "tm-44"}}) */
+export type MovesMap = Record<string, Set<string>>;
+
+/** Map of learn methods to their moves (intermediate format with string values) */
+type MovesByMethod = Record<string, string>;
 
 /** Map of learn methods to their moves */
-export type AvailableMovesByMethod = Partial<Record<LearnMethod, MovesMap>>;
+export type AvailableMovesByMethod = Partial<Record<LearnMethod, MovesByMethod>>;
 
 /**
  * Priority order for learn methods when a move can be learned multiple ways.
  * Higher number = higher priority.
  */
-const LEARN_METHOD_PRIORITY: Record<LearnMethod, number> = {
+export const LEARN_METHOD_PRIORITY: Record<LearnMethod, number> = {
   'tutor': 1,
   'machine': 2,
-  'level-up': 3,
-  'egg': 4,
+  'egg': 3,
+  'level-up': 4,
   'other': 5,
   'purify': 6,
 };
@@ -88,26 +91,26 @@ export function getAvailableMovesForPokemon(
 
 /**
  * Filters available moves based on which learn methods are enabled.
- * When a move appears in multiple methods, prioritizes based on LEARN_METHOD_PRIORITY.
+ * Returns a set of all enabled learn method strings for each move.
  *
  * @param availableMoves Map of learn methods to their moves
  * @param enabledMethods Map of learn methods to whether they're enabled
- * @returns Flat map of move names to their values from the highest priority enabled method
+ * @returns Map of move names to sets of learn method strings
  *
  * @example
  * // If machine = false:
- * // Returns: { "slam": "15", "tail-whip": "6" }
+ * // Returns: { "slam": Set{"lvl 15"}, "tail-whip": Set{"lvl 6"} }
  * filterAvailableMoves(
  *   { "level-up": { "slam": "15" }, "machine": { "surf": "hm-03" } },
  *   { "level-up": true, "machine": false, ... }
  * )
  *
  * @example
- * // If all enabled and "tackle" appears in both level-up ("5") and egg ("egg"):
- * // Returns: { ..., "tackle": "egg" } (egg has higher priority)
+ * // If all enabled and "rest" appears in level-up ("25") and machine ("tm-44"):
+ * // Returns: { "rest": Set{"lvl 25", "tm-44"} }
  * filterAvailableMoves(
- *   { "level-up": { "tackle": "5" }, "egg": { "tackle": "egg" } },
- *   { "level-up": true, "egg": true, ... }
+ *   { "level-up": { "rest": "25" }, "machine": { "rest": "tm-44" } },
+ *   { "level-up": true, "machine": true, ... }
  * )
  */
 export function filterAvailableMoves(
@@ -115,9 +118,6 @@ export function filterAvailableMoves(
   enabledMethods: Record<LearnMethod, boolean>
 ): MovesMap {
   const result: MovesMap = {};
-
-  // Track which methods each move appears in with their values
-  const movesByPriority: Record<string, Array<{ method: LearnMethod; value: string }>> = {};
 
   // Collect all moves from enabled methods
   for (const method of Object.keys(availableMoves) as LearnMethod[]) {
@@ -127,23 +127,18 @@ export function filterAvailableMoves(
     if (!moves) continue;
 
     for (const [moveName, value] of Object.entries(moves)) {
-      if (!movesByPriority[moveName]) {
-        movesByPriority[moveName] = [];
+      // Initialize the Set if this is the first time seeing this move
+      if (!result[moveName]) {
+        result[moveName] = new Set<string>();
       }
-      movesByPriority[moveName].push({ method, value });
+
+      // Add the formatted learn method string to the Set
+      if (method === 'level-up') {
+        result[moveName].add(`lvl ${value}`);
+      } else {
+        result[moveName].add(value);
+      }
     }
-  }
-
-  // For each move, select the value from the highest priority method
-  for (const [moveName, entries] of Object.entries(movesByPriority)) {
-    // Sort by priority (higher priority first)
-    entries.sort((a, b) => {
-      const aPriority = LEARN_METHOD_PRIORITY[a.method];
-      const bPriority = LEARN_METHOD_PRIORITY[b.method];
-      return bPriority - aPriority;
-    });
-
-    result[moveName] = entries[0].value;
   }
 
   return result;
