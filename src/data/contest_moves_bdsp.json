@@ -1,0 +1,2050 @@
+{
+  "ally-switch": {
+    "effect": 0,
+    "hype": 1
+  },
+  "baton-pass": {
+    "effect": 0,
+    "hype": 1
+  },
+  "guard-split": {
+    "effect": 0,
+    "hype": 1
+  },
+  "power-split": {
+    "effect": 0,
+    "hype": 1
+  },
+  "splash": {
+    "effect": 0,
+    "hype": 1
+  },
+  "struggle": {
+    "effect": 0,
+    "hype": 1
+  },
+  "switcheroo": {
+    "effect": 0,
+    "hype": 1
+  },
+  "teleport": {
+    "effect": 0,
+    "hype": 1
+  },
+  "whirlwind": {
+    "effect": 0,
+    "hype": 1
+  },
+  "copycat": {
+    "effect": 0,
+    "hype": 2
+  },
+  "entrainment": {
+    "effect": 0,
+    "hype": 2
+  },
+  "follow-me": {
+    "effect": 0,
+    "hype": 2
+  },
+  "gastro-acid": {
+    "effect": 0,
+    "hype": 2
+  },
+  "magnet-rise": {
+    "effect": 0,
+    "hype": 2
+  },
+  "rage-powder": {
+    "effect": 0,
+    "hype": 2
+  },
+  "reflect-type": {
+    "effect": 0,
+    "hype": 2
+  },
+  "roar": {
+    "effect": 0,
+    "hype": 2
+  },
+  "role-play": {
+    "effect": 0,
+    "hype": 2
+  },
+  "simple-beam": {
+    "effect": 0,
+    "hype": 2
+  },
+  "soak": {
+    "effect": 0,
+    "hype": 2
+  },
+  "worry-seed": {
+    "effect": 0,
+    "hype": 2
+  },
+  "destiny-bond": {
+    "effect": 0,
+    "hype": 3
+  },
+  "echoed-voice": {
+    "effect": 0,
+    "hype": 3
+  },
+  "fissure": {
+    "effect": 0,
+    "hype": 3
+  },
+  "guard-swap": {
+    "effect": 0,
+    "hype": 3
+  },
+  "guillotine": {
+    "effect": 0,
+    "hype": 3
+  },
+  "horn-drill": {
+    "effect": 0,
+    "hype": 3
+  },
+  "power-swap": {
+    "effect": 0,
+    "hype": 3
+  },
+  "power-trick": {
+    "effect": 0,
+    "hype": 3
+  },
+  "recycle": {
+    "effect": 0,
+    "hype": 3
+  },
+  "sheer-cold": {
+    "effect": 0,
+    "hype": 3
+  },
+  "skill-swap": {
+    "effect": 0,
+    "hype": 3
+  },
+  "spit-up": {
+    "effect": 0,
+    "hype": 3
+  },
+  "block": {
+    "effect": 1,
+    "hype": 1
+  },
+  "mean-look": {
+    "effect": 1,
+    "hype": 1
+  },
+  "sand-attack": {
+    "effect": 1,
+    "hype": 1
+  },
+  "smokescreen": {
+    "effect": 1,
+    "hype": 1
+  },
+  "aromatic-mist": {
+    "effect": 1,
+    "hype": 2
+  },
+  "focus-energy": {
+    "effect": 1,
+    "hype": 2
+  },
+  "harden": {
+    "effect": 1,
+    "hype": 2
+  },
+  "laser-focus": {
+    "effect": 1,
+    "hype": 2
+  },
+  "withdraw": {
+    "effect": 1,
+    "hype": 2
+  },
+  "bulk-up": {
+    "effect": 1,
+    "hype": 3
+  },
+  "calm-mind": {
+    "effect": 1,
+    "hype": 3
+  },
+  "flower-shield": {
+    "effect": 1,
+    "hype": 3
+  },
+  "growth": {
+    "effect": 1,
+    "hype": 3
+  },
+  "nasty-plot": {
+    "effect": 1,
+    "hype": 3
+  },
+  "psych-up": {
+    "effect": 1,
+    "hype": 3
+  },
+  "rock-polish": {
+    "effect": 1,
+    "hype": 3
+  },
+  "shell-smash": {
+    "effect": 1,
+    "hype": 3
+  },
+  "stockpile": {
+    "effect": 1,
+    "hype": 3
+  },
+  "swords-dance": {
+    "effect": 1,
+    "hype": 3
+  },
+  "work-up": {
+    "effect": 1,
+    "hype": 3
+  },
+  "baby-doll-eyes": {
+    "effect": 2,
+    "hype": 1
+  },
+  "confide": {
+    "effect": 2,
+    "hype": 1
+  },
+  "growl": {
+    "effect": 2,
+    "hype": 1
+  },
+  "leer": {
+    "effect": 2,
+    "hype": 1
+  },
+  "parting-shot": {
+    "effect": 2,
+    "hype": 1
+  },
+  "play-nice": {
+    "effect": 2,
+    "hype": 1
+  },
+  "tail-whip": {
+    "effect": 2,
+    "hype": 1
+  },
+  "autotomize": {
+    "effect": 2,
+    "hype": 2
+  },
+  "charge": {
+    "effect": 2,
+    "hype": 2
+  },
+  "defense-curl": {
+    "effect": 2,
+    "hype": 2
+  },
+  "double-team": {
+    "effect": 2,
+    "hype": 2
+  },
+  "acupressure": {
+    "effect": 2,
+    "hype": 3
+  },
+  "coil": {
+    "effect": 2,
+    "hype": 3
+  },
+  "cotton-guard": {
+    "effect": 2,
+    "hype": 3
+  },
+  "helping-hand": {
+    "effect": 2,
+    "hype": 3
+  },
+  "lock-on": {
+    "effect": 2,
+    "hype": 3
+  },
+  "mind-reader": {
+    "effect": 2,
+    "hype": 3
+  },
+  "quiver-dance": {
+    "effect": 2,
+    "hype": 3
+  },
+  "charm": {
+    "effect": 3,
+    "hype": 1
+  },
+  "defog": {
+    "effect": 3,
+    "hype": 1
+  },
+  "eerie-impulse": {
+    "effect": 3,
+    "hype": 1
+  },
+  "fake-tears": {
+    "effect": 3,
+    "hype": 1
+  },
+  "feather-dance": {
+    "effect": 3,
+    "hype": 1
+  },
+  "flash": {
+    "effect": 3,
+    "hype": 1
+  },
+  "magnetic-flux": {
+    "effect": 3,
+    "hype": 1
+  },
+  "metal-sound": {
+    "effect": 3,
+    "hype": 1
+  },
+  "scary-face": {
+    "effect": 3,
+    "hype": 1
+  },
+  "screech": {
+    "effect": 3,
+    "hype": 1
+  },
+  "strength-sap": {
+    "effect": 3,
+    "hype": 1
+  },
+  "string-shot": {
+    "effect": 3,
+    "hype": 1
+  },
+  "sweet-scent": {
+    "effect": 3,
+    "hype": 1
+  },
+  "tearful-look": {
+    "effect": 3,
+    "hype": 1
+  },
+  "tickle": {
+    "effect": 3,
+    "hype": 1
+  },
+  "venom-drench": {
+    "effect": 3,
+    "hype": 1
+  },
+  "acid-armor": {
+    "effect": 3,
+    "hype": 2
+  },
+  "agility": {
+    "effect": 3,
+    "hype": 2
+  },
+  "amnesia": {
+    "effect": 3,
+    "hype": 2
+  },
+  "cosmic-power": {
+    "effect": 3,
+    "hype": 2
+  },
+  "cotton-spore": {
+    "effect": 3,
+    "hype": 2
+  },
+  "dragon-dance": {
+    "effect": 3,
+    "hype": 2
+  },
+  "hone-claws": {
+    "effect": 3,
+    "hype": 2
+  },
+  "howl": {
+    "effect": 3,
+    "hype": 2
+  },
+  "iron-defense": {
+    "effect": 3,
+    "hype": 2
+  },
+  "minimize": {
+    "effect": 3,
+    "hype": 2
+  },
+  "noble-roar": {
+    "effect": 3,
+    "hype": 2
+  },
+  "belly-drum": {
+    "effect": 3,
+    "hype": 3
+  },
+  "conversion": {
+    "effect": 3,
+    "hype": 3
+  },
+  "conversion-2": {
+    "effect": 3,
+    "hype": 3
+  },
+  "defend-order": {
+    "effect": 3,
+    "hype": 3
+  },
+  "heart-swap": {
+    "effect": 3,
+    "hype": 3
+  },
+  "kinesis": {
+    "effect": 3,
+    "hype": 3
+  },
+  "lunar-dance": {
+    "effect": 3,
+    "hype": 3
+  },
+  "magic-coat": {
+    "effect": 3,
+    "hype": 3
+  },
+  "memento": {
+    "effect": 3,
+    "hype": 3
+  },
+  "tail-glow": {
+    "effect": 3,
+    "hype": 3
+  },
+  "transform": {
+    "effect": 3,
+    "hype": 3
+  },
+  "encore": {
+    "effect": 4,
+    "hype": 1
+  },
+  "supersonic": {
+    "effect": 4,
+    "hype": 1
+  },
+  "sweet-kiss": {
+    "effect": 4,
+    "hype": 1
+  },
+  "aqua-ring": {
+    "effect": 4,
+    "hype": 2
+  },
+  "curse": {
+    "effect": 4,
+    "hype": 2
+  },
+  "heal-bell": {
+    "effect": 4,
+    "hype": 2
+  },
+  "ingrain": {
+    "effect": 4,
+    "hype": 2
+  },
+  "life-dew": {
+    "effect": 4,
+    "hype": 2
+  },
+  "poison-powder": {
+    "effect": 4,
+    "hype": 2
+  },
+  "swallow": {
+    "effect": 4,
+    "hype": 2
+  },
+  "after-you": {
+    "effect": 4,
+    "hype": 3
+  },
+  "endure": {
+    "effect": 4,
+    "hype": 3
+  },
+  "hypnosis": {
+    "effect": 4,
+    "hype": 3
+  },
+  "protect": {
+    "effect": 4,
+    "hype": 3
+  },
+  "quash": {
+    "effect": 4,
+    "hype": 3
+  },
+  "sing": {
+    "effect": 4,
+    "hype": 3
+  },
+  "sleep-powder": {
+    "effect": 4,
+    "hype": 3
+  },
+  "stun-spore": {
+    "effect": 4,
+    "hype": 3
+  },
+  "attract": {
+    "effect": 5,
+    "hype": 1
+  },
+  "confuse-ray": {
+    "effect": 5,
+    "hype": 1
+  },
+  "grudge": {
+    "effect": 5,
+    "hype": 1
+  },
+  "imprison": {
+    "effect": 5,
+    "hype": 1
+  },
+  "spite": {
+    "effect": 5,
+    "hype": 1
+  },
+  "haze": {
+    "effect": 5,
+    "hype": 2
+  },
+  "heal-pulse": {
+    "effect": 5,
+    "hype": 2
+  },
+  "mist": {
+    "effect": 5,
+    "hype": 2
+  },
+  "moonlight": {
+    "effect": 5,
+    "hype": 2
+  },
+  "morning-sun": {
+    "effect": 5,
+    "hype": 2
+  },
+  "psycho-shift": {
+    "effect": 5,
+    "hype": 2
+  },
+  "recover": {
+    "effect": 5,
+    "hype": 2
+  },
+  "slack-off": {
+    "effect": 5,
+    "hype": 2
+  },
+  "synthesis": {
+    "effect": 5,
+    "hype": 2
+  },
+  "toxic": {
+    "effect": 5,
+    "hype": 2
+  },
+  "will-o-wisp": {
+    "effect": 5,
+    "hype": 2
+  },
+  "wish": {
+    "effect": 5,
+    "hype": 2
+  },
+  "glare": {
+    "effect": 5,
+    "hype": 3
+  },
+  "perish-song": {
+    "effect": 5,
+    "hype": 3
+  },
+  "yawn": {
+    "effect": 5,
+    "hype": 3
+  },
+  "disable": {
+    "effect": 6,
+    "hype": 1
+  },
+  "flatter": {
+    "effect": 6,
+    "hype": 1
+  },
+  "leech-seed": {
+    "effect": 6,
+    "hype": 1
+  },
+  "spikes": {
+    "effect": 6,
+    "hype": 1
+  },
+  "stealth-rock": {
+    "effect": 6,
+    "hype": 1
+  },
+  "sticky-web": {
+    "effect": 6,
+    "hype": 1
+  },
+  "swagger": {
+    "effect": 6,
+    "hype": 1
+  },
+  "taunt": {
+    "effect": 6,
+    "hype": 1
+  },
+  "teeter-dance": {
+    "effect": 6,
+    "hype": 1
+  },
+  "torment": {
+    "effect": 6,
+    "hype": 1
+  },
+  "toxic-spikes": {
+    "effect": 6,
+    "hype": 1
+  },
+  "aromatherapy": {
+    "effect": 6,
+    "hype": 2
+  },
+  "aurora-veil": {
+    "effect": 6,
+    "hype": 2
+  },
+  "detect": {
+    "effect": 6,
+    "hype": 2
+  },
+  "healing-wish": {
+    "effect": 6,
+    "hype": 2
+  },
+  "light-screen": {
+    "effect": 6,
+    "hype": 2
+  },
+  "milk-drink": {
+    "effect": 6,
+    "hype": 2
+  },
+  "poison-gas": {
+    "effect": 6,
+    "hype": 2
+  },
+  "quick-guard": {
+    "effect": 6,
+    "hype": 2
+  },
+  "reflect": {
+    "effect": 6,
+    "hype": 2
+  },
+  "rest": {
+    "effect": 6,
+    "hype": 2
+  },
+  "roost": {
+    "effect": 6,
+    "hype": 2
+  },
+  "safeguard": {
+    "effect": 6,
+    "hype": 2
+  },
+  "soft-boiled": {
+    "effect": 6,
+    "hype": 2
+  },
+  "spiky-shield": {
+    "effect": 6,
+    "hype": 2
+  },
+  "substitute": {
+    "effect": 6,
+    "hype": 2
+  },
+  "toxic-thread": {
+    "effect": 6,
+    "hype": 2
+  },
+  "wide-guard": {
+    "effect": 6,
+    "hype": 2
+  },
+  "dark-void": {
+    "effect": 6,
+    "hype": 3
+  },
+  "lovely-kiss": {
+    "effect": 6,
+    "hype": 3
+  },
+  "spore": {
+    "effect": 6,
+    "hype": 3
+  },
+  "thunder-wave": {
+    "effect": 6,
+    "hype": 3
+  },
+  "bind": {
+    "effect": 7,
+    "hype": 1
+  },
+  "infestation": {
+    "effect": 7,
+    "hype": 1
+  },
+  "wrap": {
+    "effect": 7,
+    "hype": 1
+  },
+  "bonemerang": {
+    "effect": 7,
+    "hype": 2
+  },
+  "double-hit": {
+    "effect": 7,
+    "hype": 2
+  },
+  "double-kick": {
+    "effect": 7,
+    "hype": 2
+  },
+  "dual-chop": {
+    "effect": 7,
+    "hype": 2
+  },
+  "acrobatics": {
+    "effect": 7,
+    "hype": 3
+  },
+  "dig": {
+    "effect": 7,
+    "hype": 3
+  },
+  "outrage": {
+    "effect": 7,
+    "hype": 3
+  },
+  "petal-dance": {
+    "effect": 7,
+    "hype": 3
+  },
+  "thrash": {
+    "effect": 7,
+    "hype": 3
+  },
+  "fire-spin": {
+    "effect": 8,
+    "hype": 1
+  },
+  "sand-tomb": {
+    "effect": 8,
+    "hype": 1
+  },
+  "whirlpool": {
+    "effect": 8,
+    "hype": 1
+  },
+  "fury-attack": {
+    "effect": 8,
+    "hype": 2
+  },
+  "fury-swipes": {
+    "effect": 8,
+    "hype": 2
+  },
+  "beat-up": {
+    "effect": 8,
+    "hype": 3
+  },
+  "bone-rush": {
+    "effect": 8,
+    "hype": 3
+  },
+  "icicle-spear": {
+    "effect": 8,
+    "hype": 3
+  },
+  "pin-missile": {
+    "effect": 8,
+    "hype": 3
+  },
+  "rock-blast": {
+    "effect": 8,
+    "hype": 3
+  },
+  "rollout": {
+    "effect": 8,
+    "hype": 3
+  },
+  "electric-terrain": {
+    "effect": 9,
+    "hype": 1
+  },
+  "grassy-terrain": {
+    "effect": 9,
+    "hype": 1
+  },
+  "gravity": {
+    "effect": 9,
+    "hype": 1
+  },
+  "hail": {
+    "effect": 9,
+    "hype": 1
+  },
+  "magic-room": {
+    "effect": 9,
+    "hype": 1
+  },
+  "misty-terrain": {
+    "effect": 9,
+    "hype": 1
+  },
+  "rain-dance": {
+    "effect": 9,
+    "hype": 1
+  },
+  "sandstorm": {
+    "effect": 9,
+    "hype": 1
+  },
+  "sunny-day": {
+    "effect": 9,
+    "hype": 1
+  },
+  "tailwind": {
+    "effect": 9,
+    "hype": 1
+  },
+  "trick-room": {
+    "effect": 9,
+    "hype": 1
+  },
+  "wonder-room": {
+    "effect": 9,
+    "hype": 1
+  },
+  "arm-thrust": {
+    "effect": 9,
+    "hype": 2
+  },
+  "bounce": {
+    "effect": 9,
+    "hype": 2
+  },
+  "dive": {
+    "effect": 9,
+    "hype": 2
+  },
+  "fly": {
+    "effect": 9,
+    "hype": 2
+  },
+  "phantom-force": {
+    "effect": 9,
+    "hype": 2
+  },
+  "triple-kick": {
+    "effect": 9,
+    "hype": 2
+  },
+  "bullet-seed": {
+    "effect": 9,
+    "hype": 3
+  },
+  "future-sight": {
+    "effect": 9,
+    "hype": 3
+  },
+  "magma-storm": {
+    "effect": 9,
+    "hype": 3
+  },
+  "shadow-force": {
+    "effect": 9,
+    "hype": 3
+  },
+  "skull-bash": {
+    "effect": 9,
+    "hype": 3
+  },
+  "sky-attack": {
+    "effect": 9,
+    "hype": 3
+  },
+  "solar-beam": {
+    "effect": 9,
+    "hype": 3
+  },
+  "leafage": {
+    "effect": 10,
+    "hype": 1
+  },
+  "peck": {
+    "effect": 10,
+    "hype": 1
+  },
+  "pound": {
+    "effect": 10,
+    "hype": 1
+  },
+  "scratch": {
+    "effect": 10,
+    "hype": 1
+  },
+  "tackle": {
+    "effect": 10,
+    "hype": 1
+  },
+  "razor-leaf": {
+    "effect": 10,
+    "hype": 2
+  },
+  "rock-throw": {
+    "effect": 10,
+    "hype": 2
+  },
+  "shadow-punch": {
+    "effect": 10,
+    "hype": 2
+  },
+  "vine-whip": {
+    "effect": 10,
+    "hype": 2
+  },
+  "vise-grip": {
+    "effect": 10,
+    "hype": 2
+  },
+  "wing-attack": {
+    "effect": 10,
+    "hype": 2
+  },
+  "aqua-tail": {
+    "effect": 10,
+    "hype": 3
+  },
+  "attack-order": {
+    "effect": 10,
+    "hype": 3
+  },
+  "crabhammer": {
+    "effect": 10,
+    "hype": 3
+  },
+  "cross-chop": {
+    "effect": 10,
+    "hype": 3
+  },
+  "dragon-hammer": {
+    "effect": 10,
+    "hype": 3
+  },
+  "foul-play": {
+    "effect": 10,
+    "hype": 3
+  },
+  "hammer-arm": {
+    "effect": 10,
+    "hype": 3
+  },
+  "high-horsepower": {
+    "effect": 10,
+    "hype": 3
+  },
+  "leaf-blade": {
+    "effect": 10,
+    "hype": 3
+  },
+  "petal-blizzard": {
+    "effect": 10,
+    "hype": 3
+  },
+  "take-down": {
+    "effect": 10,
+    "hype": 3
+  },
+  "wild-charge": {
+    "effect": 10,
+    "hype": 3
+  },
+  "astonish": {
+    "effect": 11,
+    "hype": 1
+  },
+  "fury-cutter": {
+    "effect": 11,
+    "hype": 1
+  },
+  "lick": {
+    "effect": 11,
+    "hype": 1
+  },
+  "pay-day": {
+    "effect": 11,
+    "hype": 1
+  },
+  "poison-sting": {
+    "effect": 11,
+    "hype": 1
+  },
+  "aerial-ace": {
+    "effect": 11,
+    "hype": 2
+  },
+  "assurance": {
+    "effect": 11,
+    "hype": 2
+  },
+  "avalanche": {
+    "effect": 11,
+    "hype": 2
+  },
+  "bite": {
+    "effect": 11,
+    "hype": 2
+  },
+  "body-press": {
+    "effect": 11,
+    "hype": 2
+  },
+  "bug-bite": {
+    "effect": 11,
+    "hype": 2
+  },
+  "circle-throw": {
+    "effect": 11,
+    "hype": 2
+  },
+  "covet": {
+    "effect": 11,
+    "hype": 2
+  },
+  "cut": {
+    "effect": 11,
+    "hype": 2
+  },
+  "dragon-tail": {
+    "effect": 11,
+    "hype": 2
+  },
+  "drill-peck": {
+    "effect": 11,
+    "hype": 2
+  },
+  "drill-run": {
+    "effect": 11,
+    "hype": 2
+  },
+  "fell-stinger": {
+    "effect": 11,
+    "hype": 2
+  },
+  "flame-charge": {
+    "effect": 11,
+    "hype": 2
+  },
+  "flame-wheel": {
+    "effect": 11,
+    "hype": 2
+  },
+  "force-palm": {
+    "effect": 11,
+    "hype": 2
+  },
+  "horn-attack": {
+    "effect": 11,
+    "hype": 2
+  },
+  "mega-punch": {
+    "effect": 11,
+    "hype": 2
+  },
+  "metal-claw": {
+    "effect": 11,
+    "hype": 2
+  },
+  "night-slash": {
+    "effect": 11,
+    "hype": 2
+  },
+  "poison-fang": {
+    "effect": 11,
+    "hype": 2
+  },
+  "poison-tail": {
+    "effect": 11,
+    "hype": 2
+  },
+  "psycho-cut": {
+    "effect": 11,
+    "hype": 2
+  },
+  "rapid-spin": {
+    "effect": 11,
+    "hype": 2
+  },
+  "revenge": {
+    "effect": 11,
+    "hype": 2
+  },
+  "seed-bomb": {
+    "effect": 11,
+    "hype": 2
+  },
+  "slam": {
+    "effect": 11,
+    "hype": 2
+  },
+  "slash": {
+    "effect": 11,
+    "hype": 2
+  },
+  "smack-down": {
+    "effect": 11,
+    "hype": 2
+  },
+  "smart-strike": {
+    "effect": 11,
+    "hype": 2
+  },
+  "storm-throw": {
+    "effect": 11,
+    "hype": 2
+  },
+  "submission": {
+    "effect": 11,
+    "hype": 2
+  },
+  "vital-throw": {
+    "effect": 11,
+    "hype": 2
+  },
+  "blaze-kick": {
+    "effect": 11,
+    "hype": 3
+  },
+  "body-slam": {
+    "effect": 11,
+    "hype": 3
+  },
+  "brave-bird": {
+    "effect": 11,
+    "hype": 3
+  },
+  "close-combat": {
+    "effect": 11,
+    "hype": 3
+  },
+  "double-edge": {
+    "effect": 11,
+    "hype": 3
+  },
+  "dragon-rush": {
+    "effect": 11,
+    "hype": 3
+  },
+  "dynamic-punch": {
+    "effect": 11,
+    "hype": 3
+  },
+  "earthquake": {
+    "effect": 11,
+    "hype": 3
+  },
+  "flare-blitz": {
+    "effect": 11,
+    "hype": 3
+  },
+  "gunk-shot": {
+    "effect": 11,
+    "hype": 3
+  },
+  "high-jump-kick": {
+    "effect": 11,
+    "hype": 3
+  },
+  "icicle-crash": {
+    "effect": 11,
+    "hype": 3
+  },
+  "iron-tail": {
+    "effect": 11,
+    "hype": 3
+  },
+  "last-resort": {
+    "effect": 11,
+    "hype": 3
+  },
+  "liquidation": {
+    "effect": 11,
+    "hype": 3
+  },
+  "megahorn": {
+    "effect": 11,
+    "hype": 3
+  },
+  "meteor-mash": {
+    "effect": 11,
+    "hype": 3
+  },
+  "play-rough": {
+    "effect": 11,
+    "hype": 3
+  },
+  "power-whip": {
+    "effect": 11,
+    "hype": 3
+  },
+  "rock-climb": {
+    "effect": 11,
+    "hype": 3
+  },
+  "stone-edge": {
+    "effect": 11,
+    "hype": 3
+  },
+  "superpower": {
+    "effect": 11,
+    "hype": 3
+  },
+  "wood-hammer": {
+    "effect": 11,
+    "hype": 3
+  },
+  "aqua-jet": {
+    "effect": 12,
+    "hype": 1
+  },
+  "bullet-punch": {
+    "effect": 12,
+    "hype": 1
+  },
+  "fake-out": {
+    "effect": 12,
+    "hype": 1
+  },
+  "false-swipe": {
+    "effect": 12,
+    "hype": 1
+  },
+  "feint": {
+    "effect": 12,
+    "hype": 1
+  },
+  "ice-shard": {
+    "effect": 12,
+    "hype": 1
+  },
+  "mach-punch": {
+    "effect": 12,
+    "hype": 1
+  },
+  "nuzzle": {
+    "effect": 12,
+    "hype": 1
+  },
+  "power-up-punch": {
+    "effect": 12,
+    "hype": 1
+  },
+  "quick-attack": {
+    "effect": 12,
+    "hype": 1
+  },
+  "rock-smash": {
+    "effect": 12,
+    "hype": 1
+  },
+  "shadow-sneak": {
+    "effect": 12,
+    "hype": 1
+  },
+  "brick-break": {
+    "effect": 12,
+    "hype": 2
+  },
+  "bulldoze": {
+    "effect": 12,
+    "hype": 2
+  },
+  "cross-poison": {
+    "effect": 12,
+    "hype": 2
+  },
+  "crunch": {
+    "effect": 12,
+    "hype": 2
+  },
+  "crush-claw": {
+    "effect": 12,
+    "hype": 2
+  },
+  "dragon-claw": {
+    "effect": 12,
+    "hype": 2
+  },
+  "drain-punch": {
+    "effect": 12,
+    "hype": 2
+  },
+  "extreme-speed": {
+    "effect": 12,
+    "hype": 2
+  },
+  "facade": {
+    "effect": 12,
+    "hype": 2
+  },
+  "fire-fang": {
+    "effect": 12,
+    "hype": 2
+  },
+  "fire-punch": {
+    "effect": 12,
+    "hype": 2
+  },
+  "headbutt": {
+    "effect": 12,
+    "hype": 2
+  },
+  "ice-fang": {
+    "effect": 12,
+    "hype": 2
+  },
+  "ice-punch": {
+    "effect": 12,
+    "hype": 2
+  },
+  "iron-head": {
+    "effect": 12,
+    "hype": 2
+  },
+  "knock-off": {
+    "effect": 12,
+    "hype": 2
+  },
+  "leech-life": {
+    "effect": 12,
+    "hype": 2
+  },
+  "low-sweep": {
+    "effect": 12,
+    "hype": 2
+  },
+  "lunge": {
+    "effect": 12,
+    "hype": 2
+  },
+  "payback": {
+    "effect": 12,
+    "hype": 2
+  },
+  "pluck": {
+    "effect": 12,
+    "hype": 2
+  },
+  "poison-jab": {
+    "effect": 12,
+    "hype": 2
+  },
+  "razor-shell": {
+    "effect": 12,
+    "hype": 2
+  },
+  "retaliate": {
+    "effect": 12,
+    "hype": 2
+  },
+  "rock-slide": {
+    "effect": 12,
+    "hype": 2
+  },
+  "rock-tomb": {
+    "effect": 12,
+    "hype": 2
+  },
+  "shadow-claw": {
+    "effect": 12,
+    "hype": 2
+  },
+  "spark": {
+    "effect": 12,
+    "hype": 2
+  },
+  "steel-wing": {
+    "effect": 12,
+    "hype": 2
+  },
+  "stomp": {
+    "effect": 12,
+    "hype": 2
+  },
+  "stomping-tantrum": {
+    "effect": 12,
+    "hype": 2
+  },
+  "strength": {
+    "effect": 12,
+    "hype": 2
+  },
+  "sucker-punch": {
+    "effect": 12,
+    "hype": 2
+  },
+  "thief": {
+    "effect": 12,
+    "hype": 2
+  },
+  "throat-chop": {
+    "effect": 12,
+    "hype": 2
+  },
+  "thunder-fang": {
+    "effect": 12,
+    "hype": 2
+  },
+  "thunder-punch": {
+    "effect": 12,
+    "hype": 2
+  },
+  "u-turn": {
+    "effect": 12,
+    "hype": 2
+  },
+  "waterfall": {
+    "effect": 12,
+    "hype": 2
+  },
+  "x-scissor": {
+    "effect": 12,
+    "hype": 2
+  },
+  "zen-headbutt": {
+    "effect": 12,
+    "hype": 2
+  },
+  "crush-grip": {
+    "effect": 12,
+    "hype": 3
+  },
+  "dragon-ascent": {
+    "effect": 12,
+    "hype": 3
+  },
+  "explosion": {
+    "effect": 12,
+    "hype": 3
+  },
+  "focus-punch": {
+    "effect": 12,
+    "hype": 3
+  },
+  "giga-impact": {
+    "effect": 12,
+    "hype": 3
+  },
+  "head-smash": {
+    "effect": 12,
+    "hype": 3
+  },
+  "luster-purge": {
+    "effect": 12,
+    "hype": 3
+  },
+  "mega-kick": {
+    "effect": 12,
+    "hype": 3
+  },
+  "precipice-blades": {
+    "effect": 12,
+    "hype": 3
+  },
+  "rock-wrecker": {
+    "effect": 12,
+    "hype": 3
+  },
+  "sacred-fire": {
+    "effect": 12,
+    "hype": 3
+  },
+  "self-destruct": {
+    "effect": 12,
+    "hype": 3
+  },
+  "volt-tackle": {
+    "effect": 12,
+    "hype": 3
+  },
+  "disarming-voice": {
+    "effect": 13,
+    "hype": 1
+  },
+  "fairy-wind": {
+    "effect": 13,
+    "hype": 1
+  },
+  "gust": {
+    "effect": 13,
+    "hype": 1
+  },
+  "stored-power": {
+    "effect": 13,
+    "hype": 1
+  },
+  "water-gun": {
+    "effect": 13,
+    "hype": 1
+  },
+  "weather-ball": {
+    "effect": 13,
+    "hype": 1
+  },
+  "air-cutter": {
+    "effect": 13,
+    "hype": 2
+  },
+  "hex": {
+    "effect": 13,
+    "hype": 2
+  },
+  "magical-leaf": {
+    "effect": 13,
+    "hype": 2
+  },
+  "round": {
+    "effect": 13,
+    "hype": 2
+  },
+  "swift": {
+    "effect": 13,
+    "hype": 2
+  },
+  "venoshock": {
+    "effect": 13,
+    "hype": 2
+  },
+  "hydro-pump": {
+    "effect": 13,
+    "hype": 3
+  },
+  "absorb": {
+    "effect": 14,
+    "hype": 1
+  },
+  "acid": {
+    "effect": 14,
+    "hype": 1
+  },
+  "acid-spray": {
+    "effect": 14,
+    "hype": 1
+  },
+  "clear-smog": {
+    "effect": 14,
+    "hype": 1
+  },
+  "confusion": {
+    "effect": 14,
+    "hype": 1
+  },
+  "draining-kiss": {
+    "effect": 14,
+    "hype": 1
+  },
+  "ember": {
+    "effect": 14,
+    "hype": 1
+  },
+  "mega-drain": {
+    "effect": 14,
+    "hype": 1
+  },
+  "mud-slap": {
+    "effect": 14,
+    "hype": 1
+  },
+  "powder-snow": {
+    "effect": 14,
+    "hype": 1
+  },
+  "smog": {
+    "effect": 14,
+    "hype": 1
+  },
+  "snore": {
+    "effect": 14,
+    "hype": 1
+  },
+  "struggle-bug": {
+    "effect": 14,
+    "hype": 1
+  },
+  "thunder-shock": {
+    "effect": 14,
+    "hype": 1
+  },
+  "twister": {
+    "effect": 14,
+    "hype": 1
+  },
+  "ancient-power": {
+    "effect": 14,
+    "hype": 2
+  },
+  "aurora-beam": {
+    "effect": 14,
+    "hype": 2
+  },
+  "brine": {
+    "effect": 14,
+    "hype": 2
+  },
+  "bubble-beam": {
+    "effect": 14,
+    "hype": 2
+  },
+  "dragon-breath": {
+    "effect": 14,
+    "hype": 2
+  },
+  "frost-breath": {
+    "effect": 14,
+    "hype": 2
+  },
+  "hyper-voice": {
+    "effect": 14,
+    "hype": 2
+  },
+  "icy-wind": {
+    "effect": 14,
+    "hype": 2
+  },
+  "incinerate": {
+    "effect": 14,
+    "hype": 2
+  },
+  "leaf-tornado": {
+    "effect": 14,
+    "hype": 2
+  },
+  "mud-shot": {
+    "effect": 14,
+    "hype": 2
+  },
+  "octazooka": {
+    "effect": 14,
+    "hype": 2
+  },
+  "power-gem": {
+    "effect": 14,
+    "hype": 2
+  },
+  "psybeam": {
+    "effect": 14,
+    "hype": 2
+  },
+  "psyshock": {
+    "effect": 14,
+    "hype": 2
+  },
+  "shock-wave": {
+    "effect": 14,
+    "hype": 2
+  },
+  "sludge": {
+    "effect": 14,
+    "hype": 2
+  },
+  "belch": {
+    "effect": 14,
+    "hype": 3
+  },
+  "blizzard": {
+    "effect": 14,
+    "hype": 3
+  },
+  "boomburst": {
+    "effect": 14,
+    "hype": 3
+  },
+  "burn-up": {
+    "effect": 14,
+    "hype": 3
+  },
+  "draco-meteor": {
+    "effect": 14,
+    "hype": 3
+  },
+  "dream-eater": {
+    "effect": 14,
+    "hype": 3
+  },
+  "fire-blast": {
+    "effect": 14,
+    "hype": 3
+  },
+  "focus-blast": {
+    "effect": 14,
+    "hype": 3
+  },
+  "hurricane": {
+    "effect": 14,
+    "hype": 3
+  },
+  "inferno": {
+    "effect": 14,
+    "hype": 3
+  },
+  "leaf-storm": {
+    "effect": 14,
+    "hype": 3
+  },
+  "overheat": {
+    "effect": 14,
+    "hype": 3
+  },
+  "thunder": {
+    "effect": 14,
+    "hype": 3
+  },
+  "charge-beam": {
+    "effect": 15,
+    "hype": 1
+  },
+  "vacuum-wave": {
+    "effect": 15,
+    "hype": 1
+  },
+  "air-slash": {
+    "effect": 15,
+    "hype": 2
+  },
+  "aura-sphere": {
+    "effect": 15,
+    "hype": 2
+  },
+  "bug-buzz": {
+    "effect": 15,
+    "hype": 2
+  },
+  "chatter": {
+    "effect": 15,
+    "hype": 2
+  },
+  "dark-pulse": {
+    "effect": 15,
+    "hype": 2
+  },
+  "dazzling-gleam": {
+    "effect": 15,
+    "hype": 2
+  },
+  "discharge": {
+    "effect": 15,
+    "hype": 2
+  },
+  "dragon-pulse": {
+    "effect": 15,
+    "hype": 2
+  },
+  "earth-power": {
+    "effect": 15,
+    "hype": 2
+  },
+  "energy-ball": {
+    "effect": 15,
+    "hype": 2
+  },
+  "extrasensory": {
+    "effect": 15,
+    "hype": 2
+  },
+  "flamethrower": {
+    "effect": 15,
+    "hype": 2
+  },
+  "flash-cannon": {
+    "effect": 15,
+    "hype": 2
+  },
+  "freeze-dry": {
+    "effect": 15,
+    "hype": 2
+  },
+  "giga-drain": {
+    "effect": 15,
+    "hype": 2
+  },
+  "heat-wave": {
+    "effect": 15,
+    "hype": 2
+  },
+  "ice-beam": {
+    "effect": 15,
+    "hype": 2
+  },
+  "lava-plume": {
+    "effect": 15,
+    "hype": 2
+  },
+  "moonblast": {
+    "effect": 15,
+    "hype": 2
+  },
+  "muddy-water": {
+    "effect": 15,
+    "hype": 2
+  },
+  "mystical-fire": {
+    "effect": 15,
+    "hype": 2
+  },
+  "psychic": {
+    "effect": 15,
+    "hype": 2
+  },
+  "scald": {
+    "effect": 15,
+    "hype": 2
+  },
+  "shadow-ball": {
+    "effect": 15,
+    "hype": 2
+  },
+  "sludge-bomb": {
+    "effect": 15,
+    "hype": 2
+  },
+  "sludge-wave": {
+    "effect": 15,
+    "hype": 2
+  },
+  "snarl": {
+    "effect": 15,
+    "hype": 2
+  },
+  "surf": {
+    "effect": 15,
+    "hype": 2
+  },
+  "thunderbolt": {
+    "effect": 15,
+    "hype": 2
+  },
+  "tri-attack": {
+    "effect": 15,
+    "hype": 2
+  },
+  "uproar": {
+    "effect": 15,
+    "hype": 2
+  },
+  "volt-switch": {
+    "effect": 15,
+    "hype": 2
+  },
+  "water-pulse": {
+    "effect": 15,
+    "hype": 2
+  },
+  "aeroblast": {
+    "effect": 15,
+    "hype": 3
+  },
+  "blast-burn": {
+    "effect": 15,
+    "hype": 3
+  },
+  "doom-desire": {
+    "effect": 15,
+    "hype": 3
+  },
+  "eruption": {
+    "effect": 15,
+    "hype": 3
+  },
+  "frenzy-plant": {
+    "effect": 15,
+    "hype": 3
+  },
+  "hydro-cannon": {
+    "effect": 15,
+    "hype": 3
+  },
+  "hyper-beam": {
+    "effect": 15,
+    "hype": 3
+  },
+  "judgment": {
+    "effect": 15,
+    "hype": 3
+  },
+  "mist-ball": {
+    "effect": 15,
+    "hype": 3
+  },
+  "origin-pulse": {
+    "effect": 15,
+    "hype": 3
+  },
+  "psycho-boost": {
+    "effect": 15,
+    "hype": 3
+  },
+  "psystrike": {
+    "effect": 15,
+    "hype": 3
+  },
+  "roar-of-time": {
+    "effect": 15,
+    "hype": 3
+  },
+  "seed-flare": {
+    "effect": 15,
+    "hype": 3
+  },
+  "spacial-rend": {
+    "effect": 15,
+    "hype": 3
+  },
+  "water-spout": {
+    "effect": 15,
+    "hype": 3
+  },
+  "zap-cannon": {
+    "effect": 15,
+    "hype": 3
+  },
+  "counter": {
+    "effect": 16,
+    "hype": 0
+  },
+  "electro-ball": {
+    "effect": 16,
+    "hype": 0
+  },
+  "endeavor": {
+    "effect": 16,
+    "hype": 0
+  },
+  "final-gambit": {
+    "effect": 16,
+    "hype": 0
+  },
+  "flail": {
+    "effect": 16,
+    "hype": 0
+  },
+  "fling": {
+    "effect": 16,
+    "hype": 0
+  },
+  "grass-knot": {
+    "effect": 16,
+    "hype": 0
+  },
+  "gyro-ball": {
+    "effect": 16,
+    "hype": 0
+  },
+  "heavy-slam": {
+    "effect": 16,
+    "hype": 0
+  },
+  "hidden-power": {
+    "effect": 16,
+    "hype": 0
+  },
+  "low-kick": {
+    "effect": 16,
+    "hype": 0
+  },
+  "metal-burst": {
+    "effect": 16,
+    "hype": 0
+  },
+  "metronome": {
+    "effect": 16,
+    "hype": 0
+  },
+  "mimic": {
+    "effect": 16,
+    "hype": 0
+  },
+  "mirror-coat": {
+    "effect": 16,
+    "hype": 0
+  },
+  "nature-power": {
+    "effect": 16,
+    "hype": 0
+  },
+  "night-shade": {
+    "effect": 16,
+    "hype": 0
+  },
+  "pain-split": {
+    "effect": 16,
+    "hype": 0
+  },
+  "present": {
+    "effect": 16,
+    "hype": 0
+  },
+  "reversal": {
+    "effect": 16,
+    "hype": 0
+  },
+  "seismic-toss": {
+    "effect": 16,
+    "hype": 0
+  },
+  "sketch": {
+    "effect": 16,
+    "hype": 0
+  },
+  "sleep-talk": {
+    "effect": 16,
+    "hype": 0
+  },
+  "super-fang": {
+    "effect": 16,
+    "hype": 0
+  },
+  "trick": {
+    "effect": 16,
+    "hype": 0
+  }
+}

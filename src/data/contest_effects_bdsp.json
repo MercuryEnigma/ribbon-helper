@@ -1,0 +1,97 @@
+{
+  "0": {
+    "id": 0,
+    "effect_description": "This move has no additional effects.",
+    "flavor_text": "This move has no additional effects."
+  },
+  "1": {
+    "id": 1,
+    "effect_description": "For 5 seconds, missed notes will not be judged.",
+    "flavor_text": "For 5 seconds, missed notes will not be judged."
+  },
+  "2": {
+    "id": 2,
+    "effect_description": "For 10 seconds, missed notes will not be judged.",
+    "flavor_text": "For 10 seconds, missed notes will not be judged."
+  },
+  "3": {
+    "id": 3,
+    "effect_description": "For 15 seconds, missed notes will not be judged.",
+    "flavor_text": "For 15 seconds, missed notes will not be judged."
+  },
+  "4": {
+    "id": 4,
+    "effect_description": "Groove will not drop for 5 seconds.",
+    "flavor_text": "Groove will not drop for 5 seconds."
+  },
+  "5": {
+    "id": 5,
+    "effect_description": "Groove will not drop for 10 seconds.",
+    "flavor_text": "Groove will not drop for 10 seconds."
+  },
+  "6": {
+    "id": 6,
+    "effect_description": "Groove will not drop for 15 seconds.",
+    "flavor_text": "Groove will not drop for 15 seconds."
+  },
+  "7": {
+    "id": 7,
+    "dance_points": 90,
+    "effect_description": "For 10 seconds, it will be a bit easier to fill up the Heart Gauge.",
+    "flavor_text": "For 10 seconds, it will be a bit easier to fill up the Heart Gauge."
+  },
+  "8": {
+    "id": 8,
+    "dance_points": 82,
+    "effect_description": "For 10 seconds, it will be easier to fill up the Heart Gauge.",
+    "flavor_text": "For 10 seconds, it will be easier to fill up the Heart Gauge."
+  },
+  "9": {
+    "id": 9,
+    "dance_points": 75,
+    "effect_description": "For 10 seconds, it will be much easier to fill up the Heart Gauge.",
+    "flavor_text": "For 10 seconds, it will be much easier to fill up the Heart Gauge."
+  },
+  "10": {
+    "id": 10,
+    "added_hype": 1,
+    "effect_description": "Hype Points gained will increase by 1 if groove is positive.",
+    "flavor_text": "Hype Points gained will increase by 1 if groove is positive."
+  },
+  "11": {
+    "id": 11,
+    "added_hype": 2,
+    "effect_description": "Hype Points gained will increase by 2 if groove is positive.",
+    "flavor_text": "Hype Points gained will increase by 2 if groove is positive."
+  },
+  "12": {
+    "id": 12,
+    "added_hype": 3,
+    "effect_description": "Hype Points gained will increase by 3 if groove is positive.",
+    "flavor_text": "Hype Points gained will increase by 3 if groove is positive."
+  },
+  "13": {
+    "id": 13,
+    "added_hype": -1,
+    "effect_description": "Hype Points gained will increase by 1 if groove is negative.",
+    "flavor_text": "Hype Points gained will increase by 1 if groove is negative."
+  },
+  "14": {
+    "id": 14,
+    "added_hype": -2,
+    "effect_description": "Hype Points gained will increase by 2 if groove is negative.",
+    "flavor_text": "Hype Points gained will increase by 2 if groove is negative."
+  },
+  "15": {
+    "id": 15,
+    "added_hype": -3,
+    "effect_description": "Hype Points gained will increase by 3 if groove is negative.",
+    "flavor_text": "Hype Points gained will increase by 3 if groove is negative."
+  },
+  "16": {
+    "id": 16,
+    "added_hype": 5,
+    "effect_description": "Groove level determines the hype points: -2 groove level is 1 hype point, -1 groove level is 2 hype points, 0 groove level is 3 hype points, +1 groove level is 4 hype points, and +2 groove level is 5 hype points.",
+    "flavor_text": "You will receive 1-5 Hype Points, depending on the Pokémon's groove."
+  }
+}
