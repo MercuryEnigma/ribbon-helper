@@ -1,507 +1,651 @@
+/* Contest Moves Styles */
 .contest-moves {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  font-family: 'Barlow', 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-  padding: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.5;
 }
 
-.moves-stack {
+/* Mode Selector (Tabs) - Now positioned above move container only */
+.contest-mode-selector {
+  display: flex;
+  gap: 0;
+  margin-bottom: 0;
+  padding: 0 0.5rem 0 0.5rem;
+  background: transparent;
+  border: none;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.contest-mode-selector button,
+.contest-mode-selector a {
+  flex: 0 0 auto;
+  padding: 0.6rem 1.5rem;
+  background: #c94545;
+  border: 3px solid #c94545;
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.2s;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  margin: 0;
   position: relative;
-  padding-top: 37px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.contest-tabs {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 6px;
-  padding: 0;
-  z-index: 2;
-}
-
-.contest-tabs .nav-arrow {
+.contest-mode-selector .nav-arrow {
   background: transparent;
   border: none;
   color: #5a8cc8;
   padding: 0.25rem;
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: none;
   cursor: pointer;
   transition: all 0.2s;
+  margin: 0;
+  flex: 0 0 auto;
 }
 
-.contest-tabs .nav-arrow:hover {
+.contest-mode-selector .nav-arrow:hover {
   color: #4278b0;
-  transform: scale(1.05);
+  transform: scale(1.2);
+  background: transparent;
 }
 
-.contest-tabs .nav-arrow:active {
+.contest-mode-selector .nav-arrow:active {
   transform: scale(0.95);
 }
 
-.contest-tab {
-  background: linear-gradient(180deg, #e76862 0%, #d94c45 90%);
-  border: 3px solid #6c1e1c;
-  color: #fff7ed;
-  text-decoration: none;
-  padding: 8px 10px;
-  min-width: 80px;
-  border-radius: 10px 10px 0 0;
-  font-weight: 800;
-  letter-spacing: 0.35px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+.contest-mode-selector button:hover:not(.active):not(.nav-arrow),
+.contest-mode-selector a:hover:not(.active) {
+  background: #a63838;
+  border-color: #a63838;
+}
+
+.contest-mode-selector button.active,
+.contest-mode-selector a.active {
+  background: #f5b2ae;
+  color: #0b0b0b;
+  border: 3px solid #c94545;
   border-bottom: none;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+  font-weight: 700;
+  position: relative;
+  z-index: 10;
 }
 
-.contest-tab.active {
-  background: #f7c7c4;
-  color: #6c1e1c;
-  border-color: #b45b5a;
-  box-shadow: none;
-  border-bottom: none;
+.contest-mode-selector button.active::after,
+.contest-mode-selector a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #f5b2ae;
+  z-index: 11;
 }
 
-.contest-tab:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.26);
-}
-
-.contest-tab.active:hover {
-  transform: none;
-  box-shadow: none;
+/* RSE Contest Moves Layout */
+.rse-contest-moves {
+  padding: 0;
+  background: transparent;
 }
 
 .contest-layout {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 14px;
-  background: #fde4e1;
-  border-radius: 18px;
-  padding: 12px;
-  border: 2px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  grid-template-columns: 55% 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
 }
 
-.moves-column {
-  background: linear-gradient(180deg, #f7c7c4 0%, #f2b3b1 60%, #eca7a5 100%);
-  border-radius: 10px 10px 16px 16px;
-  border: 4px solid #b45b5a;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38), 0 6px 12px rgba(0, 0, 0, 0.16);
+/* Moves Section (Left) */
+.contest-moves-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.moves-container {
+  background: #f5b2ae;
+  border: 3px solid #c94545;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  height: 600px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
   position: relative;
-  overflow: hidden;
-  margin-top: 0;
+  z-index: 1;
 }
 
-.moves-panel {
-  background: linear-gradient(140deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.09) 35%, rgba(0, 0, 0, 0.08) 100%);
-  padding: 10px;
-  min-height: 520px;
+.moves-list {
   display: flex;
   flex-direction: column;
-}
-
-.moves-panel::before {
-  content: '';
-  position: absolute;
-  inset: 28% -20% auto auto;
-  width: 62%;
-  padding-top: 62%;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 65%);
-  opacity: 0.7;
-}
-
-.moves-panel-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 10px 14px;
-  color: #fff7ed;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  font-weight: 800;
-}
-
-.header-icon {
-  background: #ffe27a;
-  color: #7a4b00;
+  border: 2px solid #c94545;
   border-radius: 8px;
-  padding: 4px 8px;
-  border: 2px solid #d19f1b;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6);
-}
-
-.header-title {
-  font-size: 1.05rem;
-  letter-spacing: 0.2px;
-}
-
-.header-subtitle {
-  margin-left: auto;
-  padding: 4px 8px;
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 10px;
-  font-size: 0.9rem;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.move-list {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  flex: 0 0 50%;
-  max-height: 50%;
+  overflow-y: auto;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex: 0 1 auto;
+  max-height: 100%;
 }
 
 .move-row {
   display: grid;
-  grid-template-columns: 110px 1fr 64px;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 12px;
-  background: linear-gradient(180deg, #f6f0e8 0%, #eee3d7 100%);
-  border-radius: 8px;
-  padding: 10px 14px;
-  border: 2px solid #d8cec5;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  cursor: pointer;
 }
 
-.type-pill {
-  border-radius: 10px;
-  padding: 8px 12px;
-  font-weight: 900;
-  color: #0f1f35;
+.move-row:last-child {
+  border-bottom: none;
+}
+
+.move-row:hover {
+  background: #f8f8f8;
+}
+
+.move-row.selected {
+  background: #fff;
+  border: 3px solid #e74c3c;
+  padding: calc(0.75rem - 3px) calc(1rem - 3px);
+}
+
+.move-type-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #fff;
   text-transform: uppercase;
-  letter-spacing: 0.2px;
-  border: 1.5px solid rgba(0, 0, 0, 0.08);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  width: 80px;
   text-align: center;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-.type-cool { background: #f0443a; color: #fff7ed; border-color: #b92d26; }
-.type-beauty { background: #5fa1f3; color: #0d1f3c; border-color: #2f6fcc; }
-.type-cute { background: #f4a6e6; color: #4a1240; border-color: #d874c7; }
-.type-smart { background: #6dc688; color: #0f2f16; border-color: #3b9f56; }
-.type-tough { background: #f5c754; color: #3e2c00; border-color: #d8a22c; }
+/* Contest Type Colors */
+.move-type-cool .move-type-badge {
+  background: #e74c3c;
+  border: 2px solid #c0392b;
+}
+
+.move-type-beauty .move-type-badge {
+  background: #3498db;
+  border: 2px solid #2980b9;
+}
+
+.move-type-cute .move-type-badge {
+  background: #ff69b4;
+  border: 2px solid #e056a0;
+}
+
+.move-type-smart .move-type-badge {
+  background: #2ecc71;
+  border: 2px solid #27ae60;
+}
+
+.move-type-tough .move-type-badge {
+  background: #f39c12;
+  border: 2px solid #d68910;
+}
 
 .move-name {
-  font-size: 1rem;
-  font-weight: 800;
-  color: #35302c;
+  font-weight: 600;
+  color: #2d2d2d;
+  text-transform: capitalize;
 }
 
-.move-appeal {
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: #403a36;
+.move-value {
+  font-weight: 700;
+  color: #2d2d2d;
+  font-size: 1rem;
+  white-space: nowrap;
+  min-width: 50px;
   text-align: right;
 }
 
-.move-empty {
-  background: rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
-  padding: 12px;
-  color: #2d2d2d;
-  text-align: center;
-  font-weight: 700;
+.no-moves {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  color: #8b3030;
+  font-style: italic;
+  font-size: 1rem;
 }
 
-.viewer-column {
-  background: transparent;
-  border-radius: 14px;
-  border: none;
-  box-shadow: none;
+/* Move Details Section */
+.move-details {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border: 2px solid #c94545;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 200px;
   display: flex;
   flex-direction: column;
-  position: relative;
+  overflow-y: auto;
 }
 
-.viewer-header-wrap {
-  position: relative;
-}
-
-.viewer-header {
+.move-details-header {
   display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.move-details-methods {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.move-details-methods-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.move-details-star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  font-size: 1.5rem;
+}
+
+.move-details-appeal {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  flex-wrap: wrap;
+  flex: 1;
   justify-content: flex-end;
-  padding: 10px 12px;
-  background: #f0c11a;
-  border-radius: 12px;
-  gap: 10px;
+}
+
+.move-details-description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.move-details-flavor {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2d2d2d;
+  line-height: 1.4;
+}
+
+.move-details-effect {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.3;
+  font-style: italic;
+}
+
+/* Pokemon Selector Section (Right) */
+.pokemon-selector-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+  height: 600px;
+}
+
+.pokemon-selector-bar {
+  background: linear-gradient(135deg, #f4d03f 0%, #f4d03f 100%);
+  border: 3px solid #8b6914;
+  border-radius: 12px 12px 0 0;
+  border-bottom: none;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  gap: 0.75rem;
   align-items: center;
-  width: 100%;
+}
+
+.pokemon-search-input-wrapper {
   position: relative;
+  flex: 1;
 }
 
-.viewer-header.options-open {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+.contest-type-wrapper {
+  flex: 1;
 }
 
-.type-select {
-  margin-left: auto;
-  flex-shrink: 0;
-}
-
-.type-select select {
-  padding: 10px 12px;
-  border-radius: 10px;
-  border: 2px solid #c68a12;
-  background: #fff7e3;
-  font-weight: 700;
-  color: #2c1f00;
-  min-width: 140px;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.55);
-  appearance: none;
-  background-image: linear-gradient(45deg, transparent 50%, #c68a12 50%), linear-gradient(135deg, #c68a12 50%, transparent 50%), linear-gradient(90deg, #fff7e3, #fff7e3);
-  background-position: calc(100% - 18px) calc(50% - 3px), calc(100% - 12px) calc(50% - 3px), 100% 0;
-  background-size: 6px 6px, 6px 6px, 2.4rem 100%;
-  background-repeat: no-repeat;
-}
-
-.header-row {
+.pokemon-search-input,
+.contest-type-select {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #212121;
+  border: 2px solid #8b6914;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s;
+  background: #fffacd;
+  min-height: 42px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.4;
   display: flex;
   align-items: center;
-  gap: 10px;
-  width: 100%;
-  justify-content: space-between;
 }
 
-.language-toggle {
-  margin-left: 6px;
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  border: 2px solid #c68a12;
-  background: #fff0c1;
-  color: #5e3b00;
-  display: grid;
-  place-items: center;
-  font-weight: 900;
+.contest-type-select {
   cursor: pointer;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23212121' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 1em;
+  padding-right: 2.5rem;
 }
 
-.language-toggle.open {
-  background: #f0c11a;
-  color: #2c1f00;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.45);
+.pokemon-search-input:focus,
+.contest-type-select:focus {
+  border-color: #d66020;
+  box-shadow: 0 0 0 3px rgba(214, 96, 32, 0.2);
 }
 
-.viewer-options {
-  background: #f0c11a;
-  border-radius: 0 0 12px 12px;
-  padding: 10px 12px;
-  margin-top: 0;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
-  width: 100%;
+.pokemon-search-input::placeholder {
+  color: #8a735b;
+}
+
+.pokemon-search-dropdown {
   position: absolute;
+  top: 100%;
   left: 0;
   right: 0;
-  top: 100%;
-  z-index: 3;
+  max-height: 300px;
+  overflow-y: auto;
+  background: #fff;
+  border: 2px solid #8b6914;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: -2px;
+  z-index: 1000;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
 }
 
-.option-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px 10px;
+.pokemon-search-dropdown::-webkit-scrollbar {
+  width: 8px;
 }
 
-.option-toggle {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 6px;
-  padding: 10px 12px 10px 10px;
-  padding-right: 16px;
-  border-radius: 12px;
-  background: #f0c11a;
-  border: 2px solid #c68a12;
-  font-weight: 800;
-  color: #2c1f00;
-  font-size: 0.9rem;
+.pokemon-search-dropdown::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.pokemon-search-dropdown::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.pokemon-search-dropdown::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.pokemon-search-option {
+  padding: 0.5rem 0.75rem;
   cursor: pointer;
-  user-select: none;
-  box-shadow:
-    inset 0 1px 2px rgba(255, 255, 255, 0.4),
-    0 1px 2px rgba(0, 0, 0, 0.08);
-  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
-}
-
-.option-toggle input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.option-toggle.on {
-  background: #f0c11a;
-  border-color: #c68a12;
-  box-shadow:
-    0 2px 5px rgba(0, 0, 0, 0.18),
-    inset 0 1px 1px rgba(255, 255, 255, 0.5);
-}
-
-.option-toggle.off {
-  background: #fff4de;
-  border-color: #e1a95c;
-}
-
-.toggle-track {
-  width: 54px;
-  height: 26px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, #dcdcdc 0%, #b8b8b8 100%);
-  border: 2px solid #e1a95c;
-  position: relative;
-  flex-shrink: 0;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
-  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.option-toggle.on .toggle-track {
-  background: #f0c11a;
-  border-color: #c68a12;
-  box-shadow:
-    inset 0 1px 2px rgba(255, 255, 255, 0.4),
-    0 1px 2px rgba(0, 0, 0, 0.16);
-}
-
-.toggle-thumb {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: linear-gradient(180deg, #fff7ed 0%, #f4b86a 100%);
-  box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.25),
-    inset 0 1px 1px rgba(255, 255, 255, 0.7);
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.option-toggle.on .toggle-thumb {
-  transform: translateX(26px);
-  background: #c68a12;
-}
-
-.option-label {
-  line-height: 1.1;
-  flex: 1;
-  order: -1;
-  width: 100%;
-}
-
-.language-toggle:active {
-  transform: translateY(1px);
-}
-
-.header-right {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.pokemon-select {
-  width: 100%;
-  max-width: 200px;
-  flex: 1 1 auto;
-}
-
-.contest-moves .combobox-shell {
-  position: relative;
-}
-
-.contest-moves .combobox-input {
-  width: 100%;
-  padding: 10px 12px;
-  border-radius: 10px;
-  border: 2px solid #c68a12;
-  background: #f0c11a;
-  font-weight: 700;
-  color: #2c1f00;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.35);
-}
-
-.contest-moves .combobox-dropdown {
-  position: absolute;
-  z-index: 10;
-  width: 100%;
-  background: #fffdf7;
-  border: 2px solid #c68a12;
-  border-radius: 12px;
-  margin-top: 6px;
-  max-height: 240px;
-  overflow: auto;
-  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
-  padding: 6px;
-}
-
-.contest-moves .combobox-option {
+  transition: all 0.2s;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #212121;
+  border-bottom: 1px solid #e0e0e0;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 700;
-  color: #2c1f00;
+  gap: 0.4rem;
 }
 
-.contest-moves .combobox-option:hover,
-.contest-moves .combobox-option[aria-selected="true"] {
-  background: #ffe9b8;
+.pokemon-search-option:last-child {
+  border-bottom: none;
 }
 
-.combobox-empty {
-  padding: 8px 10px;
-  color: #6b4b12;
-  font-weight: 700;
+.pokemon-search-option:hover {
+  background: #f4d03f;
+  color: #0b0b0b;
 }
 
 .pokemon-icon-small {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Pokemon Display */
+.pokemon-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  padding: 1rem;
+}
+
+.pokemon-display-image {
+  width: 220px;
+  height: 220px;
   object-fit: contain;
 }
 
-.viewer-body {
+/* Move Filter Container */
+.move-filter-container {
+  background: linear-gradient(135deg, #f4d03f 0%, #f4d03f 100%);
+  border: 3px solid #8b6914;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
   flex: 1;
-  padding: 18px 14px 16px;
-  background: transparent;
-}
-
-.pokemon-plate {
-  height: 100%;
-  min-height: 320px;
-  border-radius: 12px;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  display: grid;
-  place-items: center;
   position: relative;
+  overflow: hidden;
+  height: 600px;
 }
 
-.pokemon-hero {
-  max-width: 240px;
-  max-height: 240px;
-  image-rendering: auto;
-  filter: drop-shadow(0 12px 10px rgba(0, 0, 0, 0.25));
+.pokemon-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+  opacity: 0.95;
+  pointer-events: none;
+  z-index: 1;
 }
 
-.pokemon-placeholder {
-  color: #0f2f4f;
-  font-weight: 800;
-  background: rgba(255, 255, 255, 0.45);
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+.move-filter-list {
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+  border: 2px solid #8b6914;
+  border-radius: 8px;
+  background: rgba(255, 250, 205, 0.3);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-height: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.move-filter-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.move-filter-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.move-filter-list::-webkit-scrollbar-thumb {
+  background: #8b6914;
+  border-radius: 4px;
+}
+
+.move-filter-list::-webkit-scrollbar-thumb:hover {
+  background: #6d5410;
+}
+
+.move-filter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #212121;
+}
+
+.move-filter-checkbox:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: #8b6914;
+}
+
+.move-filter-checkbox input[type="checkbox"] {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.move-filter-checkbox span.move-name-with-methods {
+  user-select: none;
+  flex: 1;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.move-filter-checkbox .move-learn-methods {
+  font-size: 0.75rem;
+  color: #666;
+  text-transform: none;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.learn-methods-grid {
+  display: grid;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.learn-methods-grid.two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.learn-methods-grid.three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.learn-method-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  background: #fffacd;
+  border: 2px solid #8b6914;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #212121;
+}
+
+.learn-method-checkbox:hover {
+  background: #fff9b3;
+  border-color: #6d5410;
+}
+
+.learn-method-checkbox input[type="checkbox"] {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+.learn-method-checkbox span {
+  user-select: none;
+  flex: 1;
+}
+
+/* Coming Soon */
+.coming-soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #8b3030;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contest-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contest-mode-selector .nav-arrow {
+    display: none;
+  }
+
+  .contest-mode-selector button,
+  .contest-mode-selector a {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
 }

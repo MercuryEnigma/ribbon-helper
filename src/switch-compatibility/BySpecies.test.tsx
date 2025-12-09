@@ -36,7 +36,7 @@ const mockDb: PokemonDatabase = {
 describe('BySpecies', () => {
   it('should render without crashing', () => {
     render(<BySpecies pokemonDb={mockDb} />);
-    expect(screen.getByText('Select a Pokémon:')).toBeInTheDocument();
+    expect(screen.getByText('Choose a Pokémon:')).toBeInTheDocument();
   });
 
   it('should show initial hint', () => {
@@ -95,7 +95,8 @@ describe('BySpecies', () => {
     fireEvent.mouseDown(pikachuOption);
 
     await waitFor(() => {
-      expect(screen.getByText(/Available in:/i)).toBeInTheDocument();
+      const availableInLabels = screen.getAllByText(/Available in$/i);
+      expect(availableInLabels.length).toBeGreaterThan(0);
       expect(screen.getByText(/Sword \/ Shield/i)).toBeInTheDocument();
       expect(screen.getByText(/Let's Go Pikachu \/ Eevee/i)).toBeInTheDocument();
       expect(screen.getByText(/Scarlet \/ Violet/i)).toBeInTheDocument();
@@ -127,7 +128,7 @@ describe('BySpecies', () => {
     fireEvent.mouseDown(oldmonOption);
 
     await waitFor(() => {
-      expect(screen.getByText(/not available in any Switch games/i)).toBeInTheDocument();
+      expect(screen.getByText(/Not in Switch titles/i)).toBeInTheDocument();
     });
   });
 
@@ -156,7 +157,8 @@ describe('BySpecies', () => {
     fireEvent.mouseDown(pikachuOption);
 
     await waitFor(() => {
-      expect(screen.getByText(/Available in:/i)).toBeInTheDocument();
+      const availableInLabels = screen.getAllByText(/Available in$/i);
+      expect(availableInLabels.length).toBeGreaterThan(0);
     });
 
     // Clear and type new search
@@ -164,7 +166,7 @@ describe('BySpecies', () => {
     await user.type(input, 'bulba');
 
     await waitFor(() => {
-      expect(screen.queryByText(/Available in:/i)).not.toBeInTheDocument();
+      expect(screen.queryAllByText(/Available in$/i).length).toBe(0);
     });
   });
 

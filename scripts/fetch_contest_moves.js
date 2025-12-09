@@ -6,6 +6,23 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const DATA_DIR = path.resolve(__dirname, '..', 'src', 'data');
+
+const GENERATION_CONFIG = {
+  3: {
+    movesFile: 'pokemon_moves_rse.json',
+    outputFile: 'contest_moves_rse.json',
+    comboType: 'normal',
+    effectKey: 'contest_effect'
+  },
+  4: {
+    movesFile: 'pokemon_moves_dppt.json',
+    outputFile: 'contest_moves_dppt.json',
+    comboType: 'super',
+    effectKey: 'super_contest_effect'
+  }
+};
+
 async function fetchMoveData(moveName) {
   return new Promise((resolve, reject) => {
     const url = `https://pokeapi.co/api/v2/move/${moveName}`;
@@ -31,14 +48,15 @@ async function fetchMoveData(moveName) {
   });
 }
 
-function processMoveData(moveData) {
+function processMoveData(moveData, generationConfig) {
   // Get contest type
   const contestType = moveData.contest_type ? moveData.contest_type.name : null;
 
-  // Get contest effect ID
+  // Get contest/super contest effect ID
   let effectId = null;
-  if (moveData.contest_effect && moveData.contest_effect.url) {
-    const urlParts = moveData.contest_effect.url.split('/');
+  const effectData = moveData[generationConfig.effectKey];
+  if (effectData && effectData.url) {
+    const urlParts = effectData.url.split('/');
     effectId = parseInt(urlParts[urlParts.length - 2]);
   }
 
@@ -48,13 +66,13 @@ function processMoveData(moveData) {
     after: []
   };
 
-  if (moveData.contest_combos && moveData.contest_combos.normal) {
-    // Use normal contest combos (RSE uses normal contests)
-    if (moveData.contest_combos.normal.use_before) {
-      combos.before = moveData.contest_combos.normal.use_before.map(m => m.name);
+  const comboSource = moveData.contest_combos?.[generationConfig.comboType];
+  if (comboSource) {
+    if (comboSource.use_before) {
+      combos.before = comboSource.use_before.map(m => m.name);
     }
-    if (moveData.contest_combos.normal.use_after) {
-      combos.after = moveData.contest_combos.normal.use_after.map(m => m.name);
+    if (comboSource.use_after) {
+      combos.after = comboSource.use_after.map(m => m.name);
     }
   }
 
@@ -66,8 +84,14 @@ function processMoveData(moveData) {
 }
 
 async function fetchAllContestMoves() {
-  // Load pokemon_moves_rse.json to get all unique moves
-  const movesDataPath = path.join(__dirname, 'src', 'data', 'pokemon_moves_rse.json');
+  const generation = Number(process.argv[2] || 3);
+  const generationConfig = GENERATION_CONFIG[generation];
+  if (!generationConfig) {
+    throw new Error('Please provide a supported generation number (3 or 4)');
+  }
+
+  // Load pokemon moves file to get all unique moves
+  const movesDataPath = path.join(DATA_DIR, generationConfig.movesFile);
   const pokemonMovesData = JSON.parse(fs.readFileSync(movesDataPath, 'utf8'));
 
   // Extract all unique move names
@@ -101,7 +125,7 @@ async function fetchAllContestMoves() {
     try {
       console.log(`[${i + 1}/${movesList.length}] Fetching data for ${moveName}...`);
       const moveData = await fetchMoveData(moveName);
-      const processedData = processMoveData(moveData);
+      const processedData = processMoveData(moveData, generationConfig);
 
       contestMovesData[moveName] = processedData;
 
@@ -115,7 +139,7 @@ async function fetchAllContestMoves() {
   }
 
   // Write to JSON file
-  const outputPath = path.join(__dirname, 'src', 'data', 'contest_moves_rse.json');
+  const outputPath = path.join(DATA_DIR, generationConfig.outputFile);
   fs.writeFileSync(outputPath, JSON.stringify(contestMovesData, null, 2));
 
   console.log(`\nSuccessfully saved data for ${Object.keys(contestMovesData).length} moves to ${outputPath}`);

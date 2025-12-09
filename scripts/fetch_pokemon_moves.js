@@ -6,13 +6,42 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Gen 3 version groups we care about
 const GEN3_VERSION_GROUPS = {
   'ruby-sapphire': 'rs',
   'emerald': 'e',
   'firered-leafgreen': 'frlg',
   'colosseum': 'co',
   'xd': 'xd'
+};
+
+const GEN4_VERSION_GROUPS = {
+  'diamond-pearl': 'dp',
+  'platinum': 'pt',
+  'heartgold-soulsilver': 'hgss',
+};
+
+const GEN8_VERSION_GROUPS = {
+  'brilliant-diamond-and-shining-pearl': 'bdsp',
+};
+
+const GENERATION_MAX_NATDEX = {
+  3: 386,
+  4: 493,
+  8: 493,
+};
+
+const VERSION_GROUPS_BY_GEN = {
+  3: GEN3_VERSION_GROUPS,
+  4: GEN4_VERSION_GROUPS,
+  8: GEN8_VERSION_GROUPS,
+};
+
+const FORM_GROUPS = {
+  deoxys: ['deoxys-normal', 'deoxys-attack', 'deoxys-defense', 'deoxys-speed'],
+  wormadam: ['wormadam-plant', 'wormadam-sandy', 'wormadam-trash'],
+  rotom: ['rotom', 'rotom-wash', 'rotom-heat', 'rotom-mow', 'rotom-fan', 'rotom-frost'],
+  giratina: ['giratina-altered', 'giratina-origin'],
+  shaymin: ['shaymin-land', 'shaymin-sky']
 };
 
 async function fetchPokemonData(pokemonName) {
@@ -40,7 +69,7 @@ async function fetchPokemonData(pokemonName) {
   });
 }
 
-function processPokemonMoves(pokemonData) {
+function processPokemonMoves(pokemonData, versionGroups) {
   // First, group moves by method and the exact set of versions they appear in
   const movesByMethodAndVersions = {};
 
@@ -48,18 +77,18 @@ function processPokemonMoves(pokemonData) {
   for (const moveEntry of pokemonData.moves) {
     const moveName = moveEntry.move.name;
 
-    // Filter for Gen 3 version groups
-    const gen3Details = moveEntry.version_group_details.filter(detail =>
-      detail.version_group.name in GEN3_VERSION_GROUPS
+    // Filter for version groups relevant to the selected generation
+    const generationDetails = moveEntry.version_group_details.filter(detail =>
+      detail.version_group.name in versionGroups
     );
 
-    if (gen3Details.length === 0) continue;
+    if (generationDetails.length === 0) continue;
 
     // Group by learn method
     const methodGroups = {};
-    for (const detail of gen3Details) {
+    for (const detail of generationDetails) {
       const method = detail.move_learn_method.name;
-      const versionShort = GEN3_VERSION_GROUPS[detail.version_group.name];
+      const versionShort = versionGroups[detail.version_group.name];
       const level = detail.level_learned_at;
 
       if (!methodGroups[method]) {
@@ -80,7 +109,7 @@ function processPokemonMoves(pokemonData) {
       if (!movesByMethodAndVersions[method][versionKey]) {
         movesByMethodAndVersions[method][versionKey] = {
           version: versionKey,
-          moves: method === 'level-up' ? {} : []
+          moves: {}
         };
       }
 
@@ -91,7 +120,7 @@ function processPokemonMoves(pokemonData) {
         movesByMethodAndVersions[method][versionKey].moves[moveName] = level;
       } else {
         // For other methods, store as array
-        movesByMethodAndVersions[method][versionKey].moves.push(moveName);
+        movesByMethodAndVersions[method][versionKey].moves[moveName] = method;
       }
     }
   }
@@ -108,32 +137,89 @@ function processPokemonMoves(pokemonData) {
   return result;
 }
 
-function buildTargetPokemonList(pokemonData, singleTarget) {
-  if (!singleTarget) {
+function combineFormData(formDatas) {
+  const moveMap = new Map();
+
+  for (const data of formDatas) {
+    for (const moveEntry of data.moves || []) {
+      const moveName = moveEntry.move.name;
+      if (!moveMap.has(moveName)) {
+        moveMap.set(moveName, []);
+      }
+
+      const existingDetails = moveMap.get(moveName);
+      for (const detail of moveEntry.version_group_details || []) {
+        const detailKey = `${detail.move_learn_method.name}-${detail.version_group.name}-${detail.level_learned_at}`;
+        const alreadyIncluded = existingDetails.some(
+          d => `${d.move_learn_method.name}-${d.version_group.name}-${d.level_learned_at}` === detailKey
+        );
+        if (!alreadyIncluded) {
+          existingDetails.push({
+            move_learn_method: { name: detail.move_learn_method.name },
+            version_group: { name: detail.version_group.name },
+            level_learned_at: detail.level_learned_at
+          });
+        }
+      }
+    }
+  }
+
+  const combinedMoves = [];
+  for (const [name, details] of moveMap.entries()) {
+    combinedMoves.push({
+      move: { name },
+      version_group_details: details
+    });
+  }
+
+  return { moves: combinedMoves };
+}
+
+function buildTargetPokemonList(pokemonData, generation, targetNames) {
+  if (!targetNames || targetNames.length === 0) {
     return Object.entries(pokemonData)
-      .filter(([, info]) => info.natdex <= 385)
+      .filter(([, info]) => info.natdex <= GENERATION_MAX_NATDEX[generation])
       .map(([name]) => name);
   }
 
-  if (singleTarget === 'deoxys') {
-    // PokeAPI exposes each forme separately
-    return ['deoxys-normal', 'deoxys-attack', 'deoxys-defense', 'deoxys-speed'];
+  return targetNames;
+}
+
+function getOutputPath(generation, dataDir) {
+  if (generation === 3) {
+    return path.join(dataDir, 'pokemon_moves_rse.json');
   }
 
-  return [singleTarget];
+  if (generation === 4) {
+    return path.join(dataDir, 'pokemon_moves_dppt.json');
+  }
+
+  if (generation === 8) {
+    return path.join(dataDir, 'pokemon_moves_bdsp.json');
+  }
+
+  return path.join(dataDir, `pokemon_moves_gen${generation}.json`);
 }
 
 async function fetchAllPokemonMoves() {
-  const pokemonDataPath = path.join(__dirname, 'src', 'data', 'pokemon.json');
+  const dataDir = path.resolve(__dirname, '..', 'src', 'data');
+  const pokemonDataPath = path.join(dataDir, 'pokemon.json');
   const pokemonData = JSON.parse(fs.readFileSync(pokemonDataPath, 'utf8'));
 
-  const singleTarget = process.argv[2] ? process.argv[2].toLowerCase() : null;
-  const targetPokemon = buildTargetPokemonList(pokemonData, singleTarget);
-  const isSingleFetch = !!singleTarget;
+  const generation = Number(process.argv[2]);
+  if (!Number.isInteger(generation) || !(generation in VERSION_GROUPS_BY_GEN)) {
+    throw new Error('Please provide a supported generation number (e.g., 3, 4, or 8)');
+  }
 
-  console.log(`Found ${targetPokemon.length} Pokemon to process`);
+  const targetNames = process.argv.slice(3).map(arg => arg.toLowerCase());
+  const versionGroups = VERSION_GROUPS_BY_GEN[generation];
 
-  const outputPath = path.join(__dirname, 'src', 'data', 'pokemon_moves_rse.json');
+  const targetPokemon = buildTargetPokemonList(pokemonData, generation, targetNames);
+  const isSingleFetch = targetNames.length > 0;
+
+  console.log(`Found ${targetPokemon.length} Pokemon to process for gen ${generation}`);
+
+  const outputPath = getOutputPath(generation, dataDir);
   const allPokemonMoves = isSingleFetch && fs.existsSync(outputPath)
     ? JSON.parse(fs.readFileSync(outputPath, 'utf8'))
     : {};
@@ -143,15 +229,23 @@ async function fetchAllPokemonMoves() {
 
     try {
       console.log(`[${i + 1}/${targetPokemon.length}] Fetching moves for ${pokemonName}...`);
-      const data = await fetchPokemonData(pokemonName);
+      const formNames = FORM_GROUPS[pokemonName] || [pokemonName];
+      const formData = [];
 
-      const moves = processPokemonMoves(data);
+      for (const formName of formNames) {
+        const data = await fetchPokemonData(formName);
+        formData.push(data);
+      }
+
+      const combinedData = formData.length > 1 ? combineFormData(formData) : formData[0];
+
+      const moves = processPokemonMoves(combinedData, versionGroups);
 
       // Only add if there are moves
       if (Object.keys(moves).length > 0) {
         allPokemonMoves[pokemonName] = moves;
       } else {
-        // No Gen 3 moves found
+        // No moves for this generation found
         allPokemonMoves[pokemonName] = null;
       }
 

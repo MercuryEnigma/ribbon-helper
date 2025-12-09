@@ -14243,7 +14243,7 @@
     "light-ball-egg-e": {
       "version": "e",
       "moves": {
-        "volt-tackle": "light-ball-egg"
+        "volt-tackle": "egg w/ light ball"
       }
     }
   },
@@ -32198,7 +32198,7 @@
       }
     }
   },
-  "deoxys-normal": {
+  "deoxys": {
     "machine-corsxd": {
       "version": "corsxd",
       "moves": {
@@ -32271,9 +32271,7 @@
         "cosmic-power": "35",
         "psycho-boost": "45"
       }
-    }
-  },
-  "deoxys-attack": {
+    },
     "tutor-frlg": {
       "version": "frlg",
       "moves": {
@@ -32345,89 +32343,17 @@
         "taunt": "15",
         "superpower": "30",
         "cosmic-power": "35",
-        "psycho-boost": "45"
-      }
-    }
-  },
-  "deoxys-defense": {
-    "tutor-frlg": {
-      "version": "frlg",
-      "moves": {
-        "mega-punch": "tutor",
-        "mega-kick": "tutor",
-        "body-slam": "tutor",
-        "double-edge": "tutor",
-        "counter": "tutor",
-        "seismic-toss": "tutor",
-        "thunder-wave": "tutor",
-        "mimic": "tutor",
-        "dream-eater": "tutor",
-        "rock-slide": "tutor",
-        "substitute": "tutor"
-      }
-    },
-    "machine-frlg": {
-      "version": "frlg",
-      "moves": {
-        "cut": "hm-01",
-        "ice-beam": "tm-13",
-        "hyper-beam": "tm-15",
-        "strength": "hm-04",
-        "solar-beam": "tm-22",
-        "thunderbolt": "tm-24",
-        "thunder": "tm-25",
-        "toxic": "tm-06",
-        "psychic": "tm-29",
-        "double-team": "tm-32",
-        "light-screen": "tm-16",
-        "reflect": "tm-33",
-        "flash": "hm-05",
-        "rest": "tm-44",
-        "protect": "tm-17",
-        "return": "tm-27",
-        "frustration": "tm-21",
-        "safeguard": "tm-20",
-        "hidden-power": "tm-10",
-        "rain-dance": "tm-18",
-        "sunny-day": "tm-11",
-        "shadow-ball": "tm-30",
-        "rock-smash": "hm-06",
-        "torment": "tm-41",
-        "facade": "tm-42",
-        "focus-punch": "tm-01",
-        "taunt": "tm-12",
-        "brick-break": "tm-31",
-        "skill-swap": "tm-48",
-        "snatch": "tm-49",
-        "secret-power": "tm-43",
-        "rock-tomb": "tm-39",
-        "aerial-ace": "tm-40",
-        "calm-mind": "tm-04",
-        "shock-wave": "tm-34",
-        "water-pulse": "tm-03"
-      }
-    },
-    "level-up-frlg": {
-      "version": "frlg",
-      "moves": {
-        "wrap": "1",
-        "leer": "1",
+        "psycho-boost": "45",
         "counter": "50",
-        "psychic": "25",
-        "teleport": "10",
-        "night-shade": "5",
         "recover": "40",
         "amnesia": "35",
         "spikes": "20",
         "mirror-coat": "50",
         "knock-off": "15",
         "snatch": "30",
-        "iron-defense": "35",
-        "psycho-boost": "45"
+        "iron-defense": "35"
       }
-    }
-  },
-  "deoxys-speed": {
+    },
     "tutor-e": {
       "version": "e",
       "moves": {

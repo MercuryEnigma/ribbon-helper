@@ -15,7 +15,7 @@
   },
   "3": {
     "id": 3,
-    "appeal": 6,
+    "appeal": 3,
     "jam": 0,
     "effect_description": "If the user is jammed this turn after using this move, it will receive twice as many jam points.",
     "flavor_text": "After this move, the user is more easily startled."

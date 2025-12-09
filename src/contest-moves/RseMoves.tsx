@@ -1,302 +1,612 @@
-import { useEffect, useMemo, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import pokemonData from '../data/pokemon.json';
-import pokemonMovesRse from '../data/pokemon_moves_rse.json';
-import { getPokemonDisplayName, searchPokemonByName } from '../switch-compatibility/utils';
+import { useState, useMemo, useEffect } from 'react';
+import { useParams, useNavigate, NavLink } from 'react-router-dom';
+import pokemonDb from '../data/pokemon.json';
+import pokemonMovesData from '../data/pokemon_moves_rse.json';
+import contestMovesData from '../data/contest_moves_rse.json';
+import contestEffectsData from '../data/contest_effects_rse.json';
 import { getPokemonIconProps } from '../switch-compatibility/iconUtils';
-import type { PokemonDatabase, PokemonData } from '../switch-compatibility/types';
-import ContestTabs from './ContestTabs';
-import type { ContestType } from './types';
+import { searchPokemonByName, getPokemonDisplayName } from '../switch-compatibility/utils';
+import type { PokemonDatabase } from '../switch-compatibility/types';
+import {
+  getAvailableMovesForPokemon,
+  filterAvailableMoves,
+  getMoveLearnMethods,
+  getSelectableMoves,
+  getLearnMethodStates,
+  getContestEffectForMove,
+  type LearnMethod,
+  type ContestType,
+  type AvailableMovesByMethod,
+  type ContestMoveData,
+  type ContestEffect
+} from './moveUtils';
 import { getRseContestMoves } from './contestCalculator';
-import { getAvailableMovesForPokemon, filterAvailableMoves, type LearnMethod } from './moveUtils';
 
-/** Contest type options for filtering moves */
-const TYPE_FILTERS: Array<{ value: 'all' | ContestType; label: string }> = [
-  { value: 'all', label: 'All (recommended)' },
-  { value: 'cool', label: 'Cool' },
-  { value: 'beauty', label: 'Beauty' },
-  { value: 'cute', label: 'Sweet' },
-  { value: 'smart', label: 'Smart' },
-  { value: 'tough', label: 'Tough' },
-];
+type GameSelection = 'rse' | 'dppt' | 'oras' | 'bdsp';
 
-/** Learn method categories for filtering which moves to display */
-type MoveFilterState = Record<LearnMethod, boolean>;
-
-const OPTION_FILTERS: Array<{ key: LearnMethod; label: string }> = [
-  { key: 'level-up', label: 'Level-up' },
-  { key: 'machine', label: 'TM/HM' },
-  { key: 'tutor', label: 'Tutor' },
-  { key: 'egg', label: 'Egg' },
-  { key: 'purify', label: 'Purify' },
-  { key: 'other', label: 'Other' },
-];
-
-/**
- * Gets the display name for a Pokémon, handling cases where the name data
- * is referenced from another entry via 'data-source'.
- */
-function getDisplayNameForPokemon(
-  key: string,
-  data: PokemonData | undefined,
-  pokemonDb: PokemonDatabase
-): string {
-  if (!data) return key;
-  if (data['data-source']) {
-    const source = pokemonDb[data['data-source']];
-    return getPokemonDisplayName(key, { ...data, names: source?.names });
-  }
-  return getPokemonDisplayName(key, data);
+interface RSEMovesProps {
+  selectedGame: GameSelection;
+  onNavigate: (path: string) => void;
 }
 
-export default function RseMoves() {
+const pokemonMoves = pokemonMovesData as Record<string, any>;
+const typedPokemonDb = pokemonDb as PokemonDatabase;
+
+export default function RSEMoves({ selectedGame, onNavigate }: RSEMovesProps) {
   const { pokemonKey } = useParams<{ pokemonKey?: string }>();
   const navigate = useNavigate();
-  const pokemonDb = pokemonData as PokemonDatabase;
 
-  const availablePokemonKeys = useMemo(
-    () => Object.keys(pokemonMovesRse as Record<string, unknown>),
-    []
-  );
+  const handlePrevious = () => {
+    let targetGame: GameSelection;
+    if (selectedGame === 'rse') targetGame = 'bdsp';
+    else if (selectedGame === 'dppt') targetGame = 'rse';
+    else if (selectedGame === 'oras') targetGame = 'dppt';
+    else targetGame = 'oras';
 
-  const pokemonOptions = useMemo(() => {
-    return availablePokemonKeys
-      .reduce<Array<{ key: string; name: string; natdex: number; data: PokemonData }>>((list, key) => {
-        const data = pokemonDb[key];
-        if (!data) return list;
-        const displayName = getDisplayNameForPokemon(key, data, pokemonDb);
-        const natdex = data.natdex || (data['data-source'] ? pokemonDb[data['data-source']]?.natdex : undefined);
-        list.push({ key, name: displayName, natdex: natdex ?? Number.MAX_SAFE_INTEGER, data });
-        return list;
-      }, [])
-      .sort((a, b) => a.natdex - b.natdex || a.name.localeCompare(b.name));
-  }, [availablePokemonKeys, pokemonDb]);
+    const pokemonPath = selectedPokemon ? `/${selectedPokemon}` : '';
+    onNavigate(`/contest-moves/${targetGame}${pokemonPath}`);
+  };
 
-  const allowedPokemonKeys = useMemo(() => new Set(availablePokemonKeys), [availablePokemonKeys]);
+  const handleNext = () => {
+    let targetGame: GameSelection;
+    if (selectedGame === 'rse') targetGame = 'dppt';
+    else if (selectedGame === 'dppt') targetGame = 'oras';
+    else if (selectedGame === 'oras') targetGame = 'bdsp';
+    else targetGame = 'rse';
 
-  const selectedKey = (pokemonKey && allowedPokemonKeys.has(pokemonKey)) ? pokemonKey : '';
-
-  const [selectedPokemon, setSelectedPokemon] = useState<string>(selectedKey);
-  const [searchTerm, setSearchTerm] = useState<string>(selectedKey ? getDisplayNameForPokemon(selectedKey, pokemonDb[selectedKey], pokemonDb) : '');
+    const pokemonPath = selectedPokemon ? `/${selectedPokemon}` : '';
+    onNavigate(`/contest-moves/${targetGame}${pokemonPath}`);
+  };
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedPokemon, setSelectedPokemon] = useState<string>(pokemonKey || '');
   const [showDropdown, setShowDropdown] = useState(false);
-  const [chosenContestType, setChosenContestType] = useState<'all' | ContestType>('all');
-  const [showOptions, setShowOptions] = useState(false);
-  const [optionFilters, setOptionFilters] = useState<MoveFilterState>(() => {
-    return OPTION_FILTERS.reduce((acc, opt) => {
-      acc[opt.key] = true;
-      return acc;
-    }, {} as MoveFilterState);
+  const [selectedContestType, setSelectedContestType] = useState<ContestType | 'all'>('all');
+  const [selectedMoveIndex, setSelectedMoveIndex] = useState<number | null>(null);
+
+  // Move filtering state
+  const [enabledMethods, setEnabledMethods] = useState<Record<LearnMethod, boolean>>({
+    'level-up': true,
+    'machine': true,
+    'tutor': true,
+    'egg': true,
+    'purify': true,
+    'pre-evolution': true
   });
+  const [excludedMoves, setExcludedMoves] = useState<Set<string>>(new Set());
 
   useEffect(() => {
-    if (pokemonKey && allowedPokemonKeys.has(pokemonKey)) {
+    if (pokemonKey && typedPokemonDb[pokemonKey]) {
+      // Check if this Pokemon exists in the current game's data
+      if (!pokemonMoves[pokemonKey]) {
+        // Pokemon doesn't exist in this game, clear state and redirect to base route
+        setSelectedPokemon('');
+        setSearchTerm('');
+        navigate(`/contest-moves/${selectedGame}`);
+        return;
+      }
+
       setSelectedPokemon(pokemonKey);
-      const displayName = getDisplayNameForPokemon(pokemonKey, pokemonDb[pokemonKey], pokemonDb);
+      const pokemonData = typedPokemonDb[pokemonKey];
+
+      let displayName = '';
+      if (pokemonData['data-source']) {
+        const sourceData = typedPokemonDb[pokemonData['data-source']];
+        if (sourceData) {
+          displayName = getPokemonDisplayName(pokemonKey, {
+            ...pokemonData,
+            names: sourceData.names
+          });
+        }
+      } else {
+        displayName = getPokemonDisplayName(pokemonKey, pokemonData);
+      }
+
       setSearchTerm(displayName);
-    } else {
+    } else if (!pokemonKey) {
+      // Clear selection when there's no pokemonKey in URL
       setSelectedPokemon('');
       setSearchTerm('');
     }
-  }, [allowedPokemonKeys, pokemonDb, pokemonKey]);
+  }, [pokemonKey, navigate, selectedGame]);
+
+  // Reset filtering when Pokemon or game changes
+  useEffect(() => {
+    setEnabledMethods({
+      'level-up': true,
+      'machine': true,
+      'tutor': true,
+      'egg': true,
+      'purify': true,
+      'pre-evolution': true
+    });
+    setExcludedMoves(new Set());
+    setSelectedMoveIndex(null);
+  }, [selectedPokemon, selectedGame]);
+
+  // Clear selected move when contest type or filters change
+  useEffect(() => {
+    setSelectedMoveIndex(null);
+  }, [selectedContestType, enabledMethods, excludedMoves]);
+
+  // Add click outside handler to close move details
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      // Check if click is outside the moves-container
+      if (!target.closest('.moves-container')) {
+        setSelectedMoveIndex(null);
+      }
+    };
+
+    if (selectedMoveIndex !== null) {
+      document.addEventListener('click', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [selectedMoveIndex]);
 
   const searchResults = useMemo(() => {
-    if (searchTerm.trim().length < 2) {
-      return pokemonOptions.slice(0, 12);
+    if (searchTerm.length < 2) return [];
+    try {
+      // Only show Pokemon that are available in RSE (have entries in pokemon_moves_rse.json)
+      const allResults = searchPokemonByName(typedPokemonDb, searchTerm);
+      return allResults.filter(result => pokemonMoves[result.key]).slice(0, 50);
+    } catch (error) {
+      console.error('Error searching Pokemon:', error);
+      return [];
     }
-    return searchPokemonByName(pokemonDb, searchTerm)
-      .filter(result => allowedPokemonKeys.has(result.key))
-      .slice(0, 25)
-      .map(result => {
-        const data = pokemonDb[result.key];
-        if (!data) return null;
-        return {
-          key: result.key,
-          name: getDisplayNameForPokemon(result.key, data, pokemonDb),
-          data,
-        };
-      })
-      .filter(Boolean) as Array<{ key: string; name: string; data: PokemonData }>;
-  }, [allowedPokemonKeys, pokemonDb, pokemonOptions, searchTerm]);
+  }, [searchTerm]);
 
-  const selectedPokemonData = selectedPokemon ? pokemonDb[selectedPokemon] : undefined;
-  const selectedDisplayName = selectedPokemonData
-    ? getDisplayNameForPokemon(selectedPokemon, selectedPokemonData, pokemonDb)
-    : '';
-  const largeIconProps = selectedPokemonData
-    ? getPokemonIconProps(selectedPokemon, selectedPokemonData, pokemonDb)
-    : null;
+  const handleSelect = (key: string, name: string) => {
+    if (!key || !name) return;
+    setSelectedPokemon(key);
+    setSearchTerm(name);
+    setShowDropdown(false);
+    navigate(`/contest-moves/rse/${key}`);
+  };
 
-  /**
-   * Step 1: Extract all available moves for the selected Pokémon, organized by learn method.
-   * This only updates when the selected Pokémon changes.
-   */
-  const availableMoves = useMemo(() => {
-    if (!selectedPokemon) return {};
-    return getAvailableMovesForPokemon(selectedPokemon, pokemonMovesRse as Record<string, any>);
+  // Get available moves for the selected Pokemon
+  const availableMoves = useMemo<AvailableMovesByMethod>(() => {
+    if (!selectedPokemon || !pokemonMoves[selectedPokemon]) return {};
+    return getAvailableMovesForPokemon(selectedPokemon, pokemonMoves, typedPokemonDb);
   }, [selectedPokemon]);
 
-  /**
-   * Step 2: Filter moves based on which learn methods are enabled.
-   * This updates when availableMoves or optionFilters change.
-   */
-  const filteredMoves = useMemo(() => {
-    return filterAvailableMoves(availableMoves, optionFilters);
-  }, [availableMoves, optionFilters]);
+  // Get all moves regardless of enabled methods (always show all moves in the list)
+  const selectableMoves = useMemo(() => {
+    const allEnabledMethods: Record<LearnMethod, boolean> = {
+      'level-up': true,
+      'machine': true,
+      'tutor': true,
+      'egg': true,
+      'purify': true,
+      'pre-evolution': true
+    };
+    return getSelectableMoves(availableMoves, allEnabledMethods);
+  }, [availableMoves]);
 
-  /**
-   * Step 3: Calculate optimal 5-move sequence for contests.
-   * This updates when filteredMoves or chosenContestType change.
-   */
+  // Get learn method states for checkbox display
+  const methodStates = useMemo(() => {
+    return getLearnMethodStates(availableMoves, enabledMethods, excludedMoves);
+  }, [availableMoves, enabledMethods, excludedMoves]);
+
+  // Count visible learn methods for grid layout
+  const visibleMethodCount = useMemo(() => {
+    let count = 0;
+    const methods: LearnMethod[] = ['level-up', 'machine', 'tutor', 'egg', 'purify', 'pre-evolution'];
+    for (const method of methods) {
+      if (availableMoves[method] && Object.keys(availableMoves[method]).length > 0) {
+        count++;
+      }
+    }
+    return count;
+  }, [availableMoves]);
+
+  // Calculate optimal moves with filtering applied
   const optimalMoves = useMemo(() => {
-    if (Object.keys(filteredMoves).length === 0) return [];
-    return getRseContestMoves(filteredMoves, chosenContestType);
-  }, [filteredMoves, chosenContestType]);
+    if (!selectedPokemon || !pokemonMoves[selectedPokemon]) return null;
+
+    // Filter moves based on enabled methods and excluded moves
+    const filteredMoves = filterAvailableMoves(availableMoves, enabledMethods, excludedMoves);
+
+    // Get optimal move sequence using the selected contest type
+    return getRseContestMoves(filteredMoves, selectedContestType);
+  }, [selectedPokemon, availableMoves, enabledMethods, excludedMoves, selectedContestType]);
+
+  const selectedPokemonData = useMemo(() => {
+    if (!selectedPokemon) return null;
+    return typedPokemonDb[selectedPokemon] || null;
+  }, [selectedPokemon]);
+
+  const largeIconProps = useMemo(() => {
+    if (!selectedPokemonData) return null;
+    return getPokemonIconProps(selectedPokemon, selectedPokemonData, typedPokemonDb);
+  }, [selectedPokemon, selectedPokemonData]);
+
+  const displayName = useMemo(() => {
+    if (!selectedPokemonData) return '';
+
+    if (selectedPokemonData['data-source']) {
+      const sourceData = typedPokemonDb[selectedPokemonData['data-source']];
+      if (sourceData) {
+        return getPokemonDisplayName(selectedPokemon, {
+          ...selectedPokemonData,
+          names: sourceData.names
+        });
+      }
+    }
+
+    return getPokemonDisplayName(selectedPokemon, selectedPokemonData);
+  }, [selectedPokemon, selectedPokemonData]);
+
+  const selectedMoveName = useMemo(() => {
+    if (selectedMoveIndex === null || !optimalMoves || !optimalMoves[selectedMoveIndex]) return null;
+    return optimalMoves[selectedMoveIndex].move;
+  }, [optimalMoves, selectedMoveIndex]);
+
+  // Get the contest effect details for the selected move
+  const selectedMoveEffect = useMemo(() => {
+    if (!selectedMoveName) return null;
+    return getContestEffectForMove(
+      selectedMoveName,
+      contestMovesData as Record<string, ContestMoveData>,
+      contestEffectsData as Record<string, ContestEffect>
+    );
+  }, [selectedMoveName]);
+
+  // Get the learn methods for the selected move
+  const selectedMoveLearnMethods = useMemo(() => {
+    if (!selectedMoveName) return '';
+    const methods = getMoveLearnMethods(selectedMoveName, availableMoves);
+    const methodOrder: LearnMethod[] = ['level-up', 'machine', 'tutor', 'egg', 'purify', 'pre-evolution'];
+    const sortedMethods = methods.sort((a, b) =>
+      methodOrder.indexOf(a) - methodOrder.indexOf(b)
+    );
+
+    const methodLabels = sortedMethods.map(m => {
+      const value = availableMoves[m]?.[selectedMoveName];
+      if (!value) return '';
+
+      if (m === 'level-up') {
+        return `lvl ${value}`;
+      }
+      return value;
+    }).filter(Boolean).join(', ');
+
+    return methodLabels;
+  }, [selectedMoveName, availableMoves]);
+
+  // Handle learn method checkbox changes
+  const handleMethodToggle = (method: LearnMethod, checked: boolean) => {
+    const newEnabledMethods = { ...enabledMethods, [method]: checked };
+    setEnabledMethods(newEnabledMethods);
+
+    // When a method is disabled, automatically exclude moves that become unavailable
+    if (!checked) {
+      const newExcluded = new Set(excludedMoves);
+
+      // Check each move to see if it's still available through other enabled methods
+      for (const move of Object.keys(availableMoves[method] || {})) {
+        const moveMethods = getMoveLearnMethods(move, availableMoves);
+        const hasOtherEnabledMethod = moveMethods.some(m => m !== method && newEnabledMethods[m]);
+
+        // If no other enabled method provides this move, exclude it
+        if (!hasOtherEnabledMethod) {
+          newExcluded.add(move);
+        }
+      }
+
+      setExcludedMoves(newExcluded);
+    } else {
+      // When re-enabling a method, remove exclusions for moves that are now available
+      const newExcluded = new Set(excludedMoves);
+
+      for (const move of Object.keys(availableMoves[method] || {})) {
+        // Remove from excluded if this move is now available
+        newExcluded.delete(move);
+      }
+
+      setExcludedMoves(newExcluded);
+    }
+  };
 
   return (
-    <div className="contest-layout">
-      <div className="moves-stack">
-        <ContestTabs />
-        <div className="moves-column">
-          <div className="moves-panel">
-              <div className="move-list">
-                {!selectedPokemon && (
-                  <div className="move-empty">Start typing a Pokémon name to see contest moves.</div>
-                )}
-                {selectedPokemon && optimalMoves.map((move, index) => (
-                  <div className="move-row" key={index}>
-                    <div className={`type-pill type-${move.type}`}>{TYPE_FILTERS.find(t => t.value === move.type)?.label || move.type}</div>
-                    <div className="move-name">{move.move}</div>
-                    <div className="move-appeal">{move.appeal}</div>
-                  </div>
-                ))}
-                {selectedPokemon && optimalMoves.length === 0 && (
-                  <div className="move-empty">No moves for this contest type yet.</div>
-                )}
-              </div>
-            </div>
+    <div className="rse-contest-moves">
+      <div className="contest-layout">
+        <div className="contest-moves-section">
+          <div className="contest-mode-selector">
+            <button
+              className="nav-arrow nav-arrow-left"
+              aria-label="Previous"
+              onClick={handlePrevious}>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="15,6 9,12 15,18"/>
+              </svg>
+            </button>
+            <NavLink
+              to={selectedPokemon ? `/contest-moves/rse/${selectedPokemon}` : '/contest-moves/rse'}
+              className={({ isActive }) => isActive ? 'active' : ''}
+            >
+              RSE
+            </NavLink>
+            <NavLink
+              to={selectedPokemon ? `/contest-moves/dppt/${selectedPokemon}` : '/contest-moves/dppt'}
+              className={({ isActive }) => isActive ? 'active' : ''}
+            >
+              DPPt
+            </NavLink>
+            <NavLink
+              to={selectedPokemon ? `/contest-moves/oras/${selectedPokemon}` : '/contest-moves/oras'}
+              className={({ isActive }) => isActive ? 'active' : ''}
+            >
+              ORAS
+            </NavLink>
+            <NavLink
+              to={selectedPokemon ? `/contest-moves/bdsp/${selectedPokemon}` : '/contest-moves/bdsp'}
+              className={({ isActive }) => isActive ? 'active' : ''}
+            >
+              BDSP
+            </NavLink>
+            <button
+              className="nav-arrow nav-arrow-right"
+              aria-label="Next"
+              onClick={handleNext}>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="9,6 15,12 9,18"/>
+              </svg>
+            </button>
           </div>
-      </div>
-
-      <div className="viewer-column">
-        <div className="viewer-header-wrap">
-          <div className={`viewer-header${showOptions ? ' options-open' : ''}`}>
-            <div className="header-right">
-              <div className="header-row">
-                <div className="pokemon-select">
-                  <div className="combobox-shell">
-                  <input
-                    id="pokemon-combobox"
-                    type="text"
-                    className="combobox-input"
-                    placeholder="Search Pokémon..."
-                    value={searchTerm}
-                    onChange={e => {
-                      setSearchTerm(e.target.value);
-                      setShowDropdown(true);
-                    }}
-                    onFocus={() => setShowDropdown(true)}
-                    onBlur={() => setTimeout(() => setShowDropdown(false), 150)}
-                    aria-expanded={showDropdown}
-                    aria-controls="pokemon-results"
-                    aria-autocomplete="list"
-                    role="combobox"
-                  />
-                  {showDropdown && (
-                    <ul className="combobox-dropdown" id="pokemon-results" role="listbox">
-                      {searchResults.map(option => (
-                        <li
-                          key={option.key}
-                          className="combobox-option"
-                          onMouseDown={() => {
-                            setSelectedPokemon(option.key);
-                            setSearchTerm(option.name);
-                            setShowDropdown(false);
-                            navigate(`/contest-moves/rse/${option.key}`);
-                          }}
-                          role="option"
-                          aria-selected={option.key === selectedPokemon}
-                        >
-                          <img
-                            alt={option.name}
-                            className="pokemon-icon-small"
-                            {...getPokemonIconProps(option.key, option.data as PokemonData, pokemonDb)}
-                          />
-                          <span>{option.name}</span>
-                        </li>
-                      ))}
-                      {searchResults.length === 0 && (
-                        <li className="combobox-empty" aria-live="polite">No matches</li>
-                      )}
-                    </ul>
-                  )}
-                </div>
-              </div>
-
-              <div className="type-select">
-                <select
-                  id="contest-type"
-                  aria-label="Contest type"
-                  value={chosenContestType}
-                  onChange={e => setChosenContestType(e.target.value as typeof chosenContestType)}
-                >
-                  {TYPE_FILTERS.map(option => (
-                    <option key={option.value} value={option.value}>{option.label}</option>
+          <div
+            className="moves-container"
+            onClick={(e) => {
+              // Close move details if clicking on the container background (not on moves or details)
+              if (e.target === e.currentTarget) {
+                setSelectedMoveIndex(null);
+              }
+            }}
+          >
+            {optimalMoves && optimalMoves.length > 0 ? (
+              <>
+                <div className="moves-list">
+                  {optimalMoves.map((contestMove, index) => (
+                    <div
+                      key={index}
+                      className={`move-row move-type-${contestMove.type} ${selectedMoveIndex === index ? 'selected' : ''}`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedMoveIndex(index);
+                      }}
+                    >
+                      <div className="move-type-badge">{contestMove.type.toUpperCase()}</div>
+                      <div className="move-name">{contestMove.move.replace(/-/g, ' ')}</div>
+                      <div className="move-value">{contestMove.appeal}</div>
+                    </div>
                   ))}
-                </select>
+                </div>
+                {selectedMoveName && selectedMoveEffect && (
+                  <div className="move-details" onClick={(e) => e.stopPropagation()}>
+                    <div className="move-details-header">
+                      <div className="move-details-methods">
+                        <span className="move-details-methods-text">{selectedMoveLearnMethods}</span>
+                      </div>
+                      {selectedMoveEffect.star === 1 && <div className="move-details-star">
+                        <span>⭐</span>
+                      </div>}
+                      <div className="move-details-appeal">
+                        {Array.from({ length: selectedMoveEffect.appeal }).map((_, i) => (
+                          <span key={i}>❤️</span>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="move-details-description">
+                      <p className="move-details-flavor">{selectedMoveEffect.flavor_text}</p>
+                      <p className="move-details-effect">{selectedMoveEffect.effect_description}</p>
+                    </div>
+                  </div>
+                )}
+              </>
+            ) : (
+              <div className="no-moves">
+                {selectedPokemon ? 'No contest moves available' : 'Select a Pokémon'}
               </div>
-
-              <button
-                type="button"
-                className={`language-toggle${showOptions ? ' open' : ''}`}
-                onClick={() => setShowOptions(prev => !prev)}
-                aria-label={showOptions ? 'Hide options' : 'Show options'}
-              >
-                {showOptions ? '▲' : '▼'}
-              </button>
-            </div>
+            )}
           </div>
         </div>
 
-          {showOptions && (
-            <div className="viewer-options">
-              <div className="option-grid">
-                {OPTION_FILTERS.map(option => {
-                  const isOn = optionFilters[option.key];
-                  return (
-                    <label key={option.key} className={`option-toggle ${isOn ? 'on' : 'off'}`}>
-                      <input
-                        type="checkbox"
-                        checked={isOn}
-                        onChange={() =>
-                          setOptionFilters(prev => ({
-                            ...prev,
-                            [option.key]: !prev[option.key],
-                          }))
-                        }
-                      />
-                      <span className="toggle-track">
-                        <span className="toggle-thumb" />
-                      </span>
-                      <span className="option-label">{option.label}</span>
-                    </label>
-                  );
-                })}
-              </div>
+        <div className="pokemon-selector-section">
+          <div className="pokemon-selector-bar">
+            <div className="pokemon-search-input-wrapper">
+              <input
+                type="text"
+                className="pokemon-search-input"
+                placeholder="Type to search..."
+                value={searchTerm}
+                onChange={e => {
+                  setSearchTerm(e.target.value);
+                  setShowDropdown(true);
+                  setSelectedPokemon('');
+                }}
+                onFocus={() => setShowDropdown(true)}
+                onBlur={() => setTimeout(() => setShowDropdown(false), 200)}
+              />
+              {showDropdown && searchResults.length > 0 && (
+                <ul className="pokemon-search-dropdown">
+                  {searchResults.map(result => {
+                    const pokemonData = typedPokemonDb[result.key];
+                    if (!pokemonData) return null;
+                    const iconProps = getPokemonIconProps(result.key, pokemonData, typedPokemonDb);
+                    return (
+                      <li
+                        key={result.key}
+                        onMouseDown={() => handleSelect(result.key, result.name)}
+                        className="pokemon-search-option"
+                      >
+                        <img
+                          className="pokemon-icon-small"
+                          alt={result.name}
+                          {...iconProps}
+                        />
+                        <span>{result.name}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
             </div>
-          )}
-        </div>
+            <div className="contest-type-wrapper">
+              <select
+                className="contest-type-select"
+                value={selectedContestType}
+                onChange={e => setSelectedContestType(e.target.value as ContestType)}
+              >
+                <option value="all">All Contests</option>
+                <option value="cool">Cool</option>
+                <option value="beauty">Beauty</option>
+                <option value="cute">Cute</option>
+                <option value="smart">Smart</option>
+                <option value="tough">Tough</option>
+              </select>
+            </div>
+          </div>
 
-        <div className="viewer-body">
-          <div className="pokemon-plate">
-            {largeIconProps ? (
+          <div className="move-filter-container">
+            {selectedPokemon && largeIconProps && (
               <img
-                className="pokemon-hero"
-                alt={selectedDisplayName}
+                className="pokemon-watermark"
+                alt={displayName}
                 {...largeIconProps}
               />
-            ) : (
-              <div className="pokemon-placeholder">Select a Pokémon</div>
             )}
+            <div className={`learn-methods-grid ${visibleMethodCount === 3 || visibleMethodCount > 4 ? 'three-columns' : 'two-columns'}`}>
+              {availableMoves['level-up'] && Object.keys(availableMoves['level-up']).length > 0 && (
+                <label className="learn-method-checkbox">
+                  <input
+                    type="checkbox"
+                    checked={enabledMethods['level-up']}
+                    ref={(el) => {
+                      if (el) el.indeterminate = methodStates['level-up'] === 'partial';
+                    }}
+                    onChange={(e) => handleMethodToggle('level-up', e.target.checked)}
+                  />
+                  <span>Level-Up</span>
+                </label>
+              )}
+
+              {availableMoves['machine'] && Object.keys(availableMoves['machine']).length > 0 && (
+                <label className="learn-method-checkbox">
+                  <input
+                    type="checkbox"
+                    checked={enabledMethods['machine']}
+                    ref={(el) => {
+                      if (el) el.indeterminate = methodStates['machine'] === 'partial';
+                    }}
+                    onChange={(e) => handleMethodToggle('machine', e.target.checked)}
+                  />
+                  <span>TM/HM</span>
+                </label>
+              )}
+
+              {availableMoves['tutor'] && Object.keys(availableMoves['tutor']).length > 0 && (
+                <label className="learn-method-checkbox">
+                  <input
+                    type="checkbox"
+                    checked={enabledMethods['tutor']}
+                    ref={(el) => {
+                      if (el) el.indeterminate = methodStates['tutor'] === 'partial';
+                    }}
+                    onChange={(e) => handleMethodToggle('tutor', e.target.checked)}
+                  />
+                  <span>Tutor</span>
+                </label>
+              )}
+
+              {availableMoves['egg'] && Object.keys(availableMoves['egg']).length > 0 && (
+                <label className="learn-method-checkbox">
+                  <input
+                    type="checkbox"
+                    checked={enabledMethods['egg']}
+                    ref={(el) => {
+                      if (el) el.indeterminate = methodStates['egg'] === 'partial';
+                    }}
+                    onChange={(e) => handleMethodToggle('egg', e.target.checked)}
+                  />
+                  <span>Egg</span>
+                </label>
+              )}
+
+              {availableMoves['purify'] && Object.keys(availableMoves['purify']).length > 0 && (
+                <label className="learn-method-checkbox">
+                  <input
+                    type="checkbox"
+                    checked={enabledMethods['purify']}
+                    ref={(el) => {
+                      if (el) el.indeterminate = methodStates['purify'] === 'partial';
+                    }}
+                    onChange={(e) => handleMethodToggle('purify', e.target.checked)}
+                  />
+                  <span>Purify</span>
+                </label>
+              )}
+
+              {availableMoves['pre-evolution'] && Object.keys(availableMoves['pre-evolution']).length > 0 && (
+                <label className="learn-method-checkbox">
+                  <input
+                    type="checkbox"
+                    checked={enabledMethods['pre-evolution']}
+                    ref={(el) => {
+                      if (el) el.indeterminate = methodStates['pre-evolution'] === 'partial';
+                    }}
+                    onChange={(e) => handleMethodToggle('pre-evolution', e.target.checked)}
+                  />
+                  <span>Pre-Evo</span>
+                </label>
+              )}
+            </div>
+
+            <div className="move-filter-list">
+              {selectableMoves.map(move => {
+                const methods = getMoveLearnMethods(move, availableMoves);
+                // Sort methods in priority order: Level-up, TM/HM, Tutor, Egg, Purify, Pre-evolution
+                const methodOrder: LearnMethod[] = ['level-up', 'machine', 'tutor', 'egg', 'purify', 'pre-evolution'];
+                const sortedMethods = methods.sort((a, b) =>
+                  methodOrder.indexOf(a) - methodOrder.indexOf(b)
+                );
+
+                // Get the actual values for each method
+                const methodLabels = sortedMethods.map(m => {
+                  const value = availableMoves[m]?.[move];
+                  if (!value) return '';
+
+                  if (m === 'level-up') {
+                    return `lvl ${value}`;
+                  }
+                  return value;
+                }).filter(Boolean).join(', ');
+
+                return (
+                  <label key={move} className="move-filter-checkbox">
+                    <input
+                      type="checkbox"
+                      checked={!excludedMoves.has(move)}
+                      onChange={(e) => {
+                        const newExcluded = new Set(excludedMoves);
+                        if (e.target.checked) {
+                          newExcluded.delete(move);
+                        } else {
+                          newExcluded.add(move);
+                        }
+                        setExcludedMoves(newExcluded);
+                      }}
+                    />
+                    <span className="move-name-with-methods">
+                      {move.replace(/-/g, ' ')}
+                      <span className="move-learn-methods"> ({methodLabels})</span>
+                    </span>
+                  </label>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

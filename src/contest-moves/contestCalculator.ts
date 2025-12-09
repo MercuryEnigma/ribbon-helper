@@ -1,7 +1,6 @@
 import contestMoves from '../data/contest_moves_rse.json';
 import contestEffects from '../data/contest_effects_rse.json';
-import type { ContestType } from './types';
-import { MovesMap, LEARN_METHOD_PRIORITY, type LearnMethod } from './moveUtils';
+import { MovesMap, LEARN_METHOD_PRIORITY, type LearnMethod, type ContestType } from './moveUtils';
 
 export interface ContestMove {
   move: string;
