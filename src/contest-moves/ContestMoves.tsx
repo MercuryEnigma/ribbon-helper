@@ -1,8 +1,8 @@
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
-import RSEMoves from './RSEMoves.tsx';
-import DPPtMoves from './DPPtMoves.tsx';
-import ORASMoves from './ORASMoves.tsx';
-import BDSPMoves from './BDSPMoves.tsx';
+import RSEMoves from './RSEMoves';
+import DPPtMoves from './DPPtMoves';
+import ORASMoves from './ORASMoves';
+import BDSPMoves from './BDSPMoves';
 import './contest-moves.css';
 
 export default function ContestMoves() {
