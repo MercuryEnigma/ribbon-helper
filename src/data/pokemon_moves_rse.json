@@ -929,6 +929,12 @@
         "secret-power": "tm-43",
         "aerial-ace": "tm-40"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "morning-sun": "purify"
+      }
     }
   },
   "weedle": {
@@ -1015,6 +1021,12 @@
         "focus-energy": "15",
         "pursuit": "30",
         "endeavor": "45"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "baton-pass": "purify"
       }
     }
   },
@@ -1159,6 +1171,12 @@
       "version": "exd",
       "moves": {
         "swagger": "tutor"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
       }
     }
   },
@@ -1400,6 +1418,12 @@
         "icy-wind": "tutor",
         "swagger": "tutor"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
+      }
     }
   },
   "spearow": {
@@ -1478,6 +1502,12 @@
         "feint-attack": "egg",
         "false-swipe": "egg",
         "astonish": "egg"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "baton-pass": "purify"
       }
     }
   },
@@ -1702,6 +1732,12 @@
         "facade": "tm-42",
         "snatch": "tm-49",
         "secret-power": "tm-43"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
       }
     }
   },
@@ -2875,6 +2911,12 @@
         "heat-wave": "egg",
         "howl": "egg"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "charm": "purify"
+      }
     }
   },
   "ninetales": {
@@ -3571,6 +3613,12 @@
         "pursuit": "egg",
         "sweet-scent": "egg"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
+      }
     }
   },
   "parasect": {
@@ -3786,6 +3834,12 @@
         "secret-power": "tm-43",
         "aerial-ace": "tm-40"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
+      }
     }
   },
   "diglett": {
@@ -3953,6 +4007,13 @@
       "moves": {
         "swagger": "tutor"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "charm": "purify",
+        "sandstorm": "purify"
+      }
     }
   },
   "meowth": {
@@ -4051,6 +4112,12 @@
         "charm": "egg",
         "psych-up": "egg",
         "assist": "egg"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "sing": "purify"
       }
     }
   },
@@ -4329,6 +4396,12 @@
         "calm-mind": "tm-04",
         "water-pulse": "tm-03"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "charm": "purify"
+      }
     }
   },
   "mankey": {
@@ -4538,6 +4611,12 @@
         "aerial-ace": "tm-40",
         "bulk-up": "tm-08"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "helping-hand": "purify"
+      }
     }
   },
   "growlithe": {
@@ -4616,6 +4695,12 @@
         "secret-power": "tm-43",
         "overheat": "tm-50",
         "aerial-ace": "tm-40"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "charm": "purify"
       }
     }
   },
@@ -4924,6 +5009,12 @@
         "rock-tomb": "tm-39",
         "bulk-up": "tm-08",
         "water-pulse": "tm-03"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "helping-hand": "purify"
       }
     }
   },
@@ -5634,6 +5725,12 @@
         "sleep-powder": "15",
         "sweet-scent": "33"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "morning-sun": "purify"
+      }
     }
   },
   "victreebel": {
@@ -6302,6 +6399,12 @@
         "secret-power": "tm-43",
         "overheat": "tm-50"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "baton-pass": "purify"
+      }
     }
   },
   "slowpoke": {
@@ -6646,6 +6749,12 @@
         "secret-power": "tm-43",
         "shock-wave": "tm-34"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
+      }
     }
   },
   "farfetchd": {
@@ -6729,6 +6838,12 @@
         "foresight": "egg",
         "steel-wing": "egg",
         "feather-dance": "egg"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "baton-pass": "purify"
       }
     }
   },
@@ -6878,6 +6993,12 @@
       "moves": {
         "swagger": "tutor"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "baton-pass": "purify"
+      }
     }
   },
   "seel": {
@@ -6954,6 +7075,12 @@
         "secret-power": "tm-43",
         "dive": "hm-08",
         "water-pulse": "tm-03"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "helping-hand": "purify"
       }
     }
   },
@@ -7123,6 +7250,12 @@
         "mean-look": "egg",
         "imprison": "egg",
         "shadow-punch": "egg"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "helping-hand": "purify"
       }
     }
   },
@@ -7303,6 +7436,13 @@
         "secret-power": "tm-43",
         "dive": "hm-08",
         "water-pulse": "tm-03"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify",
+        "take-down": "purify"
       }
     }
   },
@@ -7976,6 +8116,12 @@
         "secret-power": "tm-43",
         "calm-mind": "tm-04"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "baton-pass": "purify"
+      }
     }
   },
   "krabby": {
@@ -8231,6 +8377,12 @@
       "moves": {
         "swagger": "tutor"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
+      }
     }
   },
   "electrode": {
@@ -8481,6 +8633,12 @@
         "secret-power": "tm-43",
         "bullet-seed": "tm-09"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
+      }
     }
   },
   "cubone": {
@@ -8672,6 +8830,12 @@
         "rock-tomb": "tm-39",
         "aerial-ace": "tm-40"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "sing": "purify"
+      }
     }
   },
   "hitmonlee": {
@@ -8753,6 +8917,12 @@
         "secret-power": "tm-43",
         "rock-tomb": "tm-39",
         "bulk-up": "tm-08"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
       }
     }
   },
@@ -8837,6 +9007,12 @@
         "secret-power": "tm-43",
         "rock-tomb": "tm-39",
         "bulk-up": "tm-08"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "helping-hand": "purify"
       }
     }
   },
@@ -8957,6 +9133,12 @@
         "sleep-talk": "egg",
         "magnitude": "egg",
         "smelling-salts": "egg"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "helping-hand": "purify"
       }
     }
   },
@@ -9321,6 +9503,12 @@
         "megahorn": "66",
         "rock-blast": "29"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "helping-hand": "purify"
+      }
     }
   },
   "chansey": {
@@ -9436,6 +9624,12 @@
         "present": "egg",
         "aromatherapy": "egg"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "sweet-kiss": "purify"
+      }
     }
   },
   "tangela": {
@@ -9521,6 +9715,12 @@
         "amnesia": "egg",
         "flail": "egg",
         "nature-power": "egg"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "morning-sun": "purify"
       }
     }
   },
@@ -9634,6 +9834,12 @@
         "foresight": "egg",
         "safeguard": "egg",
         "crush-claw": "egg"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "sing": "purify"
       }
     }
   },
@@ -10071,6 +10277,12 @@
         "dive": "hm-08",
         "water-pulse": "tm-03"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
+      }
     }
   },
   "mr-mime": {
@@ -10192,6 +10404,12 @@
         "fake-out": "egg",
         "trick": "egg"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "follow-me": "purify"
+      }
     }
   },
   "scyther": {
@@ -10276,6 +10494,13 @@
         "facade": "tm-42",
         "secret-power": "tm-43",
         "aerial-ace": "tm-40"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "morning-sun": "purify",
+        "razor-wind": "purify"
       }
     }
   },
@@ -10456,6 +10681,12 @@
         "secret-power": "tm-43",
         "shock-wave": "tm-34"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "follow-me": "purify"
+      }
     }
   },
   "magmar": {
@@ -10539,6 +10770,12 @@
       "version": "co",
       "moves": {
         "follow-me": "unknown"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "follow-me": "purify"
       }
     }
   },
@@ -10626,6 +10863,12 @@
         "feint-attack": "egg",
         "false-swipe": "egg"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "helping-hand": "purify"
+      }
     }
   },
   "tauros": {
@@ -10705,6 +10948,12 @@
         "rock-tomb": "tm-39",
         "shock-wave": "tm-34",
         "water-pulse": "tm-03"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
       }
     }
   },
@@ -10887,6 +11136,12 @@
         "dive": "hm-08",
         "shock-wave": "tm-34",
         "water-pulse": "tm-03"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "heal-bell": "purify"
       }
     }
   },
@@ -11822,6 +12077,13 @@
         "shock-wave": "tm-34",
         "water-pulse": "tm-03"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify",
+        "fissure": "purify"
+      }
     }
   },
   "articuno": {
@@ -11896,6 +12158,14 @@
       "moves": {
         "icy-wind": "tutor",
         "swagger": "tutor"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "haze": "purify",
+        "heal-bell": "purify",
+        "extrasensory": "purify"
       }
     }
   },
@@ -11972,6 +12242,14 @@
         "detect": "37",
         "charge": "61"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "baton-pass": "purify",
+        "metal-sound": "purify",
+        "extrasensory": "purify"
+      }
     }
   },
   "moltres": {
@@ -12044,6 +12322,14 @@
       "version": "exd",
       "moves": {
         "swagger": "tutor"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "morning-sun": "purify",
+        "will-o-wisp": "purify",
+        "extrasensory": "purify"
       }
     }
   },
@@ -12298,6 +12584,12 @@
         "outrage": "61",
         "safeguard": "47",
         "twister": "1"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "heal-bell": "purify"
       }
     }
   },
@@ -13721,6 +14013,12 @@
         "secret-power": "tm-43",
         "aerial-ace": "tm-40"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
+      }
     }
   },
   "ledian": {
@@ -13873,6 +14171,12 @@
         "sunny-day": "tm-11",
         "facade": "tm-42",
         "secret-power": "tm-43"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
       }
     }
   },
@@ -14555,6 +14859,13 @@
         "psych-up": "egg",
         "future-sight": "egg"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "tri-attack": "purify",
+        "helping-hand": "purify"
+      }
     }
   },
   "togetic": {
@@ -14752,6 +15063,12 @@
         "aerial-ace": "tm-40",
         "calm-mind": "tm-04"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "baton-pass": "purify"
+      }
     }
   },
   "xatu": {
@@ -14904,6 +15221,12 @@
         "facade": "tm-42",
         "secret-power": "tm-43",
         "shock-wave": "tm-34"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "heal-bell": "purify"
       }
     }
   },
@@ -16868,6 +17191,12 @@
         "facade": "tm-42",
         "secret-power": "tm-43"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
+      }
     }
   },
   "forretress": {
@@ -18012,6 +18341,12 @@
         "yawn": "egg",
         "fake-tears": "egg"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
+      }
     }
   },
   "ursaring": {
@@ -18269,6 +18604,13 @@
         "overheat": "tm-50",
         "rock-tomb": "tm-39"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify",
+        "heat-wave": "purify"
+      }
     }
   },
   "swinub": {
@@ -18356,6 +18698,12 @@
         "facade": "tm-42",
         "secret-power": "tm-43",
         "rock-tomb": "tm-39"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "charm": "purify"
       }
     }
   },
@@ -19039,6 +19387,12 @@
         "pursuit": "egg",
         "beat-up": "egg",
         "will-o-wisp": "egg"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "charm": "purify"
       }
     }
   },
@@ -20755,6 +21109,13 @@
         "icy-wind": "tutor",
         "swagger": "tutor"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "featherdance": "purify",
+        "psycho-boost": "purify"
+      }
     }
   },
   "ho-oh": {
@@ -21829,6 +22190,12 @@
         "snatch": "tm-49",
         "secret-power": "tm-43"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "heal-bell": "purify"
+      }
     }
   },
   "mightyena": {
@@ -22570,6 +22937,12 @@
         "secret-power": "tm-43",
         "bullet-seed": "tm-09"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
+      }
     }
   },
   "nuzleaf": {
@@ -22903,6 +23276,12 @@
       "moves": {
         "swagger": "tutor"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "baton-pass": "purify"
+      }
     }
   },
   "wingull": {
@@ -23155,6 +23534,12 @@
         "secret-power": "tm-43",
         "calm-mind": "tm-04",
         "shock-wave": "tm-34"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "sing": "purify"
       }
     }
   },
@@ -23562,6 +23947,12 @@
         "swagger": "egg",
         "helping-hand": "egg",
         "fake-tears": "egg"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
       }
     }
   },
@@ -24544,6 +24935,12 @@
         "helping-hand": "egg",
         "revenge": "egg"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
+      }
     }
   },
   "hariyama": {
@@ -24799,6 +25196,12 @@
         "rollout": "egg",
         "magnitude": "egg"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "helping-hand": "purify"
+      }
     }
   },
   "skitty": {
@@ -24967,6 +25370,12 @@
         "shock-wave": "tm-34",
         "water-pulse": "tm-03"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "sweet-kiss": "purify"
+      }
     }
   },
   "sableye": {
@@ -25076,6 +25485,12 @@
         "moonlight": "egg",
         "psych-up": "egg"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "helping-hand": "purify"
+      }
     }
   },
   "mawile": {
@@ -25176,6 +25591,12 @@
         "brick-break": "tm-31",
         "secret-power": "tm-43",
         "rock-tomb": "tm-39"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "sing": "purify"
       }
     }
   },
@@ -25804,6 +26225,12 @@
         "secret-power": "tm-43",
         "shock-wave": "tm-34"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
+      }
     }
   },
   "plusle": {
@@ -26261,6 +26688,12 @@
         "spikes": "egg",
         "synthesis": "egg"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "sweet-kiss": "purify"
+      }
     }
   },
   "gulpin": {
@@ -26360,6 +26793,12 @@
         "dream-eater": "egg",
         "acid-armor": "egg",
         "pain-split": "egg"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "sing": "purify"
       }
     }
   },
@@ -26530,6 +26969,12 @@
         "secret-power": "tm-43",
         "dive": "hm-08",
         "water-pulse": "tm-03"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
       }
     }
   },
@@ -26864,6 +27309,12 @@
         "secret-power": "tm-43",
         "overheat": "tm-50",
         "rock-tomb": "tm-39"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "charm": "purify"
       }
     }
   },
@@ -27912,6 +28363,12 @@
       "moves": {
         "swagger": "tutor"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "heal-bell": "purify"
+      }
     }
   },
   "zangoose": {
@@ -28023,6 +28480,12 @@
         "aerial-ace": "tm-40",
         "shock-wave": "tm-34",
         "water-pulse": "tm-03"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
       }
     }
   },
@@ -28190,6 +28653,12 @@
         "rock-tomb": "tm-39",
         "calm-mind": "tm-04"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "baton-pass": "purify"
+      }
     }
   },
   "solrock": {
@@ -28278,6 +28747,12 @@
         "overheat": "tm-50",
         "rock-tomb": "tm-39",
         "calm-mind": "tm-04"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "baton-pass": "purify"
       }
     }
   },
@@ -28704,6 +29179,12 @@
         "ancient-power": "25",
         "rock-tomb": "15",
         "cosmic-power": "37"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
       }
     }
   },
@@ -29616,6 +30097,12 @@
         "grudge": "64",
         "snatch": "55"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "helping-hand": "purify"
+      }
     }
   },
   "duskull": {
@@ -29704,6 +30191,12 @@
         "memento": "egg",
         "imprison": "egg",
         "grudge": "egg"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "helping-hand": "purify"
       }
     }
   },
@@ -30186,6 +30679,12 @@
         "spikes": "egg",
         "block": "egg"
       }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "sing": "purify"
+      }
     }
   },
   "glalie": {
@@ -30369,6 +30868,12 @@
         "swallow": "egg",
         "yawn": "egg",
         "water-sport": "egg"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "charm": "purify"
       }
     }
   },
@@ -31164,6 +31669,12 @@
       "version": "exd",
       "moves": {
         "swagger": "tutor"
+      }
+    },
+    "purification-xd": {
+      "version": "xd",
+      "moves": {
+        "refresh": "purify"
       }
     }
   },

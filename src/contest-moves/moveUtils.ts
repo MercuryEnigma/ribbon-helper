@@ -99,6 +99,10 @@ export function getAvailableMovesForPokemon(
       if (!result.egg) result.egg = {};
       Object.assign(result.egg, preEvoMoves.egg);
     }
+    if (preEvoMoves.purify && Object.keys(preEvoMoves.purify).length > 0) {
+      if (!result.purify) result.purify = {};
+      Object.assign(result.purify, preEvoMoves.purify);
+    }
     if (preEvoMoves['pre-evolution'] && Object.keys(preEvoMoves['pre-evolution']).length > 0) {
       result['pre-evolution'] = preEvoMoves['pre-evolution'];
     }
@@ -116,8 +120,8 @@ function getPreEvolutionMoves(
   pokemonMoves: Record<string, any>,
   pokemonDb: Record<string, any>,
   currentMoves: AvailableMovesByMethod
-): { egg?: Record<string, string>; 'pre-evolution'?: Record<string, string> } {
-  const result: { egg?: Record<string, string>; 'pre-evolution'?: Record<string, string> } = {};
+): { egg?: Record<string, string>; purify?: Record<string, string>; 'pre-evolution'?: Record<string, string> } {
+  const result: { egg?: Record<string, string>; purify?: Record<string, string>; 'pre-evolution'?: Record<string, string> } = {};
 
   const pokemonInfo = pokemonDb[pokemonKey];
   if (!pokemonInfo || !pokemonInfo.evolvesFrom) return result;
@@ -146,6 +150,10 @@ function getPreEvolutionMoves(
         if (method === 'egg') {
           if (!result.egg) result.egg = {};
           result.egg[moveName] = value;
+        } else if (method === 'purify') {
+          // If pre-evolution has it as purify move, add as purify
+          if (!result.purify) result.purify = {};
+          result.purify[moveName] = value;
         } else {
           // Otherwise add as pre-evolution
           if (!result['pre-evolution']) result['pre-evolution'] = {};

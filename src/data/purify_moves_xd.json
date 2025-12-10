@@ -1,0 +1,264 @@
+{
+  "butterfree": [
+    "morning-sun"
+  ],
+  "beedrill": [
+    "baton-pass"
+  ],
+  "pidgeotto": [
+    "refresh"
+  ],
+  "raticate": [
+    "refresh"
+  ],
+  "spearow": [
+    "baton-pass"
+  ],
+  "arbok": [
+    "refresh"
+  ],
+  "vulpix": [
+    "charm"
+  ],
+  "paras": [
+    "refresh"
+  ],
+  "venomoth": [
+    "refresh"
+  ],
+  "dugtrio": [
+    "charm",
+    "sandstorm"
+  ],
+  "meowth": [
+    "sing"
+  ],
+  "golduck": [
+    "charm"
+  ],
+  "primeape": [
+    "helping-hand"
+  ],
+  "growlithe": [
+    "charm"
+  ],
+  "poliwrath": [
+    "helping-hand"
+  ],
+  "weepinbell": [
+    "morning-sun"
+  ],
+  "rapidash": [
+    "baton-pass"
+  ],
+  "magneton": [
+    "refresh"
+  ],
+  "farfetchd": [
+    "baton-pass"
+  ],
+  "dodrio": [
+    "baton-pass"
+  ],
+  "seel": [
+    "helping-hand"
+  ],
+  "grimer": [
+    "helping-hand"
+  ],
+  "shellder": [
+    "refresh",
+    "take-down"
+  ],
+  "hypno": [
+    "baton-pass"
+  ],
+  "voltorb": [
+    "refresh"
+  ],
+  "exeggutor": [
+    "refresh"
+  ],
+  "marowak": [
+    "sing"
+  ],
+  "hitmonlee": [
+    "refresh"
+  ],
+  "hitmonchan": [
+    "helping-hand"
+  ],
+  "lickitung": [
+    "helping-hand"
+  ],
+  "rhydon": [
+    "helping-hand"
+  ],
+  "chansey": [
+    "sweet-kiss"
+  ],
+  "tangela": [
+    "morning-sun"
+  ],
+  "kangaskhan": [
+    "sing"
+  ],
+  "starmie": [
+    "refresh"
+  ],
+  "mr-mime": [
+    "follow-me"
+  ],
+  "scyther": [
+    "morning-sun",
+    "razor-wind"
+  ],
+  "electabuzz": [
+    "follow-me"
+  ],
+  "magmar": [
+    "follow-me"
+  ],
+  "pinsir": [
+    "helping-hand"
+  ],
+  "tauros": [
+    "refresh"
+  ],
+  "lapras": [
+    "heal-bell"
+  ],
+  "snorlax": [
+    "refresh",
+    "fissure"
+  ],
+  "articuno": [
+    "haze",
+    "heal-bell",
+    "extrasensory"
+  ],
+  "zapdos": [
+    "baton-pass",
+    "metal-sound",
+    "extrasensory"
+  ],
+  "moltres": [
+    "morning-sun",
+    "will-o-wisp",
+    "extrasensory"
+  ],
+  "dragonite": [
+    "heal-bell"
+  ],
+  "ledyba": [
+    "refresh"
+  ],
+  "spinarak": [
+    "refresh"
+  ],
+  "togepi": [
+    "tri-attack",
+    "helping-hand"
+  ],
+  "natu": [
+    "baton-pass"
+  ],
+  "mareep": [
+    "heal-bell"
+  ],
+  "pineco": [
+    "refresh"
+  ],
+  "teddiursa": [
+    "refresh"
+  ],
+  "magcargo": [
+    "refresh",
+    "heat-wave"
+  ],
+  "swinub": [
+    "charm"
+  ],
+  "houndour": [
+    "charm"
+  ],
+  "lugia": [
+    "featherdance",
+    "psycho-boost"
+  ],
+  "poochyena": [
+    "heal-bell"
+  ],
+  "seedot": [
+    "refresh"
+  ],
+  "swellow": [
+    "baton-pass"
+  ],
+  "ralts": [
+    "sing"
+  ],
+  "shroomish": [
+    "refresh"
+  ],
+  "makuhita": [
+    "refresh"
+  ],
+  "nosepass": [
+    "helping-hand"
+  ],
+  "delcatty": [
+    "sweet-kiss"
+  ],
+  "sableye": [
+    "helping-hand"
+  ],
+  "mawile": [
+    "sing"
+  ],
+  "manectric": [
+    "refresh"
+  ],
+  "roselia": [
+    "sweet-kiss"
+  ],
+  "gulpin": [
+    "sing"
+  ],
+  "carvanha": [
+    "refresh"
+  ],
+  "numel": [
+    "charm"
+  ],
+  "altaria": [
+    "heal-bell"
+  ],
+  "zangoose": [
+    "refresh"
+  ],
+  "lunatone": [
+    "baton-pass"
+  ],
+  "solrock": [
+    "baton-pass"
+  ],
+  "baltoy": [
+    "refresh"
+  ],
+  "banette": [
+    "helping-hand"
+  ],
+  "duskull": [
+    "helping-hand"
+  ],
+  "snorunt": [
+    "sing"
+  ],
+  "spheal": [
+    "charm"
+  ],
+  "salamence": [
+    "refresh"
+  ]
+}
