@@ -3,10 +3,10 @@
  */
 
 /** Contest type categories */
-export type ContestType = 'cool' | 'beauty' | 'cute' | 'smart' | 'tough';
+export type ContestType = 'cool' | 'beauty' | 'beautiful' | 'cute' | 'smart' | 'clever' | 'tough';
 
 /** Learn method categories */
-export type LearnMethod = 'level-up' | 'machine' | 'tutor' | 'egg' | 'purify' | 'pre-evolution';
+export type LearnMethod = 'level-up' | 'machine' | 'tutor' | 'egg' | 'purify' | 'pre-evolution' | 'other';
 
 /** Map of moves to their set of learn method strings (e.g., {"rest": Set{"lvl 25", "tm-44"}}) */
 export type MovesMap = Record<string, Set<string>>;
@@ -28,6 +28,7 @@ export const LEARN_METHOD_PRIORITY: Record<LearnMethod, number> = {
   'egg': 4,
   'level-up': 5,
   'purify': 6,
+  'other': 99,
 };
 
 /**
@@ -305,9 +306,10 @@ export interface ContestEffect {
   id: number;
   appeal: number;
   jam: number;
-  effect_description: string;
+  effect_description?: string;  // Optional: ORAS doesn't have this
   flavor_text: string;
   star?: number;
+  repeat?: boolean;  // Optional: ORAS has this for repeatable moves
 }
 
 /**
@@ -316,7 +318,7 @@ export interface ContestEffect {
 export interface ContestMoveData {
   type: ContestType;
   effect: number;
-  combos: {
+  combos?: {  // Optional: ORAS doesn't have combos
     before: string[];
     after: string[];
   };

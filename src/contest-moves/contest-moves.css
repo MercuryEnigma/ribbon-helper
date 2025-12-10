@@ -182,7 +182,7 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   white-space: nowrap;
-  width: 80px;
+  width: 95px;
   text-align: center;
 }
 
@@ -197,12 +197,22 @@
   border: 2px solid #2980b9;
 }
 
+.move-type-beautiful .move-type-badge {
+  background: #3498db;
+  border: 2px solid #2980b9;
+}
+
 .move-type-cute .move-type-badge {
   background: #ff69b4;
   border: 2px solid #e056a0;
 }
 
 .move-type-smart .move-type-badge {
+  background: #2ecc71;
+  border: 2px solid #27ae60;
+}
+
+.move-type-clever .move-type-badge {
   background: #2ecc71;
   border: 2px solid #27ae60;
 }

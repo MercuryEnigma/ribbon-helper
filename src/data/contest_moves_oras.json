@@ -1,0 +1,2486 @@
+{
+  "brave-bird": {
+    "type": "cool",
+    "effect": 1
+  },
+  "flare-blitz": {
+    "type": "cool",
+    "effect": 1
+  },
+  "high-jump-kick": {
+    "type": "cool",
+    "effect": 1
+  },
+  "jump-kick": {
+    "type": "cool",
+    "effect": 1
+  },
+  "outrage": {
+    "type": "cool",
+    "effect": 1
+  },
+  "submission": {
+    "type": "cool",
+    "effect": 1
+  },
+  "v-create": {
+    "type": "cool",
+    "effect": 1
+  },
+  "volt-tackle": {
+    "type": "cool",
+    "effect": 1
+  },
+  "cross-chop": {
+    "type": "cool",
+    "effect": 2
+  },
+  "drill-peck": {
+    "type": "cool",
+    "effect": 2
+  },
+  "night-slash": {
+    "type": "cool",
+    "effect": 2
+  },
+  "razor-wind": {
+    "type": "cool",
+    "effect": 2
+  },
+  "retaliate": {
+    "type": "cool",
+    "effect": 2
+  },
+  "sky-attack": {
+    "type": "cool",
+    "effect": 2
+  },
+  "solar-beam": {
+    "type": "cool",
+    "effect": 2
+  },
+  "steel-wing": {
+    "type": "cool",
+    "effect": 2
+  },
+  "blaze-kick": {
+    "type": "cool",
+    "effect": 3
+  },
+  "dragon-rage": {
+    "type": "cool",
+    "effect": 3
+  },
+  "fury-cutter": {
+    "type": "cool",
+    "effect": 3
+  },
+  "hyper-fang": {
+    "type": "cool",
+    "effect": 3
+  },
+  "leaf-blade": {
+    "type": "cool",
+    "effect": 3
+  },
+  "leaf-tornado": {
+    "type": "cool",
+    "effect": 3
+  },
+  "megahorn": {
+    "type": "cool",
+    "effect": 3
+  },
+  "meteor-mash": {
+    "type": "cool",
+    "effect": 3
+  },
+  "night-daze": {
+    "type": "cool",
+    "effect": 3
+  },
+  "psystrike": {
+    "type": "cool",
+    "effect": 3
+  },
+  "razor-shell": {
+    "type": "cool",
+    "effect": 3
+  },
+  "searing-shot": {
+    "type": "cool",
+    "effect": 3
+  },
+  "sonic-boom": {
+    "type": "cool",
+    "effect": 3
+  },
+  "triple-kick": {
+    "type": "cool",
+    "effect": 3
+  },
+  "mat-block": {
+    "type": "cool",
+    "effect": 4
+  },
+  "thunder-wave": {
+    "type": "cool",
+    "effect": 4
+  },
+  "guillotine": {
+    "type": "cool",
+    "effect": 5
+  },
+  "horn-drill": {
+    "type": "cool",
+    "effect": 5
+  },
+  "zap-cannon": {
+    "type": "cool",
+    "effect": 5
+  },
+  "dynamic-punch": {
+    "type": "cool",
+    "effect": 6
+  },
+  "leer": {
+    "type": "cool",
+    "effect": 6
+  },
+  "punishment": {
+    "type": "cool",
+    "effect": 6
+  },
+  "cross-poison": {
+    "type": "cool",
+    "effect": 7
+  },
+  "double-hit": {
+    "type": "cool",
+    "effect": 7
+  },
+  "double-kick": {
+    "type": "cool",
+    "effect": 7
+  },
+  "extrasensory": {
+    "type": "cool",
+    "effect": 7
+  },
+  "sky-uppercut": {
+    "type": "cool",
+    "effect": 7
+  },
+  "twineedle": {
+    "type": "cool",
+    "effect": 7
+  },
+  "x-scissor": {
+    "type": "cool",
+    "effect": 7
+  },
+  "air-slash": {
+    "type": "cool",
+    "effect": 8
+  },
+  "crush-claw": {
+    "type": "cool",
+    "effect": 8
+  },
+  "agility": {
+    "type": "cool",
+    "effect": 9
+  },
+  "aqua-jet": {
+    "type": "cool",
+    "effect": 9
+  },
+  "extreme-speed": {
+    "type": "cool",
+    "effect": 9
+  },
+  "mach-punch": {
+    "type": "cool",
+    "effect": 9
+  },
+  "quick-attack": {
+    "type": "cool",
+    "effect": 9
+  },
+  "tailwind": {
+    "type": "cool",
+    "effect": 9
+  },
+  "vacuum-wave": {
+    "type": "cool",
+    "effect": 9
+  },
+  "water-shuriken": {
+    "type": "cool",
+    "effect": 9
+  },
+  "circle-throw": {
+    "type": "cool",
+    "effect": 10
+  },
+  "roar": {
+    "type": "cool",
+    "effect": 10
+  },
+  "bullet-seed": {
+    "type": "cool",
+    "effect": 11
+  },
+  "fury-attack": {
+    "type": "cool",
+    "effect": 11
+  },
+  "pin-missile": {
+    "type": "cool",
+    "effect": 11
+  },
+  "spike-cannon": {
+    "type": "cool",
+    "effect": 11
+  },
+  "electro-ball": {
+    "type": "cool",
+    "effect": 12
+  },
+  "aeroblast": {
+    "type": "cool",
+    "effect": 13
+  },
+  "parting-shot": {
+    "type": "cool",
+    "effect": 13
+  },
+  "precipice-blades": {
+    "type": "cool",
+    "effect": 13
+  },
+  "sacred-sword": {
+    "type": "cool",
+    "effect": 14
+  },
+  "storm-throw": {
+    "type": "cool",
+    "effect": 14
+  },
+  "bulk-up": {
+    "type": "cool",
+    "effect": 15
+  },
+  "double-team": {
+    "type": "cool",
+    "effect": 15
+  },
+  "dragon-dance": {
+    "type": "cool",
+    "effect": 15
+  },
+  "focus-energy": {
+    "type": "cool",
+    "effect": 15
+  },
+  "false-swipe": {
+    "type": "cool",
+    "effect": 16
+  },
+  "hold-back": {
+    "type": "cool",
+    "effect": 16
+  },
+  "volt-switch": {
+    "type": "cool",
+    "effect": 16
+  },
+  "stealth-rock": {
+    "type": "cool",
+    "effect": 17
+  },
+  "barrier": {
+    "type": "cool",
+    "effect": 18
+  },
+  "detect": {
+    "type": "cool",
+    "effect": 18
+  },
+  "king-s-shield": {
+    "type": "cool",
+    "effect": 18
+  },
+  "phantom-force": {
+    "type": "cool",
+    "effect": 18
+  },
+  "shadow-force": {
+    "type": "cool",
+    "effect": 18
+  },
+  "teleport": {
+    "type": "cool",
+    "effect": 18
+  },
+  "air-cutter": {
+    "type": "cool",
+    "effect": 19
+  },
+  "brick-break": {
+    "type": "cool",
+    "effect": 19
+  },
+  "cut": {
+    "type": "cool",
+    "effect": 19
+  },
+  "dark-pulse": {
+    "type": "cool",
+    "effect": 19
+  },
+  "dragon-claw": {
+    "type": "cool",
+    "effect": 19
+  },
+  "fire-fang": {
+    "type": "cool",
+    "effect": 19
+  },
+  "focus-blast": {
+    "type": "cool",
+    "effect": 19
+  },
+  "force-palm": {
+    "type": "cool",
+    "effect": 19
+  },
+  "horn-attack": {
+    "type": "cool",
+    "effect": 19
+  },
+  "ice-fang": {
+    "type": "cool",
+    "effect": 19
+  },
+  "iron-tail": {
+    "type": "cool",
+    "effect": 19
+  },
+  "metal-claw": {
+    "type": "cool",
+    "effect": 19
+  },
+  "peck": {
+    "type": "cool",
+    "effect": 19
+  },
+  "psycho-cut": {
+    "type": "cool",
+    "effect": 19
+  },
+  "razor-leaf": {
+    "type": "cool",
+    "effect": 19
+  },
+  "rolling-kick": {
+    "type": "cool",
+    "effect": 19
+  },
+  "shadow-claw": {
+    "type": "cool",
+    "effect": 19
+  },
+  "slash": {
+    "type": "cool",
+    "effect": 19
+  },
+  "spark": {
+    "type": "cool",
+    "effect": 19
+  },
+  "thunder-fang": {
+    "type": "cool",
+    "effect": 19
+  },
+  "thunder-punch": {
+    "type": "cool",
+    "effect": 19
+  },
+  "thunder-shock": {
+    "type": "cool",
+    "effect": 19
+  },
+  "thunderbolt": {
+    "type": "cool",
+    "effect": 19
+  },
+  "twister": {
+    "type": "cool",
+    "effect": 19
+  },
+  "vine-whip": {
+    "type": "cool",
+    "effect": 19
+  },
+  "wing-attack": {
+    "type": "cool",
+    "effect": 19
+  },
+  "oblivion-wing": {
+    "type": "cool",
+    "effect": 20
+  },
+  "hyper-voice": {
+    "type": "cool",
+    "effect": 21
+  },
+  "frenzy-plant": {
+    "type": "cool",
+    "effect": 22
+  },
+  "hyper-beam": {
+    "type": "cool",
+    "effect": 22
+  },
+  "dragon-breath": {
+    "type": "cool",
+    "effect": 23
+  },
+  "fusion-bolt": {
+    "type": "cool",
+    "effect": 24
+  },
+  "gyro-ball": {
+    "type": "cool",
+    "effect": 24
+  },
+  "reversal": {
+    "type": "cool",
+    "effect": 24
+  },
+  "trump-card": {
+    "type": "cool",
+    "effect": 24
+  },
+  "fell-stinger": {
+    "type": "cool",
+    "effect": 25
+  },
+  "mega-kick": {
+    "type": "cool",
+    "effect": 25
+  },
+  "rapid-spin": {
+    "type": "cool",
+    "effect": 25
+  },
+  "thunder": {
+    "type": "cool",
+    "effect": 25
+  },
+  "aerial-ace": {
+    "type": "cool",
+    "effect": 26
+  },
+  "defog": {
+    "type": "cool",
+    "effect": 26
+  },
+  "magnet-bomb": {
+    "type": "cool",
+    "effect": 26
+  },
+  "quick-guard": {
+    "type": "cool",
+    "effect": 26
+  },
+  "shock-wave": {
+    "type": "cool",
+    "effect": 26
+  },
+  "swift": {
+    "type": "cool",
+    "effect": 26
+  },
+  "howl": {
+    "type": "cool",
+    "effect": 27
+  },
+  "metal-burst": {
+    "type": "cool",
+    "effect": 27
+  },
+  "vital-throw": {
+    "type": "cool",
+    "effect": 27
+  },
+  "acrobatics": {
+    "type": "cool",
+    "effect": 28
+  },
+  "flame-charge": {
+    "type": "cool",
+    "effect": 28
+  },
+  "techno-blast": {
+    "type": "cool",
+    "effect": 28
+  },
+  "explosion": {
+    "type": "beautiful",
+    "effect": 29
+  },
+  "healing-wish": {
+    "type": "beautiful",
+    "effect": 29
+  },
+  "lunar-dance": {
+    "type": "beautiful",
+    "effect": 29
+  },
+  "self-destruct": {
+    "type": "beautiful",
+    "effect": 29
+  },
+  "draco-meteor": {
+    "type": "beautiful",
+    "effect": 1
+  },
+  "dragon-ascent": {
+    "type": "beautiful",
+    "effect": 1
+  },
+  "eruption": {
+    "type": "beautiful",
+    "effect": 1
+  },
+  "leaf-storm": {
+    "type": "beautiful",
+    "effect": 1
+  },
+  "light-of-ruin": {
+    "type": "beautiful",
+    "effect": 1
+  },
+  "overheat": {
+    "type": "beautiful",
+    "effect": 1
+  },
+  "petal-dance": {
+    "type": "beautiful",
+    "effect": 1
+  },
+  "seed-flare": {
+    "type": "beautiful",
+    "effect": 1
+  },
+  "spacial-rend": {
+    "type": "beautiful",
+    "effect": 1
+  },
+  "water-spout": {
+    "type": "beautiful",
+    "effect": 1
+  },
+  "avalanche": {
+    "type": "beautiful",
+    "effect": 2
+  },
+  "flame-wheel": {
+    "type": "beautiful",
+    "effect": 2
+  },
+  "freeze-shock": {
+    "type": "beautiful",
+    "effect": 2
+  },
+  "ice-burn": {
+    "type": "beautiful",
+    "effect": 2
+  },
+  "blue-flare": {
+    "type": "beautiful",
+    "effect": 3
+  },
+  "bolt-strike": {
+    "type": "beautiful",
+    "effect": 3
+  },
+  "echoed-voice": {
+    "type": "beautiful",
+    "effect": 3
+  },
+  "freeze-dry": {
+    "type": "beautiful",
+    "effect": 3
+  },
+  "judgment": {
+    "type": "beautiful",
+    "effect": 3
+  },
+  "mystical-fire": {
+    "type": "beautiful",
+    "effect": 3
+  },
+  "secret-sword": {
+    "type": "beautiful",
+    "effect": 3
+  },
+  "weather-ball": {
+    "type": "beautiful",
+    "effect": 3
+  },
+  "blizzard": {
+    "type": "beautiful",
+    "effect": 4
+  },
+  "spore": {
+    "type": "beautiful",
+    "effect": 4
+  },
+  "hail": {
+    "type": "beautiful",
+    "effect": 5
+  },
+  "sheer-cold": {
+    "type": "beautiful",
+    "effect": 5
+  },
+  "cotton-spore": {
+    "type": "beautiful",
+    "effect": 6
+  },
+  "electroweb": {
+    "type": "beautiful",
+    "effect": 6
+  },
+  "acid-spray": {
+    "type": "beautiful",
+    "effect": 7
+  },
+  "thousand-arrows": {
+    "type": "beautiful",
+    "effect": 7
+  },
+  "bug-buzz": {
+    "type": "beautiful",
+    "effect": 8
+  },
+  "ice-beam": {
+    "type": "beautiful",
+    "effect": 8
+  },
+  "inferno": {
+    "type": "beautiful",
+    "effect": 8
+  },
+  "moonblast": {
+    "type": "beautiful",
+    "effect": 8
+  },
+  "psyshock": {
+    "type": "beautiful",
+    "effect": 8
+  },
+  "haze": {
+    "type": "beautiful",
+    "effect": 30
+  },
+  "ice-shard": {
+    "type": "beautiful",
+    "effect": 9
+  },
+  "icicle-spear": {
+    "type": "beautiful",
+    "effect": 11
+  },
+  "moonlight": {
+    "type": "beautiful",
+    "effect": 11
+  },
+  "morning-sun": {
+    "type": "beautiful",
+    "effect": 11
+  },
+  "tri-attack": {
+    "type": "beautiful",
+    "effect": 11
+  },
+  "grassy-terrain": {
+    "type": "beautiful",
+    "effect": 12
+  },
+  "misty-terrain": {
+    "type": "beautiful",
+    "effect": 12
+  },
+  "origin-pulse": {
+    "type": "beautiful",
+    "effect": 12
+  },
+  "diamond-storm": {
+    "type": "beautiful",
+    "effect": 13
+  },
+  "doom-desire": {
+    "type": "beautiful",
+    "effect": 13
+  },
+  "icicle-crash": {
+    "type": "beautiful",
+    "effect": 13
+  },
+  "sacred-fire": {
+    "type": "beautiful",
+    "effect": 13
+  },
+  "steam-eruption": {
+    "type": "beautiful",
+    "effect": 13
+  },
+  "fire-pledge": {
+    "type": "beautiful",
+    "effect": 14
+  },
+  "grass-pledge": {
+    "type": "beautiful",
+    "effect": 14
+  },
+  "heal-pulse": {
+    "type": "beautiful",
+    "effect": 14
+  },
+  "water-pledge": {
+    "type": "beautiful",
+    "effect": 14
+  },
+  "aqua-ring": {
+    "type": "beautiful",
+    "effect": 15
+  },
+  "aromatic-mist": {
+    "type": "beautiful",
+    "effect": 15
+  },
+  "autotomize": {
+    "type": "beautiful",
+    "effect": 15
+  },
+  "cosmic-power": {
+    "type": "beautiful",
+    "effect": 15
+  },
+  "geomancy": {
+    "type": "beautiful",
+    "effect": 15
+  },
+  "growth": {
+    "type": "beautiful",
+    "effect": 15
+  },
+  "meditate": {
+    "type": "beautiful",
+    "effect": 15
+  },
+  "ominous-wind": {
+    "type": "beautiful",
+    "effect": 15
+  },
+  "quiver-dance": {
+    "type": "beautiful",
+    "effect": 15
+  },
+  "silver-wind": {
+    "type": "beautiful",
+    "effect": 15
+  },
+  "swords-dance": {
+    "type": "beautiful",
+    "effect": 15
+  },
+  "tail-glow": {
+    "type": "beautiful",
+    "effect": 15
+  },
+  "flame-burst": {
+    "type": "beautiful",
+    "effect": 31
+  },
+  "flash": {
+    "type": "beautiful",
+    "effect": 31
+  },
+  "psybeam": {
+    "type": "beautiful",
+    "effect": 31
+  },
+  "signal-beam": {
+    "type": "beautiful",
+    "effect": 31
+  },
+  "water-pulse": {
+    "type": "beautiful",
+    "effect": 31
+  },
+  "will-o-wisp": {
+    "type": "beautiful",
+    "effect": 31
+  },
+  "frost-breath": {
+    "type": "beautiful",
+    "effect": 16
+  },
+  "icy-wind": {
+    "type": "beautiful",
+    "effect": 16
+  },
+  "lovely-kiss": {
+    "type": "beautiful",
+    "effect": 16
+  },
+  "perish-song": {
+    "type": "beautiful",
+    "effect": 16
+  },
+  "mean-look": {
+    "type": "beautiful",
+    "effect": 17
+  },
+  "relic-song": {
+    "type": "beautiful",
+    "effect": 17
+  },
+  "dive": {
+    "type": "beautiful",
+    "effect": 32
+  },
+  "light-screen": {
+    "type": "beautiful",
+    "effect": 32
+  },
+  "safeguard": {
+    "type": "beautiful",
+    "effect": 32
+  },
+  "flower-shield": {
+    "type": "beautiful",
+    "effect": 18
+  },
+  "heal-bell": {
+    "type": "beautiful",
+    "effect": 18
+  },
+  "mist": {
+    "type": "beautiful",
+    "effect": 18
+  },
+  "aqua-tail": {
+    "type": "beautiful",
+    "effect": 19
+  },
+  "dazzling-gleam": {
+    "type": "beautiful",
+    "effect": 19
+  },
+  "dragon-pulse": {
+    "type": "beautiful",
+    "effect": 19
+  },
+  "earth-power": {
+    "type": "beautiful",
+    "effect": 19
+  },
+  "energy-ball": {
+    "type": "beautiful",
+    "effect": 19
+  },
+  "fairy-wind": {
+    "type": "beautiful",
+    "effect": 19
+  },
+  "flamethrower": {
+    "type": "beautiful",
+    "effect": 19
+  },
+  "flash-cannon": {
+    "type": "beautiful",
+    "effect": 19
+  },
+  "ice-punch": {
+    "type": "beautiful",
+    "effect": 19
+  },
+  "powder-snow": {
+    "type": "beautiful",
+    "effect": 19
+  },
+  "power-gem": {
+    "type": "beautiful",
+    "effect": 19
+  },
+  "discharge": {
+    "type": "beautiful",
+    "effect": 21
+  },
+  "heat-wave": {
+    "type": "beautiful",
+    "effect": 21
+  },
+  "land-s-wrath": {
+    "type": "beautiful",
+    "effect": 21
+  },
+  "petal-blizzard": {
+    "type": "beautiful",
+    "effect": 21
+  },
+  "surf": {
+    "type": "beautiful",
+    "effect": 21
+  },
+  "blast-burn": {
+    "type": "beautiful",
+    "effect": 22
+  },
+  "hydro-cannon": {
+    "type": "beautiful",
+    "effect": 22
+  },
+  "roar-of-time": {
+    "type": "beautiful",
+    "effect": 22
+  },
+  "aurora-beam": {
+    "type": "beautiful",
+    "effect": 23
+  },
+  "bubble-beam": {
+    "type": "beautiful",
+    "effect": 23
+  },
+  "mirror-shot": {
+    "type": "beautiful",
+    "effect": 23
+  },
+  "fire-spin": {
+    "type": "beautiful",
+    "effect": 33
+  },
+  "glaciate": {
+    "type": "beautiful",
+    "effect": 33
+  },
+  "ice-ball": {
+    "type": "beautiful",
+    "effect": 33
+  },
+  "ion-deluge": {
+    "type": "beautiful",
+    "effect": 33
+  },
+  "whirlpool": {
+    "type": "beautiful",
+    "effect": 33
+  },
+  "fusion-flare": {
+    "type": "beautiful",
+    "effect": 24
+  },
+  "fire-blast": {
+    "type": "beautiful",
+    "effect": 25
+  },
+  "hydro-pump": {
+    "type": "beautiful",
+    "effect": 25
+  },
+  "nature-power": {
+    "type": "beautiful",
+    "effect": 25
+  },
+  "rain-dance": {
+    "type": "beautiful",
+    "effect": 25
+  },
+  "sunny-day": {
+    "type": "beautiful",
+    "effect": 25
+  },
+  "aura-sphere": {
+    "type": "beautiful",
+    "effect": 26
+  },
+  "clear-smog": {
+    "type": "beautiful",
+    "effect": 26
+  },
+  "magical-leaf": {
+    "type": "beautiful",
+    "effect": 26
+  },
+  "feather-dance": {
+    "type": "beautiful",
+    "effect": 27
+  },
+  "magic-coat": {
+    "type": "beautiful",
+    "effect": 27
+  },
+  "mirror-coat": {
+    "type": "beautiful",
+    "effect": 27
+  },
+  "conversion": {
+    "type": "beautiful",
+    "effect": 34
+  },
+  "conversion-2": {
+    "type": "beautiful",
+    "effect": 34
+  },
+  "round": {
+    "type": "beautiful",
+    "effect": 34
+  },
+  "venoshock": {
+    "type": "beautiful",
+    "effect": 34
+  },
+  "charge-beam": {
+    "type": "beautiful",
+    "effect": 28
+  },
+  "fiery-dance": {
+    "type": "beautiful",
+    "effect": 28
+  },
+  "belly-drum": {
+    "type": "cute",
+    "effect": 1
+  },
+  "heart-stamp": {
+    "type": "cute",
+    "effect": 3
+  },
+  "present": {
+    "type": "cute",
+    "effect": 3
+  },
+  "rollout": {
+    "type": "cute",
+    "effect": 3
+  },
+  "charm": {
+    "type": "cute",
+    "effect": 6
+  },
+  "soak": {
+    "type": "cute",
+    "effect": 6
+  },
+  "uproar": {
+    "type": "cute",
+    "effect": 6
+  },
+  "entrainment": {
+    "type": "cute",
+    "effect": 7
+  },
+  "nuzzle": {
+    "type": "cute",
+    "effect": 7
+  },
+  "trick-or-treat": {
+    "type": "cute",
+    "effect": 7
+  },
+  "bug-bite": {
+    "type": "cute",
+    "effect": 30
+  },
+  "chatter": {
+    "type": "cute",
+    "effect": 30
+  },
+  "confide": {
+    "type": "cute",
+    "effect": 30
+  },
+  "fling": {
+    "type": "cute",
+    "effect": 30
+  },
+  "mud-slap": {
+    "type": "cute",
+    "effect": 30
+  },
+  "play-rough": {
+    "type": "cute",
+    "effect": 30
+  },
+  "pluck": {
+    "type": "cute",
+    "effect": 30
+  },
+  "simple-beam": {
+    "type": "cute",
+    "effect": 30
+  },
+  "swagger": {
+    "type": "cute",
+    "effect": 30
+  },
+  "tickle": {
+    "type": "cute",
+    "effect": 30
+  },
+  "baby-doll-eyes": {
+    "type": "cute",
+    "effect": 9
+  },
+  "after-you": {
+    "type": "cute",
+    "effect": 10
+  },
+  "assist": {
+    "type": "cute",
+    "effect": 11
+  },
+  "barrage": {
+    "type": "cute",
+    "effect": 11
+  },
+  "double-slap": {
+    "type": "cute",
+    "effect": 11
+  },
+  "metronome": {
+    "type": "cute",
+    "effect": 11
+  },
+  "sleep-talk": {
+    "type": "cute",
+    "effect": 11
+  },
+  "tail-slap": {
+    "type": "cute",
+    "effect": 11
+  },
+  "wish": {
+    "type": "cute",
+    "effect": 13
+  },
+  "celebrate": {
+    "type": "cute",
+    "effect": 14
+  },
+  "happy-hour": {
+    "type": "cute",
+    "effect": 14
+  },
+  "mud-sport": {
+    "type": "cute",
+    "effect": 14
+  },
+  "water-sport": {
+    "type": "cute",
+    "effect": 14
+  },
+  "hone-claws": {
+    "type": "cute",
+    "effect": 15
+  },
+  "lucky-chant": {
+    "type": "cute",
+    "effect": 15
+  },
+  "sharpen": {
+    "type": "cute",
+    "effect": 15
+  },
+  "dizzy-punch": {
+    "type": "cute",
+    "effect": 31
+  },
+  "sand-attack": {
+    "type": "cute",
+    "effect": 31
+  },
+  "captivate": {
+    "type": "cute",
+    "effect": 16
+  },
+  "fake-tears": {
+    "type": "cute",
+    "effect": 16
+  },
+  "slack-off": {
+    "type": "cute",
+    "effect": 16
+  },
+  "snore": {
+    "type": "cute",
+    "effect": 16
+  },
+  "splash": {
+    "type": "cute",
+    "effect": 16
+  },
+  "u-turn": {
+    "type": "cute",
+    "effect": 16
+  },
+  "attract": {
+    "type": "cute",
+    "effect": 17
+  },
+  "block": {
+    "type": "cute",
+    "effect": 17
+  },
+  "encore": {
+    "type": "cute",
+    "effect": 17
+  },
+  "sing": {
+    "type": "cute",
+    "effect": 17
+  },
+  "sweet-kiss": {
+    "type": "cute",
+    "effect": 17
+  },
+  "yawn": {
+    "type": "cute",
+    "effect": 17
+  },
+  "defense-curl": {
+    "type": "cute",
+    "effect": 32
+  },
+  "protect": {
+    "type": "cute",
+    "effect": 32
+  },
+  "refresh": {
+    "type": "cute",
+    "effect": 32
+  },
+  "substitute": {
+    "type": "cute",
+    "effect": 32
+  },
+  "sweet-scent": {
+    "type": "cute",
+    "effect": 32
+  },
+  "withdraw": {
+    "type": "cute",
+    "effect": 32
+  },
+  "amnesia": {
+    "type": "cute",
+    "effect": 18
+  },
+  "bounce": {
+    "type": "cute",
+    "effect": 18
+  },
+  "cotton-guard": {
+    "type": "cute",
+    "effect": 18
+  },
+  "hold-hands": {
+    "type": "cute",
+    "effect": 18
+  },
+  "minimize": {
+    "type": "cute",
+    "effect": 18
+  },
+  "rest": {
+    "type": "cute",
+    "effect": 18
+  },
+  "bubble": {
+    "type": "cute",
+    "effect": 19
+  },
+  "egg-bomb": {
+    "type": "cute",
+    "effect": 19
+  },
+  "ember": {
+    "type": "cute",
+    "effect": 19
+  },
+  "return": {
+    "type": "cute",
+    "effect": 19
+  },
+  "water-gun": {
+    "type": "cute",
+    "effect": 19
+  },
+  "draining-kiss": {
+    "type": "cute",
+    "effect": 20
+  },
+  "copycat": {
+    "type": "cute",
+    "effect": 35
+  },
+  "covet": {
+    "type": "cute",
+    "effect": 35
+  },
+  "mimic": {
+    "type": "cute",
+    "effect": 35
+  },
+  "role-play": {
+    "type": "cute",
+    "effect": 35
+  },
+  "teeter-dance": {
+    "type": "cute",
+    "effect": 22
+  },
+  "astonish": {
+    "type": "cute",
+    "effect": 23
+  },
+  "fake-out": {
+    "type": "cute",
+    "effect": 23
+  },
+  "frustration": {
+    "type": "cute",
+    "effect": 23
+  },
+  "lick": {
+    "type": "cute",
+    "effect": 23
+  },
+  "mud-bomb": {
+    "type": "cute",
+    "effect": 23
+  },
+  "follow-me": {
+    "type": "cute",
+    "effect": 33
+  },
+  "infestation": {
+    "type": "cute",
+    "effect": 33
+  },
+  "flail": {
+    "type": "cute",
+    "effect": 24
+  },
+  "grass-knot": {
+    "type": "cute",
+    "effect": 24
+  },
+  "bestow": {
+    "type": "cute",
+    "effect": 25
+  },
+  "play-nice": {
+    "type": "cute",
+    "effect": 25
+  },
+  "disarming-voice": {
+    "type": "cute",
+    "effect": 26
+  },
+  "milk-drink": {
+    "type": "cute",
+    "effect": 26
+  },
+  "soft-boiled": {
+    "type": "cute",
+    "effect": 26
+  },
+  "facade": {
+    "type": "cute",
+    "effect": 27
+  },
+  "growl": {
+    "type": "cute",
+    "effect": 27
+  },
+  "struggle-bug": {
+    "type": "cute",
+    "effect": 27
+  },
+  "tail-whip": {
+    "type": "cute",
+    "effect": 27
+  },
+  "baton-pass": {
+    "type": "cute",
+    "effect": 28
+  },
+  "last-resort": {
+    "type": "cute",
+    "effect": 28
+  },
+  "destiny-bond": {
+    "type": "clever",
+    "effect": 29
+  },
+  "psycho-boost": {
+    "type": "clever",
+    "effect": 1
+  },
+  "attack-order": {
+    "type": "clever",
+    "effect": 3
+  },
+  "hidden-power": {
+    "type": "clever",
+    "effect": 3
+  },
+  "kinesis": {
+    "type": "clever",
+    "effect": 3
+  },
+  "night-shade": {
+    "type": "clever",
+    "effect": 3
+  },
+  "transform": {
+    "type": "clever",
+    "effect": 3
+  },
+  "eerie-impulse": {
+    "type": "clever",
+    "effect": 4
+  },
+  "hypnosis": {
+    "type": "clever",
+    "effect": 4
+  },
+  "metal-sound": {
+    "type": "clever",
+    "effect": 4
+  },
+  "nightmare": {
+    "type": "clever",
+    "effect": 4
+  },
+  "sleep-powder": {
+    "type": "clever",
+    "effect": 4
+  },
+  "forest-s-curse": {
+    "type": "clever",
+    "effect": 5
+  },
+  "mist-ball": {
+    "type": "clever",
+    "effect": 5
+  },
+  "stun-spore": {
+    "type": "clever",
+    "effect": 5
+  },
+  "confuse-ray": {
+    "type": "clever",
+    "effect": 6
+  },
+  "taunt": {
+    "type": "clever",
+    "effect": 6
+  },
+  "electrify": {
+    "type": "clever",
+    "effect": 7
+  },
+  "foresight": {
+    "type": "clever",
+    "effect": 7
+  },
+  "heal-order": {
+    "type": "clever",
+    "effect": 7
+  },
+  "hex": {
+    "type": "clever",
+    "effect": 7
+  },
+  "luster-purge": {
+    "type": "clever",
+    "effect": 7
+  },
+  "pursuit": {
+    "type": "clever",
+    "effect": 7
+  },
+  "switcheroo": {
+    "type": "clever",
+    "effect": 7
+  },
+  "trick": {
+    "type": "clever",
+    "effect": 7
+  },
+  "giga-drain": {
+    "type": "clever",
+    "effect": 8
+  },
+  "acid": {
+    "type": "clever",
+    "effect": 30
+  },
+  "embargo": {
+    "type": "clever",
+    "effect": 30
+  },
+  "poison-powder": {
+    "type": "clever",
+    "effect": 30
+  },
+  "poison-tail": {
+    "type": "clever",
+    "effect": 30
+  },
+  "toxic": {
+    "type": "clever",
+    "effect": 30
+  },
+  "venom-drench": {
+    "type": "clever",
+    "effect": 30
+  },
+  "feint": {
+    "type": "clever",
+    "effect": 9
+  },
+  "lock-on": {
+    "type": "clever",
+    "effect": 9
+  },
+  "me-first": {
+    "type": "clever",
+    "effect": 9
+  },
+  "mind-reader": {
+    "type": "clever",
+    "effect": 9
+  },
+  "quash": {
+    "type": "clever",
+    "effect": 9
+  },
+  "shadow-sneak": {
+    "type": "clever",
+    "effect": 9
+  },
+  "whirlwind": {
+    "type": "clever",
+    "effect": 10
+  },
+  "psywave": {
+    "type": "clever",
+    "effect": 11
+  },
+  "synthesis": {
+    "type": "clever",
+    "effect": 11
+  },
+  "crafty-shield": {
+    "type": "clever",
+    "effect": 12
+  },
+  "electric-terrain": {
+    "type": "clever",
+    "effect": 12
+  },
+  "hyperspace-hole": {
+    "type": "clever",
+    "effect": 12
+  },
+  "sucker-punch": {
+    "type": "clever",
+    "effect": 12
+  },
+  "pay-day": {
+    "type": "clever",
+    "effect": 14
+  },
+  "calm-mind": {
+    "type": "clever",
+    "effect": 15
+  },
+  "charge": {
+    "type": "clever",
+    "effect": 15
+  },
+  "ingrain": {
+    "type": "clever",
+    "effect": 15
+  },
+  "leech-seed": {
+    "type": "clever",
+    "effect": 15
+  },
+  "magnetic-flux": {
+    "type": "clever",
+    "effect": 15
+  },
+  "nasty-plot": {
+    "type": "clever",
+    "effect": 15
+  },
+  "shift-gear": {
+    "type": "clever",
+    "effect": 15
+  },
+  "poison-gas": {
+    "type": "clever",
+    "effect": 31
+  },
+  "rock-tomb": {
+    "type": "clever",
+    "effect": 31
+  },
+  "screech": {
+    "type": "clever",
+    "effect": 31
+  },
+  "supersonic": {
+    "type": "clever",
+    "effect": 31
+  },
+  "powder": {
+    "type": "clever",
+    "effect": 16
+  },
+  "roost": {
+    "type": "clever",
+    "effect": 16
+  },
+  "dark-void": {
+    "type": "clever",
+    "effect": 17
+  },
+  "disable": {
+    "type": "clever",
+    "effect": 17
+  },
+  "flatter": {
+    "type": "clever",
+    "effect": 17
+  },
+  "gravity": {
+    "type": "clever",
+    "effect": 17
+  },
+  "magnet-rise": {
+    "type": "clever",
+    "effect": 17
+  },
+  "spider-web": {
+    "type": "clever",
+    "effect": 17
+  },
+  "spikes": {
+    "type": "clever",
+    "effect": 17
+  },
+  "telekinesis": {
+    "type": "clever",
+    "effect": 17
+  },
+  "toxic-spikes": {
+    "type": "clever",
+    "effect": 17
+  },
+  "worry-seed": {
+    "type": "clever",
+    "effect": 17
+  },
+  "defend-order": {
+    "type": "clever",
+    "effect": 32
+  },
+  "fly": {
+    "type": "clever",
+    "effect": 32
+  },
+  "grass-whistle": {
+    "type": "clever",
+    "effect": 32
+  },
+  "odor-sleuth": {
+    "type": "clever",
+    "effect": 32
+  },
+  "reflect": {
+    "type": "clever",
+    "effect": 32
+  },
+  "aromatherapy": {
+    "type": "clever",
+    "effect": 18
+  },
+  "absorb": {
+    "type": "clever",
+    "effect": 19
+  },
+  "confusion": {
+    "type": "clever",
+    "effect": 19
+  },
+  "gear-grind": {
+    "type": "clever",
+    "effect": 19
+  },
+  "helping-hand": {
+    "type": "clever",
+    "effect": 19
+  },
+  "needle-arm": {
+    "type": "clever",
+    "effect": 19
+  },
+  "poison-fang": {
+    "type": "clever",
+    "effect": 19
+  },
+  "psychic": {
+    "type": "clever",
+    "effect": 19
+  },
+  "shadow-ball": {
+    "type": "clever",
+    "effect": 19
+  },
+  "zen-headbutt": {
+    "type": "clever",
+    "effect": 19
+  },
+  "ally-switch": {
+    "type": "clever",
+    "effect": 36
+  },
+  "topsy-turvy": {
+    "type": "clever",
+    "effect": 36
+  },
+  "trick-room": {
+    "type": "clever",
+    "effect": 36
+  },
+  "wonder-room": {
+    "type": "clever",
+    "effect": 36
+  },
+  "camouflage": {
+    "type": "clever",
+    "effect": 20
+  },
+  "guard-split": {
+    "type": "clever",
+    "effect": 20
+  },
+  "guard-swap": {
+    "type": "clever",
+    "effect": 20
+  },
+  "heart-swap": {
+    "type": "clever",
+    "effect": 20
+  },
+  "pain-split": {
+    "type": "clever",
+    "effect": 20
+  },
+  "parabolic-charge": {
+    "type": "clever",
+    "effect": 20
+  },
+  "power-split": {
+    "type": "clever",
+    "effect": 20
+  },
+  "power-swap": {
+    "type": "clever",
+    "effect": 20
+  },
+  "foul-play": {
+    "type": "clever",
+    "effect": 35
+  },
+  "leech-life": {
+    "type": "clever",
+    "effect": 35
+  },
+  "mirror-move": {
+    "type": "clever",
+    "effect": 35
+  },
+  "recycle": {
+    "type": "clever",
+    "effect": 35
+  },
+  "sketch": {
+    "type": "clever",
+    "effect": 35
+  },
+  "skill-swap": {
+    "type": "clever",
+    "effect": 35
+  },
+  "snatch": {
+    "type": "clever",
+    "effect": 35
+  },
+  "gust": {
+    "type": "clever",
+    "effect": 23
+  },
+  "knock-off": {
+    "type": "clever",
+    "effect": 23
+  },
+  "low-sweep": {
+    "type": "clever",
+    "effect": 23
+  },
+  "mega-drain": {
+    "type": "clever",
+    "effect": 23
+  },
+  "poison-sting": {
+    "type": "clever",
+    "effect": 23
+  },
+  "smokescreen": {
+    "type": "clever",
+    "effect": 23
+  },
+  "string-shot": {
+    "type": "clever",
+    "effect": 23
+  },
+  "fairy-lock": {
+    "type": "clever",
+    "effect": 33
+  },
+  "heal-block": {
+    "type": "clever",
+    "effect": 33
+  },
+  "imprison": {
+    "type": "clever",
+    "effect": 33
+  },
+  "magic-room": {
+    "type": "clever",
+    "effect": 33
+  },
+  "rage-powder": {
+    "type": "clever",
+    "effect": 33
+  },
+  "sand-tomb": {
+    "type": "clever",
+    "effect": 33
+  },
+  "assurance": {
+    "type": "clever",
+    "effect": 24
+  },
+  "natural-gift": {
+    "type": "clever",
+    "effect": 25
+  },
+  "feint-attack": {
+    "type": "clever",
+    "effect": 26
+  },
+  "miracle-eye": {
+    "type": "clever",
+    "effect": 26
+  },
+  "shadow-punch": {
+    "type": "clever",
+    "effect": 26
+  },
+  "psycho-shift": {
+    "type": "clever",
+    "effect": 27
+  },
+  "dream-eater": {
+    "type": "clever",
+    "effect": 34
+  },
+  "future-sight": {
+    "type": "clever",
+    "effect": 34
+  },
+  "power-trick": {
+    "type": "clever",
+    "effect": 34
+  },
+  "psych-up": {
+    "type": "clever",
+    "effect": 34
+  },
+  "recover": {
+    "type": "clever",
+    "effect": 34
+  },
+  "reflect-type": {
+    "type": "clever",
+    "effect": 34
+  },
+  "synchronoise": {
+    "type": "clever",
+    "effect": 34
+  },
+  "beat-up": {
+    "type": "clever",
+    "effect": 28
+  },
+  "secret-power": {
+    "type": "clever",
+    "effect": 28
+  },
+  "stored-power": {
+    "type": "clever",
+    "effect": 28
+  },
+  "final-gambit": {
+    "type": "tough",
+    "effect": 29
+  },
+  "memento": {
+    "type": "tough",
+    "effect": 29
+  },
+  "close-combat": {
+    "type": "tough",
+    "effect": 1
+  },
+  "double-edge": {
+    "type": "tough",
+    "effect": 1
+  },
+  "hammer-arm": {
+    "type": "tough",
+    "effect": 1
+  },
+  "head-charge": {
+    "type": "tough",
+    "effect": 1
+  },
+  "head-smash": {
+    "type": "tough",
+    "effect": 1
+  },
+  "superpower": {
+    "type": "tough",
+    "effect": 1
+  },
+  "take-down": {
+    "type": "tough",
+    "effect": 1
+  },
+  "thrash": {
+    "type": "tough",
+    "effect": 1
+  },
+  "wild-charge": {
+    "type": "tough",
+    "effect": 1
+  },
+  "wood-hammer": {
+    "type": "tough",
+    "effect": 1
+  },
+  "brine": {
+    "type": "tough",
+    "effect": 2
+  },
+  "dragon-rush": {
+    "type": "tough",
+    "effect": 2
+  },
+  "drill-run": {
+    "type": "tough",
+    "effect": 2
+  },
+  "skull-bash": {
+    "type": "tough",
+    "effect": 2
+  },
+  "smelling-salts": {
+    "type": "tough",
+    "effect": 2
+  },
+  "stone-edge": {
+    "type": "tough",
+    "effect": 2
+  },
+  "wake-up-slap": {
+    "type": "tough",
+    "effect": 2
+  },
+  "bone-club": {
+    "type": "tough",
+    "effect": 3
+  },
+  "crabhammer": {
+    "type": "tough",
+    "effect": 3
+  },
+  "crush-grip": {
+    "type": "tough",
+    "effect": 3
+  },
+  "mega-punch": {
+    "type": "tough",
+    "effect": 3
+  },
+  "octazooka": {
+    "type": "tough",
+    "effect": 3
+  },
+  "seismic-toss": {
+    "type": "tough",
+    "effect": 3
+  },
+  "steamroller": {
+    "type": "tough",
+    "effect": 3
+  },
+  "glare": {
+    "type": "tough",
+    "effect": 4
+  },
+  "rage": {
+    "type": "tough",
+    "effect": 4
+  },
+  "earthquake": {
+    "type": "tough",
+    "effect": 5
+  },
+  "fissure": {
+    "type": "tough",
+    "effect": 5
+  },
+  "gunk-shot": {
+    "type": "tough",
+    "effect": 5
+  },
+  "hurricane": {
+    "type": "tough",
+    "effect": 5
+  },
+  "sandstorm": {
+    "type": "tough",
+    "effect": 5
+  },
+  "spite": {
+    "type": "tough",
+    "effect": 5
+  },
+  "super-fang": {
+    "type": "tough",
+    "effect": 5
+  },
+  "sludge-bomb": {
+    "type": "tough",
+    "effect": 6
+  },
+  "smack-down": {
+    "type": "tough",
+    "effect": 6
+  },
+  "sticky-web": {
+    "type": "tough",
+    "effect": 6
+  },
+  "wring-out": {
+    "type": "tough",
+    "effect": 6
+  },
+  "bonemerang": {
+    "type": "tough",
+    "effect": 7
+  },
+  "dual-chop": {
+    "type": "tough",
+    "effect": 7
+  },
+  "body-slam": {
+    "type": "tough",
+    "effect": 8
+  },
+  "crunch": {
+    "type": "tough",
+    "effect": 8
+  },
+  "constrict": {
+    "type": "tough",
+    "effect": 30
+  },
+  "gastro-acid": {
+    "type": "tough",
+    "effect": 30
+  },
+  "scary-face": {
+    "type": "tough",
+    "effect": 30
+  },
+  "sludge-wave": {
+    "type": "tough",
+    "effect": 30
+  },
+  "thousand-waves": {
+    "type": "tough",
+    "effect": 30
+  },
+  "bullet-punch": {
+    "type": "tough",
+    "effect": 9
+  },
+  "rock-polish": {
+    "type": "tough",
+    "effect": 9
+  },
+  "bide": {
+    "type": "tough",
+    "effect": 10
+  },
+  "curse": {
+    "type": "tough",
+    "effect": 10
+  },
+  "dragon-tail": {
+    "type": "tough",
+    "effect": 10
+  },
+  "endure": {
+    "type": "tough",
+    "effect": 10
+  },
+  "acupressure": {
+    "type": "tough",
+    "effect": 11
+  },
+  "arm-thrust": {
+    "type": "tough",
+    "effect": 11
+  },
+  "bone-rush": {
+    "type": "tough",
+    "effect": 11
+  },
+  "comet-punch": {
+    "type": "tough",
+    "effect": 11
+  },
+  "fury-swipes": {
+    "type": "tough",
+    "effect": 11
+  },
+  "rock-blast": {
+    "type": "tough",
+    "effect": 11
+  },
+  "hyperspace-fury": {
+    "type": "tough",
+    "effect": 12
+  },
+  "work-up": {
+    "type": "tough",
+    "effect": 12
+  },
+  "heat-crash": {
+    "type": "tough",
+    "effect": 13
+  },
+  "heavy-slam": {
+    "type": "tough",
+    "effect": 13
+  },
+  "shell-smash": {
+    "type": "tough",
+    "effect": 13
+  },
+  "chip-away": {
+    "type": "tough",
+    "effect": 14
+  },
+  "flying-press": {
+    "type": "tough",
+    "effect": 14
+  },
+  "ancient-power": {
+    "type": "tough",
+    "effect": 15
+  },
+  "coil": {
+    "type": "tough",
+    "effect": 15
+  },
+  "rototiller": {
+    "type": "tough",
+    "effect": 15
+  },
+  "stockpile": {
+    "type": "tough",
+    "effect": 15
+  },
+  "incinerate": {
+    "type": "tough",
+    "effect": 31
+  },
+  "rock-climb": {
+    "type": "tough",
+    "effect": 31
+  },
+  "snarl": {
+    "type": "tough",
+    "effect": 16
+  },
+  "scald": {
+    "type": "tough",
+    "effect": 17
+  },
+  "torment": {
+    "type": "tough",
+    "effect": 17
+  },
+  "dig": {
+    "type": "tough",
+    "effect": 32
+  },
+  "harden": {
+    "type": "tough",
+    "effect": 32
+  },
+  "swallow": {
+    "type": "tough",
+    "effect": 32
+  },
+  "acid-armor": {
+    "type": "tough",
+    "effect": 18
+  },
+  "iron-defense": {
+    "type": "tough",
+    "effect": 18
+  },
+  "spiky-shield": {
+    "type": "tough",
+    "effect": 18
+  },
+  "wide-guard": {
+    "type": "tough",
+    "effect": 18
+  },
+  "fire-punch": {
+    "type": "tough",
+    "effect": 19
+  },
+  "headbutt": {
+    "type": "tough",
+    "effect": 19
+  },
+  "iron-head": {
+    "type": "tough",
+    "effect": 19
+  },
+  "karate-chop": {
+    "type": "tough",
+    "effect": 19
+  },
+  "mud-shot": {
+    "type": "tough",
+    "effect": 19
+  },
+  "poison-jab": {
+    "type": "tough",
+    "effect": 19
+  },
+  "pound": {
+    "type": "tough",
+    "effect": 19
+  },
+  "rock-smash": {
+    "type": "tough",
+    "effect": 19
+  },
+  "rock-throw": {
+    "type": "tough",
+    "effect": 19
+  },
+  "scratch": {
+    "type": "tough",
+    "effect": 19
+  },
+  "seed-bomb": {
+    "type": "tough",
+    "effect": 19
+  },
+  "slam": {
+    "type": "tough",
+    "effect": 19
+  },
+  "smog": {
+    "type": "tough",
+    "effect": 19
+  },
+  "stomp": {
+    "type": "tough",
+    "effect": 19
+  },
+  "strength": {
+    "type": "tough",
+    "effect": 19
+  },
+  "struggle": {
+    "type": "tough",
+    "effect": 19
+  },
+  "tackle": {
+    "type": "tough",
+    "effect": 19
+  },
+  "vice-grip": {
+    "type": "tough",
+    "effect": 19
+  },
+  "waterfall": {
+    "type": "tough",
+    "effect": 19
+  },
+  "drain-punch": {
+    "type": "tough",
+    "effect": 35
+  },
+  "horn-leech": {
+    "type": "tough",
+    "effect": 35
+  },
+  "thief": {
+    "type": "tough",
+    "effect": 35
+  },
+  "bulldoze": {
+    "type": "tough",
+    "effect": 21
+  },
+  "lava-plume": {
+    "type": "tough",
+    "effect": 21
+  },
+  "muddy-water": {
+    "type": "tough",
+    "effect": 21
+  },
+  "rock-slide": {
+    "type": "tough",
+    "effect": 21
+  },
+  "boomburst": {
+    "type": "tough",
+    "effect": 22
+  },
+  "giga-impact": {
+    "type": "tough",
+    "effect": 22
+  },
+  "grudge": {
+    "type": "tough",
+    "effect": 22
+  },
+  "rock-wrecker": {
+    "type": "tough",
+    "effect": 22
+  },
+  "bite": {
+    "type": "tough",
+    "effect": 23
+  },
+  "sludge": {
+    "type": "tough",
+    "effect": 23
+  },
+  "bind": {
+    "type": "tough",
+    "effect": 33
+  },
+  "clamp": {
+    "type": "tough",
+    "effect": 33
+  },
+  "magma-storm": {
+    "type": "tough",
+    "effect": 33
+  },
+  "sky-drop": {
+    "type": "tough",
+    "effect": 33
+  },
+  "wrap": {
+    "type": "tough",
+    "effect": 33
+  },
+  "low-kick": {
+    "type": "tough",
+    "effect": 24
+  },
+  "magnitude": {
+    "type": "tough",
+    "effect": 25
+  },
+  "power-whip": {
+    "type": "tough",
+    "effect": 25
+  },
+  "noble-roar": {
+    "type": "tough",
+    "effect": 26
+  },
+  "counter": {
+    "type": "tough",
+    "effect": 27
+  },
+  "endeavor": {
+    "type": "tough",
+    "effect": 27
+  },
+  "focus-punch": {
+    "type": "tough",
+    "effect": 27
+  },
+  "payback": {
+    "type": "tough",
+    "effect": 27
+  },
+  "revenge": {
+    "type": "tough",
+    "effect": 27
+  },
+  "belch": {
+    "type": "tough",
+    "effect": 28
+  },
+  "power-up-punch": {
+    "type": "tough",
+    "effect": 28
+  },
+  "spit-up": {
+    "type": "tough",
+    "effect": 28
+  }
+}

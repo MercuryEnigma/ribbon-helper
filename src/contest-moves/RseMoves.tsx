@@ -20,7 +20,7 @@ import {
   type ContestMoveData,
   type ContestEffect
 } from './moveUtils';
-import { getRseContestMoves } from './contestCalculator';
+import { getContestOptimalMoves } from './contestCalculator';
 
 type GameSelection = 'rse' | 'dppt' | 'oras' | 'bdsp';
 
@@ -70,7 +70,8 @@ export default function RSEMoves({ selectedGame, onNavigate }: RSEMovesProps) {
     'tutor': true,
     'egg': true,
     'purify': true,
-    'pre-evolution': true
+    'pre-evolution': true,
+    'other': true
   });
   const [excludedMoves, setExcludedMoves] = useState<Set<string>>(new Set());
 
@@ -117,7 +118,8 @@ export default function RSEMoves({ selectedGame, onNavigate }: RSEMovesProps) {
       'tutor': true,
       'egg': true,
       'purify': true,
-      'pre-evolution': true
+      'pre-evolution': true,
+      'other': true
     });
     setExcludedMoves(new Set());
     setSelectedMoveIndex(null);
@@ -181,7 +183,8 @@ export default function RSEMoves({ selectedGame, onNavigate }: RSEMovesProps) {
       'tutor': true,
       'egg': true,
       'purify': true,
-      'pre-evolution': true
+      'pre-evolution': true,
+      'other': true
     };
     return getSelectableMoves(availableMoves, allEnabledMethods);
   }, [availableMoves]);
@@ -194,7 +197,7 @@ export default function RSEMoves({ selectedGame, onNavigate }: RSEMovesProps) {
   // Count visible learn methods for grid layout
   const visibleMethodCount = useMemo(() => {
     let count = 0;
-    const methods: LearnMethod[] = ['level-up', 'machine', 'tutor', 'egg', 'purify', 'pre-evolution'];
+    const methods: LearnMethod[] = ['level-up', 'machine', 'tutor', 'egg', 'purify', 'pre-evolution', 'other'];
     for (const method of methods) {
       if (availableMoves[method] && Object.keys(availableMoves[method]).length > 0) {
         count++;
@@ -211,7 +214,7 @@ export default function RSEMoves({ selectedGame, onNavigate }: RSEMovesProps) {
     const filteredMoves = filterAvailableMoves(availableMoves, enabledMethods, excludedMoves);
 
     // Get optimal move sequence using the selected contest type
-    return getRseContestMoves(filteredMoves, selectedContestType);
+    return getContestOptimalMoves(filteredMoves, selectedContestType);
   }, [selectedPokemon, availableMoves, enabledMethods, excludedMoves, selectedContestType]);
 
   const selectedPokemonData = useMemo(() => {

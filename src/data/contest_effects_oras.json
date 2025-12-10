@@ -1,0 +1,228 @@
+{
+  "1": {
+    "id": 1,
+    "appeal": 3,
+    "jam": 0,
+    "flavor_text": "A very appealing move, but after using this move, the user is more easily startled."
+  },
+  "2": {
+    "id": 2,
+    "appeal": 3,
+    "jam": 0,
+    "flavor_text": "Affected by how well the previous Pokémon's move went."
+  },
+  "3": {
+    "id": 3,
+    "appeal": 3,
+    "jam": 0,
+    "repeat": true,
+    "flavor_text": "An appealing move that can be used repeatedly without boring the audience."
+  },
+  "4": {
+    "id": 4,
+    "appeal": 1,
+    "jam": 3,
+    "flavor_text": "Badly startles all of the Pokémon to act before the user."
+  },
+  "5": {
+    "id": 5,
+    "appeal": 2,
+    "jam": 1,
+    "flavor_text": "Badly startles all Pokémon that successfully showed their appeal."
+  },
+  "6": {
+    "id": 6,
+    "appeal": 2,
+    "jam": 1,
+    "flavor_text": "Badly startles Pokémon that the audience has high expectations of."
+  },
+  "7": {
+    "id": 7,
+    "appeal": 2,
+    "jam": 1,
+    "flavor_text": "Badly startles Pokémon that used a move of the same type."
+  },
+  "8": {
+    "id": 8,
+    "appeal": 1,
+    "jam": 4,
+    "flavor_text": "Badly startles the last Pokémon to act before the user."
+  },
+  "9": {
+    "id": 9,
+    "appeal": 3,
+    "jam": 0,
+    "next": 1,
+    "flavor_text": "Causes the user to move earlier on the next turn."
+  },
+  "10": {
+    "id": 10,
+    "appeal": 3,
+    "jam": 0,
+    "next": 4,
+    "flavor_text": "Causes the user to move later on the next turn."
+  },
+  "11": {
+    "id": 11,
+    "appeal": 1,
+    "jam": 0,
+    "flavor_text": "Effectiveness varies depending on when it is used."
+  },
+  "12": {
+    "id": 12,
+    "appeal": 3,
+    "jam": 0,
+    "flavor_text": "Excites the audience a lot if used first."
+  },
+  "13": {
+    "id": 13,
+    "appeal": 3,
+    "jam": 0,
+    "flavor_text": "Excites the audience a lot if used last."
+  },
+  "14": {
+    "id": 14,
+    "appeal": 2,
+    "jam": 0,
+    "flavor_text": "Excites the audience in any kind of contest."
+  },
+  "15": {
+    "id": 15,
+    "appeal": 1,
+    "jam": 0,
+    "star": 1,
+    "flavor_text": "Gets the Pokémon pumped up. Helps prevent nervousness, too."
+  },
+  "16": {
+    "id": 16,
+    "appeal": 4,
+    "jam": 0,
+    "flavor_text": "Makes the audience quickly grow bored when an appeal move has little effect."
+  },
+  "17": {
+    "id": 17,
+    "appeal": 2,
+    "jam": 0,
+    "flavor_text": "Makes the remaining Pokémon nervous."
+  },
+  "18": {
+    "id": 18,
+    "appeal": 1,
+    "jam": 0,
+    "flavor_text": "Prevents the user from being startled until the turn ends."
+  },
+  "19": {
+    "id": 19,
+    "appeal": 4,
+    "jam": 0,
+    "flavor_text": "Quite an appealing move."
+  },
+  "20": {
+    "id": 20,
+    "appeal": 1,
+    "jam": 0,
+    "flavor_text": "Shows off the Pokémon's appeal about as well as all the moves before it this turn."
+  },
+  "21": {
+    "id": 21,
+    "appeal": 2,
+    "jam": 0,
+    "flavor_text": "Startles all of the Pokémon to act before the user."
+  },
+  "22": {
+    "id": 22,
+    "appeal": 4,
+    "jam": 4,
+    "skip": true,
+    "flavor_text": "Startles all other Pokémon. User cannot act in the next turn."
+  },
+  "23": {
+    "id": 23,
+    "appeal": 2,
+    "jam": 3,
+    "flavor_text": "Startles the last Pokémon to act before the user."
+  },
+  "24": {
+    "id": 24,
+    "appeal": 1,
+    "jam": 0,
+    "last": true,
+    "flavor_text": "Works better the later it is used in a turn."
+  },
+  "25": {
+    "id": 25,
+    "appeal": 1,
+    "jam": 0,
+    "flavor_text": "Works better the more the crowd is excited."
+  },
+  "26": {
+    "id": 26,
+    "appeal": 2,
+    "jam": 0,
+    "first": 1,
+    "flavor_text": "Works great if the user goes first this turn."
+  },
+  "27": {
+    "id": 27,
+    "appeal": 2,
+    "jam": 0,
+    "last": true,
+    "flavor_text": "Works great if the user goes last this turn."
+  },
+  "28": {
+    "id": 28,
+    "appeal": 1,
+    "jam": 0,
+    "condition": true,
+    "flavor_text": "Works well if the user is pumped up."
+  },
+  "29": {
+    "id": 29,
+    "appeal": 8,
+    "jam": 0,
+    "end": true,
+    "flavor_text": "A move of huge appeal, but using it prevents the user from taking further contest moves."
+  },
+  "30": {
+    "id": 30,
+    "appeal": 3,
+    "jam": 0,
+    "flavor_text": "Brings down the energy of any Pokémon that have already used a move this turn."
+  },
+  "31": {
+    "id": 31,
+    "appeal": 3,
+    "jam": 0,
+    "flavor_text": "Makes audience expect little of other contestants."
+  },
+  "32": {
+    "id": 32,
+    "appeal": 2,
+    "jam": 0,
+    "flavor_text": "Prevents the user from being startled one time this turn."
+  },
+  "33": {
+    "id": 33,
+    "appeal": 3,
+    "jam": 0,
+    "flavor_text": "Temporarily stops the crowd from growing excited."
+  },
+  "34": {
+    "id": 34,
+    "appeal": 2,
+    "jam": 0,
+    "flavor_text": "Works well if it is the same type as the move used by the last Pokémon."
+  },
+  "35": {
+    "id": 35,
+    "appeal": 1,
+    "jam": 0,
+    "flavor_text": "Shows off the Pokémon's appeal about as well as the move used just before it."
+  },
+  "36": {
+    "id": 36,
+    "appeal": 3,
+    "jam": 0,
+    "flavor_text": "Scrambles the order in which Pokémon will move on the next turn."
+  }
+}

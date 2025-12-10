@@ -1,9 +1,9 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useParams, useNavigate, NavLink } from 'react-router-dom';
 import pokemonDb from '../data/pokemon.json';
-import pokemonMovesData from '../data/pokemon_moves_rse.json';
-import contestMovesData from '../data/contest_moves_rse.json';
-import contestEffectsData from '../data/contest_effects_rse.json';
+import pokemonMovesData from '../data/pokemon_moves_oras.json';
+import contestMovesData from '../data/contest_moves_oras.json';
+import contestEffectsData from '../data/contest_effects_oras.json';
 import { getPokemonIconProps } from '../switch-compatibility/iconUtils';
 import { searchPokemonByName, getPokemonDisplayName } from '../switch-compatibility/utils';
 import type { PokemonDatabase } from '../switch-compatibility/types';
@@ -20,6 +20,7 @@ import {
   type ContestMoveData,
   type ContestEffect
 } from './moveUtils';
+import { getContestSpectacularOptimalMoves } from './contestSpectacularCalculator';
 
 type GameSelection = 'rse' | 'dppt' | 'oras' | 'bdsp';
 
@@ -29,8 +30,6 @@ interface ORASMovesProps {
 }
 
 const pokemonMoves = pokemonMovesData as Record<string, any>;
-const contestMoves = contestMovesData as Record<string, ContestMoveData>;
-const contestEffects = contestEffectsData as Record<string, ContestEffect>;
 const typedPokemonDb = pokemonDb as PokemonDatabase;
 
 export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) {
@@ -71,7 +70,8 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
     'tutor': true,
     'egg': true,
     'purify': true,
-    'pre-evolution': true
+    'pre-evolution': true,
+    'other': true
   });
   const [excludedMoves, setExcludedMoves] = useState<Set<string>>(new Set());
 
@@ -123,7 +123,8 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
       'tutor': true,
       'egg': true,
       'purify': true,
-      'pre-evolution': true
+      'pre-evolution': true,
+      'other': true
     });
     setExcludedMoves(new Set());
     setSelectedMoveIndex(null);
@@ -137,7 +138,7 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
       if (!target.closest('.moves-container')) {
-        setSelectedMove(null);
+        setSelectedMoveIndex(null);
       }
     };
 
@@ -153,7 +154,7 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
   const searchResults = useMemo(() => {
     if (searchTerm.length < 2) return [];
     try {
-      // Only show Pokemon that are available in ORAS (have entries in pokemon_moves_rse.json)
+      // Only show Pokemon that are available in ORAS (have entries in pokemon_moves_oras.json)
       const allResults = searchPokemonByName(typedPokemonDb, searchTerm);
       return allResults.filter(result => pokemonMoves[result.key]).slice(0, 50);
     } catch (error) {
@@ -184,7 +185,8 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
       'tutor': true,
       'egg': true,
       'purify': true,
-      'pre-evolution': true
+      'pre-evolution': true,
+      'other': true
     };
     return getSelectableMoves(availableMoves, allEnabledMethods);
   }, [availableMoves]);
@@ -197,7 +199,7 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
   // Count visible learn methods for grid layout
   const visibleMethodCount = useMemo(() => {
     let count = 0;
-    const methods: LearnMethod[] = ['level-up', 'machine', 'tutor', 'egg', 'purify', 'pre-evolution'];
+    const methods: LearnMethod[] = ['level-up', 'machine', 'tutor', 'egg', 'purify', 'pre-evolution', 'other'];
     for (const method of methods) {
       if (availableMoves[method] && Object.keys(availableMoves[method]).length > 0) {
         count++;
@@ -227,53 +229,33 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
     return getPokemonDisplayName(selectedPokemon, selectedPokemonData);
   }, [selectedPokemon, selectedPokemonData]);
 
-  const filteredMoves = useMemo(() => {
-    if (!selectedPokemon || !pokemonMoves[selectedPokemon]) return [];
-    const filtered = filterAvailableMoves(availableMoves, enabledMethods, excludedMoves);
-    const moveNames = Object.keys(filtered).filter(move => contestMoves[move]);
+  // Calculate optimal moves with filtering applied
+  const optimalMoves = useMemo(() => {
+    if (!selectedPokemon || !pokemonMoves[selectedPokemon]) return null;
 
-    if (selectedContestType === 'all') return moveNames;
+    // Filter moves based on enabled methods and excluded moves
+    const filteredMoves = filterAvailableMoves(availableMoves, enabledMethods, excludedMoves);
 
-    return moveNames.filter(move => {
-      const moveData = contestMoves[move];
-      if (!moveData) return false;
-      return moveData.type === selectedContestType;
-    });
+    // Get optimal move sequence using the selected contest type
+    return getContestSpectacularOptimalMoves(filteredMoves, selectedContestType);
   }, [selectedPokemon, availableMoves, enabledMethods, excludedMoves, selectedContestType]);
 
-  const randomMoves = useMemo(() => {
-    if (!filteredMoves.length) return [];
-
-    const shuffled = [...filteredMoves];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-
-    const selected = shuffled.slice(0, 5);
-    return selected.map(move => {
-      const moveData = contestMoves[move];
-      const effect = moveData ? contestEffects[moveData.effect.toString()] : null;
-      const appeal = effect?.appeal ?? 0;
-
-      return {
-        move,
-        type: (moveData?.type ?? 'cool') as ContestType,
-        appeal
-      };
-    });
-  }, [filteredMoves]);
-
   const selectedMoveName = useMemo(() => {
-    if (selectedMoveIndex === null || !randomMoves[selectedMoveIndex]) return null;
-    return randomMoves[selectedMoveIndex].move;
-  }, [randomMoves, selectedMoveIndex]);
+    if (selectedMoveIndex === null || !optimalMoves || !optimalMoves[selectedMoveIndex]) return null;
+    return optimalMoves[selectedMoveIndex].move;
+  }, [optimalMoves, selectedMoveIndex]);
 
+  // Get the contest effect details for the selected move
   const selectedMoveEffect = useMemo(() => {
     if (!selectedMoveName) return null;
-    return getContestEffectForMove(selectedMoveName, contestMoves, contestEffects);
+    return getContestEffectForMove(
+      selectedMoveName,
+      contestMovesData as Record<string, ContestMoveData>,
+      contestEffectsData as Record<string, ContestEffect>
+    );
   }, [selectedMoveName]);
 
+  // Get the learn methods for the selected move
   const selectedMoveLearnMethods = useMemo(() => {
     if (!selectedMoveName) return '';
     const methods = getMoveLearnMethods(selectedMoveName, availableMoves);
@@ -294,11 +276,6 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
 
     return methodLabels;
   }, [selectedMoveName, availableMoves]);
-
-  const selectedMoveDisplay = useMemo(() => {
-    if (selectedMoveIndex === null) return null;
-    return randomMoves[selectedMoveIndex];
-  }, [randomMoves, selectedMoveIndex]);
 
   // Handle learn method checkbox changes
   const handleMethodToggle = (method: LearnMethod, checked: boolean) => {
@@ -388,10 +365,10 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
               }
             }}
           >
-            {randomMoves.length > 0 ? (
+            {optimalMoves && optimalMoves.length > 0 ? (
               <>
                 <div className="moves-list">
-                  {randomMoves.map((contestMove, index) => (
+                  {optimalMoves.map((contestMove, index) => (
                     <div
                       key={index}
                       className={`move-row move-type-${contestMove.type} ${selectedMoveIndex === index ? 'selected' : ''}`}
@@ -412,22 +389,20 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
                       <div className="move-details-methods">
                         <span className="move-details-methods-text">{selectedMoveLearnMethods}</span>
                       </div>
-                      {selectedMoveEffect.star === 1 && (
-                        <div className="move-details-star">
-                          <span>⭐</span>
-                        </div>
-                      )}
+                      {selectedMoveEffect.star === 1 && <div className="move-details-star">
+                        <span>⭐</span>
+                      </div>}
                       <div className="move-details-appeal">
-                        {Array.from({ length: selectedMoveEffect.appeal ?? selectedMoveDisplay?.appeal ?? 0 }).map((_, i) => (
+                        {Array.from({ length: selectedMoveEffect.appeal }).map((_, i) => (
                           <span key={i}>❤️</span>
                         ))}
                       </div>
                     </div>
                     <div className="move-details-description">
-                      {selectedMoveEffect.flavor_text && (
-                        <p className="move-details-flavor">{selectedMoveEffect.flavor_text}</p>
+                      <p className="move-details-flavor">{selectedMoveEffect.flavor_text}</p>
+                      {selectedMoveEffect.effect_description && (
+                        <p className="move-details-effect">{selectedMoveEffect.effect_description}</p>
                       )}
-                      <p className="move-details-effect">{selectedMoveEffect.effect_description}</p>
                     </div>
                   </div>
                 )}
@@ -488,9 +463,9 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
               >
                 <option value="all">All Contests</option>
                 <option value="cool">Cool</option>
-                <option value="beauty">Beauty</option>
+                <option value="beautiful">Beautiful</option>
                 <option value="cute">Cute</option>
-                <option value="smart">Smart</option>
+                <option value="clever">Clever</option>
                 <option value="tough">Tough</option>
               </select>
             </div>
@@ -586,6 +561,20 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
                     onChange={(e) => handleMethodToggle('pre-evolution', e.target.checked)}
                   />
                   <span>Pre-Evo</span>
+                </label>
+              )}
+
+              {availableMoves['other'] && Object.keys(availableMoves['other']).length > 0 && (
+                <label className="learn-method-checkbox">
+                  <input
+                    type="checkbox"
+                    checked={enabledMethods['other']}
+                    ref={(el) => {
+                      if (el) el.indeterminate = methodStates['other'] === 'partial';
+                    }}
+                    onChange={(e) => handleMethodToggle('other', e.target.checked)}
+                  />
+                  <span>Other</span>
                 </label>
               )}
             </div>

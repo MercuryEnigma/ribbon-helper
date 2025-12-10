@@ -1,5 +1,5 @@
-import contestMoves from '../data/contest_moves_rse.json';
-import contestEffects from '../data/contest_effects_rse.json';
+import contestMoves from '../data/contest_moves_oras.json';
+import contestEffects from '../data/contest_effects_oras.json';
 import { MovesMap, LEARN_METHOD_PRIORITY, type ContestType } from './moveUtils';
 
 export interface ContestMove {
@@ -48,11 +48,13 @@ const NUMBER_TURNS = 5;
  * Moves with opposite types get -1 appeal penalty.
  */
 const OPPOSITE_TYPES: Record<ContestType, ContestType[]> = {
-  'cool': ['cute', 'smart'],
-  'beauty': ['smart', 'tough'],
+  'cool': ['cute', 'smart', 'clever'],
+  'beauty': ['smart', 'tough', 'clever'],
+  'beautiful': ['clever', 'tough'],
   'cute': ['tough', 'cool'],
-  'smart': ['cool', 'beauty'],
-  'tough': ['beauty', 'cute'],
+  'smart': ['cool', 'beauty', 'beautiful'],
+  'clever': ['cool', 'beautiful'],
+  'tough': ['beauty', 'beautiful', 'cute'],
 };
 
 /**
@@ -604,7 +606,7 @@ function simulateSingleComboPattern(
     const isComboFinisher = move.move === finisherMove.move
       && prevMove?.move === starterMove.move;
     if (isComboFinisher && !hadComboLastTurn) {
-      appeal *= 2;
+      appeal += 3;
       hadComboLastTurn = true;
     } else {
       hadComboLastTurn = false;
@@ -767,7 +769,7 @@ function getGreedyAttempt(
  * @param contestType The contest type filter (currently unused in selection)
  * @returns Array of 5 contest moves with their types and appeal values
  */
-export function getContestOptimalMoves(
+export function getContestSpectacularOptimalMoves(
   availableMoves: MovesMap,
   contestType: ContestType | 'all'
 ): ContestMove[] {
