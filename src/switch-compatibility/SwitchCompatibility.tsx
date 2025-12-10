@@ -1,4 +1,4 @@
-import { Routes, Route, NavLink, Navigate, useNavigate, useParams, useLocation } from 'react-router-dom';
+import { Routes, Route, NavLink, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import AvailablePokemon from './AvailablePokemon';
 import ShadowPokemon from './ShadowPokemon';
 import BySpecies from './BySpecies';
@@ -12,7 +12,7 @@ function GamesSection() {
   const pokemonDb = pokemonData as PokemonDatabase;
 
   const handlePokemonSelect = (key: string) => {
-    navigate(`/game-compatibility/species/${key}`);
+    navigate(`/game-compatibility/species?p=${key}`);
   };
 
   return <AvailablePokemon pokemonDb={pokemonDb} onPokemonSelect={handlePokemonSelect} />;
@@ -23,30 +23,21 @@ function ShadowSection() {
   const pokemonDb = pokemonData as PokemonDatabase;
 
   const handlePokemonSelect = (key: string) => {
-    navigate(`/game-compatibility/species/${key}`);
+    navigate(`/game-compatibility/species?p=${key}`);
   };
 
   return <ShadowPokemon pokemonDb={pokemonDb} onPokemonSelect={handlePokemonSelect} />;
 }
 
-function SpeciesSection() {
-  const navigate = useNavigate();
-  const pokemonDb = pokemonData as PokemonDatabase;
-
-  const handlePokemonSelect = (key: string) => {
-    navigate(`/game-compatibility/species/${key}`);
-  };
-
-  return <BySpecies pokemonDb={pokemonDb} onPokemonSelect={handlePokemonSelect} />;
-}
-
 function SpeciesPokemon() {
   const navigate = useNavigate();
-  const { pokemonKey } = useParams<{ pokemonKey: string }>();
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const pokemonKey = searchParams.get('p') || undefined;
   const pokemonDb = pokemonData as PokemonDatabase;
 
   const handlePokemonSelect = (key: string) => {
-    navigate(`/game-compatibility/species/${key}`);
+    navigate(`/game-compatibility/species?p=${key}`);
   };
 
   return <BySpecies pokemonDb={pokemonDb} initialPokemonKey={pokemonKey} onPokemonSelect={handlePokemonSelect} />;
@@ -97,8 +88,7 @@ export default function SwitchCompatibility() {
             <Route path="/" element={<Navigate to="/game-compatibility/games" replace />} />
             <Route path="/games" element={<GamesSection />} />
             <Route path="/shadow" element={<ShadowSection />} />
-            <Route path="/species" element={<SpeciesSection />} />
-            <Route path="/species/:pokemonKey" element={<SpeciesPokemon />} />
+            <Route path="/species" element={<SpeciesPokemon />} />
           </Routes>
         </ErrorBoundary>
       </div>

@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
-import { useParams, useNavigate, NavLink } from 'react-router-dom';
+import { useNavigate, NavLink, useLocation } from 'react-router-dom';
 import pokemonDb from '../data/pokemon.json';
 import pokemonMovesData from '../data/pokemon_moves_dppt.json';
 import contestMovesData from '../data/contest_moves_dppt.json';
@@ -34,8 +34,10 @@ const contestEffects = contestEffectsData as Record<string, ContestEffect>;
 const typedPokemonDb = pokemonDb as PokemonDatabase;
 
 export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) {
-  const { pokemonKey } = useParams<{ pokemonKey?: string }>();
   const navigate = useNavigate();
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const pokemonKey = searchParams.get('p') || undefined;
 
   const handlePrevious = () => {
     let targetGame: GameSelection;
@@ -44,8 +46,8 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
     else if (selectedGame === 'oras') targetGame = 'dppt';
     else targetGame = 'oras';
 
-    const pokemonPath = selectedPokemon ? `/${selectedPokemon}` : '';
-    onNavigate(`/contest-moves/${targetGame}${pokemonPath}`);
+    const pokemonQuery = selectedPokemon ? `?p=${selectedPokemon}` : '';
+    onNavigate(`/contest-moves/${targetGame}${pokemonQuery}`);
   };
 
   const handleNext = () => {
@@ -55,8 +57,8 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
     else if (selectedGame === 'oras') targetGame = 'bdsp';
     else targetGame = 'rse';
 
-    const pokemonPath = selectedPokemon ? `/${selectedPokemon}` : '';
-    onNavigate(`/contest-moves/${targetGame}${pokemonPath}`);
+    const pokemonQuery = selectedPokemon ? `?p=${selectedPokemon}` : '';
+    onNavigate(`/contest-moves/${targetGame}${pokemonQuery}`);
   };
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedPokemon, setSelectedPokemon] = useState<string>(pokemonKey || '');
@@ -169,7 +171,7 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
     setSelectedPokemon(key);
     setSearchTerm(name);
     setShowDropdown(false);
-    navigate(`/contest-moves/dppt/${key}`);
+    navigate(`/contest-moves/dppt?p=${key}`);
   };
 
   // Get available moves for the selected Pokemon
@@ -350,25 +352,25 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
               </svg>
             </button>
             <NavLink
-              to={selectedPokemon ? `/contest-moves/rse/${selectedPokemon}` : '/contest-moves/rse'}
+              to={selectedPokemon ? `/contest-moves/rse?p=${selectedPokemon}` : '/contest-moves/rse'}
               className={({ isActive }) => isActive ? 'active' : ''}
             >
               RSE
             </NavLink>
             <NavLink
-              to={selectedPokemon ? `/contest-moves/dppt/${selectedPokemon}` : '/contest-moves/dppt'}
+              to={selectedPokemon ? `/contest-moves/dppt?p=${selectedPokemon}` : '/contest-moves/dppt'}
               className={({ isActive }) => isActive ? 'active' : ''}
             >
               DPPt
             </NavLink>
             <NavLink
-              to={selectedPokemon ? `/contest-moves/oras/${selectedPokemon}` : '/contest-moves/oras'}
+              to={selectedPokemon ? `/contest-moves/oras?p=${selectedPokemon}` : '/contest-moves/oras'}
               className={({ isActive }) => isActive ? 'active' : ''}
             >
               ORAS
             </NavLink>
             <NavLink
-              to={selectedPokemon ? `/contest-moves/bdsp/${selectedPokemon}` : '/contest-moves/bdsp'}
+              to={selectedPokemon ? `/contest-moves/bdsp?p=${selectedPokemon}` : '/contest-moves/bdsp'}
               className={({ isActive }) => isActive ? 'active' : ''}
             >
               BDSP
