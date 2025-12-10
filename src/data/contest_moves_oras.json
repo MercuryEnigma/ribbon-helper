@@ -29,7 +29,12 @@
   },
   "volt-tackle": {
     "type": "cool",
-    "effect": 1
+    "effect": 1,
+    "combos": {
+      "after": [
+        "charge"
+      ]
+    }
   },
   "cross-chop": {
     "type": "cool",
@@ -41,7 +46,12 @@
   },
   "night-slash": {
     "type": "cool",
-    "effect": 2
+    "effect": 2,
+    "combos": {
+      "after": [
+        "focus-energy"
+      ]
+    }
   },
   "razor-wind": {
     "type": "cool",
@@ -57,7 +67,12 @@
   },
   "solar-beam": {
     "type": "cool",
-    "effect": 2
+    "effect": 2,
+    "combos": {
+      "after": [
+        "sunny-day"
+      ]
+    }
   },
   "steel-wing": {
     "type": "cool",
@@ -65,7 +80,12 @@
   },
   "blaze-kick": {
     "type": "cool",
-    "effect": 3
+    "effect": 3,
+    "combos": {
+      "after": [
+        "focus-energy"
+      ]
+    }
   },
   "dragon-rage": {
     "type": "cool",
@@ -189,7 +209,13 @@
   },
   "agility": {
     "type": "cool",
-    "effect": 9
+    "effect": 9,
+    "combos": {
+      "before": [
+        "baton-pass",
+        "electro-ball"
+      ]
+    }
   },
   "aqua-jet": {
     "type": "cool",
@@ -221,15 +247,35 @@
   },
   "circle-throw": {
     "type": "cool",
-    "effect": 10
+    "effect": 10,
+    "combos": {
+      "after": [
+        "entrainment",
+        "play-nice"
+      ]
+    }
   },
   "roar": {
     "type": "cool",
-    "effect": 10
+    "effect": 10,
+    "combos": {
+      "after": [
+        "entrainment",
+        "play-nice",
+        "spikes",
+        "stealth-rock",
+        "toxic-spikes"
+      ]
+    }
   },
   "bullet-seed": {
     "type": "cool",
-    "effect": 11
+    "effect": 11,
+    "combos": {
+      "after": [
+        "rototiller"
+      ]
+    }
   },
   "fury-attack": {
     "type": "cool",
@@ -245,7 +291,14 @@
   },
   "electro-ball": {
     "type": "cool",
-    "effect": 12
+    "effect": 12,
+    "combos": {
+      "after": [
+        "agility",
+        "charge",
+        "rock-polish"
+      ]
+    }
   },
   "aeroblast": {
     "type": "cool",
@@ -265,7 +318,13 @@
   },
   "storm-throw": {
     "type": "cool",
-    "effect": 14
+    "effect": 14,
+    "combos": {
+      "after": [
+        "entrainment",
+        "play-nice"
+      ]
+    }
   },
   "bulk-up": {
     "type": "cool",
@@ -281,7 +340,18 @@
   },
   "focus-energy": {
     "type": "cool",
-    "effect": 15
+    "effect": 15,
+    "combos": {
+      "before": [
+        "blaze-kick",
+        "drill-run",
+        "karate-chop",
+        "night-slash",
+        "poison-tail",
+        "shadow-claw",
+        "stone-edge"
+      ]
+    }
   },
   "false-swipe": {
     "type": "cool",
@@ -293,11 +363,23 @@
   },
   "volt-switch": {
     "type": "cool",
-    "effect": 16
+    "effect": 16,
+    "combos": {
+      "after": [
+        "charge"
+      ]
+    }
   },
   "stealth-rock": {
     "type": "cool",
-    "effect": 17
+    "effect": 17,
+    "combos": {
+      "before": [
+        "dragon-tail",
+        "roar",
+        "whirlwind"
+      ]
+    }
   },
   "barrier": {
     "type": "cool",
@@ -353,7 +435,13 @@
   },
   "force-palm": {
     "type": "cool",
-    "effect": 19
+    "effect": 19,
+    "combos": {
+      "before": [
+        "hex",
+        "smelling-salts"
+      ]
+    }
   },
   "horn-attack": {
     "type": "cool",
@@ -389,7 +477,12 @@
   },
   "shadow-claw": {
     "type": "cool",
-    "effect": 19
+    "effect": 19,
+    "combos": {
+      "after": [
+        "focus-energy"
+      ]
+    }
   },
   "slash": {
     "type": "cool",
@@ -397,23 +490,48 @@
   },
   "spark": {
     "type": "cool",
-    "effect": 19
+    "effect": 19,
+    "combos": {
+      "after": [
+        "charge"
+      ]
+    }
   },
   "thunder-fang": {
     "type": "cool",
-    "effect": 19
+    "effect": 19,
+    "combos": {
+      "after": [
+        "charge"
+      ]
+    }
   },
   "thunder-punch": {
     "type": "cool",
-    "effect": 19
+    "effect": 19,
+    "combos": {
+      "after": [
+        "charge"
+      ]
+    }
   },
   "thunder-shock": {
     "type": "cool",
-    "effect": 19
+    "effect": 19,
+    "combos": {
+      "after": [
+        "charge"
+      ]
+    }
   },
   "thunderbolt": {
     "type": "cool",
-    "effect": 19
+    "effect": 19,
+    "combos": {
+      "after": [
+        "charge"
+      ]
+    }
   },
   "twister": {
     "type": "cool",
@@ -457,7 +575,12 @@
   },
   "reversal": {
     "type": "cool",
-    "effect": 24
+    "effect": 24,
+    "combos": {
+      "after": [
+        "endure"
+      ]
+    }
   },
   "trump-card": {
     "type": "cool",
@@ -477,7 +600,13 @@
   },
   "thunder": {
     "type": "cool",
-    "effect": 25
+    "effect": 25,
+    "combos": {
+      "after": [
+        "charge",
+        "rain-dance"
+      ]
+    }
   },
   "aerial-ace": {
     "type": "cool",
@@ -497,7 +626,12 @@
   },
   "shock-wave": {
     "type": "cool",
-    "effect": 26
+    "effect": 26,
+    "combos": {
+      "after": [
+        "charge"
+      ]
+    }
   },
   "swift": {
     "type": "cool",
@@ -509,11 +643,24 @@
   },
   "metal-burst": {
     "type": "cool",
-    "effect": 27
+    "effect": 27,
+    "combos": {
+      "after": [
+        "encore",
+        "taunt",
+        "torment"
+      ]
+    }
   },
   "vital-throw": {
     "type": "cool",
-    "effect": 27
+    "effect": 27,
+    "combos": {
+      "after": [
+        "entrainment",
+        "play-nice"
+      ]
+    }
   },
   "acrobatics": {
     "type": "cool",
@@ -529,7 +676,13 @@
   },
   "explosion": {
     "type": "beautiful",
-    "effect": 29
+    "effect": 29,
+    "combos": {
+      "after": [
+        "block",
+        "mean-look"
+      ]
+    }
   },
   "healing-wish": {
     "type": "beautiful",
@@ -541,7 +694,13 @@
   },
   "self-destruct": {
     "type": "beautiful",
-    "effect": 29
+    "effect": 29,
+    "combos": {
+      "after": [
+        "block",
+        "mean-look"
+      ]
+    }
   },
   "draco-meteor": {
     "type": "beautiful",
@@ -629,23 +788,59 @@
   },
   "weather-ball": {
     "type": "beautiful",
-    "effect": 3
+    "effect": 3,
+    "combos": {
+      "after": [
+        "hail",
+        "rain-dance",
+        "sandstorm",
+        "sunny-day"
+      ]
+    }
   },
   "blizzard": {
     "type": "beautiful",
-    "effect": 4
+    "effect": 4,
+    "combos": {
+      "after": [
+        "hail"
+      ]
+    }
   },
   "spore": {
     "type": "beautiful",
-    "effect": 4
+    "effect": 4,
+    "combos": {
+      "before": [
+        "dream-eater",
+        "hex",
+        "nightmare",
+        "wake-up-slap"
+      ]
+    }
   },
   "hail": {
     "type": "beautiful",
-    "effect": 5
+    "effect": 5,
+    "combos": {
+      "before": [
+        "blizzard",
+        "glaciate",
+        "icicle-crash",
+        "icy-wind",
+        "powder-snow",
+        "weather-ball"
+      ]
+    }
   },
   "sheer-cold": {
     "type": "beautiful",
-    "effect": 5
+    "effect": 5,
+    "combos": {
+      "after": [
+        "mind-reader"
+      ]
+    }
   },
   "cotton-spore": {
     "type": "beautiful",
@@ -653,7 +848,12 @@
   },
   "electroweb": {
     "type": "beautiful",
-    "effect": 6
+    "effect": 6,
+    "combos": {
+      "after": [
+        "string-shot"
+      ]
+    }
   },
   "acid-spray": {
     "type": "beautiful",
@@ -673,7 +873,12 @@
   },
   "inferno": {
     "type": "beautiful",
-    "effect": 8
+    "effect": 8,
+    "combos": {
+      "before": [
+        "hex"
+      ]
+    }
   },
   "moonblast": {
     "type": "beautiful",
@@ -697,11 +902,21 @@
   },
   "moonlight": {
     "type": "beautiful",
-    "effect": 11
+    "effect": 11,
+    "combos": {
+      "after": [
+        "sunny-day"
+      ]
+    }
   },
   "morning-sun": {
     "type": "beautiful",
-    "effect": 11
+    "effect": 11,
+    "combos": {
+      "after": [
+        "sunny-day"
+      ]
+    }
   },
   "tri-attack": {
     "type": "beautiful",
@@ -729,7 +944,12 @@
   },
   "icicle-crash": {
     "type": "beautiful",
-    "effect": 13
+    "effect": 13,
+    "combos": {
+      "after": [
+        "hail"
+      ]
+    }
   },
   "sacred-fire": {
     "type": "beautiful",
@@ -777,7 +997,12 @@
   },
   "growth": {
     "type": "beautiful",
-    "effect": 15
+    "effect": 15,
+    "combos": {
+      "after": [
+        "sunny-day"
+      ]
+    }
   },
   "meditate": {
     "type": "beautiful",
@@ -825,7 +1050,12 @@
   },
   "will-o-wisp": {
     "type": "beautiful",
-    "effect": 31
+    "effect": 31,
+    "combos": {
+      "before": [
+        "hex"
+      ]
+    }
   },
   "frost-breath": {
     "type": "beautiful",
@@ -833,19 +1063,46 @@
   },
   "icy-wind": {
     "type": "beautiful",
-    "effect": 16
+    "effect": 16,
+    "combos": {
+      "after": [
+        "hail"
+      ]
+    }
   },
   "lovely-kiss": {
     "type": "beautiful",
-    "effect": 16
+    "effect": 16,
+    "combos": {
+      "before": [
+        "dream-eater",
+        "hex",
+        "nightmare",
+        "wake-up-slap"
+      ]
+    }
   },
   "perish-song": {
     "type": "beautiful",
-    "effect": 16
+    "effect": 16,
+    "combos": {
+      "after": [
+        "block",
+        "mean-look"
+      ]
+    }
   },
   "mean-look": {
     "type": "beautiful",
-    "effect": 17
+    "effect": 17,
+    "combos": {
+      "before": [
+        "explosion",
+        "memento",
+        "perish-song",
+        "self-destruct"
+      ]
+    }
   },
   "relic-song": {
     "type": "beautiful",
@@ -913,7 +1170,12 @@
   },
   "powder-snow": {
     "type": "beautiful",
-    "effect": 19
+    "effect": 19,
+    "combos": {
+      "after": [
+        "hail"
+      ]
+    }
   },
   "power-gem": {
     "type": "beautiful",
@@ -921,7 +1183,12 @@
   },
   "discharge": {
     "type": "beautiful",
-    "effect": 21
+    "effect": 21,
+    "combos": {
+      "after": [
+        "charge"
+      ]
+    }
   },
   "heat-wave": {
     "type": "beautiful",
@@ -969,11 +1236,21 @@
   },
   "glaciate": {
     "type": "beautiful",
-    "effect": 33
+    "effect": 33,
+    "combos": {
+      "after": [
+        "hail"
+      ]
+    }
   },
   "ice-ball": {
     "type": "beautiful",
-    "effect": 33
+    "effect": 33,
+    "combos": {
+      "after": [
+        "defense-curl"
+      ]
+    }
   },
   "ion-deluge": {
     "type": "beautiful",
@@ -1001,11 +1278,30 @@
   },
   "rain-dance": {
     "type": "beautiful",
-    "effect": 25
+    "effect": 25,
+    "combos": {
+      "before": [
+        "hurricane",
+        "soak",
+        "thunder",
+        "water-sport",
+        "weather-ball"
+      ]
+    }
   },
   "sunny-day": {
     "type": "beautiful",
-    "effect": 25
+    "effect": 25,
+    "combos": {
+      "before": [
+        "growth",
+        "moonlight",
+        "morning-sun",
+        "solar-beam",
+        "synthesis",
+        "weather-ball"
+      ]
+    }
   },
   "aura-sphere": {
     "type": "beautiful",
@@ -1029,7 +1325,14 @@
   },
   "mirror-coat": {
     "type": "beautiful",
-    "effect": 27
+    "effect": 27,
+    "combos": {
+      "after": [
+        "encore",
+        "taunt",
+        "torment"
+      ]
+    }
   },
   "conversion": {
     "type": "beautiful",
@@ -1045,11 +1348,24 @@
   },
   "venoshock": {
     "type": "beautiful",
-    "effect": 34
+    "effect": 34,
+    "combos": {
+      "after": [
+        "poison-gas",
+        "poison-powder",
+        "toxic",
+        "toxic-spikes"
+      ]
+    }
   },
   "charge-beam": {
     "type": "beautiful",
-    "effect": 28
+    "effect": 28,
+    "combos": {
+      "after": [
+        "charge"
+      ]
+    }
   },
   "fiery-dance": {
     "type": "beautiful",
@@ -1065,11 +1381,24 @@
   },
   "present": {
     "type": "cute",
-    "effect": 3
+    "effect": 3,
+    "combos": {
+      "after": [
+        "celebrate",
+        "covet",
+        "happy-hour",
+        "wish"
+      ]
+    }
   },
   "rollout": {
     "type": "cute",
-    "effect": 3
+    "effect": 3,
+    "combos": {
+      "after": [
+        "defense-curl"
+      ]
+    }
   },
   "charm": {
     "type": "cute",
@@ -1077,7 +1406,12 @@
   },
   "soak": {
     "type": "cute",
-    "effect": 6
+    "effect": 6,
+    "combos": {
+      "after": [
+        "rain-dance"
+      ]
+    }
   },
   "uproar": {
     "type": "cute",
@@ -1085,11 +1419,28 @@
   },
   "entrainment": {
     "type": "cute",
-    "effect": 7
+    "effect": 7,
+    "combos": {
+      "before": [
+        "circle-throw",
+        "roar",
+        "seismic-toss",
+        "sky-drop",
+        "smack-down",
+        "storm-throw",
+        "vital-throw",
+        "wake-up-slap"
+      ]
+    }
   },
   "nuzzle": {
     "type": "cute",
-    "effect": 7
+    "effect": 7,
+    "combos": {
+      "after": [
+        "charge"
+      ]
+    }
   },
   "trick-or-treat": {
     "type": "cute",
@@ -1109,7 +1460,15 @@
   },
   "fling": {
     "type": "cute",
-    "effect": 30
+    "effect": 30,
+    "combos": {
+      "after": [
+        "celebrate",
+        "covet",
+        "happy-hour",
+        "wish"
+      ]
+    }
   },
   "mud-slap": {
     "type": "cute",
@@ -1161,7 +1520,12 @@
   },
   "sleep-talk": {
     "type": "cute",
-    "effect": 11
+    "effect": 11,
+    "combos": {
+      "after": [
+        "rest"
+      ]
+    }
   },
   "tail-slap": {
     "type": "cute",
@@ -1169,15 +1533,36 @@
   },
   "wish": {
     "type": "cute",
-    "effect": 13
+    "effect": 13,
+    "combos": {
+      "before": [
+        "bestow",
+        "fling",
+        "present"
+      ]
+    }
   },
   "celebrate": {
     "type": "cute",
-    "effect": 14
+    "effect": 14,
+    "combos": {
+      "before": [
+        "bestow",
+        "fling",
+        "present"
+      ]
+    }
   },
   "happy-hour": {
     "type": "cute",
-    "effect": 14
+    "effect": 14,
+    "combos": {
+      "before": [
+        "bestow",
+        "fling",
+        "present"
+      ]
+    }
   },
   "mud-sport": {
     "type": "cute",
@@ -1185,11 +1570,22 @@
   },
   "water-sport": {
     "type": "cute",
-    "effect": 14
+    "effect": 14,
+    "combos": {
+      "after": [
+        "rain-dance"
+      ]
+    }
   },
   "hone-claws": {
     "type": "cute",
-    "effect": 15
+    "effect": 15,
+    "combos": {
+      "before": [
+        "baton-pass",
+        "stored-power"
+      ]
+    }
   },
   "lucky-chant": {
     "type": "cute",
@@ -1205,7 +1601,12 @@
   },
   "sand-attack": {
     "type": "cute",
-    "effect": 31
+    "effect": 31,
+    "combos": {
+      "after": [
+        "sandstorm"
+      ]
+    }
   },
   "captivate": {
     "type": "cute",
@@ -1221,7 +1622,12 @@
   },
   "snore": {
     "type": "cute",
-    "effect": 16
+    "effect": 16,
+    "combos": {
+      "after": [
+        "rest"
+      ]
+    }
   },
   "splash": {
     "type": "cute",
@@ -1237,15 +1643,41 @@
   },
   "block": {
     "type": "cute",
-    "effect": 17
+    "effect": 17,
+    "combos": {
+      "before": [
+        "explosion",
+        "memento",
+        "perish-song",
+        "self-destruct"
+      ]
+    }
   },
   "encore": {
     "type": "cute",
-    "effect": 17
+    "effect": 17,
+    "combos": {
+      "before": [
+        "counter",
+        "destiny-bond",
+        "grudge",
+        "metal-burst",
+        "mirror-coat",
+        "spite"
+      ]
+    }
   },
   "sing": {
     "type": "cute",
-    "effect": 17
+    "effect": 17,
+    "combos": {
+      "before": [
+        "dream-eater",
+        "hex",
+        "nightmare",
+        "wake-up-slap"
+      ]
+    }
   },
   "sweet-kiss": {
     "type": "cute",
@@ -1253,11 +1685,25 @@
   },
   "yawn": {
     "type": "cute",
-    "effect": 17
+    "effect": 17,
+    "combos": {
+      "before": [
+        "dream-eater",
+        "hex",
+        "nightmare",
+        "wake-up-slap"
+      ]
+    }
   },
   "defense-curl": {
     "type": "cute",
-    "effect": 32
+    "effect": 32,
+    "combos": {
+      "before": [
+        "ice-ball",
+        "rollout"
+      ]
+    }
   },
   "protect": {
     "type": "cute",
@@ -1281,7 +1727,13 @@
   },
   "amnesia": {
     "type": "cute",
-    "effect": 18
+    "effect": 18,
+    "combos": {
+      "before": [
+        "baton-pass",
+        "stored-power"
+      ]
+    }
   },
   "bounce": {
     "type": "cute",
@@ -1301,7 +1753,13 @@
   },
   "rest": {
     "type": "cute",
-    "effect": 18
+    "effect": 18,
+    "combos": {
+      "before": [
+        "sleep-talk",
+        "snore"
+      ]
+    }
   },
   "bubble": {
     "type": "cute",
@@ -1309,7 +1767,12 @@
   },
   "egg-bomb": {
     "type": "cute",
-    "effect": 19
+    "effect": 19,
+    "combos": {
+      "after": [
+        "soft-boiled"
+      ]
+    }
   },
   "ember": {
     "type": "cute",
@@ -1333,7 +1796,14 @@
   },
   "covet": {
     "type": "cute",
-    "effect": 35
+    "effect": 35,
+    "combos": {
+      "before": [
+        "bestow",
+        "fling",
+        "present"
+      ]
+    }
   },
   "mimic": {
     "type": "cute",
@@ -1377,7 +1847,12 @@
   },
   "flail": {
     "type": "cute",
-    "effect": 24
+    "effect": 24,
+    "combos": {
+      "after": [
+        "endure"
+      ]
+    }
   },
   "grass-knot": {
     "type": "cute",
@@ -1385,11 +1860,31 @@
   },
   "bestow": {
     "type": "cute",
-    "effect": 25
+    "effect": 25,
+    "combos": {
+      "after": [
+        "celebrate",
+        "covet",
+        "happy-hour",
+        "wish"
+      ]
+    }
   },
   "play-nice": {
     "type": "cute",
-    "effect": 25
+    "effect": 25,
+    "combos": {
+      "before": [
+        "circle-throw",
+        "roar",
+        "seismic-toss",
+        "sky-drop",
+        "smack-down",
+        "storm-throw",
+        "vital-throw",
+        "wake-up-slap"
+      ]
+    }
   },
   "disarming-voice": {
     "type": "cute",
@@ -1401,7 +1896,12 @@
   },
   "soft-boiled": {
     "type": "cute",
-    "effect": 26
+    "effect": 26,
+    "combos": {
+      "before": [
+        "egg-bomb"
+      ]
+    }
   },
   "facade": {
     "type": "cute",
@@ -1421,7 +1921,17 @@
   },
   "baton-pass": {
     "type": "cute",
-    "effect": 28
+    "effect": 28,
+    "combos": {
+      "after": [
+        "agility",
+        "amnesia",
+        "calm-mind",
+        "hone-claws",
+        "nasty-plot",
+        "rock-polish"
+      ]
+    }
   },
   "last-resort": {
     "type": "cute",
@@ -1429,7 +1939,14 @@
   },
   "destiny-bond": {
     "type": "clever",
-    "effect": 29
+    "effect": 29,
+    "combos": {
+      "after": [
+        "encore",
+        "taunt",
+        "torment"
+      ]
+    }
   },
   "psycho-boost": {
     "type": "clever",
@@ -1461,7 +1978,15 @@
   },
   "hypnosis": {
     "type": "clever",
-    "effect": 4
+    "effect": 4,
+    "combos": {
+      "before": [
+        "dream-eater",
+        "hex",
+        "nightmare",
+        "wake-up-slap"
+      ]
+    }
   },
   "metal-sound": {
     "type": "clever",
@@ -1469,11 +1994,31 @@
   },
   "nightmare": {
     "type": "clever",
-    "effect": 4
+    "effect": 4,
+    "combos": {
+      "after": [
+        "dark-void",
+        "grass-whistle",
+        "hypnosis",
+        "lovely-kiss",
+        "sing",
+        "sleep-powder",
+        "spore",
+        "yawn"
+      ]
+    }
   },
   "sleep-powder": {
     "type": "clever",
-    "effect": 4
+    "effect": 4,
+    "combos": {
+      "before": [
+        "dream-eater",
+        "hex",
+        "nightmare",
+        "wake-up-slap"
+      ]
+    }
   },
   "forest-s-curse": {
     "type": "clever",
@@ -1493,11 +2038,26 @@
   },
   "taunt": {
     "type": "clever",
-    "effect": 6
+    "effect": 6,
+    "combos": {
+      "before": [
+        "counter",
+        "destiny-bond",
+        "grudge",
+        "metal-burst",
+        "mirror-coat",
+        "spite"
+      ]
+    }
   },
   "electrify": {
     "type": "clever",
-    "effect": 7
+    "effect": 7,
+    "combos": {
+      "after": [
+        "parabolic-charge"
+      ]
+    }
   },
   "foresight": {
     "type": "clever",
@@ -1509,7 +2069,27 @@
   },
   "hex": {
     "type": "clever",
-    "effect": 7
+    "effect": 7,
+    "combos": {
+      "after": [
+        "dark-void",
+        "force-palm",
+        "glare",
+        "grass-whistle",
+        "hypnosis",
+        "inferno",
+        "lovely-kiss",
+        "poison-gas",
+        "poison-powder",
+        "sing",
+        "sleep-powder",
+        "spore",
+        "toxic",
+        "toxic-spikes",
+        "will-o-wisp",
+        "yawn"
+      ]
+    }
   },
   "luster-purge": {
     "type": "clever",
@@ -1541,19 +2121,46 @@
   },
   "poison-powder": {
     "type": "clever",
-    "effect": 30
+    "effect": 30,
+    "combos": {
+      "before": [
+        "hex",
+        "venom-drench",
+        "venoshock"
+      ]
+    }
   },
   "poison-tail": {
     "type": "clever",
-    "effect": 30
+    "effect": 30,
+    "combos": {
+      "after": [
+        "focus-energy"
+      ]
+    }
   },
   "toxic": {
     "type": "clever",
-    "effect": 30
+    "effect": 30,
+    "combos": {
+      "before": [
+        "hex",
+        "venom-drench",
+        "venoshock"
+      ]
+    }
   },
   "venom-drench": {
     "type": "clever",
-    "effect": 30
+    "effect": 30,
+    "combos": {
+      "after": [
+        "poison-gas",
+        "poison-powder",
+        "toxic",
+        "toxic-spikes"
+      ]
+    }
   },
   "feint": {
     "type": "clever",
@@ -1569,7 +2176,12 @@
   },
   "mind-reader": {
     "type": "clever",
-    "effect": 9
+    "effect": 9,
+    "combos": {
+      "before": [
+        "sheer-cold"
+      ]
+    }
   },
   "quash": {
     "type": "clever",
@@ -1581,7 +2193,14 @@
   },
   "whirlwind": {
     "type": "clever",
-    "effect": 10
+    "effect": 10,
+    "combos": {
+      "after": [
+        "spikes",
+        "stealth-rock",
+        "toxic-spikes"
+      ]
+    }
   },
   "psywave": {
     "type": "clever",
@@ -1589,7 +2208,12 @@
   },
   "synthesis": {
     "type": "clever",
-    "effect": 11
+    "effect": 11,
+    "combos": {
+      "after": [
+        "sunny-day"
+      ]
+    }
   },
   "crafty-shield": {
     "type": "clever",
@@ -1613,11 +2237,35 @@
   },
   "calm-mind": {
     "type": "clever",
-    "effect": 15
+    "effect": 15,
+    "combos": {
+      "before": [
+        "baton-pass",
+        "stored-power"
+      ]
+    }
   },
   "charge": {
     "type": "clever",
-    "effect": 15
+    "effect": 15,
+    "combos": {
+      "before": [
+        "charge-beam",
+        "discharge",
+        "electro-ball",
+        "nuzzle",
+        "parabolic-charge",
+        "shock-wave",
+        "spark",
+        "thunder",
+        "thunder-fang",
+        "thunder-punch",
+        "thunder-shock",
+        "thunderbolt",
+        "volt-switch",
+        "volt-tackle"
+      ]
+    }
   },
   "ingrain": {
     "type": "clever",
@@ -1625,7 +2273,12 @@
   },
   "leech-seed": {
     "type": "clever",
-    "effect": 15
+    "effect": 15,
+    "combos": {
+      "after": [
+        "rototiller"
+      ]
+    }
   },
   "magnetic-flux": {
     "type": "clever",
@@ -1633,15 +2286,33 @@
   },
   "nasty-plot": {
     "type": "clever",
-    "effect": 15
+    "effect": 15,
+    "combos": {
+      "before": [
+        "baton-pass",
+        "stored-power"
+      ]
+    }
   },
   "shift-gear": {
     "type": "clever",
-    "effect": 15
+    "effect": 15,
+    "combos": {
+      "before": [
+        "gear-grind"
+      ]
+    }
   },
   "poison-gas": {
     "type": "clever",
-    "effect": 31
+    "effect": 31,
+    "combos": {
+      "before": [
+        "hex",
+        "venom-drench",
+        "venoshock"
+      ]
+    }
   },
   "rock-tomb": {
     "type": "clever",
@@ -1665,7 +2336,15 @@
   },
   "dark-void": {
     "type": "clever",
-    "effect": 17
+    "effect": 17,
+    "combos": {
+      "before": [
+        "dream-eater",
+        "hex",
+        "nightmare",
+        "wake-up-slap"
+      ]
+    }
   },
   "disable": {
     "type": "clever",
@@ -1685,11 +2364,23 @@
   },
   "spider-web": {
     "type": "clever",
-    "effect": 17
+    "effect": 17,
+    "combos": {
+      "after": [
+        "string-shot"
+      ]
+    }
   },
   "spikes": {
     "type": "clever",
-    "effect": 17
+    "effect": 17,
+    "combos": {
+      "before": [
+        "dragon-tail",
+        "roar",
+        "whirlwind"
+      ]
+    }
   },
   "telekinesis": {
     "type": "clever",
@@ -1697,11 +2388,26 @@
   },
   "toxic-spikes": {
     "type": "clever",
-    "effect": 17
+    "effect": 17,
+    "combos": {
+      "before": [
+        "dragon-tail",
+        "hex",
+        "roar",
+        "venom-drench",
+        "venoshock",
+        "whirlwind"
+      ]
+    }
   },
   "worry-seed": {
     "type": "clever",
-    "effect": 17
+    "effect": 17,
+    "combos": {
+      "after": [
+        "rototiller"
+      ]
+    }
   },
   "defend-order": {
     "type": "clever",
@@ -1713,7 +2419,15 @@
   },
   "grass-whistle": {
     "type": "clever",
-    "effect": 32
+    "effect": 32,
+    "combos": {
+      "before": [
+        "dream-eater",
+        "hex",
+        "nightmare",
+        "wake-up-slap"
+      ]
+    }
   },
   "odor-sleuth": {
     "type": "clever",
@@ -1737,7 +2451,12 @@
   },
   "gear-grind": {
     "type": "clever",
-    "effect": 19
+    "effect": 19,
+    "combos": {
+      "after": [
+        "shift-gear"
+      ]
+    }
   },
   "helping-hand": {
     "type": "clever",
@@ -1797,11 +2516,24 @@
   },
   "pain-split": {
     "type": "clever",
-    "effect": 20
+    "effect": 20,
+    "combos": {
+      "after": [
+        "endure"
+      ]
+    }
   },
   "parabolic-charge": {
     "type": "clever",
-    "effect": 20
+    "effect": 20,
+    "combos": {
+      "before": [
+        "electrify"
+      ],
+      "after": [
+        "charge"
+      ]
+    }
   },
   "power-split": {
     "type": "clever",
@@ -1865,7 +2597,14 @@
   },
   "string-shot": {
     "type": "clever",
-    "effect": 23
+    "effect": 23,
+    "combos": {
+      "before": [
+        "electroweb",
+        "spider-web",
+        "sticky-web"
+      ]
+    }
   },
   "fairy-lock": {
     "type": "clever",
@@ -1889,7 +2628,12 @@
   },
   "sand-tomb": {
     "type": "clever",
-    "effect": 33
+    "effect": 33,
+    "combos": {
+      "after": [
+        "sandstorm"
+      ]
+    }
   },
   "assurance": {
     "type": "clever",
@@ -1917,7 +2661,19 @@
   },
   "dream-eater": {
     "type": "clever",
-    "effect": 34
+    "effect": 34,
+    "combos": {
+      "after": [
+        "dark-void",
+        "grass-whistle",
+        "hypnosis",
+        "lovely-kiss",
+        "sing",
+        "sleep-powder",
+        "spore",
+        "yawn"
+      ]
+    }
   },
   "future-sight": {
     "type": "clever",
@@ -1953,7 +2709,15 @@
   },
   "stored-power": {
     "type": "clever",
-    "effect": 28
+    "effect": 28,
+    "combos": {
+      "after": [
+        "amnesia",
+        "calm-mind",
+        "hone-claws",
+        "nasty-plot"
+      ]
+    }
   },
   "final-gambit": {
     "type": "tough",
@@ -1961,7 +2725,13 @@
   },
   "memento": {
     "type": "tough",
-    "effect": 29
+    "effect": 29,
+    "combos": {
+      "after": [
+        "block",
+        "mean-look"
+      ]
+    }
   },
   "close-combat": {
     "type": "tough",
@@ -2013,7 +2783,12 @@
   },
   "drill-run": {
     "type": "tough",
-    "effect": 2
+    "effect": 2,
+    "combos": {
+      "after": [
+        "focus-energy"
+      ]
+    }
   },
   "skull-bash": {
     "type": "tough",
@@ -2021,15 +2796,40 @@
   },
   "smelling-salts": {
     "type": "tough",
-    "effect": 2
+    "effect": 2,
+    "combos": {
+      "after": [
+        "force-palm",
+        "glare"
+      ]
+    }
   },
   "stone-edge": {
     "type": "tough",
-    "effect": 2
+    "effect": 2,
+    "combos": {
+      "after": [
+        "focus-energy"
+      ]
+    }
   },
   "wake-up-slap": {
     "type": "tough",
-    "effect": 2
+    "effect": 2,
+    "combos": {
+      "after": [
+        "dark-void",
+        "entrainment",
+        "grass-whistle",
+        "hypnosis",
+        "lovely-kiss",
+        "play-nice",
+        "sing",
+        "sleep-powder",
+        "spore",
+        "yawn"
+      ]
+    }
   },
   "bone-club": {
     "type": "tough",
@@ -2053,7 +2853,13 @@
   },
   "seismic-toss": {
     "type": "tough",
-    "effect": 3
+    "effect": 3,
+    "combos": {
+      "after": [
+        "entrainment",
+        "play-nice"
+      ]
+    }
   },
   "steamroller": {
     "type": "tough",
@@ -2061,7 +2867,13 @@
   },
   "glare": {
     "type": "tough",
-    "effect": 4
+    "effect": 4,
+    "combos": {
+      "before": [
+        "hex",
+        "smelling-salts"
+      ]
+    }
   },
   "rage": {
     "type": "tough",
@@ -2081,15 +2893,34 @@
   },
   "hurricane": {
     "type": "tough",
-    "effect": 5
+    "effect": 5,
+    "combos": {
+      "after": [
+        "rain-dance"
+      ]
+    }
   },
   "sandstorm": {
     "type": "tough",
-    "effect": 5
+    "effect": 5,
+    "combos": {
+      "before": [
+        "sand-attack",
+        "sand-tomb",
+        "weather-ball"
+      ]
+    }
   },
   "spite": {
     "type": "tough",
-    "effect": 5
+    "effect": 5,
+    "combos": {
+      "after": [
+        "encore",
+        "taunt",
+        "torment"
+      ]
+    }
   },
   "super-fang": {
     "type": "tough",
@@ -2101,11 +2932,22 @@
   },
   "smack-down": {
     "type": "tough",
-    "effect": 6
+    "effect": 6,
+    "combos": {
+      "after": [
+        "entrainment",
+        "play-nice"
+      ]
+    }
   },
   "sticky-web": {
     "type": "tough",
-    "effect": 6
+    "effect": 6,
+    "combos": {
+      "after": [
+        "string-shot"
+      ]
+    }
   },
   "wring-out": {
     "type": "tough",
@@ -2153,7 +2995,13 @@
   },
   "rock-polish": {
     "type": "tough",
-    "effect": 9
+    "effect": 9,
+    "combos": {
+      "before": [
+        "baton-pass",
+        "electro-ball"
+      ]
+    }
   },
   "bide": {
     "type": "tough",
@@ -2165,11 +3013,26 @@
   },
   "dragon-tail": {
     "type": "tough",
-    "effect": 10
+    "effect": 10,
+    "combos": {
+      "after": [
+        "spikes",
+        "stealth-rock",
+        "toxic-spikes"
+      ]
+    }
   },
   "endure": {
     "type": "tough",
-    "effect": 10
+    "effect": 10,
+    "combos": {
+      "before": [
+        "endeavor",
+        "flail",
+        "pain-split",
+        "reversal"
+      ]
+    }
   },
   "acupressure": {
     "type": "tough",
@@ -2233,11 +3096,25 @@
   },
   "rototiller": {
     "type": "tough",
-    "effect": 15
+    "effect": 15,
+    "combos": {
+      "before": [
+        "bullet-seed",
+        "leech-seed",
+        "seed-bomb",
+        "worry-seed"
+      ]
+    }
   },
   "stockpile": {
     "type": "tough",
-    "effect": 15
+    "effect": 15,
+    "combos": {
+      "before": [
+        "spit-up",
+        "swallow"
+      ]
+    }
   },
   "incinerate": {
     "type": "tough",
@@ -2257,7 +3134,17 @@
   },
   "torment": {
     "type": "tough",
-    "effect": 17
+    "effect": 17,
+    "combos": {
+      "before": [
+        "counter",
+        "destiny-bond",
+        "grudge",
+        "metal-burst",
+        "mirror-coat",
+        "spite"
+      ]
+    }
   },
   "dig": {
     "type": "tough",
@@ -2269,7 +3156,12 @@
   },
   "swallow": {
     "type": "tough",
-    "effect": 32
+    "effect": 32,
+    "combos": {
+      "after": [
+        "stockpile"
+      ]
+    }
   },
   "acid-armor": {
     "type": "tough",
@@ -2301,7 +3193,12 @@
   },
   "karate-chop": {
     "type": "tough",
-    "effect": 19
+    "effect": 19,
+    "combos": {
+      "after": [
+        "focus-energy"
+      ]
+    }
   },
   "mud-shot": {
     "type": "tough",
@@ -2329,7 +3226,12 @@
   },
   "seed-bomb": {
     "type": "tough",
-    "effect": 19
+    "effect": 19,
+    "combos": {
+      "after": [
+        "rototiller"
+      ]
+    }
   },
   "slam": {
     "type": "tough",
@@ -2401,7 +3303,14 @@
   },
   "grudge": {
     "type": "tough",
-    "effect": 22
+    "effect": 22,
+    "combos": {
+      "after": [
+        "encore",
+        "taunt",
+        "torment"
+      ]
+    }
   },
   "rock-wrecker": {
     "type": "tough",
@@ -2429,7 +3338,13 @@
   },
   "sky-drop": {
     "type": "tough",
-    "effect": 33
+    "effect": 33,
+    "combos": {
+      "after": [
+        "entrainment",
+        "play-nice"
+      ]
+    }
   },
   "wrap": {
     "type": "tough",
@@ -2453,11 +3368,23 @@
   },
   "counter": {
     "type": "tough",
-    "effect": 27
+    "effect": 27,
+    "combos": {
+      "after": [
+        "encore",
+        "taunt",
+        "torment"
+      ]
+    }
   },
   "endeavor": {
     "type": "tough",
-    "effect": 27
+    "effect": 27,
+    "combos": {
+      "after": [
+        "endure"
+      ]
+    }
   },
   "focus-punch": {
     "type": "tough",
@@ -2481,6 +3408,11 @@
   },
   "spit-up": {
     "type": "tough",
-    "effect": 28
+    "effect": 28,
+    "combos": {
+      "after": [
+        "stockpile"
+      ]
+    }
   }
 }

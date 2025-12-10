@@ -14,6 +14,7 @@ export default function Acknowledgements({ pageSpecific = [] }: Acknowledgements
   const commonResources: AcknowledgementLink[] = [
     { name: 'PkmnShuffleMap', url: 'https://github.com/nileplumb/PkmnShuffleMap/' },
     { name: 'Bulbapedia', url: 'https://bulbapedia.bulbagarden.net/' },
+    { name: 'Pokemon Database', url: 'https://pokemondb.net ' },
     { name: 'PokéSprite', url: 'https://github.com/msikma/pokesprite' },
     { name: 'PokéAPI', url: 'https://pokeapi.co/' },
   ];
