@@ -19,6 +19,7 @@ import {
   type AvailableMovesByMethod,
   type ContestEffect
 } from './moveUtils';
+import { getSuperContestShowOptimalMoves } from './superContestShowCalculator';
 
 type GameSelection = 'rse' | 'dppt' | 'oras' | 'bdsp';
 
@@ -62,7 +63,6 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedPokemon, setSelectedPokemon] = useState<string>(pokemonKey || '');
   const [showDropdown, setShowDropdown] = useState(false);
-  const [selectedContestType, setSelectedContestType] = useState<ContestType | 'all'>('all');
   const [selectedMoveIndex, setSelectedMoveIndex] = useState<number | null>(null);
 
   // Move filtering state
@@ -72,7 +72,8 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
     'tutor': true,
     'egg': true,
     'purify': true,
-    'pre-evolution': true
+    'pre-evolution': true,
+    'other': true
   });
   const [excludedMoves, setExcludedMoves] = useState<Set<string>>(new Set());
 
@@ -124,21 +125,23 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
       'tutor': true,
       'egg': true,
       'purify': true,
-      'pre-evolution': true
+      'pre-evolution': true,
+      'other': true
     });
     setExcludedMoves(new Set());
     setSelectedMoveIndex(null);
   }, [selectedPokemon, selectedGame]);
 
+  // Clear selected move when filters change
   useEffect(() => {
     setSelectedMoveIndex(null);
-  }, [selectedContestType, enabledMethods, excludedMoves]);
+  }, [enabledMethods, excludedMoves]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
       if (!target.closest('.moves-container')) {
-        setSelectedMove(null);
+        setSelectedMoveIndex(null);
       }
     };
 
@@ -185,7 +188,8 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
       'tutor': true,
       'egg': true,
       'purify': true,
-      'pre-evolution': true
+      'pre-evolution': true,
+      'other': true
     };
     return getSelectableMoves(availableMoves, allEnabledMethods);
   }, [availableMoves]);
@@ -228,52 +232,21 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
     return getPokemonDisplayName(selectedPokemon, selectedPokemonData);
   }, [selectedPokemon, selectedPokemonData]);
 
-  const filteredMoves = useMemo(() => {
-    if (!selectedPokemon || !pokemonMoves[selectedPokemon]) return [];
-    const filtered = filterAvailableMoves(availableMoves, enabledMethods, excludedMoves);
-    const moveNames = Object.keys(filtered).filter(move => contestMoves[move]);
+  // Calculate optimal moves with filtering applied
+  const optimalMoves = useMemo(() => {
+    if (!selectedPokemon || !pokemonMoves[selectedPokemon]) return null;
 
-    if (selectedContestType === 'all') return moveNames;
+    // Filter moves based on enabled methods and excluded moves
+    const filteredMovesMap = filterAvailableMoves(availableMoves, enabledMethods, excludedMoves);
 
-    return moveNames.filter(move => {
-      const moveData = contestMoves[move];
-      if (!moveData) return false;
-      const moveType = (moveData as any).type;
-      if (moveType && moveType !== selectedContestType) return false;
-      return true;
-    });
-  }, [selectedPokemon, availableMoves, enabledMethods, excludedMoves, selectedContestType]);
-
-  const randomMoves = useMemo(() => {
-    if (!filteredMoves.length) return [];
-
-    const shuffled = [...filteredMoves];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-
-    const selected = shuffled.slice(0, 5);
-    return selected.map(move => {
-      const moveData = contestMoves[move];
-      const effectId = moveData?.effect?.toString?.();
-      const effect = effectId ? contestEffects[effectId] : null;
-      const appeal = effect?.appeal ?? moveData?.hype ?? 0;
-      const moveType = (moveData?.type ??
-        (selectedContestType !== 'all' ? selectedContestType : 'cool')) as ContestType;
-
-      return {
-        move,
-        type: moveType,
-        appeal
-      };
-    });
-  }, [filteredMoves, selectedContestType]);
+    // Get optimal move options (top 3 by hype)
+    return getSuperContestShowOptimalMoves(filteredMovesMap);
+  }, [selectedPokemon, availableMoves, enabledMethods, excludedMoves]);
 
   const selectedMoveName = useMemo(() => {
-    if (selectedMoveIndex === null || !randomMoves[selectedMoveIndex]) return null;
-    return randomMoves[selectedMoveIndex].move;
-  }, [randomMoves, selectedMoveIndex]);
+    if (selectedMoveIndex === null || !optimalMoves || !optimalMoves[selectedMoveIndex]) return null;
+    return optimalMoves[selectedMoveIndex].move;
+  }, [optimalMoves, selectedMoveIndex]);
 
   const selectedMoveEffect = useMemo(() => {
     if (!selectedMoveName) return null;
@@ -301,10 +274,11 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
     return methodLabels;
   }, [selectedMoveName, availableMoves]);
 
-  const selectedMoveDisplay = useMemo(() => {
-    if (selectedMoveIndex === null) return null;
-    return randomMoves[selectedMoveIndex];
-  }, [randomMoves, selectedMoveIndex]);
+  const selectedMoveBaseHype = useMemo(() => {
+    if (!selectedMoveName) return 0;
+    const moveData = contestMoves[selectedMoveName];
+    return moveData?.hype ?? 0;
+  }, [selectedMoveName]);
 
   // Handle learn method checkbox changes
   const handleMethodToggle = (method: LearnMethod, checked: boolean) => {
@@ -394,22 +368,26 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
               }
             }}
           >
-            {randomMoves.length > 0 ? (
+            {optimalMoves && optimalMoves.length > 0 ? (
               <>
                 <div className="moves-list">
-                  {randomMoves.map((contestMove, index) => (
-                    <div
-                      key={index}
-                      className={`move-row move-type-${contestMove.type} ${selectedMoveIndex === index ? 'selected' : ''}`}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setSelectedMoveIndex(index);
-                      }}
-                    >
-                      <div className="move-type-badge">{contestMove.type.toUpperCase()}</div>
-                      <div className="move-name">{contestMove.move.replace(/-/g, ' ')}</div>
-                      <div className="move-value">{contestMove.appeal}</div>
-                    </div>
+                  {optimalMoves.map((contestMove, index) => (
+                    <>
+                      <div
+                        key={index}
+                        className={`move-row ${selectedMoveIndex === index ? 'selected' : ''}`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setSelectedMoveIndex(index);
+                        }}
+                      >
+                        <div className="move-name">{contestMove.move.replace(/-/g, ' ')}</div>
+                        <div className="move-value">{contestMove.hype}</div>
+                      </div>
+                      {index < optimalMoves.length - 1 && (
+                        <div key={`separator-${index}`} className="move-separator">-- OR --</div>
+                      )}
+                    </>
                   ))}
                 </div>
                 {selectedMoveName && selectedMoveEffect && (
@@ -424,7 +402,7 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
                         </div>
                       )}
                       <div className="move-details-appeal">
-                        {Array.from({ length: selectedMoveEffect.appeal ?? selectedMoveDisplay?.appeal ?? 0 }).map((_, i) => (
+                        {Array.from({ length: selectedMoveBaseHype }).map((_, i) => (
                           <span key={i}>❤️</span>
                         ))}
                       </div>
@@ -433,7 +411,10 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
                       {selectedMoveEffect.flavor_text && (
                         <p className="move-details-flavor">{selectedMoveEffect.flavor_text}</p>
                       )}
-                      <p className="move-details-effect">{selectedMoveEffect.effect_description}</p>
+                      {selectedMoveEffect.effect_description &&
+                       selectedMoveEffect.effect_description !== selectedMoveEffect.flavor_text && (
+                        <p className="move-details-effect">{selectedMoveEffect.effect_description}</p>
+                      )}
                     </div>
                   </div>
                 )}
@@ -485,20 +466,6 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
                   })}
                 </ul>
               )}
-            </div>
-            <div className="contest-type-wrapper">
-              <select
-                className="contest-type-select"
-                value={selectedContestType}
-                onChange={e => setSelectedContestType(e.target.value as ContestType)}
-              >
-                <option value="all">All Contests</option>
-                <option value="cool">Cool</option>
-                <option value="beauty">Beauty</option>
-                <option value="cute">Cute</option>
-                <option value="smart">Smart</option>
-                <option value="tough">Tough</option>
-              </select>
             </div>
           </div>
 

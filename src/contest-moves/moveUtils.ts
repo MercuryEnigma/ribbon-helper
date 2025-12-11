@@ -308,6 +308,136 @@ export function getLearnMethodStates(
 }
 
 /**
+ * Map of contest types to their opposite types (RSE/DPPt version).
+ * Moves with opposite types get -1 appeal penalty.
+ * Note: ORAS has different opposite types due to 'beautiful' and 'clever' categories.
+ */
+export const OPPOSITE_TYPES: Record<ContestType, ContestType[]> = {
+  'cool': ['cute', 'smart', 'clever'],
+  'beauty': ['smart', 'clever', 'tough'],
+  'beautiful': ['smart', 'clever', 'tough'],
+  'cute': ['tough', 'cool'],
+  'smart': ['cool', 'beauty', 'beautiful'],
+  'clever': ['cool', 'beauty', 'beautiful'],
+  'tough': ['beauty', 'beautiful', 'cute'],
+};
+
+/**
+ * Determines the appeal modifier based on move type vs contest type.
+ * @param moveType The type of the move being used
+ * @param contestType The contest type (undefined if 'all' was selected)
+ * @returns +1 if types match, -1 if opposite, 0 otherwise
+ */
+export function getTypeAppealModifier(moveType: ContestType, contestType?: ContestType, oppositeTypes: Record<ContestType, ContestType[]> = OPPOSITE_TYPES): number {
+  if (!contestType) return 0;
+  if (moveType === contestType) return 1;
+  if (oppositeTypes[contestType]?.includes(moveType)) return -1;
+  return 0;
+}
+
+/**
+ * Helper function to parse a learn method string and extract priority and level info.
+ * @param methodStr A learn method string like "lvl 55", "tm-44", "purify", etc.
+ * @returns Object with priority and level (for sorting)
+ */
+export function parseLearnMethod(methodStr: string): { priority: number; level: number } {
+  if (methodStr.startsWith('lvl ')) {
+    const level = parseInt(methodStr.substring(4), 10);
+    return { priority: LEARN_METHOD_PRIORITY['level-up'], level };
+  } else if (methodStr.startsWith('tm-') || methodStr.startsWith('hm-')) {
+    return { priority: LEARN_METHOD_PRIORITY['machine'], level: 0 };
+  } else if (methodStr === 'tutor') {
+    return { priority: LEARN_METHOD_PRIORITY['tutor'], level: 0 };
+  } else if (methodStr === 'egg') {
+    return { priority: LEARN_METHOD_PRIORITY['egg'], level: 0 };
+  } else if (methodStr === 'purify') {
+    return { priority: LEARN_METHOD_PRIORITY['purify'], level: 0 };
+  } else {
+    return { priority: LEARN_METHOD_PRIORITY['other'], level: 0 };
+  }
+}
+
+/**
+ * Generic move info interface for sorting functions
+ */
+export interface MoveInfoForSorting {
+  learnMethods: Set<string>;
+}
+
+/**
+ * Sorts moves by priority (highest first), then by level (descending for level-up moves).
+ * Example: ["refresh" (purify), "hyper-beam" (lvl 55), "tackle" (lvl 5), "rest" (tm-44)]
+ */
+export function sortMovesByPriority<T extends MoveInfoForSorting>(a: T, b: T): number {
+  // Get the highest priority method for each move
+  let aHighest = { priority: 0, level: 0 };
+  for (const methodStr of a.learnMethods) {
+    const parsed = parseLearnMethod(methodStr);
+    if (parsed.priority > aHighest.priority ||
+        (parsed.priority === aHighest.priority && parsed.level > aHighest.level)) {
+      aHighest = parsed;
+    }
+  }
+
+  let bHighest = { priority: 0, level: 0 };
+  for (const methodStr of b.learnMethods) {
+    const parsed = parseLearnMethod(methodStr);
+    if (parsed.priority > bHighest.priority ||
+        (parsed.priority === bHighest.priority && parsed.level > bHighest.level)) {
+      bHighest = parsed;
+    }
+  }
+
+  // Sort by priority (higher first)
+  if (aHighest.priority !== bHighest.priority) {
+    return bHighest.priority - aHighest.priority;
+  }
+
+  // If same priority and both are level-up, sort by level (descending)
+  if (aHighest.priority === LEARN_METHOD_PRIORITY['level-up']) {
+    return bHighest.level - aHighest.level;
+  }
+
+  return 0;
+}
+
+/**
+ * Finds all eligible combo pairs from available moves.
+ * A combo is eligible if both the starter move and finisher move are available.
+ * The move listed in combos.before gets the doubled appeal bonus when used after the starter.
+ *
+ * Example: rest.combos.before = ['snore', 'sleep-talk']
+ * This means: rest → snore (snore gets doubled) and rest → sleep-talk (sleep-talk gets doubled)
+ *
+ * @param availableMoves Map of move names to their learn methods
+ * @param contestMovesData The contest moves data with combo information
+ * @returns Array of starter/finisher combo pairs
+ */
+export function findEligibleCombos(
+  availableMoves: MovesMap,
+  contestMovesData: Record<string, any>
+): Array<{ starter: string; finisher: string }> {
+  const comboPairs: Array<{ starter: string; finisher: string }> = [];
+  const moveNames = Object.keys(availableMoves);
+  const moveSet = new Set(moveNames);
+
+  for (const moveName of moveNames) {
+    const moveMeta = contestMovesData[moveName];
+    if (!moveMeta?.combos?.before) continue;
+
+    // combos.before lists moves that get bonus when used after THIS move
+    // So starter = THIS move, finisher = move in combos.before
+    for (const comboFinisher of moveMeta.combos.before) {
+      if (moveSet.has(comboFinisher)) {
+        comboPairs.push({ starter: moveName, finisher: comboFinisher });
+      }
+    }
+  }
+
+  return comboPairs;
+}
+
+/**
  * Contest effect data structure
  */
 export interface ContestEffect {

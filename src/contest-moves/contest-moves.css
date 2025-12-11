@@ -237,6 +237,29 @@
   text-align: right;
 }
 
+.move-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #999;
+  background: #f8f8f8;
+  border-bottom: 2px solid #e0e0e0;
+  position: relative;
+  text-align: center;
+}
+
+.move-separator::before,
+.move-separator::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ccc, transparent);
+  margin: 0 1rem;
+}
+
 .no-moves {
   display: flex;
   align-items: center;

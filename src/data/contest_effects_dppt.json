@@ -3,120 +3,120 @@
     "id": 1,
     "appeal": 2,
     "next": 1,
-    "effect_description": "Enables the user to perform first in the next turn."
+    "flavor_text": "Enables the user to perform first in the next turn."
   },
   "2": {
     "id": 2,
     "appeal": 2,
     "next": 4,
-    "effect_description": "Enables the user to perform last in the next turn."
+    "flavor_text": "Enables the user to perform last in the next turn."
   },
   "4": {
     "id": 4,
     "appeal": 2,
     "voltage_bonus": 2,
-    "effect_description": "Earn +2 if the Judge’s Voltage goes up."
+    "flavor_text": "Earn +2 if the Judge’s Voltage goes up."
   },
   "5": {
     "id": 5,
     "appeal": 3,
-    "effect_description": "A basic performance using a move known by the Pokémon."
+    "flavor_text": "A basic performance using a move known by the Pokémon."
   },
   "6": {
     "id": 6,
     "appeal": 1,
-    "effect_description": "Earn +3 if no other Pokémon has chosen the same Judge."
+    "flavor_text": "Earn +3 if no other Pokémon has chosen the same Judge."
   },
   "7": {
     "id": 7,
     "appeal": 2,
     "repeat": true,
-    "effect_description": "Allows performance of the same move twice in a row."
+    "flavor_text": "Allows performance of the same move twice in a row."
   },
   "8": {
     "id": 8,
     "appeal": 0,
-    "effect_description": "Increased Voltage is added to the performance score."
+    "flavor_text": "Increased Voltage is added to the performance score."
   },
   "9": {
     "id": 9,
     "appeal": 0,
-    "effect_description": "Earn +15 if all the Pokémon choose the same Judge."
+    "flavor_text": "Earn +15 if all the Pokémon choose the same Judge."
   },
   "10": {
     "id": 10,
     "appeal": 2,
-    "effect_description": "Lowers the Voltage of all Judges by one each."
+    "flavor_text": "Lowers the Voltage of all Judges by one each."
   },
   "11": {
     "id": 11,
     "appeal": 0,
     "doubles": true,
-    "effect_description": "Earn double the score in the next turn."
+    "flavor_text": "Earn double the score in the next turn."
   },
   "12": {
     "id": 12,
     "appeal": 0,
-    "effect_description": "Steals the Voltage of the Pokémon that just went."
+    "flavor_text": "Steals the Voltage of the Pokémon that just went."
   },
   "13": {
     "id": 13,
     "appeal": 2,
-    "effect_description": "Prevents the Voltage from going up in the same turn."
+    "flavor_text": "Prevents the Voltage from going up in the same turn."
   },
   "14": {
     "id": 14,
     "appeal": 2,
-    "effect_description": "Makes the order of contestants random in the next turn."
+    "flavor_text": "Makes the order of contestants random in the next turn."
   },
   "15": {
     "id": 15,
     "appeal": 2,
     "final": true,
-    "effect_description": "Earns double the score on the final performance."
+    "flavor_text": "Earns double the score on the final performance."
   },
   "16": {
     "id": 16,
     "appeal": 4,
     "voltage": true,
-    "effect_description": "Raises the score if the Voltage is low."
+    "flavor_text": "Raises the score if the Voltage is low."
   },
   "17": {
     "id": 17,
     "appeal": 2,
     "first": true,
-    "effect_description": "Earn +2 if the Pokémon performs first in the turn."
+    "flavor_text": "Earn +2 if the Pokémon performs first in the turn."
   },
   "18": {
     "id": 18,
     "appeal": 2,
     "last": true,
-    "effect_description": "Earn +2 if the Pokémon performs last in the turn."
+    "flavor_text": "Earn +2 if the Pokémon performs last in the turn."
   },
   "19": {
     "id": 19,
     "appeal": 2,
-    "effect_description": "Prevents the Voltage from going down in the same turn."
+    "flavor_text": "Prevents the Voltage from going down in the same turn."
   },
   "20": {
     "id": 20,
     "appeal": 1,
-    "effect_description": "Earn +3 if two Pokémon raise the Voltage in a row."
+    "flavor_text": "Earn +3 if two Pokémon raise the Voltage in a row."
   },
   "21": {
     "id": 21,
     "appeal": 0,
     "last": true,
-    "effect_description": "Earn a higher score the later the Pokémon performs."
+    "flavor_text": "Earn a higher score the later the Pokémon performs."
   },
   "22": {
     "id": 22,
     "appeal": 2,
-    "effect_description": "Earn +3 if the Pokémon that just went hit max Voltage."
+    "flavor_text": "Earn +3 if the Pokémon that just went hit max Voltage."
   },
   "23": {
     "id": 23,
     "appeal": 1,
-    "effect_description": "Earn +3 if the Pokémon gets the lowest score."
+    "flavor_text": "Earn +3 if the Pokémon gets the lowest score."
   }
 }

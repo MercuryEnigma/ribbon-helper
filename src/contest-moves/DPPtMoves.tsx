@@ -20,6 +20,7 @@ import {
   type ContestMoveData,
   type ContestEffect
 } from './moveUtils';
+import { getSuperContestOptimalMoves } from './superContestCalculator';
 
 type GameSelection = 'rse' | 'dppt' | 'oras' | 'bdsp';
 
@@ -73,7 +74,8 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
     'tutor': true,
     'egg': true,
     'purify': true,
-    'pre-evolution': true
+    'pre-evolution': true,
+    'other': true
   });
   const [excludedMoves, setExcludedMoves] = useState<Set<string>>(new Set());
 
@@ -125,7 +127,8 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
       'tutor': true,
       'egg': true,
       'purify': true,
-      'pre-evolution': true
+      'pre-evolution': true,
+      'other': true
     });
     setExcludedMoves(new Set());
     setSelectedMoveIndex(null);
@@ -141,7 +144,7 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
       if (!target.closest('.moves-container')) {
-        setSelectedMove(null);
+        setSelectedMoveIndex(null);
       }
     };
 
@@ -188,7 +191,8 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
       'tutor': true,
       'egg': true,
       'purify': true,
-      'pre-evolution': true
+      'pre-evolution': true,
+      'other': true
     };
     return getSelectableMoves(availableMoves, allEnabledMethods);
   }, [availableMoves]);
@@ -231,47 +235,21 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
     return getPokemonDisplayName(selectedPokemon, selectedPokemonData);
   }, [selectedPokemon, selectedPokemonData]);
 
-  const filteredMoves = useMemo(() => {
-    if (!selectedPokemon || !pokemonMoves[selectedPokemon]) return [];
-    const filtered = filterAvailableMoves(availableMoves, enabledMethods, excludedMoves);
-    const moveNames = Object.keys(filtered).filter(move => contestMoves[move]);
+  // Calculate optimal moves with filtering applied
+  const optimalMoves = useMemo(() => {
+    if (!selectedPokemon || !pokemonMoves[selectedPokemon]) return null;
 
-    if (selectedContestType === 'all') return moveNames;
+    // Filter moves based on enabled methods and excluded moves
+    const filteredMovesMap = filterAvailableMoves(availableMoves, enabledMethods, excludedMoves);
 
-    return moveNames.filter(move => {
-      const moveData = contestMoves[move];
-      if (!moveData) return false;
-      return moveData.type === selectedContestType;
-    });
+    // Get optimal move sequence using the selected contest type
+    return getSuperContestOptimalMoves(filteredMovesMap, selectedContestType);
   }, [selectedPokemon, availableMoves, enabledMethods, excludedMoves, selectedContestType]);
 
-  const randomMoves = useMemo(() => {
-    if (!filteredMoves.length) return [];
-
-    const shuffled = [...filteredMoves];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-
-    const selected = shuffled.slice(0, 5);
-    return selected.map(move => {
-      const moveData = contestMoves[move];
-      const effect = moveData ? contestEffects[moveData.effect.toString()] : null;
-      const appeal = effect?.appeal ?? 0;
-
-      return {
-        move,
-        type: (moveData?.type ?? 'cool') as ContestType,
-        appeal
-      };
-    });
-  }, [filteredMoves]);
-
   const selectedMoveName = useMemo(() => {
-    if (selectedMoveIndex === null || !randomMoves[selectedMoveIndex]) return null;
-    return randomMoves[selectedMoveIndex].move;
-  }, [randomMoves, selectedMoveIndex]);
+    if (selectedMoveIndex === null || !optimalMoves || !optimalMoves[selectedMoveIndex]) return null;
+    return optimalMoves[selectedMoveIndex].move;
+  }, [optimalMoves, selectedMoveIndex]);
 
   const selectedMoveEffect = useMemo(() => {
     if (!selectedMoveName) return null;
@@ -300,9 +278,9 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
   }, [selectedMoveName, availableMoves]);
 
   const selectedMoveDisplay = useMemo(() => {
-    if (selectedMoveIndex === null) return null;
-    return randomMoves[selectedMoveIndex];
-  }, [randomMoves, selectedMoveIndex]);
+    if (selectedMoveIndex === null || !optimalMoves) return null;
+    return optimalMoves[selectedMoveIndex];
+  }, [optimalMoves, selectedMoveIndex]);
 
   // Handle learn method checkbox changes
   const handleMethodToggle = (method: LearnMethod, checked: boolean) => {
@@ -392,10 +370,10 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
               }
             }}
           >
-            {randomMoves.length > 0 ? (
+            {optimalMoves && optimalMoves.length > 0 ? (
               <>
                 <div className="moves-list">
-                  {randomMoves.map((contestMove, index) => (
+                  {optimalMoves.map((contestMove, index) => (
                     <div
                       key={index}
                       className={`move-row move-type-${contestMove.type} ${selectedMoveIndex === index ? 'selected' : ''}`}
@@ -431,7 +409,10 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
                       {selectedMoveEffect.flavor_text && (
                         <p className="move-details-flavor">{selectedMoveEffect.flavor_text}</p>
                       )}
-                      <p className="move-details-effect">{selectedMoveEffect.effect_description}</p>
+                      {selectedMoveEffect.effect_description &&
+                       selectedMoveEffect.effect_description !== selectedMoveEffect.flavor_text && (
+                        <p className="move-details-effect">{selectedMoveEffect.effect_description}</p>
+                      )}
                     </div>
                   </div>
                 )}

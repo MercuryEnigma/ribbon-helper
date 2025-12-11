@@ -1,6 +1,13 @@
 import contestMoves from '../data/contest_moves_rse.json';
 import contestEffects from '../data/contest_effects_rse.json';
-import { MovesMap, LEARN_METHOD_PRIORITY, type ContestType } from './moveUtils';
+import {
+  MovesMap,
+  type ContestType,
+  getTypeAppealModifier,
+  sortMovesByPriority,
+  findEligibleCombos,
+  type MoveInfoForSorting
+} from './moveUtils';
 
 export interface ContestMove {
   move: string;
@@ -23,9 +30,8 @@ type Archetype =
   | 'ADD_STAR'     // Move that adds stars/excitement
   | 'NONE';        // Standard move with no special effect
 
-interface MoveInfo {
+interface MoveInfo extends MoveInfoForSorting {
   move: string;
-  learnMethods: Set<string>;
   type: ContestType;
   effectId: string;
   effect: any;
@@ -42,31 +48,6 @@ interface ContestState {
   }
 
 const NUMBER_TURNS = 5;
-
-/**
- * Map of contest types to their opposite types.
- * Moves with opposite types get -1 appeal penalty.
- */
-const OPPOSITE_TYPES: Record<ContestType, ContestType[]> = {
-  'cool': ['cute', 'smart'],
-  'beauty': ['smart', 'tough'],
-  'cute': ['tough', 'cool'],
-  'smart': ['cool', 'beauty'],
-  'tough': ['beauty', 'cute'],
-};
-
-/**
- * Determines the appeal modifier based on move type vs contest type.
- * @param moveType The type of the move being used
- * @param contestType The contest type (undefined if 'all' was selected)
- * @returns +1 if types match, -1 if opposite, 0 otherwise
- */
-function getTypeAppealModifier(moveType: ContestType, contestType?: ContestType): number {
-  if (!contestType) return 0;
-  if (moveType === contestType) return 1;
-  if (OPPOSITE_TYPES[contestType].includes(moveType)) return -1;
-  return 0;
-}
 
 /**
  * Pre-defined contest strategies for optimal 5-move sequences.
@@ -133,65 +114,6 @@ function classifyEffect(effect: any): Archetype {
   if (effect?.next === 4) return 'NEXT_LAST';
   if (typeof effect?.star === 'number' && effect.star > 0) return 'ADD_STAR';
   return 'NONE';
-}
-
-/**
- * Helper function to parse a learn method string and extract priority and level info.
- * @param methodStr A learn method string like "lvl 55", "tm-44", "purify", etc.
- * @returns Object with priority and level (for sorting)
- */
-function parseLearnMethod(methodStr: string): { priority: number; level: number } {
-  if (methodStr.startsWith('lvl ')) {
-    const level = parseInt(methodStr.substring(4), 10);
-    return { priority: LEARN_METHOD_PRIORITY['level-up'], level };
-  } else if (methodStr.startsWith('tm-') || methodStr.startsWith('hm-')) {
-    return { priority: LEARN_METHOD_PRIORITY['machine'], level: 0 };
-  } else if (methodStr === 'tutor') {
-    return { priority: LEARN_METHOD_PRIORITY['tutor'], level: 0 };
-  } else if (methodStr === 'egg') {
-    return { priority: LEARN_METHOD_PRIORITY['egg'], level: 0 };
-  } else if (methodStr === 'purify') {
-    return { priority: LEARN_METHOD_PRIORITY['purify'], level: 0 };
-  } else {
-    return { priority: LEARN_METHOD_PRIORITY['other'], level: 0 };
-  }
-}
-
-/**
- * Sorts moves by priority (highest first), then by level (descending for level-up moves).
- * Example: ["refresh" (purify), "hyper-beam" (lvl 55), "tackle" (lvl 5), "rest" (tm-44)]
- */
-function sortMovesByPriority(a: MoveInfo, b: MoveInfo): number {
-  // Get the highest priority method for each move
-  let aHighest = { priority: 0, level: 0 };
-  for (const methodStr of a.learnMethods) {
-    const parsed = parseLearnMethod(methodStr);
-    if (parsed.priority > aHighest.priority ||
-        (parsed.priority === aHighest.priority && parsed.level > aHighest.level)) {
-      aHighest = parsed;
-    }
-  }
-
-  let bHighest = { priority: 0, level: 0 };
-  for (const methodStr of b.learnMethods) {
-    const parsed = parseLearnMethod(methodStr);
-    if (parsed.priority > bHighest.priority ||
-        (parsed.priority === bHighest.priority && parsed.level > bHighest.level)) {
-      bHighest = parsed;
-    }
-  }
-
-  // Sort by priority (higher first)
-  if (aHighest.priority !== bHighest.priority) {
-    return bHighest.priority - aHighest.priority;
-  }
-
-  // If same priority and both are level-up, sort by level (descending)
-  if (aHighest.priority === LEARN_METHOD_PRIORITY['level-up']) {
-    return bHighest.level - aHighest.level;
-  }
-
-  return 0;
 }
 
 /**
@@ -506,36 +428,6 @@ function getBestPresetStrategy(
 }
 
 /**
- * Finds all eligible combo pairs from available moves.
- * A combo is eligible if both the starter move and finisher move are available.
- * The move listed in combos.before gets the doubled appeal bonus when used after the starter.
- *
- * Example: rest.combos.before = ['snore', 'sleep-talk']
- * This means: rest → snore (snore gets doubled) and rest → sleep-talk (sleep-talk gets doubled)
- */
-function findEligibleCombos(availableMoves: MovesMap): Array<{ starter: string; finisher: string }> {
-  const comboPairs: Array<{ starter: string; finisher: string }> = [];
-  const moveNames = Object.keys(availableMoves);
-  const moveSet = new Set(moveNames);
-
-  for (const moveName of moveNames) {
-    const moveMeta = (contestMoves as any)[moveName];
-    if (!moveMeta?.combos?.before) continue;
-
-    // combos.before lists moves that get bonus when used after THIS move
-    // So starter = THIS move, finisher = move in combos.before
-    for (const comboFinisher of moveMeta.combos.before) {
-      if (moveSet.has(comboFinisher)) {
-        comboPairs.push({ starter: moveName, finisher: comboFinisher });
-      }
-    }
-  }
-
-  return comboPairs;
-}
-
-
-/**
  * Simulates a single combo pattern and calculates total appeal.
  * @param pools Available moves organized by archetype
  * @param starterMove The combo starter move
@@ -659,7 +551,7 @@ function getBestCombo(
   availableMoves: MovesMap,
   contestType?: ContestType
 ): { total: number; seq: ContestMove[] } | null {
-  const comboPairs = findEligibleCombos(availableMoves);
+  const comboPairs = findEligibleCombos(availableMoves, contestMoves);
   if (comboPairs.length === 0) return null;
 
   let best: { total: number; seq: ContestMove[] } | null = null;

@@ -401,8 +401,11 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
                       </div>
                     </div>
                     <div className="move-details-description">
-                      <p className="move-details-flavor">{selectedMoveEffect.flavor_text}</p>
-                      {selectedMoveEffect.effect_description && (
+                      {selectedMoveEffect.flavor_text && (
+                        <p className="move-details-flavor">{selectedMoveEffect.flavor_text}</p>
+                      )}
+                      {selectedMoveEffect.effect_description &&
+                       selectedMoveEffect.effect_description !== selectedMoveEffect.flavor_text && (
                         <p className="move-details-effect">{selectedMoveEffect.effect_description}</p>
                       )}
                     </div>

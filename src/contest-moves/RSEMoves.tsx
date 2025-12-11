@@ -405,8 +405,13 @@ export default function RSEMoves({ selectedGame, onNavigate }: RSEMovesProps) {
                       </div>
                     </div>
                     <div className="move-details-description">
-                      <p className="move-details-flavor">{selectedMoveEffect.flavor_text}</p>
-                      <p className="move-details-effect">{selectedMoveEffect.effect_description}</p>
+                      {selectedMoveEffect.flavor_text && (
+                        <p className="move-details-flavor">{selectedMoveEffect.flavor_text}</p>
+                      )}
+                      {selectedMoveEffect.effect_description &&
+                       selectedMoveEffect.effect_description !== selectedMoveEffect.flavor_text && (
+                        <p className="move-details-effect">{selectedMoveEffect.effect_description}</p>
+                      )}
                     </div>
                   </div>
                 )}

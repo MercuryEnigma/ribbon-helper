@@ -1,5 +1,5 @@
-import contestMoves from '../data/contest_moves_oras.json';
-import contestEffects from '../data/contest_effects_oras.json';
+import contestMoves from '../data/contest_moves_dppt.json';
+import contestEffects from '../data/contest_effects_dppt.json';
 import {
   MovesMap,
   type ContestType,
@@ -17,17 +17,17 @@ export interface ContestMove {
 
 /**
  * Move archetypes categorize contest moves based on their effect patterns.
- * These archetypes help determine optimal move sequences for RSE contests.
+ * These archetypes help determine optimal move sequences for DPPt Super Contests.
  */
-type Archetype =
+type SuperArchetype =
   | 'SKIPPED'      // Move causes next move to be skipped
   | 'END'          // Move ends the performance early
   | 'LAST'         // Move that works best when used last in order
   | 'FIRST'        // Move that works best when used first in order
-  | 'CONDITION'    // Move with appeal based on current star/condition count
   | 'NEXT_FIRST'   // Move that makes next move go first
   | 'NEXT_LAST'    // Move that makes next move go last
-  | 'ADD_STAR'     // Move that adds stars/excitement
+  | 'DOUBLE'       // Move that doubles the next turn's appeal
+  | 'VOLTAGE_BONUS' // Move that gives +4 appeal if same contest type
   | 'NONE';        // Standard move with no special effect
 
 interface MoveInfo extends MoveInfoForSorting {
@@ -35,47 +35,30 @@ interface MoveInfo extends MoveInfoForSorting {
   type: ContestType;
   effectId: string;
   effect: any;
-  archetype: Archetype;
+  archetype: SuperArchetype;
 }
 
-interface ContestState {
-    stars: number;        // Current condition/star count
-    guaranteedOrder?: number;    // Previous move's turn order modifier (1=first, 4=last)
-    skipNext: boolean;    // Whether this turn should be skipped
-    endAll: boolean;      // Whether all future turns should be skipped
-    turn: number;         // Current turn number (0-4)
-    contestType?: ContestType;  // Contest type for appeal bonuses/penalties (undefined if 'all')
-  }
+interface SuperContestState {
+  guaranteedOrder?: number;    // Previous move's turn order modifier (1=first, 4=last)
+  skipNext: boolean;    // Whether this turn should be skipped
+  endAll: boolean;      // Whether all future turns should be skipped
+  turn: number;         // Current turn number (0-3)
+  contestType?: ContestType;  // Contest type for appeal bonuses/penalties (undefined if 'all')
+  doubleNext: boolean;  // Whether the next turn's appeal should be doubled
+}
 
-const NUMBER_TURNS = 5;
+const NUMBER_TURNS = 4;
 
 /**
- * Pre-defined contest strategies for optimal 5-move sequences.
+ * Pre-defined contest strategies for optimal 4-move sequences.
  * Each strategy is a pattern of move archetypes that, when executed correctly,
- * maximizes appeal points in RSE contests.
+ * maximizes appeal points in DPPt Super Contests.
  */
-const STRATEGIES: Archetype[][] = [
-  // First-order strategies: Prioritize going first in turn order
-  ['ADD_STAR', 'NEXT_FIRST', 'FIRST', 'NEXT_FIRST', 'FIRST'],
-  ['FIRST', 'NEXT_FIRST', 'FIRST', 'NEXT_FIRST', 'FIRST'],
-  ['FIRST', 'NEXT_FIRST', 'FIRST', 'NEXT_FIRST', 'NONE'],
-  ['NEXT_FIRST', 'FIRST', 'NEXT_FIRST', 'FIRST', 'NONE'],
-
-  // Last-order strategies: Prioritize going last in turn order
-  ['ADD_STAR', 'NEXT_LAST', 'LAST', 'NEXT_LAST', 'LAST'],
-  ['FIRST', 'NEXT_LAST', 'LAST', 'NEXT_LAST', 'LAST'],
-  ['NEXT_LAST', 'LAST', 'NEXT_LAST', 'LAST', 'NONE'],
-
-  // Condition strategies: Prioritize raising condition
-  ['ADD_STAR', 'ADD_STAR', 'ADD_STAR', 'ADD_STAR', 'CONDITION'],
-  ['ADD_STAR', 'ADD_STAR', 'ADD_STAR', 'CONDITION', 'CONDITION'],
-  ['ADD_STAR', 'ADD_STAR', 'ADD_STAR', 'CONDITION', 'NONE'],
-  ['ADD_STAR', 'ADD_STAR', 'CONDITION', 'ADD_STAR', 'NONE'],
-  ['ADD_STAR', 'CONDITION', 'ADD_STAR', 'CONDITION', 'NONE'],
-
-  // Mostly none
-  ['FIRST', 'NONE', 'NONE', 'NONE', 'NONE'],
-  ['NONE', 'NONE', 'NONE', 'NONE', 'NONE'],
+const STRATEGIES: SuperArchetype[][] = [
+  ['FIRST', 'NEXT_FIRST', 'FIRST', 'NONE'],
+  ['FIRST', 'NEXT_LAST', 'LAST', 'NONE'],
+  ['NEXT_LAST', 'LAST', 'NEXT_LAST', 'LAST'],
+  ['DOUBLE', 'NONE', 'DOUBLE', 'NONE'],
 ];
 
 /**
@@ -85,34 +68,32 @@ const STRATEGIES: Archetype[][] = [
  * Pattern placeholders:
  * - 'STARTER': The combo starter move
  * - 'FINISHER': The combo finisher move (gets doubled appeal when following starter)
- * - Archetype strings: Any move archetype (e.g., 'FIRST', 'ADD_STAR', 'NONE')
+ * - Archetype strings: Any move archetype (e.g., 'FIRST', 'DOUBLE', 'NONE')
  */
-type ComboPatternTemplate = Array<'STARTER' | 'FINISHER' | Archetype>;
+type ComboPatternTemplate = Array<'STARTER' | 'FINISHER' | SuperArchetype>;
 
 const COMBO_PATTERNS: ComboPatternTemplate[] = [
-  ['STARTER', 'FINISHER', 'STARTER', 'FINISHER', 'NONE'],
-  ['NONE', 'NONE', 'NONE', 'STARTER', 'FINISHER'],
-  ['FIRST', 'NONE', 'NONE', 'STARTER', 'FINISHER'],
-  ['FIRST', 'STARTER', 'FINISHER', 'STARTER', 'FINISHER'],
-  ['NEXT_LAST', 'STARTER', 'FINISHER', 'STARTER', 'FINISHER'],
-  ['ADD_STAR', 'STARTER', 'FINISHER', 'STARTER', 'FINISHER'],
-  ['STARTER', 'FINISHER', 'STARTER', 'FINISHER', 'CONDITION'],
+  ['STARTER', 'FINISHER', 'STARTER', 'FINISHER'],
+  ['NONE', 'STARTER', 'FINISHER', 'NONE'],
+  ['FIRST', 'STARTER', 'FINISHER', 'NONE'],
+  ['NEXT_LAST', 'STARTER', 'FINISHER', 'NONE'],
+  ['DOUBLE', 'STARTER', 'FINISHER', 'NONE'],
 ];
 
 /**
  * Determines the archetype of a move based on its contest effect.
- * @param effect The effect data from contest_effects_rse.json
+ * @param effect The effect data from contest_effects_dppt.json
  * @returns The archetype category for the move
  */
-function classifyEffect(effect: any): Archetype {
+function classifyEffect(effect: any): SuperArchetype {
   if (effect?.skip) return 'SKIPPED';
   if (effect?.end) return 'END';
   if (effect?.last) return 'LAST';
   if (effect?.first) return 'FIRST';
-  if (effect?.condition) return 'CONDITION';
   if (effect?.next === 1) return 'NEXT_FIRST';
   if (effect?.next === 4) return 'NEXT_LAST';
-  if (typeof effect?.star === 'number' && effect.star > 0) return 'ADD_STAR';
+  if (effect?.doubles) return 'DOUBLE';
+  if (typeof effect?.voltage_bonus === 'number' && effect.voltage_bonus > 0) return 'VOLTAGE_BONUS';
   return 'NONE';
 }
 
@@ -124,16 +105,16 @@ function classifyEffect(effect: any): Archetype {
  * @param contestType The contest type for type-based sorting (undefined if 'all')
  * @returns Object mapping each archetype to an array of moves with that archetype
  */
-function buildMovePools(availableMoves: MovesMap, contestType?: ContestType): Record<Archetype, MoveInfo[]> {
-  const pools: Record<Archetype, MoveInfo[]> = {
+function buildMovePools(availableMoves: MovesMap, contestType?: ContestType): Record<SuperArchetype, MoveInfo[]> {
+  const pools: Record<SuperArchetype, MoveInfo[]> = {
     SKIPPED: [],
     END: [],
     LAST: [],
     FIRST: [],
-    CONDITION: [],
     NEXT_FIRST: [],
     NEXT_LAST: [],
-    ADD_STAR: [],
+    DOUBLE: [],
+    VOLTAGE_BONUS: [],
     NONE: [],
   };
 
@@ -157,7 +138,7 @@ function buildMovePools(availableMoves: MovesMap, contestType?: ContestType): Re
   }
 
   // Sort each pool
-  for (const [archetype, pool] of Object.entries(pools) as [Archetype, MoveInfo[]][]) {
+  for (const [archetype, pool] of Object.entries(pools) as [SuperArchetype, MoveInfo[]][]) {
     if (archetype === 'NONE') {
       // For NONE archetype: sort by type modifier, then appeal, then priority/level
       pool.sort((a, b) => {
@@ -204,24 +185,24 @@ function buildMovePools(availableMoves: MovesMap, contestType?: ContestType): Re
 /**
  * Calculates the appeal points a move will generate in the current contest state.
  * @param move The move being used
- * @param state Current contest state (stars, turn order, skip status, turn number)
+ * @param state Current contest state (turn order, skip status, turn number, double status)
  * @returns Appeal calculation result with next state changes
  */
 function computeAppeal(
   move: MoveInfo,
-  state: ContestState
-): { appeal: number; updatedState: ContestState } {
+  state: SuperContestState
+): { appeal: number; updatedState: SuperContestState } {
   // If this turn is skipped, return zero appeal and clear skip flag
   if (state.skipNext || state.endAll) {
     return {
       appeal: 0,
       updatedState: {
         guaranteedOrder: undefined,
-        stars: state.stars,
         skipNext: false,
         endAll: state.endAll,
         turn: state.turn + 1,
-        contestType: state.contestType
+        contestType: state.contestType,
+        doubleNext: false,
       }
     };
   }
@@ -229,45 +210,44 @@ function computeAppeal(
   const effect = move.effect || {};
   let appeal = effect.appeal ?? 0;
 
-  // Condition moves scale with current star count
-  if (effect.condition) {
-    if (state.stars === 0) appeal = 1;
-    else if (state.stars === 1) appeal = 3;
-    else if (state.stars === 2) appeal = 5;
-    else appeal = 7;  // 3+ stars
-  }
-
-  // First-order moves get bonus appeal if going first
+  // First-order moves get 4 appeal if going first (not 6 like RSE)
   if (effect.first && (state.turn === 0 || state.guaranteedOrder === 1)) {
-    appeal = 6;
+    appeal = 4;
   }
 
-  // Last-order moves get bonus appeal if going last
+  // Last-order moves get 4 appeal if going last (not 6 like RSE)
   if (effect.last && state.guaranteedOrder === 4) {
-    appeal = 6;
+    appeal = 4;
   }
 
-  // Stars add to appeal
-  appeal += state.stars;
+  // Voltage bonus: gives +4 appeal if same contest type (not "all")
+  if (move.archetype === 'VOLTAGE_BONUS' && state.contestType && move.type === state.contestType) {
+    appeal = 4;
+  }
 
   // Contest type bonus/penalty
   appeal += getTypeAppealModifier(move.type, state.contestType);
 
-  const starGain = typeof effect.star === 'number' ? effect.star : 0;
+  // Double appeal if previous move set doubleNext flag
+  if (state.doubleNext) {
+    appeal *= 2;
+  }
+
   const nextOrder = typeof effect.next === 'number' ? effect.next : undefined;
   const skipNext = !!effect.skip;
   const end = !!effect.end;
+  const doubleNext = !!effect.doubles;
 
-  const updatedState: ContestState = {
-        guaranteedOrder: nextOrder,
-        stars: state.stars + starGain,
-        skipNext,
-        endAll: end,
-        turn: state.turn + 1,
-        contestType: state.contestType
+  const updatedState: SuperContestState = {
+    guaranteedOrder: nextOrder,
+    skipNext,
+    endAll: end,
+    turn: state.turn + 1,
+    contestType: state.contestType,
+    doubleNext,
   };
 
-  return { appeal, updatedState};
+  return { appeal, updatedState };
 }
 
 /**
@@ -275,52 +255,60 @@ function computeAppeal(
  * @param pools Available moves organized by archetype
  * @param desired The archetype requested by the strategy, or 'NONE' for free choice
  * @param state Current contest state
- * @param prevArchetype The archetype used in the previous turn (to avoid repetition)
+ * @param prevMove The move used in the previous turn (to avoid repetition)
  * @returns The selected move, or null if no suitable move is available
  */
 function chooseMoveFromPool(
-  pools: Record<Archetype, MoveInfo[]>,
-  desired: Archetype | 'NONE',
-  state: ContestState,
+  pools: Record<SuperArchetype, MoveInfo[]>,
+  desired: SuperArchetype | 'NONE',
+  state: SuperContestState,
   prevMove?: MoveInfo
 ): MoveInfo | null {
   // If a specific archetype is requested, use the first available move of that type
   if (desired !== 'NONE') {
     const pool = pools[desired];
     if (pool.length === 0) return null;
-    if (prevMove?.archetype !== desired) return pool[0];
 
-    // Choosing the same archetype, so make sure moves are different
-    if (pool.length < 2) return pool[0];
-    return pool[0].move === prevMove?.move ? pool[1] : pool[0];
+    // Must avoid using the same move twice in a row (hard constraint)
+    if (prevMove && pool[0].move === prevMove.move) {
+      if (pool.length < 2) return null;
+      return pool[1];
+    }
+
+    return pool[0];
   }
 
   // For free choice: pick the move that maximizes immediate appeal
-  // Avoid repeating single-entry archetypes and END moves
+  // Avoid repeating moves and END moves
   let best: { move: MoveInfo; appeal: number } | null = null;
 
-  for (const [archKey, list] of Object.entries(pools) as [Archetype, MoveInfo[]][]) {
+  for (const [archKey, list] of Object.entries(pools) as [SuperArchetype, MoveInfo[]][]) {
     if (list.length === 0) continue;
-    // Don't repeat an archetype if it only has one move
     // Never use END or SKIPPED moves if it isn't the last turn
-    if ((archKey === 'END' || archKey === 'SKIPPED') 
+    if ((archKey === 'END' || archKey === 'SKIPPED')
       && state.turn < NUMBER_TURNS - 1) continue;
 
     const candidate1 = list[0];
-    let simulated1 = computeAppeal(candidate1, state).appeal;
-    if (candidate1.move === prevMove?.move) {
-      simulated1 -= 1;
+    // Hard constraint: cannot use same move twice in a row
+    if (prevMove && candidate1.move === prevMove.move) {
+      if (list.length < 2) continue;
+      const candidate2 = list[1];
+      const simulated2 = computeAppeal(candidate2, state).appeal;
+      if (!best || simulated2 > best.appeal) {
+        best = { move: candidate2, appeal: simulated2 };
+      }
+      continue;
     }
+
+    const simulated1 = computeAppeal(candidate1, state).appeal;
     if (!best || simulated1 > best.appeal) {
       best = { move: candidate1, appeal: simulated1 };
     }
 
     if (list.length < 2) continue;
     const candidate2 = list[1];
-    let simulated2 = computeAppeal(candidate2, state).appeal;
-    if (candidate2.move === prevMove?.move) {
-      simulated2 -= 1;
-    }
+    if (prevMove && candidate2.move === prevMove.move) continue;
+    const simulated2 = computeAppeal(candidate2, state).appeal;
     if (!best || simulated2 > best.appeal) {
       best = { move: candidate2, appeal: simulated2 };
     }
@@ -330,37 +318,37 @@ function chooseMoveFromPool(
 }
 
 /**
- * Simulates a complete 5-turn contest performance using a specific strategy.
+ * Simulates a complete 4-turn contest performance using a specific strategy.
  * @param pools Available moves organized by archetype
  * @param strategy The sequence of archetypes to use (defines move selection pattern)
  * @param contestType The contest type for appeal bonuses/penalties (undefined if 'all')
  * @returns Total appeal and move sequence, or null if strategy cannot be executed
  */
 function simulateStrategy(
-  pools: Record<Archetype, MoveInfo[]>,
-  strategy: (Archetype | 'NONE')[],
+  pools: Record<SuperArchetype, MoveInfo[]>,
+  strategy: (SuperArchetype | 'NONE')[],
   contestType?: ContestType
 ): { total: number; sequence: ContestMove[] } | null {
   // Create working copies of pools to track usage during simulation
-  const workingPools: Record<Archetype, MoveInfo[]> = {
+  const workingPools: Record<SuperArchetype, MoveInfo[]> = {
     SKIPPED: [...pools.SKIPPED],
     END: [...pools.END],
     LAST: [...pools.LAST],
     FIRST: [...pools.FIRST],
-    CONDITION: [...pools.CONDITION],
     NEXT_FIRST: [...pools.NEXT_FIRST],
     NEXT_LAST: [...pools.NEXT_LAST],
-    ADD_STAR: [...pools.ADD_STAR],
+    DOUBLE: [...pools.DOUBLE],
+    VOLTAGE_BONUS: [...pools.VOLTAGE_BONUS],
     NONE: [...pools.NONE],
   };
 
-  let state: ContestState = {
-    stars: 0,
+  let state: SuperContestState = {
     guaranteedOrder: undefined,
     skipNext: false,
     endAll: false,
     turn: 0,
-    contestType
+    contestType,
+    doubleNext: false,
   };
   let total = 0;
   const chosen: ContestMove[] = [];
@@ -369,10 +357,13 @@ function simulateStrategy(
   // Execute each turn of the strategy
   for (let i = 0; i < strategy.length; i++) {
     const desired = strategy[i];
-    const move = chooseMoveFromPool(workingPools, desired as Archetype, state, prevMove);
+    const move = chooseMoveFromPool(workingPools, desired as SuperArchetype, state, prevMove);
 
     // Strategy fails if required move type is unavailable
     if (!move) return null;
+
+    // Hard constraint: cannot use the same move twice in a row
+    if (prevMove && move.move === prevMove.move) return null;
 
     // Check if we already have 4 unique moves and this move is not one of them
     const uniqueMoves = new Set(chosen.map(m => m.move));
@@ -382,13 +373,10 @@ function simulateStrategy(
 
     // Calculate appeal and update contest state
     const outcome = computeAppeal(move, state);
-    let appeal = outcome.appeal;
+    const appeal = outcome.appeal;
 
-    if (move.move === prevMove?.move) {
-      appeal -= 1;
-    }
     total += appeal;
-    state = {...outcome.updatedState};
+    state = { ...outcome.updatedState };
     prevMove = move;
 
     chosen.push({
@@ -402,7 +390,7 @@ function simulateStrategy(
 }
 
 function getBestPresetStrategy(
-  pools:  Record<Archetype, MoveInfo[]>,
+  pools: Record<SuperArchetype, MoveInfo[]>,
   contestType?: ContestType
 ): { total: number; seq: ContestMove[] } | null {
   let best: { total: number; seq: ContestMove[] } | null = null;
@@ -410,7 +398,7 @@ function getBestPresetStrategy(
   // Test each strategy and keep the one with highest total appeal
   for (const strategy of STRATEGIES) {
     // Quick check: skip strategies that require unavailable archetypes
-    const needed = new Set(strategy.filter(s => s !== 'NONE') as Archetype[]);
+    const needed = new Set(strategy.filter(s => s !== 'NONE') as SuperArchetype[]);
     let valid = true;
     needed.forEach(arch => {
       if (pools[arch].length === 0) valid = false;
@@ -437,31 +425,31 @@ function getBestPresetStrategy(
  * @returns Total appeal and move sequence, or null if pattern cannot be executed
  */
 function simulateSingleComboPattern(
-  pools: Record<Archetype, MoveInfo[]>,
+  pools: Record<SuperArchetype, MoveInfo[]>,
   starterMove: MoveInfo,
   finisherMove: MoveInfo,
   pattern: ComboPatternTemplate,
   contestType?: ContestType
 ): { total: number; sequence: ContestMove[] } | null {
-  const workingPools: Record<Archetype, MoveInfo[]> = {
+  const workingPools: Record<SuperArchetype, MoveInfo[]> = {
     SKIPPED: [...pools.SKIPPED],
     END: [...pools.END],
     LAST: [...pools.LAST],
     FIRST: [...pools.FIRST],
-    CONDITION: [...pools.CONDITION],
     NEXT_FIRST: [...pools.NEXT_FIRST],
     NEXT_LAST: [...pools.NEXT_LAST],
-    ADD_STAR: [...pools.ADD_STAR],
+    DOUBLE: [...pools.DOUBLE],
+    VOLTAGE_BONUS: [...pools.VOLTAGE_BONUS],
     NONE: [...pools.NONE],
   };
 
-  let state: ContestState = {
-    stars: 0,
+  let state: SuperContestState = {
     guaranteedOrder: undefined,
     skipNext: false,
     endAll: false,
     turn: 0,
-    contestType
+    contestType,
+    doubleNext: false,
   };
   let total = 0;
   const chosen: ContestMove[] = [];
@@ -469,10 +457,10 @@ function simulateSingleComboPattern(
   let hadComboLastTurn = false;
 
   // Convert pattern template to actual moves/archetypes
-  const resolvedPattern: (MoveInfo | Archetype)[] = pattern.map(slot => {
+  const resolvedPattern: (MoveInfo | SuperArchetype)[] = pattern.map(slot => {
     if (slot === 'STARTER') return starterMove;
     if (slot === 'FINISHER') return finisherMove;
-    return slot as Archetype;
+    return slot as SuperArchetype;
   });
 
   for (let i = 0; i < NUMBER_TURNS; i++) {
@@ -487,6 +475,9 @@ function simulateSingleComboPattern(
       move = desiredMove;
     }
 
+    // Hard constraint: cannot use the same move twice in a row
+    if (prevMove && move.move === prevMove.move) return null;
+
     // Calculate base appeal
     const outcome = computeAppeal(move, state);
     let appeal = outcome.appeal;
@@ -496,15 +487,12 @@ function simulateSingleComboPattern(
     const isComboFinisher = move.move === finisherMove.move
       && prevMove?.move === starterMove.move;
     if (isComboFinisher && !hadComboLastTurn) {
-      appeal += 3;
+      appeal *= 2;
       hadComboLastTurn = true;
     } else {
       hadComboLastTurn = false;
     }
 
-    if (move.move === prevMove?.move) {
-      appeal -= 1;
-    }
     total += appeal;
     state = { ...outcome.updatedState };
     prevMove = move;
@@ -524,7 +512,7 @@ function simulateSingleComboPattern(
  * Tests different sequence variations to find the optimal combo strategy.
  */
 function simulateComboStrategy(
-  pools: Record<Archetype, MoveInfo[]>,
+  pools: Record<SuperArchetype, MoveInfo[]>,
   starterMove: MoveInfo,
   finisherMove: MoveInfo,
   contestType?: ContestType
@@ -547,7 +535,7 @@ function simulateComboStrategy(
  * Tests all possible combo pairs to find the one with highest total appeal.
  */
 function getBestCombo(
-  pools: Record<Archetype, MoveInfo[]>,
+  pools: Record<SuperArchetype, MoveInfo[]>,
   availableMoves: MovesMap,
   contestType?: ContestType
 ): { total: number; seq: ContestMove[] } | null {
@@ -584,18 +572,18 @@ function getBestCombo(
 /**
  * Greedy fallback strategy that picks moves with highest appeal.
  * Sorts moves by base appeal plus contest type modifier, then selects top moves
- * while avoiding skip/end moves (except on last turn) and duplicates.
+ * while avoiding skip/end moves (except on last turn) and same move repetitions.
  * @param pools Available moves organized by archetype
  * @param contestType The contest type for appeal bonuses/penalties (undefined if 'all')
- * @returns Array of 5 contest moves, or empty array if no moves available
+ * @returns Total and sequence of 4 contest moves, or empty array if no moves available
  */
 function getGreedyAttempt(
-  pools: Record<Archetype, MoveInfo[]>,
+  pools: Record<SuperArchetype, MoveInfo[]>,
   contestType?: ContestType
 ): { total: number; seq: ContestMove[] } {
   // Get all available moves
   const allMoves = Object.values(pools).flat();
-  if (allMoves.length === 0) return {total: 0, seq: []};
+  if (allMoves.length === 0) return { total: 0, seq: [] };
 
   // Sort by base appeal + type modifier (descending)
   allMoves.sort((a, b) => {
@@ -604,13 +592,13 @@ function getGreedyAttempt(
     return appealB - appealA;
   });
 
-  let state: ContestState = {
-    stars: 0,
+  let state: SuperContestState = {
     guaranteedOrder: undefined,
     skipNext: false,
     endAll: false,
     turn: 0,
-    contestType
+    contestType,
+    doubleNext: false,
   };
   let total: number = 0;
   const greedyStrat: ContestMove[] = [];
@@ -619,6 +607,7 @@ function getGreedyAttempt(
   for (let i = 0; i < NUMBER_TURNS; i++) {
     let bestMove: MoveInfo | null = null;
     for (const move of allMoves) {
+      // Hard constraint: cannot use same move twice in a row
       if (prevMove && move.move === prevMove.move) continue;
       if (!move.effect?.skip && !move.effect?.end) {
         bestMove = move;
@@ -632,11 +621,7 @@ function getGreedyAttempt(
 
     if (bestMove) {
       const outcome = computeAppeal(bestMove, state);
-      let appeal = outcome.appeal;
-
-      if (bestMove.move === prevMove?.move) {
-        appeal -= 1;
-      }
+      const appeal = outcome.appeal;
 
       total += appeal;
       state = { ...outcome.updatedState };
@@ -649,20 +634,26 @@ function getGreedyAttempt(
       });
     }
   }
-  return {total, seq: greedyStrat};
+  return { total, seq: greedyStrat };
 }
 
 /**
- * Computes the optimal 5-move sequence for RSE contests.
+ * Computes the optimal 4-move sequence for DPPt Super Contests.
  * Tries multiple pre-defined strategies and returns the one with highest total appeal.
- * @param availableMoves List of move names the Pokémon can learn
- * @param contestType The contest type filter (currently unused in selection)
- * @returns Array of 5 contest moves with their types and appeal values
+ * @param availableMoves Map of move names to their learn methods
+ * @param contestType The contest type filter
+ * @returns Array of 4 contest moves with their types and appeal values
  */
-export function getContestSpectacularOptimalMoves(
+export function getSuperContestOptimalMoves(
   availableMoves: MovesMap,
   contestType: ContestType | 'all'
 ): ContestMove[] {
+  // If Pokemon only has 1 move, they are not eligible for super contests
+  const moveCount = Object.keys(availableMoves).length;
+  if (moveCount <= 1) {
+    return [];
+  }
+
   const actualContestType = contestType === 'all' ? undefined : contestType;
   const pools = buildMovePools(availableMoves, actualContestType);
 
