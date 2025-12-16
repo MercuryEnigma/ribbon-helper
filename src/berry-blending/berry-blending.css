@@ -632,14 +632,16 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .berry-blending {
-    padding: 0.75rem;
+    padding: 0.5rem;
   }
 
+  /* Make mode selector wrap on tablets */
   .berry-mode-selector {
-    flex-direction: column;
-    border-bottom: none;
+    flex-wrap: wrap;
+    padding: 0.75rem 0.5rem;
+    justify-content: center;
   }
 
   .berry-mode-selector .nav-arrow {
@@ -648,14 +650,9 @@
 
   .berry-mode-selector button,
   .berry-mode-selector a {
-    top: 0;
-    border: 2px solid #757575;
-    border-radius: 4px;
-  }
-
-  .berry-mode-selector button.active,
-  .berry-mode-selector a.active {
-    border: 2px solid #d66020;
+    flex: 1 1 auto;
+    min-width: 100px;
+    white-space: nowrap;
   }
 
   .option-row {
@@ -671,11 +668,82 @@
 
   .option-group select {
     width: 100%;
+    min-width: auto;
+  }
+
+  .block-content {
+    grid-template-columns: 120px 1fr;
+    gap: 0.5rem;
+  }
+
+  .kit-stats {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .berry-blending {
+    padding: 0;
+  }
+
+  .berry-mode-content {
+    padding: 1rem;
+  }
+
+  /* Mode selector - stack on small phones */
+  .berry-mode-selector {
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.5rem;
+  }
+
+  .berry-mode-selector button,
+  .berry-mode-selector a {
+    width: 100%;
+    min-width: auto;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.85rem;
+  }
+
+  .blending-options {
+    padding: 0.75rem;
+    gap: 0.6rem;
+  }
+
+  .option-group label {
+    font-size: 0.8rem;
+  }
+
+  .option-group select {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.65rem;
+  }
+
+  .player-buttons button {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.65rem;
+    min-width: 38px;
+  }
+
+  .option-checkbox {
+    padding: 0.4rem 0.5rem;
+    min-height: 42px;
+  }
+
+  .option-checkbox .toggle-label {
+    font-size: 0.85rem;
   }
 
   .block-item {
     flex-direction: row;
     gap: 0.5rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .berry-icon {
+    width: 28px;
+    height: 28px;
   }
 
   .block-content {
@@ -684,15 +752,87 @@
   }
 
   .block-name {
-    font-weight: 700;
+    font-size: 0.85rem;
   }
 
-  .kit-stats {
-    grid-template-columns: 1fr;
+  .block-berry {
+    font-size: 0.8rem;
   }
 
-  .stat-label {
-    min-width: auto;
+  .block-meta {
+    font-size: 0.75rem;
+  }
+
+  .stat-row {
+    font-size: 0.8rem;
+  }
+
+  .stat {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.4rem;
+  }
+
+  .color-mapping-list {
+    max-width: 100%;
+  }
+
+  .color-mapping-item {
+    gap: 0.75rem;
+    padding: 0.5rem 0.6rem;
+  }
+
+  .color-label {
+    font-size: 0.85rem;
+    min-width: 70px;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .flavor-label,
+  .stat-label-name {
+    font-size: 0.85rem;
+  }
+
+  .bdsp-set-group-wrapper {
+    gap: 0.5rem;
+  }
+
+  .bdsp-set-label {
+    font-size: 0.85rem;
+    padding: 0.4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .berry-mode-selector button,
+  .berry-mode-selector a {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.75rem;
+    min-width: 85px;
+  }
+
+  .player-buttons {
+    flex-wrap: wrap;
+  }
+
+  .player-buttons button {
+    font-size: 0.75rem;
+    min-width: 35px;
+  }
+
+  .color-mapping-item {
+    gap: 0.4rem;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .color-label {
+    font-size: 0.75rem;
+    min-width: 50px;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .flavor-label,
+  .stat-label-name {
+    font-size: 0.75rem;
   }
 }
 

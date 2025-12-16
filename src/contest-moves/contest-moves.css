@@ -667,9 +667,62 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .contest-moves {
+    padding: 0.5rem;
+  }
+
+  /* Convert to flexbox layout for reordering */
   .contest-layout {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* Use display: contents to flatten the hierarchy
+     This makes the children of these sections act as direct children of contest-layout */
+  .contest-moves-section,
+  .pokemon-selector-section {
+    display: contents;
+  }
+
+  /* Reorder elements for mobile:
+     1. pokemon-selector-bar (search + dropdown)
+     2. contest-mode-selector (tabs)
+     3. moves-container (optimal moves)
+     4. move-filter-container (learn methods + move list) */
+  .pokemon-selector-bar {
+    order: 1;
+  }
+
+  .contest-mode-selector {
+    order: 2;
+  }
+
+  .moves-container {
+    order: 3;
+  }
+
+  .move-filter-container {
+    order: 4;
+  }
+
+  /* Fix borders and spacing for separated elements on mobile */
+  .pokemon-selector-bar {
+    border-radius: 12px;
+    border-bottom: 3px solid #8b6914;
+    margin-bottom: 1rem;
+  }
+
+  .move-filter-container {
+    border-radius: 12px;
+    border-top: 3px solid #8b6914;
+  }
+
+  /* Make mode selector wrap on tablets */
+  .contest-mode-selector {
+    flex-wrap: nowrap;
+    justify-content: center;
   }
 
   .contest-mode-selector .nav-arrow {
@@ -679,6 +732,213 @@
   .contest-mode-selector button,
   .contest-mode-selector a {
     font-size: 0.8rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.25rem;
+    flex: 0 0 auto;
+  }
+
+  /* Adjust container heights for mobile */
+  .moves-container {
+    height: auto;
+    min-height: 400px;
+    max-height: 500px;
+    margin-bottom: 1rem;
+  }
+
+  .move-filter-container {
+    height: auto;
+    min-height: 400px;
+    max-height: 500px;
+  }
+
+  .pokemon-selector-section {
+    height: auto;
+  }
+
+  /* Pokemon selector bar - stack search and dropdown on small tablets */
+  .pokemon-selector-bar {
+    flex-wrap: wrap;
+  }
+
+  .pokemon-search-input-wrapper,
+  .contest-type-wrapper {
+    flex: 1 1 45%;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contest-moves {
+    padding: 0;
+  }
+
+  /* Mode selector - keep in one row, allow shrinking */
+  .contest-mode-selector {
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 0 0.15rem;
+    justify-content: center;
+  }
+
+  .contest-mode-selector button,
+  .contest-mode-selector a {
+    flex: 0 0 auto;
+    font-size: 0.7rem;
+    padding: 0.5rem 1.25rem;
+  }
+
+  /* Full width inputs on phone */
+  .pokemon-selector-bar {
+    padding: 0.65rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .pokemon-search-input-wrapper,
+  .contest-type-wrapper {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+
+  .pokemon-search-input,
+  .contest-type-select {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
+    min-height: 38px;
+  }
+
+  /* Move rows - compact on mobile */
+  .move-row {
+    grid-template-columns: auto 1fr auto;
+    gap: 0.5rem;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .move-type-badge {
+    width: 80px;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .move-name {
+    font-size: 0.85rem;
+  }
+
+  .move-value {
+    font-size: 0.9rem;
+    min-width: 40px;
+  }
+
+  /* Move details */
+  .move-details {
+    height: auto;
+    min-height: 150px;
+    max-height: 200px;
+    padding: 0.75rem;
+  }
+
+  .move-details-header {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .move-details-methods {
+    flex: 1 1 100%;
+  }
+
+  .move-details-methods-text {
+    font-size: 0.85rem;
+  }
+
+  .move-details-star {
+    flex: 1 1 auto;
+    font-size: 1.25rem;
+  }
+
+  .move-details-appeal {
+    flex: 1 1 auto;
+    font-size: 1.25rem;
+    gap: 0.35rem;
+  }
+
+  .move-details-flavor {
+    font-size: 0.85rem;
+  }
+
+  .move-details-effect {
+    font-size: 0.75rem;
+  }
+
+  /* Pokemon display */
+  .pokemon-display {
+    min-height: 250px;
+    padding: 0.75rem;
+  }
+
+  .pokemon-display-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .pokemon-watermark {
+    width: 280px;
+    height: 280px;
+  }
+
+  /* Move filter list */
+  .move-filter-list {
+    padding: 0.4rem;
+    gap: 0.2rem;
+  }
+
+  .move-filter-checkbox {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .move-filter-checkbox .move-learn-methods {
+    font-size: 0.7rem;
+  }
+
+  /* Learn methods grid */
+  .learn-methods-grid.three-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .learn-method-checkbox {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  /* Very small phones */
+  .contest-mode-selector button,
+  .contest-mode-selector a {
+    font-size: 0.65rem;
+  }
+
+  .move-type-badge {
+    width: 70px;
+    font-size: 0.65rem;
+  }
+
+  .move-row {
+    gap: 0.35rem;
+    padding: 0.5rem 0.6rem;
+  }
+
+  .pokemon-display-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .pokemon-watermark {
+    width: 220px;
+    height: 220px;
+  }
+
+  .learn-methods-grid.two-columns,
+  .learn-methods-grid.three-columns {
+    grid-template-columns: 1fr;
   }
 }
