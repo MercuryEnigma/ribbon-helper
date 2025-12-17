@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import type { PokemonDatabase } from './types';
 import { getGamesForPokemon, getGameGroupNames, searchPokemonByName, getPokemonDisplayName } from './utils';
-import { getPokemonIconProps } from './iconUtils';
+import { getPokemonIconProps, getPokemonLargeImageProps } from './iconUtils';
 import games from '../data/games.json';
 
 interface BySpeciesProps {
@@ -113,6 +113,11 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
     return getPokemonIconProps(selectedPokemon, selectedPokemonData, pokemonDb);
   }, [pokemonDb, selectedPokemon, selectedPokemonData]);
 
+  const largeImageProps = useMemo(() => {
+    if (!selectedPokemonData) return null;
+    return getPokemonLargeImageProps(selectedPokemon, selectedPokemonData, pokemonDb);
+  }, [pokemonDb, selectedPokemon, selectedPokemonData]);
+
   const earliestGen = useMemo(() => {
     if (!pokemonDb || !selectedPokemonData) return '';
     try {
@@ -197,11 +202,11 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
           <div className="pokedex-entry-left">
             <div className="pokedex-entry-frame">
               <div className="pokedex-entry-bg">
-                {largeIconProps && (
+                {largeImageProps && (
                   <img
                     className="pokedex-entry-image"
                     alt={displayName}
-                    {...largeIconProps}
+                    {...largeImageProps}
                   />
                 )}
               </div>

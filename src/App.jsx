@@ -56,7 +56,10 @@ export default function App() {
   return (
     <div className="app">
       <header className="header">
-        <div className="title">Ribbon Helper</div>
+        <div className="header-title-group">
+          <div className="title">Ribbon Helper</div>
+          <div className="subtitle">by MercuryEnigma</div>
+        </div>
         {/* <button className="settings-button" onClick={() => setIsSettingsOpen(true)} aria-label="Open settings">
           ⚙️ Settings
         </button> */}

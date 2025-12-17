@@ -1,10 +1,12 @@
 import type { PokemonData, PokemonDatabase } from './types';
 import formIconMapping from '../data/form_icons.json';
+import pokemonImages from '../data/pokemon_images.json';
 
 const ICON_BASE_URL = 'https://raw.githubusercontent.com/nileplumb/PkmnShuffleMap/master/UICONS/pokemon';
 
 // Type the imported JSON
 const FORM_ICONS: Record<string, string> = formIconMapping;
+const POKEMON_IMAGES: Record<string, string | null> = pokemonImages;
 
 /**
  * Get the icon URL for a Pokemon
@@ -110,6 +112,68 @@ export function getPokemonIconProps(
         img.src = fallbackUrl;
       } else {
         // If even base form fails, use a default
+        img.src = `${ICON_BASE_URL}/0.png`;
+      }
+    }
+  };
+}
+
+/**
+ * Get large Pokemon image URL from PokeAPI Home sprites
+ * Returns the high-quality Home sprite URL with fallback to icon
+ */
+export function getPokemonLargeImageUrl(
+  key: string,
+  data: PokemonData,
+  pokemonDb: PokemonDatabase
+): string | null {
+  // Try to get the image from pokemon_images.json
+  const imageUrl = POKEMON_IMAGES[key];
+
+  if (imageUrl) {
+    return imageUrl;
+  }
+
+  // If no image found, return null (caller can decide to use icon as fallback)
+  return null;
+}
+
+/**
+ * Get large Pokemon image props with error fallback
+ * Returns an object with url and onError handler that falls back to icon
+ */
+export function getPokemonLargeImageProps(
+  key: string,
+  data: PokemonData,
+  pokemonDb: PokemonDatabase
+): { src: string; onError: (e: React.SyntheticEvent<HTMLImageElement>) => void } {
+  const imageUrl = getPokemonLargeImageUrl(key, data, pokemonDb);
+  const iconUrl = getPokemonIconUrl(key, data, pokemonDb);
+
+  // Use large image if available, otherwise use icon
+  const initialUrl = imageUrl || iconUrl;
+
+  // Get base natdex for fallback
+  let natdex: number | undefined = data.natdex;
+  if (!natdex && data['data-source']) {
+    natdex = pokemonDb[data['data-source']]?.natdex;
+  }
+  const natdexStr = natdex ? String(natdex) : '0';
+  const fallbackIconUrl = `${ICON_BASE_URL}/${natdexStr}.png`;
+
+  return {
+    src: initialUrl,
+    onError: (e: React.SyntheticEvent<HTMLImageElement>) => {
+      const img = e.currentTarget;
+
+      // If we were showing the large image and it failed, try the icon
+      if (imageUrl && img.src === imageUrl) {
+        img.src = iconUrl;
+      } else if (img.src === iconUrl && iconUrl !== fallbackIconUrl) {
+        // If icon failed, try base form icon
+        img.src = fallbackIconUrl;
+      } else if (img.src === fallbackIconUrl) {
+        // If even base form fails, use default
         img.src = `${ICON_BASE_URL}/0.png`;
       }
     }

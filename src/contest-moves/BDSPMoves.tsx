@@ -4,7 +4,7 @@ import pokemonDb from '../data/pokemon.json';
 import pokemonMovesData from '../data/pokemon_moves_bdsp.json';
 import contestMovesData from '../data/contest_moves_bdsp.json';
 import contestEffectsData from '../data/contest_effects_bdsp.json';
-import { getPokemonIconProps } from '../switch-compatibility/iconUtils';
+import { getPokemonIconProps, getPokemonLargeImageProps } from '../switch-compatibility/iconUtils';
 import { searchPokemonByName, getPokemonDisplayName } from '../switch-compatibility/utils';
 import type { PokemonDatabase } from '../switch-compatibility/types';
 import {
@@ -214,6 +214,11 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
   const largeIconProps = useMemo(() => {
     if (!selectedPokemonData) return null;
     return getPokemonIconProps(selectedPokemon, selectedPokemonData, typedPokemonDb);
+  }, [selectedPokemon, selectedPokemonData]);
+
+  const largeImageProps = useMemo(() => {
+    if (!selectedPokemonData) return null;
+    return getPokemonLargeImageProps(selectedPokemon, selectedPokemonData, typedPokemonDb);
   }, [selectedPokemon, selectedPokemonData]);
 
   const displayName = useMemo(() => {
@@ -470,11 +475,11 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
           </div>
 
           <div className="move-filter-container">
-            {selectedPokemon && largeIconProps && (
+            {selectedPokemon && largeImageProps && (
               <img
                 className="pokemon-watermark"
                 alt={displayName}
-                {...largeIconProps}
+                {...largeImageProps}
               />
             )}
             <div className={`learn-methods-grid ${visibleMethodCount === 3 || visibleMethodCount > 4 ? 'three-columns' : 'two-columns'}`}>
