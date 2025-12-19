@@ -1018,6 +1018,53 @@
   min-width: 0;
 }
 
+/* Contest moves navigation */
+.contest-moves-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  background: #d45a1b;
+  border: 2px solid #b33f12;
+  border-radius: 24px;
+}
+
+.contest-moves-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  background: #f6cda2;
+  border: 1px solid #d28a45;
+  border-radius: 10px;
+  padding: 0.35rem 0.7rem;
+  min-width: 180px;
+  height: 30px;
+  color: #2d2d2d;
+  font-weight: 800;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 1px 2px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+.contest-moves-button:hover {
+  background: #f8d8b5;
+  border-color: #c67935;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+}
+
+.contest-moves-button:active {
+  background: #f0c89d;
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
 /* Ribbons section */
 .ribbons-section {
   padding: 0.85rem 1rem;
@@ -1742,6 +1789,10 @@
     order: 3;
   }
 
+  .contest-moves-navigation {
+    order: 4;
+  }
+
   .evolution-navigation {
     order: 4;
   }
@@ -2048,4 +2099,3 @@
     display: none;
   }
 }
-
