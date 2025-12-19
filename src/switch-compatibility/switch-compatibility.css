@@ -1157,6 +1157,62 @@
   position: relative;
 }
 
+.ribbon-tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ribbon-tooltip-content {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-2px);
+  background: #2d2d2d;
+  color: #fff;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  white-space: normal;
+  min-width: 180px;
+  max-width: 260px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s ease, transform 0.12s ease;
+  z-index: 5;
+}
+
+.ribbon-tooltip:hover .ribbon-tooltip-content {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.ribbon-tooltip-text {
+  display: block;
+  font-weight: 800;
+  font-size: 0.92rem;
+}
+
+.ribbon-tooltip-desc {
+  display: block;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+.ribbon-tooltip-last-chance {
+  display: block;
+  margin-top: 0.1rem;
+  color: #c62828;
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
 .ribbon-last-chance-wrapper {
   position: relative;
   display: inline-block;

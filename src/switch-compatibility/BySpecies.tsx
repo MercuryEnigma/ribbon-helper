@@ -4,6 +4,7 @@ import type { PokemonDatabase } from './types';
 import { getGamesForPokemon, getGameGroupNames, searchPokemonByName, getPokemonDisplayName, getAvailableGenerations, GENERATION_ORDER } from './utils';
 import { getPokemonIconProps, getPokemonLargeImageProps } from './iconUtils';
 import { getAvailableRibbons } from './ribbonUtils';
+import ribbonsData from '../data/ribbons.json';
 
 interface BySpeciesProps {
   pokemonDb: PokemonDatabase;
@@ -177,6 +178,33 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
   const preEvolution = useMemo(() => {
     return selectedPokemonData?.evolvesFrom || null;
   }, [selectedPokemonData]);
+
+  const renderRibbonImage = (ribbonKey: string, isLastChance: boolean) => {
+    const ribbonInfo = (ribbonsData as Record<string, { names?: { en?: string }; descs?: { en?: string } }>)[ribbonKey];
+    const ribbonName = ribbonInfo?.names?.en || ribbonKey;
+    const ribbonDesc = ribbonInfo?.descs?.en || '';
+    const baseTooltip = ribbonDesc ? `${ribbonName} : ${ribbonDesc}` : ribbonName;
+    const tooltipTitle = isLastChance ? `${baseTooltip} (Last Chance!)` : baseTooltip;
+    const wrapperClass = `ribbon-tooltip${isLastChance ? ' ribbon-last-chance-wrapper' : ''}`;
+
+    return (
+      <div key={ribbonKey} className={wrapperClass}>
+        <img
+          src={`${import.meta.env.BASE_URL}images/${ribbonKey}.png`}
+          alt={ribbonName}
+          title={tooltipTitle}
+          className="ribbon-image"
+        />
+        <div className="ribbon-tooltip-content">
+          <span className="ribbon-tooltip-text">{ribbonName}</span>
+          {ribbonDesc && <span className="ribbon-tooltip-desc">{ribbonDesc}</span>}
+          {isLastChance && (
+            <span className="ribbon-tooltip-last-chance">(Last Chance!)</span>
+          )}
+        </div>
+      </div>
+    );
+  };
 
   return (
     <div className="by-species">
@@ -481,24 +509,7 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
                           <div className="ribbon-item">
                             {ribbonData['first-introduced'].map(ribbonKey => {
                               const isLastChance = !isSwitchGame && ribbonData['last-chance'].includes(ribbonKey);
-                              return isLastChance ? (
-                                <div key={ribbonKey} className="ribbon-last-chance-wrapper">
-                                  <img
-                                    src={`${import.meta.env.BASE_URL}images/${ribbonKey}.png`}
-                                    alt={ribbonKey}
-                                    title={ribbonKey}
-                                    className="ribbon-image"
-                                  />
-                                </div>
-                              ) : (
-                                <img
-                                  key={ribbonKey}
-                                  src={`${import.meta.env.BASE_URL}images/${ribbonKey}.png`}
-                                  alt={ribbonKey}
-                                  title={ribbonKey}
-                                  className="ribbon-image"
-                                />
-                              );
+                              return renderRibbonImage(ribbonKey, isLastChance);
                             })}
                           </div>
                         </div>
@@ -509,24 +520,7 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
                           <div className="ribbon-item">
                             {ribbonData['again'].map(ribbonKey => {
                               const isLastChance = !isSwitchGame && ribbonData['last-chance'].includes(ribbonKey);
-                              return isLastChance ? (
-                                <div key={ribbonKey} className="ribbon-last-chance-wrapper">
-                                  <img
-                                    src={`${import.meta.env.BASE_URL}images/${ribbonKey}.png`}
-                                    alt={ribbonKey}
-                                    title={ribbonKey}
-                                    className="ribbon-image"
-                                  />
-                                </div>
-                              ) : (
-                                <img
-                                  key={ribbonKey}
-                                  src={`${import.meta.env.BASE_URL}images/${ribbonKey}.png`}
-                                  alt={ribbonKey}
-                                  title={ribbonKey}
-                                  className="ribbon-image"
-                                />
-                              );
+                              return renderRibbonImage(ribbonKey, isLastChance);
                             })}
                           </div>
                         </div>
@@ -553,24 +547,7 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
                           <div className="ribbon-item">
                             {ribbonData['first-introduced'].map(ribbonKey => {
                               const isLastChance = !isSwitchGame && ribbonData['last-chance'].includes(ribbonKey);
-                              return isLastChance ? (
-                                <div key={ribbonKey} className="ribbon-last-chance-wrapper">
-                                  <img
-                                    src={`${import.meta.env.BASE_URL}images/${ribbonKey}.png`}
-                                    alt={ribbonKey}
-                                    title={ribbonKey}
-                                    className="ribbon-image"
-                                  />
-                                </div>
-                              ) : (
-                                <img
-                                  key={ribbonKey}
-                                  src={`${import.meta.env.BASE_URL}images/${ribbonKey}.png`}
-                                  alt={ribbonKey}
-                                  title={ribbonKey}
-                                  className="ribbon-image"
-                                />
-                              );
+                              return renderRibbonImage(ribbonKey, isLastChance);
                             })}
                           </div>
                         )}
@@ -580,24 +557,7 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
                           <div className="ribbon-item">
                             {ribbonData['again'].map(ribbonKey => {
                               const isLastChance = !isSwitchGame && ribbonData['last-chance'].includes(ribbonKey);
-                              return isLastChance ? (
-                                <div key={ribbonKey} className="ribbon-last-chance-wrapper">
-                                  <img
-                                    src={`${import.meta.env.BASE_URL}images/${ribbonKey}.png`}
-                                    alt={ribbonKey}
-                                    title={ribbonKey}
-                                    className="ribbon-image"
-                                  />
-                                </div>
-                              ) : (
-                                <img
-                                  key={ribbonKey}
-                                  src={`${import.meta.env.BASE_URL}images/${ribbonKey}.png`}
-                                  alt={ribbonKey}
-                                  title={ribbonKey}
-                                  className="ribbon-image"
-                                />
-                              );
+                              return renderRibbonImage(ribbonKey, isLastChance);
                             })}
                           </div>
                         )}
