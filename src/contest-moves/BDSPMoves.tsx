@@ -64,6 +64,7 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
   const [selectedPokemon, setSelectedPokemon] = useState<string>(pokemonKey || '');
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedMoveIndex, setSelectedMoveIndex] = useState<number | null>(null);
+  const [filtersTouched, setFiltersTouched] = useState(false);
 
   // Move filtering state
   const [enabledMethods, setEnabledMethods] = useState<Record<LearnMethod, boolean>>({
@@ -129,6 +130,7 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
       'other': false
     };
     setEnabledMethods(defaultEnabledMethods);
+    setFiltersTouched(false);
 
     // Initialize excluded moves based on default enabled methods
     const initialExcludedMoves = new Set<string>();
@@ -152,6 +154,46 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
     setExcludedMoves(initialExcludedMoves);
     setSelectedMoveIndex(null);
   }, [selectedPokemon, selectedGame]);
+
+  // Sync enabledMethods with excludedMoves - disable methods that have no included moves
+  // and enable methods when a move that only uses that method is turned back on.
+  useEffect(() => {
+    if (!selectedPokemon) return;
+
+    const moves = getAvailableMovesForPokemon(selectedPokemon, pokemonMoves, typedPokemonDb);
+    setEnabledMethods(current => {
+      const updated = { ...current };
+      let changed = false;
+
+      // For each method, check if it has any non-excluded moves
+      (Object.keys(moves) as LearnMethod[]).forEach(method => {
+        const methodMoves = moves[method];
+        if (!methodMoves) return;
+
+        const moveNames = Object.keys(methodMoves);
+        const hasIncludedMove = moveNames.some(move => !excludedMoves.has(move));
+        const hasMoveRequiringMethod = moveNames.some(move => {
+          if (excludedMoves.has(move)) return false;
+          const moveMethods = getMoveLearnMethods(move, moves);
+          // Only flip the method back on if no other enabled methods cover this move
+          return moveMethods.every(m => m === method || !updated[m]);
+        });
+
+        // If method is enabled but has no included moves, disable it
+        if (updated[method] && !hasIncludedMove) {
+          updated[method] = false;
+          changed = true;
+        }
+        // If method is disabled but a move that requires it was re-enabled, turn it back on
+        else if (filtersTouched && !updated[method] && hasMoveRequiringMethod) {
+          updated[method] = true;
+          changed = true;
+        }
+      });
+
+      return changed ? updated : current;
+    });
+  }, [excludedMoves, selectedPokemon, filtersTouched]);
 
   // Clear selected move when filters change
   useEffect(() => {
@@ -318,6 +360,7 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
 
   // Handle learn method checkbox changes
   const handleMethodToggle = (method: LearnMethod, checked: boolean) => {
+    setFiltersTouched(true);
     const newEnabledMethods = { ...enabledMethods, [method]: checked };
     setEnabledMethods(newEnabledMethods);
 
@@ -541,7 +584,7 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
                     ref={(el) => {
                       if (el) el.indeterminate = methodStates['machine'] === 'partial';
                     }}
-                    onChange={(e) => handleMethodToggle('machine', e.target.checked)}
+                      onChange={(e) => handleMethodToggle('machine', e.target.checked)}
                   />
                   <span>TM/HM</span>
                 </label>
@@ -555,7 +598,7 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
                     ref={(el) => {
                       if (el) el.indeterminate = methodStates['tutor'] === 'partial';
                     }}
-                    onChange={(e) => handleMethodToggle('tutor', e.target.checked)}
+                      onChange={(e) => handleMethodToggle('tutor', e.target.checked)}
                   />
                   <span>Tutor</span>
                 </label>
@@ -569,7 +612,7 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
                     ref={(el) => {
                       if (el) el.indeterminate = methodStates['egg'] === 'partial';
                     }}
-                    onChange={(e) => handleMethodToggle('egg', e.target.checked)}
+                      onChange={(e) => handleMethodToggle('egg', e.target.checked)}
                   />
                   <span>Egg</span>
                 </label>
@@ -583,7 +626,7 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
                     ref={(el) => {
                       if (el) el.indeterminate = methodStates['purify'] === 'partial';
                     }}
-                    onChange={(e) => handleMethodToggle('purify', e.target.checked)}
+                      onChange={(e) => handleMethodToggle('purify', e.target.checked)}
                   />
                   <span>Purify</span>
                 </label>
@@ -597,7 +640,7 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
                     ref={(el) => {
                       if (el) el.indeterminate = methodStates['pre-evolution'] === 'partial';
                     }}
-                    onChange={(e) => handleMethodToggle('pre-evolution', e.target.checked)}
+                      onChange={(e) => handleMethodToggle('pre-evolution', e.target.checked)}
                   />
                   <span>Pre-Evo</span>
                 </label>
@@ -611,7 +654,7 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
                     ref={(el) => {
                       if (el) el.indeterminate = methodStates['other'] === 'partial';
                     }}
-                    onChange={(e) => handleMethodToggle('other', e.target.checked)}
+                      onChange={(e) => handleMethodToggle('other', e.target.checked)}
                   />
                   <span>Other</span>
                 </label>
@@ -644,6 +687,7 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
                       type="checkbox"
                       checked={!excludedMoves.has(move)}
                       onChange={(e) => {
+                        setFiltersTouched(true);
                         const newExcluded = new Set(excludedMoves);
                         if (e.target.checked) {
                           newExcluded.delete(move);

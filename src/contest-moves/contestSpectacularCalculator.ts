@@ -30,6 +30,7 @@ type Archetype =
   | 'NEXT_FIRST'   // Move that makes next move go first
   | 'NEXT_LAST'    // Move that makes next move go last
   | 'ADD_STAR'     // Move that adds stars/excitement
+  | 'REPEAT'       // Move that can be repeated without penalty
   | 'NONE';        // Standard move with no special effect
 
 interface MoveInfo extends MoveInfoForSorting {
@@ -115,6 +116,7 @@ function classifyEffect(effect: any): Archetype {
   if (effect?.next === 1) return 'NEXT_FIRST';
   if (effect?.next === 4) return 'NEXT_LAST';
   if (typeof effect?.star === 'number' && effect.star > 0) return 'ADD_STAR';
+  if (effect?.repeat) return 'REPEAT';
   return 'NONE';
 }
 
@@ -136,6 +138,7 @@ function buildMovePools(availableMoves: MovesMap, contestType?: ContestType): Re
     NEXT_FIRST: [],
     NEXT_LAST: [],
     ADD_STAR: [],
+    REPEAT: [],
     NONE: [],
   };
 
@@ -353,6 +356,7 @@ function simulateStrategy(
     NEXT_FIRST: [...pools.NEXT_FIRST],
     NEXT_LAST: [...pools.NEXT_LAST],
     ADD_STAR: [...pools.ADD_STAR],
+    REPEAT: [...pools.REPEAT],
     NONE: [...pools.NONE],
   };
 
@@ -386,7 +390,8 @@ function simulateStrategy(
     const outcome = computeAppeal(move, state);
     let appeal = outcome.appeal;
 
-    if (move.move === prevMove?.move) {
+    // Apply repetition penalty unless move is REPEAT archetype
+    if (move.move === prevMove?.move && move.archetype !== 'REPEAT') {
       appeal -= 1;
     }
     total += appeal;
@@ -457,6 +462,7 @@ function simulateSingleComboPattern(
     NEXT_FIRST: [...pools.NEXT_FIRST],
     NEXT_LAST: [...pools.NEXT_LAST],
     ADD_STAR: [...pools.ADD_STAR],
+    REPEAT: [...pools.REPEAT],
     NONE: [...pools.NONE],
   };
 
@@ -507,7 +513,8 @@ function simulateSingleComboPattern(
       hadComboLastTurn = false;
     }
 
-    if (move.move === prevMove?.move) {
+    // Apply repetition penalty unless move is REPEAT archetype
+    if (move.move === prevMove?.move && move.archetype !== 'REPEAT') {
       appeal -= 1;
     }
     total += appeal;
@@ -649,7 +656,8 @@ function getGreedyAttempt(
       const outcome = computeAppeal(bestMove, state);
       let appeal = outcome.appeal;
 
-      if (bestMove.move === prevMove?.move) {
+      // Apply repetition penalty unless move is REPEAT archetype
+      if (bestMove.move === prevMove?.move && bestMove.archetype !== 'REPEAT') {
         appeal -= 1;
       }
 

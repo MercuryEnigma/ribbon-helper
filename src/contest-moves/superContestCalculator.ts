@@ -30,6 +30,7 @@ type SuperArchetype =
   | 'NEXT_LAST'    // Move that makes next move go last
   | 'DOUBLE'       // Move that doubles the next turn's appeal
   | 'VOLTAGE_BONUS' // Move that gives +4 appeal if same contest type
+  | 'REPEAT'       // Move that can be repeated up to 2 times consecutively
   | 'NONE';        // Standard move with no special effect
 
 interface MoveInfo extends MoveInfoForSorting {
@@ -47,6 +48,7 @@ interface SuperContestState {
   turn: number;         // Current turn number (0-3)
   contestType?: ContestType;  // Contest type for appeal bonuses/penalties (undefined if 'all')
   doubleNext: boolean;  // Whether the next turn's appeal should be doubled
+  consecutiveUses: number;  // Number of times the current move has been used consecutively
 }
 
 const NUMBER_TURNS = 4;
@@ -96,6 +98,7 @@ function classifyEffect(effect: any): SuperArchetype {
   if (effect?.next === 4) return 'NEXT_LAST';
   if (effect?.doubles) return 'DOUBLE';
   if (typeof effect?.voltage_bonus === 'number' && effect.voltage_bonus > 0) return 'VOLTAGE_BONUS';
+  if (effect?.repeat) return 'REPEAT';
   return 'NONE';
 }
 
@@ -117,6 +120,7 @@ function buildMovePools(availableMoves: MovesMap, contestType?: ContestType): Re
     NEXT_LAST: [],
     DOUBLE: [],
     VOLTAGE_BONUS: [],
+    REPEAT: [],
     NONE: [],
   };
 
@@ -205,6 +209,7 @@ function computeAppeal(
         turn: state.turn + 1,
         contestType: state.contestType,
         doubleNext: false,
+        consecutiveUses: 0,
       }
     };
   }
@@ -247,6 +252,7 @@ function computeAppeal(
     turn: state.turn + 1,
     contestType: state.contestType,
     doubleNext,
+    consecutiveUses: 0,  // Will be updated by caller if same move is used
   };
 
   return { appeal, updatedState };
@@ -271,10 +277,13 @@ function chooseMoveFromPool(
     const pool = pools[desired];
     if (pool.length === 0) return null;
 
-    // Must avoid using the same move twice in a row (hard constraint)
+    // Check repetition constraints based on REPEAT archetype
     if (prevMove && pool[0].move === prevMove.move) {
-      if (pool.length < 2) return null;
-      return pool[1];
+      if (pool[0].archetype !== 'REPEAT' || state.consecutiveUses >= 2) {
+        // Cannot use this move, try the second one
+        if (pool.length < 2) return null;
+        return pool[1];
+      }
     }
 
     return pool[0];
@@ -291,15 +300,18 @@ function chooseMoveFromPool(
       && state.turn < NUMBER_TURNS - 1) continue;
 
     const candidate1 = list[0];
-    // Hard constraint: cannot use same move twice in a row
+    // Check repetition constraints based on REPEAT archetype
     if (prevMove && candidate1.move === prevMove.move) {
-      if (list.length < 2) continue;
-      const candidate2 = list[1];
-      const simulated2 = computeAppeal(candidate2, state).appeal;
-      if (!best || simulated2 > best.appeal) {
-        best = { move: candidate2, appeal: simulated2 };
+      if (candidate1.archetype !== 'REPEAT' || state.consecutiveUses >= 2) {
+        // Cannot use candidate1, try candidate2
+        if (list.length < 2) continue;
+        const candidate2 = list[1];
+        const simulated2 = computeAppeal(candidate2, state).appeal;
+        if (!best || simulated2 > best.appeal) {
+          best = { move: candidate2, appeal: simulated2 };
+        }
+        continue;
       }
-      continue;
     }
 
     const simulated1 = computeAppeal(candidate1, state).appeal;
@@ -309,7 +321,12 @@ function chooseMoveFromPool(
 
     if (list.length < 2) continue;
     const candidate2 = list[1];
-    if (prevMove && candidate2.move === prevMove.move) continue;
+    // Check repetition constraints for candidate2
+    if (prevMove && candidate2.move === prevMove.move) {
+      if (candidate2.archetype !== 'REPEAT' || state.consecutiveUses >= 2) {
+        continue;
+      }
+    }
     const simulated2 = computeAppeal(candidate2, state).appeal;
     if (!best || simulated2 > best.appeal) {
       best = { move: candidate2, appeal: simulated2 };
@@ -341,6 +358,7 @@ function simulateStrategy(
     NEXT_LAST: [...pools.NEXT_LAST],
     DOUBLE: [...pools.DOUBLE],
     VOLTAGE_BONUS: [...pools.VOLTAGE_BONUS],
+    REPEAT: [...pools.REPEAT],
     NONE: [...pools.NONE],
   };
 
@@ -351,6 +369,7 @@ function simulateStrategy(
     turn: 0,
     contestType,
     doubleNext: false,
+    consecutiveUses: 0,
   };
   let total = 0;
   const chosen: ContestMove[] = [];
@@ -364,8 +383,14 @@ function simulateStrategy(
     // Strategy fails if required move type is unavailable
     if (!move) return null;
 
-    // Hard constraint: cannot use the same move twice in a row
-    if (prevMove && move.move === prevMove.move) return null;
+    // Check repetition constraints based on REPEAT archetype
+    // Without REPEAT: cannot use same move twice in a row
+    // With REPEAT: can use up to 2 times in a row (but not 3)
+    if (prevMove && move.move === prevMove.move) {
+      if (move.archetype !== 'REPEAT' || state.consecutiveUses >= 2) {
+        return null;
+      }
+    }
 
     // Check if we already have 4 unique moves and this move is not one of them
     const uniqueMoves = new Set(chosen.map(m => m.move));
@@ -378,7 +403,8 @@ function simulateStrategy(
     const appeal = outcome.appeal;
 
     total += appeal;
-    state = { ...outcome.updatedState };
+    const nextConsecutiveUses = (prevMove && move.move === prevMove.move) ? state.consecutiveUses + 1 : 1;
+    state = { ...outcome.updatedState, consecutiveUses: nextConsecutiveUses };
     prevMove = move;
 
     const move_role = getMoveRoleForMove(workingPools, move);
@@ -445,6 +471,7 @@ function simulateSingleComboPattern(
     NEXT_LAST: [...pools.NEXT_LAST],
     DOUBLE: [...pools.DOUBLE],
     VOLTAGE_BONUS: [...pools.VOLTAGE_BONUS],
+    REPEAT: [...pools.REPEAT],
     NONE: [...pools.NONE],
   };
 
@@ -455,6 +482,7 @@ function simulateSingleComboPattern(
     turn: 0,
     contestType,
     doubleNext: false,
+    consecutiveUses: 0,
   };
   let total = 0;
   const chosen: ContestMove[] = [];
@@ -480,8 +508,14 @@ function simulateSingleComboPattern(
       move = desiredMove;
     }
 
-    // Hard constraint: cannot use the same move twice in a row
-    if (prevMove && move.move === prevMove.move) return null;
+    // Check repetition constraints based on REPEAT archetype
+    // Without REPEAT: cannot use same move twice in a row
+    // With REPEAT: can use up to 2 times in a row (but not 3)
+    if (prevMove && move.move === prevMove.move) {
+      if (move.archetype !== 'REPEAT' || state.consecutiveUses >= 2) {
+        return null;
+      }
+    }
 
     // Calculate base appeal
     const outcome = computeAppeal(move, state);
@@ -499,7 +533,8 @@ function simulateSingleComboPattern(
     }
 
     total += appeal;
-    state = { ...outcome.updatedState };
+    const nextConsecutiveUses = (prevMove && move.move === prevMove.move) ? state.consecutiveUses + 1 : 1;
+    state = { ...outcome.updatedState, consecutiveUses: nextConsecutiveUses };
     prevMove = move;
 
     let move_role: string[];
@@ -614,6 +649,7 @@ function getGreedyAttempt(
     turn: 0,
     contestType,
     doubleNext: false,
+    consecutiveUses: 0,
   };
   let total: number = 0;
   const greedyStrat: ContestMove[] = [];
@@ -622,8 +658,12 @@ function getGreedyAttempt(
   for (let i = 0; i < NUMBER_TURNS; i++) {
     let bestMove: MoveInfo | null = null;
     for (const move of allMoves) {
-      // Hard constraint: cannot use same move twice in a row
-      if (prevMove && move.move === prevMove.move) continue;
+      // Check repetition constraints based on REPEAT archetype
+      if (prevMove && move.move === prevMove.move) {
+        if (move.archetype !== 'REPEAT' || state.consecutiveUses >= 2) {
+          continue;
+        }
+      }
       if (!move.effect?.skip && !move.effect?.end) {
         bestMove = move;
         break;
@@ -639,7 +679,8 @@ function getGreedyAttempt(
       const appeal = outcome.appeal;
 
       total += appeal;
-      state = { ...outcome.updatedState };
+      const nextConsecutiveUses = (prevMove && bestMove.move === prevMove.move) ? state.consecutiveUses + 1 : 1;
+      state = { ...outcome.updatedState, consecutiveUses: nextConsecutiveUses };
       prevMove = bestMove;
 
       const move_role = getMoveRoleForMove(pools, bestMove);

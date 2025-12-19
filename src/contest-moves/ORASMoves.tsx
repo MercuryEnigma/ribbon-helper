@@ -66,6 +66,7 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedContestType, setSelectedContestType] = useState<ContestType | 'all'>('all');
   const [selectedMoveIndex, setSelectedMoveIndex] = useState<number | null>(null);
+  const [filtersTouched, setFiltersTouched] = useState(false);
 
   // Move filtering state
   const [enabledMethods, setEnabledMethods] = useState<Record<LearnMethod, boolean>>({
@@ -131,6 +132,7 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
       'other': false
     };
     setEnabledMethods(defaultEnabledMethods);
+    setFiltersTouched(false);
 
     // Initialize excluded moves based on default enabled methods
     const initialExcludedMoves = new Set<string>();
@@ -154,6 +156,46 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
     setExcludedMoves(initialExcludedMoves);
     setSelectedMoveIndex(null);
   }, [selectedPokemon, selectedGame]);
+
+  // Sync enabledMethods with excludedMoves - disable methods that have no included moves
+  // and enable methods when a move that only uses that method is turned back on.
+  useEffect(() => {
+    if (!selectedPokemon) return;
+
+    const moves = getAvailableMovesForPokemon(selectedPokemon, pokemonMoves, typedPokemonDb);
+    setEnabledMethods(current => {
+      const updated = { ...current };
+      let changed = false;
+
+      // For each method, check if it has any non-excluded moves
+      (Object.keys(moves) as LearnMethod[]).forEach(method => {
+        const methodMoves = moves[method];
+        if (!methodMoves) return;
+
+        const moveNames = Object.keys(methodMoves);
+        const hasIncludedMove = moveNames.some(move => !excludedMoves.has(move));
+        const hasMoveRequiringMethod = moveNames.some(move => {
+          if (excludedMoves.has(move)) return false;
+          const moveMethods = getMoveLearnMethods(move, moves);
+          // Only flip the method back on if no other enabled methods cover this move
+          return moveMethods.every(m => m === method || !updated[m]);
+        });
+
+        // If method is enabled but has no included moves, disable it
+        if (updated[method] && !hasIncludedMove) {
+          updated[method] = false;
+          changed = true;
+        }
+        // If method is disabled but a move that requires it was re-enabled, turn it back on
+        else if (filtersTouched && !updated[method] && hasMoveRequiringMethod) {
+          updated[method] = true;
+          changed = true;
+        }
+      });
+
+      return changed ? updated : current;
+    });
+  }, [excludedMoves, selectedPokemon, filtersTouched]);
 
   useEffect(() => {
     setSelectedMoveIndex(null);
@@ -319,6 +361,7 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
 
   // Handle learn method checkbox changes
   const handleMethodToggle = (method: LearnMethod, checked: boolean) => {
+    setFiltersTouched(true);
     const newEnabledMethods = { ...enabledMethods, [method]: checked };
     setEnabledMethods(newEnabledMethods);
 
@@ -653,6 +696,7 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
                       type="checkbox"
                       checked={!excludedMoves.has(move)}
                       onChange={(e) => {
+                        setFiltersTouched(true);
                         const newExcluded = new Set(excludedMoves);
                         if (e.target.checked) {
                           newExcluded.delete(move);
