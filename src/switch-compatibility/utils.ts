@@ -1,4 +1,5 @@
 import type { PokemonDatabase, PokemonData, SwitchGame, SwitchGameInfo } from './types';
+import games from '../data/games.json';
 
 export const SWITCH_GAMES: SwitchGameInfo[] = [
   { id: 'lgp', name: "Let's Go Pikachu / Eevee" },
@@ -20,6 +21,9 @@ export const GAME_GROUPS = [
   { ids: ['pla'], name: 'Legends: Arceus' },
   { ids: ['scar', 'vio'], name: 'Scarlet / Violet' },
 ];
+
+// Generation order for dropdown and selection
+export const GENERATION_ORDER = ['Gen 3', 'Gen 4', 'Gen 5', 'Gen 6', 'VC', 'Gen 7', 'GO', 'Switch'] as const;
 
 /**
  * List of Pokemon forms that should be excluded from listings
@@ -376,4 +380,61 @@ export function searchPokemonByName(
     console.error('Error searching Pokemon by name:', error);
     return [];
   }
+}
+
+/**
+ * Get available generations for a Pokemon based on its games
+ * Returns a Set of generation strings like "Gen 3", "Gen 4", "VC", "GO", "Switch"
+ */
+export function getAvailableGenerations(
+  pokemonData: PokemonData | null,
+  pokemonDb: PokemonDatabase
+): Set<string> {
+  if (!pokemonData) return new Set<string>();
+
+  const gameIds = (() => {
+    const ownGames = Array.isArray(pokemonData.games) ? pokemonData.games : [];
+    if (ownGames.length > 0 || !pokemonData['data-source']) {
+      return ownGames;
+    }
+    const baseKey = pokemonData['data-source'];
+    const baseGames = baseKey && pokemonDb[baseKey]?.games;
+    return Array.isArray(baseGames) ? baseGames : [];
+  })();
+
+  const generations = new Set<string>();
+  const switchGames = ['lgpe', 'lgp', 'lge', 'swsh', 'sw', 'sh', 'bdsp', 'bd', 'sp', 'pla', 'sv', 'scar', 'vio', 'plza'];
+
+  // GO is always available for all Pokemon
+  generations.add('GO');
+
+  for (const gameId of gameIds) {
+    const gameEntry = (games as any)[gameId];
+    if (!gameEntry) continue;
+
+    // Check if it's a Switch game
+    if (switchGames.includes(gameId)) {
+      generations.add('Switch');
+      continue;
+    }
+
+    // Skip GO check - it's always available
+    if (gameId === 'go') {
+      continue;
+    }
+
+    // Check if it's a Virtual Console game
+    if (gameEntry.partOf === 'vc' || gameId === 'vc') {
+      generations.add('VC');
+      continue;
+    }
+
+    // Regular generation
+    const gen = gameEntry.gen ?? ((gameEntry.partOf && (games as any)[gameEntry.partOf]?.gen) || null);
+    if (gen !== null) {
+      generations.add(`Gen ${gen}`);
+    }
+  }
+
+  return generations;
 }

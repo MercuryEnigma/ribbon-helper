@@ -1,7 +1,8 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import type { PokemonDatabase } from './types';
-import { getGamesForPokemon, getGameGroupNames, searchPokemonByName, getPokemonDisplayName } from './utils';
+import { getGamesForPokemon, getGameGroupNames, searchPokemonByName, getPokemonDisplayName, getAvailableGenerations, GENERATION_ORDER } from './utils';
 import { getPokemonIconProps, getPokemonLargeImageProps } from './iconUtils';
+import { getAvailableRibbons } from './ribbonUtils';
 import games from '../data/games.json';
 
 interface BySpeciesProps {
@@ -14,6 +15,9 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedPokemon, setSelectedPokemon] = useState<string>(initialPokemonKey || '');
   const [showDropdown, setShowDropdown] = useState(false);
+  const [selectedGeneration, setSelectedGeneration] = useState<string>('');
+  const [isShadow, setIsShadow] = useState(false);
+  const [level, setLevel] = useState<number>(50);
 
   const selectedPokemonData = useMemo(() => {
     if (!pokemonDb || !selectedPokemon) return null;
@@ -118,40 +122,33 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
     return getPokemonLargeImageProps(selectedPokemon, selectedPokemonData, pokemonDb);
   }, [pokemonDb, selectedPokemon, selectedPokemonData]);
 
-  const earliestGen = useMemo(() => {
-    if (!pokemonDb || !selectedPokemonData) return '';
-    try {
-      const gameIds = (() => {
-        const ownGames = Array.isArray(selectedPokemonData.games) ? selectedPokemonData.games : [];
-
-        // If the form has explicit games, use them; otherwise, fall back to the base form's games.
-        if (ownGames.length > 0 || !selectedPokemonData['data-source']) {
-          return ownGames;
-        }
-
-        const baseKey = selectedPokemonData['data-source'];
-        const baseGames = baseKey && pokemonDb[baseKey]?.games;
-        return Array.isArray(baseGames) ? baseGames : [];
-      })();
-
-      let minGen: number | null = null;
-      for (const id of gameIds) {
-        const entry = (games as any)[id];
-        const gen = entry?.gen ?? ((entry?.partOf && (games as any)[entry.partOf]?.gen) || null);
-        if (gen !== null && (minGen === null || gen < minGen)) {
-          minGen = gen;
-        }
-      }
-      return minGen ? `Gen ${minGen}` : '';
-    } catch {
-      return '';
-    }
-  }, [pokemonDb, selectedPokemon, selectedPokemonData]);
-
   const isShadowPokemon = useMemo(() => {
     if (!selectedPokemonData?.flags) return false;
     return selectedPokemonData.flags.includes('colShadow') || selectedPokemonData.flags.includes('xdShadow');
   }, [selectedPokemonData]);
+
+  // Calculate available generations based on Pokemon's games
+  const availableGenerations = useMemo(() => {
+    return getAvailableGenerations(selectedPokemonData, pokemonDb);
+  }, [pokemonDb, selectedPokemonData]);
+
+  // Initialize generation when Pokemon is selected
+  useEffect(() => {
+    if (availableGenerations.size > 0) {
+      // Pick the first available generation (prefer numeric gens, then special ones)
+      const firstAvailable = GENERATION_ORDER.find(g => availableGenerations.has(g));
+      if (firstAvailable) {
+        setSelectedGeneration(firstAvailable);
+      }
+    }
+    setIsShadow(false);
+  }, [selectedPokemon, availableGenerations]);
+
+  // Calculate available ribbons
+  const availableRibbons = useMemo(() => {
+    if (!selectedPokemon || !selectedGeneration || !pokemonDb) return {};
+    return getAvailableRibbons(selectedPokemon, level, selectedGeneration, isShadow, pokemonDb);
+  }, [selectedPokemon, level, selectedGeneration, isShadow, pokemonDb]);
 
   return (
     <div className="by-species">
@@ -226,12 +223,60 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
                 <span className="pokedex-entry-title-number">{natdexNumber}</span>
                 <span className="pokedex-entry-title-name">{displayName}</span>
               </div>
-              {isShadowPokemon && (
-                <div className="shadow-pill">Shadow</div>
-              )}
-              {earliestGen && (
-                <div className="pokedex-entry-gen">{earliestGen}</div>
-              )}
+              <div className="pill-container">
+                {isShadowPokemon && selectedGeneration === 'Gen 3' && (
+                  <label className="shadow-pill shadow-pill-checkbox">
+                    <input
+                      type="checkbox"
+                      checked={isShadow}
+                      onChange={(e) => setIsShadow(e.target.checked)}
+                    />
+                    <span className="toggle-label">Shadow</span>
+                    <span className="toggle-track" aria-hidden="true">
+                      {isShadow && <span className="toggle-check">✓</span>}
+                    </span>
+                  </label>
+                )}
+                <div className="pokedex-entry-level">
+                  <label htmlFor="level-input">Lv.</label>
+                  <input
+                    id="level-input"
+                    type="number"
+                    min="1"
+                    max="100"
+                    value={level}
+                    onChange={(e) => {
+                      const val = parseInt(e.target.value, 10);
+                      if (!isNaN(val) && val >= 1 && val <= 100) {
+                        setLevel(val);
+                      } else if (e.target.value === '') {
+                        setLevel(1);
+                      }
+                    }}
+                  />
+                </div>
+                {selectedGeneration && (
+                  <select
+                    className="pokedex-entry-gen"
+                    value={selectedGeneration}
+                    onChange={(e) => {
+                      setSelectedGeneration(e.target.value);
+                      if (e.target.value !== 'Gen 3') {
+                        setIsShadow(false);
+                      }
+                    }}
+                  >
+                    {availableGenerations.has('Gen 3') && <option value="Gen 3">Gen 3</option>}
+                    {availableGenerations.has('Gen 4') && <option value="Gen 4">Gen 4</option>}
+                    {availableGenerations.has('Gen 5') && <option value="Gen 5">Gen 5</option>}
+                    {availableGenerations.has('Gen 6') && <option value="Gen 6">Gen 6</option>}
+                    {availableGenerations.has('VC') && <option value="VC">VC</option>}
+                    {availableGenerations.has('Gen 7') && <option value="Gen 7">Gen 7</option>}
+                    {availableGenerations.has('GO') && <option value="GO">GO</option>}
+                    {availableGenerations.has('Switch') && <option value="Switch">Switch</option>}
+                  </select>
+                )}
+              </div>
             </div>
             <div className="pokedex-entry-rows">
               {availableGames.length === 0 ? (
@@ -252,6 +297,82 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
               Reserved for Pokédex entry text
             </div> */}
           </div>
+
+          {/* Ribbons section */}
+          {Object.keys(availableRibbons).length > 0 && (
+            <div className="ribbons-section">
+              <h3 className="ribbons-header">Available Ribbons</h3>
+              <div className="ribbons-grid">
+                <div className="ribbons-grid-header">
+                  <div className="ribbon-grid-cell"></div>
+                  <div className="ribbon-grid-cell">New ribbons</div>
+                  <div className="ribbon-grid-cell">Recurring ribbons</div>
+                </div>
+                {Object.entries(availableRibbons).map(([gameGroup, ribbonData]) => {
+                  const isSwitchGame = ['SwSh', 'BDSP', 'PLA', 'SV'].includes(gameGroup);
+                  return (
+                    <div key={gameGroup} className="ribbons-grid-row">
+                      <div className="ribbon-game-tag">{gameGroup}</div>
+                      <div className="ribbon-grid-cell">
+                        {ribbonData['first-introduced'].length > 0 && (
+                          <div className="ribbon-item">
+                            {ribbonData['first-introduced'].map(ribbonKey => {
+                              const isLastChance = !isSwitchGame && ribbonData['last-chance'].includes(ribbonKey);
+                              return isLastChance ? (
+                                <div key={ribbonKey} className="ribbon-last-chance-wrapper">
+                                  <img
+                                    src={`${import.meta.env.BASE_URL}images/${ribbonKey}.png`}
+                                    alt={ribbonKey}
+                                    title={ribbonKey}
+                                    className="ribbon-image"
+                                  />
+                                </div>
+                              ) : (
+                                <img
+                                  key={ribbonKey}
+                                  src={`${import.meta.env.BASE_URL}images/${ribbonKey}.png`}
+                                  alt={ribbonKey}
+                                  title={ribbonKey}
+                                  className="ribbon-image"
+                                />
+                              );
+                            })}
+                          </div>
+                        )}
+                      </div>
+                      <div className="ribbon-grid-cell">
+                        {ribbonData['again'].length > 0 && (
+                          <div className="ribbon-item">
+                            {ribbonData['again'].map(ribbonKey => {
+                              const isLastChance = !isSwitchGame && ribbonData['last-chance'].includes(ribbonKey);
+                              return isLastChance ? (
+                                <div key={ribbonKey} className="ribbon-last-chance-wrapper">
+                                  <img
+                                    src={`${import.meta.env.BASE_URL}images/${ribbonKey}.png`}
+                                    alt={ribbonKey}
+                                    title={ribbonKey}
+                                    className="ribbon-image"
+                                  />
+                                </div>
+                              ) : (
+                                <img
+                                  key={ribbonKey}
+                                  src={`${import.meta.env.BASE_URL}images/${ribbonKey}.png`}
+                                  alt={ribbonKey}
+                                  title={ribbonKey}
+                                  className="ribbon-image"
+                                />
+                              );
+                            })}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
       )}
 

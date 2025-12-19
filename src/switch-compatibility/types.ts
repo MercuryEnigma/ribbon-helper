@@ -22,6 +22,7 @@ export interface PokemonData {
   femsprite?: boolean;
   flags?: string[];
   sort?: number;
+  mythical?: boolean;
 }
 
 export interface PokemonDatabase {

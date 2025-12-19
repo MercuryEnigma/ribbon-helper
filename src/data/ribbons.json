@@ -3602,6 +3602,7 @@
 	"tower-master-ribbon": {
 		"gen": 8,
 		"bannedBDSP": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
+		"nomythicalBDSP": true,
 		"available": [
 			"sw",
 			"sh",
