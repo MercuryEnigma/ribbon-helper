@@ -6,6 +6,12 @@ import {
   type MoveInfoForSorting
 } from './moveUtils';
 
+// Maximum number of notes in a Super Contest Show performance
+const MAX_NUMBER_NOTES = 25;
+
+// Default dance points threshold (moves with lower values are better)
+const DEFAULT_DANCE_THRESHOLD = 100;
+
 export interface ContestShowMove {
   move: string;
   hype: number;
@@ -40,7 +46,16 @@ export function getSuperContestShowOptimalMoves(
     const effect = (contestEffects as any)[effectId];
     const moveHype = moveMeta.hype ?? 0;
     const addedHype = effect?.added_hype ?? 0;
-    const totalHype = moveHype + addedHype;
+
+    // Calculate additional hype from dance_points
+    // Default threshold is 100 points. Moves with lower dance_points are better.
+    // Additional hearts per move = (100 - dance_points) / 100
+    // Total additional hype over MAX_NUMBER_NOTES moves, rounded down
+    const dancePoints = effect?.dance_points ?? DEFAULT_DANCE_THRESHOLD;
+    const dancePointsDifference = DEFAULT_DANCE_THRESHOLD - dancePoints;
+    const danceHype = Math.floor((dancePointsDifference / 100) * MAX_NUMBER_NOTES);
+
+    const totalHype = moveHype + addedHype + danceHype;
 
     moveInfos.push({
       move,

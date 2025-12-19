@@ -37,19 +37,19 @@
   "7": {
     "id": 7,
     "dance_points": 90,
-    "effect_description": "For 10 seconds, it will be a bit easier to fill up the Heart Gauge.",
+    "effect_description": "For 10 seconds while dancing, require only 75 points to gain a Hype Point instead of 90. Time it to maximize the number of notes and be sure to hit the notes well.",
     "flavor_text": "For 10 seconds, it will be a bit easier to fill up the Heart Gauge."
   },
   "8": {
     "id": 8,
     "dance_points": 82,
-    "effect_description": "For 10 seconds, it will be easier to fill up the Heart Gauge.",
+    "effect_description": "For 10 seconds while dancing, require only 82 points to gain a Hype Point instead of 100. Time it to maximize the number of notes and be sure to hit the notes well.",
     "flavor_text": "For 10 seconds, it will be easier to fill up the Heart Gauge."
   },
   "9": {
     "id": 9,
     "dance_points": 75,
-    "effect_description": "For 10 seconds, it will be much easier to fill up the Heart Gauge.",
+    "effect_description": "For 10 seconds while dancing, require only 75 points to gain a Hype Point instead of 100. Time it to maximize the number of notes and be sure to hit the notes well.",
     "flavor_text": "For 10 seconds, it will be much easier to fill up the Heart Gauge."
   },
   "10": {

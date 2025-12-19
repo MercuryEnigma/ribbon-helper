@@ -69,11 +69,11 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
   const [enabledMethods, setEnabledMethods] = useState<Record<LearnMethod, boolean>>({
     'level-up': true,
     'machine': true,
-    'tutor': true,
-    'egg': true,
-    'purify': true,
-    'pre-evolution': true,
-    'other': true
+    'tutor': false,
+    'egg': false,
+    'purify': false,
+    'pre-evolution': false,
+    'other': false
   });
   const [excludedMoves, setExcludedMoves] = useState<Set<string>>(new Set());
 
@@ -119,16 +119,37 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
 
   // Reset filtering when Pokemon or game changes
   useEffect(() => {
-    setEnabledMethods({
+    const defaultEnabledMethods: Record<LearnMethod, boolean> = {
       'level-up': true,
       'machine': true,
-      'tutor': true,
-      'egg': true,
-      'purify': true,
-      'pre-evolution': true,
-      'other': true
-    });
-    setExcludedMoves(new Set());
+      'tutor': false,
+      'egg': false,
+      'purify': false,
+      'pre-evolution': false,
+      'other': false
+    };
+    setEnabledMethods(defaultEnabledMethods);
+
+    // Initialize excluded moves based on default enabled methods
+    const initialExcludedMoves = new Set<string>();
+    if (selectedPokemon && pokemonMoves[selectedPokemon]) {
+      const moves = getAvailableMovesForPokemon(selectedPokemon, pokemonMoves, typedPokemonDb);
+
+      // Check each method and add moves that are only available through disabled methods
+      for (const method of Object.keys(moves) as LearnMethod[]) {
+        if (moves[method] && !defaultEnabledMethods[method]) {
+          for (const move of Object.keys(moves[method]!)) {
+            const moveMethods = getMoveLearnMethods(move, moves);
+            const hasEnabledMethod = moveMethods.some(m => defaultEnabledMethods[m]);
+            if (!hasEnabledMethod) {
+              initialExcludedMoves.add(move);
+            }
+          }
+        }
+      }
+    }
+
+    setExcludedMoves(initialExcludedMoves);
     setSelectedMoveIndex(null);
   }, [selectedPokemon, selectedGame]);
 
