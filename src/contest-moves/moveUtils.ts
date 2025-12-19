@@ -41,7 +41,7 @@ function categorizeMethodKey(methodKey: string): LearnMethod | null {
   if (methodKey.startsWith('egg-')) return 'egg';
   if (methodKey.startsWith('light-ball-egg-')) return 'egg';
   if (methodKey.startsWith('purification')) return 'purify';
-  return null;
+  return 'other';
 }
 
 /**

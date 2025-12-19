@@ -39,7 +39,7 @@ export default function App() {
     const path = location.pathname
 
     if (path.startsWith('/game-compatibility')) {
-      return [{ name: 'SlyAceZeta', url: 'https://ribbons.guide' }]
+      return [{ name: 'Ribbons.guide', url: 'https://ribbons.guide' }]
     } else if (path.includes('/berry-blending/rse')) {
       return [{ name: 'SadisticMystic', url: 'https://docs.google.com/spreadsheets/d/1A61T_0yHWtXVooQLjw6ocmI8Dx7tdGkp9P-X-dL2yOs/edit?gid=1577996444#gid=1577996444' }]
     } else if (path.includes('/berry-blending/dppt')) {

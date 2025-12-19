@@ -49,7 +49,7 @@ npm run build
 
 ## Data Sources & Credits
 
-- **Game Compatibility Data**: [Ribbons.Guide](https://github.com/SlyAceZeta/Ribbons.Guide) by [@SlyAceZeta](https://github.com/SlyAceZeta) for Switch availability data
+- **Game Compatibility Data**: [Ribbons.Guide](https://ribbons.guide) for Switch availability data
 - **Berry Blending Data**: [SadisticMystic's Berry Blending Spreadsheets](https://docs.google.com/spreadsheets/d/1A61T_0yHWtXVooQLjw6ocmI8Dx7tdGkp9P-X-dL2yOs/) for RSE/ORAS optimal berry calculations and [DPPt/BDSP Poffin Calculator](https://docs.google.com/spreadsheets/d/1U2gGGy9nyGIKQcq9SVtIxKGJDNYAfhicEWr5ykQKM7k/) by SadisticMystic
 - **Contest Moves Data**: Contest move effects, appeal values, and optimal move calculations derived from game data and community research
 - **Pokémon Icons**: [PkmnShuffleMap](https://github.com/nileplumb/PkmnShuffleMap/) by [@nileplumb](https://github.com/nileplumb)

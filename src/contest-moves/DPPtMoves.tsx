@@ -274,7 +274,7 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
   const selectedMoveLearnMethods = useMemo(() => {
     if (!selectedMoveName) return '';
     const methods = getMoveLearnMethods(selectedMoveName, availableMoves);
-    const methodOrder: LearnMethod[] = ['level-up', 'machine', 'tutor', 'egg', 'purify', 'pre-evolution'];
+    const methodOrder: LearnMethod[] = ['level-up', 'machine', 'tutor', 'egg', 'purify', 'pre-evolution', 'other'];
     const sortedMethods = methods.sort((a, b) =>
       methodOrder.indexOf(a) - methodOrder.indexOf(b)
     );
@@ -588,13 +588,27 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
                   <span>Pre-Evo</span>
                 </label>
               )}
+
+              {availableMoves['other'] && Object.keys(availableMoves['other']).length > 0 && (
+                <label className="learn-method-checkbox">
+                  <input
+                    type="checkbox"
+                    checked={enabledMethods['other']}
+                    ref={(el) => {
+                      if (el) el.indeterminate = methodStates['other'] === 'partial';
+                    }}
+                    onChange={(e) => handleMethodToggle('other', e.target.checked)}
+                  />
+                  <span>Other</span>
+                </label>
+              )}
             </div>
 
             <div className="move-filter-list">
               {selectableMoves.map(move => {
                 const methods = getMoveLearnMethods(move, availableMoves);
-                // Sort methods in priority order: Level-up, TM/HM, Tutor, Egg, Purify, Pre-evolution
-                const methodOrder: LearnMethod[] = ['level-up', 'machine', 'tutor', 'egg', 'purify', 'pre-evolution'];
+                // Sort methods in priority order: Level-up, TM/HM, Tutor, Egg, Purify, Pre-evolution, Other
+                const methodOrder: LearnMethod[] = ['level-up', 'machine', 'tutor', 'egg', 'purify', 'pre-evolution', 'other'];
                 const sortedMethods = methods.sort((a, b) =>
                   methodOrder.indexOf(a) - methodOrder.indexOf(b)
                 );
