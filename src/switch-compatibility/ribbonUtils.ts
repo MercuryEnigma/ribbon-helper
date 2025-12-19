@@ -172,10 +172,9 @@ function canObtainRibbon(
   }
 
   if (ribbonKey === 'footprint-ribbon') {
-    // If Pokemon is starting from Gen 3 or Gen 4, no level restriction
-    // (they could have been in DPPt)
-    // Otherwise, requires level 70 or lower
-    if (startGenIndex > 1 && level > 70) {
+    // In BDSP specifically, level must be 70 or lower
+    // Exception: voiceless Pokemon can always get it
+    if (gameGroup === 'BDSP' && !pokemonData?.voiceless && level > 70) {
       return false;
     }
   }

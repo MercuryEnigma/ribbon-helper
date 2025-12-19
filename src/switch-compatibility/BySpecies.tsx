@@ -1,9 +1,9 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import type { PokemonDatabase } from './types';
 import { getGamesForPokemon, getGameGroupNames, searchPokemonByName, getPokemonDisplayName, getAvailableGenerations, GENERATION_ORDER } from './utils';
 import { getPokemonIconProps, getPokemonLargeImageProps } from './iconUtils';
 import { getAvailableRibbons } from './ribbonUtils';
-import games from '../data/games.json';
 
 interface BySpeciesProps {
   pokemonDb: PokemonDatabase;
@@ -12,6 +12,7 @@ interface BySpeciesProps {
 }
 
 export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelect }: BySpeciesProps) {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedPokemon, setSelectedPokemon] = useState<string>(initialPokemonKey || '');
   const [showDropdown, setShowDropdown] = useState(false);
@@ -149,6 +150,33 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
     if (!selectedPokemon || !selectedGeneration || !pokemonDb) return {};
     return getAvailableRibbons(selectedPokemon, level, selectedGeneration, isShadow, pokemonDb);
   }, [selectedPokemon, level, selectedGeneration, isShadow, pokemonDb]);
+
+  // Mobile ribbon game selection
+  const [selectedRibbonGame, setSelectedRibbonGame] = useState<string>('');
+
+  // Set initial ribbon game when ribbons change
+  useEffect(() => {
+    const gameGroups = Object.keys(availableRibbons);
+    if (gameGroups.length > 0 && !selectedRibbonGame) {
+      setSelectedRibbonGame(gameGroups[0]);
+    }
+  }, [availableRibbons, selectedRibbonGame]);
+
+  // Find evolutions and pre-evolution
+  const evolutions = useMemo(() => {
+    if (!selectedPokemon || !pokemonDb) return [];
+    const evos: string[] = [];
+    for (const [key, data] of Object.entries(pokemonDb)) {
+      if (data.evolvesFrom === selectedPokemon) {
+        evos.push(key);
+      }
+    }
+    return evos;
+  }, [selectedPokemon, pokemonDb]);
+
+  const preEvolution = useMemo(() => {
+    return selectedPokemonData?.evolvesFrom || null;
+  }, [selectedPokemonData]);
 
   return (
     <div className="by-species">
@@ -293,6 +321,131 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
                 ))
               )}
             </div>
+
+            {/* Evolution navigation */}
+            {(preEvolution || evolutions.length > 0) && (
+              <div className="evolution-navigation">
+                {preEvolution && (
+                  <button
+                    className="evolution-button"
+                    onClick={() => {
+                      setSelectedPokemon(preEvolution);
+                      setSearchTerm('');
+                      if (onPokemonSelect) onPokemonSelect(preEvolution);
+                    }}
+                  >
+                    {(() => {
+                      const preEvoData = pokemonDb[preEvolution];
+                      const preEvoIconProps = preEvoData ? getPokemonIconProps(preEvolution, preEvoData, pokemonDb) : null;
+                      const preEvoDisplayName = preEvoData ? (() => {
+                        // Handle regional forms that have data-source
+                        if (preEvoData['data-source']) {
+                          const baseData = pokemonDb[preEvoData['data-source']];
+                          return getPokemonDisplayName(preEvolution, {
+                            ...preEvoData,
+                            names: baseData?.names,
+                          });
+                        }
+                        return getPokemonDisplayName(preEvolution, preEvoData);
+                      })() : preEvolution;
+                      return (
+                        <>
+                          {preEvoIconProps && (
+                            <img
+                              className="evolution-icon"
+                              alt={preEvoDisplayName}
+                              {...preEvoIconProps}
+                            />
+                          )}
+                          <span className="evolution-name">{preEvoDisplayName}</span>
+                        </>
+                      );
+                    })()}
+                  </button>
+                )}
+                {evolutions.length > 0 && (
+                  <div className={`evolution-list ${evolutions.length > 1 ? 'stacked' : ''}`}>
+                    {evolutions.map(evoKey => (
+                      <button
+                        key={evoKey}
+                        className="evolution-button"
+                        onClick={() => {
+                          setSelectedPokemon(evoKey);
+                          setSearchTerm('');
+                          if (onPokemonSelect) onPokemonSelect(evoKey);
+                        }}
+                      >
+                        {(() => {
+                          const evoData = pokemonDb[evoKey];
+                          const evoIconProps = evoData ? getPokemonIconProps(evoKey, evoData, pokemonDb) : null;
+                          const evoDisplayName = evoData ? (() => {
+                            // Handle regional forms that have data-source
+                            if (evoData['data-source']) {
+                              const baseData = pokemonDb[evoData['data-source']];
+                              return getPokemonDisplayName(evoKey, {
+                                ...evoData,
+                                names: baseData?.names,
+                              });
+                            }
+                            return getPokemonDisplayName(evoKey, evoData);
+                          })() : evoKey;
+                          return (
+                            <>
+                              {evoIconProps && (
+                                <img
+                                  className="evolution-icon"
+                                  alt={evoDisplayName}
+                                  {...evoIconProps}
+                                />
+                              )}
+                              <span className="evolution-name">{evoDisplayName}</span>
+                            </>
+                          );
+                        })()}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Contest moves navigation */}
+            {(() => {
+              if (!selectedGeneration || !selectedPokemon) return null;
+
+              const pokemonQuery = `?p=${encodeURIComponent(selectedPokemon)}`;
+              let contestMovesPath = '';
+
+              if (selectedGeneration === 'Gen 3') {
+                contestMovesPath = `/contest-moves/rse${pokemonQuery}`;
+              } else if (selectedGeneration === 'Gen 4') {
+                contestMovesPath = `/contest-moves/dppt${pokemonQuery}`;
+              } else if (selectedGeneration === 'Gen 5' || selectedGeneration === 'Gen 6') {
+                contestMovesPath = `/contest-moves/oras${pokemonQuery}`;
+              } else {
+                // For other generations, only show if the Pokémon appears in BDSP
+                const games = selectedPokemonData?.games || (selectedPokemonData?.['data-source'] ? pokemonDb[selectedPokemonData['data-source']]?.games : null);
+                const hasBDSP = games?.some(game => game === 'bd' || game === 'sp');
+                if (hasBDSP) {
+                  contestMovesPath = `/contest-moves/bdsp${pokemonQuery}`;
+                }
+              }
+
+              if (!contestMovesPath) return null;
+
+              return (
+                <div className="contest-moves-navigation">
+                  <button
+                    type="button"
+                    className="contest-moves-button"
+                    onClick={() => navigate(contestMovesPath)}
+                  >
+                    Contest Moves
+                  </button>
+                </div>
+              );
+            })()}
+
             {/* <div className="pokedex-entry-notes">
               Reserved for Pokédex entry text
             </div> */}
@@ -302,6 +455,88 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
           {Object.keys(availableRibbons).length > 0 && (
             <div className="ribbons-section">
               <h3 className="ribbons-header">Available Ribbons</h3>
+
+              {/* Mobile dropdown for game selection */}
+              <select
+                className="ribbons-mobile-dropdown"
+                value={selectedRibbonGame}
+                onChange={(e) => setSelectedRibbonGame(e.target.value)}
+              >
+                {Object.keys(availableRibbons).map(gameGroup => (
+                  <option key={gameGroup} value={gameGroup}>{gameGroup}</option>
+                ))}
+              </select>
+
+              {/* Mobile layout - two rows */}
+              <div className="ribbons-mobile-layout">
+                {selectedRibbonGame && availableRibbons[selectedRibbonGame as keyof typeof availableRibbons] && (() => {
+                  const ribbonData = availableRibbons[selectedRibbonGame as keyof typeof availableRibbons];
+                  if (!ribbonData) return null;
+                  const isSwitchGame = ['SwSh', 'BDSP', 'PLA', 'SV'].includes(selectedRibbonGame);
+                  return (
+                    <>
+                      {ribbonData['first-introduced'].length > 0 && (
+                        <div className="ribbons-mobile-row">
+                          <div className="ribbon-game-tag">New ribbons</div>
+                          <div className="ribbon-item">
+                            {ribbonData['first-introduced'].map(ribbonKey => {
+                              const isLastChance = !isSwitchGame && ribbonData['last-chance'].includes(ribbonKey);
+                              return isLastChance ? (
+                                <div key={ribbonKey} className="ribbon-last-chance-wrapper">
+                                  <img
+                                    src={`${import.meta.env.BASE_URL}images/${ribbonKey}.png`}
+                                    alt={ribbonKey}
+                                    title={ribbonKey}
+                                    className="ribbon-image"
+                                  />
+                                </div>
+                              ) : (
+                                <img
+                                  key={ribbonKey}
+                                  src={`${import.meta.env.BASE_URL}images/${ribbonKey}.png`}
+                                  alt={ribbonKey}
+                                  title={ribbonKey}
+                                  className="ribbon-image"
+                                />
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
+                      {ribbonData['again'].length > 0 && (
+                        <div className="ribbons-mobile-row">
+                          <div className="ribbon-game-tag">Recurring ribbons</div>
+                          <div className="ribbon-item">
+                            {ribbonData['again'].map(ribbonKey => {
+                              const isLastChance = !isSwitchGame && ribbonData['last-chance'].includes(ribbonKey);
+                              return isLastChance ? (
+                                <div key={ribbonKey} className="ribbon-last-chance-wrapper">
+                                  <img
+                                    src={`${import.meta.env.BASE_URL}images/${ribbonKey}.png`}
+                                    alt={ribbonKey}
+                                    title={ribbonKey}
+                                    className="ribbon-image"
+                                  />
+                                </div>
+                              ) : (
+                                <img
+                                  key={ribbonKey}
+                                  src={`${import.meta.env.BASE_URL}images/${ribbonKey}.png`}
+                                  alt={ribbonKey}
+                                  title={ribbonKey}
+                                  className="ribbon-image"
+                                />
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
+                    </>
+                  );
+                })()}
+              </div>
+
+              {/* Desktop grid layout */}
               <div className="ribbons-grid">
                 <div className="ribbons-grid-header">
                   <div className="ribbon-grid-cell"></div>

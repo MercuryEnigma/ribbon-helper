@@ -23,6 +23,7 @@ export interface PokemonData {
   flags?: string[];
   sort?: number;
   mythical?: boolean;
+  voiceless?: boolean;
 }
 
 export interface PokemonDatabase {
