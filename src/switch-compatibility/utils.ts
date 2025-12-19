@@ -1,7 +1,8 @@
 import type { PokemonDatabase, PokemonData, SwitchGame, SwitchGameInfo } from './types';
+import { ENABLE_PLZA } from './types';
 import games from '../data/games.json';
 
-export const SWITCH_GAMES: SwitchGameInfo[] = [
+const switchGamesList: SwitchGameInfo[] = [
   { id: 'lgp', name: "Let's Go Pikachu / Eevee" },
   { id: 'lge', name: "Let's Go Pikachu / Eevee" },
   { id: 'sw', name: 'Sword / Shield' },
@@ -13,14 +14,26 @@ export const SWITCH_GAMES: SwitchGameInfo[] = [
   { id: 'vio', name: 'Scarlet / Violet' },
 ];
 
+if (ENABLE_PLZA) {
+  switchGamesList.push({ id: 'plza' as SwitchGame, name: 'Legends: Z-A' });
+}
+
+export const SWITCH_GAMES: SwitchGameInfo[] = switchGamesList;
+
 // Unique game groups for user selection
-export const GAME_GROUPS = [
+const gameGroups = [
   { ids: ['lgp', 'lge'], name: "Let's Go Pikachu / Eevee" },
   { ids: ['sw', 'sh'], name: 'Sword / Shield' },
   { ids: ['bd', 'sp'], name: 'Brilliant Diamond / Shining Pearl' },
   { ids: ['pla'], name: 'Legends: Arceus' },
   { ids: ['scar', 'vio'], name: 'Scarlet / Violet' },
 ];
+
+if (ENABLE_PLZA) {
+  gameGroups.push({ ids: ['plza'], name: 'Legends: Z-A' });
+}
+
+export const GAME_GROUPS = gameGroups;
 
 // Generation order for dropdown and selection
 export const GENERATION_ORDER = ['Gen 3', 'Gen 4', 'Gen 5', 'Gen 6', 'VC', 'Gen 7', 'GO', 'Switch'] as const;
@@ -403,7 +416,7 @@ export function getAvailableGenerations(
   })();
 
   const generations = new Set<string>();
-  const switchGames = ['lgpe', 'lgp', 'lge', 'swsh', 'sw', 'sh', 'bdsp', 'bd', 'sp', 'pla', 'sv', 'scar', 'vio', 'plza'];
+  const switchGames = ['lgpe', 'lgp', 'lge', 'swsh', 'sw', 'sh', 'bdsp', 'bd', 'sp', 'pla', 'sv', 'scar', 'vio', ...(ENABLE_PLZA ? ['plza'] : [])];
 
   // GO is always available for all Pokemon
   generations.add('GO');

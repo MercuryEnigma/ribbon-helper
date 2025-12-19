@@ -121,7 +121,9 @@ type ShadowFilter = 'colosseum' | 'xd' | 'either';
 
 export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPokemonProps) {
   const [selectedGames, setSelectedGames] = useState<string[]>(() =>
-    GAME_GROUPS.filter(group => group.name !== "Let's Go Pikachu / Eevee").flatMap(group => group.ids)
+    GAME_GROUPS
+      .filter(group => group.name !== "Let's Go Pikachu / Eevee" && group.name !== 'Legends: Z-A')
+      .flatMap(group => group.ids)
   );
   const [shadowFilter, setShadowFilter] = useState<ShadowFilter>('either');
   const [gridHeight, setGridHeight] = useState<number | null>(null);

@@ -10,7 +10,9 @@ interface AvailablePokemonProps {
 
 export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: AvailablePokemonProps) {
   const [selectedGames, setSelectedGames] = useState<string[]>(() =>
-    GAME_GROUPS.filter(group => group.name !== "Let's Go Pikachu / Eevee").flatMap(group => group.ids)
+    GAME_GROUPS
+      .filter(group => group.name !== "Let's Go Pikachu / Eevee" && group.name !== 'Legends: Z-A')
+      .flatMap(group => group.ids)
   );
   const [gridHeight, setGridHeight] = useState<number | null>(null);
   const [highlightedPokemon, setHighlightedPokemon] = useState<string | null>(null);

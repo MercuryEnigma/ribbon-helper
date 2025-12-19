@@ -75,7 +75,7 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
     try {
       const gameIds = getGamesForPokemon(pokemonDb, selectedPokemon);
       const names = getGameGroupNames(gameIds);
-      const order = ['Let\'s Go Pikachu / Eevee', 'Sword / Shield', 'Brilliant Diamond / Shining Pearl', 'Legends: Arceus', 'Scarlet / Violet'];
+      const order = ['Let\'s Go Pikachu / Eevee', 'Sword / Shield', 'Brilliant Diamond / Shining Pearl', 'Legends: Arceus', 'Scarlet / Violet', 'Legends: Z-A'];
       return names.sort((a, b) => {
         const ai = order.indexOf(a);
         const bi = order.indexOf(b);
@@ -341,7 +341,7 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
                   <div className="pokedex-row-value">Not in Switch titles</div>
                 </div>
               ) : (
-                availableGames.slice(0, 5).map(game => (
+                availableGames.map(game => (
                   <div className="pokedex-row" key={game}>
                     <div className="pokedex-row-label">Available in</div>
                     <div className="pokedex-row-value">{game}</div>
