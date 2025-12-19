@@ -1,0 +1,1405 @@
+{
+  "beauty-sticker-a": {
+    "name": "Beauty Sticker A",
+    "page": "beauty-sticker",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "cool": 15,
+    "beautiful": 25,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "beauty-sticker-b": {
+    "name": "Beauty Sticker B",
+    "page": "beauty-sticker",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "cool": 15,
+    "beautiful": 25,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "beauty-sticker-c": {
+    "name": "Beauty Sticker C",
+    "page": "beauty-sticker",
+    "acquisition": [
+      "amity-square",
+      "contest-reward"
+    ],
+    "cool": 15,
+    "beautiful": 25,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "beauty-sticker-d": {
+    "name": "Beauty Sticker D",
+    "page": "beauty-sticker",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "cool": 15,
+    "beautiful": 25,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "bubble-sticker-a": {
+    "name": "Bubble Sticker A",
+    "page": "bubble-sticker",
+    "acquisition": [
+      "amity-square",
+      "jubilife-tv",
+      "starter-locale",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 25,
+    "tough": 15,
+    "fur": 15
+  },
+  "bubble-sticker-b": {
+    "name": "Bubble Sticker B",
+    "page": "bubble-sticker",
+    "acquisition": [
+      "amity-square",
+      "gym-initial",
+      "jubilife-tv",
+      "starter-locale",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 25,
+    "tough": 15,
+    "fur": 15
+  },
+  "bubble-sticker-c": {
+    "name": "Bubble Sticker C",
+    "page": "bubble-sticker",
+    "acquisition": [
+      "jubilife-tv",
+      "starter-locale",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 25,
+    "tough": 15,
+    "fur": 15
+  },
+  "bubble-sticker-d": {
+    "name": "Bubble Sticker D",
+    "page": "bubble-sticker",
+    "acquisition": [
+      "amity-square",
+      "flower-shop",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 25,
+    "tough": 15,
+    "fur": 15
+  },
+  "burning-sticker-a": {
+    "name": "Burning Sticker A",
+    "page": "burning-sticker",
+    "acquisition": [
+      "flower-shop",
+      "jubilife-tv",
+      "snowpoint-city"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "burning-sticker-b": {
+    "name": "Burning Sticker B",
+    "page": "burning-sticker",
+    "acquisition": [
+      "gym-rematch"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "burning-sticker-c": {
+    "name": "Burning Sticker C",
+    "page": "burning-sticker",
+    "acquisition": [
+      "champion-final",
+      "massage-girl"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "champion-sticker": {
+    "name": "Champion Sticker",
+    "page": "champion-sticker",
+    "acquisition": [
+      "champion-final"
+    ],
+    "cool": 36,
+    "beautiful": 36,
+    "cute": 36,
+    "clever": 36,
+    "tough": 36,
+    "fur": 36
+  },
+  "cleverness-sticker-a": {
+    "name": "Cleverness Sticker A",
+    "page": "cleverness-sticker",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 25,
+    "tough": 15,
+    "fur": 15
+  },
+  "cleverness-sticker-b": {
+    "name": "Cleverness Sticker B",
+    "page": "cleverness-sticker",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 25,
+    "tough": 15,
+    "fur": 15
+  },
+  "cleverness-sticker-c": {
+    "name": "Cleverness Sticker C",
+    "page": "cleverness-sticker",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 25,
+    "tough": 15,
+    "fur": 15
+  },
+  "cleverness-sticker-d": {
+    "name": "Cleverness Sticker D",
+    "page": "cleverness-sticker",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 25,
+    "tough": 15,
+    "fur": 15
+  },
+  "cool-sticker-a": {
+    "name": "Cool Sticker A",
+    "page": "cool-sticker",
+    "acquisition": [
+      "gym-initial",
+      "gym-rematch"
+    ],
+    "cool": 15,
+    "beautiful": 25,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "cool-sticker-b": {
+    "name": "Cool Sticker B",
+    "page": "cool-sticker",
+    "acquisition": [
+      "gym-initial",
+      "gym-rematch"
+    ],
+    "cool": 15,
+    "beautiful": 25,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "cool-sticker-c": {
+    "name": "Cool Sticker C",
+    "page": "cool-sticker",
+    "acquisition": [
+      "amity-square",
+      "flower-shop",
+      "gym-initial",
+      "jubilife-tv"
+    ],
+    "cool": 15,
+    "beautiful": 25,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "coolness-sticker-a": {
+    "name": "Coolness Sticker A",
+    "page": "coolness-sticker",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "coolness-sticker-b": {
+    "name": "Coolness Sticker B",
+    "page": "coolness-sticker",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "coolness-sticker-c": {
+    "name": "Coolness Sticker C",
+    "page": "coolness-sticker",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "coolness-sticker-d": {
+    "name": "Coolness Sticker D",
+    "page": "coolness-sticker",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "cuteness-sticker-a": {
+    "name": "Cuteness Sticker A",
+    "page": "cuteness-sticker",
+    "acquisition": [
+      "amity-square",
+      "contest-reward"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "cuteness-sticker-b": {
+    "name": "Cuteness Sticker B",
+    "page": "cuteness-sticker",
+    "acquisition": [
+      "amity-square",
+      "contest-reward"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "cuteness-sticker-c": {
+    "name": "Cuteness Sticker C",
+    "page": "cuteness-sticker",
+    "acquisition": [
+      "amity-square",
+      "contest-reward"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "cuteness-sticker-d": {
+    "name": "Cuteness Sticker D",
+    "page": "cuteness-sticker",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "electricity-sticker-a": {
+    "name": "Electricity Sticker A",
+    "page": "electricity-sticker",
+    "acquisition": [
+      "amity-square",
+      "flower-shop",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "electricity-sticker-b": {
+    "name": "Electricity Sticker B",
+    "page": "electricity-sticker",
+    "acquisition": [
+      "amity-square",
+      "gym-initial",
+      "jubilife-tv",
+      "route-209",
+      "sunyshore-market"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "electricity-sticker-c": {
+    "name": "Electricity Sticker C",
+    "page": "electricity-sticker",
+    "acquisition": [
+      "amity-square",
+      "gym-initial",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "electricity-sticker-d": {
+    "name": "Electricity Sticker D",
+    "page": "electricity-sticker",
+    "acquisition": [
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "ethereal-sticker-a": {
+    "name": "Ethereal Sticker A",
+    "page": "ethereal-sticker",
+    "acquisition": [
+      "amity-square",
+      "flower-shop",
+      "gym-initial",
+      "jubilife-tv"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "ethereal-sticker-b": {
+    "name": "Ethereal Sticker B",
+    "page": "ethereal-sticker",
+    "acquisition": [
+      "canalave-city",
+      "jubilife-tv"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "ethereal-sticker-c": {
+    "name": "Ethereal Sticker C",
+    "page": "ethereal-sticker",
+    "acquisition": [
+      "gym-initial",
+      "jubilife-tv",
+      "super-contest-hall"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "fashionista-sticker": {
+    "name": "Fashionista Sticker",
+    "page": "fashionista-sticker",
+    "acquisition": [
+      "style-shop"
+    ],
+    "cool": 25,
+    "beautiful": 25,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "fire-sticker-a": {
+    "name": "Fire Sticker A",
+    "page": "fire-sticker",
+    "acquisition": [
+      "jubilife-tv",
+      "starter-locale",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 25,
+    "fur": 15
+  },
+  "fire-sticker-b": {
+    "name": "Fire Sticker B",
+    "page": "fire-sticker",
+    "acquisition": [
+      "jubilife-tv",
+      "starter-locale",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 25,
+    "fur": 15
+  },
+  "fire-sticker-c": {
+    "name": "Fire Sticker C",
+    "page": "fire-sticker",
+    "acquisition": [
+      "jubilife-tv",
+      "starter-locale",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 25,
+    "fur": 15
+  },
+  "fire-sticker-d": {
+    "name": "Fire Sticker D",
+    "page": "fire-sticker",
+    "acquisition": [
+      "flower-shop",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 25,
+    "fur": 15
+  },
+  "flora-sticker-a": {
+    "name": "Flora Sticker A",
+    "page": "flora-sticker",
+    "acquisition": [
+      "amity-square",
+      "gym-initial",
+      "jubilife-tv",
+      "starter-locale",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 25,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "flora-sticker-b": {
+    "name": "Flora Sticker B",
+    "page": "flora-sticker",
+    "acquisition": [
+      "amity-square",
+      "gym-initial",
+      "jubilife-tv",
+      "starter-locale",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 25,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "flora-sticker-c": {
+    "name": "Flora Sticker C",
+    "page": "flora-sticker",
+    "acquisition": [
+      "gym-initial",
+      "jubilife-tv",
+      "starter-locale",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 25,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "flora-sticker-d": {
+    "name": "Flora Sticker D",
+    "page": "flora-sticker",
+    "acquisition": [
+      "amity-square",
+      "gym-initial",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 25,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "flora-sticker-e": {
+    "name": "Flora Sticker E",
+    "page": "flora-sticker",
+    "acquisition": [
+      "amity-square",
+      "gym-initial",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 25,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "flora-sticker-f": {
+    "name": "Flora Sticker F",
+    "page": "flora-sticker",
+    "acquisition": [
+      "flower-shop",
+      "gym-initial",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 25,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "heart-sticker-a": {
+    "name": "Heart Sticker A",
+    "page": "heart-sticker",
+    "acquisition": [
+      "amity-square",
+      "flower-shop",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "heart-sticker-b": {
+    "name": "Heart Sticker B",
+    "page": "heart-sticker",
+    "acquisition": [
+      "amity-square",
+      "jubilife-tv",
+      "route-213",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "heart-sticker-c": {
+    "name": "Heart Sticker C",
+    "page": "heart-sticker",
+    "acquisition": [
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "heart-sticker-d": {
+    "name": "Heart Sticker D",
+    "page": "heart-sticker",
+    "acquisition": [
+      "amity-square",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "heart-sticker-e": {
+    "name": "Heart Sticker E",
+    "page": "heart-sticker",
+    "acquisition": [
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "heart-sticker-f": {
+    "name": "Heart Sticker F",
+    "page": "heart-sticker",
+    "acquisition": [
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "leaf-sticker-a": {
+    "name": "Leaf Sticker A",
+    "page": "leaf-sticker",
+    "acquisition": [
+      "gym-rematch"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 25,
+    "fur": 15
+  },
+  "leaf-sticker-b": {
+    "name": "Leaf Sticker B",
+    "page": "leaf-sticker",
+    "acquisition": [
+      "jubilife-tv",
+      "massage-girl"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 25,
+    "fur": 15
+  },
+  "leaf-sticker-c": {
+    "name": "Leaf Sticker C",
+    "page": "leaf-sticker",
+    "acquisition": [
+      "flower-shop",
+      "jubilife-tv",
+      "massage-girl"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 25,
+    "fur": 15
+  },
+  "party-sticker-a": {
+    "name": "Party Sticker A",
+    "page": "party-sticker",
+    "acquisition": [
+      "gym-initial",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 25,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "party-sticker-b": {
+    "name": "Party Sticker B",
+    "page": "party-sticker",
+    "acquisition": [
+      "flower-shop",
+      "gym-initial",
+      "jubilife-tv",
+      "massage-girl",
+      "route-213",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 25,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "party-sticker-c": {
+    "name": "Party Sticker C",
+    "page": "party-sticker",
+    "acquisition": [
+      "amity-square",
+      "jubilife-tv",
+      "massage-girl",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 25,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "party-sticker-d": {
+    "name": "Party Sticker D",
+    "page": "party-sticker",
+    "acquisition": [
+      "gym-initial",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 25,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "ribbon-sticker-a": {
+    "name": "Ribbon Sticker A",
+    "page": "ribbon-sticker",
+    "acquisition": [
+      "gym-initial",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "ribbon-sticker-b": {
+    "name": "Ribbon Sticker B",
+    "page": "ribbon-sticker",
+    "acquisition": [
+      "flower-shop",
+      "gym-initial",
+      "jubilife-tv",
+      "route-213",
+      "sunyshore-market"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "ribbon-sticker-c": {
+    "name": "Ribbon Sticker C",
+    "page": "ribbon-sticker",
+    "acquisition": [
+      "gym-initial",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "ribbon-sticker-d": {
+    "name": "Ribbon Sticker D",
+    "page": "ribbon-sticker",
+    "acquisition": [
+      "jubilife-tv",
+      "route-213",
+      "sunyshore-market"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "show-master-sticker": {
+    "name": "Show Master Sticker",
+    "page": "show-master-sticker",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "cool": 30,
+    "beautiful": 30,
+    "cute": 30,
+    "clever": 30,
+    "tough": 30,
+    "fur": 30
+  },
+  "sinister-sticker-a": {
+    "name": "Sinister Sticker A",
+    "page": "sinister-sticker",
+    "acquisition": [
+      "flower-shop",
+      "gym-initial",
+      "jubilife-tv"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 25,
+    "tough": 15,
+    "fur": 15
+  },
+  "sinister-sticker-b": {
+    "name": "Sinister Sticker B",
+    "page": "sinister-sticker",
+    "acquisition": [
+      "gym-initial",
+      "gym-rematch"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 25,
+    "tough": 15,
+    "fur": 15
+  },
+  "sinister-sticker-c": {
+    "name": "Sinister Sticker C",
+    "page": "sinister-sticker",
+    "acquisition": [
+      "gym-initial",
+      "jubilife-tv",
+      "massage-girl"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 25,
+    "tough": 15,
+    "fur": 15
+  },
+  "sky-sticker-a": {
+    "name": "Sky Sticker A",
+    "page": "sky-sticker",
+    "acquisition": [
+      "amity-square",
+      "jubilife-tv",
+      "massage-girl"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "sky-sticker-b": {
+    "name": "Sky Sticker B",
+    "page": "sky-sticker",
+    "acquisition": [
+      "jubilife-tv",
+      "massage-girl",
+      "route-206"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "sky-sticker-c": {
+    "name": "Sky Sticker C",
+    "page": "sky-sticker",
+    "acquisition": [
+      "flower-shop",
+      "jubilife-tv"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "smoke-sticker-a": {
+    "name": "Smoke Sticker A",
+    "page": "smoke-sticker",
+    "acquisition": [
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 25,
+    "fur": 15
+  },
+  "smoke-sticker-b": {
+    "name": "Smoke Sticker B",
+    "page": "smoke-sticker",
+    "acquisition": [
+      "flower-shop",
+      "gym-initial",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 25,
+    "fur": 15
+  },
+  "smoke-sticker-c": {
+    "name": "Smoke Sticker C",
+    "page": "smoke-sticker",
+    "acquisition": [
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 25,
+    "fur": 15
+  },
+  "smoke-sticker-d": {
+    "name": "Smoke Sticker D",
+    "page": "smoke-sticker",
+    "acquisition": [
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 25,
+    "fur": 15
+  },
+  "song-sticker-a": {
+    "name": "Song Sticker A",
+    "page": "song-sticker",
+    "acquisition": [
+      "gym-initial",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 25,
+    "tough": 15,
+    "fur": 15
+  },
+  "song-sticker-b": {
+    "name": "Song Sticker B",
+    "page": "song-sticker",
+    "acquisition": [
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 25,
+    "tough": 15,
+    "fur": 15
+  },
+  "song-sticker-c": {
+    "name": "Song Sticker C",
+    "page": "song-sticker",
+    "acquisition": [
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 25,
+    "tough": 15,
+    "fur": 15
+  },
+  "song-sticker-d": {
+    "name": "Song Sticker D",
+    "page": "song-sticker",
+    "acquisition": [
+      "flower-shop",
+      "gym-initial",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 25,
+    "tough": 15,
+    "fur": 15
+  },
+  "song-sticker-e": {
+    "name": "Song Sticker E",
+    "page": "song-sticker",
+    "acquisition": [
+      "amity-square",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 25,
+    "tough": 15,
+    "fur": 15
+  },
+  "song-sticker-f": {
+    "name": "Song Sticker F",
+    "page": "song-sticker",
+    "acquisition": [
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 25,
+    "tough": 15,
+    "fur": 15
+  },
+  "song-sticker-g": {
+    "name": "Song Sticker G",
+    "page": "song-sticker",
+    "acquisition": [
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 25,
+    "tough": 15,
+    "fur": 15
+  },
+  "spark-sticker-a": {
+    "name": "Spark Sticker A",
+    "page": "spark-sticker",
+    "acquisition": [
+      "amity-square",
+      "flower-shop",
+      "jubilife-tv"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "spark-sticker-b": {
+    "name": "Spark Sticker B",
+    "page": "spark-sticker",
+    "acquisition": [
+      "gym-initial",
+      "jubilife-tv",
+      "massage-girl"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "spark-sticker-c": {
+    "name": "Spark Sticker C",
+    "page": "spark-sticker",
+    "acquisition": [
+      "gym-initial",
+      "gym-rematch",
+      "jubilife-tv"
+    ],
+    "cool": 25,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "star-sticker-a": {
+    "name": "Star Sticker A",
+    "page": "star-sticker",
+    "acquisition": [
+      "amity-square",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "star-sticker-b": {
+    "name": "Star Sticker B",
+    "page": "star-sticker",
+    "acquisition": [
+      "amity-square",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "star-sticker-c": {
+    "name": "Star Sticker C",
+    "page": "star-sticker",
+    "acquisition": [
+      "amity-square",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "star-sticker-d": {
+    "name": "Star Sticker D",
+    "page": "star-sticker",
+    "acquisition": [
+      "gym-initial",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "star-sticker-e": {
+    "name": "Star Sticker E",
+    "page": "star-sticker",
+    "acquisition": [
+      "flower-shop",
+      "gym-initial",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "star-sticker-f": {
+    "name": "Star Sticker F",
+    "page": "star-sticker",
+    "acquisition": [
+      "gym-initial",
+      "jubilife-tv",
+      "sunyshore-market"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 25,
+    "clever": 15,
+    "tough": 15,
+    "fur": 15
+  },
+  "stone-sticker-a": {
+    "name": "Stone Sticker A",
+    "page": "stone-sticker",
+    "acquisition": [
+      "gym-initial",
+      "gym-rematch"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 25,
+    "fur": 15
+  },
+  "stone-sticker-b": {
+    "name": "Stone Sticker B",
+    "page": "stone-sticker",
+    "acquisition": [
+      "flower-shop",
+      "gym-initial",
+      "jubilife-tv"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 25,
+    "fur": 15
+  },
+  "stone-sticker-c": {
+    "name": "Stone Sticker C",
+    "page": "stone-sticker",
+    "acquisition": [
+      "gym-initial",
+      "gym-rematch"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 25,
+    "fur": 15
+  },
+  "toughness-sticker-a": {
+    "name": "Toughness Sticker A",
+    "page": "toughness-sticker",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 25,
+    "fur": 15
+  },
+  "toughness-sticker-b": {
+    "name": "Toughness Sticker B",
+    "page": "toughness-sticker",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 25,
+    "fur": 15
+  },
+  "toughness-sticker-c": {
+    "name": "Toughness Sticker C",
+    "page": "toughness-sticker",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 25,
+    "fur": 15
+  },
+  "toughness-sticker-d": {
+    "name": "Toughness Sticker D",
+    "page": "toughness-sticker",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "cool": 15,
+    "beautiful": 15,
+    "cute": 15,
+    "clever": 15,
+    "tough": 25,
+    "fur": 15
+  }
+}

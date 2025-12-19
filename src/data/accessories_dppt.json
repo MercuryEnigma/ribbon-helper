@@ -1,0 +1,1902 @@
+{
+  "white-fluff": {
+    "name": "White Fluff",
+    "page": "1",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 0,
+    "festive": 1,
+    "flexible": 2,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 0,
+    "shapely": 1,
+    "sharp": 0,
+    "solid": 1
+  },
+  "yellow-fluff": {
+    "name": "Yellow Fluff",
+    "page": "1",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 2,
+    "colorful": 2,
+    "created": 0,
+    "festive": 1,
+    "flexible": 2,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 0,
+    "solid": 1
+  },
+  "pink-fluff": {
+    "name": "Pink Fluff",
+    "page": "1",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 0,
+    "festive": 1,
+    "flexible": 2,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 0,
+    "solid": 1
+  },
+  "brown-fluff": {
+    "name": "Brown Fluff",
+    "page": "1",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 0,
+    "festive": 1,
+    "flexible": 2,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 2,
+    "shapely": 1,
+    "sharp": 0,
+    "solid": 1
+  },
+  "black-fluff": {
+    "name": "Black Fluff",
+    "page": "1",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 0,
+    "colorful": 2,
+    "created": 0,
+    "festive": 1,
+    "flexible": 2,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 2,
+    "shapely": 1,
+    "sharp": 0,
+    "solid": 1
+  },
+  "orange-fluff": {
+    "name": "Orange Fluff",
+    "page": "1",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 0,
+    "festive": 1,
+    "flexible": 2,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 0,
+    "solid": 1
+  },
+  "round-pebble": {
+    "name": "Round Pebble",
+    "page": "2",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 1,
+    "festive": 1,
+    "flexible": 0,
+    "gaudy": 2,
+    "intangible": 0,
+    "natural": 1,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 0,
+    "solid": 2
+  },
+  "glitter-boulder": {
+    "name": "Glitter Boulder",
+    "page": "2",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 1,
+    "festive": 2,
+    "flexible": 0,
+    "gaudy": 2,
+    "intangible": 0,
+    "natural": 1,
+    "relaxed": 0,
+    "shapely": 2,
+    "sharp": 0,
+    "solid": 2
+  },
+  "snaggy-pebble": {
+    "name": "Snaggy Pebble",
+    "page": "2",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 1,
+    "colorful": 0,
+    "created": 0,
+    "festive": 0,
+    "flexible": 0,
+    "gaudy": 1,
+    "intangible": 0,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 0,
+    "solid": 2
+  },
+  "jagged-boulder": {
+    "name": "Jagged Boulder",
+    "page": "2",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 1,
+    "colorful": 0,
+    "created": 0,
+    "festive": 0,
+    "flexible": 0,
+    "gaudy": 1,
+    "intangible": 0,
+    "natural": 2,
+    "relaxed": 2,
+    "shapely": 2,
+    "sharp": 0,
+    "solid": 2
+  },
+  "black-pebble": {
+    "name": "Black Pebble",
+    "page": "2",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 0,
+    "colorful": 2,
+    "created": 1,
+    "festive": 1,
+    "flexible": 0,
+    "gaudy": 2,
+    "intangible": 0,
+    "natural": 1,
+    "relaxed": 2,
+    "shapely": 2,
+    "sharp": 0,
+    "solid": 2
+  },
+  "mini-pebble": {
+    "name": "Mini Pebble",
+    "page": "2",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 1,
+    "festive": 1,
+    "flexible": 0,
+    "gaudy": 2,
+    "intangible": 0,
+    "natural": 1,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 0,
+    "solid": 2
+  },
+  "pink-scale": {
+    "name": "Pink Scale",
+    "page": "3",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 0,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 1,
+    "solid": 2
+  },
+  "blue-scale": {
+    "name": "Blue Scale",
+    "page": "3",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 0,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 2,
+    "shapely": 1,
+    "sharp": 2,
+    "solid": 2
+  },
+  "green-scale": {
+    "name": "Green Scale",
+    "page": "3",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 0,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 0,
+    "solid": 2
+  },
+  "purple-scale": {
+    "name": "Purple Scale",
+    "page": "3",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 0,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 2,
+    "solid": 2
+  },
+  "big-scale": {
+    "name": "Big Scale",
+    "page": "3",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 0,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 0,
+    "shapely": 1,
+    "sharp": 2,
+    "solid": 2
+  },
+  "narrow-scale": {
+    "name": "Narrow Scale",
+    "page": "3",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 0,
+    "colorful": 1,
+    "created": 0,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 2,
+    "shapely": 1,
+    "sharp": 2,
+    "solid": 2
+  },
+  "blue-feather": {
+    "name": "Blue Feather",
+    "page": "4",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 0,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 2,
+    "solid": 1
+  },
+  "red-feather": {
+    "name": "Red Feather",
+    "page": "4",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 0,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 2,
+    "solid": 1
+  },
+  "yellow-feather": {
+    "name": "Yellow Feather",
+    "page": "4",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 2,
+    "colorful": 2,
+    "created": 0,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 2,
+    "solid": 1
+  },
+  "white-feather": {
+    "name": "White Feather",
+    "page": "4",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 2,
+    "colorful": 2,
+    "created": 0,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 0,
+    "shapely": 1,
+    "sharp": 2,
+    "solid": 1
+  },
+  "black-moustache": {
+    "name": "Black Moustache",
+    "page": "5",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 0,
+    "colorful": 2,
+    "created": 2,
+    "festive": 0,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 2,
+    "shapely": 1,
+    "sharp": 1,
+    "solid": 1
+  },
+  "white-moustache": {
+    "name": "White Moustache",
+    "page": "5",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 2,
+    "festive": 0,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 0,
+    "shapely": 1,
+    "sharp": 1,
+    "solid": 1
+  },
+  "black-beard": {
+    "name": "Black Beard",
+    "page": "5",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 0,
+    "colorful": 2,
+    "created": 2,
+    "festive": 0,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 2,
+    "shapely": 1,
+    "sharp": 2,
+    "solid": 1
+  },
+  "white-beard": {
+    "name": "White Beard",
+    "page": "5",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 2,
+    "festive": 0,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 0,
+    "shapely": 1,
+    "sharp": 2,
+    "solid": 1
+  },
+  "small-leaf": {
+    "name": "Small Leaf",
+    "page": "5",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 0,
+    "festive": 0,
+    "flexible": 2,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 1,
+    "solid": 1
+  },
+  "big-leaf": {
+    "name": "Big Leaf",
+    "page": "5",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 0,
+    "festive": 0,
+    "flexible": 2,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 1
+  },
+  "narrow-leaf": {
+    "name": "Narrow Leaf",
+    "page": "5",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 0,
+    "festive": 0,
+    "flexible": 2,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 2,
+    "solid": 1
+  },
+  "shed-claw": {
+    "name": "Shed Claw",
+    "page": "6",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 2,
+    "colorful": 0,
+    "created": 1,
+    "festive": 1,
+    "flexible": 0,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 0,
+    "shapely": 2,
+    "sharp": 2,
+    "solid": 2
+  },
+  "shed-horn": {
+    "name": "Shed Horn",
+    "page": "6",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 2,
+    "colorful": 0,
+    "created": 1,
+    "festive": 1,
+    "flexible": 0,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 0,
+    "shapely": 2,
+    "sharp": 2,
+    "solid": 2
+  },
+  "thin-mushroom": {
+    "name": "Thin Mushroom",
+    "page": "6",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 1,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 0,
+    "shapely": 1,
+    "sharp": 2,
+    "solid": 1
+  },
+  "thick-mushroom": {
+    "name": "Thick Mushroom",
+    "page": "6",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 1,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 0,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 1
+  },
+  "stump": {
+    "name": "Stump",
+    "page": "6",
+    "acquisition": [
+      "amity-square"
+    ],
+    "bright": 1,
+    "colorful": 0,
+    "created": 1,
+    "festive": 0,
+    "flexible": 0,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 2
+  },
+  "pretty-dewdrop": {
+    "name": "Pretty Dewdrop",
+    "page": "7",
+    "acquisition": [
+      "massage-girl"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 0,
+    "festive": 2,
+    "flexible": 2,
+    "gaudy": 1,
+    "intangible": 2,
+    "natural": 2,
+    "relaxed": 0,
+    "shapely": 1,
+    "sharp": 0,
+    "solid": 0
+  },
+  "snow-crystal": {
+    "name": "Snow Crystal",
+    "page": "7",
+    "acquisition": [
+      "massage-girl"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 0,
+    "festive": 2,
+    "flexible": 2,
+    "gaudy": 1,
+    "intangible": 2,
+    "natural": 2,
+    "relaxed": 0,
+    "shapely": 1,
+    "sharp": 1,
+    "solid": 0
+  },
+  "sparks": {
+    "name": "Sparks",
+    "page": "7",
+    "acquisition": [
+      "massage-girl"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 1,
+    "festive": 2,
+    "flexible": 2,
+    "gaudy": 1,
+    "intangible": 2,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 0,
+    "sharp": 0,
+    "solid": 0
+  },
+  "shimmering-fire": {
+    "name": "Shimmering Fire",
+    "page": "7",
+    "acquisition": [
+      "massage-girl"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 1,
+    "festive": 2,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 2,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 0,
+    "sharp": 0,
+    "solid": 0
+  },
+  "mystic-fire": {
+    "name": "Mystic Fire",
+    "page": "7",
+    "acquisition": [
+      "massage-girl"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 1,
+    "festive": 2,
+    "flexible": 2,
+    "gaudy": 1,
+    "intangible": 2,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 0,
+    "sharp": 0,
+    "solid": 0
+  },
+  "determination": {
+    "name": "Determination",
+    "page": "8",
+    "acquisition": [
+      "massage-girl"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 1,
+    "festive": 1,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 2,
+    "natural": 1,
+    "relaxed": 1,
+    "shapely": 0,
+    "sharp": 1,
+    "solid": 0
+  },
+  "peculiar-spoon": {
+    "name": "Peculiar Spoon",
+    "page": "8",
+    "acquisition": [
+      "massage-girl"
+    ],
+    "bright": 1,
+    "colorful": 0,
+    "created": 2,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 1,
+    "intangible": 0,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 2
+  },
+  "puffy-smoke": {
+    "name": "Puffy Smoke",
+    "page": "8",
+    "acquisition": [
+      "massage-girl"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 0,
+    "festive": 0,
+    "flexible": 2,
+    "gaudy": 1,
+    "intangible": 2,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 0,
+    "sharp": 0,
+    "solid": 0
+  },
+  "poison-extract": {
+    "name": "Poison Extract",
+    "page": "8",
+    "acquisition": [
+      "massage-girl"
+    ],
+    "bright": 0,
+    "colorful": 2,
+    "created": 1,
+    "festive": 0,
+    "flexible": 2,
+    "gaudy": 0,
+    "intangible": 2,
+    "natural": 2,
+    "relaxed": 2,
+    "shapely": 0,
+    "sharp": 0,
+    "solid": 0
+  },
+  "wealthy-coin": {
+    "name": "Wealthy Coin",
+    "page": "9",
+    "acquisition": [
+      "massage-girl"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 2,
+    "festive": 2,
+    "flexible": 0,
+    "gaudy": 2,
+    "intangible": 0,
+    "natural": 0,
+    "relaxed": 0,
+    "shapely": 2,
+    "sharp": 0,
+    "solid": 2
+  },
+  "eerie-thing": {
+    "name": "Eerie Thing",
+    "page": "9",
+    "acquisition": [
+      "massage-girl"
+    ],
+    "bright": 0,
+    "colorful": 2,
+    "created": 1,
+    "festive": 0,
+    "flexible": 2,
+    "gaudy": 0,
+    "intangible": 2,
+    "natural": 2,
+    "relaxed": 2,
+    "shapely": 1,
+    "sharp": 0,
+    "solid": 0
+  },
+  "spring": {
+    "name": "Spring",
+    "page": "9",
+    "acquisition": [
+      "massage-girl"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 2,
+    "festive": 1,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 2,
+    "solid": 2
+  },
+  "seashell": {
+    "name": "Seashell",
+    "page": "9",
+    "acquisition": [
+      "massage-girl"
+    ],
+    "bright": 2,
+    "colorful": 0,
+    "created": 0,
+    "festive": 1,
+    "flexible": 0,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 2
+  },
+  "humming-note": {
+    "name": "Humming Note",
+    "page": "9",
+    "acquisition": [
+      "massage-girl"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 2,
+    "festive": 2,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 2,
+    "natural": 1,
+    "relaxed": 1,
+    "shapely": 0,
+    "sharp": 1,
+    "solid": 1
+  },
+  "shiny-powder": {
+    "name": "Shiny Powder",
+    "page": "9",
+    "acquisition": [
+      "massage-girl"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 2,
+    "festive": 2,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 2,
+    "natural": 1,
+    "relaxed": 0,
+    "shapely": 1,
+    "sharp": 0,
+    "solid": 1
+  },
+  "glitter-powder": {
+    "name": "Glitter Powder",
+    "page": "9",
+    "acquisition": [
+      "massage-girl"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 2,
+    "festive": 2,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 2,
+    "natural": 1,
+    "relaxed": 0,
+    "shapely": 1,
+    "sharp": 0,
+    "solid": 1
+  },
+  "red-flower": {
+    "name": "Red Flower",
+    "page": "10",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 0,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 1
+  },
+  "pink-flower": {
+    "name": "Pink Flower",
+    "page": "10",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 0,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 1
+  },
+  "white-flower": {
+    "name": "White Flower",
+    "page": "10",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 0,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 0,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 1
+  },
+  "blue-flower": {
+    "name": "Blue Flower",
+    "page": "10",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 0,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 1
+  },
+  "orange-flower": {
+    "name": "Orange Flower",
+    "page": "10",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 0,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 1
+  },
+  "yellow-flower": {
+    "name": "Yellow Flower",
+    "page": "10",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 2,
+    "colorful": 2,
+    "created": 0,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 1
+  },
+  "googly-specs": {
+    "name": "Googly Specs",
+    "page": "11",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 2,
+    "festive": 0,
+    "flexible": 0,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 2,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 2
+  },
+  "black-specs": {
+    "name": "Black Specs",
+    "page": "11",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 0,
+    "colorful": 2,
+    "created": 2,
+    "festive": 0,
+    "flexible": 0,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 2,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 2
+  },
+  "gorgeous-specs": {
+    "name": "Gorgeous Specs",
+    "page": "11",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 0,
+    "colorful": 2,
+    "created": 2,
+    "festive": 2,
+    "flexible": 0,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 2
+  },
+  "sweet-candy": {
+    "name": "Sweet Candy",
+    "page": "11",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 2,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 2
+  },
+  "confetti": {
+    "name": "Confetti",
+    "page": "11",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 2,
+    "festive": 1,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 2,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 1,
+    "solid": 1
+  },
+  "colored-parasol": {
+    "name": "Colored Parasol",
+    "page": "12",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 2,
+    "colorful": 2,
+    "created": 2,
+    "festive": 2,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 2,
+    "solid": 2
+  },
+  "old-umbrella": {
+    "name": "Old Umbrella",
+    "page": "12",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 2,
+    "festive": 0,
+    "flexible": 1,
+    "gaudy": 1,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 2,
+    "shapely": 2,
+    "sharp": 2,
+    "solid": 2
+  },
+  "spotlight": {
+    "name": "Spotlight",
+    "page": "12",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 2,
+    "colorful": 0,
+    "created": 2,
+    "festive": 2,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 2,
+    "natural": 0,
+    "relaxed": 0,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 2
+  },
+  "cape": {
+    "name": "Cape",
+    "page": "12",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 0,
+    "colorful": 2,
+    "created": 2,
+    "festive": 1,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 2,
+    "shapely": 2,
+    "sharp": 2,
+    "solid": 1
+  },
+  "standing-mike": {
+    "name": "Standing Mike",
+    "page": "12",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 2,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 2,
+    "solid": 2
+  },
+  "surfboard": {
+    "name": "Surfboard",
+    "page": "12",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 2,
+    "festive": 1,
+    "flexible": 0,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 2,
+    "solid": 2
+  },
+  "carpet": {
+    "name": "Carpet",
+    "page": "12",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 2,
+    "festive": 2,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 2,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 0,
+    "solid": 2
+  },
+  "retro-pipe": {
+    "name": "Retro Pipe",
+    "page": "12",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 2,
+    "festive": 0,
+    "flexible": 0,
+    "gaudy": 1,
+    "intangible": 0,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 2
+  },
+  "fluffy-bed": {
+    "name": "Fluffy Bed",
+    "page": "12",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 2,
+    "festive": 1,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 0,
+    "solid": 1
+  },
+  "mirror-ball": {
+    "name": "Mirror Ball",
+    "page": "12",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 2,
+    "festive": 2,
+    "flexible": 0,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 0,
+    "shapely": 2,
+    "sharp": 0,
+    "solid": 2
+  },
+  "photo-board": {
+    "name": "Photo Board",
+    "page": "12",
+    "acquisition": [
+      "flower-shop"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 2,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 2,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 2
+  },
+  "pink-barrette": {
+    "name": "Pink Barrette",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 2,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 1,
+    "solid": 1
+  },
+  "red-barrette": {
+    "name": "Red Barrette",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 2,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 1,
+    "solid": 1
+  },
+  "blue-barrette": {
+    "name": "Blue Barrette",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 2,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 1,
+    "solid": 1
+  },
+  "yellow-barrette": {
+    "name": "Yellow Barrette",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 2,
+    "colorful": 2,
+    "created": 2,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 1,
+    "solid": 1
+  },
+  "green-barrette": {
+    "name": "Green Barrette",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 2,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 1,
+    "solid": 1
+  },
+  "pink-balloon": {
+    "name": "Pink Balloon",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 2,
+    "festive": 1,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 2,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 0,
+    "solid": 0
+  },
+  "red-balloons": {
+    "name": "Red Balloons",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 2,
+    "festive": 1,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 2,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 0,
+    "solid": 0
+  },
+  "blue-balloons": {
+    "name": "Blue Balloons",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 2,
+    "festive": 1,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 2,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 0,
+    "solid": 0
+  },
+  "yellow-balloon": {
+    "name": "Yellow Balloon",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 2,
+    "colorful": 2,
+    "created": 2,
+    "festive": 1,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 2,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 0,
+    "solid": 0
+  },
+  "green-balloons": {
+    "name": "Green Balloons",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 2,
+    "festive": 1,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 2,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 1,
+    "sharp": 0,
+    "solid": 0
+  },
+  "lace-headdress": {
+    "name": "Lace Headdress",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 2,
+    "colorful": 0,
+    "created": 2,
+    "festive": 2,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 2,
+    "solid": 1
+  },
+  "top-hat": {
+    "name": "Top Hat",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 0,
+    "colorful": 2,
+    "created": 2,
+    "festive": 2,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 2,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 1
+  },
+  "silk-veil": {
+    "name": "Silk Veil",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 2,
+    "festive": 2,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 2,
+    "natural": 0,
+    "relaxed": 0,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 1
+  },
+  "heroic-headband": {
+    "name": "Heroic Headband",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 2,
+    "festive": 1,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 2,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 1
+  },
+  "professor-hat": {
+    "name": "Professor Hat",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 2,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 2,
+    "solid": 2
+  },
+  "flower-stage": {
+    "name": "Flower Stage",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 2,
+    "festive": 2,
+    "flexible": 0,
+    "gaudy": 2,
+    "intangible": 0,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 2
+  },
+  "gold-pedestal": {
+    "name": "Gold Pedestal",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 2,
+    "colorful": 2,
+    "created": 2,
+    "festive": 2,
+    "flexible": 0,
+    "gaudy": 2,
+    "intangible": 0,
+    "natural": 0,
+    "relaxed": 0,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 2
+  },
+  "glass-stage": {
+    "name": "Glass Stage",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 2,
+    "festive": 2,
+    "flexible": 0,
+    "gaudy": 2,
+    "intangible": 0,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 2
+  },
+  "award-podium": {
+    "name": "Award Podium",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 2,
+    "festive": 1,
+    "flexible": 0,
+    "gaudy": 2,
+    "intangible": 0,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 2
+  },
+  "cube-stage": {
+    "name": "Cube Stage",
+    "page": "13",
+    "acquisition": [
+      "contest-reward"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 2,
+    "festive": 1,
+    "flexible": 0,
+    "gaudy": 2,
+    "intangible": 0,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 2
+  },
+  "turtwig-mask": {
+    "name": "Turtwig Mask",
+    "page": "14",
+    "acquisition": [
+      "starter-mask"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 2,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 0,
+    "solid": 1
+  },
+  "chimchar-mask": {
+    "name": "Chimchar Mask",
+    "page": "14",
+    "acquisition": [
+      "starter-mask"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 2,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 0,
+    "solid": 1
+  },
+  "piplup-mask": {
+    "name": "Piplup Mask",
+    "page": "14",
+    "acquisition": [
+      "starter-mask"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 2,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 0,
+    "solid": 1
+  },
+  "big-tree": {
+    "name": "Big Tree",
+    "page": "14",
+    "acquisition": [
+      "eterna-forest"
+    ],
+    "bright": 1,
+    "colorful": 1,
+    "created": 0,
+    "festive": 1,
+    "flexible": 1,
+    "gaudy": 1,
+    "intangible": 0,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 2
+  },
+  "flag": {
+    "name": "Flag",
+    "page": "14",
+    "acquisition": [
+      "route-206"
+    ],
+    "bright": 1,
+    "colorful": 2,
+    "created": 2,
+    "festive": 1,
+    "flexible": 2,
+    "gaudy": 2,
+    "intangible": 2,
+    "natural": 0,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 2,
+    "solid": 2
+  },
+  "crown": {
+    "name": "Crown",
+    "page": "14",
+    "acquisition": [
+      "pal-park"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 2,
+    "festive": 2,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 0,
+    "shapely": 2,
+    "sharp": 2,
+    "solid": 2
+  },
+  "tiara": {
+    "name": "Tiara",
+    "page": "14",
+    "acquisition": [
+      "pal-park"
+    ],
+    "bright": 2,
+    "colorful": 1,
+    "created": 2,
+    "festive": 2,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 0,
+    "relaxed": 0,
+    "shapely": 2,
+    "sharp": 2,
+    "solid": 2
+  },
+  "comet": {
+    "name": "Comet",
+    "page": "14",
+    "acquisition": [
+      "unobtainable"
+    ],
+    "bright": 2,
+    "colorful": 2,
+    "created": 0,
+    "festive": 2,
+    "flexible": 1,
+    "gaudy": 2,
+    "intangible": 1,
+    "natural": 2,
+    "relaxed": 1,
+    "shapely": 2,
+    "sharp": 1,
+    "solid": 2
+  }
+}

@@ -190,7 +190,7 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
     return (
       <div key={ribbonKey} className={wrapperClass}>
         <img
-          src={`${import.meta.env.BASE_URL}images/${ribbonKey}.png`}
+          src={`${import.meta.env.BASE_URL}images/ribbons/${ribbonKey}.png`}
           alt={ribbonName}
           title={tooltipTitle}
           className="ribbon-image"
