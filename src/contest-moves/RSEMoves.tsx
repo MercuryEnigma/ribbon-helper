@@ -30,6 +30,8 @@ interface RSEMovesProps {
 }
 
 const pokemonMoves = pokemonMovesData as Record<string, any>;
+const contestMoves = contestMovesData as Record<string, ContestMoveData>;
+const contestEffects = contestEffectsData as Record<string, ContestEffect>;
 const typedPokemonDb = pokemonDb as PokemonDatabase;
 
 export default function RSEMoves({ selectedGame, onNavigate }: RSEMovesProps) {
@@ -255,15 +257,25 @@ export default function RSEMoves({ selectedGame, onNavigate }: RSEMovesProps) {
     return optimalMoves[selectedMoveIndex].move;
   }, [optimalMoves, selectedMoveIndex]);
 
+  const selectedMoveDisplay = useMemo(() => {
+    if (selectedMoveIndex === null || !optimalMoves) return null;
+    return optimalMoves[selectedMoveIndex];
+  }, [optimalMoves, selectedMoveIndex]);
+
   // Get the contest effect details for the selected move
   const selectedMoveEffect = useMemo(() => {
     if (!selectedMoveName) return null;
     return getContestEffectForMove(
       selectedMoveName,
-      contestMovesData as Record<string, ContestMoveData>,
-      contestEffectsData as Record<string, ContestEffect>
+      contestMoves,
+      contestEffects
     );
   }, [selectedMoveName]);
+
+  const matchingEffectMoves = useMemo(() => {
+    if (!selectedMoveDisplay?.move_role) return [];
+    return selectedMoveDisplay.move_role.map(name => name.replace(/-/g, ' '));
+  }, [selectedMoveDisplay]);
 
   // Get the learn methods for the selected move
   const selectedMoveLearnMethods = useMemo(() => {
@@ -416,6 +428,11 @@ export default function RSEMoves({ selectedGame, onNavigate }: RSEMovesProps) {
                       {selectedMoveEffect.effect_description &&
                        selectedMoveEffect.effect_description !== selectedMoveEffect.flavor_text && (
                         <p className="move-details-effect">{selectedMoveEffect.effect_description}</p>
+                      )}
+                      {matchingEffectMoves.length > 0 && (
+                        <p className="move-details-related">
+                          {matchingEffectMoves.join(', ')}
+                        </p>
                       )}
                     </div>
                   </div>

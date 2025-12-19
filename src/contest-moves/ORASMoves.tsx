@@ -30,6 +30,8 @@ interface ORASMovesProps {
 }
 
 const pokemonMoves = pokemonMovesData as Record<string, any>;
+const contestMoves = contestMovesData as Record<string, ContestMoveData>;
+const contestEffects = contestEffectsData as Record<string, ContestEffect>;
 const typedPokemonDb = pokemonDb as PokemonDatabase;
 
 export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) {
@@ -257,10 +259,20 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
     if (!selectedMoveName) return null;
     return getContestEffectForMove(
       selectedMoveName,
-      contestMovesData as Record<string, ContestMoveData>,
-      contestEffectsData as Record<string, ContestEffect>
+      contestMoves,
+      contestEffects
     );
   }, [selectedMoveName]);
+
+  const selectedMoveDisplay = useMemo(() => {
+    if (selectedMoveIndex === null || !optimalMoves) return null;
+    return optimalMoves[selectedMoveIndex];
+  }, [optimalMoves, selectedMoveIndex]);
+
+  const matchingEffectMoves = useMemo(() => {
+    if (!selectedMoveDisplay?.move_role) return [];
+    return selectedMoveDisplay.move_role.map(name => name.replace(/-/g, ' '));
+  }, [selectedMoveDisplay]);
 
   // Get the learn methods for the selected move
   const selectedMoveLearnMethods = useMemo(() => {
@@ -412,6 +424,11 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
                       {selectedMoveEffect.effect_description &&
                        selectedMoveEffect.effect_description !== selectedMoveEffect.flavor_text && (
                         <p className="move-details-effect">{selectedMoveEffect.effect_description}</p>
+                      )}
+                      {matchingEffectMoves.length > 0 && (
+                        <p className="move-details-related">
+                          {matchingEffectMoves.join(', ')}
+                        </p>
                       )}
                     </div>
                   </div>

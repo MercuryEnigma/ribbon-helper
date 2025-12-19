@@ -9,6 +9,7 @@ import {
 export interface ContestShowMove {
   move: string;
   hype: number;
+  move_role: string[];
 }
 
 interface MoveInfo extends MoveInfoForSorting {
@@ -77,9 +78,13 @@ export function getSuperContestShowOptimalMoves(
   const topMoves: ContestShowMove[] = [];
   for (let i = 0; i < Math.min(4, sortedGroups.length); i++) {
     const firstMove = sortedGroups[i][0];
+    const move_role = sortedGroups[i]
+      .filter(m => m.move !== firstMove.move)
+      .map(m => m.move);
     topMoves.push({
       move: firstMove.move,
       hype: firstMove.totalHype,
+      move_role,
     });
   }
 

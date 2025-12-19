@@ -261,6 +261,16 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
     return getContestEffectForMove(selectedMoveName, contestMoves, contestEffects);
   }, [selectedMoveName]);
 
+  const selectedMoveDisplay = useMemo(() => {
+    if (selectedMoveIndex === null || !optimalMoves) return null;
+    return optimalMoves[selectedMoveIndex];
+  }, [optimalMoves, selectedMoveIndex]);
+
+  const matchingEffectMoves = useMemo(() => {
+    if (!selectedMoveDisplay?.move_role) return [];
+    return selectedMoveDisplay.move_role.map(name => name.replace(/-/g, ' '));
+  }, [selectedMoveDisplay]);
+
   const selectedMoveLearnMethods = useMemo(() => {
     if (!selectedMoveName) return '';
     const methods = getMoveLearnMethods(selectedMoveName, availableMoves);
@@ -281,11 +291,6 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
 
     return methodLabels;
   }, [selectedMoveName, availableMoves]);
-
-  const selectedMoveDisplay = useMemo(() => {
-    if (selectedMoveIndex === null || !optimalMoves) return null;
-    return optimalMoves[selectedMoveIndex];
-  }, [optimalMoves, selectedMoveIndex]);
 
   // Handle learn method checkbox changes
   const handleMethodToggle = (method: LearnMethod, checked: boolean) => {
@@ -417,6 +422,11 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
                       {selectedMoveEffect.effect_description &&
                        selectedMoveEffect.effect_description !== selectedMoveEffect.flavor_text && (
                         <p className="move-details-effect">{selectedMoveEffect.effect_description}</p>
+                      )}
+                      {matchingEffectMoves.length > 0 && (
+                        <p className="move-details-related">
+                          {matchingEffectMoves.join(', ')}
+                        </p>
                       )}
                     </div>
                   </div>

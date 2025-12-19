@@ -258,6 +258,16 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
     return getContestEffectForMove(selectedMoveName, contestMoves, contestEffects);
   }, [selectedMoveName]);
 
+  const selectedMoveDisplay = useMemo(() => {
+    if (selectedMoveIndex === null || !optimalMoves) return null;
+    return optimalMoves[selectedMoveIndex];
+  }, [optimalMoves, selectedMoveIndex]);
+
+  const matchingEffectMoves = useMemo(() => {
+    if (!selectedMoveDisplay?.move_role) return [];
+    return selectedMoveDisplay.move_role.map(name => name.replace(/-/g, ' '));
+  }, [selectedMoveDisplay]);
+
   const selectedMoveLearnMethods = useMemo(() => {
     if (!selectedMoveName) return '';
     const methods = getMoveLearnMethods(selectedMoveName, availableMoves);
@@ -419,6 +429,11 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
                       {selectedMoveEffect.effect_description &&
                        selectedMoveEffect.effect_description !== selectedMoveEffect.flavor_text && (
                         <p className="move-details-effect">{selectedMoveEffect.effect_description}</p>
+                      )}
+                      {matchingEffectMoves.length > 0 && (
+                        <p className="move-details-related">
+                          {matchingEffectMoves.join(', ')}
+                        </p>
                       )}
                     </div>
                   </div>

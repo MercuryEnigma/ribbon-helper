@@ -6,6 +6,7 @@ import {
   getTypeAppealModifier,
   sortMovesByPriority,
   findEligibleCombos,
+  getMoveRoleForMove,
   type MoveInfoForSorting
 } from './moveUtils';
 
@@ -13,6 +14,7 @@ export interface ContestMove {
   move: string;
   type: ContestType;
   appeal: number;
+  move_role: string[];
 }
 
 /**
@@ -379,10 +381,13 @@ function simulateStrategy(
     state = { ...outcome.updatedState };
     prevMove = move;
 
+    const move_role = getMoveRoleForMove(workingPools, move);
+
     chosen.push({
       move: move.move,
       type: move.type,
       appeal: appeal,
+      move_role,
     });
   }
 
@@ -497,10 +502,20 @@ function simulateSingleComboPattern(
     state = { ...outcome.updatedState };
     prevMove = move;
 
+    let move_role: string[];
+    if (move.move === starterMove.move) {
+      move_role = ['Starting combo'];
+    } else if (move.move === finisherMove.move) {
+      move_role = ['Finishing combo'];
+    } else {
+      move_role = getMoveRoleForMove(workingPools, move);
+    }
+
     chosen.push({
       move: move.move,
       type: move.type,
       appeal: appeal,
+      move_role,
     });
   }
 
@@ -627,10 +642,13 @@ function getGreedyAttempt(
       state = { ...outcome.updatedState };
       prevMove = bestMove;
 
+      const move_role = getMoveRoleForMove(pools, bestMove);
+
       greedyStrat.push({
         move: bestMove.move,
         type: bestMove.type,
         appeal: appeal,
+        move_role,
       });
     }
   }

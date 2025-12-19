@@ -438,6 +438,19 @@ export function findEligibleCombos(
 }
 
 /**
+ * Get other moves that share the same archetype as the given move.
+ */
+export function getMoveRoleForMove<T extends { move: string; archetype: PropertyKey }>(
+  pools: Record<PropertyKey, T[]>,
+  move: T
+): string[] {
+  const pool = (pools as Record<PropertyKey, T[]>)[move.archetype] || [];
+  return pool
+    .filter(entry => entry.move !== move.move)
+    .map(entry => entry.move);
+}
+
+/**
  * Contest effect data structure
  */
 export interface ContestEffect {

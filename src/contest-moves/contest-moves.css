@@ -347,6 +347,13 @@
   font-style: italic;
 }
 
+.move-details-related {
+  margin: 0;
+  font-size: 0.7rem;
+  color: #555;
+  text-align: center;
+}
+
 /* Pokemon Selector Section (Right) */
 .pokemon-selector-section {
   display: flex;
@@ -866,6 +873,10 @@
 
   .move-details-effect {
     font-size: 0.75rem;
+  }
+
+  .move-details-related {
+    font-size: 0.65rem;
   }
 
   /* Pokemon display */
