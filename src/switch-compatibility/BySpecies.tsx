@@ -183,8 +183,6 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
     const ribbonInfo = (ribbonsData as Record<string, { names?: { en?: string }; descs?: { en?: string } }>)[ribbonKey];
     const ribbonName = ribbonInfo?.names?.en || ribbonKey;
     const ribbonDesc = ribbonInfo?.descs?.en || '';
-    const baseTooltip = ribbonDesc ? `${ribbonName} : ${ribbonDesc}` : ribbonName;
-    const tooltipTitle = isLastChance ? `${baseTooltip} (Last Chance!)` : baseTooltip;
     const wrapperClass = `ribbon-tooltip${isLastChance ? ' ribbon-last-chance-wrapper' : ''}`;
 
     return (
@@ -192,14 +190,17 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
         <img
           src={`${import.meta.env.BASE_URL}images/ribbons/${ribbonKey}.png`}
           alt={ribbonName}
-          title={tooltipTitle}
           className="ribbon-image"
         />
         <div className="ribbon-tooltip-content">
-          <span className="ribbon-tooltip-text">{ribbonName}</span>
-          {ribbonDesc && <span className="ribbon-tooltip-desc">{ribbonDesc}</span>}
-          {isLastChance && (
-            <span className="ribbon-tooltip-last-chance">(Last Chance!)</span>
+          <div className={`ribbon-tooltip-header${isLastChance ? ' last-chance' : ''}`}>
+            {ribbonName}
+            {isLastChance && <span className="ribbon-tooltip-subline">(Last Chance!)</span>}
+          </div>
+          {ribbonDesc && (
+            <div className="ribbon-tooltip-body">
+              {ribbonDesc}
+            </div>
           )}
         </div>
       </div>

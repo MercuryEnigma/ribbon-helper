@@ -1169,18 +1169,16 @@
   top: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%) translateY(-2px);
-  background: #2d2d2d;
-  color: #fff;
-  padding: 0.35rem 0.5rem;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  background: transparent;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   white-space: normal;
-  min-width: 180px;
-  max-width: 260px;
+  min-width: 200px;
+  max-width: min(320px, 70vw);
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 0.12rem;
+  gap: 0;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.12s ease, transform 0.12s ease;
@@ -1192,25 +1190,35 @@
   transform: translateX(-50%) translateY(0);
 }
 
-.ribbon-tooltip-text {
-  display: block;
+.ribbon-tooltip-header {
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 12px 12px 0 0;
   font-weight: 800;
-  font-size: 0.92rem;
+  font-size: 0.95rem;
+  border-bottom: 2px solid #2c5282;
+  color: #0a2c50;
 }
 
-.ribbon-tooltip-desc {
-  display: block;
-  font-weight: 400;
-  font-size: 0.8rem;
-  line-height: 1.3;
+.ribbon-tooltip-header.last-chance {
+  background: #ffe8e8;
+  border-bottom-color: #f08a8a;
+  color: #5a1f1f;
 }
 
-.ribbon-tooltip-last-chance {
-  display: block;
-  margin-top: 0.1rem;
-  color: #c62828;
-  font-weight: 800;
-  font-size: 0.8rem;
+.ribbon-tooltip-subline{
+  display:block;
+  margin-top:2px;
+  font-size:0.85rem;
+}
+
+.ribbon-tooltip-body {
+  background: #2c5282;
+  padding: 10px 12px;
+  border-radius: 0 0 12px 12px;
+  color: white;
+  font-size: 0.85rem;
+  line-height: 1.4;
 }
 
 .ribbon-last-chance-wrapper {

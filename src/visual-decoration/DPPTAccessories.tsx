@@ -174,16 +174,21 @@ export default function DPPTAccessories() {
                           className={`accessory-item${
                             accessory.acquisition.unobtainable ? ' unobtainable' : ''
                           }`}
-                          onMouseEnter={(e) => {
-                            const rect = e.currentTarget.getBoundingClientRect();
-                            setHoveredAccessory({
-                              id: accessory.id,
-                              name: accessory.name,
-                              acquisition: accessory.acquisition,
-                              x: rect.left + rect.width / 2,
-                              y: rect.top
-                            });
-                          }}
+                    onMouseEnter={(e) => {
+                      const rect = e.currentTarget.getBoundingClientRect();
+                      const centerX = rect.left + rect.width / 2;
+                      const viewport = typeof window !== 'undefined' ? window.innerWidth : 0;
+                      const safeMargin = viewport ? Math.min(200, viewport / 4) : 160;
+                      const maxX = viewport ? viewport - safeMargin : centerX;
+                      const clampedX = Math.min(Math.max(centerX, safeMargin), maxX);
+                      setHoveredAccessory({
+                        id: accessory.id,
+                        name: accessory.name,
+                        acquisition: accessory.acquisition,
+                        x: clampedX,
+                        y: rect.top
+                      });
+                    }}
                           onMouseLeave={() => setHoveredAccessory(null)}
                         >
                           <img
