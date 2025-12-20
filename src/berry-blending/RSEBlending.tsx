@@ -54,42 +54,45 @@ export default function RSEBlending() {
           </div>
         </div>
 
-        <div className="option-row">
-          <label className="option-checkbox">
-            <input
-              type="checkbox"
-              checked={withGamecube}
-              onChange={(e) => setWithGamecube(e.target.checked)}
-            />
-            <span className="toggle-label">Pinch berries (Gamecube)</span>
-            <span className="toggle-track" aria-hidden="true">
-              {withGamecube && <span className="toggle-check">✓</span>}
-            </span>
-          </label>
+        <div className="option-group inline">
+          <label>Berry options:</label>
+          </div>
+          <div className="option-row">
+            <label className="option-checkbox">
+              <input
+                type="checkbox"
+                checked={withGamecube}
+                onChange={(e) => setWithGamecube(e.target.checked)}
+              />
+              <span className="toggle-label">Pinch berries (GCN)</span>
+              <span className="toggle-track" aria-hidden="true">
+                {withGamecube && <span className="toggle-check">✓</span>}
+              </span>
+            </label>
 
-          <label className="option-checkbox">
-            <input
-              type="checkbox"
-              checked={withMirageIsland}
-              onChange={(e) => setWithMirageIsland(e.target.checked)}
-            />
-            <span className="toggle-label">Liechi (Mirage Island)</span>
-            <span className="toggle-track" aria-hidden="true">
-              {withMirageIsland && <span className="toggle-check">✓</span>}
-            </span>
-          </label>
+            <label className="option-checkbox">
+              <input
+                type="checkbox"
+                checked={withMirageIsland}
+                onChange={(e) => setWithMirageIsland(e.target.checked)}
+              />
+              <span className="toggle-label">Liechi (Mirage Island)</span>
+              <span className="toggle-track" aria-hidden="true">
+                {withMirageIsland && <span className="toggle-check">✓</span>}
+              </span>
+            </label>
 
-          <label className="option-checkbox">
-            <input
-              type="checkbox"
-              checked={withBerryMaster}
-              onChange={(e) => setWithBerryMaster(e.target.checked)}
-            />
-            <span className="toggle-label">Blend Master (Emerald)</span>
-            <span className="toggle-track" aria-hidden="true">
-              {withBerryMaster && <span className="toggle-check">✓</span>}
-            </span>
-          </label>
+            <label className="option-checkbox">
+              <input
+                type="checkbox"
+                checked={withBerryMaster}
+                onChange={(e) => setWithBerryMaster(e.target.checked)}
+              />
+              <span className="toggle-label">Blend Master (Emerald)</span>
+              <span className="toggle-track" aria-hidden="true">
+                {withBerryMaster && <span className="toggle-check">✓</span>}
+              </span>
+            </label>
         </div>
       </div>
 

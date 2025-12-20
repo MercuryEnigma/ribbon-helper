@@ -58,68 +58,71 @@ export default function DPPtBlending() {
           </div>
         </div>
 
-        <div className="option-row">
-          <label className="option-checkbox">
-            <input
-              type="checkbox"
-              checked={withPlatinum}
-              onChange={(e) => setWithPlatinum(e.target.checked)}
-            />
-            <span className="toggle-label">Veilstone Dept. store poffins (Platinum only)</span>
-            <span className="toggle-track" aria-hidden="true">
-              {withPlatinum && <span className="toggle-check">✓</span>}
-            </span>
-          </label>
+        <div className="option-group">
+          <label>Berry options:</label>
+        </div>
+          <div className="option-row">
+            <label className="option-checkbox">
+              <input
+                type="checkbox"
+                checked={withPlatinum}
+                onChange={(e) => setWithPlatinum(e.target.checked)}
+              />
+              <span className="toggle-label">Veilstone Dept. store poffins (Platinum only)</span>
+              <span className="toggle-track" aria-hidden="true">
+                {withPlatinum && <span className="toggle-check">✓</span>}
+              </span>
+            </label>
 
-          <label className="option-checkbox">
-            <input
-              type="checkbox"
-              checked={withMild}
-              onChange={(e) => setWithMild(e.target.checked)}
-            />
-            <span className="toggle-label">Include Mild poffin gift</span>
-            <span className="toggle-track" aria-hidden="true">
-              {withMild && <span className="toggle-check">✓</span>}
-            </span>
-          </label>
+            <label className="option-checkbox">
+              <input
+                type="checkbox"
+                checked={withMild}
+                onChange={(e) => setWithMild(e.target.checked)}
+              />
+              <span className="toggle-label">Include Mild poffin gift</span>
+              <span className="toggle-track" aria-hidden="true">
+                {withMild && <span className="toggle-check">✓</span>}
+              </span>
+            </label>
         </div>
 
         <div className="option-row">
-          <label className="option-checkbox">
-            <input
-              type="checkbox"
-              checked={withFrontier}
-              onChange={(e) => setWithFrontier(e.target.checked)}
-            />
-            <span className="toggle-label">Battle Frontier (Pt/HG/SS)</span>
-            <span className="toggle-track" aria-hidden="true">
-              {withFrontier && <span className="toggle-check">✓</span>}
-            </span>
-          </label>
+            <label className="option-checkbox">
+              <input
+                type="checkbox"
+                checked={withFrontier}
+                onChange={(e) => setWithFrontier(e.target.checked)}
+              />
+              <span className="toggle-label">Battle Frontier (Pt/HG/SS)</span>
+              <span className="toggle-track" aria-hidden="true">
+                {withFrontier && <span className="toggle-check">✓</span>}
+              </span>
+            </label>
 
-          <label className="option-checkbox">
-            <input
-              type="checkbox"
-              checked={withPDR}
-              onChange={(e) => setWithPDR(e.target.checked)}
-            />
-            <span className="toggle-label">Pokémon Battle Revolution</span>
-            <span className="toggle-track" aria-hidden="true">
-              {withPDR && <span className="toggle-check">✓</span>}
-            </span>
-          </label>
+            <label className="option-checkbox">
+              <input
+                type="checkbox"
+                checked={withPDR}
+                onChange={(e) => setWithPDR(e.target.checked)}
+              />
+              <span className="toggle-label">Pokémon Battle Revolution</span>
+              <span className="toggle-track" aria-hidden="true">
+                {withPDR && <span className="toggle-check">✓</span>}
+              </span>
+            </label>
 
-          <label className="option-checkbox">
-            <input
-              type="checkbox"
-              checked={withEvent}
-              onChange={(e) => setWithEvent(e.target.checked)}
-            />
-            <span className="toggle-label">Event-only berries</span>
-            <span className="toggle-track" aria-hidden="true">
-              {withEvent && <span className="toggle-check">✓</span>}
-            </span>
-          </label>
+            <label className="option-checkbox">
+              <input
+                type="checkbox"
+                checked={withEvent}
+                onChange={(e) => setWithEvent(e.target.checked)}
+              />
+              <span className="toggle-label">Event-only berries</span>
+              <span className="toggle-track" aria-hidden="true">
+                {withEvent && <span className="toggle-check">✓</span>}
+              </span>
+            </label>
         </div>
       </div>
 

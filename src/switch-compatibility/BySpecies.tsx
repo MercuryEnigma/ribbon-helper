@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { PokemonDatabase } from './types';
+import { ENABLE_PLZA } from './types';
 import { getGamesForPokemon, getGameGroupNames, searchPokemonByName, getPokemonDisplayName, getAvailableGenerations, GENERATION_ORDER } from './utils';
 import { getPokemonIconProps, getPokemonLargeImageProps } from './iconUtils';
 import { getAvailableRibbons } from './ribbonUtils';
@@ -141,7 +142,11 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
 
   // Calculate available generations based on Pokemon's games
   const availableGenerations = useMemo(() => {
-    return getAvailableGenerations(selectedPokemonData, pokemonDb);
+    const gens = getAvailableGenerations(selectedPokemonData, pokemonDb);
+    if (ENABLE_PLZA && selectedPokemonData?.games?.includes('plza')) {
+      gens.add('PLZA');
+    }
+    return gens;
   }, [pokemonDb, selectedPokemonData]);
 
   // Initialize generation when Pokemon is selected
@@ -191,6 +196,9 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
 
   const visibleAvailableGames = useMemo(() => {
     return availableGames.filter(game => {
+      if (selectedGeneration === 'PLZA') {
+        return game === 'Legends: Z-A';
+      }
       if (!isShadow && (game === 'Colosseum' || game === 'XD: Gale of Darkness')) {
         return false;
       }
@@ -353,6 +361,7 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
                     {availableGenerations.has('Gen 7') && <option value="Gen 7">Gen 7</option>}
                     {availableGenerations.has('GO') && <option value="GO">GO</option>}
                     {availableGenerations.has('Switch') && <option value="Switch">Switch</option>}
+                    {availableGenerations.has('PLZA') && <option value="PLZA">PLZA</option>}
                   </select>
                 )}
               </div>

@@ -33,9 +33,10 @@
   border-radius: 12px 12px 0 0;
   border: 2px solid #d66020;
   border-bottom: none;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  overflow-x: auto;
 }
 
 .berry-mode-selector button,
@@ -53,6 +54,8 @@
   text-decoration: none;
   display: inline-block;
   text-align: center;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .berry-mode-selector .nav-arrow {
@@ -152,7 +155,7 @@
 /* RSE Blending */
 .rse-blending h3 {
   margin: -1.5rem -1.5rem 0 -1.5rem;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #fff;
   background:
@@ -180,7 +183,7 @@
     #f4d03f;
   border: none;
   border-bottom: 2px solid #d66020;
-  padding: 0.6rem 1.5rem;
+  padding: 0.5rem 1rem;
   letter-spacing: 0.02em;
   text-align: center;
 }
@@ -196,12 +199,14 @@
     linear-gradient(135deg, #e8793e 0%, #d86830 50%, #c05528 100%);
   border: 3px solid #6b2f0a;
   border-radius: 12px;
-  padding: 0.6rem 1.5rem;
+  padding: 0.5rem 1rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   box-shadow:
     inset 0 2px 3px rgba(255, 255, 255, 0.15),
     inset 0 -2px 3px rgba(0, 0, 0, 0.4),
     0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .rse-blending .blending-options {
@@ -211,7 +216,7 @@
 /* DPPt Blending */
 .dppt-blending h3 {
   margin: -1.5rem -1.5rem 0 -1.5rem;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #fff;
   background:
@@ -239,7 +244,7 @@
     #f4d03f;
   border: none;
   border-bottom: 2px solid #d66020;
-  padding: 0.6rem 1.5rem;
+  padding: 0.5rem 1rem;
   letter-spacing: 0.02em;
   text-align: center;
 }
@@ -255,12 +260,14 @@
     linear-gradient(135deg, #e8793e 0%, #d86830 50%, #c05528 100%);
   border: 3px solid #6b2f0a;
   border-radius: 12px;
-  padding: 0.6rem 1.5rem;
+  padding: 0.5rem 1rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   box-shadow:
     inset 0 2px 3px rgba(255, 255, 255, 0.15),
     inset 0 -2px 3px rgba(0, 0, 0, 0.4),
     0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .dppt-blending .blending-options {
@@ -270,7 +277,7 @@
 /* BDSP Blending */
 .bdsp-blending h3 {
   margin: -1.5rem -1.5rem 0 -1.5rem;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #fff;
   background:
@@ -298,7 +305,7 @@
     #f4d03f;
   border: none;
   border-bottom: 2px solid #d66020;
-  padding: 0.6rem 1.5rem;
+  padding: 0.5rem 1rem;
   letter-spacing: 0.02em;
   text-align: center;
 }
@@ -314,12 +321,14 @@
     linear-gradient(135deg, #e8793e 0%, #d86830 50%, #c05528 100%);
   border: 3px solid #6b2f0a;
   border-radius: 12px;
-  padding: 0.6rem 1.5rem;
+  padding: 0.5rem 1rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   box-shadow:
     inset 0 2px 3px rgba(255, 255, 255, 0.15),
     inset 0 -2px 3px rgba(0, 0, 0, 0.4),
     0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .bdsp-blending .blending-options {
@@ -342,6 +351,10 @@
   display: flex;
   align-items: stretch;
   gap: 1rem;
+  flex-wrap: nowrap;
+}
+
+.option-row:has(.option-checkbox) {
   flex-wrap: wrap;
 }
 
@@ -365,20 +378,33 @@
 }
 
 .option-group select {
-  padding: 0.5rem 0.75rem;
-  border: 2px solid #d66020;
-  border-radius: 4px;
+  padding: 0.5rem 2.5rem 0.5rem 0.75rem;
+  border: 3px solid #d66020;
+  border-radius: 8px;
   font-size: 0.85rem;
-  background: #fff;
+  font-weight: 500;
+  background-color: #fffbf5;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d66020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1em;
+  color: #0b0b0b;
   cursor: pointer;
-  min-width: 200px;
+  min-width: 160px;
   transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.5);
+  appearance: none;
+}
+
+.option-group select:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
 }
 
 .option-group select:focus {
   outline: none;
   border-color: #d66020;
-  box-shadow: 0 0 0 3px rgba(214, 96, 32, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.5), 0 0 0 2px rgba(214, 96, 32, 0.25);
 }
 
 /* Player Buttons */
@@ -430,7 +456,9 @@
   border-radius: 12px;
   border: 1px solid rgba(214, 96, 32, 0.5);
   transition: all 0.2s;
-  flex: 1;
+  flex: 1 1 calc(30% - 0.7rem);
+  max-width: calc(50% - 0.5rem);
+  min-width: calc(30% - 0.7rem);
   min-height: 46px;
   position: relative;
 }
@@ -494,6 +522,9 @@
   color: #6f6b78;
   font-weight: 500;
   line-height: 1.3;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
 }
 
 .option-checkbox:has(input:checked) .toggle-label {
@@ -637,11 +668,9 @@
     padding: 0.5rem;
   }
 
-  /* Make mode selector wrap on tablets */
+  /* Keep mode selector in a row on tablets */
   .berry-mode-selector {
-    flex-wrap: wrap;
     padding: 0.75rem 0.5rem;
-    justify-content: center;
   }
 
   .berry-mode-selector .nav-arrow {
@@ -650,15 +679,23 @@
 
   .berry-mode-selector button,
   .berry-mode-selector a {
-    flex: 1 1 auto;
-    min-width: 100px;
-    white-space: nowrap;
+    padding: 0.45rem 0.85rem;
+    font-size: 0.8rem;
   }
 
   .option-row {
-    flex-direction: column;
-    align-items: stretch;
+    flex-wrap: wrap;
     gap: 0.5rem;
+  }
+
+  .option-row:has(.option-checkbox) {
+    flex-direction: row;
+  }
+
+  .option-checkbox {
+    flex: 1 1 calc(30% - 0.7rem);
+    max-width: calc(50% - 0.5rem);
+    min-width: calc(30% - 0.7rem);
   }
 
   .option-group.inline {
@@ -669,6 +706,8 @@
   .option-group select {
     width: 100%;
     min-width: auto;
+    font-size: 0.8rem;
+    padding: 0.45rem 1.75rem 0.45rem 0.65rem;
   }
 
   .block-content {
@@ -691,19 +730,34 @@
     padding: 1rem;
   }
 
-  /* Mode selector - stack on small phones */
+  /* Keep mode selector in a row on small phones */
   .berry-mode-selector {
-    flex-direction: column;
-    gap: 0.4rem;
+    gap: 0.3rem;
     padding: 0.5rem;
   }
 
   .berry-mode-selector button,
   .berry-mode-selector a {
-    width: 100%;
-    min-width: auto;
-    font-size: 0.8rem;
-    padding: 0.5rem 0.85rem;
+    font-size: 0.75rem;
+    padding: 0.4rem 0.65rem;
+  }
+
+  /* Make headers smaller on small screens */
+  .rse-blending h3,
+  .dppt-blending h3,
+  .oras-blending h3,
+  .bdsp-blending h3 {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.5rem;
+    margin: -1rem -1rem 0 -1rem;
+  }
+
+  .rse-blending h3 > span,
+  .dppt-blending h3 > span,
+  .oras-blending h3 > span,
+  .bdsp-blending h3 > span {
+    padding: 0.35rem 0.6rem;
+    border-width: 2px;
   }
 
   .blending-options {
@@ -716,8 +770,8 @@
   }
 
   .option-group select {
-    font-size: 0.8rem;
-    padding: 0.45rem 0.65rem;
+    font-size: 0.75rem;
+    padding: 0.4rem 1.5rem 0.4rem 0.6rem;
   }
 
   .player-buttons button {
@@ -729,6 +783,9 @@
   .option-checkbox {
     padding: 0.4rem 0.5rem;
     min-height: 42px;
+    flex: 1 1 calc(30% - 0.7rem);
+    max-width: calc(50% - 0.5rem);
+    min-width: calc(30% - 0.7rem);
   }
 
   .option-checkbox .toggle-label {
@@ -805,9 +862,25 @@
 @media (max-width: 400px) {
   .berry-mode-selector button,
   .berry-mode-selector a {
-    font-size: 0.75rem;
-    padding: 0.4rem 0.75rem;
-    min-width: 85px;
+    font-size: 0.7rem;
+    padding: 0.35rem 0.5rem;
+  }
+
+  /* Make headers even smaller on very small screens */
+  .rse-blending h3,
+  .dppt-blending h3,
+  .oras-blending h3,
+  .bdsp-blending h3 {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.4rem;
+  }
+
+  .rse-blending h3 > span,
+  .dppt-blending h3 > span,
+  .oras-blending h3 > span,
+  .bdsp-blending h3 > span {
+    padding: 0.3rem 0.5rem;
+    border-width: 2px;
   }
 
   .player-buttons {
@@ -849,7 +922,7 @@
 /* ORAS Color Mapping */
 .oras-blending h3 {
   margin: -1.5rem -1.5rem 0 -1.5rem;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #fff;
   background:
@@ -877,7 +950,7 @@
     #f4d03f;
   border: none;
   border-bottom: 2px solid #d66020;
-  padding: 0.6rem 1.5rem;
+  padding: 0.5rem 1rem;
   letter-spacing: 0.02em;
   text-align: center;
 }
@@ -893,12 +966,14 @@
     linear-gradient(135deg, #e8793e 0%, #d86830 50%, #c05528 100%);
   border: 3px solid #6b2f0a;
   border-radius: 12px;
-  padding: 0.6rem 1.5rem;
+  padding: 0.5rem 1rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   box-shadow:
     inset 0 2px 3px rgba(255, 255, 255, 0.15),
     inset 0 -2px 3px rgba(0, 0, 0, 0.4),
     0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .oras-blending .oras-info-card {

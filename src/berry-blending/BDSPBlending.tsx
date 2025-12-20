@@ -60,30 +60,33 @@ export default function BDSPBlending() {
           </div>
         </div>
 
-        <div className="option-row">
-          <label className="option-checkbox">
-            <input
-              type="checkbox"
-              checked={maxFriendship}
-              onChange={(e) => setMaxFriendship(e.target.checked)}
-            />
-            <span className="toggle-label">Use 6 max friendship Pokémon in Amity Square</span>
-            <span className="toggle-track" aria-hidden="true">
-              {maxFriendship && <span className="toggle-check">✓</span>}
-            </span>
-          </label>
+        <div className="option-group">
+          <label>Berry options:</label>
+        </div>
+          <div className="option-row">
+            <label className="option-checkbox">
+              <input
+                type="checkbox"
+                checked={maxFriendship}
+                onChange={(e) => setMaxFriendship(e.target.checked)}
+              />
+              <span className="toggle-label">Use 6 max friendship Pokémon in Amity Square</span>
+              <span className="toggle-track" aria-hidden="true">
+                {maxFriendship && <span className="toggle-check">✓</span>}
+              </span>
+            </label>
 
-          <label className="option-checkbox">
-            <input
-              type="checkbox"
-              checked={useRare}
-              onChange={(e) => setUseRare(e.target.checked)}
-            />
-            <span className="toggle-label">Use rare berries</span>
-            <span className="toggle-track" aria-hidden="true">
-              {useRare && <span className="toggle-check">✓</span>}
-            </span>
-          </label>
+            <label className="option-checkbox">
+              <input
+                type="checkbox"
+                checked={useRare}
+                onChange={(e) => setUseRare(e.target.checked)}
+              />
+              <span className="toggle-label">Use rare berries</span>
+              <span className="toggle-track" aria-hidden="true">
+                {useRare && <span className="toggle-check">✓</span>}
+              </span>
+            </label>
         </div>
       </div>
 

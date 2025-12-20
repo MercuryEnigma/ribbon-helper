@@ -9,7 +9,7 @@ export interface RibbonsByGame {
 }
 
 export type RibbonsMap = {
-  [key in 'Colo/XD' | 'RSE' | 'DPPt' | 'HGSS' | 'Transfer' | 'XY' | 'ORAS' | 'SM / USUM' | 'SwSh' | 'BDSP' | 'PLA' | 'SV']?: RibbonsByGame;
+  [key in 'Colo/XD' | 'RSE' | 'DPPt' | 'HGSS' | 'Transfer' | 'XY' | 'ORAS' | 'SM / USUM' | 'SwSh' | 'BDSP' | 'PLA' | 'SV' | 'PLZA']?: RibbonsByGame;
 };
 
 const MEMORY_RIBBONS = ['battle-memory-ribbon', 'battle-memory-ribbon-gold', 'contest-memory-ribbon', 'contest-memory-ribbon-gold'];
@@ -28,7 +28,8 @@ const GAME_GROUPS: Record<string, string[]> = {
   'SwSh': ['swh', 'sh'],
   'BDSP': ['bd', 'sp'],
   'PLA': ['pla'],
-  'SV': ['scar', 'vio']
+  'SV': ['scar', 'vio'],
+  'PLZA': ['plza']
 };
 
 // Generation to games mapping
@@ -40,11 +41,12 @@ const GENERATION_GAMES: Record<string, string[]> = {
   'VC': [], // No ribbons but can get later generation ribbons
   'Gen 7': ['sun', 'moon', 'usun', 'umoon'],
   'GO': ['swh', 'sh', 'bd', 'sp', 'pla', 'scar', 'vio'], // GO Pokemon can access Switch games
-  'Switch': ['swh', 'sh', 'bd', 'sp', 'pla', 'scar', 'vio']
+  'Switch': ['swh', 'sh', 'bd', 'sp', 'pla', 'scar', 'vio'],
+  'PLZA': ['plza']
 };
 
 // Generation order for "moving up"
-const GENERATION_ORDER = ['Gen 3', 'Gen 4', 'Gen 5', 'Gen 6', 'VC', 'Gen 7', 'GO', 'Switch'];
+const GENERATION_ORDER = ['Gen 3', 'Gen 4', 'Gen 5', 'Gen 6', 'VC', 'Gen 7', 'GO', 'Switch', 'PLZA'];
 
 // Game group generation
 const GAME_GROUP_GENERATION: Record<string, number> = {
