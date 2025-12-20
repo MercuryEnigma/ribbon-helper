@@ -73,11 +73,13 @@ export default function BDSPStickers() {
     return getStickers(contestType, eligibleAcquisitions);
   }, [contestType, eligibleAcquisitions]);
 
-  const stickerRows = useMemo(() => {
-    const rows: Array<{
-      page: string;
-      points: number;
-      stickers: Array<{ id: string; name: string; acquisition: Record<string, string> }>
+  const stickerGroups = useMemo(() => {
+    const groups: Array<{
+      score: number;
+      pageGroups: Array<{
+        page: string;
+        stickers: Array<{ id: string; name: string; acquisition: Record<string, string> }>;
+      }>;
     }> = [];
 
     const sortedPoints = Object.keys(stickers)
@@ -88,17 +90,21 @@ export default function BDSPStickers() {
       if (points < 20) continue;
 
       const pages = stickers[points];
-      for (const [page, pageGroup] of Object.entries(pages)) {
-        const stickerList = Object.entries(pageGroup).map(([id, info]) => ({
+      const pageGroups = Object.entries(pages).map(([page, pageGroup]) => ({
+        page,
+        stickers: Object.entries(pageGroup).map(([id, info]) => ({
           id,
           name: info.name,
           acquisition: info.acquisition
-        }));
-        rows.push({ page, points, stickers: stickerList });
+        }))
+      }));
+
+      if (pageGroups.length > 0) {
+        groups.push({ score: points, pageGroups });
       }
     }
 
-    return rows;
+    return groups;
   }, [stickers]);
 
   const toggleMethod = (label: string) => {
@@ -127,6 +133,17 @@ export default function BDSPStickers() {
               </button>
             ))}
           </div>
+          <select
+            className="contest-type-select"
+            value={contestType}
+            onChange={(e) => setContestType(e.target.value as ContestType)}
+          >
+            {CONTEST_TYPES.map((type) => (
+              <option key={type.value} value={type.value}>
+                {type.label}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div className="acquisition-methods">
@@ -147,36 +164,42 @@ export default function BDSPStickers() {
       </div>
 
       <div className="stickers-display">
-        {stickerRows.length > 0 ? (
-          stickerRows.map((row, rowIndex) => (
-            <div key={rowIndex} className="sticker-row">
-              <div className="sticker-row-label">{row.points}</div>
-              <div className="sticker-row-items">
-                {row.stickers.map((sticker) => (
-                  <div
-                    key={sticker.id}
-                    className="sticker-item"
-                    onMouseEnter={(e) => {
-                      const rect = e.currentTarget.getBoundingClientRect();
-                      setHoveredSticker({
-                        id: sticker.id,
-                        name: sticker.name,
-                        acquisition: sticker.acquisition,
-                        x: rect.left + rect.width / 2,
-                        y: rect.top
-                      });
-                    }}
-                    onMouseLeave={() => setHoveredSticker(null)}
-                  >
-                    <img
-                      src={`${import.meta.env.BASE_URL}images/stickers/${sticker.id}.png`}
-                      alt={sticker.name}
-                      className="sticker-image"
-                      onError={(e) => {
-                        console.error(`Failed to load image: ${sticker.id}`);
-                        e.currentTarget.style.display = 'none';
-                      }}
-                    />
+        {stickerGroups.length > 0 ? (
+          stickerGroups.map((group, groupIndex) => (
+            <div key={groupIndex} className="sticker-score-section">
+              <div className="sticker-score-label">{group.score}</div>
+              <div className="sticker-page-groups">
+                {group.pageGroups.map((pageGroup, pageIndex) => (
+                  <div key={pageIndex} className="sticker-page-group">
+                    <div className="sticker-items">
+                      {pageGroup.stickers.map((sticker) => (
+                        <div
+                          key={sticker.id}
+                          className="sticker-item"
+                          onMouseEnter={(e) => {
+                            const rect = e.currentTarget.getBoundingClientRect();
+                            setHoveredSticker({
+                              id: sticker.id,
+                              name: sticker.name,
+                              acquisition: sticker.acquisition,
+                              x: rect.left + rect.width / 2,
+                              y: rect.top
+                            });
+                          }}
+                          onMouseLeave={() => setHoveredSticker(null)}
+                        >
+                          <img
+                            src={`${import.meta.env.BASE_URL}images/stickers/${sticker.id}.png`}
+                            alt={sticker.name}
+                            className="sticker-image"
+                            onError={(e) => {
+                              console.error(`Failed to load image: ${sticker.id}`);
+                              e.currentTarget.style.display = 'none';
+                            }}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -199,7 +222,11 @@ export default function BDSPStickers() {
         >
           <div className="sticker-tooltip-header">{hoveredSticker.name}</div>
           <div className="sticker-tooltip-body">
-            {Object.values(hoveredSticker.acquisition).join('; ')}
+            <ul>
+              {Object.values(hoveredSticker.acquisition).map((text, i) => (
+                <li key={i}>{text}</li>
+              ))}
+            </ul>
           </div>
         </div>
       )}

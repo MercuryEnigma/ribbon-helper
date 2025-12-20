@@ -2,9 +2,9 @@
   "white-fluff": {
     "name": "White Fluff",
     "page": "1",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 0,
@@ -21,9 +21,9 @@
   "yellow-fluff": {
     "name": "Yellow Fluff",
     "page": "1",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 2,
     "colorful": 2,
     "created": 0,
@@ -40,9 +40,9 @@
   "pink-fluff": {
     "name": "Pink Fluff",
     "page": "1",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 0,
@@ -59,9 +59,9 @@
   "brown-fluff": {
     "name": "Brown Fluff",
     "page": "1",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 0,
@@ -78,9 +78,9 @@
   "black-fluff": {
     "name": "Black Fluff",
     "page": "1",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 0,
     "colorful": 2,
     "created": 0,
@@ -97,9 +97,9 @@
   "orange-fluff": {
     "name": "Orange Fluff",
     "page": "1",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 0,
@@ -116,9 +116,9 @@
   "round-pebble": {
     "name": "Round Pebble",
     "page": "2",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 1,
@@ -135,9 +135,9 @@
   "glitter-boulder": {
     "name": "Glitter Boulder",
     "page": "2",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 1,
@@ -154,9 +154,9 @@
   "snaggy-pebble": {
     "name": "Snaggy Pebble",
     "page": "2",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 1,
     "colorful": 0,
     "created": 0,
@@ -173,9 +173,9 @@
   "jagged-boulder": {
     "name": "Jagged Boulder",
     "page": "2",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 1,
     "colorful": 0,
     "created": 0,
@@ -192,9 +192,9 @@
   "black-pebble": {
     "name": "Black Pebble",
     "page": "2",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 0,
     "colorful": 2,
     "created": 1,
@@ -211,9 +211,9 @@
   "mini-pebble": {
     "name": "Mini Pebble",
     "page": "2",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 1,
@@ -230,9 +230,9 @@
   "pink-scale": {
     "name": "Pink Scale",
     "page": "3",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 0,
@@ -249,9 +249,9 @@
   "blue-scale": {
     "name": "Blue Scale",
     "page": "3",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 0,
@@ -268,9 +268,9 @@
   "green-scale": {
     "name": "Green Scale",
     "page": "3",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 0,
@@ -287,9 +287,9 @@
   "purple-scale": {
     "name": "Purple Scale",
     "page": "3",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 0,
@@ -306,9 +306,9 @@
   "big-scale": {
     "name": "Big Scale",
     "page": "3",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 0,
@@ -325,9 +325,9 @@
   "narrow-scale": {
     "name": "Narrow Scale",
     "page": "3",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 0,
     "colorful": 1,
     "created": 0,
@@ -344,9 +344,9 @@
   "blue-feather": {
     "name": "Blue Feather",
     "page": "4",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 0,
@@ -363,9 +363,9 @@
   "red-feather": {
     "name": "Red Feather",
     "page": "4",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 0,
@@ -382,9 +382,9 @@
   "yellow-feather": {
     "name": "Yellow Feather",
     "page": "4",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 2,
     "colorful": 2,
     "created": 0,
@@ -401,9 +401,9 @@
   "white-feather": {
     "name": "White Feather",
     "page": "4",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 2,
     "colorful": 2,
     "created": 0,
@@ -420,9 +420,9 @@
   "black-moustache": {
     "name": "Black Moustache",
     "page": "5",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 0,
     "colorful": 2,
     "created": 2,
@@ -439,9 +439,9 @@
   "white-moustache": {
     "name": "White Moustache",
     "page": "5",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 2,
@@ -458,9 +458,9 @@
   "black-beard": {
     "name": "Black Beard",
     "page": "5",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 0,
     "colorful": 2,
     "created": 2,
@@ -477,9 +477,9 @@
   "white-beard": {
     "name": "White Beard",
     "page": "5",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 2,
@@ -496,9 +496,9 @@
   "small-leaf": {
     "name": "Small Leaf",
     "page": "5",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 0,
@@ -515,9 +515,9 @@
   "big-leaf": {
     "name": "Big Leaf",
     "page": "5",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 0,
@@ -534,9 +534,9 @@
   "narrow-leaf": {
     "name": "Narrow Leaf",
     "page": "5",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 0,
@@ -553,9 +553,9 @@
   "shed-claw": {
     "name": "Shed Claw",
     "page": "6",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 2,
     "colorful": 0,
     "created": 1,
@@ -572,9 +572,9 @@
   "shed-horn": {
     "name": "Shed Horn",
     "page": "6",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 2,
     "colorful": 0,
     "created": 1,
@@ -591,9 +591,9 @@
   "thin-mushroom": {
     "name": "Thin Mushroom",
     "page": "6",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 1,
@@ -610,9 +610,9 @@
   "thick-mushroom": {
     "name": "Thick Mushroom",
     "page": "6",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 1,
@@ -629,9 +629,9 @@
   "stump": {
     "name": "Stump",
     "page": "6",
-    "acquisition": [
-      "amity-square"
-    ],
+    "acquisition": {
+      "amity-square": "Random item from walking Pokémon at Amity Square"
+    },
     "bright": 1,
     "colorful": 0,
     "created": 1,
@@ -648,9 +648,9 @@
   "pretty-dewdrop": {
     "name": "Pretty Dewdrop",
     "page": "7",
-    "acquisition": [
-      "massage-girl"
-    ],
+    "acquisition": {
+      "massage-girl": "Gift from the Massage Girl in Veilstone City (daily)"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 0,
@@ -667,9 +667,9 @@
   "snow-crystal": {
     "name": "Snow Crystal",
     "page": "7",
-    "acquisition": [
-      "massage-girl"
-    ],
+    "acquisition": {
+      "massage-girl": "Gift from the Massage Girl in Veilstone City (daily)"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 0,
@@ -686,9 +686,9 @@
   "sparks": {
     "name": "Sparks",
     "page": "7",
-    "acquisition": [
-      "massage-girl"
-    ],
+    "acquisition": {
+      "massage-girl": "Gift from the Massage Girl in Veilstone City (daily)"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 1,
@@ -705,9 +705,9 @@
   "shimmering-fire": {
     "name": "Shimmering Fire",
     "page": "7",
-    "acquisition": [
-      "massage-girl"
-    ],
+    "acquisition": {
+      "massage-girl": "Gift from the Massage Girl in Veilstone City (daily)"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 1,
@@ -724,9 +724,9 @@
   "mystic-fire": {
     "name": "Mystic Fire",
     "page": "7",
-    "acquisition": [
-      "massage-girl"
-    ],
+    "acquisition": {
+      "massage-girl": "Gift from the Massage Girl in Veilstone City (daily)"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 1,
@@ -743,9 +743,9 @@
   "determination": {
     "name": "Determination",
     "page": "8",
-    "acquisition": [
-      "massage-girl"
-    ],
+    "acquisition": {
+      "massage-girl": "Gift from the Massage Girl in Veilstone City (daily)"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 1,
@@ -762,9 +762,9 @@
   "peculiar-spoon": {
     "name": "Peculiar Spoon",
     "page": "8",
-    "acquisition": [
-      "massage-girl"
-    ],
+    "acquisition": {
+      "massage-girl": "Gift from the Massage Girl in Veilstone City (daily)"
+    },
     "bright": 1,
     "colorful": 0,
     "created": 2,
@@ -781,9 +781,9 @@
   "puffy-smoke": {
     "name": "Puffy Smoke",
     "page": "8",
-    "acquisition": [
-      "massage-girl"
-    ],
+    "acquisition": {
+      "massage-girl": "Gift from the Massage Girl in Veilstone City (daily)"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 0,
@@ -800,9 +800,9 @@
   "poison-extract": {
     "name": "Poison Extract",
     "page": "8",
-    "acquisition": [
-      "massage-girl"
-    ],
+    "acquisition": {
+      "massage-girl": "Gift from the Massage Girl in Veilstone City (daily)"
+    },
     "bright": 0,
     "colorful": 2,
     "created": 1,
@@ -819,9 +819,9 @@
   "wealthy-coin": {
     "name": "Wealthy Coin",
     "page": "9",
-    "acquisition": [
-      "massage-girl"
-    ],
+    "acquisition": {
+      "massage-girl": "Gift from the Massage Girl in Veilstone City (daily)"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 2,
@@ -838,9 +838,9 @@
   "eerie-thing": {
     "name": "Eerie Thing",
     "page": "9",
-    "acquisition": [
-      "massage-girl"
-    ],
+    "acquisition": {
+      "massage-girl": "Gift from the Massage Girl in Veilstone City (daily)"
+    },
     "bright": 0,
     "colorful": 2,
     "created": 1,
@@ -857,9 +857,9 @@
   "spring": {
     "name": "Spring",
     "page": "9",
-    "acquisition": [
-      "massage-girl"
-    ],
+    "acquisition": {
+      "massage-girl": "Gift from the Massage Girl in Veilstone City (daily)"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 2,
@@ -876,9 +876,9 @@
   "seashell": {
     "name": "Seashell",
     "page": "9",
-    "acquisition": [
-      "massage-girl"
-    ],
+    "acquisition": {
+      "massage-girl": "Gift from the Massage Girl in Veilstone City (daily)"
+    },
     "bright": 2,
     "colorful": 0,
     "created": 0,
@@ -895,9 +895,9 @@
   "humming-note": {
     "name": "Humming Note",
     "page": "9",
-    "acquisition": [
-      "massage-girl"
-    ],
+    "acquisition": {
+      "massage-girl": "Gift from the Massage Girl in Veilstone City (daily)"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 2,
@@ -914,9 +914,9 @@
   "shiny-powder": {
     "name": "Shiny Powder",
     "page": "9",
-    "acquisition": [
-      "massage-girl"
-    ],
+    "acquisition": {
+      "massage-girl": "Gift from the Massage Girl in Veilstone City (daily)"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 2,
@@ -933,9 +933,9 @@
   "glitter-powder": {
     "name": "Glitter Powder",
     "page": "9",
-    "acquisition": [
-      "massage-girl"
-    ],
+    "acquisition": {
+      "massage-girl": "Gift from the Massage Girl in Veilstone City (daily)"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 2,
@@ -952,9 +952,9 @@
   "red-flower": {
     "name": "Red Flower",
     "page": "10",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 0,
@@ -971,9 +971,9 @@
   "pink-flower": {
     "name": "Pink Flower",
     "page": "10",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 0,
@@ -990,9 +990,9 @@
   "white-flower": {
     "name": "White Flower",
     "page": "10",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 0,
@@ -1009,9 +1009,9 @@
   "blue-flower": {
     "name": "Blue Flower",
     "page": "10",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 0,
@@ -1028,9 +1028,9 @@
   "orange-flower": {
     "name": "Orange Flower",
     "page": "10",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 0,
@@ -1047,9 +1047,9 @@
   "yellow-flower": {
     "name": "Yellow Flower",
     "page": "10",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 2,
     "colorful": 2,
     "created": 0,
@@ -1066,9 +1066,9 @@
   "googly-specs": {
     "name": "Googly Specs",
     "page": "11",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 2,
@@ -1085,9 +1085,9 @@
   "black-specs": {
     "name": "Black Specs",
     "page": "11",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 0,
     "colorful": 2,
     "created": 2,
@@ -1104,9 +1104,9 @@
   "gorgeous-specs": {
     "name": "Gorgeous Specs",
     "page": "11",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 0,
     "colorful": 2,
     "created": 2,
@@ -1123,9 +1123,9 @@
   "sweet-candy": {
     "name": "Sweet Candy",
     "page": "11",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 2,
@@ -1142,9 +1142,9 @@
   "confetti": {
     "name": "Confetti",
     "page": "11",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 2,
@@ -1161,9 +1161,9 @@
   "colored-parasol": {
     "name": "Colored Parasol",
     "page": "12",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 2,
     "colorful": 2,
     "created": 2,
@@ -1180,9 +1180,9 @@
   "old-umbrella": {
     "name": "Old Umbrella",
     "page": "12",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 2,
@@ -1199,9 +1199,9 @@
   "spotlight": {
     "name": "Spotlight",
     "page": "12",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 2,
     "colorful": 0,
     "created": 2,
@@ -1218,9 +1218,9 @@
   "cape": {
     "name": "Cape",
     "page": "12",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 0,
     "colorful": 2,
     "created": 2,
@@ -1237,9 +1237,9 @@
   "standing-mike": {
     "name": "Standing Mike",
     "page": "12",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 2,
@@ -1256,9 +1256,9 @@
   "surfboard": {
     "name": "Surfboard",
     "page": "12",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 2,
@@ -1275,9 +1275,9 @@
   "carpet": {
     "name": "Carpet",
     "page": "12",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 2,
@@ -1294,9 +1294,9 @@
   "retro-pipe": {
     "name": "Retro Pipe",
     "page": "12",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 2,
@@ -1313,9 +1313,9 @@
   "fluffy-bed": {
     "name": "Fluffy Bed",
     "page": "12",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 2,
@@ -1332,9 +1332,9 @@
   "mirror-ball": {
     "name": "Mirror Ball",
     "page": "12",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 2,
@@ -1351,9 +1351,9 @@
   "photo-board": {
     "name": "Photo Board",
     "page": "12",
-    "acquisition": [
-      "flower-shop"
-    ],
+    "acquisition": {
+      "flower-shop": "Exchange berries at the Pick a Peck of Colors Flower Shop in Floaroma Town"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 2,
@@ -1370,9 +1370,9 @@
   "pink-barrette": {
     "name": "Pink Barrette",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 2,
@@ -1389,9 +1389,9 @@
   "red-barrette": {
     "name": "Red Barrette",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 2,
@@ -1408,9 +1408,9 @@
   "blue-barrette": {
     "name": "Blue Barrette",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 2,
@@ -1427,9 +1427,9 @@
   "yellow-barrette": {
     "name": "Yellow Barrette",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 2,
     "colorful": 2,
     "created": 2,
@@ -1446,9 +1446,9 @@
   "green-barrette": {
     "name": "Green Barrette",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 2,
@@ -1465,9 +1465,9 @@
   "pink-balloon": {
     "name": "Pink Balloon",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 2,
@@ -1484,9 +1484,9 @@
   "red-balloons": {
     "name": "Red Balloons",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 2,
@@ -1503,9 +1503,9 @@
   "blue-balloons": {
     "name": "Blue Balloons",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 2,
@@ -1522,9 +1522,9 @@
   "yellow-balloon": {
     "name": "Yellow Balloon",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 2,
     "colorful": 2,
     "created": 2,
@@ -1541,9 +1541,9 @@
   "green-balloons": {
     "name": "Green Balloons",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 2,
@@ -1560,9 +1560,9 @@
   "lace-headdress": {
     "name": "Lace Headdress",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 2,
     "colorful": 0,
     "created": 2,
@@ -1579,9 +1579,9 @@
   "top-hat": {
     "name": "Top Hat",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 0,
     "colorful": 2,
     "created": 2,
@@ -1598,9 +1598,9 @@
   "silk-veil": {
     "name": "Silk Veil",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 2,
@@ -1617,9 +1617,9 @@
   "heroic-headband": {
     "name": "Heroic Headband",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 2,
@@ -1636,9 +1636,9 @@
   "professor-hat": {
     "name": "Professor Hat",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 2,
@@ -1655,9 +1655,9 @@
   "flower-stage": {
     "name": "Flower Stage",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 2,
@@ -1674,9 +1674,9 @@
   "gold-pedestal": {
     "name": "Gold Pedestal",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 2,
     "colorful": 2,
     "created": 2,
@@ -1693,9 +1693,9 @@
   "glass-stage": {
     "name": "Glass Stage",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 2,
@@ -1712,9 +1712,9 @@
   "award-podium": {
     "name": "Award Podium",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 2,
@@ -1731,9 +1731,9 @@
   "cube-stage": {
     "name": "Cube Stage",
     "page": "13",
-    "acquisition": [
-      "contest-reward"
-    ],
+    "acquisition": {
+      "contest-reward": "Prize from the Super Contest visual competition"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 2,
@@ -1750,9 +1750,9 @@
   "turtwig-mask": {
     "name": "Turtwig Mask",
     "page": "14",
-    "acquisition": [
-      "starter-mask"
-    ],
+    "acquisition": {
+      "starter-mask": "Bought from the Pastoria City mask vendor based on your chosen starter"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 2,
@@ -1769,9 +1769,9 @@
   "chimchar-mask": {
     "name": "Chimchar Mask",
     "page": "14",
-    "acquisition": [
-      "starter-mask"
-    ],
+    "acquisition": {
+      "starter-mask": "Bought from the Pastoria City mask vendor based on your chosen starter"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 2,
@@ -1788,9 +1788,9 @@
   "piplup-mask": {
     "name": "Piplup Mask",
     "page": "14",
-    "acquisition": [
-      "starter-mask"
-    ],
+    "acquisition": {
+      "starter-mask": "Bought from the Pastoria City mask vendor based on your chosen starter"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 2,
@@ -1807,9 +1807,9 @@
   "big-tree": {
     "name": "Big Tree",
     "page": "14",
-    "acquisition": [
-      "eterna-forest"
-    ],
+    "acquisition": {
+      "eterna-forest": "Found while traveling through Eterna Forest"
+    },
     "bright": 1,
     "colorful": 1,
     "created": 0,
@@ -1826,9 +1826,9 @@
   "flag": {
     "name": "Flag",
     "page": "14",
-    "acquisition": [
-      "route-206"
-    ],
+    "acquisition": {
+      "route-206": "Found on Route 206 beneath Cycling Road"
+    },
     "bright": 1,
     "colorful": 2,
     "created": 2,
@@ -1845,9 +1845,9 @@
   "crown": {
     "name": "Crown",
     "page": "14",
-    "acquisition": [
-      "pal-park"
-    ],
+    "acquisition": {
+      "pal-park": "Reward from visiting Pal Park"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 2,
@@ -1864,9 +1864,9 @@
   "tiara": {
     "name": "Tiara",
     "page": "14",
-    "acquisition": [
-      "pal-park"
-    ],
+    "acquisition": {
+      "pal-park": "Reward from visiting Pal Park"
+    },
     "bright": 2,
     "colorful": 1,
     "created": 2,
@@ -1883,9 +1883,9 @@
   "comet": {
     "name": "Comet",
     "page": "14",
-    "acquisition": [
-      "unobtainable"
-    ],
+    "acquisition": {
+      "unobtainable": "Not obtainable in Diamond, Pearl, or Platinum"
+    },
     "bright": 2,
     "colorful": 2,
     "created": 0,

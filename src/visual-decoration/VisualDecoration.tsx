@@ -1,6 +1,7 @@
 import { NavLink, Navigate, Route, Routes } from 'react-router-dom';
 import './visual-decoration.css';
 import BDSPStickers from './BDSPStickers';
+import DPPTAccessories from './DPPTAccessories';
 
 type ComingSoonProps = {
   title: string;
@@ -45,13 +46,7 @@ export default function VisualDecoration() {
           <Route path="/" element={<Navigate to="/visual-decoration/dppt-accessories" replace />} />
           <Route
             path="/dppt-accessories"
-            element={
-              <ComingSoonCard
-                title="DPPt accessories"
-                subtitle="Dress up your pokemon with accessories to improve your visual score."
-                flavor="Optimal accessories by the category are coming soon."
-              />
-            }
+            element={<DPPTAccessories />}
           />
           <Route
             path="/bdsp-ball-stickers"
