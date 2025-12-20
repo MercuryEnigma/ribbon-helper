@@ -1318,6 +1318,70 @@
   line-height:1.4;
 }
 
+/* Pokemon Grid Tooltip */
+.pokemon-grid-tooltip{
+  position:fixed;
+  transform:translate(-50%, -100%);
+  margin-top:-10px;
+  background:rgba(255,255,255,0.95);
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+  z-index:1000;
+  min-width:120px;
+  max-width:min(250px, calc(100vw - 40px));
+  pointer-events:none;
+}
+
+.pokemon-grid-tooltip-header{
+  background:white;
+  padding:8px 12px;
+  border-radius:12px;
+  font-weight:700;
+  text-align:center;
+  color:#0a2c50;
+  font-size:0.9rem;
+}
+
+/* Shadow Pokemon Tooltip */
+.shadow-pokemon-tooltip{
+  position:fixed;
+  transform:translate(-50%, -100%);
+  margin-top:-10px;
+  background:rgba(255,255,255,0.95);
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+  z-index:1000;
+  min-width:200px;
+  max-width:min(320px, calc(100vw - 40px));
+  pointer-events:none;
+}
+
+.shadow-pokemon-tooltip-header{
+  background:white;
+  padding:8px 12px;
+  border-radius:12px 12px 0 0;
+  font-weight:700;
+  text-align:center;
+  border-bottom:2px solid #2c5282;
+  color:#0a2c50;
+  font-size:0.9rem;
+}
+
+.shadow-pokemon-tooltip-header.special{
+  background:#ffe8e8;
+  border-bottom-color:#f08a8a;
+  color:#5a1f1f;
+}
+
+.shadow-pokemon-tooltip-body{
+  background:#2c5282;
+  padding:10px 12px;
+  border-radius:0 0 12px 12px;
+  color:white;
+  font-size:0.9rem;
+  line-height:1.4;
+}
+
 .ribbon-last-chance-wrapper::after {
   content: '';
   position: absolute;

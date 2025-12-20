@@ -17,6 +17,7 @@ export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: Availab
   );
   const [gridHeight, setGridHeight] = useState<number | null>(null);
   const [highlightedPokemon, setHighlightedPokemon] = useState<string | null>(null);
+  const [hoveredPokemon, setHoveredPokemon] = useState<{ name: string; x: number; y: number } | null>(null);
   const gridWrapperRef = useRef<HTMLDivElement | null>(null);
   const listItemRefs = useRef<Map<string, HTMLLIElement>>(new Map());
 
@@ -151,8 +152,21 @@ export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: Availab
                           key={pokemon.key}
                           className="pokemon-icon-grid-item"
                           alt={pokemon.name}
-                          title={pokemon.name}
                           onClick={() => handlePokemonClick(pokemon.key)}
+                          onMouseEnter={(e) => {
+                            const rect = e.currentTarget.getBoundingClientRect();
+                            const centerX = rect.left + rect.width / 2;
+                            const viewport = typeof window !== 'undefined' ? window.innerWidth : 0;
+                            const safeMargin = viewport ? Math.min(200, viewport / 4) : 160;
+                            const maxX = viewport ? viewport - safeMargin : centerX;
+                            const clampedX = Math.min(Math.max(centerX, safeMargin), maxX);
+                            setHoveredPokemon({
+                              name: pokemon.name,
+                              x: clampedX,
+                              y: rect.top
+                            });
+                          }}
+                          onMouseLeave={() => setHoveredPokemon(null)}
                           style={{ cursor: 'pointer' }}
                           {...iconProps}
                         />
@@ -206,6 +220,18 @@ export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: Availab
           </>
         )}
       </div>
+
+      {hoveredPokemon && (
+        <div
+          className="pokemon-grid-tooltip"
+          style={{
+            left: `${hoveredPokemon.x}px`,
+            top: `${hoveredPokemon.y}px`
+          }}
+        >
+          <div className="pokemon-grid-tooltip-header">{hoveredPokemon.name}</div>
+        </div>
+      )}
     </div>
   );
 }

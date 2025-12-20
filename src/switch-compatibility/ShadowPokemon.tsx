@@ -60,11 +60,11 @@ function filterShadowPokemonByGames(
       displayName = getPokemonDisplayName(key, data);
     }
 
-    // Special handling for Togepi when "either" is selected
-    if (key === 'togepi' && shadowFilter === 'either' && hasColShadow && hasXdShadow) {
-      // Add Colosseum version (e-reader)
+    // Special handling for Togepi and Makuhita when "either" is selected
+    if ((key === 'togepi' || key === 'makuhita') && shadowFilter === 'either' && hasColShadow && hasXdShadow) {
+      // Add Colosseum version
       results.push({ key, name: displayName, data, shadowSource: 'colosseum' });
-      // Add XD version (non e-reader)
+      // Add XD version
       results.push({ key, name: displayName, data, shadowSource: 'xd' });
     } else {
       // Normal filtering logic
@@ -129,6 +129,14 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
   const [shadowFilter, setShadowFilter] = useState<ShadowFilter>('either');
   const [gridHeight, setGridHeight] = useState<number | null>(null);
   const [highlightedPokemon, setHighlightedPokemon] = useState<string | null>(null);
+  const [hoveredPokemon, setHoveredPokemon] = useState<{
+    name: string;
+    game: string;
+    x: number;
+    y: number;
+    hasSpecial: boolean;
+    specialMessages: string[];
+  } | null>(null);
   const gridWrapperRef = useRef<HTMLDivElement | null>(null);
   const listItemRefs = useRef<Map<string, HTMLLIElement>>(new Map());
 
@@ -300,8 +308,31 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
                           key={uniqueKey}
                           className={classNames.join(' ')}
                           alt={pokemon.name}
-                          title={pokemon.name}
                           onClick={() => handlePokemonClick(uniqueKey)}
+                          onMouseEnter={(e) => {
+                            const rect = e.currentTarget.getBoundingClientRect();
+                            const centerX = rect.left + rect.width / 2;
+                            const viewport = typeof window !== 'undefined' ? window.innerWidth : 0;
+                            const safeMargin = viewport ? Math.min(200, viewport / 4) : 160;
+                            const maxX = viewport ? viewport - safeMargin : centerX;
+                            const clampedX = Math.min(Math.max(centerX, safeMargin), maxX);
+
+                            const gameName = pokemon.shadowSource === 'colosseum' ? 'Colosseum' : 'XD: Gale of Darkness';
+                            const specialMessages: string[] = [];
+                            if (hasOverFifty) specialMessages.push('Caught over level 50.');
+                            if (hasRestricted) specialMessages.push('Restricted legendary.');
+                            if (isEReader) specialMessages.push('Japanese e-reader exclusive.');
+
+                            setHoveredPokemon({
+                              name: pokemon.name,
+                              game: gameName,
+                              x: clampedX,
+                              y: rect.top,
+                              hasSpecial: hasOverFifty || hasRestricted || isEReader,
+                              specialMessages
+                            });
+                          }}
+                          onMouseLeave={() => setHoveredPokemon(null)}
                           style={{ cursor: 'pointer' }}
                           {...iconProps}
                         />
@@ -328,7 +359,14 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
                   style={gridHeight ? { height: gridHeight } : undefined}
                 >
                   <ul>
-                    {filteredPokemon.map((pokemon, index) => {
+                    {filteredPokemon.filter((pokemon, index, array) => {
+                      // Only deduplicate Makuhita (both versions are the same)
+                      // Togepi should show both because one is e-reader exclusive
+                      if (pokemon.key === 'makuhita') {
+                        return array.findIndex(p => p.key === pokemon.key) === index;
+                      }
+                      return true;
+                    }).map((pokemon, index) => {
                       const iconProps = getPokemonIconProps(pokemon.key, pokemon.data, pokemonDb);
                       const hasOverFifty = pokemon.data.flags?.includes('overFifty');
                       const hasRestricted = pokemon.data.flags?.includes('restricted');
@@ -342,20 +380,31 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
                       }
                       const displayNumber = natdex ? `No. ${natdex.toString().padStart(3, '0')}` : '';
 
-                      // Use unique key to handle duplicate Togepi entries
-                      const uniqueKey = pokemon.shadowSource ? `${pokemon.key}-${pokemon.shadowSource}` : `${pokemon.key}-${index}`;
+                      // Use shadowSource for key if it exists (for Togepi with both versions)
+                      // For Makuhita, only one version is shown in list, so use pokemon.key
+                      const listItemKey = pokemon.shadowSource ? `${pokemon.key}-${pokemon.shadowSource}` : pokemon.key;
 
                       return (
                         <li
-                          key={uniqueKey}
+                          key={listItemKey}
                           ref={el => {
+                            // Store refs for this specific item and also for Makuhita's both grid keys
                             if (el) {
-                              listItemRefs.current.set(uniqueKey, el);
+                              listItemRefs.current.set(listItemKey, el);
+                              // For Makuhita, store refs for both grid keys pointing to the single list item
+                              if (pokemon.key === 'makuhita') {
+                                listItemRefs.current.set(`${pokemon.key}-colosseum`, el);
+                                listItemRefs.current.set(`${pokemon.key}-xd`, el);
+                              }
                             } else {
-                              listItemRefs.current.delete(uniqueKey);
+                              listItemRefs.current.delete(listItemKey);
+                              if (pokemon.key === 'makuhita') {
+                                listItemRefs.current.delete(`${pokemon.key}-colosseum`);
+                                listItemRefs.current.delete(`${pokemon.key}-xd`);
+                              }
                             }
                           }}
-                          className={highlightedPokemon === uniqueKey ? 'highlighted' : ''}
+                          className={highlightedPokemon === listItemKey ? 'highlighted' : ''}
                           onClick={() => onPokemonSelect(pokemon.key)}
                           style={{ cursor: 'pointer' }}
                         >
@@ -379,6 +428,34 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
           </>
         )}
       </div>
+
+      {hoveredPokemon && (
+        <div
+          className="shadow-pokemon-tooltip"
+          style={{
+            left: `${hoveredPokemon.x}px`,
+            top: `${hoveredPokemon.y}px`
+          }}
+        >
+          <div className={`shadow-pokemon-tooltip-header${hoveredPokemon.hasSpecial ? ' special' : ''}`}>
+            {hoveredPokemon.name}
+          </div>
+          <div className="shadow-pokemon-tooltip-body">
+            {hoveredPokemon.game}
+            {hoveredPokemon.specialMessages.length > 0 && (
+              <>
+                <br />
+                {hoveredPokemon.specialMessages.map((msg, idx) => (
+                  <span key={idx}>
+                    {msg}
+                    {idx < hoveredPokemon.specialMessages.length - 1 && <br />}
+                  </span>
+                ))}
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
