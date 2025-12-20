@@ -1,5 +1,6 @@
 import { NavLink, Navigate, Route, Routes } from 'react-router-dom';
 import './visual-decoration.css';
+import BDSPStickers from './BDSPStickers';
 
 type ComingSoonProps = {
   title: string;
@@ -54,13 +55,7 @@ export default function VisualDecoration() {
           />
           <Route
             path="/bdsp-ball-stickers"
-            element={
-              <ComingSoonCard
-                title="BDSP ball stickers"
-                subtitle="Add stickers to your ball capsule to improve your visual score."
-                flavor="Optimal ball stickers by the contest type are coming soon."
-              />
-            }
+            element={<BDSPStickers />}
           />
         </Routes>
       </div>

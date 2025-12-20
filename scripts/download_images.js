@@ -137,8 +137,17 @@ const downloadAll = async (label, entries, outDir) => {
   for (const { slug, url } of entries) {
     const dest = path.join(outDir, `${slug}.png`);
     if (fs.existsSync(dest)) {
-      skipped += 1;
-      continue;
+      try {
+        const { size } = fs.statSync(dest);
+        if (size > 0) {
+          skipped += 1;
+          continue;
+        }
+        // zero-byte file from previous failed attempt: re-download
+        fs.rmSync(dest, { force: true });
+      } catch {
+        // if stat fails, fall through to download
+      }
     }
     try {
       await fetchBinary(url, dest);
