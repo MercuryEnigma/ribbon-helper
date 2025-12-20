@@ -931,6 +931,12 @@
   font-size: 0.88rem;
 }
 
+.pokedex-row-label.shadow{
+  background:#e8dff9;
+  border-color:#7c6aba;
+  color:#2d2d2d;
+}
+
 .pokedex-row-value {
   padding: 0.45rem 0.6rem;
   color: #2d1c05;
@@ -1224,6 +1230,92 @@
 .ribbon-last-chance-wrapper {
   position: relative;
   display: inline-block;
+}
+
+.has-tooltip{
+  position:relative;
+  overflow:visible;
+}
+
+.shadow-filter-button{
+  position:relative;
+  display:flex;
+  flex:1;
+}
+
+.shadow-filter-button button{
+  flex:1;
+}
+
+.game-checkbox.special-game::after{
+  content:'';
+  position:absolute;
+  top:-2px;
+  right:-2px;
+  width:0;
+  height:0;
+  border-style:solid;
+  border-width:0 10px 10px 0;
+  border-color:transparent #c62828 transparent transparent;
+  filter:drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+}
+
+.game-tooltip-card{
+  position:absolute;
+  top:calc(100% + 8px);
+  left:50%;
+  transform:translateX(-50%) translateY(-2px);
+  background:transparent;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.25);
+  white-space:normal;
+  min-width:220px;
+  max-width:min(360px, 80vw);
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity 0.12s ease, transform 0.12s ease;
+  z-index:10;
+}
+
+.has-tooltip:hover .game-tooltip-card,
+.has-tooltip:focus-within .game-tooltip-card{
+  opacity:1;
+  transform:translateX(-50%) translateY(0);
+}
+
+.game-tooltip-header{
+  background:#fff;
+  padding:8px 12px;
+  border-radius:12px 12px 0 0;
+  font-weight:800;
+  font-size:0.95rem;
+  border-bottom:2px solid #2c5282;
+  color:#0a2c50;
+}
+
+.game-tooltip-header.last-chance{
+  background:#ffe8e8;
+  border-bottom-color:#f08a8a;
+  color:#5a1f1f;
+}
+
+.game-tooltip-subline{
+  display:block;
+  margin-top:2px;
+  font-size:0.85rem;
+}
+
+.game-tooltip-body{
+  background:#2c5282;
+  padding:10px 12px;
+  border-radius:0 0 12px 12px;
+  color:white;
+  font-size:0.85rem;
+  line-height:1.4;
 }
 
 .ribbon-last-chance-wrapper::after {

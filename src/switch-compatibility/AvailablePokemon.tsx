@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useLayoutEffect, useRef } from 'react';
 import type { PokemonDatabase } from './types';
+import { GAME_TOOLTIPS } from './types';
 import { GAME_GROUPS, filterPokemonByGames } from './utils';
 import { getPokemonIconProps } from './iconUtils';
 
@@ -99,14 +100,26 @@ export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: Availab
         <div className="game-checkboxes">
           {GAME_GROUPS.map(group => {
             const allChecked = group.ids.every(id => selectedGamesSet.has(id));
+            const special = GAME_TOOLTIPS.available[group.name];
             return (
-              <label key={group.name} className="game-checkbox">
+              <label
+                key={group.name}
+                className={`game-checkbox${special ? ' has-tooltip' : ''}${special?.isLastChance ? ' special-game' : ''}`}
+              >
                 <input
                   type="checkbox"
                   checked={allChecked}
                   onChange={() => toggleGame(group.ids)}
                 />
                 <span className="toggle-label">{group.name}</span>
+                {special && (
+                  <div className="game-tooltip-card">
+                    <div className={`game-tooltip-header${special.isLastChance ? ' last-chance' : ''}`}>
+                      {special.header}
+                    </div>
+                    <div className="game-tooltip-body">{special.body}</div>
+                  </div>
+                )}
                 <span className="toggle-track" aria-hidden="true">
                   {allChecked && 
                   (<span className="toggle-word require">✓</span>)}

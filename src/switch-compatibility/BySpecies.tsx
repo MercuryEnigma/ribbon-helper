@@ -70,24 +70,39 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
     }
   };
 
+  const isShadowPokemon = useMemo(() => {
+    if (!selectedPokemonData?.flags) return false;
+    return selectedPokemonData.flags.includes('colShadow') || selectedPokemonData.flags.includes('xdShadow');
+  }, [selectedPokemonData]);
+
   const availableGames = useMemo(() => {
     if (!pokemonDb || !selectedPokemon) return [];
     try {
       const gameIds = getGamesForPokemon(pokemonDb, selectedPokemon);
       const names = getGameGroupNames(gameIds);
-      const order = ['Let\'s Go Pikachu / Eevee', 'Sword / Shield', 'Brilliant Diamond / Shining Pearl', 'Legends: Arceus', 'Scarlet / Violet', 'Legends: Z-A'];
-      return names.sort((a, b) => {
-        const ai = order.indexOf(a);
-        const bi = order.indexOf(b);
-        const ao = ai === -1 ? Number.MAX_SAFE_INTEGER : ai;
-        const bo = bi === -1 ? Number.MAX_SAFE_INTEGER : bi;
-        return ao - bo || a.localeCompare(b);
-      });
+      // Include Shadow-only games when the toggle is on and the Pokemon supports them
+      if (isShadowPokemon) {
+        const flags = selectedPokemonData?.flags || [];
+        const shadowGames: string[] = [];
+        if (flags.includes('colShadow')) shadowGames.push('Colosseum');
+        if (flags.includes('xdShadow')) shadowGames.push('XD: Gale of Darkness');
+        names.push(...shadowGames);
+      }
+      const order = ['Colosseum', 'XD: Gale of Darkness', 'Let\'s Go Pikachu / Eevee', 'Sword / Shield', 'Brilliant Diamond / Shining Pearl', 'Legends: Arceus', 'Scarlet / Violet', 'Legends: Z-A'];
+      return names
+        .filter((name, idx, arr) => arr.indexOf(name) === idx)
+        .sort((a, b) => {
+          const ai = order.indexOf(a);
+          const bi = order.indexOf(b);
+          const ao = ai === -1 ? Number.MAX_SAFE_INTEGER : ai;
+          const bo = bi === -1 ? Number.MAX_SAFE_INTEGER : bi;
+          return ao - bo || a.localeCompare(b);
+        });
     } catch (error) {
       console.error('Error getting available games:', error);
       return [];
     }
-  }, [pokemonDb, selectedPokemon]);
+  }, [pokemonDb, selectedPokemon, selectedPokemonData, isShadowPokemon]);
 
   const displayName = useMemo(() => {
     if (!pokemonDb || !selectedPokemonData) return '';
@@ -123,11 +138,6 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
     if (!selectedPokemonData) return null;
     return getPokemonLargeImageProps(selectedPokemon, selectedPokemonData, pokemonDb);
   }, [pokemonDb, selectedPokemon, selectedPokemonData]);
-
-  const isShadowPokemon = useMemo(() => {
-    if (!selectedPokemonData?.flags) return false;
-    return selectedPokemonData.flags.includes('colShadow') || selectedPokemonData.flags.includes('xdShadow');
-  }, [selectedPokemonData]);
 
   // Calculate available generations based on Pokemon's games
   const availableGenerations = useMemo(() => {
@@ -178,6 +188,18 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
   const preEvolution = useMemo(() => {
     return selectedPokemonData?.evolvesFrom || null;
   }, [selectedPokemonData]);
+
+  const visibleAvailableGames = useMemo(() => {
+    return availableGames.filter(game => {
+      if (!isShadow && (game === 'Colosseum' || game === 'XD: Gale of Darkness')) {
+        return false;
+      }
+      if (selectedPokemon === 'spinda' && selectedGeneration !== 'Switch' && game === 'Brilliant Diamond / Shining Pearl') {
+        return false;
+      }
+      return true;
+    });
+  }, [availableGames, isShadow, selectedPokemon, selectedGeneration]);
 
   const renderRibbonImage = (ribbonKey: string, isLastChance: boolean) => {
     const ribbonInfo = (ribbonsData as Record<string, { names?: { en?: string }; descs?: { en?: string } }>)[ribbonKey];
@@ -336,15 +358,15 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
               </div>
             </div>
             <div className="pokedex-entry-rows">
-              {availableGames.length === 0 ? (
+              {visibleAvailableGames.length === 0 ? (
                 <div className="pokedex-row">
                   <div className="pokedex-row-label">Available in</div>
                   <div className="pokedex-row-value">Not in Switch titles</div>
                 </div>
               ) : (
-                availableGames.map(game => (
-                  <div className="pokedex-row" key={game}>
-                    <div className="pokedex-row-label">Available in</div>
+                visibleAvailableGames.map(game => (
+                  <div className={`pokedex-row${game === 'Colosseum' || game === 'XD: Gale of Darkness' ? ' shadow-row' : ''}`} key={game}>
+                    <div className={`pokedex-row-label${game === 'Colosseum' || game === 'XD: Gale of Darkness' ? ' shadow' : ''}`}>Available in</div>
                     <div className="pokedex-row-value">{game}</div>
                   </div>
                 ))

@@ -1,5 +1,6 @@
 import { useState, useMemo, useLayoutEffect, useRef } from 'react';
 import type { PokemonDatabase, PokemonData } from './types';
+import { GAME_TOOLTIPS } from './types';
 import { GAME_GROUPS, getPokemonDisplayName } from './utils';
 import { getPokemonIconProps } from './iconUtils';
 
@@ -209,36 +210,56 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
       <div className="game-selector shadow-selector">
         <h3>Choose Games:</h3>
         <div className="shadow-filter-toggle">
-          <button
-            className={shadowFilter === 'colosseum' ? 'active' : ''}
-            onClick={() => setShadowFilter('colosseum')}
-          >
-            Colosseum
-          </button>
-          <button
-            className={shadowFilter === 'either' ? 'active' : ''}
-            onClick={() => setShadowFilter('either')}
-          >
-            Either
-          </button>
-          <button
-            className={shadowFilter === 'xd' ? 'active' : ''}
-            onClick={() => setShadowFilter('xd')}
-          >
-            XD: Gale of Darkness
-          </button>
+          {[
+            { key: 'colosseum', label: 'Colosseum' },
+            { key: 'either', label: 'Either' },
+            { key: 'xd', label: 'XD: Gale of Darkness' }
+          ].map(option => {
+            const detail = GAME_TOOLTIPS.shadow[option.label];
+            return (
+              <div key={option.key} className="shadow-filter-button has-tooltip">
+                <button
+                  className={shadowFilter === option.key ? 'active' : ''}
+                  onClick={() => setShadowFilter(option.key as ShadowFilter)}
+                >
+                  {option.label}
+                </button>
+                {detail && (
+                  <div className="game-tooltip-card">
+                    <div className={`game-tooltip-header${detail.isLastChance ? ' last-chance' : ''}`}>
+                      {detail.header}
+                      {detail.isLastChance && <span className="game-tooltip-subline">(Last Chance!)</span>}
+                    </div>
+                    <div className="game-tooltip-body">{detail.body}</div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
         <div className="game-checkboxes">
           {GAME_GROUPS.map(group => {
             const allChecked = group.ids.every(id => selectedGamesSet.has(id));
+            const special = GAME_TOOLTIPS.shadow[group.name];
             return (
-              <label key={group.name} className="game-checkbox shadow-checkbox">
+              <label
+                key={group.name}
+                className={`game-checkbox shadow-checkbox${special ? ' has-tooltip' : ''}${special?.isLastChance ? ' special-game' : ''}`}
+              >
                 <input
                   type="checkbox"
                   checked={allChecked}
                   onChange={() => toggleGame(group.ids)}
                 />
                 <span className="toggle-label">{group.name}</span>
+                {special && (
+                  <div className="game-tooltip-card">
+                    <div className={`game-tooltip-header${special.isLastChance ? ' last-chance' : ''}`}>
+                      {special.header}
+                    </div>
+                    <div className="game-tooltip-body">{special.body}</div>
+                  </div>
+                )}
                 <span className="toggle-track" aria-hidden="true">
                   {allChecked && <span className="toggle-check">✓</span>}
                 </span>
