@@ -549,21 +549,27 @@
 }
 
 .kit-blocks {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.75rem;
   margin-bottom: 0.75rem;
 }
 
 .block-item {
-  padding: 0.5rem 0.75rem;
+  padding: 0.75rem;
   background: #fffbf5;
   border: 2px solid #d66020;
   border-radius: 10px;
   display: flex;
-  gap: 0.75rem;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.block-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .berry-icon {
@@ -574,31 +580,26 @@
   image-rendering: pixelated;
 }
 
-.block-content {
-  display: grid;
-  grid-template-columns: 140px 1fr auto;
-  gap: 1rem;
-  align-items: center;
+.block-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #d66020;
+  line-height: 1.2;
   flex: 1;
 }
 
-.block-name {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #d66020;
-}
-
 .block-berry {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #424242;
+  line-height: 1.3;
 }
 
 .block-meta {
   font-size: 0.8rem;
   font-weight: 600;
   color: #757575;
-  white-space: nowrap;
+  text-align: center;
 }
 
 .kit-stats {
@@ -710,9 +711,16 @@
     padding: 0.45rem 1.75rem 0.45rem 0.65rem;
   }
 
-  .block-content {
-    grid-template-columns: 120px 1fr;
-    gap: 0.5rem;
+  .kit-blocks {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .color-mapping-list {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .bdsp-set-items .block-item {
+    min-width: 140px;
   }
 
   .kit-stats {
@@ -792,10 +800,31 @@
     font-size: 0.85rem;
   }
 
-  .block-item {
-    flex-direction: row;
+  .kit-blocks {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .color-mapping-list {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .bdsp-set-items {
     gap: 0.5rem;
-    padding: 0.4rem 0.6rem;
+  }
+
+  .bdsp-set-items .block-item {
+    min-width: 100px;
+  }
+
+  .bdsp-set-label {
+    min-width: 50px;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .block-item {
+    padding: 0.5rem;
+    gap: 0.4rem;
   }
 
   .berry-icon {
@@ -803,17 +832,12 @@
     height: 28px;
   }
 
-  .block-content {
-    grid-template-columns: 1fr;
-    gap: 0.3rem;
-  }
-
   .block-name {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   .block-berry {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 
   .block-meta {
@@ -854,8 +878,14 @@
   }
 
   .bdsp-set-label {
-    font-size: 0.85rem;
-    padding: 0.4rem;
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+    min-width: 50px;
+  }
+
+  .bdsp-set-items {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.4rem;
   }
 }
 
@@ -1000,29 +1030,30 @@
 }
 
 .color-mapping-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  max-width: 400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
   margin: 0 auto 1rem auto;
 }
 
 .color-mapping-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  padding: 0.6rem 0.75rem;
+  gap: 0.5rem;
+  padding: 0.75rem;
   background: #fffbf5;
   border-radius: 10px;
   border: 2px solid #d66020;
+  text-align: center;
 }
 
 .color-label {
   font-weight: 700;
-  font-size: 0.9rem;
-  padding: 0.3rem 0.75rem;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
   border-radius: 3px;
-  min-width: 80px;
+  width: 100%;
   text-align: center;
 }
 
@@ -1057,48 +1088,69 @@
 }
 
 .flavor-label {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #424242;
   font-weight: 500;
+  text-align: center;
 }
 
 .stat-label-name {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #212121;
   font-weight: 600;
-  margin-left: auto;
+  text-align: center;
 }
 
 /* BDSP Poffin Groups */
+.bdsp-kit-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  grid-template-columns: none;
+  margin-bottom: 0.75rem;
+}
+
+.bdsp-kit-blocks .bdsp-set-group-wrapper {
+  width: 100%;
+  margin-bottom: 0;
+}
+
 .bdsp-set-group-wrapper {
   display: flex;
+  align-items: stretch;
   gap: 0.75rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .bdsp-set-label {
   display: flex;
   align-items: center;
   justify-content: center;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
   background: #d66020;
   color: #fff;
   font-weight: 700;
   font-size: 0.9rem;
-  padding: 0.5rem;
+  padding: 0.75rem 1rem;
   border-radius: 8px;
   white-space: nowrap;
-  align-self: stretch;
+  min-width: 80px;
+  flex-shrink: 0;
 }
 
 .bdsp-set-items {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.75rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  width: 100%;
 }
 
-.bdsp-set-items .block-content {
-  grid-template-columns: 140px 1fr;
+.bdsp-set-items .block-item {
+  flex: 1;
+  min-width: 160px;
+}
+
+.bdsp-set-items .block-item {
+  /* BDSP-specific styles if needed */
 }

@@ -104,16 +104,16 @@ export default function RSEBlending() {
               const imageUrl = getBerryImageUrl(block.berry);
               return (
                 <div key={index} className="block-item">
-                  {imageUrl && (
-                    <img src={imageUrl} alt={block.berry} title={block.berry} className="berry-icon" />
-                  )}
-                  <div className="block-content">
+                  <div className="block-header">
+                    {imageUrl && (
+                      <img src={imageUrl} alt={block.berry} title={block.berry} className="berry-icon" />
+                    )}
                     <div className="block-name">{block.name}</div>
-                    <div className="block-meta">
-                      {block.npc > 0 ? `${block.npc} NPC` : `${block.players}-player`}
-                    </div>
-                    <div className="block-berry">{block.berry}</div>
                   </div>
+                  <div className="block-meta">
+                    {block.npc > 0 ? `${block.npc} NPC` : `${block.players}-player`}
+                  </div>
+                  <div className="block-berry">{block.berry}</div>
                 </div>
               );
             })}

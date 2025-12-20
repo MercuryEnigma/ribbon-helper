@@ -13,29 +13,29 @@ export default function ORASBlending() {
 
         <div className="color-mapping-list">
           <div className="color-mapping-item">
-            <span className="color-label spicy">Red</span>
-            <span className="flavor-label">Spicy</span>
-            <span className="stat-label-name">Cool</span>
+            <div className="color-label spicy">Red</div>
+            <div className="flavor-label">Spicy</div>
+            <div className="stat-label-name">Cool</div>
           </div>
           <div className="color-mapping-item">
-            <span className="color-label dry">Blue</span>
-            <span className="flavor-label">Dry</span>
-            <span className="stat-label-name">Beauty</span>
+            <div className="color-label dry">Blue</div>
+            <div className="flavor-label">Dry</div>
+            <div className="stat-label-name">Beauty</div>
           </div>
           <div className="color-mapping-item">
-            <span className="color-label sweet">Pink</span>
-            <span className="flavor-label">Sweet</span>
-            <span className="stat-label-name">Cute</span>
+            <div className="color-label sweet">Pink</div>
+            <div className="flavor-label">Sweet</div>
+            <div className="stat-label-name">Cute</div>
           </div>
           <div className="color-mapping-item">
-            <span className="color-label bitter">Green</span>
-            <span className="flavor-label">Bitter</span>
-            <span className="stat-label-name">Clever</span>
+            <div className="color-label bitter">Green</div>
+            <div className="flavor-label">Bitter</div>
+            <div className="stat-label-name">Clever</div>
           </div>
           <div className="color-mapping-item">
-            <span className="color-label sour">Yellow</span>
-            <span className="flavor-label">Sour</span>
-            <span className="stat-label-name">Tough</span>
+            <div className="color-label sour">Yellow</div>
+            <div className="flavor-label">Sour</div>
+            <div className="stat-label-name">Tough</div>
           </div>
         </div>
 

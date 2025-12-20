@@ -94,7 +94,7 @@ export default function BDSPBlending() {
         <div className="berry-kit">
           <h4>Optimal Poffin Kit:</h4>
 
-          <div className="kit-blocks">
+          <div className="kit-blocks bdsp-kit-blocks">
             {poffinCycles.map((cycle, cycleIndex) => (
               <div key={cycleIndex} className="bdsp-set-group-wrapper">
                 <div className="bdsp-set-label">Set {cycle.set}</div>
@@ -103,13 +103,13 @@ export default function BDSPBlending() {
                     const imageUrl = getBerryImageUrl(poffin.berries);
                     return (
                       <div key={index} className="block-item">
-                        {imageUrl && (
-                          <img src={imageUrl} alt={poffin.berries} title={poffin.berries} className="berry-icon" />
-                        )}
-                        <div className="block-content">
+                        <div className="block-header">
+                          {imageUrl && (
+                            <img src={imageUrl} alt={poffin.berries} title={poffin.berries} className="berry-icon" />
+                          )}
                           <div className="block-name">{poffin.name}</div>
-                          <div className="block-berry">{poffin.berries}</div>
                         </div>
+                        <div className="block-berry">{poffin.berries}</div>
                       </div>
                     );
                   })}

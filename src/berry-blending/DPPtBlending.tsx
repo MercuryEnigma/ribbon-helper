@@ -142,14 +142,14 @@ export default function DPPtBlending() {
 
               return (
                 <div key={index} className="block-item">
-                  {imageUrl && (
-                    <img src={imageUrl} alt={poffin.berries} title={poffin.berries} className="berry-icon" />
-                  )}
-                  <div className="block-content">
+                  <div className="block-header">
+                    {imageUrl && (
+                      <img src={imageUrl} alt={poffin.berries} title={poffin.berries} className="berry-icon" />
+                    )}
                     <div className="block-name">{poffin.name}</div>
-                    <div className="block-meta">{poffin.players}-player</div>
-                    <div className="block-berry">{berryDescription}</div>
                   </div>
+                  <div className="block-meta">{poffin.players}-player</div>
+                  <div className="block-berry">{berryDescription}</div>
                 </div>
               );
             })}
