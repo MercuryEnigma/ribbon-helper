@@ -48,6 +48,8 @@ export default function App() {
       return [{ name: 'SadisticMystic', url: 'https://docs.google.com/spreadsheets/d/1A61T_0yHWtXVooQLjw6ocmI8Dx7tdGkp9P-X-dL2yOs/edit?gid=1577996444#gid=1577996444' }]
     } else if (path.includes('/berry-blending/bdsp')) {
       return [{ name: 'SadisticMystic', url: 'https://docs.google.com/spreadsheets/d/1U2gGGy9nyGIKQcq9SVtIxKGJDNYAfhicEWr5ykQKM7k/copy' }]
+    } else if (path.includes('/visual-decoration/bdsp-ball-stickers')) {
+      return [{ name: 'Anubis', url: 'https://x.com/Sibuna_Switch' }]
     }
 
     return []
@@ -57,9 +59,14 @@ export default function App() {
     <div className="app">
       <header className="header">
         <div className="header-title-group">
+          <img src={`${import.meta.env.BASE_URL}images/ribbons/artist-ribbon.png`} alt="Artist Ribbon" className="navbar-brand-icon" />
           <div className="title">Ribbon Helper</div>
           <div className="subtitle">by MercuryEnigma</div>
         </div>
+        <a href="https://ribbons.guide" className="navbar-brand" target="_blank" rel="noopener noreferrer">
+          <img src={`${import.meta.env.BASE_URL}images/ribbons/best-friends-ribbon.png`} alt="Best Friends Ribbon" className="navbar-brand-icon" />
+          <span className="navbar-brand-text">Ribbons.Guide</span>
+        </a>
         {/* <button className="settings-button" onClick={() => setIsSettingsOpen(true)} aria-label="Open settings">
           ⚙️ Settings
         </button> */}
