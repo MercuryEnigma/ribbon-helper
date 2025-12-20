@@ -64,6 +64,7 @@ export default function App() {
           <div className="subtitle">by MercuryEnigma</div>
         </div>
         <a href="https://ribbons.guide" className="navbar-brand" target="_blank" rel="noopener noreferrer">
+                  <div className="subtitle">start tracking ribbons at:</div>
           <img src={`${import.meta.env.BASE_URL}images/ribbons/best-friends-ribbon.png`} alt="Best Friends Ribbon" className="navbar-brand-icon" />
           <span className="navbar-brand-text">Ribbons.Guide</span>
         </a>
