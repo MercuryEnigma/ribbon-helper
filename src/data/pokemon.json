@@ -1558,10 +1558,6 @@
     },
     "femsprite": false,
     "gender": "female",
-    "games": [
-      "or",
-      "as"
-    ],
     "sort": 10,
     "evolvesFrom": null,
     "flags": [
@@ -1583,10 +1579,6 @@
     },
     "femsprite": false,
     "gender": "female",
-    "games": [
-      "or",
-      "as"
-    ],
     "sort": 13,
     "evolvesFrom": null,
     "flags": [
@@ -1608,10 +1600,6 @@
     },
     "femsprite": false,
     "gender": "female",
-    "games": [
-      "or",
-      "as"
-    ],
     "sort": 12,
     "evolvesFrom": null,
     "flags": [
@@ -1633,10 +1621,6 @@
     },
     "femsprite": false,
     "gender": "female",
-    "games": [
-      "or",
-      "as"
-    ],
     "sort": 11,
     "evolvesFrom": null,
     "flags": [
@@ -1658,10 +1642,6 @@
     },
     "femsprite": false,
     "gender": "female",
-    "games": [
-      "or",
-      "as"
-    ],
     "sort": 9,
     "evolvesFrom": null,
     "flags": [
@@ -23021,7 +23001,7 @@
       "usun",
       "umoon"
     ],
-    "evolvesFrom": "burmy-trash"
+    "evolvesFrom": "burmy"
   },
   "combee": {
     "names": {
@@ -25771,10 +25751,7 @@
       "ko": "스핀로토무",
       "zh-Hans": "旋转洛托姆",
       "zh-Hant": "旋轉洛托姆"
-    },
-    "games": [
-      "plza"
-    ]
+    }
   },
   "rotom-frost": {
     "data-source": "rotom",
@@ -25788,10 +25765,7 @@
       "ko": "프로스트로토무",
       "zh-Hans": "结冰洛托姆",
       "zh-Hant": "結冰洛托姆"
-    },
-    "games": [
-      "plza"
-    ]
+    }
   },
   "rotom-heat": {
     "data-source": "rotom",
@@ -25805,10 +25779,7 @@
       "ko": "히트로토무",
       "zh-Hans": "加热洛托姆",
       "zh-Hant": "加熱洛托姆"
-    },
-    "games": [
-      "plza"
-    ]
+    }
   },
   "rotom-mow": {
     "data-source": "rotom",
@@ -25823,10 +25794,7 @@
       "ko": "커트로토무",
       "zh-Hans": "切割洛托姆",
       "zh-Hant": "切割洛托姆"
-    },
-    "games": [
-      "plza"
-    ]
+    }
   },
   "rotom-wash": {
     "data-source": "rotom",
@@ -25840,10 +25808,7 @@
       "ko": "워시로토무",
       "zh-Hans": "清洗洛托姆",
       "zh-Hant": "清洗洛托姆"
-    },
-    "games": [
-      "plza"
-    ]
+    }
   },
   "uxie": {
     "names": {
@@ -31745,22 +31710,6 @@
       "zh-Hans": "暗黑",
       "zh-Hant": "闇黑"
     },
-    "games": [
-      "black2",
-      "white2",
-      "x",
-      "y",
-      "or",
-      "as",
-      "sw",
-      "sh",
-      "sun",
-      "moon",
-      "usun",
-      "umoon",
-      "scar",
-      "vio"
-    ],
     "cannotStore": true
   },
   "kyurem-white": {
@@ -31776,22 +31725,6 @@
       "zh-Hans": "焰白",
       "zh-Hant": "焰白"
     },
-    "games": [
-      "black2",
-      "white2",
-      "x",
-      "y",
-      "or",
-      "as",
-      "sw",
-      "sh",
-      "sun",
-      "moon",
-      "usun",
-      "umoon",
-      "scar",
-      "vio"
-    ],
     "cannotStore": true
   },
   "keldeo": {
@@ -37142,14 +37075,6 @@
       "zh-Hans": "拂晓之翼",
       "zh-Hant": "拂曉之翼"
     },
-    "games": [
-      "usun",
-      "umoon",
-      "sw",
-      "sh",
-      "scar",
-      "vio"
-    ],
     "cannotStore": true
   },
   "necrozma-dusk-mane": {
@@ -37165,14 +37090,6 @@
       "zh-Hans": "黄昏之鬃",
       "zh-Hant": "黃昏之鬃"
     },
-    "games": [
-      "usun",
-      "umoon",
-      "sw",
-      "sh",
-      "scar",
-      "vio"
-    ],
     "cannotStore": true
   },
   "magearna": {

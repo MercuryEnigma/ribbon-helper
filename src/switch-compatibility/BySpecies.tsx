@@ -173,8 +173,11 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
   // Set initial ribbon game when ribbons change
   useEffect(() => {
     const gameGroups = Object.keys(availableRibbons);
-    if (gameGroups.length > 0 && !selectedRibbonGame) {
-      setSelectedRibbonGame(gameGroups[0]);
+    if (gameGroups.length > 0) {
+      // If no game is selected, or if the currently selected game is not available, select the first one
+      if (!selectedRibbonGame || !gameGroups.includes(selectedRibbonGame)) {
+        setSelectedRibbonGame(gameGroups[0]);
+      }
     }
   }, [availableRibbons, selectedRibbonGame]);
 
@@ -352,6 +355,7 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
                         setIsShadow(false);
                       }
                     }}
+                    autoComplete="off"
                   >
                     {availableGenerations.has('Gen 3') && <option value="Gen 3">Gen 3</option>}
                     {availableGenerations.has('Gen 4') && <option value="Gen 4">Gen 4</option>}
@@ -521,6 +525,7 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
                 className="ribbons-mobile-dropdown"
                 value={selectedRibbonGame}
                 onChange={(e) => setSelectedRibbonGame(e.target.value)}
+                autoComplete="off"
               >
                 {Object.keys(availableRibbons).map(gameGroup => (
                   <option key={gameGroup} value={gameGroup}>{gameGroup}</option>

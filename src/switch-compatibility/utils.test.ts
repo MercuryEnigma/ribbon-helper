@@ -21,12 +21,24 @@ describe('getPokemonDisplayName', () => {
 
   it('should return name with form for form variants', () => {
     const data: PokemonData = {
+      'data-source': 'pikachu',
       names: { en: 'Pikachu', 'es-es': '', fr: '', de: '', it: '', ja: '', ko: '', 'zh-Hans': '', 'zh-Hant': '' },
       forms: { en: 'Alola Cap', 'es-es': '', fr: '', de: '', it: '', ja: '', ko: '', 'zh-Hans': '', 'zh-Hant': '' },
       gender: 'male',
       games: ['sun', 'moon'],
     };
     expect(getPokemonDisplayName('pikachu-alola-cap', data)).toBe('Pikachu (Alola Cap)');
+  });
+
+  it('should not show form name for base Pokemon with default forms', () => {
+    // Base Pokemon like Shellos, Deoxys have forms.en but it represents their default form
+    const data: PokemonData = {
+      names: { en: 'Shellos', 'es-es': '', fr: '', de: '', it: '', ja: '', ko: '', 'zh-Hans': '', 'zh-Hant': '' },
+      forms: { en: 'West Sea', 'es-es': '', fr: '', de: '', it: '', ja: '', ko: '', 'zh-Hans': '', 'zh-Hant': '' },
+      gender: 'both',
+      games: ['diamond', 'pearl'],
+    };
+    expect(getPokemonDisplayName('shellos', data)).toBe('Shellos');
   });
 
   it('should return empty string when no names are provided', () => {

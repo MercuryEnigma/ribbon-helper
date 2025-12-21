@@ -51,7 +51,7 @@ export default function BDSPBlending() {
         <div className="option-row">
           <div className="option-group inline">
             <label>Nature:</label>
-            <select value={nature} onChange={(e) => setNature(e.target.value)}>
+            <select value={nature} onChange={(e) => setNature(e.target.value)} autoComplete="off">
               <option value="">None (neutral nature)</option>
               {natureOptions.map((nat) => (
                 <option key={nat} value={nat}>{nat}</option>

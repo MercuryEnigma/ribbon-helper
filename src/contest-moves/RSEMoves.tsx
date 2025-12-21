@@ -555,6 +555,7 @@ export default function RSEMoves({ selectedGame, onNavigate }: RSEMovesProps) {
                 className="contest-type-select"
                 value={selectedContestType}
                 onChange={e => setSelectedContestType(e.target.value as ContestType)}
+                autoComplete="off"
               >
                 <option value="all">All Contests</option>
                 <option value="cool">Cool</option>

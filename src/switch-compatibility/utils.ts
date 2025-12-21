@@ -68,18 +68,25 @@ function shouldExcludePokemon(key: string): boolean {
 export function getPokemonDisplayName(key: string, data: PokemonData): string {
   const baseName = data.names?.en || '';
 
-  // Check for forms.en (e.g., "Alola Cap", "Hoenn Cap")
-  const formsEnName = data.forms?.en || '';
-  if (formsEnName) {
-    return `${baseName} (${formsEnName})`;
-  }
+  // Only show form information for variant forms (those with data-source)
+  // Base Pokemon entries that have forms.en are showing their default form,
+  // which should not be displayed (e.g., "Shellos (West Sea)" -> "Shellos")
+  const isVariantForm = !!data['data-source'];
 
-  // Check for form-source (e.g., "alola", "galar", "hisui")
-  const formSource = data['form-source'];
-  if (formSource) {
-    // Capitalize first letter
-    const capitalizedForm = formSource.charAt(0).toUpperCase() + formSource.slice(1);
-    return `${baseName} (${capitalizedForm})`;
+  if (isVariantForm) {
+    // Check for forms.en (e.g., "Alola Cap", "Hoenn Cap")
+    const formsEnName = data.forms?.en || '';
+    if (formsEnName) {
+      return `${baseName} (${formsEnName})`;
+    }
+
+    // Check for form-source (e.g., "alola", "galar", "hisui")
+    const formSource = data['form-source'];
+    if (formSource) {
+      // Capitalize first letter
+      const capitalizedForm = formSource.charAt(0).toUpperCase() + formSource.slice(1);
+      return `${baseName} (${capitalizedForm})`;
+    }
   }
 
   return baseName;
