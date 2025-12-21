@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useLayoutEffect, useRef } from 'react';
+import React, { useState, useMemo, useLayoutEffect, useRef, useEffect } from 'react';
 import type { PokemonDatabase } from './types';
 import { GAME_TOOLTIPS } from './types';
 import { GAME_GROUPS, filterPokemonByGames } from './utils';
@@ -18,8 +18,20 @@ export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: Availab
   const [gridHeight, setGridHeight] = useState<number | null>(null);
   const [highlightedPokemon, setHighlightedPokemon] = useState<string | null>(null);
   const [hoveredPokemon, setHoveredPokemon] = useState<{ name: string; x: number; y: number } | null>(null);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
   const gridWrapperRef = useRef<HTMLDivElement | null>(null);
   const listItemRefs = useRef<Map<string, HTMLLIElement>>(new Map());
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const toggleGame = (gameIds: string[]) => {
     setSelectedGames(prev => {
@@ -113,7 +125,7 @@ export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: Availab
                   onChange={() => toggleGame(group.ids)}
                 />
                 <span className="toggle-label">{group.name}</span>
-                {special && (
+                {special && (!isMobile || special.isLastChance) && (
                   <div className="game-tooltip-card">
                     <div className={`game-tooltip-header${special.isLastChance ? ' last-chance' : ''}`}>
                       {special.header}
@@ -122,7 +134,7 @@ export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: Availab
                   </div>
                 )}
                 <span className="toggle-track" aria-hidden="true">
-                  {allChecked && 
+                  {allChecked &&
                   (<span className="toggle-word require">✓</span>)}
                 </span>
               </label>
@@ -154,6 +166,9 @@ export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: Availab
                           alt={pokemon.name}
                           onClick={() => handlePokemonClick(pokemon.key)}
                           onMouseEnter={(e) => {
+                            // On mobile, don't show tooltips for regular pokemon (no restricted pokemon in AvailablePokemon)
+                            if (isMobile) return;
+
                             const rect = e.currentTarget.getBoundingClientRect();
                             const centerX = rect.left + rect.width / 2;
                             const viewport = typeof window !== 'undefined' ? window.innerWidth : 0;

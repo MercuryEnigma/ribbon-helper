@@ -1,4 +1,4 @@
-import { useState, useMemo, useLayoutEffect, useRef } from 'react';
+import { useState, useMemo, useLayoutEffect, useRef, useEffect } from 'react';
 import type { PokemonDatabase, PokemonData } from './types';
 import { GAME_TOOLTIPS } from './types';
 import { GAME_GROUPS, getPokemonDisplayName } from './utils';
@@ -137,8 +137,20 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
     hasSpecial: boolean;
     specialMessages: string[];
   } | null>(null);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
   const gridWrapperRef = useRef<HTMLDivElement | null>(null);
   const listItemRefs = useRef<Map<string, HTMLLIElement>>(new Map());
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const toggleGame = (gameIds: string[]) => {
     setSelectedGames(prev => {
@@ -232,7 +244,7 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
                 >
                   {option.label}
                 </button>
-                {detail && (
+                {detail && (!isMobile || detail.isLastChance) && (
                   <div className="game-tooltip-card">
                     <div className={`game-tooltip-header${detail.isLastChance ? ' last-chance' : ''}`}>
                       {detail.header}
@@ -260,7 +272,7 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
                   onChange={() => toggleGame(group.ids)}
                 />
                 <span className="toggle-label">{group.name}</span>
-                {special && (
+                {special && (!isMobile || special.isLastChance) && (
                   <div className="game-tooltip-card">
                     <div className={`game-tooltip-header${special.isLastChance ? ' last-chance' : ''}`}>
                       {special.header}
@@ -310,6 +322,11 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
                           alt={pokemon.name}
                           onClick={() => handlePokemonClick(uniqueKey)}
                           onMouseEnter={(e) => {
+                            const hasSpecialFlag = hasOverFifty || hasRestricted || isEReader;
+
+                            // On mobile, only show tooltips for special pokemon
+                            if (isMobile && !hasSpecialFlag) return;
+
                             const rect = e.currentTarget.getBoundingClientRect();
                             const centerX = rect.left + rect.width / 2;
                             const viewport = typeof window !== 'undefined' ? window.innerWidth : 0;
@@ -328,7 +345,7 @@ export default function ShadowPokemon({ pokemonDb, onPokemonSelect }: ShadowPoke
                               game: gameName,
                               x: clampedX,
                               y: rect.top,
-                              hasSpecial: hasOverFifty || hasRestricted || isEReader,
+                              hasSpecial: hasSpecialFlag,
                               specialMessages
                             });
                           }}
