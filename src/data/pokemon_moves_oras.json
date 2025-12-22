@@ -51032,6 +51032,91 @@
       }
     }
   },
+  "basculin-blue-striped": {
+    "machine-orasxy": {
+      "version": "orasxy",
+      "moves": {
+        "cut": "hm-01",
+        "surf": "hm-03",
+        "ice-beam": "tm-13",
+        "toxic": "tm-06",
+        "double-team": "tm-32",
+        "waterfall": "hm-05",
+        "rest": "tm-44",
+        "substitute": "tm-90",
+        "protect": "tm-17",
+        "swagger": "tm-87",
+        "attract": "tm-45",
+        "sleep-talk": "tm-88",
+        "return": "tm-27",
+        "frustration": "tm-21",
+        "hidden-power": "tm-10",
+        "rain-dance": "tm-18",
+        "hail": "tm-07",
+        "facade": "tm-42",
+        "taunt": "tm-12",
+        "round": "tm-48",
+        "scald": "tm-55",
+        "confide": "tm-100"
+      }
+    },
+    "machine-oras": {
+      "version": "oras",
+      "moves": {
+        "secret-power": "tm-94",
+        "dive": "hm-07"
+      }
+    },
+    "level-up-orasxy": {
+      "version": "orasxy",
+      "moves": {
+        "headbutt": 7,
+        "tackle": 1,
+        "take-down": 20,
+        "thrash": 1,
+        "double-edge": 36,
+        "tail-whip": 1,
+        "bite": 10,
+        "water-gun": 1,
+        "flail": 1,
+        "scary-face": 41,
+        "crunch": 24,
+        "uproar": 4,
+        "aqua-tail": 28,
+        "aqua-jet": 13,
+        "soak": 32,
+        "chip-away": 16,
+        "final-gambit": 50
+      }
+    },
+    "egg-orasxy": {
+      "version": "orasxy",
+      "moves": {
+        "bubble-beam": "egg",
+        "agility": "egg",
+        "rage": "egg",
+        "swift": "egg",
+        "whirlpool": "egg",
+        "revenge": "egg",
+        "muddy-water": "egg",
+        "mud-shot": "egg",
+        "brine": "egg"
+      }
+    },
+    "tutor-oras": {
+      "version": "oras",
+      "moves": {
+        "snore": "tutor",
+        "icy-wind": "tutor",
+        "uproar": "tutor",
+        "superpower": "tutor",
+        "endeavor": "tutor",
+        "bounce": "tutor",
+        "aqua-tail": "tutor",
+        "zen-headbutt": "tutor"
+      }
+    }
+  },
   "sandile": {
     "machine-orasxy": {
       "version": "orasxy",

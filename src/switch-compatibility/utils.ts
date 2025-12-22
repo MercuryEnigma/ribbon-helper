@@ -55,6 +55,12 @@ const EXCLUDED_COSMETIC_FORMS = new Set([
   'dudunsparce-three-segment',
 ]);
 
+const INCLUDED_BASE_FORMS = new Set([
+  'wormadam',
+  'lycanroc',
+  'moewstic',
+  'basculin']);
+
 /**
  * Check if a Pokemon key should be excluded from listings
  */
@@ -70,7 +76,7 @@ export function getPokemonDisplayName(key: string, data: PokemonData): string {
 
   // Special cases: Base forms that should show their form name to match variant forms
   // (e.g., Wormadam (Plant Cloak), Lycanroc (Midday Form))
-  if ((key === 'wormadam' || key === 'lycanroc' || key === 'meowstic') && data.forms?.en) {
+  if ((INCLUDED_BASE_FORMS.has(key)) && data.forms?.en) {
     return `${baseName} (${data.forms.en})`;
   }
 

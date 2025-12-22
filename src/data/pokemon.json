@@ -28359,7 +28359,25 @@
       "ko": "청색근의 모습",
       "zh-Hans": "蓝条纹的样子",
       "zh-Hant": "藍條紋的樣子"
-    }
+    },
+    "games": [
+      "black",
+      "white",
+      "black2",
+      "white2",
+      "x",
+      "y",
+      "or",
+      "as",
+      "usun",
+      "umoon",
+      "sw",
+      "sh",
+      "sun",
+      "moon",
+      "scar",
+      "vio"
+    ]
   },
   "basculin-white-striped": {
     "data-source": "basculin",
