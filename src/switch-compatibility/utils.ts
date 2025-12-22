@@ -41,6 +41,8 @@ export const GENERATION_ORDER = ['Gen 3', 'Gen 4', 'Gen 5', 'Gen 6', 'VC', 'Gen 
 export const EXCLUDED_GO_POKEMON = new Set([
   'pichu-spiky-eared',
   'spinda',
+  'greninja-ash',
+  'magearna-original',
   'pikachu-cosplay',
   'pikachu-cosplay-belle',
   'pikachu-cosplay-libre',
