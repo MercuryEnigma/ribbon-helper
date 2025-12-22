@@ -68,6 +68,12 @@ function shouldExcludePokemon(key: string): boolean {
 export function getPokemonDisplayName(key: string, data: PokemonData): string {
   const baseName = data.names?.en || '';
 
+  // Special cases: Base forms that should show their form name to match variant forms
+  // (e.g., Wormadam (Plant Cloak), Lycanroc (Midday Form))
+  if ((key === 'wormadam' || key === 'lycanroc' || key === 'meowstic') && data.forms?.en) {
+    return `${baseName} (${data.forms.en})`;
+  }
+
   // Only show form information for variant forms (those with data-source)
   // Base Pokemon entries that have forms.en are showing their default form,
   // which should not be displayed (e.g., "Shellos (West Sea)" -> "Shellos")

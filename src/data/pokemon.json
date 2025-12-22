@@ -22929,6 +22929,7 @@
       "y",
       "or",
       "as",
+      "pla",
       "sun",
       "moon",
       "usun",
@@ -22949,7 +22950,29 @@
       "zh-Hans": "砂土蓑衣",
       "zh-Hant": "砂土蓑衣"
     },
-    "evolvesFrom": "burmy-trash"
+    "games": [
+      "diamond",
+      "pearl",
+      "platinum",
+      "bd",
+      "sp",
+      "hg",
+      "ss",
+      "black",
+      "white",
+      "black2",
+      "white2",
+      "x",
+      "y",
+      "or",
+      "as",
+      "pla",
+      "sun",
+      "moon",
+      "usun",
+      "umoon"
+    ],
+    "evolvesFrom": "burmy"
   },
   "wormadam-trash": {
     "data-source": "wormadam",
@@ -22963,7 +22986,30 @@
       "ko": "슈레도롱",
       "zh-Hans": "垃圾蓑衣",
       "zh-Hant": "垃圾蓑衣"
-    }
+    },
+    "games": [
+      "diamond",
+      "pearl",
+      "platinum",
+      "bd",
+      "sp",
+      "hg",
+      "ss",
+      "black",
+      "white",
+      "black2",
+      "white2",
+      "x",
+      "y",
+      "or",
+      "as",
+      "pla",
+      "sun",
+      "moon",
+      "usun",
+      "umoon"
+    ],
+    "evolvesFrom": "burmy"
   },
   "mothim": {
     "names": {
@@ -33375,6 +33421,17 @@
       "zh-Hans": "超能妙喵",
       "zh-Hant": "超能妙喵"
     },
+    "forms": {
+      "en": "Male",
+      "es-es": "Macho",
+      "fr": "Mâle",
+      "de": "Männlich",
+      "it": "Maschio",
+      "ja": "オス",
+      "ko": "수컷",
+      "zh-Hans": "雄性",
+      "zh-Hant": "雄性"
+    },
     "gender": "both",
     "femsprite": true,
     "natdex": 678,
@@ -33395,6 +33452,36 @@
     ],
     "evolvesFrom": "espurr"
   },
+  "meowstic-f": {
+    "data-source": "meowstic",
+    "forms": {
+      "en": "Female",
+      "es-es": "Hembra",
+      "fr": "Femelle",
+      "de": "Weiblich",
+      "it": "Femmina",
+      "ja": "メス",
+      "ko": "암컷",
+      "zh-Hans": "雌性",
+      "zh-Hant": "雌性"
+    },
+    "games": [
+      "x",
+      "y",
+      "or",
+      "as",
+      "sw",
+      "sh",
+      "sun",
+      "moon",
+      "usun",
+      "umoon",
+      "scar",
+      "vio",
+      "plza"
+    ],
+    "evolvesFrom": "espurr"
+    },
   "honedge": {
     "names": {
       "en": "Honedge",
@@ -35592,7 +35679,18 @@
       "ko": "황혼의 모습",
       "zh-Hans": "黄昏的样子",
       "zh-Hant": "黃昏的樣子"
-    }
+    },
+    "games": [
+      "sun",
+      "moon",
+      "usun",
+      "umoon",
+      "sw",
+      "sh",
+      "scar",
+      "vio"
+    ],
+    "evolvesFrom": "rockruff"
   },
   "lycanroc-midnight": {
     "data-source": "lycanroc",
@@ -35606,7 +35704,16 @@
       "ko": "한밤중의 모습",
       "zh-Hans": "黑夜的样子",
       "zh-Hant": "黑夜的樣子"
-    }
+    },
+    "games": [
+      "usun",
+      "umoon",
+      "sw",
+      "sh",
+      "scar",
+      "vio"
+    ],
+    "evolvesFrom": "rockruff"
   },
   "wishiwashi": {
     "names": {

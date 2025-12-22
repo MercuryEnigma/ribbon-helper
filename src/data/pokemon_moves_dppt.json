@@ -37699,13 +37699,59 @@
         "attract": 41,
         "hidden-power": 20,
         "leaf-storm": 47,
-        "captivate": 35,
+        "captivate": 35
+      }
+    },
+    "level-up-hgsspt": {
+      "version": "hgsspt",
+      "moves": {
+        "bug-bite": 15
+      }
+    },
+    "tutor-hgss": {
+      "version": "hgss",
+      "moves": {
+        "string-shot": "tutor",
+        "snore": "tutor",
+        "synthesis": "tutor",
+        "uproar": "tutor",
+        "endeavor": "tutor",
+        "signal-beam": "tutor",
+        "worry-seed": "tutor",
+        "sucker-punch": "tutor",
+        "seed-bomb": "tutor",
+        "bug-bite": "tutor"
+      }
+    },
+    "tutor-hgsspt": {
+      "version": "hgsspt",
+      "moves": {
+        "snore": "tutor",
+        "synthesis": "tutor",
+        "uproar": "tutor",
+        "endeavor": "tutor",
+        "signal-beam": "tutor",
+        "sucker-punch": "tutor",
+        "seed-bomb": "tutor"
+      }
+    }
+  },
+  "wormadam-sandy": {
+    "level-up-dphgsspt": {
+      "version": "dphgsspt",
+      "moves": {
+        "tackle": 1,
+        "psybeam": 32,
         "fissure": 47,
+        "confusion": 23,
+        "psychic": 44,
         "harden": 29,
+        "flail": 38,
+        "protect": 10,
+        "attract": 41,
+        "hidden-power": 20,
         "rock-blast": 26,
-        "metal-sound": 29,
-        "mirror-shot": 26,
-        "iron-head": 47
+        "captivate": 35
       }
     },
     "level-up-hgsspt": {
@@ -37718,7 +37764,7 @@
       "version": "dphgsspt",
       "moves": {
         "hyper-beam": "tm-15",
-        "solar-beam": "tm-22",
+        "earthquake": "tm-26",
         "dig": "tm-28",
         "toxic": "tm-06",
         "psychic": "tm-29",
@@ -37729,7 +37775,7 @@
         "substitute": "tm-90",
         "thief": "tm-46",
         "protect": "tm-17",
-        "giga-drain": "tm-19",
+        "sandstorm": "tm-37",
         "endure": "tm-58",
         "swagger": "tm-87",
         "attract": "tm-45",
@@ -37745,25 +37791,24 @@
         "facade": "tm-42",
         "skill-swap": "tm-48",
         "secret-power": "tm-43",
-        "bullet-seed": "tm-09",
-        "natural-gift": "tm-83",
-        "energy-ball": "tm-53",
-        "giga-impact": "tm-68",
-        "captivate": "tm-78",
-        "grass-knot": "tm-86",
-        "earthquake": "tm-26",
-        "sandstorm": "tm-37",
         "rock-tomb": "tm-39",
-        "stealth-rock": "tm-76",
-        "gyro-ball": "tm-74",
-        "flash-cannon": "tm-91"
+        "natural-gift": "tm-83",
+        "giga-impact": "tm-68",
+        "captivate": "tm-78"
       }
     },
     "tutor-hgss": {
       "version": "hgss",
       "moves": {
         "string-shot": "tutor",
-        "worry-seed": "tutor",
+        "snore": "tutor",
+        "mud-slap": "tutor",
+        "rollout": "tutor",
+        "uproar": "tutor",
+        "endeavor": "tutor",
+        "signal-beam": "tutor",
+        "sucker-punch": "tutor",
+        "earth-power": "tutor",
         "bug-bite": "tutor"
       }
     },
@@ -37771,16 +37816,101 @@
       "version": "hgsspt",
       "moves": {
         "snore": "tutor",
-        "synthesis": "tutor",
+        "mud-slap": "tutor",
+        "rollout": "tutor",
         "uproar": "tutor",
         "endeavor": "tutor",
         "signal-beam": "tutor",
         "sucker-punch": "tutor",
-        "seed-bomb": "tutor",
-        "mud-slap": "tutor",
-        "rollout": "tutor",
-        "earth-power": "tutor",
+        "earth-power": "tutor"
+      }
+    }
+  },
+  "wormadam-trash": {
+    "level-up-dphgsspt": {
+      "version": "dphgsspt",
+      "moves": {
+        "tackle": 1,
+        "psybeam": 32,
+        "confusion": 23,
+        "psychic": 44,
+        "flail": 38,
+        "protect": 10,
+        "attract": 41,
+        "hidden-power": 20,
+        "metal-sound": 29,
+        "mirror-shot": 26,
+        "iron-head": 47,
+        "captivate": 35
+      }
+    },
+    "level-up-hgsspt": {
+      "version": "hgsspt",
+      "moves": {
+        "bug-bite": 15
+      }
+    },
+    "machine-dphgsspt": {
+      "version": "dphgsspt",
+      "moves": {
+        "hyper-beam": "tm-15",
+        "toxic": "tm-06",
+        "psychic": "tm-29",
+        "double-team": "tm-32",
+        "dream-eater": "tm-85",
+        "flash": "tm-70",
+        "rest": "tm-44",
+        "substitute": "tm-90",
+        "thief": "tm-46",
+        "protect": "tm-17",
+        "endure": "tm-58",
+        "swagger": "tm-87",
+        "attract": "tm-45",
+        "sleep-talk": "tm-82",
+        "return": "tm-27",
+        "frustration": "tm-21",
+        "safeguard": "tm-20",
+        "hidden-power": "tm-10",
+        "rain-dance": "tm-18",
+        "sunny-day": "tm-11",
+        "psych-up": "tm-77",
+        "shadow-ball": "tm-30",
+        "facade": "tm-42",
+        "skill-swap": "tm-48",
+        "secret-power": "tm-43",
+        "gyro-ball": "tm-74",
+        "natural-gift": "tm-83",
+        "giga-impact": "tm-68",
+        "flash-cannon": "tm-91",
+        "captivate": "tm-78",
+        "stealth-rock": "tm-76"
+      }
+    },
+    "tutor-hgss": {
+      "version": "hgss",
+      "moves": {
+        "string-shot": "tutor",
+        "snore": "tutor",
+        "uproar": "tutor",
+        "endeavor": "tutor",
+        "signal-beam": "tutor",
         "iron-defense": "tutor",
+        "sucker-punch": "tutor",
+        "magnet-rise": "tutor",
+        "gunk-shot": "tutor",
+        "iron-head": "tutor",
+        "bug-bite": "tutor"
+      }
+    },
+    "tutor-hgsspt": {
+      "version": "hgsspt",
+      "moves": {
+        "snore": "tutor",
+        "uproar": "tutor",
+        "endeavor": "tutor",
+        "signal-beam": "tutor",
+        "iron-defense": "tutor",
+        "sucker-punch": "tutor",
         "magnet-rise": "tutor",
         "gunk-shot": "tutor",
         "iron-head": "tutor"

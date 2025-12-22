@@ -1916,6 +1916,16 @@
         "nuzzle": 29
       }
     },
+    "special-oras": {
+      "version": "oras",
+      "moves": {
+        "meteor-mash": "rockstar",
+        "icicle-crash": "belle",
+        "flying-press": "libre",
+        "draining-kiss": "popstar",
+        "electric-terrain": "phd"
+      }
+    },
     "machine-oras": {
       "version": "oras",
       "moves": {
@@ -38486,21 +38496,127 @@
         "hidden-power": 20,
         "leaf-storm": 47,
         "captivate": 35,
-        "bug-bite": 15,
+        "bug-bite": 15
+      }
+    },
+    "tutor-oras": {
+      "version": "oras",
+      "moves": {
+        "snore": "tutor",
+        "giga-drain": "tutor",
+        "synthesis": "tutor",
+        "uproar": "tutor",
+        "endeavor": "tutor",
+        "skill-swap": "tutor",
+        "signal-beam": "tutor",
+        "worry-seed": "tutor",
+        "seed-bomb": "tutor",
+        "bug-bite": "tutor",
+        "electroweb": "tutor"
+      }
+    }
+  },
+  "wormadam-sandy": {
+    "level-up-orasxy": {
+      "version": "orasxy",
+      "moves": {
+        "tackle": 1,
+        "psybeam": 32,
         "fissure": 47,
+        "confusion": 23,
+        "psychic": 44,
         "harden": 29,
+        "flail": 38,
+        "protect": 10,
+        "attract": 41,
+        "hidden-power": 20,
         "rock-blast": 26,
-        "metal-sound": 29,
-        "mirror-shot": 26,
-        "iron-head": 47
+        "captivate": 35,
+        "bug-bite": 15
       }
     },
     "machine-orasxy": {
       "version": "orasxy",
       "moves": {
         "hyper-beam": "tm-15",
-        "solar-beam": "tm-22",
+        "earthquake": "tm-26",
         "dig": "tm-28",
+        "toxic": "tm-06",
+        "psychic": "tm-29",
+        "double-team": "tm-32",
+        "dream-eater": "tm-85",
+        "flash": "tm-70",
+        "rest": "tm-44",
+        "substitute": "tm-90",
+        "thief": "tm-46",
+        "protect": "tm-17",
+        "sandstorm": "tm-37",
+        "swagger": "tm-87",
+        "attract": "tm-45",
+        "sleep-talk": "tm-88",
+        "return": "tm-27",
+        "frustration": "tm-21",
+        "safeguard": "tm-20",
+        "hidden-power": "tm-10",
+        "rain-dance": "tm-18",
+        "sunny-day": "tm-11",
+        "psych-up": "tm-77",
+        "shadow-ball": "tm-30",
+        "facade": "tm-42",
+        "rock-tomb": "tm-39",
+        "giga-impact": "tm-68",
+        "venoshock": "tm-09",
+        "round": "tm-48",
+        "struggle-bug": "tm-76",
+        "bulldoze": "tm-78",
+        "confide": "tm-100",
+        "infestation": "tm-83"
+      }
+    },
+    "machine-oras": {
+      "version": "oras",
+      "moves": {
+        "secret-power": "tm-94"
+      }
+    },
+    "tutor-oras": {
+      "version": "oras",
+      "moves": {
+        "snore": "tutor",
+        "uproar": "tutor",
+        "endeavor": "tutor",
+        "skill-swap": "tutor",
+        "signal-beam": "tutor",
+        "earth-power": "tutor",
+        "stealth-rock": "tutor",
+        "bug-bite": "tutor",
+        "electroweb": "tutor"
+      }
+    }
+  },
+  "wormadam-trash": {
+    "level-up-orasxy": {
+      "version": "orasxy",
+      "moves": {
+        "tackle": 1,
+        "psybeam": 32,
+        "confusion": 23,
+        "psychic": 44,
+        "flail": 38,
+        "protect": 10,
+        "attract": 41,
+        "hidden-power": 20,
+        "metal-sound": 29,
+        "mirror-shot": 26,
+        "iron-head": 47,
+        "captivate": 35,
+        "bug-bite": 15
+      }
+    },
+    "machine-orasxy": {
+      "version": "orasxy",
+      "moves": {
+        "hyper-beam": "tm-15",
         "toxic": "tm-06",
         "psychic": "tm-29",
         "double-team": "tm-32",
@@ -38522,20 +38638,14 @@
         "psych-up": "tm-77",
         "shadow-ball": "tm-30",
         "facade": "tm-42",
-        "energy-ball": "tm-53",
+        "gyro-ball": "tm-74",
         "giga-impact": "tm-68",
-        "grass-knot": "tm-86",
+        "flash-cannon": "tm-91",
         "venoshock": "tm-09",
         "round": "tm-48",
         "struggle-bug": "tm-76",
         "confide": "tm-100",
-        "infestation": "tm-83",
-        "earthquake": "tm-26",
-        "sandstorm": "tm-37",
-        "rock-tomb": "tm-39",
-        "bulldoze": "tm-78",
-        "gyro-ball": "tm-74",
-        "flash-cannon": "tm-91"
+        "infestation": "tm-83"
       }
     },
     "machine-oras": {
@@ -38548,22 +38658,17 @@
       "version": "oras",
       "moves": {
         "snore": "tutor",
-        "giga-drain": "tutor",
-        "synthesis": "tutor",
         "uproar": "tutor",
         "endeavor": "tutor",
         "skill-swap": "tutor",
         "signal-beam": "tutor",
-        "worry-seed": "tutor",
-        "seed-bomb": "tutor",
-        "bug-bite": "tutor",
-        "electroweb": "tutor",
-        "earth-power": "tutor",
-        "stealth-rock": "tutor",
         "iron-defense": "tutor",
         "magnet-rise": "tutor",
         "gunk-shot": "tutor",
-        "iron-head": "tutor"
+        "iron-head": "tutor",
+        "stealth-rock": "tutor",
+        "bug-bite": "tutor",
+        "electroweb": "tutor"
       }
     }
   },
@@ -62653,6 +62758,104 @@
         "heal-bell": "tutor",
         "iron-tail": "tutor",
         "helping-hand": "tutor",
+        "trick": "tutor",
+        "role-play": "tutor",
+        "magic-coat": "tutor",
+        "recycle": "tutor",
+        "snatch": "tutor",
+        "signal-beam": "tutor",
+        "covet": "tutor",
+        "shock-wave": "tutor",
+        "gravity": "tutor",
+        "zen-headbutt": "tutor",
+        "wonder-room": "tutor",
+        "magic-room": "tutor"
+      }
+    }
+  },
+  "meowstic-f": {
+    "level-up-orasxy": {
+      "version": "orasxy",
+      "moves": {
+        "scratch": 1,
+        "leer": 1,
+        "psybeam": 17,
+        "confusion": 9,
+        "psychic": 40,
+        "light-screen": 13,
+        "shadow-ball": 31,
+        "future-sight": 50,
+        "fake-out": 19,
+        "role-play": 43,
+        "signal-beam": 45,
+        "extrasensory": 35,
+        "covet": 5,
+        "magical-leaf": 1,
+        "me-first": 1,
+        "sucker-punch": 48,
+        "charge-beam": 28,
+        "psyshock": 25,
+        "stored-power": 53,
+        "disarming-voice": 22
+      }
+    },
+    "machine-orasxy": {
+      "version": "orasxy",
+      "moves": {
+        "cut": "hm-01",
+        "hyper-beam": "tm-15",
+        "thunderbolt": "tm-24",
+        "thunder-wave": "tm-73",
+        "dig": "tm-28",
+        "toxic": "tm-06",
+        "psychic": "tm-29",
+        "double-team": "tm-32",
+        "light-screen": "tm-16",
+        "reflect": "tm-33",
+        "dream-eater": "tm-85",
+        "flash": "tm-70",
+        "rest": "tm-44",
+        "substitute": "tm-90",
+        "protect": "tm-17",
+        "swagger": "tm-87",
+        "attract": "tm-45",
+        "sleep-talk": "tm-88",
+        "return": "tm-27",
+        "frustration": "tm-21",
+        "safeguard": "tm-20",
+        "hidden-power": "tm-10",
+        "rain-dance": "tm-18",
+        "sunny-day": "tm-11",
+        "psych-up": "tm-77",
+        "shadow-ball": "tm-30",
+        "torment": "tm-41",
+        "facade": "tm-42",
+        "calm-mind": "tm-04",
+        "payback": "tm-66",
+        "dark-pulse": "tm-97",
+        "energy-ball": "tm-53",
+        "giga-impact": "tm-68",
+        "trick-room": "tm-92",
+        "charge-beam": "tm-57",
+        "psyshock": "tm-03",
+        "round": "tm-48",
+        "echoed-voice": "tm-49",
+        "confide": "tm-100",
+        "power-up-punch": "tm-98"
+      }
+    },
+    "machine-oras": {
+      "version": "oras",
+      "moves": {
+        "secret-power": "tm-94"
+      }
+    },
+    "tutor-oras": {
+      "version": "oras",
+      "moves": {
+        "snore": "tutor",
+        "heal-bell": "tutor",
+        "iron-tail": "tutor",
         "trick": "tutor",
         "role-play": "tutor",
         "magic-coat": "tutor",
