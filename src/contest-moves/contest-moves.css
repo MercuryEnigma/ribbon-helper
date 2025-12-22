@@ -107,12 +107,12 @@
 
 .contest-layout {
   display: grid;
-  grid-template-columns: 55% 1fr;
+  grid-template-columns: 1fr 55%;
   gap: 1.5rem;
   align-items: stretch;
 }
 
-/* Moves Section (Left) */
+/* Moves Section (Right) */
 .contest-moves-section {
   display: flex;
   flex-direction: column;
@@ -353,7 +353,7 @@
   text-align: center;
 }
 
-/* Pokemon Selector Section (Right) */
+/* Pokemon Selector Section (Left) */
 .pokemon-selector-section {
   display: flex;
   flex-direction: column;

@@ -393,117 +393,6 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
   return (
     <div className="rse-contest-moves">
       <div className="contest-layout">
-        <div className="contest-moves-section">
-          <div className="contest-mode-selector">
-            <button
-              className="nav-arrow nav-arrow-left"
-              aria-label="Previous"
-              onClick={handlePrevious}>
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                <polygon points="15,6 9,12 15,18"/>
-              </svg>
-            </button>
-            <NavLink
-              to={selectedPokemon ? `/contest-moves/rse?p=${selectedPokemon}` : '/contest-moves/rse'}
-              className={({ isActive }) => isActive ? 'active' : ''}
-            >
-              RSE
-            </NavLink>
-            <NavLink
-              to={selectedPokemon ? `/contest-moves/dppt?p=${selectedPokemon}` : '/contest-moves/dppt'}
-              className={({ isActive }) => isActive ? 'active' : ''}
-            >
-              DPPt
-            </NavLink>
-            <NavLink
-              to={selectedPokemon ? `/contest-moves/oras?p=${selectedPokemon}` : '/contest-moves/oras'}
-              className={({ isActive }) => isActive ? 'active' : ''}
-            >
-              ORAS
-            </NavLink>
-            <NavLink
-              to={selectedPokemon ? `/contest-moves/bdsp?p=${selectedPokemon}` : '/contest-moves/bdsp'}
-              className={({ isActive }) => isActive ? 'active' : ''}
-            >
-              BDSP
-            </NavLink>
-            <button
-              className="nav-arrow nav-arrow-right"
-              aria-label="Next"
-              onClick={handleNext}>
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                <polygon points="9,6 15,12 9,18"/>
-              </svg>
-            </button>
-          </div>
-          <div
-            className="moves-container"
-            onClick={(e) => {
-              if (e.target === e.currentTarget) {
-                setSelectedMoveIndex(null);
-              }
-            }}
-          >
-            {optimalMoves && optimalMoves.length > 0 ? (
-              <>
-                <div className="moves-list">
-                  {optimalMoves.map((contestMove, index) => (
-                    <div
-                      key={index}
-                      className={`move-row move-type-${contestMove.type} ${selectedMoveIndex === index ? 'selected' : ''}`}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setSelectedMoveIndex(index);
-                      }}
-                    >
-                      <div className="move-type-badge">{contestMove.type.toUpperCase()}</div>
-                      <div className="move-name">{contestMove.move.replace(/-/g, ' ')}</div>
-                      <div className="move-value">{contestMove.appeal}</div>
-                    </div>
-                  ))}
-                </div>
-                {selectedMoveName && selectedMoveEffect && (
-                  <div className="move-details" onClick={(e) => e.stopPropagation()}>
-                    <div className="move-details-header">
-                      <div className="move-details-methods">
-                        <span className="move-details-methods-text">{selectedMoveLearnMethods}</span>
-                      </div>
-                      {selectedMoveEffect.star === 1 && (
-                        <div className="move-details-star">
-                          <span>⭐</span>
-                        </div>
-                      )}
-                      <div className="move-details-appeal">
-                        {Array.from({ length: selectedMoveEffect.appeal ?? selectedMoveDisplay?.appeal ?? 0 }).map((_, i) => (
-                          <span key={i}>❤️</span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="move-details-description">
-                      {selectedMoveEffect.flavor_text && (
-                        <p className="move-details-flavor">{selectedMoveEffect.flavor_text}</p>
-                      )}
-                      {selectedMoveEffect.effect_description &&
-                       selectedMoveEffect.effect_description !== selectedMoveEffect.flavor_text && (
-                        <p className="move-details-effect">{selectedMoveEffect.effect_description}</p>
-                      )}
-                      {matchingEffectMoves.length > 0 && (
-                        <p className="move-details-related">
-                          {matchingEffectMoves.join(', ')}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                )}
-              </>
-            ) : (
-              <div className="no-moves">
-                {selectedPokemon ? 'No contest moves available' : 'Select a Pokémon'}
-              </div>
-            )}
-          </div>
-        </div>
-
         <div className="pokemon-selector-section">
           <div className="pokemon-selector-bar">
             <div className="pokemon-search-input-wrapper">
@@ -713,6 +602,117 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
                 );
               })}
             </div>
+          </div>
+        </div>
+
+        <div className="contest-moves-section">
+          <div className="contest-mode-selector">
+            <button
+              className="nav-arrow nav-arrow-left"
+              aria-label="Previous"
+              onClick={handlePrevious}>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="15,6 9,12 15,18"/>
+              </svg>
+            </button>
+            <NavLink
+              to={selectedPokemon ? `/contest-moves/rse?p=${selectedPokemon}` : '/contest-moves/rse'}
+              className={({ isActive }) => isActive ? 'active' : ''}
+            >
+              RSE
+            </NavLink>
+            <NavLink
+              to={selectedPokemon ? `/contest-moves/dppt?p=${selectedPokemon}` : '/contest-moves/dppt'}
+              className={({ isActive }) => isActive ? 'active' : ''}
+            >
+              DPPt
+            </NavLink>
+            <NavLink
+              to={selectedPokemon ? `/contest-moves/oras?p=${selectedPokemon}` : '/contest-moves/oras'}
+              className={({ isActive }) => isActive ? 'active' : ''}
+            >
+              ORAS
+            </NavLink>
+            <NavLink
+              to={selectedPokemon ? `/contest-moves/bdsp?p=${selectedPokemon}` : '/contest-moves/bdsp'}
+              className={({ isActive }) => isActive ? 'active' : ''}
+            >
+              BDSP
+            </NavLink>
+            <button
+              className="nav-arrow nav-arrow-right"
+              aria-label="Next"
+              onClick={handleNext}>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="9,6 15,12 9,18"/>
+              </svg>
+            </button>
+          </div>
+          <div
+            className="moves-container"
+            onClick={(e) => {
+              if (e.target === e.currentTarget) {
+                setSelectedMoveIndex(null);
+              }
+            }}
+          >
+            {optimalMoves && optimalMoves.length > 0 ? (
+              <>
+                <div className="moves-list">
+                  {optimalMoves.map((contestMove, index) => (
+                    <div
+                      key={index}
+                      className={`move-row move-type-${contestMove.type} ${selectedMoveIndex === index ? 'selected' : ''}`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedMoveIndex(index);
+                      }}
+                    >
+                      <div className="move-type-badge">{contestMove.type.toUpperCase()}</div>
+                      <div className="move-name">{contestMove.move.replace(/-/g, ' ')}</div>
+                      <div className="move-value">{contestMove.appeal}</div>
+                    </div>
+                  ))}
+                </div>
+                {selectedMoveName && selectedMoveEffect && (
+                  <div className="move-details" onClick={(e) => e.stopPropagation()}>
+                    <div className="move-details-header">
+                      <div className="move-details-methods">
+                        <span className="move-details-methods-text">{selectedMoveLearnMethods}</span>
+                      </div>
+                      {selectedMoveEffect.star === 1 && (
+                        <div className="move-details-star">
+                          <span>⭐</span>
+                        </div>
+                      )}
+                      <div className="move-details-appeal">
+                        {Array.from({ length: selectedMoveEffect.appeal ?? selectedMoveDisplay?.appeal ?? 0 }).map((_, i) => (
+                          <span key={i}>❤️</span>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="move-details-description">
+                      {selectedMoveEffect.flavor_text && (
+                        <p className="move-details-flavor">{selectedMoveEffect.flavor_text}</p>
+                      )}
+                      {selectedMoveEffect.effect_description &&
+                       selectedMoveEffect.effect_description !== selectedMoveEffect.flavor_text && (
+                        <p className="move-details-effect">{selectedMoveEffect.effect_description}</p>
+                      )}
+                      {matchingEffectMoves.length > 0 && (
+                        <p className="move-details-related">
+                          {matchingEffectMoves.join(', ')}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </>
+            ) : (
+              <div className="no-moves">
+                {selectedPokemon ? 'No contest moves available' : 'Select a Pokémon'}
+              </div>
+            )}
           </div>
         </div>
       </div>
