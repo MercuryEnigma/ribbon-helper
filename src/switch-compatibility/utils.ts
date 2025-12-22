@@ -38,6 +38,28 @@ export const GAME_GROUPS = gameGroups;
 // Generation order for dropdown and selection
 export const GENERATION_ORDER = ['Gen 3', 'Gen 4', 'Gen 5', 'Gen 6', 'VC', 'Gen 7', 'GO', 'Switch'] as const;
 
+export const EXCLUDED_GO_POKEMON = new Set([
+  'pichu-spiky-eared',
+  'spinda',
+  'pikachu-cosplay',
+  'pikachu-cosplay-belle',
+  'pikachu-cosplay-libre',
+  'pikachu-cosplay-phd',
+  'pikachu-cosplay-popstar',
+  'pikachu-cosplay-rockstar',
+  'pikachu-original-cap',
+  'pikachu-hoenn-cap',
+  'pikachu-sinnoh-cap',
+  'pikachu-unova-cap',
+  'pikachu-kalos-cap',
+  'pikachu-alola-cap',
+  'pikachu-partner-cap',
+  'pikachu-world-cap',
+  'floette-eternal',
+  'koraidon-ride',
+  'miraidon-ride',
+]);
+
 /**
  * List of Pokemon forms that should be excluded from listings
  * These are cosmetic variations that have the same game availability as their base forms
@@ -420,7 +442,8 @@ export function searchPokemonByName(
  */
 export function getAvailableGenerations(
   pokemonData: PokemonData | null,
-  pokemonDb: PokemonDatabase
+  pokemonDb: PokemonDatabase,
+  pokemonKey: string
 ): Set<string> {
   if (!pokemonData) return new Set<string>();
 
@@ -435,10 +458,12 @@ export function getAvailableGenerations(
   })();
 
   const generations = new Set<string>();
-  const switchGames = ['lgpe', 'lgp', 'lge', 'swsh', 'sw', 'sh', 'bdsp', 'bd', 'sp', 'pla', 'sv', 'scar', 'vio', ...(ENABLE_PLZA ? ['plza'] : [])];
+  // const switchGames = ['lgpe', 'lgp', 'lge', 'swsh', 'sw', 'sh', 'bdsp', 'bd', 'sp', 'pla', 'sv', 'scar', 'vio', ...(ENABLE_PLZA ? ['plza'] : [])];
+  const switchGames = ['lgpe', 'lgp', 'lge', 'swsh', 'sw', 'sh', 'bdsp', 'bd', 'sp', 'pla', 'sv', 'scar', 'vio'];
 
-  // GO is always available for all Pokemon
-  generations.add('GO');
+  if (!EXCLUDED_GO_POKEMON.has(pokemonKey)) {
+    generations.add('GO');
+  }
 
   for (const gameId of gameIds) {
     const gameEntry = (games as any)[gameId];

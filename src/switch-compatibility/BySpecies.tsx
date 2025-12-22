@@ -142,7 +142,7 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
 
   // Calculate available generations based on Pokemon's games
   const availableGenerations = useMemo(() => {
-    const gens = getAvailableGenerations(selectedPokemonData, pokemonDb);
+    const gens = getAvailableGenerations(selectedPokemonData, pokemonDb, selectedPokemon);
     if (ENABLE_PLZA && selectedPokemonData?.games?.includes('plza')) {
       gens.add('PLZA');
     }
