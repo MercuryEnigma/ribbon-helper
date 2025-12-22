@@ -351,6 +351,8 @@
   font-size: 0.7rem;
   color: #555;
   text-align: center;
+  margin-top: auto;
+  align-self: center;
 }
 
 /* Pokemon Selector Section (Left) */
@@ -875,6 +877,8 @@
 
   .move-details-related {
     font-size: 0.65rem;
+    margin-top: auto;
+    align-self: center;
   }
 
   /* Pokemon display */
@@ -950,4 +954,16 @@
   .learn-methods-grid.three-columns {
     grid-template-columns: 1fr;
   }
+}
+
+.contest-move-list-note {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #4a2a12;
+  text-align: center;
+}
+
+.contest-move-list-note a {
+  font-weight: 700;
+  text-decoration: underline;
 }

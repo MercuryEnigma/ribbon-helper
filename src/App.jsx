@@ -55,6 +55,8 @@ export default function App() {
     return []
   }
 
+  const isContestMovesPage = location.pathname.includes('/contest-moves')
+
   return (
     <div className="app">
       <header className="header">
@@ -99,6 +101,16 @@ export default function App() {
             <Route path="/visual-decoration/*" element={<VisualDecoration />} />
             <Route path="*" element={<Navigate to="/game-compatibility" replace />} />
           </Routes>
+
+          {isContestMovesPage && (
+            <div className="contest-move-list-note">
+              Want to see all possible contest moves by effect? Check out{' '}
+              <a href="https://armastide.net/celeste/ribbonguide/contest-widget" target="_blank" rel="noopener noreferrer">
+                Contest Move List 
+              </a>
+              &nbsp;by Kiki.
+            </div>
+          )}
 
           <Acknowledgements pageSpecific={getAcknowledgements()} />
         </section>
