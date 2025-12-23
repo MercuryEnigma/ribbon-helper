@@ -9,8 +9,8 @@ type AcquisitionMethodOption = {
 
 const ACQUISITION_METHODS: AcquisitionMethodOption[] = [
   { label: 'Champion', values: ['champion-final'] },
-  { label: 'Contest Show master', values: ['contest-showmaster'] },
-  { label: 'Fashionista', values: ['style-shop'] },
+  { label: 'Contest master', values: ['contest-showmaster'] },
+  { label: 'Style shop', values: ['style-shop'] },
   {
     label: 'Around Sinnoh',
     values: ['canalave-city', 'route-206', 'route-209', 'route-213', 'snowpoint-city', 'starter-locale', 'super-contest-hall']
@@ -21,16 +21,16 @@ const ACQUISITION_METHODS: AcquisitionMethodOption[] = [
   { label: 'Flower shop', values: ['flower-shop'] },
   // Default unselected
   { label: 'Gym rematch', values: ['gym-rematch'] },
-  { label: 'Amity square', values: ['amity-square'] },
-  { label: 'Massage Girl', values: ['massage-girl'] },
+  { label: 'Amity Square', values: ['amity-square'] },
+  { label: 'Massage girl', values: ['massage-girl'] },
   { label: 'Jubilife TV', values: ['jubilife-tv'] }
 ];
 
-// Default enabled methods: all except Jubilife TV, Amity square, Gym rematch, Massage Girl
+// Default enabled methods: all except Jubilife TV, Amity Square, Gym rematch, Massage girl
 const DEFAULT_ENABLED = new Set([
   'Champion',
-  'Contest Show master',
-  'Fashionista',
+  'Contest master',
+  'Style shop',
   'Around Sinnoh',
   'Sunyshore market',
   'Flower shop',
@@ -147,7 +147,7 @@ export default function BDSPStickers() {
         </div>
 
         <div className="acquisition-methods">
-          <label className="control-label">Acquisition Methods:</label>
+          <label className="control-label">Where to find:</label>
           <div className="method-checkboxes">
             {ACQUISITION_METHODS.map((method) => (
               <label key={method.label} className="method-checkbox">
@@ -212,7 +212,7 @@ export default function BDSPStickers() {
           ))
         ) : (
           <div className="no-stickers">
-            No stickers available with the selected acquisition methods.
+            No stickers available with the selected locations.
           </div>
         )}
       </div>

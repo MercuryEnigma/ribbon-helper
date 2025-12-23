@@ -10,18 +10,18 @@ type AcquisitionMethodOption = {
 const ACQUISITION_METHODS: AcquisitionMethodOption[] = [
   { label: 'Amity Square', values: ['amity-square'] },
   { label: 'Around Sinnoh', values: ['starter-mask', 'eterna-forest', 'route-206', 'unobtainable'] },
-  { label: 'Contest Reward', values: ['contest-reward'] },
-  { label: 'Massage Girl', values: ['massage-girl'] },
-  { label: 'Flower Shop', values: ['flower-shop'] },
+  { label: 'Contest reward', values: ['contest-reward'] },
+  { label: 'Massage girl', values: ['massage-girl'] },
+  { label: 'Flower shop', values: ['flower-shop'] },
   { label: 'Pal Park', values: ['pal-park'] }
 ];
 
 // Default enabled methods: all except Unobtainable
 const DEFAULT_ENABLED = new Set([
   'Amity Square',
-  // 'Massage Girl',
-  // 'Flower Shop',
-  'Contest Reward',
+  // 'Massage girl',
+  // 'Flower shop',
+  'Contest reward',
   'Around Sinnoh',
   // 'Pal Park'
 ]);
@@ -138,7 +138,7 @@ export default function DPPTAccessories() {
         </div>
 
         <div className="acquisition-methods">
-          <label className="control-label">Acquisition Methods:</label>
+          <label className="control-label">Where to find:</label>
           <div className="method-checkboxes">
             {ACQUISITION_METHODS.map((method) => (
               <label key={method.label} className="method-checkbox">
@@ -211,7 +211,7 @@ export default function DPPTAccessories() {
           ))
         ) : (
           <div className="no-accessories">
-            No accessories available with the selected acquisition methods.
+            No accessories available with the selected locations.
           </div>
         )}
       </div>
