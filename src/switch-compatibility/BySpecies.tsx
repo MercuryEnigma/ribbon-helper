@@ -250,6 +250,9 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
             className="combobox-input"
             placeholder="Type to search..."
             value={searchTerm}
+            autoComplete="off"
+            autoCorrect="off"
+            spellCheck={false}
             onChange={e => {
               setSearchTerm(e.target.value);
               setShowDropdown(true);

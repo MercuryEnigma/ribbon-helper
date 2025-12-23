@@ -636,10 +636,10 @@ function getGreedyAttempt(
   };
   let total: number = 0;
   const greedyStrat: ContestMove[] = [];
-  let prevMove: MoveInfo | undefined = undefined;
+  let prevMove: MoveInfo | null = null;
 
   for (let i = 0; i < NUMBER_TURNS; i++) {
-    let bestMove: MoveInfo | null = null;
+    let bestMove: MoveInfo | null = prevMove;
     for (const move of allMoves) {
       if (prevMove && move.move === prevMove.move) continue;
       if (!move.effect?.skip && !move.effect?.end) {

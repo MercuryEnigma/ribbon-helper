@@ -5,7 +5,6 @@ import {
   type ContestType,
   getTypeAppealModifier,
   sortMovesByPriority,
-  findEligibleCombos,
   getMoveRoleForMove,
   type MoveInfoForSorting
 } from './moveUtils';
@@ -63,25 +62,6 @@ const STRATEGIES: SuperArchetype[][] = [
   ['FIRST', 'NEXT_LAST', 'LAST', 'NONE'],
   ['NEXT_LAST', 'LAST', 'NEXT_LAST', 'LAST'],
   ['DOUBLE', 'NONE', 'DOUBLE', 'NONE'],
-];
-
-/**
- * Combo pattern templates for testing different combo sequences.
- * Each pattern uses a combination of starter/finisher moves and archetypes.
- *
- * Pattern placeholders:
- * - 'STARTER': The combo starter move
- * - 'FINISHER': The combo finisher move (gets doubled appeal when following starter)
- * - Archetype strings: Any move archetype (e.g., 'FIRST', 'DOUBLE', 'NONE')
- */
-type ComboPatternTemplate = Array<'STARTER' | 'FINISHER' | SuperArchetype>;
-
-const COMBO_PATTERNS: ComboPatternTemplate[] = [
-  ['STARTER', 'FINISHER', 'STARTER', 'FINISHER'],
-  ['NONE', 'STARTER', 'FINISHER', 'NONE'],
-  ['FIRST', 'STARTER', 'FINISHER', 'NONE'],
-  ['NEXT_LAST', 'STARTER', 'FINISHER', 'NONE'],
-  ['DOUBLE', 'STARTER', 'FINISHER', 'NONE'],
 ];
 
 /**
@@ -447,179 +427,6 @@ function getBestPresetStrategy(
 }
 
 /**
- * Simulates a single combo pattern and calculates total appeal.
- * @param pools Available moves organized by archetype
- * @param starterMove The combo starter move
- * @param finisherMove The combo finisher move (gets doubled appeal when following starter)
- * @param pattern The sequence pattern to test
- * @param contestType The contest type for appeal bonuses/penalties (undefined if 'all')
- * @returns Total appeal and move sequence, or null if pattern cannot be executed
- */
-function simulateSingleComboPattern(
-  pools: Record<SuperArchetype, MoveInfo[]>,
-  starterMove: MoveInfo,
-  finisherMove: MoveInfo,
-  pattern: ComboPatternTemplate,
-  contestType?: ContestType
-): { total: number; sequence: ContestMove[] } | null {
-  const workingPools: Record<SuperArchetype, MoveInfo[]> = {
-    SKIPPED: [...pools.SKIPPED],
-    END: [...pools.END],
-    LAST: [...pools.LAST],
-    FIRST: [...pools.FIRST],
-    NEXT_FIRST: [...pools.NEXT_FIRST],
-    NEXT_LAST: [...pools.NEXT_LAST],
-    DOUBLE: [...pools.DOUBLE],
-    VOLTAGE_BONUS: [...pools.VOLTAGE_BONUS],
-    REPEAT: [...pools.REPEAT],
-    NONE: [...pools.NONE],
-  };
-
-  let state: SuperContestState = {
-    guaranteedOrder: undefined,
-    skipNext: false,
-    endAll: false,
-    turn: 0,
-    contestType,
-    doubleNext: false,
-    consecutiveUses: 0,
-  };
-  let total = 0;
-  const chosen: ContestMove[] = [];
-  let prevMove: MoveInfo | undefined = undefined;
-  let hadComboLastTurn = false;
-
-  // Convert pattern template to actual moves/archetypes
-  const resolvedPattern: (MoveInfo | SuperArchetype)[] = pattern.map(slot => {
-    if (slot === 'STARTER') return starterMove;
-    if (slot === 'FINISHER') return finisherMove;
-    return slot as SuperArchetype;
-  });
-
-  for (let i = 0; i < NUMBER_TURNS; i++) {
-    const desiredMove = resolvedPattern[i];
-    let move: MoveInfo | null;
-
-    if (typeof desiredMove === 'string') {
-      // Choose best move of archetype
-      move = chooseMoveFromPool(workingPools, desiredMove, state, prevMove);
-      if (!move) return null;
-    } else {
-      move = desiredMove;
-    }
-
-    // Check repetition constraints based on REPEAT archetype
-    // Without REPEAT: cannot use same move twice in a row
-    // With REPEAT: can use up to 2 times in a row (but not 3)
-    if (prevMove && move.move === prevMove.move) {
-      if (move.archetype !== 'REPEAT' || state.consecutiveUses >= 2) {
-        return null;
-      }
-    }
-
-    // Calculate base appeal
-    const outcome = computeAppeal(move, state);
-    let appeal = outcome.appeal;
-
-    // Apply combo bonus: double appeal if this is a finisher following a starter
-    // BUT not if the previous turn also had a combo bonus
-    const isComboFinisher = move.move === finisherMove.move
-      && prevMove?.move === starterMove.move;
-    if (isComboFinisher && !hadComboLastTurn) {
-      appeal *= 2;
-      hadComboLastTurn = true;
-    } else {
-      hadComboLastTurn = false;
-    }
-
-    total += appeal;
-    const nextConsecutiveUses = (prevMove && move.move === prevMove.move) ? state.consecutiveUses + 1 : 1;
-    state = { ...outcome.updatedState, consecutiveUses: nextConsecutiveUses };
-    prevMove = move;
-
-    let move_role: string[];
-    if (move.move === starterMove.move) {
-      move_role = ['Starting combo'];
-    } else if (move.move === finisherMove.move) {
-      move_role = ['Finishing combo'];
-    } else {
-      move_role = getMoveRoleForMove(workingPools, move);
-    }
-
-    chosen.push({
-      move: move.move,
-      type: move.type,
-      appeal: appeal,
-      move_role,
-    });
-  }
-
-  return { total, sequence: chosen };
-}
-
-/**
- * Simulates all combo patterns and returns the one with highest total appeal.
- * Tests different sequence variations to find the optimal combo strategy.
- */
-function simulateComboStrategy(
-  pools: Record<SuperArchetype, MoveInfo[]>,
-  starterMove: MoveInfo,
-  finisherMove: MoveInfo,
-  contestType?: ContestType
-): { total: number; sequence: ContestMove[] } | null {
-  let best: { total: number; sequence: ContestMove[] } | null = null;
-
-  for (const pattern of COMBO_PATTERNS) {
-    const result = simulateSingleComboPattern(pools, starterMove, finisherMove, pattern, contestType);
-    if (!result) continue;
-
-    if (!best || result.total > best.total) {
-      best = result;
-    }
-  }
-
-  return best;
-}
-
-/**
- * Tests all possible combo pairs to find the one with highest total appeal.
- */
-function getBestCombo(
-  pools: Record<SuperArchetype, MoveInfo[]>,
-  availableMoves: MovesMap,
-  contestType?: ContestType
-): { total: number; seq: ContestMove[] } | null {
-  const comboPairs = findEligibleCombos(availableMoves, contestMoves);
-  if (comboPairs.length === 0) return null;
-
-  let best: { total: number; seq: ContestMove[] } | null = null;
-
-  // Create a quick lookup for MoveInfo by move name
-  const moveInfoMap = new Map<string, MoveInfo>();
-  for (const pool of Object.values(pools)) {
-    for (const moveInfo of pool) {
-      moveInfoMap.set(moveInfo.move, moveInfo);
-    }
-  }
-
-  for (const combo of comboPairs) {
-    const starterInfo = moveInfoMap.get(combo.starter);
-    const finisherInfo = moveInfoMap.get(combo.finisher);
-
-    if (!starterInfo || !finisherInfo) continue;
-
-    const result = simulateComboStrategy(pools, starterInfo, finisherInfo, contestType);
-    if (!result) continue;
-
-    if (!best || result.total > best.total) {
-      best = { total: result.total, seq: result.sequence };
-    }
-  }
-
-  return best;
-}
-
-/**
  * Greedy fallback strategy that picks moves with highest appeal.
  * Sorts moves by base appeal plus contest type modifier, then selects top moves
  * while avoiding skip/end moves (except on last turn) and same move repetitions.
@@ -721,12 +528,6 @@ export function getSuperContestOptimalMoves(
   // Test several preset strategies
   const bestStrategy = getBestPresetStrategy(pools, actualContestType);
   best = bestStrategy;
-
-  // Test combo strategies and use if better than preset strategies
-  const bestCombo = getBestCombo(pools, availableMoves, actualContestType);
-  if (bestCombo && (!best || bestCombo.total > best.total)) {
-    best = bestCombo;
-  }
 
   // Fallback: if no strategy works, use greedy approach
   const greedy = getGreedyAttempt(pools, actualContestType);

@@ -404,6 +404,9 @@ export default function BDSPMoves({ selectedGame, onNavigate }: BDSPMovesProps) 
                 className="pokemon-search-input"
                 placeholder="Type to search..."
                 value={searchTerm}
+                autoComplete="off"
+                autoCorrect="off"
+                spellCheck={false}
                 onChange={e => {
                   setSearchTerm(e.target.value);
                   setShowDropdown(true);

@@ -435,9 +435,7 @@
     "type": "smart",
     "effect": 11,
     "combos": {
-      "before": [
-        "thunder-fang"
-      ],
+      "before": [],
       "after": []
     }
   },
@@ -661,9 +659,7 @@
     "type": "cute",
     "effect": 13,
     "combos": {
-      "before": [
-        "rollout"
-      ],
+      "before": [],
       "after": []
     }
   },
@@ -1151,9 +1147,7 @@
     "type": "cool",
     "effect": 11,
     "combos": {
-      "before": [
-        "night-slash"
-      ],
+      "before": [],
       "after": []
     }
   },
@@ -1305,9 +1299,7 @@
     "type": "beauty",
     "effect": 11,
     "combos": {
-      "before": [
-        "magical-leaf"
-      ],
+      "before": [],
       "after": []
     }
   },
@@ -1476,9 +1468,7 @@
     "effect": 5,
     "combos": {
       "before": [],
-      "after": [
-        "meditate"
-      ]
+      "after": []
     }
   },
   "horn-attack": {
@@ -1518,9 +1508,7 @@
     "effect": 17,
     "combos": {
       "before": [],
-      "after": [
-        "psych-up"
-      ]
+      "after": []
     }
   },
   "hyper-beam": {
@@ -1832,9 +1820,7 @@
     "effect": 17,
     "combos": {
       "before": [],
-      "after": [
-        "growth"
-      ]
+      "after": []
     }
   },
   "magma-storm": {
@@ -1889,9 +1875,7 @@
     "type": "beauty",
     "effect": 11,
     "combos": {
-      "before": [
-        "high-jump-kick"
-      ],
+      "before": [],
       "after": []
     }
   },
@@ -2156,9 +2140,7 @@
     "effect": 5,
     "combos": {
       "before": [],
-      "after": [
-        "focus-energy"
-      ]
+      "after": []
     }
   },
   "nightmare": {
@@ -2397,9 +2379,7 @@
     "type": "smart",
     "effect": 11,
     "combos": {
-      "before": [
-        "hydro-pump"
-      ],
+      "before": [],
       "after": []
     }
   },
@@ -2672,9 +2652,7 @@
     "effect": 7,
     "combos": {
       "before": [],
-      "after": [
-        "defense-curl"
-      ]
+      "after": []
     }
   },
   "roost": {
@@ -3394,9 +3372,7 @@
     "effect": 5,
     "combos": {
       "before": [],
-      "after": [
-        "charge"
-      ]
+      "after": []
     }
   },
   "thunder-punch": {

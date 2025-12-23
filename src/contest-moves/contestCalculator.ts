@@ -214,7 +214,8 @@ function buildMovePools(availableMoves: MovesMap, contestType?: ContestType): Re
  */
 function computeAppeal(
   move: MoveInfo,
-  state: ContestState
+  state: ContestState,
+  prevMoves: MoveInfo[]
 ): { appeal: number; updatedState: ContestState } {
   // If this turn is skipped, return zero appeal and clear skip flag
   if (state.skipNext || state.endAll) {
@@ -255,8 +256,23 @@ function computeAppeal(
   // Stars add to appeal
   appeal += state.stars;
 
-  // Contest type bonus/penalty
-  appeal += getTypeAppealModifier(move.type, state.contestType);
+  // Contest type bonus/penalty with escalating same-move penalty for repeats
+  let repeatStreak = 0;
+  if (move.archetype !== 'REPEAT' && prevMoves.length > 0) {
+    for (let i = prevMoves.length - 1; i >= 0; i--) {
+      if (prevMoves[i].move === move.move) {
+        repeatStreak += 1;
+      } else {
+        break;
+      }
+    }
+  }
+
+  const typeModifier = getTypeAppealModifier(move.type, state.contestType);
+  appeal += Math.min(typeModifier, repeatStreak > 0 ? 0 : 99);
+  if (repeatStreak > 0) {
+    appeal -= repeatStreak + 1; // -2 on first repeat, -3 on second repeat, etc.
+  }
 
   const starGain = typeof effect.star === 'number' ? effect.star : 0;
   const nextOrder = typeof effect.next === 'number' ? effect.next : undefined;
@@ -280,24 +296,25 @@ function computeAppeal(
  * @param pools Available moves organized by archetype
  * @param desired The archetype requested by the strategy, or 'NONE' for free choice
  * @param state Current contest state
- * @param prevArchetype The archetype used in the previous turn (to avoid repetition)
+ * @param prevMoves Moves used in earlier turns for same-move checks
  * @returns The selected move, or null if no suitable move is available
  */
 function chooseMoveFromPool(
   pools: Record<Archetype, MoveInfo[]>,
   desired: Archetype | 'NONE',
   state: ContestState,
-  prevMove?: MoveInfo
+  prevMoves: MoveInfo[]
 ): MoveInfo | null {
+  const lastPrevMove = prevMoves.length > 0 ? prevMoves[prevMoves.length - 1] : null;
   // If a specific archetype is requested, use the first available move of that type
   if (desired !== 'NONE') {
     const pool = pools[desired];
     if (pool.length === 0) return null;
-    if (prevMove?.archetype !== desired) return pool[0];
+    if (lastPrevMove?.archetype !== desired) return pool[0];
 
     // Choosing the same archetype, so make sure moves are different
     if (pool.length < 2) return pool[0];
-    return pool[0].move === prevMove?.move ? pool[1] : pool[0];
+    return pool[0].move === lastPrevMove?.move ? pool[1] : pool[0];
   }
 
   // For free choice: pick the move that maximizes immediate appeal
@@ -312,20 +329,14 @@ function chooseMoveFromPool(
       && state.turn < NUMBER_TURNS - 1) continue;
 
     const candidate1 = list[0];
-    let simulated1 = computeAppeal(candidate1, state).appeal;
-    if (candidate1.move === prevMove?.move) {
-      simulated1 -= 1;
-    }
+    let simulated1 = computeAppeal(candidate1, state, prevMoves).appeal;
     if (!best || simulated1 > best.appeal) {
       best = { move: candidate1, appeal: simulated1 };
     }
 
     if (list.length < 2) continue;
     const candidate2 = list[1];
-    let simulated2 = computeAppeal(candidate2, state).appeal;
-    if (candidate2.move === prevMove?.move) {
-      simulated2 -= 1;
-    }
+    let simulated2 = computeAppeal(candidate2, state, prevMoves).appeal;
     if (!best || simulated2 > best.appeal) {
       best = { move: candidate2, appeal: simulated2 };
     }
@@ -370,12 +381,12 @@ function simulateStrategy(
   };
   let total = 0;
   const chosen: ContestMove[] = [];
-  let prevMove: MoveInfo | undefined = undefined;
+  const prevMoves: MoveInfo[] = [];
 
   // Execute each turn of the strategy
   for (let i = 0; i < strategy.length; i++) {
     const desired = strategy[i];
-    const move = chooseMoveFromPool(workingPools, desired as Archetype, state, prevMove);
+    const move = chooseMoveFromPool(workingPools, desired as Archetype, state, prevMoves);
 
     // Strategy fails if required move type is unavailable
     if (!move) return null;
@@ -387,16 +398,12 @@ function simulateStrategy(
     }
 
     // Calculate appeal and update contest state
-    const outcome = computeAppeal(move, state);
+    const outcome = computeAppeal(move, state, prevMoves);
     let appeal = outcome.appeal;
 
-    // Apply repetition penalty unless move is REPEAT archetype
-    if (move.move === prevMove?.move && move.archetype !== 'REPEAT') {
-      appeal -= 1;
-    }
     total += appeal;
     state = {...outcome.updatedState};
-    prevMove = move;
+    prevMoves.push(move);
 
     const move_role = getMoveRoleForMove(workingPools, move);
 
@@ -476,7 +483,7 @@ function simulateSingleComboPattern(
   };
   let total = 0;
   const chosen: ContestMove[] = [];
-  let prevMove: MoveInfo | undefined = undefined;
+  const prevMoves: MoveInfo[] = [];
   let hadComboLastTurn = false;
 
   // Convert pattern template to actual moves/archetypes
@@ -487,25 +494,26 @@ function simulateSingleComboPattern(
   });
 
   for (let i = 0; i < NUMBER_TURNS; i++) {
+    const lastPrevMove = prevMoves.length > 0 ? prevMoves[prevMoves.length - 1] : null;
     const desiredMove = resolvedPattern[i];
     let move: MoveInfo | null;
 
     if (typeof desiredMove === 'string') {
       // Choose best move of archetype
-      move = chooseMoveFromPool(workingPools, desiredMove, state, prevMove);
+      move = chooseMoveFromPool(workingPools, desiredMove, state, prevMoves);
       if (!move) return null;
     } else {
       move = desiredMove;
     }
 
     // Calculate base appeal
-    const outcome = computeAppeal(move, state);
+    const outcome = computeAppeal(move, state, prevMoves);
     let appeal = outcome.appeal;
 
     // Apply combo bonus: double appeal if this is a finisher following a starter
     // BUT not if the previous turn also had a combo bonus
     const isComboFinisher = move.move === finisherMove.move
-      && prevMove?.move === starterMove.move;
+      && lastPrevMove?.move === starterMove.move;
     if (isComboFinisher && !hadComboLastTurn) {
       appeal *= 2;
       hadComboLastTurn = true;
@@ -513,13 +521,9 @@ function simulateSingleComboPattern(
       hadComboLastTurn = false;
     }
 
-    // Apply repetition penalty unless move is REPEAT archetype
-    if (move.move === prevMove?.move && move.archetype !== 'REPEAT') {
-      appeal -= 1;
-    }
     total += appeal;
     state = { ...outcome.updatedState };
-    prevMove = move;
+    prevMoves.push(move);
 
     let move_role: string[];
     if (move.move === starterMove.move) {
@@ -636,12 +640,13 @@ function getGreedyAttempt(
   };
   let total: number = 0;
   const greedyStrat: ContestMove[] = [];
-  let prevMove: MoveInfo | undefined = undefined;
+  const prevMoves: MoveInfo[] = [];
 
   for (let i = 0; i < NUMBER_TURNS; i++) {
-    let bestMove: MoveInfo | null = null;
+    const lastPrevMove = prevMoves.length > 0 ? prevMoves[prevMoves.length - 1] : null;
+    let bestMove: MoveInfo | null = lastPrevMove;
     for (const move of allMoves) {
-      if (prevMove && move.move === prevMove.move) continue;
+      if (lastPrevMove && move.move === lastPrevMove.move) continue;
       if (!move.effect?.skip && !move.effect?.end) {
         bestMove = move;
         break;
@@ -653,17 +658,12 @@ function getGreedyAttempt(
     }
 
     if (bestMove) {
-      const outcome = computeAppeal(bestMove, state);
+      const outcome = computeAppeal(bestMove, state, prevMoves);
       let appeal = outcome.appeal;
-
-      // Apply repetition penalty unless move is REPEAT archetype
-      if (bestMove.move === prevMove?.move && bestMove.archetype !== 'REPEAT') {
-        appeal -= 1;
-      }
 
       total += appeal;
       state = { ...outcome.updatedState };
-      prevMove = bestMove;
+      prevMoves.push(bestMove);
 
       const move_role = getMoveRoleForMove(pools, bestMove);
 
