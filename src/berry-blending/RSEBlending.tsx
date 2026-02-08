@@ -6,7 +6,7 @@ import {
   type Nature,
   type PokeblockFilters
 } from './pokeblockBlending';
-import allPokeblocksData from '../data/pokeblocks_v2.json';
+import allPokeblocksData from '../data/pokeblocks.json';
 import naturesData from '../data/natures.json';
 import { getBerryImageUrl } from './berryImageHelper';
 
@@ -18,7 +18,8 @@ const allPokeblocks: NamedPokeblock[] = Object.entries(allPokeblocksData).map(([
   name,
 }));
 
-const natures = naturesData as Record<string, { likes?: string; dislikes?: string }>;
+const natures = naturesData as Record<string, Nature>;
+const natureOptions = Object.keys(natures).sort();
 
 export default function RSEBlending() {
   const [playerCount, setPlayerCount] = useState<1 | 2 | 3 | 4>(1);
@@ -41,16 +42,7 @@ export default function RSEBlending() {
   }, [playerCount, withGamecube, withMirageIsland, withBerryMaster]);
 
   // Convert nature string to Nature interface
-  const selectedNature: Nature = useMemo(() => {
-    if (!nature || !natures[nature]) {
-      return {};
-    }
-    const natureData = natures[nature];
-    return {
-      likes: natureData.likes as any,
-      dislikes: natureData.dislikes as any,
-    };
-  }, [nature]);
+  const selectedNature = useMemo(() => natures[nature] ?? {}, [nature]);
 
   // Calculate optimal berry kit
   const berryKit = useMemo(() => {
@@ -79,8 +71,6 @@ export default function RSEBlending() {
         5,
     };
   }, [availablePokeblocks, selectedNature]);
-
-  const natureOptions = Object.keys(natures).sort();
 
   return (
     <div className="rse-blending">

@@ -1,5 +1,5 @@
-import allPokeblocksData from '../data/pokeblocks_v2.json';
-import { calculateFinalStats, type Pokeblock, type Nature } from './pokeblockBlending';
+import allPokeblocksData from '../src/data/pokeblocks.json';
+import { calculateFinalStats, type Pokeblock, type Nature } from '../src/berry-blending/pokeblockBlending';
 
 // Type declarations for Node.js globals when running as CLI
 declare const process: { argv: string[] } | undefined;
@@ -131,10 +131,10 @@ export function main() {
   const args = typeof process !== 'undefined' ? process.argv.slice(2) : [];
 
   if (args.length === 0) {
-    console.log('Usage: npx tsx src/berry-blending/verifyPokeblocks.ts "4x Pomeg 4, 2x Kelpsy 4, ..." [natureType]');
+    console.log('Usage: npx tsx scripts/verifyPokeblocks.ts "4x Pomeg 4, 2x Kelpsy 4, ..." [natureType]');
     console.log('\nExamples:');
-    console.log('  npx tsx src/berry-blending/verifyPokeblocks.ts "4x Pomeg 4, 4x Kelpsy 4, 2x Qualot 4"');
-    console.log('  npx tsx src/berry-blending/verifyPokeblocks.ts "4x Pomeg 4, 4x Kelpsy 4" adamant');
+    console.log('  npx tsx scripts/verifyPokeblocks.ts "4x Pomeg 4, 4x Kelpsy 4, 2x Qualot 4"');
+    console.log('  npx tsx scripts/verifyPokeblocks.ts "4x Pomeg 4, 4x Kelpsy 4" adamant');
     console.log('\nNature types: adamant, modest, jolly, timid, etc. (or omit for neutral)');
     return;
   }

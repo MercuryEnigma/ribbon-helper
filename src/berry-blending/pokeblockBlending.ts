@@ -68,6 +68,18 @@ export interface PokeblockFilters {
 }
 
 /**
+ * Represents current Pokemon stats for optimization
+ */
+export interface PokemonStats {
+  spicy: number;
+  dry: number;
+  sweet: number;
+  bitter: number;
+  sour: number;
+  feel: number;
+}
+
+/**
  * Assumed RPM values for different blending configurations
  */
 const ASSUMED_RPM = {
@@ -79,6 +91,141 @@ const ASSUMED_RPM = {
 const MAX_FEEL = 255;
 
 const MAX_STAT = 255;
+
+/**
+ * Adjusts a pokeblock's quality based on nature preferences.
+ *
+ * @param pokeblock - The base pokeblock to adjust
+ * @param nature - The Pokemon's nature (likes/dislikes flavors)
+ * @returns A new adjusted pokeblock
+ */
+function adjustWithNature(
+  pokeblock: Pokeblock,
+  nature: Nature
+): Pokeblock {
+  // Create a copy of the pokeblock
+  const adjusted = { ...pokeblock };
+
+
+  // Step 1: Apply nature adjustment
+  if (!nature.likes || !nature.dislikes)
+    return adjusted
+
+  const likedValue = adjusted[nature.likes];
+  const dislikedValue = adjusted[nature.dislikes];
+
+  if (likedValue > dislikedValue) {
+    // Multiply the liked stat by 1.1
+    adjusted[nature.likes] = Math.round(adjusted[nature.likes] * 1.1);
+  } else if (dislikedValue > likedValue) {
+    // Multiply the disliked stat by 0.9
+    adjusted[nature.dislikes] = Math.round(adjusted[nature.dislikes] * 0.9);
+  }
+
+  // Step 2: Recalculate efficiency (sum of 5 flavors / feel)
+  const totalFlavors =
+    adjusted.spicy + adjusted.dry + adjusted.sweet + adjusted.bitter + adjusted.sour;
+  adjusted.efficiency = adjusted.feel > 0 ? totalFlavors / adjusted.feel : 0;
+
+  return adjusted;
+}
+
+/**
+ * Scores a pokeblock by considering improvement and balance.
+ * Uses a priority stat weight to favor blocks that help specific stats.
+ * Penalizes blocks that give 0 to the current minimum stat.
+ *
+ * @param currentStats - Current Pokemon stats
+ * @param pokeblock - Pokeblock to evaluate
+ * @param priorityWeights - Optional weights for each stat (higher = prefer this stat)
+ * @returns Score (higher = better)
+ */
+function scorePokeblockForState(
+  currentStats: PokemonStats,
+  pokeblock: Pokeblock,
+  priorityWeights: number[] = [1, 1, 1, 1, 1]
+): number {
+  const currentFlavors = [currentStats.spicy, currentStats.dry, currentStats.sweet, currentStats.bitter, currentStats.sour];
+  const pokeblockFlavors = [pokeblock.spicy, pokeblock.dry, pokeblock.sweet, pokeblock.bitter, pokeblock.sour];
+
+  // Calculate new stats after adding this block (capped at MAX_STAT)
+  const newFlavors = currentFlavors.map((curr, i) =>
+    Math.min(curr + pokeblockFlavors[i], MAX_STAT)
+  );
+
+  // Find current minimum stat
+  const currentMin = Math.min(...currentFlavors);
+  const minIndices = currentFlavors.map((v, i) => v === currentMin ? i : -1).filter(i => i >= 0);
+
+  // Check if this block gives 0 to any minimum stat
+  const neglectsMin = minIndices.some(i => pokeblockFlavors[i] === 0);
+
+  // How imbalanced are we?
+  const currentMax = Math.max(...currentFlavors);
+  const imbalance = currentMax - currentMin;
+
+  // Weighted improvement based on priority weights
+  let weightedImprovement = 0;
+  for (let i = 0; i < 5; i++) {
+    const improvement = newFlavors[i] - currentFlavors[i];
+    // Also add dynamic weight based on how far behind this stat is
+    const deficitWeight = (MAX_STAT - currentFlavors[i]) / MAX_STAT;
+    weightedImprovement += improvement * priorityWeights[i] * (1 + deficitWeight * 0.5);
+  }
+
+  // Base efficiency
+  let score = weightedImprovement / pokeblock.feel;
+
+  // Penalty for neglecting the minimum stat (scales with imbalance)
+  if (neglectsMin && imbalance > 15) {
+    score *= 0.75;
+  }
+
+  return score;
+}
+
+/**
+ * Helper: run greedy with a specific feel budget and priority weights
+ */
+function getOptimalPokeblocksWithBudget(
+  availablePokeblocks: Pokeblock[],
+  feelBudget: number,
+  priorityWeights: number[] = [1, 1, 1, 1, 1]
+): { pokeblocks: Pokeblock[]; finalStats: PokemonStats } {
+  const selected: Pokeblock[] = [];
+  const currentStats: PokemonStats = {
+    spicy: 0, dry: 0, sweet: 0, bitter: 0, sour: 0, feel: 0,
+  };
+
+  while (true) {
+    let bestPokeblock: Pokeblock | null = null;
+    let bestScore = -Infinity;
+
+    for (const pokeblock of availablePokeblocks) {
+      if (currentStats.feel >= feelBudget) continue;
+
+      const score = scorePokeblockForState(currentStats, pokeblock, priorityWeights);
+      if (score > bestScore) {
+        bestScore = score;
+        bestPokeblock = pokeblock;
+      }
+    }
+
+    if (!bestPokeblock || bestScore <= 0) break;
+
+    selected.push(bestPokeblock);
+    currentStats.spicy = Math.min(currentStats.spicy + bestPokeblock.spicy, MAX_STAT);
+    currentStats.dry = Math.min(currentStats.dry + bestPokeblock.dry, MAX_STAT);
+    currentStats.sweet = Math.min(currentStats.sweet + bestPokeblock.sweet, MAX_STAT);
+    currentStats.bitter = Math.min(currentStats.bitter + bestPokeblock.bitter, MAX_STAT);
+    currentStats.sour = Math.min(currentStats.sour + bestPokeblock.sour, MAX_STAT);
+    currentStats.feel += bestPokeblock.feel;
+  }
+
+  currentStats.feel = Math.min(currentStats.feel, MAX_FEEL);
+
+  return { pokeblocks: selected, finalStats: currentStats };
+}
 
 /**
  * Calculates pokeblock stats from berries and RPM.
@@ -156,223 +303,6 @@ export function calculatePokeblockFromBerries(
 }
 
 /**
- * Adjusts a pokeblock's quality based on RPM and nature preferences.
- *
- * @param pokeblock - The base pokeblock to adjust
- * @param rpm - The RPM value (stats are multiplied by rpm/100)
- * @param nature - The Pokemon's nature (likes/dislikes flavors)
- * @returns A new adjusted pokeblock
- */
-export function adjustQuality(
-  pokeblock: Pokeblock,
-  rpm: number,
-  nature: Nature
-): Pokeblock {
-  // Create a copy of the pokeblock
-  const adjusted = { ...pokeblock };
-
-  // Step 1: Apply RPM adjustment to the five main stats
-  const rpmMultiplier = 1.0; // (rpm / 96.57);
-  adjusted.spicy = Math.round(adjusted.spicy * rpmMultiplier);
-  adjusted.dry = Math.round(adjusted.dry * rpmMultiplier);
-  adjusted.sweet = Math.round(adjusted.sweet * rpmMultiplier);
-  adjusted.bitter = Math.round(adjusted.bitter * rpmMultiplier);
-  adjusted.sour = Math.round(adjusted.sour * rpmMultiplier);
-
-  // Step 2: Apply nature adjustment
-  if (!nature.likes || !nature.dislikes)
-    return adjusted
-
-  const likedValue = adjusted[nature.likes];
-  const dislikedValue = adjusted[nature.dislikes];
-
-  if (likedValue > dislikedValue) {
-    // Multiply the liked stat by 1.1
-    adjusted[nature.likes] = Math.round(adjusted[nature.likes] * 1.1);
-  } else if (dislikedValue > likedValue) {
-    // Multiply the disliked stat by 0.9
-    adjusted[nature.dislikes] = Math.round(adjusted[nature.dislikes] * 0.9);
-  }
-
-  // Step 3: Recalculate efficiency (sum of 5 flavors / feel)
-  const totalFlavors =
-    adjusted.spicy + adjusted.dry + adjusted.sweet + adjusted.bitter + adjusted.sour;
-  adjusted.efficiency = adjusted.feel > 0 ? totalFlavors / adjusted.feel : 0;
-
-  return adjusted;
-}
-
-/**
- * Calculates adjusted pokeblocks with assumed RPM values based on each pokeblock's configuration.
- *
- * @param nature - The Pokemon's nature (likes/dislikes flavors)
- * @param pokeblocks - Array of base pokeblocks to adjust
- * @returns Array of adjusted pokeblocks with assumed RPM applied
- */
-export function getAssumedPokeblocks(
-  nature: Nature,
-  pokeblocks: Pokeblock[]
-): Pokeblock[] {
-  return pokeblocks.map((pokeblock) => {
-    // Determine assumed RPM based on pokeblock configuration
-    let rpm: number;
-    if (pokeblock["blend-master"]) {
-      rpm = ASSUMED_RPM.blend_master;
-    } else if (pokeblock.players > 1) {
-      rpm = ASSUMED_RPM.players;
-    } else {
-      rpm = ASSUMED_RPM.npc;
-    }
-
-    // Apply adjustments and return
-    return adjustQuality(pokeblock, rpm, nature);
-  });
-}
-
-/**
- * Represents current Pokemon stats for optimization
- */
-export interface PokemonStats {
-  spicy: number;
-  dry: number;
-  sweet: number;
-  bitter: number;
-  sour: number;
-  feel: number;
-}
-
-/**
- * Scores a pokeblock by considering improvement and balance.
- * Uses a priority stat weight to favor blocks that help specific stats.
- * Penalizes blocks that give 0 to the current minimum stat.
- *
- * @param currentStats - Current Pokemon stats
- * @param pokeblock - Pokeblock to evaluate
- * @param priorityWeights - Optional weights for each stat (higher = prefer this stat)
- * @returns Score (higher = better)
- */
-function scorePokeblockForState(
-  currentStats: PokemonStats,
-  pokeblock: Pokeblock,
-  priorityWeights: number[] = [1, 1, 1, 1, 1]
-): number {
-  const currentFlavors = [currentStats.spicy, currentStats.dry, currentStats.sweet, currentStats.bitter, currentStats.sour];
-  const pokeblockFlavors = [pokeblock.spicy, pokeblock.dry, pokeblock.sweet, pokeblock.bitter, pokeblock.sour];
-
-  // Calculate new stats after adding this block (capped at MAX_STAT)
-  const newFlavors = currentFlavors.map((curr, i) =>
-    Math.min(curr + pokeblockFlavors[i], MAX_STAT)
-  );
-
-  // Find current minimum stat
-  const currentMin = Math.min(...currentFlavors);
-  const minIndices = currentFlavors.map((v, i) => v === currentMin ? i : -1).filter(i => i >= 0);
-
-  // Check if this block gives 0 to any minimum stat
-  const neglectsMin = minIndices.some(i => pokeblockFlavors[i] === 0);
-
-  // How imbalanced are we?
-  const currentMax = Math.max(...currentFlavors);
-  const imbalance = currentMax - currentMin;
-
-  // Weighted improvement based on priority weights
-  let weightedImprovement = 0;
-  for (let i = 0; i < 5; i++) {
-    const improvement = newFlavors[i] - currentFlavors[i];
-    // Also add dynamic weight based on how far behind this stat is
-    const deficitWeight = (MAX_STAT - currentFlavors[i]) / MAX_STAT;
-    weightedImprovement += improvement * priorityWeights[i] * (1 + deficitWeight * 0.5);
-  }
-
-  // Base efficiency
-  let score = weightedImprovement / pokeblock.feel;
-
-  // Penalty for neglecting the minimum stat (scales with imbalance)
-  if (neglectsMin && imbalance > 15) {
-    score *= 0.75;
-  }
-
-  return score;
-}
-
-/**
- * Finds the optimal set of pokeblocks to maximize stats while maintaining balance.
- * Uses a greedy algorithm that iteratively selects the pokeblock providing the best
- * improvement per feel unit, considering both average stats and stat distribution.
- *
- * @param availablePokeblocks - Array of pokeblocks to choose from (should be pre-adjusted with nature/RPM via getAssumedPokeblocks)
- * @returns Object containing the ordered array of optimal pokeblocks and final Pokemon stats
- */
-export function getOptimalPokeblocks(
-  availablePokeblocks: Pokeblock[]
-): { pokeblocks: Pokeblock[]; finalStats: PokemonStats } {
-  const selected: Pokeblock[] = [];
-  const currentStats: PokemonStats = {
-    spicy: 0,
-    dry: 0,
-    sweet: 0,
-    bitter: 0,
-    sour: 0,
-    feel: 0,
-  };
-
-  // Greedy approach: repeatedly select the best pokeblock
-  while (true) {
-    let bestPokeblock: Pokeblock | null = null;
-    let bestScore = -Infinity;
-
-    // Evaluate each available pokeblock
-    for (const pokeblock of availablePokeblocks) {
-      // Check if we can still eat (check happens BEFORE eating, last block can exceed)
-      if (currentStats.feel >= MAX_FEEL) {
-        continue;
-      }
-
-      // Calculate score for this pokeblock given current state
-      const score = scorePokeblockForState(currentStats, pokeblock);
-
-      if (score > bestScore) {
-        bestScore = score;
-        bestPokeblock = pokeblock;
-      }
-    }
-
-    // If no pokeblock improves the score or fits, we're done
-    if (!bestPokeblock || bestScore <= 0) {
-      break;
-    }
-
-    // Add the best pokeblock to the selection
-    selected.push(bestPokeblock);
-
-    // Update current stats
-    currentStats.spicy = Math.min(
-      currentStats.spicy + bestPokeblock.spicy,
-      MAX_STAT
-    );
-    currentStats.dry = Math.min(currentStats.dry + bestPokeblock.dry, MAX_STAT);
-    currentStats.sweet = Math.min(
-      currentStats.sweet + bestPokeblock.sweet,
-      MAX_STAT
-    );
-    currentStats.bitter = Math.min(
-      currentStats.bitter + bestPokeblock.bitter,
-      MAX_STAT
-    );
-    currentStats.sour = Math.min(
-      currentStats.sour + bestPokeblock.sour,
-      MAX_STAT
-    );
-    currentStats.feel += bestPokeblock.feel;
-  }
-
-  return {
-    pokeblocks: selected,
-    finalStats: currentStats,
-  };
-}
-
-/**
  * Calculates the final stats for a specific list of pokeblocks.
  * Useful for testing and verifying calculations against reference data.
  *
@@ -384,8 +314,11 @@ export function calculateFinalStats(
   pokeblocks: Pokeblock[],
   nature: Nature
 ): PokemonStats {
-  // Adjust pokeblocks with assumed RPM and nature
-  const adjustedPokeblocks = getAssumedPokeblocks(nature, pokeblocks);
+  // Adjust pokeblocks with nature
+  const adjustedPokeblocks = pokeblocks.map((pokeblock) => {
+    // Apply adjustments and return
+    return adjustWithNature(pokeblock, nature);
+  });
 
   // Sum up all stats
   const finalStats: PokemonStats = {
@@ -467,9 +400,9 @@ export function calculateOptimalPokeblocks(
   availablePokeblocks: Pokeblock[],
   nature: Nature
 ): { pokeblocks: Pokeblock[]; finalStats: PokemonStats } {
-  // Step 1: Adjust pokeblocks with assumed RPM and nature
+  // Step 1: Adjust pokeblocks with nature
   const adjustedPokeblocks = availablePokeblocks.map(pb => {
-    return adjustQuality(pb, 100, nature);
+    return adjustWithNature(pb, nature);
   });
 
   const nonFinishingPokeblocks = adjustedPokeblocks.filter(pb => !pb.finishing);
@@ -547,47 +480,4 @@ export function calculateOptimalPokeblocks(
   }
 
   return bestResult || { pokeblocks: [], finalStats: { spicy: 0, dry: 0, sweet: 0, bitter: 0, sour: 0, feel: 0 } };
-}
-
-/**
- * Helper: run greedy with a specific feel budget and priority weights
- */
-function getOptimalPokeblocksWithBudget(
-  availablePokeblocks: Pokeblock[],
-  feelBudget: number,
-  priorityWeights: number[] = [1, 1, 1, 1, 1]
-): { pokeblocks: Pokeblock[]; finalStats: PokemonStats } {
-  const selected: Pokeblock[] = [];
-  const currentStats: PokemonStats = {
-    spicy: 0, dry: 0, sweet: 0, bitter: 0, sour: 0, feel: 0,
-  };
-
-  while (true) {
-    let bestPokeblock: Pokeblock | null = null;
-    let bestScore = -Infinity;
-
-    for (const pokeblock of availablePokeblocks) {
-      if (currentStats.feel >= feelBudget) continue;
-
-      const score = scorePokeblockForState(currentStats, pokeblock, priorityWeights);
-      if (score > bestScore) {
-        bestScore = score;
-        bestPokeblock = pokeblock;
-      }
-    }
-
-    if (!bestPokeblock || bestScore <= 0) break;
-
-    selected.push(bestPokeblock);
-    currentStats.spicy = Math.min(currentStats.spicy + bestPokeblock.spicy, MAX_STAT);
-    currentStats.dry = Math.min(currentStats.dry + bestPokeblock.dry, MAX_STAT);
-    currentStats.sweet = Math.min(currentStats.sweet + bestPokeblock.sweet, MAX_STAT);
-    currentStats.bitter = Math.min(currentStats.bitter + bestPokeblock.bitter, MAX_STAT);
-    currentStats.sour = Math.min(currentStats.sour + bestPokeblock.sour, MAX_STAT);
-    currentStats.feel += bestPokeblock.feel;
-  }
-
-  currentStats.feel = Math.min(currentStats.feel, MAX_FEEL);
-
-  return { pokeblocks: selected, finalStats: currentStats };
 }
