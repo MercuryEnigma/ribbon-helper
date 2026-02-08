@@ -1,0 +1,368 @@
+{
+  "Cheri": {
+    "npc_1": "Aspear",
+    "npc_2": "Rawst",
+    "npc_3": "Pecha",
+    "blend_master": "Spelon"
+  },
+  "Chesto": {
+    "npc_1": "Cheri",
+    "npc_2": "Aspear",
+    "npc_3": "Rawst",
+    "blend_master": "Pamtre"
+  },
+  "Pecha": {
+    "npc_1": "Chesto",
+    "npc_2": "Cheri",
+    "npc_3": "Aspear",
+    "blend_master": "Watmel"
+  },
+  "Rawst": {
+    "npc_1": "Pecha",
+    "npc_2": "Chesto",
+    "npc_3": "Cheri",
+    "blend_master": "Durin"
+  },
+  "Aspear": {
+    "npc_1": "Rawst",
+    "npc_2": "Pecha",
+    "npc_3": "Chesto",
+    "blend_master": "Belue"
+  },
+  "Leppa": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": "Spelon"
+  },
+  "Oran": {
+    "npc_1": "Chesto",
+    "npc_2": "Rawst",
+    "npc_3": "Aspear",
+    "blend_master": "Pamtre"
+  },
+  "Persim": {
+    "npc_1": "Pecha",
+    "npc_2": "Aspear",
+    "npc_3": "Cheri",
+    "blend_master": "Watmel"
+  },
+  "Lum": {
+    "npc_1": "Rawst",
+    "npc_2": "Cheri",
+    "npc_3": "Chesto",
+    "blend_master": "Durin"
+  },
+  "Sitrus": {
+    "npc_1": "Aspear",
+    "npc_2": "Chesto",
+    "npc_3": "Pecha",
+    "blend_master": "Belue"
+  },
+  "Figy": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": "Spelon"
+  },
+  "Wiki": {
+    "npc_1": "Chesto",
+    "npc_2": "Rawst",
+    "npc_3": "Aspear",
+    "blend_master": "Pamtre"
+  },
+  "Mago": {
+    "npc_1": "Pecha",
+    "npc_2": "Aspear",
+    "npc_3": "Cheri",
+    "blend_master": "Watmel"
+  },
+  "Aguav": {
+    "npc_1": "Rawst",
+    "npc_2": "Cheri",
+    "npc_3": "Chesto",
+    "blend_master": "Durin"
+  },
+  "Iapapa": {
+    "npc_1": "Aspear",
+    "npc_2": "Chesto",
+    "npc_3": "Pecha",
+    "blend_master": "Belue"
+  },
+  "Razz": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": "Spelon"
+  },
+  "Bluk": {
+    "npc_1": "Chesto",
+    "npc_2": "Rawst",
+    "npc_3": "Aspear",
+    "blend_master": "Pamtre"
+  },
+  "Nanab": {
+    "npc_1": "Pecha",
+    "npc_2": "Aspear",
+    "npc_3": "Cheri",
+    "blend_master": "Watmel"
+  },
+  "Wepear": {
+    "npc_1": "Rawst",
+    "npc_2": "Cheri",
+    "npc_3": "Chesto",
+    "blend_master": "Durin"
+  },
+  "Pinap": {
+    "npc_1": "Aspear",
+    "npc_2": "Chesto",
+    "npc_3": "Pecha",
+    "blend_master": "Belue"
+  },
+  "Pomeg": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": "Spelon"
+  },
+  "Kelpsy": {
+    "npc_1": "Chesto",
+    "npc_2": "Rawst",
+    "npc_3": "Aspear",
+    "blend_master": "Pamtre"
+  },
+  "Qualot": {
+    "npc_1": "Pecha",
+    "npc_2": "Aspear",
+    "npc_3": "Cheri",
+    "blend_master": "Watmel"
+  },
+  "Hondew": {
+    "npc_1": "Rawst",
+    "npc_2": "Cheri",
+    "npc_3": "Chesto",
+    "blend_master": "Durin"
+  },
+  "Grepa": {
+    "npc_1": "Aspear",
+    "npc_2": "Chesto",
+    "npc_3": "Pecha",
+    "blend_master": "Belue"
+  },
+  "Tamato": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": "Spelon"
+  },
+  "Cornn": {
+    "npc_1": "Chesto",
+    "npc_2": "Rawst",
+    "npc_3": "Aspear",
+    "blend_master": "Pamtre"
+  },
+  "Magost": {
+    "npc_1": "Pecha",
+    "npc_2": "Aspear",
+    "npc_3": "Cheri",
+    "blend_master": "Watmel"
+  },
+  "Rabuta": {
+    "npc_1": "Rawst",
+    "npc_2": "Cheri",
+    "npc_3": "Chesto",
+    "blend_master": "Durin"
+  },
+  "Nomel": {
+    "npc_1": "Aspear",
+    "npc_2": "Chesto",
+    "npc_3": "Pecha",
+    "blend_master": "Belue"
+  },
+  "Spelon": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": "Tamato"
+  },
+  "Pamtre": {
+    "npc_1": "Chesto",
+    "npc_2": "Rawst",
+    "npc_3": "Aspear",
+    "blend_master": "Cornn"
+  },
+  "Watmel": {
+    "npc_1": "Pecha",
+    "npc_2": "Aspear",
+    "npc_3": "Cheri",
+    "blend_master": "Magost"
+  },
+  "Durin": {
+    "npc_1": "Rawst",
+    "npc_2": "Cheri",
+    "npc_3": "Chesto",
+    "blend_master": "Rabuta"
+  },
+  "Belue": {
+    "npc_1": "Aspear",
+    "npc_2": "Chesto",
+    "npc_3": "Pecha",
+    "blend_master": "Nomel"
+  },
+  "Liechi": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": "Spelon"
+  },
+  "Ganlon": {
+    "npc_1": "Chesto",
+    "npc_2": "Rawst",
+    "npc_3": "Aspear",
+    "blend_master": "Pamtre"
+  },
+  "Salac": {
+    "npc_1": "Pecha",
+    "npc_2": "Aspear",
+    "npc_3": "Cheri",
+    "blend_master": "Watmel"
+  },
+  "Petaya": {
+    "npc_1": "Rawst",
+    "npc_2": "Cheri",
+    "npc_3": "Chesto",
+    "blend_master": "Durin"
+  },
+  "Apicot": {
+    "npc_1": "Aspear",
+    "npc_2": "Chesto",
+    "npc_3": "Pecha",
+    "blend_master": "Belue"
+  },
+  "Lansat": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": "Spelon"
+  },
+  "Starf": {
+    "npc_1": "Chesto",
+    "npc_2": "Rawst",
+    "npc_3": "Aspear",
+    "blend_master": "Pamtre"
+  },
+  "Enigma": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": "Spelon"
+  },
+  "Pumkin": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": ""
+  },
+  "Drash": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": ""
+  },
+  "Eggant": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": ""
+  },
+  "Strib": {
+    "npc_1": "Chesto",
+    "npc_2": "Rawst",
+    "npc_3": "Aspear",
+    "blend_master": ""
+  },
+  "Chilan": {
+    "npc_1": "Chesto",
+    "npc_2": "Rawst",
+    "npc_3": "Aspear",
+    "blend_master": ""
+  },
+  "Nutpea": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": ""
+  },
+  "Kacha": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": ""
+  },
+  "Buuka": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": ""
+  },
+  "Bisuna": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": ""
+  },
+  "Edoma": {
+    "npc_1": "Chesto",
+    "npc_2": "Rawst",
+    "npc_3": "Aspear",
+    "blend_master": ""
+  },
+  "Hozu": {
+    "npc_1": "Chesto",
+    "npc_2": "Rawst",
+    "npc_3": "Aspear",
+    "blend_master": ""
+  },
+  "Rakka": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": ""
+  },
+  "Ginema": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": ""
+  },
+  "Kuo": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": ""
+  },
+  "Yago": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": ""
+  },
+  "Touga": {
+    "npc_1": "Chesto",
+    "npc_2": "Rawst",
+    "npc_3": "Aspear",
+    "blend_master": ""
+  },
+  "Niniku": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": ""
+  },
+  "Topo": {
+    "npc_1": "Cheri",
+    "npc_2": "Pecha",
+    "npc_3": "Rawst",
+    "blend_master": ""
+  }
+}

@@ -1,0 +1,185 @@
+Nickname,Berries,Sp,D,Sw,B,So,F,Eff,,w/ JPN e+,w/ e-reader,w/ Blendmaster,w/ Mirage Island,w/ Gamecube,NPCs,number players,Finishing Touch
+"""Ganlon 4""",Ganlon + 3 NPC,,62,,49,10,34,3.56,,,,,,TRUE,3,1,
+"""Salac 4""",Salac + 3 NPC,10,,62,,49,34,3.56,,,,,,TRUE,3,1,
+"""Petaya 4""",Petaya + 3 NPC,49,10,,62,,34,3.56,,,,,,TRUE,3,1,
+"""Apicot 4""",Apicot + 3 NPC,,49,10,,62,34,3.56,,,,,,TRUE,3,1,
+"""Ganlon 3""",Ganlon + 2 NPC,,62,,62,,40,3.10,,,,,,TRUE,2,1,
+"""Salac 3""",Salac + 2 NPC,,,62,,62,40,3.10,,,,,,TRUE,2,1,
+"""Petaya 3""",Petaya + 2 NPC,62,,,62,,40,3.10,,,,,,TRUE,2,1,
+"""Apicot 3""",Apicot + 2 NPC,,62,,,62,40,3.10,,,,,,TRUE,2,1,
+"""Liechi 4""",Liechi + 3 NPC,62,,49,,,34,3.26,,,,,TRUE,,3,1,
+"""Liechi 3""",Liechi + 2 NPC,61,,61,,,40,3.05,,,,,TRUE,,2,1,
+"""Pomeg 4""",Pomeg + 3 NPC,23,,,23,,19,2.42,,,,,,,3,1,
+"""Kelpsy 4""",Kelpsy + 3 NPC,,23,,,23,19,2.42,,,,,,,3,1,
+"""Qualot 4""",Qualot + 3 NPC,23,,23,,,19,2.42,,,,,,,3,1,
+"""Hondew 4""",Hondew + 3 NPC,,23,,23,,19,2.42,,,,,,,3,1,
+"""Grepa 4""",Grepa + 3 NPC,,,23,,23,19,2.42,,,,,,,3,1,
+"""Spelon 4""",Spelon + 3 NPC,51,,,12,,32,1.97,,,,,,,3,1,TRUE
+"""Pamtre 4""",Pamtre + 3 NPC,,51,,,12,32,1.97,,,,,,,3,1,TRUE
+"""Watmel 4""",Watmel + 3 NPC,12,,51,,,32,1.97,,,,,,,3,1,TRUE
+"""Durin 4""",Durin + 3 NPC,,12,,51,,32,1.97,,,,,,,3,1,TRUE
+"""Belue 4""",Belue + 3 NPC,,,12,,51,32,1.97,,,,,,,3,1,TRUE
+"""Spelon 3"" etc.",Spelon + 2 NPC,51,,12,,,37,1.70,,,,,,,2,1,TRUE
+"""Spelon 2"" etc.",Spelon + 1 NPC,51,12,,,,45,1.40,,,,,,,1,1,TRUE
+"""Tamato M""",Tamato + Master,57,28,,,,48,1.77,,,,TRUE,,,1,1,TRUE
+"""Cornn M""",Cornn + Master,,57,28,,,48,1.77,,,,TRUE,,,1,1,TRUE
+"""Magost M""",Magost + Master,,,57,28,,48,1.77,,,,TRUE,,,1,1,TRUE
+"""Rabuta M""",Rabuta + Master,,,,57,28,48,1.77,,,,TRUE,,,1,1,TRUE
+"""Nomel M""",Nomel + Master,28,,,,57,48,1.77,,,,TRUE,,,1,1,TRUE
+"""Liechi M""",Liechi + Master,98,,54,,,73,2.08,,,,TRUE,TRUE,,1,1,TRUE
+"""Ganlon M""",Ganlon + Master,,100,,56,,73,2.14,,,,TRUE,,TRUE,1,1,TRUE
+"""Salac M""",Salac + Master,,,100,,56,73,2.14,,,,TRUE,,TRUE,1,1,TRUE
+"""Petaya M""",Petaya + Master,56,,,100,,73,2.14,,,,TRUE,,TRUE,1,1,TRUE
+"""Apicot M""",Apicot + Master,,56,,,100,73,2.14,,,,TRUE,,TRUE,1,1,TRUE
+,"Ganlon, Hondew",,61,,61,,48,2.54,,,,,,TRUE,,2,
+,"Salac, Grepa",,,61,,61,48,2.54,,,,,,TRUE,,2,
+,"Petaya, Pomeg",61,,,61,,48,2.54,,,,,,TRUE,,2,
+,"Apicot, Kelpsy",,61,,,61,48,2.54,,,,,,TRUE,,2,
+,"Liechi, Qualot",61,,61,,,48,2.54,,,,,TRUE,,,2,
+,"Tamato, Hondew",10,23,,10,,23,1.87,,,,,,,,2,
+,"Cornn, Grepa",,10,23,,10,23,1.87,,,,,,,,2,
+,"Magost, Pomeg",10,,10,23,,23,1.87,,,,,,,,2,
+,"Rabuta, Kelpsy",,10,,10,23,23,1.87,,,,,,,,2,
+,"Nomel, Qualot",23,,10,,10,23,1.87,,,,,,,,2,
+,"Spelon, Watmel",36,,36,10,,68,1.21,,,,,,,,2,TRUE
+,"Pamtre, Durin",,36,,36,10,68,1.21,,,,,,,,2,TRUE
+,"Watmel, Belue",10,,36,,36,68,1.21,,,,,,,,2,TRUE
+,"Durin, Spelon",36,10,,36,,68,1.21,,,,,,,,2,TRUE
+,"Belue, Pamtre",,36,10,,36,68,1.21,,,,,,,,2,TRUE
+,"Petaya, Spelon",88,10,,49,,73,2.01,,,,,,TRUE,,2,TRUE
+,"Apicot, Pamtre",,88,10,,49,73,2.01,,,,,,TRUE,,2,TRUE
+,"Ganlon, Durin",,49,,88,10,73,2.01,,,,,,TRUE,,2,TRUE
+,"Salac, Belue",10,,49,,88,73,2.01,,,,,,TRUE,,2,TRUE
+,"Apicot, Ganlon",,101,,,49,78,1.92,,,,,,TRUE,,2,TRUE
+,"Ganlon, Petaya",,49,,101,,78,1.92,,,,,,TRUE,,2,TRUE
+,"Apicot, Salac",,,49,,101,78,1.92,,,,,,TRUE,,2,TRUE
+,"Liechi, Salac",49,,101,,10,78,2.05,,,,,TRUE,TRUE,,2,TRUE
+,"Liechi, Petaya",101,,,36,,78,1.76,,,,,TRUE,TRUE,,2,TRUE
+,"Liechi, Watmel",49,,88,,,73,1.88,,,,,TRUE,,,2,TRUE
+,"Strib, Petaya",88,,,88,,80,2.20,,,TRUE,,,TRUE,,2,TRUE
+,"Chilan, Liechi",87,,87,,,80,2.18,,,TRUE,,TRUE,,,2,TRUE
+,"Ginema, Apicot",,88,,,88,73,2.41,,TRUE,,,,TRUE,,2,TRUE
+,"Niniku, Ganlon",,88,,88,,80,2.20,,TRUE,,,,TRUE,,2,TRUE
+"""Ganlon 3P""","Ganlon, Hondew, Kelpsy",,75,,62,,37,3.70,,,,,,TRUE,,3,
+"""Salac 3P""","Salac, Grepa, Qualot",,,75,,62,37,3.70,,,,,,TRUE,,3,
+"""Petaya 3P""","Petaya, Pomeg, Hondew",62,,,75,,37,3.70,,,,,,TRUE,,3,
+"""Apicot 3P""","Apicot, Kelpsy, Grepa",,62,,,75,37,3.70,,,,,,TRUE,,3,
+"""Liechi 3P""","Liechi, Qualot, Leppa",74,,61,,,37,3.65,,,,,TRUE,,,3,
+"""Liechi N3""","Nutpea, Liechi, Qualot",61,,61,,,32,3.81,,,TRUE,,TRUE,,,3,
+"""Ganlon N3""","Nutpea, Ganlon, Hondew",,61,,61,,32,3.81,,,TRUE,,,TRUE,,3,
+"""Salac N3""","Nutpea, Salac, Grepa",,,61,,61,32,3.81,,,TRUE,,,TRUE,,3,
+"""Petaya N3""","Nutpea, Petaya, Pomeg",61,,,61,,32,3.81,,,TRUE,,,TRUE,,3,
+"""Apicot N3""","Nutpea, Apicot, Kelpsy",,61,,,61,32,3.81,,,TRUE,,,TRUE,,3,
+"""Spelon N3""","Nutpea, Spelon, Hondew",36,23,,10,,28,2.46,,,TRUE,,,TRUE,,3,
+"""Pamtre N3""","Nutpea, Pamtre, Grepa",,36,23,,10,28,2.46,,,TRUE,,,,,3,
+"""Watmel N3""","Nutpea, Watmel, Pomeg",10,,36,23,,28,2.46,,,TRUE,,,,,3,
+"""Durin N3""","Nutpea, Durin, Kelpsy",,10,,36,23,28,2.46,,,TRUE,,,,,3,
+"""Belue N3""","Nutpea, Belue, Qualot",23,,10,,36,28,2.46,,,TRUE,,,,,3,
+"""Eggant N3""","Nutpea, Eggant, Cornn",,64,12,,,30,2.53,,,TRUE,,,,,3,
+"""Drash N3""","Nutpea, Drash, Magost",,,64,12,,30,2.53,,,TRUE,,,,,3,
+"""Pumkin N3""","Nutpea, Pumkin, Nomel",12,,,,64,30,2.53,,,TRUE,,,,,3,
+"""Touga N3""","Nutpea, Touga, Tamato",64,12,,,,30,2.53,,TRUE,,,,,,3,
+"""Yago N3""","Nutpea, Yago, Rabuta",,,,64,12,30,2.53,,TRUE,,,,,,3,
+"""Tamato 3P""","Tamato, Hondew, Pomeg",23,10,,23,,20,2.80,,,,,,,,3,
+"""Cornn 3P""","Cornn, Grepa, Kelpsy",,23,10,,23,20,2.80,,,,,,,,3,
+"""Magost 3P""","Magost, Qualot, Pomeg",23,,23,10,,20,2.80,,,,,,,,3,
+"""Rabuta 3P""","Rabuta, Hondew, Kelpsy",,23,,23,10,20,2.80,,,,,,,,3,
+"""Nomel 3P""","Nomel, Grepa, Qualot",10,,23,,23,20,2.80,,,,,,,,3,
+"""PQ Filler""","Pinap, Qualot, Leppa",36,,10,,,17,2.71,,,,,,,,3,
+"""HK Filler""","Hondew, Kelpsy, Razz",,35,,9,,17,2.59,,,,,,,,3,
+"""GQ Filler""","Grepa, Qualot, Bluk",,,35,,9,17,2.59,,,,,,,,3,
+"""HP Filler""","Hondew, Pomeg, Nanab",9,,,35,,17,2.59,,,,,,,,3,
+"""GK Filler""","Grepa, Kelpsy, Wepear",,9,,,35,17,2.59,,,,,,,,3,
+,"Tamato, Durin, Spelon",49,23,,36,,53,2.04,,,,,,,,3,TRUE
+,"Cornn, Belue, Pamtre",,49,23,,36,53,2.04,,,,,,,,3,TRUE
+,"Magost, Spelon, Watmel",36,,49,23,,53,2.04,,,,,,,,3,TRUE
+,"Rabuta, Durin, Pamtre",,36,,49,23,53,2.04,,,,,,,,3,TRUE
+,"Nomel, Belue, Watmel",23,,36,,49,53,2.04,,,,,,,,3,TRUE
+,"Ganlon, Petaya, Spelon",36,62,,101,,73,2.73,,,,,,TRUE,,3,TRUE
+,"Apicot, Salac, Pamtre",,36,62,,101,73,2.73,,,,,,TRUE,,3,TRUE
+,"Apicot, Ganlon, Durin",,101,,36,62,73,2.73,,,,,,TRUE,,3,TRUE
+,"Apicot, Ganlon, Pamtre",,140,,,49,73,2.59,,,,,,TRUE,,3,TRUE
+,"Ganlon, Petaya, Durin",,49,,140,,73,2.59,,,,,,TRUE,,3,TRUE
+,"Apicot, Salac, Belue",,,49,,140,73,2.59,,,,,,TRUE,,3,TRUE
+,"Liechi, Salac, Belue",62,,101,,49,73,2.90,,,,,TRUE,TRUE,,3,TRUE
+,"Liechi, Salac, Watmel",49,,140,,10,73,2.73,,,,,TRUE,TRUE,,3,TRUE
+,"Liechi, Petaya, Spelon",140,,,36,,73,2.41,,,,,TRUE,TRUE,,3,TRUE
+,"Chilan, Liechi, Salac",87,,139,,,78,2.90,,,TRUE,,TRUE,TRUE,,3,TRUE
+,"Strib, Ganlon, Petaya",36,49,,140,,78,2.88,,,TRUE,,,TRUE,,3,TRUE
+,"Strib, Petaya, Spelon",127,10,,88,,75,3.00,,,TRUE,,,TRUE,,3,TRUE
+,"Drash, Pumkin, Salac",,,101,,101,67,3.01,,,TRUE,,,TRUE,,3,TRUE
+,"Eggant, Pumkin, Apicot",,101,,,101,67,3.01,,,TRUE,,,TRUE,,3,TRUE
+,"Pumkin, Apicot, Salac",,,49,,153,72,2.81,,,TRUE,,,TRUE,,3,TRUE
+,"Eggant, Apicot, Ganlon",,153,,,49,72,2.81,,,TRUE,,,TRUE,,3,TRUE
+,"Topo, Liechi, Salac",49,,140,,49,78,3.05,,TRUE,,,TRUE,TRUE,,3,TRUE
+,"Ginema, Eggant, Apicot",,140,,,88,68,3.35,,TRUE,,,,TRUE,,3,TRUE
+,"Ginema, Pumkin, Apicot",,88,,,140,68,3.35,,TRUE,,,,TRUE,,3,TRUE
+,"Niniku, Yago, Ganlon",,88,,140,,73,3.12,,TRUE,,,,TRUE,,3,TRUE
+,"Niniku, Eggant, Ganlon",,140,,88,,73,3.12,,TRUE,,,,TRUE,,3,TRUE
+,"Yago, Strib, Petaya",88,,,140,,73,3.12,,TRUE,,,,TRUE,,3,TRUE
+,"Touga, Strib, Petaya",140,,,88,,73,3.12,,TRUE,,,,TRUE,,3,TRUE
+,"Pumkin, Topo, Salac",,,88,,140,73,3.12,,TRUE,,,,TRUE,,3,TRUE
+,"Drash, Topo, Salac",,,140,,88,73,3.12,,TRUE,,,,TRUE,,3,TRUE
+,"Ginema, Apicot, Salac",,36,49,,140,73,3.08,,TRUE,,,,TRUE,,3,TRUE
+"""Petaya Chasm""","Petaya, Tamato, Hondew, Pomeg",75,10,,75,,33,4.85,,,,,,TRUE,,4,
+"""Petaya Valley""","Petaya, Tamato, Hondew, Razz",62,36,,62,,33,4.85,,,,,,TRUE,,4,
+"""Apicot Chasm""","Apicot, Cornn, Grepa, Kelpsy",,75,10,,75,33,4.85,,,,,,TRUE,,4,
+"""Apicot Valley""","Apicot, Cornn, Grepa, Bluk",,62,36,,62,33,4.85,,,,,,TRUE,,4,
+"""Ganlon Chasm""","Ganlon, Rabuta, Hondew, Kelpsy",,75,,75,10,33,4.85,,,,,,TRUE,,4,
+"""Ganlon Valley""","Ganlon, Rabuta, Hondew, Wepear",,62,,62,36,33,4.85,,,,,,TRUE,,4,
+"""Salac Chasm""","Salac, Nomel, Qualot, Grepa",10,,75,,75,33,4.85,,,,,,TRUE,,4,
+"""Salac Valley""","Salac, Nomel, Qualot, Leppa",36,,62,,62,33,4.85,,,,,,TRUE,,4,
+"""Ganlon Duo""","Ganlon, Hondew, Kelpsy, Razz",,87,,61,,31,4.77,,,,,,TRUE,,4,
+"""Salac Duo""","Salac, Grepa, Qualot, Bluk",,,87,,61,31,4.77,,,,,,TRUE,,4,
+"""Petaya Duo""","Petaya, Hondew, Pomeg, Nanab",61,,,87,,31,4.77,,,,,,TRUE,,4,
+"""Apicot Duo""","Apicot, Grepa, Kelpsy, Wepear",,61,,,87,31,4.77,,,,,,TRUE,,4,
+"""Ganlon Slope""","Ganlon, Hondew, Kelpsy, Wepear",,75,,62,10,31,4.74,,,,,,TRUE,,4,
+"""Salac Slope""","Salac, Grepa, Qualot, Leppa",10,,75,,62,31,4.74,,,,,,TRUE,,4,
+"""Petaya Slope""","Petaya, Hondew, Pomeg, Razz",62,10,,75,,31,4.74,,,,,,TRUE,,4,
+"""Apicot Slope""","Apicot, Grepa, Kelpsy, Bluk",,62,10,,75,31,4.74,,,,,,TRUE,,4,
+"""Salac Spread""","Salac, Qualot, Pinap, Leppa",36,,62,,49,31,4.74,,,,,,TRUE,,4,
+"""Liechi Duo""","Liechi, Qualot, Pinap, Leppa",87,,61,,,31,4.77,,,,,TRUE,,,4,
+"""Deez Nutpeas""","Nutpea, Nutpea, Nutpea, Nutpea",3 random stats of,,,,2,1,6.00,,,TRUE,,,,,4,
+"""Ganlon N4""","Nutpea, Ganlon, Hondew, Kelpsy",,75,,62,,27,5.07,,,TRUE,,,TRUE,,4,
+"""Salac N4""","Nutpea, Salac, Grepa, Qualot",,,75,,62,27,5.07,,,TRUE,,,TRUE,,4,
+"""Petaya N4""","Nutpea, Petaya, Pomeg, Hondew",62,,,75,,27,5.07,,,TRUE,,,TRUE,,4,
+"""Apicot N4""","Nutpea, Apicot, Kelpsy, Grepa",,62,,,75,27,5.07,,,TRUE,,,TRUE,,4,
+"""Liechi N4""","Nutpea, Liechi, Qualot, Leppa",74,,61,,,27,5.00,,,TRUE,,TRUE,,,4,
+"""Liechi KN4""","Kuo, Nutpea, Liechi, Qualot",61,,61,,,23,5.30,,TRUE,,,TRUE,,,4,
+"""Ganlon KN4""","Kuo, Nutpea, Ganlon, Hondew",,61,,61,,23,5.30,,TRUE,,,,TRUE,,4,
+"""Salac KN4""","Kuo, Nutpea, Salac, Grepa",,,61,,61,23,5.30,,TRUE,,,,TRUE,,4,
+"""Petaya KN4""","Kuo, Nutpea, Petaya, Pomeg",61,,,61,,23,5.30,,TRUE,,,,TRUE,,4,
+"""Apicot KN4""","Kuo, Nutpea, Apicot, Kelpsy",,61,,,61,23,5.30,,TRUE,,,,TRUE,,4,
+"""Tamato 4P""","Tamato, Hondew, Pomeg, Razz",23,23,,23,,18,3.83,,,,,,,,4,
+"""Cornn 4P""","Cornn, Grepa, Kelpsy, Bluk",,23,23,,23,18,3.83,,,,,,,,4,
+"""Magost 4P""","Magost, Qualot, Pomeg, Nanab",23,,23,23,,18,3.83,,,,,,,,4,
+"""Rabuta 4P""","Rabuta, Hondew, Kelpsy, Wepear",,23,,23,23,18,3.83,,,,,,,,4,
+"""Nomel 4P""","Nomel, Grepa, Qualot, Leppa",23,,23,,23,18,3.83,,,,,,,,4,
+,"Tamato, Durin, Spelon, Hondew",49,36,,49,,43,3.12,,,,,,,,4,TRUE
+,"Cornn, Belue, Pamtre, Grepa",,49,36,,49,43,3.12,,,,,,,,4,TRUE
+,"Magost, Spelon, Watmel, Pomeg",49,,49,36,,43,3.12,,,,,,,,4,TRUE
+,"Rabuta, Durin, Pamtre, Kelpsy",,49,,49,36,43,3.12,,,,,,,,4,TRUE
+,"Nomel, Belue, Watmel, Qualot",36,,49,,49,43,3.12,,,,,,,,4,TRUE
+,"Ganlon, Petaya, Spelon, Durin",36,75,,140,,71,3.54,,,,,,TRUE,,4,TRUE
+,"Apicot, Salac, Pamtre, Belue",,36,75,,140,71,3.54,,,,,,TRUE,,4,TRUE
+,"Apicot, Ganlon, Pamtre, Durin",,140,,36,75,71,3.54,,,,,,TRUE,,4,TRUE
+,"Ganlon, Petaya, Spelon, Hondew",36,62,,114,,58,3.66,,,,,,TRUE,,4,TRUE
+,"Apicot, Salac, Pamtre, Grepa",,36,62,,114,58,3.66,,,,,,TRUE,,4,TRUE
+,"Apicot, Ganlon, Durin, Kelpsy",,114,,36,62,58,3.66,,,,,,TRUE,,4,TRUE
+,"Liechi, Salac, Watmel, Belue",62,,140,,49,71,3.54,,,,,TRUE,TRUE,,4,TRUE
+,"Liechi, Petaya, Watmel, Spelon",140,,36,49,,71,3.17,,,,,TRUE,TRUE,,4,TRUE
+,"Chilan, Drash, Liechi, Salac",87,,191,,,73,3.81,,,TRUE,,TRUE,TRUE,,4,TRUE
+,"Strib, Ganlon, Petaya, Durin",36,49,,179,,74,3.57,,,TRUE,,,TRUE,,4,TRUE
+,"Pumkin, Apicot, Salac, Pamtre",,36,62,,153,69,3.64,,,TRUE,,,TRUE,,4,TRUE
+,"Eggant, Apicot, Ganlon, Durin",,153,,36,62,69,3.64,,,TRUE,,,TRUE,,4,TRUE
+,"Chilan, Liechi, Petaya, Spelon",179,,36,36,,74,3.39,,,TRUE,,TRUE,TRUE,,4,TRUE
+,"Topo, Drash, Liechi, Salac",49,,192,,49,73,3.97,,TRUE,,,TRUE,TRUE,,4,TRUE
+,"Yago, Strib, Ganlon, Petaya",36,49,,192,,73,3.79,,TRUE,,,,TRUE,,4,TRUE
+,"Ginema, Pumkin, Apicot, Salac",,36,49,,192,73,3.79,,TRUE,,,,TRUE,,4,TRUE
+,"Niniku, Eggant, Apicot, Ganlon",,192,,36,49,73,3.79,,TRUE,,,,TRUE,,4,TRUE
+,"Chilan, Touga, Liechi, Petaya",192,,36,36,,73,3.62,,TRUE,,,TRUE,TRUE,,4,TRUE
+,"Niniku, Yago, Eggant, Ganlon",,140,,140,,69,4.06,,TRUE,,,,TRUE,,4,TRUE
+,"Topo, Drash, Pumkin, Salac",,,140,,140,69,4.06,,TRUE,,,,TRUE,,4,TRUE
+,"Touga, Yago, Strib, Petaya",140,,,140,,69,4.06,,TRUE,,,,TRUE,,4,TRUE
+,"Ginema, Eggant, Pumkin, Apicot",,140,,,140,66,4.24,,TRUE,,,,TRUE,,4,TRUE
+,"Touga, Chilan, Drash, Liechi",139,,139,,,69,4.03,,TRUE,,,TRUE,,,4,TRUE

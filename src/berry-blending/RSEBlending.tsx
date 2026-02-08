@@ -1,7 +1,24 @@
 import React, { useState, useMemo } from 'react';
-import { calculateOptimalPokeblockKit } from './pokeblockCalculator';
-import natures from '../data/natures.json';
+import {
+  calculateOptimalPokeblocks,
+  filterPokeblocks,
+  type Pokeblock,
+  type Nature,
+  type PokeblockFilters
+} from './pokeblockBlending';
+import allPokeblocksData from '../data/pokeblocks_v2.json';
+import naturesData from '../data/natures.json';
 import { getBerryImageUrl } from './berryImageHelper';
+
+// Pokeblock with name field for display
+type NamedPokeblock = Pokeblock & { name: string };
+
+const allPokeblocks: NamedPokeblock[] = Object.entries(allPokeblocksData).map(([name, data]) => ({
+  ...(data as Pokeblock),
+  name,
+}));
+
+const natures = naturesData as Record<string, { likes?: string; dislikes?: string }>;
 
 export default function RSEBlending() {
   const [playerCount, setPlayerCount] = useState<1 | 2 | 3 | 4>(1);
@@ -10,15 +27,58 @@ export default function RSEBlending() {
   const [withBerryMaster, setWithBerryMaster] = useState(false);
   const [nature, setNature] = useState<string>('');
 
+  // Filter available pokeblocks based on user options
+  const availablePokeblocks = useMemo(() => {
+    const filters: PokeblockFilters = {
+      num_players: playerCount,
+      pinch_berries: withGamecube,
+      mirage_island: withMirageIsland,
+      blend_master: withBerryMaster,
+      e_reader: false,
+      jpn_e_reader: false,
+    };
+    return filterPokeblocks(allPokeblocks, filters) as NamedPokeblock[];
+  }, [playerCount, withGamecube, withMirageIsland, withBerryMaster]);
+
+  // Convert nature string to Nature interface
+  const selectedNature: Nature = useMemo(() => {
+    if (!nature || !natures[nature]) {
+      return {};
+    }
+    const natureData = natures[nature];
+    return {
+      likes: natureData.likes as any,
+      dislikes: natureData.dislikes as any,
+    };
+  }, [nature]);
+
+  // Calculate optimal berry kit
   const berryKit = useMemo(() => {
-    return calculateOptimalPokeblockKit(
-      playerCount,
-      withGamecube,
-      withMirageIsland,
-      withBerryMaster,
-      nature || null
-    );
-  }, [playerCount, withGamecube, withMirageIsland, withBerryMaster, nature]);
+    if (availablePokeblocks.length === 0) {
+      return null;
+    }
+
+    const result = calculateOptimalPokeblocks(availablePokeblocks, selectedNature);
+
+    return {
+      blocks: result.pokeblocks as NamedPokeblock[],
+      totalStats: {
+        spicy: result.finalStats.spicy,
+        dry: result.finalStats.dry,
+        sweet: result.finalStats.sweet,
+        bitter: result.finalStats.bitter,
+        sour: result.finalStats.sour,
+      },
+      totalFeel: result.finalStats.feel,
+      averageStat:
+        (result.finalStats.spicy +
+          result.finalStats.dry +
+          result.finalStats.sweet +
+          result.finalStats.bitter +
+          result.finalStats.sour) /
+        5,
+    };
+  }, [availablePokeblocks, selectedNature]);
 
   const natureOptions = Object.keys(natures).sort();
 
@@ -101,19 +161,21 @@ export default function RSEBlending() {
           <h4>Optimal Berry Kit:</h4>
           <div className="kit-blocks">
             {berryKit.blocks.map((block, index) => {
-              const imageUrl = getBerryImageUrl(block.berry);
+              // Get the first berry for the image
+              const firstBerry = block.berries[0];
+              const imageUrl = getBerryImageUrl(firstBerry);
               return (
                 <div key={index} className="block-item">
                   <div className="block-header">
                     {imageUrl && (
-                      <img src={imageUrl} alt={block.berry} title={block.berry} className="berry-icon" />
+                      <img src={imageUrl} alt={block.description} title={block.description} className="berry-icon" />
                     )}
                     <div className="block-name">{block.name}</div>
                   </div>
                   <div className="block-meta">
                     {block.npc > 0 ? `${block.npc} NPC` : `${block.players}-player`}
                   </div>
-                  <div className="block-berry">{block.berry}</div>
+                  <div className="block-berry">{block.description}</div>
                 </div>
               );
             })}
