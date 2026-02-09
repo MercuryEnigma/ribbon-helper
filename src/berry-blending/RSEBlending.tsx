@@ -148,24 +148,38 @@ export default function RSEBlending() {
 
       {berryKit ? (
         <div className="berry-kit">
-          <h4>Optimal Berry Kit:</h4>
+          <h4>Optimal Pokeblocks:</h4>
           <div className="kit-blocks">
             {berryKit.blocks.map((block, index) => {
-              // Get the first berry for the image
               const firstBerry = block.berries[0];
               const imageUrl = getBerryImageUrl(firstBerry);
+              const berries = [...block.berries];
+              while (berries.length < 4) {
+                berries.push('');
+              }
+              const playersLabel =
+                block.players === 1 && block["blend-master"]
+                  ? 'w/ Master'
+                  : block.players === 1 && block.npc > 0
+                    ? `w/ ${block.npc} NPC${block.npc === 1 ? '' : 's'}`
+                    : `${block.players}P`;
               return (
                 <div key={index} className="block-item">
+                  <div className="block-players">{playersLabel}</div>
                   <div className="block-header">
                     {imageUrl && (
                       <img src={imageUrl} alt={block.description} title={block.description} className="berry-icon" />
                     )}
                     <div className="block-name">{block.name}</div>
                   </div>
-                  <div className="block-meta">
-                    {block.npc > 0 ? `${block.npc} NPC` : `${block.players}-player`}
+                  <div className="block-berry-grid">
+                    {berries.map((berry, berryIndex) => (
+                      <div key={`${block.name}-berry-${berryIndex}`} className="block-berry">
+                        {berry}
+                      </div>
+                    ))}
                   </div>
-                  <div className="block-berry">{block.description}</div>
+                  <div className="block-rpm">@ {block.rpm}</div>
                 </div>
               );
             })}

@@ -214,9 +214,74 @@
 }
 
 .rse-blending .kit-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.rse-blending .block-item {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: 1.5rem minmax(150px, 230px) repeat(4, minmax(90px, 1fr)) auto;
+  grid-template-areas: "players header berries berries berries berries rpm";
+  align-items: center;
+  column-gap: 0.5rem;
+  row-gap: 0.2rem;
+  border: none;
+  border-bottom: 1px solid #e0d0c0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 0.4rem 0.5rem 0.4rem 2.5rem;
+}
+
+.rse-blending .block-item:last-child {
+  border-bottom: none;
+}
+
+.rse-blending .block-players {
+  grid-area: players;
+  margin-left: -2rem;
+  width: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #757575;
+  white-space: nowrap;
+}
+
+.rse-blending .block-header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.rse-blending .block-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #424242;
+  word-break: break-word;
+}
+
+.rse-blending .block-berry-grid {
+  grid-area: berries;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(90px, 1fr));
+  column-gap: 0.5rem;
+}
+
+.rse-blending .block-berry {
+  font-size: 0.8rem;
+  color: #757575;
+  white-space: nowrap;
+}
+
+.rse-blending .block-rpm {
+  grid-area: rpm;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #757575;
+  white-space: nowrap;
+  justify-self: end;
 }
 
 /* DPPt Blending */
@@ -723,6 +788,29 @@
     padding: 0.45rem 1.75rem 0.45rem 0.65rem;
   }
 
+  .rse-blending .block-item {
+    grid-template-columns: 1.5rem 1fr auto;
+    grid-template-areas:
+      "players header rpm"
+      "players berries berries";
+    align-items: start;
+  }
+
+  .rse-blending .block-berry-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  .rse-blending .block-rpm {
+    align-self: start;
+  }
+
+  .rse-blending .block-berry {
+    min-width: 105px;
+  }
+
   .kit-blocks {
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   }
@@ -731,7 +819,6 @@
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 
-  .rse-blending .kit-blocks,
   .dppt-blending .kit-blocks {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
@@ -893,7 +980,6 @@
     text-align: center;
   }
 
-  .rse-blending .kit-blocks,
   .dppt-blending .kit-blocks {
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     gap: 0.5rem;
