@@ -331,7 +331,15 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
 
   const matchingEffectMoves = useMemo(() => {
     if (!selectedMoveDisplay?.move_role) return [];
-    return selectedMoveDisplay.move_role.map(name => name.replace(/-/g, ' '));
+
+    return selectedMoveDisplay.move_role.map(moveName => {
+      const moveType = contestMoves[moveName]?.type as ContestType | undefined;
+      return {
+        name: moveName,
+        displayName: moveName.replace(/-/g, ' '),
+        type: moveType
+      };
+    });
   }, [selectedMoveDisplay]);
 
   const selectedMoveLearnMethods = useMemo(() => {
@@ -704,7 +712,16 @@ export default function DPPtMoves({ selectedGame, onNavigate }: DPPtMovesProps) 
                       )}
                       {matchingEffectMoves.length > 0 && (
                         <p className="move-details-related">
-                          {matchingEffectMoves.join(', ')}
+                          {matchingEffectMoves.map((move, idx) => (
+                            <span key={move.name}>
+                              <span
+                                className={`related-move${move.type ? ` related-move-${move.type}` : ''}`}
+                              >
+                                {move.displayName}
+                              </span>
+                              {idx < matchingEffectMoves.length - 1 && ', '}
+                            </span>
+                          ))}
                         </p>
                       )}
                     </div>

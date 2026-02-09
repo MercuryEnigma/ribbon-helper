@@ -355,6 +355,40 @@
   align-self: center;
 }
 
+.related-move {
+  font-weight: 700;
+  padding: 0 3px;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
+.related-move-cool {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.related-move-beauty,
+.related-move-beautiful {
+  background: #3498db;
+  color: #fff;
+}
+
+.related-move-cute {
+  background: #ff69b4;
+  color: #fff;
+}
+
+.related-move-smart,
+.related-move-clever {
+  background: #2ecc71;
+  color: #fff;
+}
+
+.related-move-tough {
+  background: #f39c12;
+  color: #fff;
+}
+
 /* Pokemon Selector Section (Left) */
 .pokemon-selector-section {
   display: flex;
