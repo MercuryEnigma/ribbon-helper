@@ -680,9 +680,9 @@
 }
 
 .kit-stats {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   padding-top: 0.5rem;
   border-top: 1px solid #e0e0e0;
 }
@@ -828,7 +828,6 @@
   }
 
   .kit-stats {
-    grid-template-columns: 1fr;
     gap: 0.5rem;
   }
 }

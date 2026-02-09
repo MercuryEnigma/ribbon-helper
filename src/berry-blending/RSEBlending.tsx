@@ -187,20 +187,16 @@ export default function RSEBlending() {
 
           <div className="kit-stats">
             <div className="stat-row">
-              <span className="stat-label">Total Stats:</span>
+              <span className="stat-label">Stats:</span>
               <div className="stats">
-                <span className="stat spicy">Spicy: {berryKit.totalStats.spicy}</span>
-                <span className="stat dry">Dry: {berryKit.totalStats.dry}</span>
-                <span className="stat sweet">Sweet: {berryKit.totalStats.sweet}</span>
-                <span className="stat bitter">Bitter: {berryKit.totalStats.bitter}</span>
-                <span className="stat sour">Sour: {berryKit.totalStats.sour}</span>
+                <span className="stat spicy">Cool: {berryKit.totalStats.spicy}</span>
+                <span className="stat dry">Beauty: {berryKit.totalStats.dry}</span>
+                <span className="stat sweet">Cute: {berryKit.totalStats.sweet}</span>
+                <span className="stat bitter">Smart: {berryKit.totalStats.bitter}</span>
+                <span className="stat sour">Tough: {berryKit.totalStats.sour}</span>
                 <span className="stat sheen">Sheen: {berryKit.totalFeel}</span>
+                <span className="stat avg">Avg: {berryKit.averageStat.toFixed(1)}</span>
               </div>
-            </div>
-
-            <div className="stat-row">
-              <span className="stat-label">Average Stat:</span>
-              <span>{berryKit.averageStat.toFixed(1)}</span>
             </div>
           </div>
         </div>
