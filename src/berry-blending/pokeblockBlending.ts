@@ -1,4 +1,5 @@
 import berriesData from '../data/berries_rse.json';
+import premadeCombosData from '../data/premade_combos_rse.json';
 
 interface Berry {
   name: string;
@@ -396,7 +397,7 @@ export function filterPokeblocks(
  * @param nature - The Pokemon's nature (affects stat adjustments)
  * @returns Object containing the ordered array of optimal pokeblocks and final Pokemon stats
  */
-export function calculateOptimalPokeblocks(
+function calculateOptimalPokeblocksGreedy(
   availablePokeblocks: Pokeblock[],
   nature: Nature
 ): { pokeblocks: Pokeblock[]; finalStats: PokemonStats } {
@@ -480,4 +481,260 @@ export function calculateOptimalPokeblocks(
   }
 
   return bestResult || { pokeblocks: [], finalStats: { spicy: 0, dry: 0, sweet: 0, bitter: 0, sour: 0, feel: 0 } };
+}
+
+/**
+ * Calculates the minimum contest score across all 5 flavors.
+ * flavorScore[i] = flavor[i] + 0.5 * flavor[left] + 0.5 * flavor[right]
+ * Flavor order (circular): spicy, dry, sweet, bitter, sour
+ * Returns min(flavorScore[:])
+ */
+function minContestScore(spicy: number, dry: number, sweet: number, bitter: number, sour: number): number {
+  const flavors = [spicy, dry, sweet, bitter, sour];
+  let min = Infinity;
+  for (let i = 0; i < 5; i++) {
+    const score = flavors[i] + 0.5 * flavors[(i - 1 + 5) % 5] + 0.5 * flavors[(i + 1) % 5];
+    if (score < min) min = score;
+  }
+  return min;
+}
+
+/**
+ * Calculates the optimal pokeblock selection using dynamic programming.
+ * Uses an unbounded knapsack approach over feel values 0-254,
+ * then finishes with one final pokeblock to fill remaining feel.
+ * Optimizes for the highest minimum stat across all 5 flavors.
+ *
+ * @param availablePokeblocks - Array of filtered pokeblocks to choose from
+ * @param nature - The Pokemon's nature (affects stat adjustments)
+ * @returns Object containing the ordered array of optimal pokeblocks and final Pokemon stats
+ */
+function calculateOptimalPokeblocksDP(
+  availablePokeblocks: Pokeblock[],
+  nature: Nature
+): { pokeblocks: Pokeblock[]; finalStats: PokemonStats } {
+  // Step 1: Adjust all pokeblocks with nature
+  const adjustedPokeblocks = availablePokeblocks.map(pb => adjustWithNature(pb, nature));
+
+  const nonFinishingPokeblocks = adjustedPokeblocks.filter(pb => !pb.finishing);
+
+  // DP table: dp[f][slot] = candidate combination at exactly feel f
+  // Slots 0-4: max flavorScore[i] while flavorScore[i] = min(flavorScores)
+  // Slot 5: max average(flavors)
+  // Slot 6: max minContestScore
+  // flavorScore[i] = flavor[i] + 0.5 * flavor[left] + 0.5 * flavor[right]
+  const SLOT_COUNT = 7;
+
+  interface DPEntry {
+    spicy: number;
+    dry: number;
+    sweet: number;
+    bitter: number;
+    sour: number;
+    pokeblocks: Pokeblock[];
+  }
+
+  function getFlavors(e: DPEntry): number[] {
+    return [e.spicy, e.dry, e.sweet, e.bitter, e.sour];
+  }
+
+  function getFlavorScores(flavors: number[]): number[] {
+    return flavors.map((v, i) =>
+      v + 0.5 * flavors[(i - 1 + 5) % 5] + 0.5 * flavors[(i + 1) % 5]
+    );
+  }
+
+  const dp: (DPEntry | null)[][] = Array.from({ length: MAX_FEEL }, () =>
+    new Array(SLOT_COUNT).fill(null)
+  );
+  const emptyEntry: DPEntry = { spicy: 0, dry: 0, sweet: 0, bitter: 0, sour: 0, pokeblocks: [] };
+  for (let s = 0; s < SLOT_COUNT; s++) {
+    dp[0][s] = emptyEntry;
+  }
+
+  // Fill DP table for feel 1 to 254 (MAX_FEEL - 1) using nonFinishing pokeblocks
+  for (let f = 1; f < MAX_FEEL; f++) {
+    for (const pb of nonFinishingPokeblocks) {
+      const prevFeel = f - pb.feel;
+      if (prevFeel < 0) continue;
+
+      for (let s = 0; s < SLOT_COUNT; s++) {
+        const prev = dp[prevFeel][s];
+        if (!prev) continue;
+
+        const newEntry: DPEntry = {
+          spicy: Math.min(prev.spicy + pb.spicy, MAX_STAT),
+          dry: Math.min(prev.dry + pb.dry, MAX_STAT),
+          sweet: Math.min(prev.sweet + pb.sweet, MAX_STAT),
+          bitter: Math.min(prev.bitter + pb.bitter, MAX_STAT),
+          sour: Math.min(prev.sour + pb.sour, MAX_STAT),
+          pokeblocks: [...prev.pokeblocks, pb],
+        };
+        const newFlavors = getFlavors(newEntry);
+        const newFlavorScores = getFlavorScores(newFlavors);
+        const newMinFS = Math.min(...newFlavorScores);
+
+        // Slots 0-4: max flavorScore[i] while flavorScore[i] is the bottleneck
+        for (let i = 0; i < 5; i++) {
+          if (newFlavorScores[i] !== newMinFS) continue;
+          const current = dp[f][i];
+          if (!current) {
+            dp[f][i] = newEntry;
+          } else {
+            const curFlavors = getFlavors(current);
+            const curFS = getFlavorScores(curFlavors);
+            if (newFlavorScores[i] > curFS[i]) {
+              dp[f][i] = newEntry;
+            }
+          }
+        }
+
+        // Slot 5: max average(flavors)
+        const newTotal = newFlavors.reduce((a, b) => a + b, 0);
+        const cur5 = dp[f][5];
+        if (!cur5 || newTotal > getFlavors(cur5).reduce((a, b) => a + b, 0)) {
+          dp[f][5] = newEntry;
+        }
+
+        // Slot 6: max minContestScore
+        const newDS = minContestScore(newEntry.spicy, newEntry.dry, newEntry.sweet, newEntry.bitter, newEntry.sour);
+        const cur6 = dp[f][6];
+        if (!cur6 || newDS > minContestScore(cur6.spicy, cur6.dry, cur6.sweet, cur6.bitter, cur6.sour)) {
+          dp[f][6] = newEntry;
+        }
+      }
+    }
+  }
+
+  // Final step: try adding any pokeblock (finishing or nonFinishing) to fill remaining feel
+  // Choose the combination with the highest minContestScore
+  let bestScore = -1;
+  let bestPokeblocks: Pokeblock[] = [];
+  let bestFinalStats: PokemonStats | null = null;
+
+  for (const pb of adjustedPokeblocks) {
+    const lowerBound = Math.max(0, MAX_FEEL - pb.feel);
+    for (let f = lowerBound; f < MAX_FEEL; f++) {
+      for (let s = 0; s < SLOT_COUNT; s++) {
+        const entry = dp[f][s];
+        if (!entry) continue;
+
+        const finalSpicy = Math.min(entry.spicy + pb.spicy, MAX_STAT);
+        const finalDry = Math.min(entry.dry + pb.dry, MAX_STAT);
+        const finalSweet = Math.min(entry.sweet + pb.sweet, MAX_STAT);
+        const finalBitter = Math.min(entry.bitter + pb.bitter, MAX_STAT);
+        const finalSour = Math.min(entry.sour + pb.sour, MAX_STAT);
+        const score = minContestScore(finalSpicy, finalDry, finalSweet, finalBitter, finalSour);
+
+        if (score > bestScore) {
+          bestScore = score;
+          bestPokeblocks = [...entry.pokeblocks, pb];
+          bestFinalStats = {
+            spicy: finalSpicy,
+            dry: finalDry,
+            sweet: finalSweet,
+            bitter: finalBitter,
+            sour: finalSour,
+            feel: f + pb.feel,
+          };
+        }
+      }
+    }
+  }
+
+  if (!bestFinalStats) {
+    return { pokeblocks: [], finalStats: { spicy: 0, dry: 0, sweet: 0, bitter: 0, sour: 0, feel: 0 } };
+  }
+
+  return { pokeblocks: bestPokeblocks, finalStats: bestFinalStats };
+}
+
+const premadeCombos = premadeCombosData as string[][];
+
+/**
+ * Evaluates premade pokeblock combinations and returns the one with the highest minContestScore.
+ * Filters out any combo containing a pokeblock not in availablePokeblocks.
+ *
+ * @param availablePokeblocks - Array of filtered pokeblocks to choose from
+ * @param nature - The Pokemon's nature (affects stat adjustments)
+ * @returns Object containing the ordered array of optimal pokeblocks and final Pokemon stats
+ */
+function calculateOptimalPokeblocksPremade(
+  availablePokeblocks: Pokeblock[],
+  nature: Nature
+): { pokeblocks: Pokeblock[]; finalStats: PokemonStats } {
+  // Build a map from description to nature-adjusted pokeblock
+  const adjustedMap = new Map<string, Pokeblock>();
+  for (const pb of availablePokeblocks) {
+    adjustedMap.set(pb.description, adjustWithNature(pb, nature));
+  }
+
+  let bestScore = -1;
+  let bestPokeblocks: Pokeblock[] = [];
+  let bestFinalStats: PokemonStats = { spicy: 0, dry: 0, sweet: 0, bitter: 0, sour: 0, feel: 0 };
+
+  for (const combo of premadeCombos) {
+    // Filter out combos with missing pokeblocks
+    const resolved: Pokeblock[] = [];
+    let valid = true;
+    for (const desc of combo) {
+      const pb = adjustedMap.get(desc);
+      if (!pb) { valid = false; break; }
+      resolved.push(pb);
+    }
+    if (!valid) continue;
+
+    // Calculate final stats
+    const finalStats: PokemonStats = { spicy: 0, dry: 0, sweet: 0, bitter: 0, sour: 0, feel: 0 };
+    for (const pb of resolved) {
+      finalStats.spicy = Math.min(finalStats.spicy + pb.spicy, MAX_STAT);
+      finalStats.dry = Math.min(finalStats.dry + pb.dry, MAX_STAT);
+      finalStats.sweet = Math.min(finalStats.sweet + pb.sweet, MAX_STAT);
+      finalStats.bitter = Math.min(finalStats.bitter + pb.bitter, MAX_STAT);
+      finalStats.sour = Math.min(finalStats.sour + pb.sour, MAX_STAT);
+      finalStats.feel += pb.feel;
+    }
+
+    const score = minContestScore(finalStats.spicy, finalStats.dry, finalStats.sweet, finalStats.bitter, finalStats.sour);
+    if (score > bestScore) {
+      bestScore = score;
+      bestPokeblocks = resolved;
+      bestFinalStats = finalStats;
+    }
+  }
+
+  return { pokeblocks: bestPokeblocks, finalStats: bestFinalStats };
+}
+
+/**
+ * Calculates the optimal pokeblock selection by running greedy, DP, and premade
+ * approaches and returning whichever has the higher minContestScore.
+ *
+ * @param availablePokeblocks - Array of filtered pokeblocks to choose from
+ * @param nature - The Pokemon's nature (affects stat adjustments)
+ * @returns Object containing the ordered array of optimal pokeblocks and final Pokemon stats
+ */
+export function calculateOptimalPokeblockCombo(
+  availablePokeblocks: Pokeblock[],
+  nature: Nature
+): { pokeblocks: Pokeblock[]; finalStats: PokemonStats } {
+  const resultOptions: { pokeblocks: Pokeblock[]; finalStats: PokemonStats }[] = [];
+  resultOptions.push(calculateOptimalPokeblocksGreedy(availablePokeblocks, nature));
+  resultOptions.push(calculateOptimalPokeblocksDP(availablePokeblocks, nature));
+  resultOptions.push(calculateOptimalPokeblocksPremade(availablePokeblocks, nature));
+  const bestOption = resultOptions.reduce((best, option) => {
+    const bestScore = minContestScore(
+      best.finalStats.spicy, best.finalStats.dry, best.finalStats.sweet,
+      best.finalStats.bitter, best.finalStats.sour
+    );
+
+    const optionScore = minContestScore(
+      option.finalStats.spicy, option.finalStats.dry, option.finalStats.sweet,
+      option.finalStats.bitter, option.finalStats.sour
+    );
+
+    return optionScore > bestScore ? option : best;
+  });
+  bestOption.finalStats.feel = Math.min(bestOption.finalStats.feel, MAX_FEEL);
+  return bestOption;
 }

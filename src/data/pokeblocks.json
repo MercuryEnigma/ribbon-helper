@@ -4461,5 +4461,30 @@
     "finishing": true,
     "e-reader": false,
     "japanese-e-reader": true
+  },
+  "ApicotGaBePa": {
+    "description": "ApicotGaBePa",
+    "berries": [
+      "Apicot",
+      "Ganlon",
+      "Belue",
+      "Pamtre"
+    ],
+    "spicy": 0,
+    "dry": 136,
+    "sweet": 0,
+    "bitter": 0,
+    "sour": 85,
+    "feel": 71,
+    "efficiency": 3.112676056338028,
+    "rpm": 89.91,
+    "players": 4,
+    "npc": 0,
+    "gamecube": true,
+    "mirage": false,
+    "blend-master": false,
+    "finishing": true,
+    "e-reader": false,
+    "japanese-e-reader": false
   }
 }

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import {
-  calculateOptimalPokeblocks,
+  calculateOptimalPokeblockCombo,
   filterPokeblocks,
   type Pokeblock,
   type Nature,
@@ -50,7 +50,7 @@ export default function RSEBlending() {
       return null;
     }
 
-    const result = calculateOptimalPokeblocks(availablePokeblocks, selectedNature);
+    const result = calculateOptimalPokeblockCombo(availablePokeblocks, selectedNature);
 
     return {
       blocks: result.pokeblocks as NamedPokeblock[],
@@ -187,7 +187,6 @@ export default function RSEBlending() {
             <div className="stat-row">
               <span className="stat-label">Average Stat:</span>
               <span>{berryKit.averageStat.toFixed(1)}</span>
-              <span className="stat-label">(at 85+ PRM)</span>
             </div>
           </div>
         </div>
