@@ -1,14 +1,10 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
-import { calculatePokeblockFromBerries } from '../src/berry-blending/pokeblockBlending.js';
+import { ASSUMED_RPM, calculatePokeblockFromBerries } from '../src/berry-blending/pokeblockBlending.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-const ASSUMED_RPM = {
-  players: 89.91,
-} as const;
 
 const pokeblocksPath = path.join(__dirname, '../src/data/pokeblocks.json');
 

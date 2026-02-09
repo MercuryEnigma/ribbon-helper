@@ -83,10 +83,10 @@ export interface PokemonStats {
 /**
  * Assumed RPM values for different blending configurations
  */
-const ASSUMED_RPM = {
+export const ASSUMED_RPM = {
   blend_master: 150.0,
-  npc: 96.57,
-  players: 89.91,
+  npc: 90, // 96.57,
+  players: 85, //89.91,
 } as const;
 
 const MAX_FEEL = 255;

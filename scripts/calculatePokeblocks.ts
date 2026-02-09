@@ -1,18 +1,11 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
-import { calculatePokeblockFromBerries } from '../src/berry-blending/pokeblockBlending.js';
+import { ASSUMED_RPM, calculatePokeblockFromBerries } from '../src/berry-blending/pokeblockBlending.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const useCsv = process.argv.includes('--useCsv');
-
-// ASSUMED_RPM values (matching pokeblockBlending.ts)
-const ASSUMED_RPM = {
-  blend_master: 150.0,
-  npc: 96.57,
-  players: 89.91,
-} as const;
 
 interface OriginalPokeblock {
   berry: string;
