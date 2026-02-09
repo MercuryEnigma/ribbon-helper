@@ -346,9 +346,70 @@
 }
 
 .dppt-blending .kit-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.dppt-blending .block-item {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: 1.5rem minmax(150px, 230px) 1fr auto;
+  grid-template-areas: "players header berry time";
+  align-items: center;
+  column-gap: 0.5rem;
+  row-gap: 0.2rem;
+  border: none;
+  border-bottom: 1px solid #e0d0c0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 0.4rem 0.5rem 0.4rem 2.5rem;
+}
+
+.dppt-blending .block-item:last-child {
+  border-bottom: none;
+}
+
+.dppt-blending .block-players {
+  grid-area: players;
+  margin-left: -2rem;
+  width: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #757575;
+  white-space: nowrap;
+}
+
+.dppt-blending .block-header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dppt-blending .block-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #424242;
+  word-break: break-word;
+}
+
+.dppt-blending .block-berry {
+  grid-area: berry;
+  font-size: 0.8rem;
+  color: #757575;
+  white-space: nowrap;
+}
+
+.dppt-blending .block-time {
+  grid-area: time;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #757575;
+  white-space: nowrap;
+  justify-self: end;
+  min-width: 8ch;
+  text-align: left;
 }
 
 /* BDSP Blending */
@@ -819,8 +880,12 @@
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 
-  .dppt-blending .kit-blocks {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  .dppt-blending .block-item {
+    grid-template-columns: 1.5rem 1fr auto;
+    grid-template-areas:
+      "players header time"
+      "players berry berry";
+    align-items: start;
   }
 
   .bdsp-set-items {
@@ -979,9 +1044,9 @@
     text-align: center;
   }
 
-  .dppt-blending .kit-blocks {
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 0.5rem;
+  .dppt-blending .block-berry {
+    min-width: 0;
+    white-space: normal;
   }
 
   .bdsp-set-items {
@@ -1039,8 +1104,7 @@
     font-size: 0.75rem;
   }
 
-  .rse-blending .kit-blocks,
-  .dppt-blending .kit-blocks {
+  .rse-blending .kit-blocks {
     grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
   }
 

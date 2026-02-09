@@ -52,6 +52,19 @@ export default function RSEBlending() {
 
     const result = calculateOptimalPokeblockCombo(availablePokeblocks, selectedNature);
 
+    const contestStats = {
+      cool: result.finalStats.spicy + 0.5 * result.finalStats.dry + 0.5 * result.finalStats.sour,
+      beauty: result.finalStats.dry + 0.5 * result.finalStats.spicy + 0.5 * result.finalStats.sweet,
+      cute: result.finalStats.sweet + 0.5 * result.finalStats.dry + 0.5 * result.finalStats.bitter,
+      smart: result.finalStats.bitter + 0.5 * result.finalStats.sweet + 0.5 * result.finalStats.sour,
+      tough: result.finalStats.sour + 0.5 * result.finalStats.bitter + 0.5 * result.finalStats.spicy,
+    };
+
+    const contestStatValues = Object.values(contestStats).map(Math.floor);
+    const contestMin = Math.min(...contestStatValues);
+    const contestAverage =
+      contestStatValues.reduce((sum, value) => sum + value, 0) / contestStatValues.length;
+
     return {
       blocks: result.pokeblocks as NamedPokeblock[],
       totalStats: {
@@ -69,6 +82,11 @@ export default function RSEBlending() {
           result.finalStats.bitter +
           result.finalStats.sour) /
         5,
+      contestStats: Object.fromEntries(
+        Object.entries(contestStats).map(([key, value]) => [key, Math.floor(value)])
+      ) as Record<'cool' | 'beauty' | 'cute' | 'smart' | 'tough', number>,
+      contestMin,
+      contestAverage,
     };
   }, [availablePokeblocks, selectedNature]);
 
@@ -187,7 +205,7 @@ export default function RSEBlending() {
 
           <div className="kit-stats">
             <div className="stat-row">
-              <span className="stat-label">Stats:</span>
+              <span className="stat-label">Pokemon Stats:</span>
               <div className="stats">
                 <span className="stat spicy">Cool: {berryKit.totalStats.spicy}</span>
                 <span className="stat dry">Beauty: {berryKit.totalStats.dry}</span>
@@ -196,6 +214,21 @@ export default function RSEBlending() {
                 <span className="stat sour">Tough: {berryKit.totalStats.sour}</span>
                 <span className="stat sheen">Sheen: {berryKit.totalFeel}</span>
                 <span className="stat avg">Avg: {berryKit.averageStat.toFixed(1)}</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="kit-stats">
+            <div className="stat-row">
+              <span className="stat-label">Contest Stats:</span>
+              <div className="stats">
+                <span className="stat spicy">Cool: {berryKit.contestStats.cool}</span>
+                <span className="stat dry">Beauty: {berryKit.contestStats.beauty}</span>
+                <span className="stat sweet">Cute: {berryKit.contestStats.cute}</span>
+                <span className="stat bitter">Smart: {berryKit.contestStats.smart}</span>
+                <span className="stat sour">Tough: {berryKit.contestStats.tough}</span>
+                <span className="stat sheen">Min: {berryKit.contestMin}</span>
+                <span className="stat avg">Avg: {berryKit.contestAverage.toFixed(1)}</span>
               </div>
             </div>
           </div>
