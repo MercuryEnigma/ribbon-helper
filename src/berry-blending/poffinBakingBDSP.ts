@@ -30,6 +30,7 @@ export interface Poffin {
   pdr: boolean;
   frontier: boolean;
   event: boolean;
+  damage: boolean;
   finishing: boolean;
   time?: number;
 }
@@ -51,6 +52,7 @@ export interface PoffinFilters {
   pdr?: boolean;
   frontier?: boolean;
   event?: boolean;
+  damage?: boolean;
 }
 
 /**
@@ -170,6 +172,7 @@ function getOptimalPoffinsWithBudget(
   priorityWeights: number[] = [1, 1, 1, 1, 1]
 ): { poffins: Poffin[]; finalStats: PokemonStats } {
   const selected: Poffin[] = [];
+  const selectedBerries = new Set<string>();
   const currentStats: PokemonStats = {
     spicy: 0, dry: 0, sweet: 0, bitter: 0, sour: 0, feel: 0,
   };
@@ -177,20 +180,24 @@ function getOptimalPoffinsWithBudget(
   while (true) {
     let bestPoffin: Poffin | null = null;
     let bestScore = -Infinity;
+    let bestIsExisting = false;
 
     for (const poffin of availablePoffins) {
       if (currentStats.feel >= feelBudget) continue;
 
       const score = scorePoffinForState(currentStats, poffin, priorityWeights);
-      if (score > bestScore) {
+      const isExisting = selectedBerries.has(poffin.berries);
+      if (score > bestScore || (score === bestScore && isExisting && !bestIsExisting)) {
         bestScore = score;
         bestPoffin = poffin;
+        bestIsExisting = isExisting;
       }
     }
 
     if (!bestPoffin || bestScore <= 0) break;
 
     selected.push(bestPoffin);
+    selectedBerries.add(bestPoffin.berries);
     currentStats.spicy = Math.min(currentStats.spicy + bestPoffin.spicy, MAX_STAT);
     currentStats.dry = Math.min(currentStats.dry + bestPoffin.dry, MAX_STAT);
     currentStats.sweet = Math.min(currentStats.sweet + bestPoffin.sweet, MAX_STAT);
@@ -243,6 +250,11 @@ export function filterPoffins(
 
     // Filter by event-only berries
     if (filters.event === false && poffin.event === true) {
+      return false;
+    }
+
+    // Filter by damage-reducing berries
+    if (filters.damage === false && poffin.damage === true) {
       return false;
     }
 
@@ -320,11 +332,12 @@ function calculateOptimalPoffinsGreedy(
             feel: Math.min(result.finalStats.feel + finisher.feel, MAX_FEEL),
           };
           const score = calcScore(finalStats);
+          const candidatePoffins = [...result.poffins, finisher];
 
-          if (score > bestScore) {
+          if (score > bestScore || (score === bestScore && bestResult && countUniquePoffins(candidatePoffins) < countUniquePoffins(bestResult.poffins))) {
             bestScore = score;
             bestResult = {
-              poffins: [...result.poffins, finisher],
+              poffins: candidatePoffins,
               finalStats,
             };
           }
@@ -333,7 +346,7 @@ function calculateOptimalPoffinsGreedy(
 
       // Also consider without finisher
       const score = calcScore(result.finalStats);
-      if (score > bestScore) {
+      if (score > bestScore || (score === bestScore && bestResult && countUniquePoffins(result.poffins) < countUniquePoffins(bestResult.poffins))) {
         bestScore = score;
         bestResult = result;
       }
@@ -360,6 +373,14 @@ function minContestScore(spicy: number, dry: number, sweet: number, bitter: numb
 }
 
 /**
+ * Counts distinct poffin types (by berry combo) in a selection.
+ * Fewer unique types = fewer baking sessions needed.
+ */
+function countUniquePoffins(poffins: Poffin[]): number {
+  return new Set(poffins.map(p => p.berries)).size;
+}
+
+/**
  * Calculates the optimal poffin selection using dynamic programming.
  * Uses an unbounded knapsack approach over feel values 0-254,
  * then finishes with one final poffin to fill remaining feel.
@@ -377,6 +398,7 @@ function calculateOptimalPoffinsDP(
   const adjustedPoffins = availablePoffins.map(p => adjustWithNature(p, nature));
 
   const nonFinishingPoffins = adjustedPoffins.filter(p => !p.finishing);
+  const finishingPoffins = adjustedPoffins.filter(p => p.finishing);
 
   // DP table: dp[f][slot] = candidate combination at exactly feel f
   // Slots 0-4: max flavorScore[i] while flavorScore[i] = min(flavorScores)
@@ -442,7 +464,8 @@ function calculateOptimalPoffinsDP(
           } else {
             const curFlavors = getFlavors(current);
             const curFS = getFlavorScores(curFlavors);
-            if (newFlavorScores[i] > curFS[i]) {
+            if (newFlavorScores[i] > curFS[i] ||
+                (newFlavorScores[i] === curFS[i] && countUniquePoffins(newEntry.poffins) < countUniquePoffins(current.poffins))) {
               dp[f][i] = newEntry;
             }
           }
@@ -451,27 +474,32 @@ function calculateOptimalPoffinsDP(
         // Slot 5: max average(flavors)
         const newTotal = newFlavors.reduce((a, b) => a + b, 0);
         const cur5 = dp[f][5];
-        if (!cur5 || newTotal > getFlavors(cur5).reduce((a, b) => a + b, 0)) {
+        const cur5Total = cur5 ? getFlavors(cur5).reduce((a, b) => a + b, 0) : -1;
+        if (!cur5 || newTotal > cur5Total ||
+            (newTotal === cur5Total && countUniquePoffins(newEntry.poffins) < countUniquePoffins(cur5.poffins))) {
           dp[f][5] = newEntry;
         }
 
         // Slot 6: max minContestScore
         const newDS = minContestScore(newEntry.spicy, newEntry.dry, newEntry.sweet, newEntry.bitter, newEntry.sour);
         const cur6 = dp[f][6];
-        if (!cur6 || newDS > minContestScore(cur6.spicy, cur6.dry, cur6.sweet, cur6.bitter, cur6.sour)) {
+        const cur6DS = cur6 ? minContestScore(cur6.spicy, cur6.dry, cur6.sweet, cur6.bitter, cur6.sour) : -1;
+        if (!cur6 || newDS > cur6DS ||
+            (newDS === cur6DS && countUniquePoffins(newEntry.poffins) < countUniquePoffins(cur6.poffins))) {
           dp[f][6] = newEntry;
         }
       }
     }
   }
 
-  // Final step: try adding any poffin (finishing or nonFinishing) to fill remaining feel
+  // Final step: try adding exactly one finisher if available (otherwise allow any poffin)
   // Choose the combination with the highest minContestScore
   let bestScore = -1;
   let bestPoffins: Poffin[] = [];
   let bestFinalStats: PokemonStats | null = null;
 
-  for (const p of adjustedPoffins) {
+  const finalCandidates = finishingPoffins.length > 0 ? finishingPoffins : adjustedPoffins;
+  for (const p of finalCandidates) {
     const lowerBound = Math.max(0, MAX_FEEL - p.feel);
     for (let f = lowerBound; f < MAX_FEEL; f++) {
       for (let s = 0; s < SLOT_COUNT; s++) {
@@ -485,9 +513,11 @@ function calculateOptimalPoffinsDP(
         const finalSour = Math.min(entry.sour + p.sour, MAX_STAT);
         const score = minContestScore(finalSpicy, finalDry, finalSweet, finalBitter, finalSour);
 
-        if (score > bestScore) {
+        const candidatePoffins = [...entry.poffins, p];
+        if (score > bestScore ||
+            (score === bestScore && countUniquePoffins(candidatePoffins) < countUniquePoffins(bestPoffins))) {
           bestScore = score;
-          bestPoffins = [...entry.poffins, p];
+          bestPoffins = candidatePoffins;
           bestFinalStats = {
             spicy: finalSpicy,
             dry: finalDry,
@@ -534,7 +564,9 @@ export function calculateOptimalPoffinBakingCombo(
       option.finalStats.bitter, option.finalStats.sour
     );
 
-    return optionScore > bestScore ? option : best;
+    if (optionScore > bestScore) return option;
+    if (optionScore === bestScore && countUniquePoffins(option.poffins) < countUniquePoffins(best.poffins)) return option;
+    return best;
   });
   bestOption.finalStats.feel = Math.min(bestOption.finalStats.feel, MAX_FEEL);
 
@@ -574,6 +606,7 @@ export function calculatePoffinFromBerries(
   let event = false;
   let pdr = false;
   let frontier = false;
+  let damage = false;
 
   for (const berryName of berryNames) {
     const berry = dpptBerries[berryName];
@@ -589,6 +622,7 @@ export function calculatePoffinFromBerries(
     if (berry.event) event = true;
     if (berry.br) pdr = true;
     if (berry.frontier) frontier = true;
+    if (berry.damage) damage = true;
   }
 
   const numNegatives = [spicy, dry, sweet, bitter, sour].filter(v => v < 0).length;
@@ -610,7 +644,54 @@ export function calculatePoffinFromBerries(
     pdr,
     frontier,
     event,
+    damage,
     finishing: false,
     time,
   };
+}
+
+interface BDSPPoffinData {
+  berries: string;
+  spicy: number;
+  dry: number;
+  sweet: number;
+  bitter: number;
+  sour: number;
+  sheen: number;
+  sheen_friendship?: number;
+  mild?: boolean;
+  damage: boolean;
+  pinch: boolean;
+}
+
+/**
+ * Converts raw BDSP poffin data into the Poffin interface.
+ *
+ * @param data - Raw BDSP poffin data keyed by name
+ * @param maxFriendship - If true, use sheen_friendship for feel; otherwise use sheen
+ * @returns Array of Poffins with name field
+ */
+export function convertBDSPPoffinData(
+  data: Record<string, BDSPPoffinData>,
+  num_best_buddies: number
+): (Poffin & { name: string })[] {
+  return Object.entries(data).map(([name, p]) => ({
+    name,
+    berries: p.berries,
+    spicy: p.spicy,
+    dry: p.dry,
+    sweet: p.sweet,
+    bitter: p.bitter,
+    sour: p.sour,
+    feel: p.sheen - Math.floor(Math.min(num_best_buddies, 6) * 1.5),
+    players: 1,
+    platinum: false,
+    mild: p.mild ?? false,
+    pdr: p.pinch,
+    frontier: false,
+    event: false,
+    damage: p.damage,
+    // Super Mild is unique per save and should only ever be the final poffin
+    finishing: name === "Super Mild",
+  }));
 }
