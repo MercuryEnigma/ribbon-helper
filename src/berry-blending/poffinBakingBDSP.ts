@@ -71,6 +71,8 @@ const MAX_FEEL = 255;
 
 const MAX_STAT = 255;
 
+const FLAVORS: FlavorStat[] = ['spicy', 'dry', 'sweet', 'bitter', 'sour'];
+
 /**
  * Adjusts a poffin's stats based on nature preferences.
  * In Gen 4, if liked flavor > disliked: all stats * 1.1
@@ -380,6 +382,12 @@ function countUniquePoffins(poffins: Poffin[]): number {
   return new Set(poffins.map(p => p.berries)).size;
 }
 
+function checkAllStatsMaxed(stats: PokemonStats): boolean {
+  return stats.spicy >= MAX_STAT && stats.dry >= MAX_STAT &&
+    stats.sweet >= MAX_STAT && stats.bitter >= MAX_STAT &&
+    stats.sour >= MAX_STAT;
+}
+
 /**
  * Calculates the optimal poffin selection using dynamic programming.
  * Uses an unbounded knapsack approach over feel values 0-254,
@@ -539,17 +547,252 @@ function calculateOptimalPoffinsDP(
 }
 
 /**
- * Calculates the optimal poffin selection by running greedy and DP
- * approaches and returning whichever has the higher minContestScore.
+ * Finds the minimum-copies allocation for a fixed subset of poffin types
+ * that achieves all required stats within the feel budget.
+ * Uses recursive DFS with pruning on bake count.
+ */
+function allocateMinCopies(
+  typeStats: number[][],
+  typeFeels: number[],
+  needed: number[],
+  feelBudget: number
+): { copies: number[]; totalBakes: number } | null {
+  const m = typeStats.length;
+  const maxCopies = typeFeels.map(f => Math.floor(feelBudget / f));
+
+  // Compute lower bounds: for flavors covered by only one type, that type
+  // needs enough copies to cover the deficit alone
+  const lowerBounds = new Array(m).fill(0);
+  for (let j = 0; j < 5; j++) {
+    if (needed[j] <= 0) continue;
+    // Find which types contribute to flavor j
+    const contributors: number[] = [];
+    for (let i = 0; i < m; i++) {
+      if (typeStats[i][j] > 0) contributors.push(i);
+    }
+    if (contributors.length === 1) {
+      const i = contributors[0];
+      lowerBounds[i] = Math.max(lowerBounds[i], Math.ceil(needed[j] / typeStats[i][j]));
+    }
+  }
+
+  // Check feasibility of lower bounds
+  let lbFeel = 0;
+  for (let i = 0; i < m; i++) {
+    if (lowerBounds[i] > maxCopies[i]) return null;
+    lbFeel += lowerBounds[i] * typeFeels[i];
+  }
+  if (lbFeel > feelBudget) return null;
+
+  let bestBakes = Infinity;
+  let bestCopies: number[] | null = null;
+
+  function search(depth: number, counts: number[], feelUsed: number, bakesSoFar: number) {
+    if (depth === m) {
+      // Check all stats met
+      for (let j = 0; j < 5; j++) {
+        if (needed[j] <= 0) continue;
+        let total = 0;
+        for (let i = 0; i < m; i++) {
+          total += counts[i] * typeStats[i][j];
+        }
+        if (total < needed[j]) return;
+      }
+      if (bakesSoFar < bestBakes) {
+        bestBakes = bakesSoFar;
+        bestCopies = [...counts];
+      }
+      return;
+    }
+
+    const maxC = Math.min(maxCopies[depth], Math.floor((feelBudget - feelUsed) / typeFeels[depth]));
+
+    for (let c = lowerBounds[depth]; c <= maxC; c++) {
+      const newBakes = bakesSoFar + Math.ceil(c / 4);
+      if (newBakes >= bestBakes) break;
+      counts[depth] = c;
+      search(depth + 1, counts, feelUsed + c * typeFeels[depth], newBakes);
+    }
+  }
+
+  search(0, new Array(m).fill(0), 0, 0);
+
+  if (!bestCopies) return null;
+  return { copies: bestCopies, totalBakes: bestBakes };
+}
+
+/**
+ * Finds the poffin combination that achieves max stats (255 in all 5 flavors)
+ * with the minimum number of baking sessions.
+ * Each bake produces 4 copies. Super Mild is free (0 sessions, max 1 use).
+ */
+function findMinBakingSessions(
+  availablePoffins: Poffin[],
+  nature: Nature
+): { poffins: Poffin[]; finalStats: PokemonStats; bakingSessions: number } | null {
+  const adjustedPoffins = availablePoffins.map(p => adjustWithNature(p, nature));
+  const nonFinishing = adjustedPoffins.filter(p => !p.finishing);
+  const finishingPoffin = adjustedPoffins.find(p => p.finishing) || null;
+
+  // Deduplicate by berries name
+  const seen = new Set<string>();
+  const uniqueTypes: Poffin[] = [];
+  for (const p of nonFinishing) {
+    if (!seen.has(p.berries)) {
+      seen.add(p.berries);
+      uniqueTypes.push(p);
+    }
+  }
+
+  // Precompute per-type stats and coverage masks
+  const typeStats = uniqueTypes.map(t => FLAVORS.map(f => t[f]));
+  const typeFeels = uniqueTypes.map(t => t.feel);
+  const typeMasks = typeStats.map(stats => {
+    let mask = 0;
+    stats.forEach((s, j) => { if (s > 0) mask |= (1 << j); });
+    return mask;
+  });
+
+  let bestBakes = Infinity;
+  let bestPoffins: Poffin[] | null = null;
+  let bestFinalStats: PokemonStats | null = null;
+
+  // Try with finishing poffin first (free bake), then without
+  for (const useMild of [true, false]) {
+    if (useMild && !finishingPoffin) continue;
+    if (bestBakes <= 0) break;
+
+    const mildStats = useMild
+      ? FLAVORS.map(f => finishingPoffin![f])
+      : [0, 0, 0, 0, 0];
+    const mildFeel = useMild ? finishingPoffin!.feel : 0;
+    const remainingFeel = MAX_FEEL - mildFeel;
+    if (remainingFeel <= 0) continue;
+
+    const needed = FLAVORS.map((_, j) => MAX_STAT - mildStats[j]);
+
+    // Determine which flavors still need coverage
+    let targetMask = 0;
+    needed.forEach((n, j) => { if (n > 0) targetMask |= (1 << j); });
+
+    // Enumerate subsets of increasing size
+    for (let size = 1; size <= Math.min(5, uniqueTypes.length); size++) {
+      // Minimum possible bakes for this size = size (1 bake per type)
+      if (size >= bestBakes) break;
+
+      let foundAtThisSize = false;
+
+      // Generate combinations of `size` types
+      const indices = new Array(size).fill(0);
+      for (let i = 0; i < size; i++) indices[i] = i;
+
+      while (true) {
+        // Check coverage
+        let coverage = 0;
+        for (let i = 0; i < size; i++) coverage |= typeMasks[indices[i]];
+        if ((coverage & targetMask) === targetMask) {
+          // Valid coverage - find minimum copies
+          const subStats = indices.map(i => typeStats[i]);
+          const subFeels = indices.map(i => typeFeels[i]);
+
+          const result = allocateMinCopies(subStats, subFeels, needed, remainingFeel);
+          if (result && result.totalBakes < bestBakes) {
+            bestBakes = result.totalBakes;
+            foundAtThisSize = true;
+
+            // Build poffin list and compute final stats
+            const poffins: Poffin[] = [];
+            for (let i = 0; i < size; i++) {
+              for (let c = 0; c < result.copies[i]; c++) {
+                poffins.push(uniqueTypes[indices[i]]);
+              }
+            }
+            if (useMild) poffins.push(finishingPoffin!);
+
+            const finalStats: PokemonStats = { spicy: 0, dry: 0, sweet: 0, bitter: 0, sour: 0, feel: 0 };
+            for (let j = 0; j < 5; j++) {
+              let total = mildStats[j];
+              for (let i = 0; i < size; i++) {
+                total += result.copies[i] * subStats[i][j];
+              }
+              finalStats[FLAVORS[j]] = Math.min(total, MAX_STAT);
+            }
+            finalStats.feel = poffins.reduce((s, p) => s + p.feel, 0);
+            finalStats.feel = Math.min(finalStats.feel, MAX_FEEL);
+
+            bestPoffins = poffins;
+            bestFinalStats = finalStats;
+          }
+        }
+
+        // Advance to next combination
+        let pos = size - 1;
+        while (pos >= 0 && indices[pos] === uniqueTypes.length - size + pos) pos--;
+        if (pos < 0) break;
+        indices[pos]++;
+        for (let i = pos + 1; i < size; i++) indices[i] = indices[i - 1] + 1;
+      }
+
+      if (foundAtThisSize) break;
+    }
+
+    if (bestBakes < Infinity) break;
+  }
+
+  if (!bestPoffins || !bestFinalStats) return null;
+  return { poffins: bestPoffins, finalStats: bestFinalStats, bakingSessions: bestBakes };
+}
+
+/**
+ * Calculates the optimal poffin selection.
+ * First checks if all stats can reach 255 using the greedy algorithm.
+ * If so, minimizes the number of baking sessions needed to achieve max stats.
+ * Otherwise, runs greedy and DP approaches and returns the best result.
  *
  * @param availablePoffins - Array of filtered poffins to choose from
  * @param nature - The Pokemon's nature (affects stat adjustments)
- * @returns Object containing the ordered array of optimal poffins and final Pokemon stats
+ * @returns Optimal poffins, final stats, baking session count, and whether all stats were maxed
  */
 export function calculateOptimalPoffinBakingCombo(
   availablePoffins: Poffin[],
   nature: Nature
 ): { poffins: Poffin[]; finalStats: PokemonStats } {
+  // Step 1: Check if max stats are achievable using greedy
+  const adjustedPoffins = availablePoffins.map(p => adjustWithNature(p, nature));
+  const nonFinishing = adjustedPoffins.filter(p => !p.finishing);
+  const finishing = adjustedPoffins.filter(p => p.finishing);
+
+  const greedyCheck = getOptimalPoffinsWithBudget(nonFinishing, MAX_FEEL);
+
+  // Add finishing poffin to check stats if room
+  let checkStats = { ...greedyCheck.finalStats };
+  if (finishing.length > 0 && checkStats.feel < MAX_FEEL) {
+    const f = finishing[0];
+    checkStats = {
+      spicy: Math.min(checkStats.spicy + f.spicy, MAX_STAT),
+      dry: Math.min(checkStats.dry + f.dry, MAX_STAT),
+      sweet: Math.min(checkStats.sweet + f.sweet, MAX_STAT),
+      bitter: Math.min(checkStats.bitter + f.bitter, MAX_STAT),
+      sour: Math.min(checkStats.sour + f.sour, MAX_STAT),
+      feel: checkStats.feel + f.feel,
+    };
+  }
+
+  if (checkAllStatsMaxed(checkStats)) {
+    // Step 2a: All stats can reach 255 — minimize baking sessions
+    const minBakeResult = findMinBakingSessions(availablePoffins, nature);
+    if (minBakeResult) {
+      for (const p of minBakeResult.poffins) {
+        if (!p.mild && !p.platinum) p.time = 60;
+      }
+      return {
+        poffins: minBakeResult.poffins,
+        finalStats: minBakeResult.finalStats,
+      };
+    }
+  }
+
+  // Step 2b: Cannot max all stats — use existing greedy + DP
   const resultOptions: { poffins: Poffin[]; finalStats: PokemonStats }[] = [];
   resultOptions.push(calculateOptimalPoffinsGreedy(availablePoffins, nature));
   resultOptions.push(calculateOptimalPoffinsDP(availablePoffins, nature));
@@ -570,7 +813,6 @@ export function calculateOptimalPoffinBakingCombo(
   });
   bestOption.finalStats.feel = Math.min(bestOption.finalStats.feel, MAX_FEEL);
 
-  // Set time = 60 for each poffin that is not mild or platinum
   for (const p of bestOption.poffins) {
     if (!p.mild && !p.platinum) {
       p.time = 60;

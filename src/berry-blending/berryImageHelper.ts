@@ -2,19 +2,33 @@
  * Helper functions for getting berry and poffin image URLs
  */
 
-// Mapping of poffin names to their Bulbapedia direct image URLs
+const BASE_URL = (typeof import.meta !== 'undefined' && (import.meta as any).env?.BASE_URL) || '/';
+
+// Local poffin image assets (downloaded into public/images/poffins)
+const poffinAsset = (slug: string) => `${BASE_URL}images/poffins/${slug}.png`;
+const berryAsset = (slug: string) => `${BASE_URL}images/berries/${slug}.png`;
+
+const slugify = (str: string) =>
+  str
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
 const POFFIN_IMAGE_MAP: Record<string, string> = {
-  'spicy-dry': 'https://archives.bulbagarden.net/media/upload/4/4d/Spicy-Dry_Poffin.png',
-  'spicy-sweet': 'https://archives.bulbagarden.net/media/upload/9/91/Spicy-Sweet_Poffin.png',
-  'spicy-bitter': 'https://archives.bulbagarden.net/media/upload/e/ee/Spicy-Bitter_Poffin.png',
-  'spicy-sour': 'https://archives.bulbagarden.net/media/upload/1/1d/Spicy-Sour_Poffin.png',
-  'dry-sweet': 'https://archives.bulbagarden.net/media/upload/a/ad/Dry-Sweet_Poffin.png',
-  'dry-bitter': 'https://archives.bulbagarden.net/media/upload/5/51/Dry-Bitter_Poffin.png',
-  'dry-sour': 'https://archives.bulbagarden.net/media/upload/9/94/Dry-Sour_Poffin.png',
-  'sweet-bitter': 'https://archives.bulbagarden.net/media/upload/5/56/Sweet-Bitter_Poffin.png',
-  'sweet-sour': 'https://archives.bulbagarden.net/media/upload/3/3c/Sweet-Sour_Poffin.png',
-  'bitter-sour': 'https://archives.bulbagarden.net/media/upload/b/bb/Bitter-Sour_Poffin.png',
-  'mild': 'https://archives.bulbagarden.net/media/upload/f/f9/Mild_Poffin.png'
+  'spicy-dry': poffinAsset('spicy-dry'),
+  'spicy-sweet': poffinAsset('spicy-sweet'),
+  'spicy-bitter': poffinAsset('spicy-bitter'),
+  'spicy-sour': poffinAsset('spicy-sour'),
+  'dry-sweet': poffinAsset('dry-sweet'),
+  'dry-bitter': poffinAsset('dry-bitter'),
+  'dry-sour': poffinAsset('dry-sour'),
+  'sweet-bitter': poffinAsset('sweet-bitter'),
+  'sweet-sour': poffinAsset('sweet-sour'),
+  'bitter-sour': poffinAsset('bitter-sour'),
+  'mild': poffinAsset('mild')
 };
 
 /**
@@ -49,9 +63,8 @@ export function getBerryImageUrl(berryOrPoffinName: string): string | null {
     return null;
   }
 
-  // Get berry name in lowercase for pokesprite URL
-  const berryName = firstBerry.toLowerCase();
+  const berrySlug = slugify(firstBerry);
+  if (!berrySlug) return null;
 
-  // Pokesprite URL format: https://raw.githubusercontent.com/msikma/pokesprite/master/icons/berry/{name}.png
-  return `https://raw.githubusercontent.com/msikma/pokesprite/master/icons/berry/${berryName}.png`;
+  return berryAsset(berrySlug);
 }

@@ -168,8 +168,9 @@ export default function BDSPBlending() {
           <div className="kit-blocks">
             {(() => {
               const all = poffinKit.poffins;
-              const last = all[all.length - 1];
-              const rest = all.slice(0, -1);
+              const splitLast = all.length < 2 || all[all.length - 1].name !== all[all.length - 2].name;
+              const last = splitLast ? all[all.length - 1] : null;
+              const rest = splitLast ? all.slice(0, -1) : all;
 
               // Group the non-final poffins by type
               const groups: { poffin: NamedPoffin; count: number }[] = [];
