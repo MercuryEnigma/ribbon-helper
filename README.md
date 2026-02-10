@@ -4,14 +4,25 @@ Ribbon Helper is a comprehensive React app for Pokémon ribbon hunters. It provi
 
 ## Features
 
-- **Game Compatibility**: Filter by Switch titles or search by species to see where a Pokémon is available. Handles regional/special forms, shows icons, and keeps accessibility in mind. Also includes filtering for Shadow Pokémon from Colosseum and XD: Gale of Darkness.
-- **Berry Blending Calculators**: Optimal berry kits for Pokéblocks (RSE), Poffins (DPPt), Pokéblocks (ORAS), and Poffins (BDSP) with toggles for player count, special berries, event/GameCube sources, Battle Frontier, and nature targeting.
-- **Contest Moves**: Optimal move calculators for contest competitions across RSE, DPPt, ORAS, and BDSP. Features include:
-  - Pokémon-specific move filtering by learn method (Level-up, TM/HM, Tutor, Egg, Purify, Pre-evolution)
-  - Contest type filtering (Cool, Beauty, Cute, Smart, Tough)
-  - Move details with appeal values, effects, and descriptions
-  - Individual move toggle for custom strategies
-- **Visual Decoration**: Contest visual guides and decoration tools for DPPt accessories and other contest preparation.
+- **Game Compatibility**: Quick way to learn where a Pokémon is playable on Switch, with form-aware icons and accessibility-friendly lists.
+  - *Availability by game*: Filter by switch games to see which pokemon are in all games.
+  - *Shadow Pokémon by game*: Filter by switch games to see which Shadow pokemon from Colosseum/XD are transferrable.
+  - *Lookup by species*: Look up a Pokémon species and get its Switch availability, obtainable ribbons, and forms.
+
+- **Berry Blending**: Pokéblock/Poffin builders that output the best kit for contests.
+  - *RSE*: Pokéblock calculator for Ruby/Sapphire/Emerald to optimize the lowest contest score.
+  - *DPPt*: Poffin calculator for Diamond/Pearl/Platinum to optimize the lowest contest score.
+  - *ORAS*: Details on how Pokéblock blending works in ORAS.
+  - *BDSP*: Poffin calculator for Brilliant Diamond / Shining Pearl to optimize poffin making.
+
+- **Contest Moves**: Find the best contest moves for any Pokémon across each generation.
+  - *Optimizers*: RSE, DPPt (Super Contest), ORAS (Spectacular), and BDSP (Super Contest Show) calculators that rank the top moves for the chosen contest type.
+  - *Filters*: Toggle learn methods (Level-up, TM/HM, Tutor, Egg, Purify, Pre-evo) or exclude specific moves; rankings update instantly.
+  - *Move details*: Appeal/hype, effects, conditionals, and the exact learn sources for every suggested move.
+
+- **Contest Visuals**: Visual prep references for the prop portion of Super Contests.
+  - *DPPt accessories*: Page-ordered list for each Super Contest theme.
+  - *BDSP ball stickers*: Score-ordered grouping for ball stickers for each Super Contest Show type.
 
 ## Getting Started
 
