@@ -7,10 +7,14 @@ export default function ORASBlending() {
 
       <div className="oras-info-card">
         <p>
-          In ORAS, there is no blending minigame. Simply select 4 berries of the same color
-          to generate 4 Pokeblocks of that flavor.
+          In ORAS, there is no blending minigame. Simple select 
+          up to 4 berries to get the same number of Pokeblocks. 
+          Ensure each berry is a different color to get a rainbow 
+          pokeblock. Select berries of all the same color to get 
+          that color pokeblock. Regular pokeblocks give 2-8 points. 
+          Rainbow pokeblocks give 2-8 points in all stats. Pokeblock+ 
+          pokeblocks give 16 points.        
         </p>
-
         <div className="color-mapping-list">
           <div className="color-mapping-item">
             <div className="color-label spicy">Red</div>
