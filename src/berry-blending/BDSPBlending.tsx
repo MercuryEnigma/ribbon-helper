@@ -167,14 +167,9 @@ export default function BDSPBlending() {
           <h4>Optimal Poffins:</h4>
           <div className="kit-blocks">
             {(() => {
-              const all = poffinKit.poffins;
-              const splitLast = all.length < 2 || all[all.length - 1].name !== all[all.length - 2].name;
-              const last = splitLast ? all[all.length - 1] : null;
-              const rest = splitLast ? all.slice(0, -1) : all;
-
-              // Group the non-final poffins by type
+              // Group poffins by type
               const groups: { poffin: NamedPoffin; count: number }[] = [];
-              for (const p of rest) {
+              for (const p of poffinKit.poffins) {
                 const existing = groups.find(g => g.poffin.berries === p.berries);
                 if (existing) {
                   existing.count++;
@@ -183,40 +178,32 @@ export default function BDSPBlending() {
                 }
               }
 
-              return (
-                <>
-                  {groups.map((group, index) => {
-                    const imageUrl = getBerryImageUrl(group.poffin.berries);
-                    return (
-                      <div key={index} className="block-item">
-                        <div className="block-players">{group.count}x</div>
-                        <div className="block-header">
-                          {imageUrl && (
-                            <img src={imageUrl} alt={group.poffin.berries} title={group.poffin.berries} className="berry-icon" />
-                          )}
-                          <div className="block-name">{group.poffin.name}</div>
-                        </div>
-                        <div className="block-berry">{group.poffin.berries}</div>
-                      </div>
-                    );
-                  })}
-                  {last && (() => {
-                    const imageUrl = getBerryImageUrl(last.berries);
-                    return (
-                      <div className="block-item">
-                        <div className="block-players">1x</div>
-                        <div className="block-header">
-                          {imageUrl && (
-                            <img src={imageUrl} alt={last.berries} title={last.berries} className="berry-icon" />
-                          )}
-                          <div className="block-name">{last.name}</div>
-                        </div>
-                        <div className="block-berry">{last.berries}</div>
-                      </div>
-                    );
-                  })()}
-                </>
-              );
+              // Split each group into rows of 4
+              const rows: { poffin: NamedPoffin; count: number }[] = [];
+              for (const group of groups) {
+                let remaining = group.count;
+                while (remaining > 0) {
+                  const chunk = Math.min(remaining, 4);
+                  rows.push({ poffin: group.poffin, count: chunk });
+                  remaining -= chunk;
+                }
+              }
+
+              return rows.map((row, index) => {
+                const imageUrl = getBerryImageUrl(row.poffin.berries);
+                return (
+                  <div key={index} className="block-item">
+                    <div className="block-header">
+                      {imageUrl && (
+                        <img src={imageUrl} alt={row.poffin.berries} title={row.poffin.berries} className="berry-icon" />
+                      )}
+                      <div className="block-name">{row.poffin.name}</div>
+                    </div>
+                    <div className="block-berry">{row.poffin.berries}</div>
+                    <div className="block-players">{row.count}x</div>
+                  </div>
+                );
+              });
             })()}
           </div>
 

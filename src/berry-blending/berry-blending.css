@@ -221,8 +221,8 @@
 
 .rse-blending .block-item {
   display: grid;
-  grid-template-columns: 1.5rem minmax(150px, 230px) repeat(4, minmax(90px, 1fr)) auto;
-  grid-template-areas: "players header berries berries berries berries rpm";
+  grid-template-columns: auto minmax(150px, 230px) repeat(4, minmax(90px, 1fr)) 9ch;
+  grid-template-areas: "rpm header berries berries berries berries players";
   align-items: center;
   column-gap: 0.5rem;
   row-gap: 0.2rem;
@@ -231,7 +231,7 @@
   border-radius: 0;
   background: transparent;
   box-shadow: none;
-  padding: 0.4rem 0.5rem 0.4rem 2.5rem;
+  padding: 0.4rem 0.5rem;
 }
 
 .rse-blending .block-item:last-child {
@@ -240,12 +240,11 @@
 
 .rse-blending .block-players {
   grid-area: players;
-  margin-left: -2rem;
-  width: 1.5rem;
   font-size: 0.8rem;
   font-weight: 700;
   color: #757575;
   white-space: nowrap;
+  text-align: right;
 }
 
 .rse-blending .block-header {
@@ -281,7 +280,7 @@
   font-weight: 600;
   color: #757575;
   white-space: nowrap;
-  justify-self: end;
+  justify-self: start;
 }
 
 /* DPPt Blending */
@@ -353,8 +352,8 @@
 
 .dppt-blending .block-item {
   display: grid;
-  grid-template-columns: 1.5rem minmax(150px, 230px) 1fr auto;
-  grid-template-areas: "players header berry time";
+  grid-template-columns: auto minmax(150px, 230px) 1fr 1.5rem;
+  grid-template-areas: "time header berry players";
   align-items: center;
   column-gap: 0.5rem;
   row-gap: 0.2rem;
@@ -363,7 +362,7 @@
   border-radius: 0;
   background: transparent;
   box-shadow: none;
-  padding: 0.4rem 0.5rem 0.4rem 2.5rem;
+  padding: 0.4rem 0.5rem;
 }
 
 .dppt-blending .block-item:last-child {
@@ -372,12 +371,11 @@
 
 .dppt-blending .block-players {
   grid-area: players;
-  margin-left: -2rem;
-  width: 1.5rem;
   font-size: 0.8rem;
   font-weight: 700;
   color: #757575;
   white-space: nowrap;
+  justify-self: end;
 }
 
 .dppt-blending .block-header {
@@ -407,7 +405,7 @@
   font-weight: 600;
   color: #757575;
   white-space: nowrap;
-  justify-self: end;
+  justify-self: start;
   min-width: 8ch;
   text-align: left;
 }
@@ -481,8 +479,8 @@
 
 .bdsp-blending .block-item {
   display: grid;
-  grid-template-columns: auto minmax(120px, 200px) 1fr;
-  grid-template-areas: "players header berry";
+  grid-template-columns: minmax(120px, 200px) 1fr auto;
+  grid-template-areas: "header berry players";
   align-items: center;
   column-gap: 0.5rem;
   row-gap: 0.2rem;
@@ -504,6 +502,7 @@
   font-weight: 700;
   color: #757575;
   white-space: nowrap;
+  justify-self: end;
 }
 
 .bdsp-blending .block-header {
@@ -1055,27 +1054,36 @@
     padding: 0.45rem 1.75rem 0.45rem 0.65rem;
   }
 
+  .rse-blending .block-item,
+  .dppt-blending .block-item,
+  .bdsp-blending .block-item {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  .rse-blending .block-players,
+  .dppt-blending .block-players,
+  .bdsp-blending .block-players {
+    justify-self: end;
+    text-align: right;
+  }
+
   .rse-blending .block-item {
-    grid-template-columns: 1.5rem 1fr auto;
-    grid-template-areas:
-      "players header rpm"
-      "players berries berries";
-    align-items: start;
+    grid-template-areas: "header berries players";
+  }
+
+  .rse-blending .block-name {
+    display: none;
+  }
+
+  .rse-blending .block-rpm {
+    display: none;
   }
 
   .rse-blending .block-berry-grid {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    width: 100%;
-  }
-
-  .rse-blending .block-rpm {
-    align-self: start;
-  }
-
-  .rse-blending .block-berry {
-    min-width: 105px;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
   }
 
   .kit-blocks {
@@ -1087,19 +1095,23 @@
   }
 
   .dppt-blending .block-item {
-    grid-template-columns: 1.5rem 1fr auto;
-    grid-template-areas:
-      "players header time"
-      "players berry berry";
-    align-items: start;
+    grid-template-areas: "header berry players";
+  }
+
+  .dppt-blending .block-name {
+    display: none;
+  }
+
+  .dppt-blending .block-time {
+    display: none;
   }
 
   .bdsp-blending .block-item {
-    grid-template-columns: auto 1fr;
-    grid-template-areas:
-      "players header"
-      "players berry";
-    align-items: start;
+    grid-template-areas: "header berry players";
+  }
+
+  .bdsp-blending .block-name {
+    display: none;
   }
 
   .kit-stats {
