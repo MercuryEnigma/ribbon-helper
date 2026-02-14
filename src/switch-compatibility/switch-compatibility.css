@@ -956,7 +956,7 @@
   background: #d45a1b;
   border: 2px solid #b33f12;
   border-radius: 24px;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .evolution-list {
@@ -964,7 +964,6 @@
   gap: 0.5rem;
   align-items: center;
   margin-left: auto;
-  flex: 1;
   justify-content: flex-end;
 }
 
@@ -1022,6 +1021,73 @@
   text-overflow: ellipsis;
   flex: 1;
   min-width: 0;
+}
+
+/* Forms column: fills center */
+.forms-list {
+  flex: 1 1 0;
+  min-width: 0;
+  margin-left: 0;
+  justify-content: center;
+  border-left: 2px solid #b33f12;
+  border-right: 2px solid #b33f12;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.forms-list.stacked {
+  align-items: stretch;
+}
+
+.form-button {
+  background: #f2d4b0;
+  border-color: #c49555;
+  width: auto;
+  min-width: 0;
+}
+
+/* Vertical layout when all three sections (pre-evo, forms, evolutions) are present */
+.evolution-navigation-vertical {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.evolution-navigation-vertical .evolution-button {
+  width: auto;
+  min-width: 0;
+}
+
+.evolution-navigation-vertical .evolution-list {
+  margin-left: 0;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.evolution-navigation-vertical .forms-list {
+  border-left: none;
+  border-right: none;
+  border-top: 2px solid #b33f12;
+  border-bottom: 2px solid #b33f12;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.evolution-navigation-vertical .evolution-list.stacked {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0.35rem;
+}
+
+.evolution-navigation-vertical .evolution-list.stacked .evolution-button {
+  flex: 1 1 180px;
+}
+
+.form-button:hover {
+  background: #f5dfc4;
+  border-color: #b38545;
 }
 
 /* Contest moves navigation */
@@ -1959,9 +2025,19 @@
     height: 28px;
   }
 
+  .form-button {
+    width: auto;
+    min-width: 0;
+  }
+
   .evolution-icon {
     width: 28px;
     height: 28px;
+  }
+
+  .forms-list {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
   }
 
   .pokedex-entry-level {
@@ -2179,9 +2255,19 @@
     height: 26px;
   }
 
+  .form-button {
+    width: auto;
+    min-width: 0;
+  }
+
   .evolution-icon {
     width: 24px;
     height: 24px;
+  }
+
+  .forms-list {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
   }
 
   /* Pokedex entry - even more compact on phones */

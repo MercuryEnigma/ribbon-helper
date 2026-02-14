@@ -704,6 +704,11 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
                       </div>
                     </div>
                     <div className="move-details-description">
+                      {selectedMoveEffect.id === 1 && (
+                        <div className="move-warning-badge">
+                          This move is encouraged to filter out as the “more easily startled” leads to more inconsistent results.
+                        </div>
+                      )}
                       {selectedMoveEffect.flavor_text && (
                         <p className="move-details-flavor">{selectedMoveEffect.flavor_text}</p>
                       )}

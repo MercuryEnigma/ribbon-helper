@@ -346,6 +346,18 @@
   font-style: italic;
 }
 
+.move-warning-badge {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #ffe8e8;
+  color: #5a1f1f;
+  border: 1px solid #f08a8a;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
 .move-details-related {
   margin: 0;
   font-size: 0.7rem;

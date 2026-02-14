@@ -43067,7 +43067,8 @@
     "games": [
       "scar",
       "vio"
-    ]
+    ],
+    "evolvesFrom": "dipplin"
   },
   "gouging-fire": {
     "names": {

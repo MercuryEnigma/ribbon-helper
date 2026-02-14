@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { PokemonDatabase } from './types';
 import { ENABLE_PLZA } from './types';
-import { getGamesForPokemon, getGameGroupNames, searchPokemonByName, getPokemonDisplayName, getAvailableGenerations, GENERATION_ORDER } from './utils';
+import { getGamesForPokemon, getGameGroupNames, searchPokemonByName, getPokemonDisplayName, getAvailableGenerations, GENERATION_ORDER, shouldExcludePokemon } from './utils';
 import { getPokemonIconProps, getPokemonLargeImageProps } from './iconUtils';
 import { getAvailableRibbons } from './ribbonUtils';
 import ribbonsData from '../data/ribbons.json';
@@ -197,6 +197,30 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
     return selectedPokemonData?.evolvesFrom || null;
   }, [selectedPokemonData]);
 
+  // Find alternate forms of the same species
+  const alternateForms = useMemo(() => {
+    if (!selectedPokemon || !pokemonDb || !selectedPokemonData) return [];
+    // Determine the base species key
+    const baseKey = selectedPokemonData['data-source'] || selectedPokemon;
+    const forms: { key: string; sort: number }[] = [];
+    // Include the base species itself (if it's not the current Pokemon)
+    if (baseKey !== selectedPokemon && pokemonDb[baseKey]) {
+      forms.push({ key: baseKey, sort: -1 });
+    }
+    // Find all entries whose data-source points to the same base
+    for (const [key, data] of Object.entries(pokemonDb)) {
+      if (key === selectedPokemon) continue;
+      if (data['data-source'] !== baseKey) continue;
+      // Exclude cosmetic forms and forms without their own games array
+      if (shouldExcludePokemon(key)) continue;
+      if (!Array.isArray(data.games)) continue;
+      forms.push({ key, sort: data.sort ?? 9999 });
+    }
+    // Sort by the sort field
+    forms.sort((a, b) => a.sort - b.sort);
+    return forms.map(f => f.key);
+  }, [selectedPokemon, pokemonDb, selectedPokemonData]);
+
   const visibleAvailableGames = useMemo(() => {
     return availableGames.filter(game => {
       if (selectedGeneration === 'PLZA') {
@@ -390,87 +414,118 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
             </div>
 
             {/* Evolution navigation */}
-            {(preEvolution || evolutions.length > 0) && (
-              <div className="evolution-navigation">
-                {preEvolution && (
-                  <button
-                    className="evolution-button"
-                    onClick={() => {
-                      setSelectedPokemon(preEvolution);
-                      setSearchTerm('');
-                      if (onPokemonSelect) onPokemonSelect(preEvolution);
-                    }}
-                  >
-                    {(() => {
-                      const preEvoData = pokemonDb[preEvolution];
-                      const preEvoIconProps = preEvoData ? getPokemonIconProps(preEvolution, preEvoData, pokemonDb) : null;
-                      const preEvoDisplayName = preEvoData ? (() => {
-                        // Handle regional forms that have data-source
-                        if (preEvoData['data-source']) {
-                          const baseData = pokemonDb[preEvoData['data-source']];
-                          return getPokemonDisplayName(preEvolution, {
-                            ...preEvoData,
+            {(preEvolution || alternateForms.length > 0 || evolutions.length > 0) && (
+              <div className={`evolution-navigation${preEvolution && alternateForms.length > 0 && evolutions.length > 0 ? ' evolution-navigation-vertical' : ''}`}>
+                {preEvolution && (() => {
+                  const preEvoData = pokemonDb[preEvolution];
+                  const preEvoIconProps = preEvoData ? getPokemonIconProps(preEvolution, preEvoData, pokemonDb) : null;
+                  const preEvoDisplayName = preEvoData ? (() => {
+                    if (preEvoData['data-source']) {
+                      const baseData = pokemonDb[preEvoData['data-source']];
+                      return getPokemonDisplayName(preEvolution, {
+                        ...preEvoData,
+                        names: baseData?.names,
+                      });
+                    }
+                    return getPokemonDisplayName(preEvolution, preEvoData);
+                  })() : preEvolution;
+                  return (
+                    <button
+                      className="evolution-button"
+                      title={preEvoDisplayName}
+                      onClick={() => {
+                        setSelectedPokemon(preEvolution);
+                        setSearchTerm('');
+                        if (onPokemonSelect) onPokemonSelect(preEvolution);
+                      }}
+                    >
+                      {preEvoIconProps && (
+                        <img
+                          className="evolution-icon"
+                          alt={preEvoDisplayName}
+                          {...preEvoIconProps}
+                        />
+                      )}
+                      <span className="evolution-name">{preEvoDisplayName}</span>
+                    </button>
+                  );
+                })()}
+                {alternateForms.length > 0 && (
+                  <div className={`evolution-list forms-list ${alternateForms.length > 1 ? 'stacked' : ''}`}>
+                    {alternateForms.map(formKey => {
+                      const formData = pokemonDb[formKey];
+                      const formIconProps = formData ? getPokemonIconProps(formKey, formData, pokemonDb) : null;
+                      const formDisplayName = formData ? (() => {
+                        if (formData['data-source']) {
+                          const baseData = pokemonDb[formData['data-source']];
+                          return getPokemonDisplayName(formKey, {
+                            ...formData,
                             names: baseData?.names,
                           });
                         }
-                        return getPokemonDisplayName(preEvolution, preEvoData);
-                      })() : preEvolution;
+                        return getPokemonDisplayName(formKey, formData);
+                      })() : formKey;
                       return (
-                        <>
-                          {preEvoIconProps && (
+                        <button
+                          key={formKey}
+                          className="evolution-button form-button"
+                          title={formDisplayName}
+                          onClick={() => {
+                            setSelectedPokemon(formKey);
+                            setSearchTerm('');
+                            if (onPokemonSelect) onPokemonSelect(formKey);
+                          }}
+                        >
+                          {formIconProps && (
                             <img
                               className="evolution-icon"
-                              alt={preEvoDisplayName}
-                              {...preEvoIconProps}
+                              alt={formDisplayName}
+                              {...formIconProps}
                             />
                           )}
-                          <span className="evolution-name">{preEvoDisplayName}</span>
-                        </>
+                          <span className="evolution-name">{formDisplayName}</span>
+                        </button>
                       );
-                    })()}
-                  </button>
+                    })}
+                  </div>
                 )}
                 {evolutions.length > 0 && (
                   <div className={`evolution-list ${evolutions.length > 1 ? 'stacked' : ''}`}>
-                    {evolutions.map(evoKey => (
-                      <button
-                        key={evoKey}
-                        className="evolution-button"
-                        onClick={() => {
-                          setSelectedPokemon(evoKey);
-                          setSearchTerm('');
-                          if (onPokemonSelect) onPokemonSelect(evoKey);
-                        }}
-                      >
-                        {(() => {
-                          const evoData = pokemonDb[evoKey];
-                          const evoIconProps = evoData ? getPokemonIconProps(evoKey, evoData, pokemonDb) : null;
-                          const evoDisplayName = evoData ? (() => {
-                            // Handle regional forms that have data-source
-                            if (evoData['data-source']) {
-                              const baseData = pokemonDb[evoData['data-source']];
-                              return getPokemonDisplayName(evoKey, {
-                                ...evoData,
-                                names: baseData?.names,
-                              });
-                            }
-                            return getPokemonDisplayName(evoKey, evoData);
-                          })() : evoKey;
-                          return (
-                            <>
-                              {evoIconProps && (
-                                <img
-                                  className="evolution-icon"
-                                  alt={evoDisplayName}
-                                  {...evoIconProps}
-                                />
-                              )}
-                              <span className="evolution-name">{evoDisplayName}</span>
-                            </>
-                          );
-                        })()}
-                      </button>
-                    ))}
+                    {evolutions.map(evoKey => {
+                      const evoData = pokemonDb[evoKey];
+                      const evoIconProps = evoData ? getPokemonIconProps(evoKey, evoData, pokemonDb) : null;
+                      const evoDisplayName = evoData ? (() => {
+                        if (evoData['data-source']) {
+                          const baseData = pokemonDb[evoData['data-source']];
+                          return getPokemonDisplayName(evoKey, {
+                            ...evoData,
+                            names: baseData?.names,
+                          });
+                        }
+                        return getPokemonDisplayName(evoKey, evoData);
+                      })() : evoKey;
+                      return (
+                        <button
+                          key={evoKey}
+                          className="evolution-button"
+                          title={evoDisplayName}
+                          onClick={() => {
+                            setSelectedPokemon(evoKey);
+                            setSearchTerm('');
+                            if (onPokemonSelect) onPokemonSelect(evoKey);
+                          }}
+                        >
+                          {evoIconProps && (
+                            <img
+                              className="evolution-icon"
+                              alt={evoDisplayName}
+                              {...evoIconProps}
+                            />
+                          )}
+                          <span className="evolution-name">{evoDisplayName}</span>
+                        </button>
+                      );
+                    })}
                   </div>
                 )}
               </div>

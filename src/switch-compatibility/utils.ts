@@ -88,7 +88,7 @@ const INCLUDED_BASE_FORMS = new Set([
 /**
  * Check if a Pokemon key should be excluded from listings
  */
-function shouldExcludePokemon(key: string): boolean {
+export function shouldExcludePokemon(key: string): boolean {
   return EXCLUDED_COSMETIC_FORMS.has(key);
 }
 
