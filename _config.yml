@@ -1,0 +1,21 @@
+include: ['_css', '_scripts', '_images']
+
+title: Battle Facilities Calculator
+
+github: [metadata]
+  
+url: "https://to-metrion.github.io"
+  
+repository: to-metrion/to-metrion.github.io
+
+description:
+  
+  
+
+plugins:
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from
+
+theme: jekyll-theme-cayman
