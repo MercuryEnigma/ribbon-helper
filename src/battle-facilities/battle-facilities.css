@@ -1,0 +1,51 @@
+.battle-facilities {
+  padding: 1rem;
+}
+
+.battle-facilities h2 {
+  margin-bottom: 1rem;
+}
+
+.bf-matchup {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.bf-vs {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-top: 2.5rem;
+}
+
+.bf-pokemon {
+  flex: 1;
+  min-width: 280px;
+}
+
+.bf-pokemon h3 {
+  margin-bottom: 0.5rem;
+}
+
+.bf-results-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bf-results-table th,
+.bf-results-table td {
+  padding: 0.35rem 0.6rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color, #ddd);
+}
+
+.bf-results-table th {
+  font-weight: 600;
+}
+
+.bf-status-move td {
+  color: var(--text-muted, #888);
+}

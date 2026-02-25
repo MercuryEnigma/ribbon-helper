@@ -5,6 +5,16 @@ import BerryBlending from './berry-blending/BerryBlending'
 import Acknowledgements from './components/Acknowledgements'
 import ContestMoves from './contest-moves/ContestMoves'
 import VisualDecoration from './visual-decoration/VisualDecoration'
+import BattleFacilities from './battle-facilities/BattleFacilities'
+
+const ENABLE_BATTLE = (() => {
+  if (typeof localStorage === 'undefined') return false
+  try {
+    return localStorage.getItem('enable_battle') === 'true'
+  } catch {
+    return false
+  }
+})()
 
 export default function App() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false)
@@ -87,6 +97,11 @@ export default function App() {
             <NavLink to="/visual-decoration" className={({ isActive }) => isActive ? 'active' : ''}>
               Contest Visuals
             </NavLink>
+            {ENABLE_BATTLE && (
+              <NavLink to="/battle-facilities" className={({ isActive }) => isActive ? 'active' : ''}>
+                Battle Facilities
+              </NavLink>
+            )}
           </nav>
         </div>
       </header>
@@ -99,6 +114,7 @@ export default function App() {
             <Route path="/berry-blending/*" element={<BerryBlending />} />
             <Route path="/contest-moves/*" element={<ContestMoves />} />
             <Route path="/visual-decoration/*" element={<VisualDecoration />} />
+            {ENABLE_BATTLE && <Route path="/battle-facilities/*" element={<BattleFacilities />} />}
             <Route path="*" element={<Navigate to="/game-compatibility" replace />} />
           </Routes>
 
