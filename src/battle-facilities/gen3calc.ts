@@ -1,6 +1,13 @@
 // Self-contained Gen 3 (Emerald) damage calculator
 // Ported from damage-calc/_scripts/damage_gen3.js without jQuery/DOM dependencies
 
+import { POKEDEX_ADV } from './pokedex_gen3'
+import { SETDEX_EM } from './setdex_gen3'
+import { MOVES_ADV } from './moves_gen3'
+
+// --- Re-export data for consumers ---
+export { POKEDEX_ADV, SETDEX_EM, MOVES_ADV }
+
 // --- Natures: [boosted stat, reduced stat] ---
 const NATURES: Record<string, [string, string]> = {
   "Adamant": ["at", "sa"], "Bashful": ["", ""], "Bold": ["df", "at"],
@@ -15,8 +22,6 @@ const NATURES: Record<string, [string, string]> = {
 }
 
 // --- Gen 3 Type Chart (RBY + Dark/Steel additions) ---
-// Each type maps attack type -> defending type -> effectiveness multiplier
-// "category" indicates Physical or Special for the attacking type
 const TYPE_CHART: Record<string, Record<string, number | string>> = {
   "Normal":   { category: "Physical", Normal: 1, Grass: 1, Fire: 1, Water: 1, Electric: 1, Ice: 1, Flying: 1, Bug: 1, Poison: 1, Ground: 1, Rock: 0.5, Fighting: 1, Psychic: 1, Ghost: 0, Dragon: 1, Dark: 1, Steel: 0.5 },
   "Grass":    { category: "Special",  Normal: 1, Grass: 0.5, Fire: 0.5, Water: 2, Electric: 1, Ice: 1, Flying: 0.5, Bug: 0.5, Poison: 0.5, Ground: 2, Rock: 2, Fighting: 1, Psychic: 1, Ghost: 1, Dragon: 0.5, Dark: 1, Steel: 0.5 },
@@ -53,19 +58,6 @@ export interface MoveData {
   hits?: number
   hasRecoil?: number | "crash"
   makesContact?: boolean
-}
-
-// Gen 3 move database (only moves relevant to our use cases for now, expandable)
-const MOVES_GEN3: Record<string, Omit<MoveData, 'name'>> = {
-  "(No Move)": { bp: 0, type: "Normal" },
-  "Psychic":      { bp: 90, type: "Psychic", category: "Special", hasSecondaryEffect: true, acc: 100 },
-  "Earthquake":   { bp: 100, type: "Ground", category: "Physical", isSpread: true, acc: 100 },
-  "Shadow Ball":  { bp: 80, type: "Ghost", category: "Special", hasSecondaryEffect: true, isBullet: true, acc: 100 },
-  "Explosion":    { bp: 170, type: "Normal", category: "Physical", isSpread: true, acc: 100 },
-  "Dive":         { bp: 60, type: "Water", category: "Physical", makesContact: true, acc: 100 },
-  "Toxic":        { bp: 0, type: "Poison" },
-  "Iron Defense": { bp: 0, type: "Steel" },
-  "Double Team":  { bp: 0, type: "Normal" },
 }
 
 // --- Pokedex data ---
@@ -175,9 +167,16 @@ export function buildPokemon(
     sp: calcStat(bs.sp, ivs, evs.sp, level, set.nature, "sp"),
   }
 
-  const moves: MoveData[] = set.moves.map(moveName => {
-    const moveData = MOVES_GEN3[moveName] || { bp: 0, type: "Normal" }
-    return { name: moveName, ...moveData, isCrit: false, hits: 1 }
+  const moves = set.moves.map(moveName => {
+    const moveData = MOVES_ADV[moveName] || { bp: 0, type: "Normal" }
+    return {
+      ...moveData,
+      name: moveName,
+      category: moveData.category as MoveData['category'],
+      hasRecoil: moveData.hasRecoil as MoveData['hasRecoil'],
+      isCrit: false,
+      hits: 1,
+    } satisfies MoveData
   })
 
   const poke: Pokemon = {
@@ -263,7 +262,6 @@ export function getDamageResultGen3(
   move: MoveData,
   field: FieldSide,
 ): DamageResult {
-  const descParts: string[] = []
   const result = { damage: [0], description: "", move, minDamage: 0, maxDamage: 0, minPercent: 0, maxPercent: 0, defenderMaxHP: defender.maxHP }
 
   if (move.bp === 0) {
@@ -301,12 +299,11 @@ export function getDamageResultGen3(
 
   let at = attacker.rawStats[attackStat]
   let df = defender.rawStats[defenseStat]
-  let basePower = move.bp
+  const basePower = move.bp
 
   // Attack modifiers
   if (isPhysical && (attacker.ability === "Huge Power" || attacker.ability === "Pure Power")) {
     at *= 2
-    descParts.push(attacker.ability)
   }
 
   const itemBoostType = ITEM_TYPE_BOOSTS[attacker.item]
@@ -470,39 +467,23 @@ export function calculateAllMovesGen3(
   return [results1, results2]
 }
 
-// --- Pokedex entries for species we need ---
-export const POKEDEX_GEN3: Record<string, PokedexEntry> = {
-  "Claydol": {
-    t1: "Ground", t2: "Psychic",
-    bs: { hp: 60, at: 70, df: 105, sa: 70, sd: 120, sp: 75 },
-    w: 108.0,
-    abilities: ["Levitate"],
-  },
-  "Clamperl": {
-    t1: "Water",
-    bs: { hp: 35, at: 64, df: 85, sa: 74, sd: 55, sp: 32 },
-    w: 52.5,
-    abilities: ["Shell Armor"],
-  },
+// --- Helper: build a flat list of all set labels from the setdex ---
+export function getAllSetLabels(): string[] {
+  const labels: string[] = []
+  for (const species of Object.keys(SETDEX_EM)) {
+    for (const setLabel of Object.keys(SETDEX_EM[species])) {
+      labels.push(setLabel)
+    }
+  }
+  return labels
 }
 
-// --- Setdex entries ---
-export const SETDEX_GEN3: Record<string, Record<string, SetdexEntry>> = {
-  "Claydol": {
-    "Claydol-4 (717)": {
-      evs: { hp: 255, at: 255 },
-      moves: ["Psychic", "Earthquake", "Shadow Ball", "Explosion"],
-      nature: "Adamant",
-      item: "Focus Band",
-      tier: "50",
-    },
-  },
-  "Clamperl": {
-    "Clamperl-1 (135)": {
-      evs: { hp: 170, df: 170, sd: 170 },
-      moves: ["Dive", "Toxic", "Iron Defense", "Double Team"],
-      nature: "Docile",
-      item: "Deep Sea Scale",
-    },
-  },
+// --- Helper: find species name and set data from a set label ---
+export function findSetByLabel(label: string): { species: string; set: SetdexEntry } | null {
+  for (const [species, sets] of Object.entries(SETDEX_EM)) {
+    if (label in sets) {
+      return { species, set: sets[label] }
+    }
+  }
+  return null
 }

@@ -49,3 +49,19 @@
 .bf-status-move td {
   color: var(--text-muted, #888);
 }
+
+.bf-p2-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.bf-p2-selector label {
+  font-weight: 600;
+}
+
+.bf-p2-selector select {
+  padding: 0.3rem 0.4rem;
+  font-size: 0.95rem;
+}

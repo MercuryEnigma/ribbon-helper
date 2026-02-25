@@ -1,0 +1,6427 @@
+import type { PokedexEntry } from "./gen3calc"
+
+export const POKEDEX_ADV: Record<string, PokedexEntry> = {
+  "Abra": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 25,
+      "at": 20,
+      "df": 15,
+      "sa": 105,
+      "sd": 55,
+      "sp": 90,
+      "sl": 105
+    },
+    "w": 19.5,
+    "abilities": [
+      "Synchronize",
+      "Inner Focus"
+    ]
+  },
+  "Aerodactyl": {
+    "t1": "Rock",
+    "t2": "Flying",
+    "bs": {
+      "hp": 80,
+      "at": 105,
+      "df": 65,
+      "sa": 60,
+      "sd": 75,
+      "sp": 130,
+      "sl": 60
+    },
+    "w": 59,
+    "abilities": [
+      "Rock Head",
+      "Pressure"
+    ]
+  },
+  "Alakazam": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 55,
+      "at": 50,
+      "df": 45,
+      "sa": 135,
+      "sd": 85,
+      "sp": 120,
+      "sl": 135
+    },
+    "w": 48,
+    "abilities": [
+      "Synchronize",
+      "Inner Focus"
+    ]
+  },
+  "Arbok": {
+    "t1": "Poison",
+    "bs": {
+      "hp": 60,
+      "at": 85,
+      "df": 69,
+      "sa": 65,
+      "sd": 79,
+      "sp": 80,
+      "sl": 65
+    },
+    "w": 65,
+    "abilities": [
+      "Intimidate",
+      "Shed Skin"
+    ]
+  },
+  "Arcanine": {
+    "t1": "Fire",
+    "bs": {
+      "hp": 90,
+      "at": 110,
+      "df": 80,
+      "sa": 100,
+      "sd": 80,
+      "sp": 95,
+      "sl": 80
+    },
+    "w": 155,
+    "abilities": [
+      "Intimidate",
+      "Flash Fire"
+    ]
+  },
+  "Articuno": {
+    "t1": "Ice",
+    "t2": "Flying",
+    "bs": {
+      "hp": 90,
+      "at": 85,
+      "df": 100,
+      "sa": 95,
+      "sd": 125,
+      "sp": 85,
+      "sl": 125
+    },
+    "w": 55.4,
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "Beedrill": {
+    "t1": "Bug",
+    "t2": "Poison",
+    "bs": {
+      "hp": 65,
+      "at": 80,
+      "df": 40,
+      "sa": 45,
+      "sd": 80,
+      "sp": 75,
+      "sl": 45
+    },
+    "w": 29.5,
+    "ab": "Swarm",
+    "abilities": [
+      "Swarm"
+    ]
+  },
+  "Bellsprout": {
+    "t1": "Grass",
+    "t2": "Poison",
+    "bs": {
+      "hp": 50,
+      "at": 75,
+      "df": 35,
+      "sa": 70,
+      "sd": 30,
+      "sp": 40,
+      "sl": 70
+    },
+    "w": 4,
+    "ab": "Chlorophyll",
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "Blastoise": {
+    "t1": "Water",
+    "bs": {
+      "hp": 79,
+      "at": 83,
+      "df": 100,
+      "sa": 85,
+      "sd": 105,
+      "sp": 78,
+      "sl": 85
+    },
+    "w": 85.5,
+    "ab": "Torrent",
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "Bulbasaur": {
+    "t1": "Grass",
+    "t2": "Poison",
+    "bs": {
+      "hp": 45,
+      "at": 49,
+      "df": 49,
+      "sa": 65,
+      "sd": 65,
+      "sp": 45,
+      "sl": 65
+    },
+    "w": 6.9,
+    "ab": "Overgrow",
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "Butterfree": {
+    "t1": "Bug",
+    "t2": "Flying",
+    "bs": {
+      "hp": 60,
+      "at": 45,
+      "df": 50,
+      "sa": 80,
+      "sd": 80,
+      "sp": 70,
+      "sl": 80
+    },
+    "w": 32,
+    "abilities": [
+      "Compound Eyes"
+    ]
+  },
+  "Caterpie": {
+    "t1": "Bug",
+    "bs": {
+      "hp": 45,
+      "at": 30,
+      "df": 35,
+      "sa": 20,
+      "sd": 20,
+      "sp": 45,
+      "sl": 20
+    },
+    "w": 2.9,
+    "abilities": [
+      "Shield Dust"
+    ]
+  },
+  "Chansey": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 250,
+      "at": 5,
+      "df": 5,
+      "sa": 35,
+      "sd": 105,
+      "sp": 50,
+      "sl": 105
+    },
+    "w": 34.6,
+    "abilities": [
+      "Natural Cure",
+      "Serene Grace"
+    ]
+  },
+  "Charizard": {
+    "t1": "Fire",
+    "t2": "Flying",
+    "bs": {
+      "hp": 78,
+      "at": 84,
+      "df": 78,
+      "sa": 109,
+      "sd": 85,
+      "sp": 100,
+      "sl": 85
+    },
+    "w": 90.5,
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "Charmander": {
+    "t1": "Fire",
+    "bs": {
+      "hp": 39,
+      "at": 52,
+      "df": 43,
+      "sa": 60,
+      "sd": 50,
+      "sp": 65,
+      "sl": 50
+    },
+    "w": 8.5,
+    "ab": "Blaze",
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "Charmeleon": {
+    "t1": "Fire",
+    "bs": {
+      "hp": 58,
+      "at": 64,
+      "df": 58,
+      "sa": 80,
+      "sd": 65,
+      "sp": 80,
+      "sl": 65
+    },
+    "w": 19,
+    "ab": "Blaze",
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "Clefable": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 95,
+      "at": 70,
+      "df": 73,
+      "sa": 85,
+      "sd": 90,
+      "sp": 60,
+      "sl": 85
+    },
+    "w": 40,
+    "abilities": [
+      "Cute Charm"
+    ]
+  },
+  "Clefairy": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 70,
+      "at": 45,
+      "df": 48,
+      "sa": 60,
+      "sd": 65,
+      "sp": 35,
+      "sl": 60
+    },
+    "w": 7.5,
+    "abilities": [
+      "Cute Charm"
+    ]
+  },
+  "Cloyster": {
+    "t1": "Water",
+    "t2": "Ice",
+    "bs": {
+      "hp": 50,
+      "at": 95,
+      "df": 180,
+      "sa": 85,
+      "sd": 45,
+      "sp": 70,
+      "sl": 85
+    },
+    "w": 132.5,
+    "ab": "Shell Armor",
+    "abilities": [
+      "Shell Armor"
+    ]
+  },
+  "Cubone": {
+    "t1": "Ground",
+    "bs": {
+      "hp": 50,
+      "at": 50,
+      "df": 95,
+      "sa": 40,
+      "sd": 50,
+      "sp": 35,
+      "sl": 40
+    },
+    "w": 6.5,
+    "abilities": [
+      "Rock Head",
+      "Lightning Rod"
+    ]
+  },
+  "Dewgong": {
+    "t1": "Water",
+    "t2": "Ice",
+    "bs": {
+      "hp": 90,
+      "at": 70,
+      "df": 80,
+      "sa": 70,
+      "sd": 95,
+      "sp": 70,
+      "sl": 95
+    },
+    "w": 120,
+    "ab": "Thick Fat",
+    "abilities": [
+      "Thick Fat"
+    ]
+  },
+  "Diglett": {
+    "t1": "Ground",
+    "bs": {
+      "hp": 10,
+      "at": 55,
+      "df": 25,
+      "sa": 35,
+      "sd": 45,
+      "sp": 95,
+      "sl": 45
+    },
+    "w": 0.8,
+    "abilities": [
+      "Sand Veil",
+      "Arena Trap"
+    ]
+  },
+  "Ditto": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 48,
+      "at": 48,
+      "df": 48,
+      "sa": 48,
+      "sd": 48,
+      "sp": 48,
+      "sl": 48
+    },
+    "w": 4,
+    "abilities": [
+      "Limber"
+    ]
+  },
+  "Dodrio": {
+    "t1": "Normal",
+    "t2": "Flying",
+    "bs": {
+      "hp": 60,
+      "at": 110,
+      "df": 70,
+      "sa": 60,
+      "sd": 60,
+      "sp": 100,
+      "sl": 60
+    },
+    "w": 85.2,
+    "abilities": [
+      "Run Away",
+      "Early Bird"
+    ]
+  },
+  "Doduo": {
+    "t1": "Normal",
+    "t2": "Flying",
+    "bs": {
+      "hp": 35,
+      "at": 85,
+      "df": 45,
+      "sa": 35,
+      "sd": 35,
+      "sp": 75,
+      "sl": 35
+    },
+    "w": 39.2,
+    "abilities": [
+      "Run Away",
+      "Early Bird"
+    ]
+  },
+  "Dragonair": {
+    "t1": "Dragon",
+    "bs": {
+      "hp": 61,
+      "at": 84,
+      "df": 65,
+      "sa": 70,
+      "sd": 70,
+      "sp": 70,
+      "sl": 70
+    },
+    "w": 16.5,
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "Dragonite": {
+    "t1": "Dragon",
+    "t2": "Flying",
+    "bs": {
+      "hp": 91,
+      "at": 134,
+      "df": 95,
+      "sa": 100,
+      "sd": 100,
+      "sp": 80,
+      "sl": 100
+    },
+    "w": 210,
+    "abilities": [
+      "Inner Focus"
+    ]
+  },
+  "Dratini": {
+    "t1": "Dragon",
+    "bs": {
+      "hp": 41,
+      "at": 64,
+      "df": 45,
+      "sa": 50,
+      "sd": 50,
+      "sp": 50,
+      "sl": 50
+    },
+    "w": 3.3,
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "Drowzee": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 60,
+      "at": 48,
+      "df": 45,
+      "sa": 43,
+      "sd": 90,
+      "sp": 42,
+      "sl": 90
+    },
+    "w": 32.4,
+    "abilities": [
+      "Insomnia"
+    ]
+  },
+  "Dugtrio": {
+    "t1": "Ground",
+    "bs": {
+      "hp": 35,
+      "at": 80,
+      "df": 50,
+      "sa": 50,
+      "sd": 70,
+      "sp": 120,
+      "sl": 70
+    },
+    "w": 33.3,
+    "abilities": [
+      "Sand Veil",
+      "Arena Trap"
+    ]
+  },
+  "Eevee": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 55,
+      "at": 55,
+      "df": 50,
+      "sa": 45,
+      "sd": 65,
+      "sp": 55,
+      "sl": 65
+    },
+    "w": 6.5,
+    "abilities": [
+      "Run Away"
+    ]
+  },
+  "Ekans": {
+    "t1": "Poison",
+    "bs": {
+      "hp": 35,
+      "at": 60,
+      "df": 44,
+      "sa": 40,
+      "sd": 54,
+      "sp": 55,
+      "sl": 40
+    },
+    "w": 6.9,
+    "abilities": [
+      "Intimidate",
+      "Shed Skin"
+    ]
+  },
+  "Electabuzz": {
+    "t1": "Electric",
+    "bs": {
+      "hp": 65,
+      "at": 83,
+      "df": 57,
+      "sa": 95,
+      "sd": 85,
+      "sp": 105,
+      "sl": 85
+    },
+    "w": 30,
+    "abilities": [
+      "Static"
+    ]
+  },
+  "Electrode": {
+    "t1": "Electric",
+    "bs": {
+      "hp": 60,
+      "at": 50,
+      "df": 70,
+      "sa": 80,
+      "sd": 80,
+      "sp": 140,
+      "sl": 80
+    },
+    "w": 66.6,
+    "abilities": [
+      "Soundproof",
+      "Static"
+    ]
+  },
+  "Exeggcute": {
+    "t1": "Grass",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 60,
+      "at": 40,
+      "df": 80,
+      "sa": 60,
+      "sd": 45,
+      "sp": 40,
+      "sl": 60
+    },
+    "w": 2.5,
+    "ab": "Chlorophyll",
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "Exeggutor": {
+    "t1": "Grass",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 95,
+      "at": 95,
+      "df": 85,
+      "sa": 125,
+      "sd": 65,
+      "sp": 55,
+      "sl": 125
+    },
+    "w": 120,
+    "ab": "Chlorophyll",
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "Farfetch'd": {
+    "t1": "Normal",
+    "t2": "Flying",
+    "bs": {
+      "hp": 52,
+      "at": 65,
+      "df": 55,
+      "sa": 58,
+      "sd": 62,
+      "sp": 60,
+      "sl": 58
+    },
+    "w": 15,
+    "abilities": [
+      "Keen Eye",
+      "Inner Focus"
+    ]
+  },
+  "Fearow": {
+    "t1": "Normal",
+    "t2": "Flying",
+    "bs": {
+      "hp": 65,
+      "at": 90,
+      "df": 65,
+      "sa": 61,
+      "sd": 61,
+      "sp": 100,
+      "sl": 61
+    },
+    "w": 38,
+    "abilities": [
+      "Keen Eye"
+    ]
+  },
+  "Flareon": {
+    "t1": "Fire",
+    "bs": {
+      "hp": 65,
+      "at": 130,
+      "df": 60,
+      "sa": 95,
+      "sd": 110,
+      "sp": 65,
+      "sl": 110
+    },
+    "w": 25,
+    "ab": "Flash Fire",
+    "abilities": [
+      "Flash Fire"
+    ]
+  },
+  "Gastly": {
+    "t1": "Ghost",
+    "t2": "Poison",
+    "bs": {
+      "hp": 30,
+      "at": 35,
+      "df": 30,
+      "sa": 100,
+      "sd": 35,
+      "sp": 80,
+      "sl": 100
+    },
+    "w": 0.1,
+    "ab": "Levitate",
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "Gengar": {
+    "t1": "Ghost",
+    "t2": "Poison",
+    "bs": {
+      "hp": 60,
+      "at": 65,
+      "df": 60,
+      "sa": 130,
+      "sd": 75,
+      "sp": 110,
+      "sl": 130
+    },
+    "w": 40.5,
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "Geodude": {
+    "t1": "Rock",
+    "t2": "Ground",
+    "bs": {
+      "hp": 40,
+      "at": 80,
+      "df": 100,
+      "sa": 30,
+      "sd": 30,
+      "sp": 20,
+      "sl": 30
+    },
+    "w": 20,
+    "abilities": [
+      "Rock Head",
+      "Sturdy"
+    ]
+  },
+  "Gloom": {
+    "t1": "Grass",
+    "t2": "Poison",
+    "bs": {
+      "hp": 60,
+      "at": 65,
+      "df": 70,
+      "sa": 85,
+      "sd": 75,
+      "sp": 40,
+      "sl": 85
+    },
+    "w": 8.6,
+    "ab": "Chlorophyll",
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "Golbat": {
+    "t1": "Poison",
+    "t2": "Flying",
+    "bs": {
+      "hp": 75,
+      "at": 80,
+      "df": 70,
+      "sa": 65,
+      "sd": 75,
+      "sp": 90,
+      "sl": 75
+    },
+    "w": 55,
+    "abilities": [
+      "Inner Focus"
+    ]
+  },
+  "Goldeen": {
+    "t1": "Water",
+    "bs": {
+      "hp": 45,
+      "at": 67,
+      "df": 60,
+      "sa": 35,
+      "sd": 50,
+      "sp": 63,
+      "sl": 50
+    },
+    "w": 15,
+    "abilities": [
+      "Swift Swim",
+      "Water Veil"
+    ]
+  },
+  "Golduck": {
+    "t1": "Water",
+    "bs": {
+      "hp": 80,
+      "at": 82,
+      "df": 78,
+      "sa": 95,
+      "sd": 80,
+      "sp": 85,
+      "sl": 80
+    },
+    "w": 76.6,
+    "abilities": [
+      "Damp",
+      "Cloud Nine"
+    ]
+  },
+  "Golem": {
+    "t1": "Rock",
+    "t2": "Ground",
+    "bs": {
+      "hp": 80,
+      "at": 110,
+      "df": 130,
+      "sa": 55,
+      "sd": 65,
+      "sp": 45,
+      "sl": 55
+    },
+    "w": 300,
+    "abilities": [
+      "Rock Head",
+      "Sturdy"
+    ]
+  },
+  "Graveler": {
+    "t1": "Rock",
+    "t2": "Ground",
+    "bs": {
+      "hp": 55,
+      "at": 95,
+      "df": 115,
+      "sa": 45,
+      "sd": 45,
+      "sp": 35,
+      "sl": 45
+    },
+    "w": 105,
+    "abilities": [
+      "Rock Head",
+      "Sturdy"
+    ]
+  },
+  "Grimer": {
+    "t1": "Poison",
+    "bs": {
+      "hp": 80,
+      "at": 80,
+      "df": 50,
+      "sa": 40,
+      "sd": 50,
+      "sp": 25,
+      "sl": 40
+    },
+    "w": 30,
+    "abilities": [
+      "Stench",
+      "Sticky Hold"
+    ]
+  },
+  "Growlithe": {
+    "t1": "Fire",
+    "bs": {
+      "hp": 55,
+      "at": 70,
+      "df": 45,
+      "sa": 70,
+      "sd": 50,
+      "sp": 60,
+      "sl": 50
+    },
+    "w": 19,
+    "abilities": [
+      "Intimidate",
+      "Flash Fire"
+    ]
+  },
+  "Gyarados": {
+    "t1": "Water",
+    "t2": "Flying",
+    "bs": {
+      "hp": 95,
+      "at": 125,
+      "df": 79,
+      "sa": 60,
+      "sd": 100,
+      "sp": 81,
+      "sl": 100
+    },
+    "w": 235,
+    "abilities": [
+      "Intimidate"
+    ]
+  },
+  "Haunter": {
+    "t1": "Ghost",
+    "t2": "Poison",
+    "bs": {
+      "hp": 45,
+      "at": 50,
+      "df": 45,
+      "sa": 115,
+      "sd": 55,
+      "sp": 95,
+      "sl": 115
+    },
+    "w": 0.1,
+    "ab": "Levitate",
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "Hitmonchan": {
+    "t1": "Fighting",
+    "bs": {
+      "hp": 50,
+      "at": 105,
+      "df": 79,
+      "sa": 35,
+      "sd": 110,
+      "sp": 76,
+      "sl": 35
+    },
+    "w": 50.2,
+    "abilities": [
+      "Keen Eye"
+    ]
+  },
+  "Hitmonlee": {
+    "t1": "Fighting",
+    "bs": {
+      "hp": 50,
+      "at": 120,
+      "df": 53,
+      "sa": 35,
+      "sd": 110,
+      "sp": 87,
+      "sl": 35
+    },
+    "w": 49.8,
+    "abilities": [
+      "Limber"
+    ]
+  },
+  "Horsea": {
+    "t1": "Water",
+    "bs": {
+      "hp": 30,
+      "at": 40,
+      "df": 70,
+      "sa": 70,
+      "sd": 25,
+      "sp": 60,
+      "sl": 70
+    },
+    "w": 8,
+    "ab": "Swift Swim",
+    "abilities": [
+      "Swift Swim"
+    ]
+  },
+  "Hypno": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 85,
+      "at": 73,
+      "df": 70,
+      "sa": 73,
+      "sd": 115,
+      "sp": 67,
+      "sl": 115
+    },
+    "w": 75.6,
+    "abilities": [
+      "Insomnia"
+    ]
+  },
+  "Ivysaur": {
+    "t1": "Grass",
+    "t2": "Poison",
+    "bs": {
+      "hp": 60,
+      "at": 62,
+      "df": 63,
+      "sa": 80,
+      "sd": 80,
+      "sp": 60,
+      "sl": 80
+    },
+    "w": 13,
+    "ab": "Overgrow",
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "Jigglypuff": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 115,
+      "at": 45,
+      "df": 20,
+      "sa": 45,
+      "sd": 25,
+      "sp": 20,
+      "sl": 25
+    },
+    "w": 5.5,
+    "abilities": [
+      "Cute Charm"
+    ]
+  },
+  "Jolteon": {
+    "t1": "Electric",
+    "bs": {
+      "hp": 65,
+      "at": 65,
+      "df": 60,
+      "sa": 110,
+      "sd": 95,
+      "sp": 130,
+      "sl": 110
+    },
+    "w": 24.5,
+    "ab": "Volt Abdsorb",
+    "abilities": [
+      "Volt Absorb"
+    ]
+  },
+  "Jynx": {
+    "t1": "Ice",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 65,
+      "at": 50,
+      "df": 35,
+      "sa": 115,
+      "sd": 95,
+      "sp": 95,
+      "sl": 95
+    },
+    "w": 40.6,
+    "abilities": [
+      "Oblivious"
+    ]
+  },
+  "Kabuto": {
+    "t1": "Rock",
+    "t2": "Water",
+    "bs": {
+      "hp": 30,
+      "at": 80,
+      "df": 90,
+      "sa": 55,
+      "sd": 45,
+      "sp": 55,
+      "sl": 45
+    },
+    "w": 11.5,
+    "abilities": [
+      "Swift Swim",
+      "Battle Armor"
+    ]
+  },
+  "Kabutops": {
+    "t1": "Rock",
+    "t2": "Water",
+    "bs": {
+      "hp": 60,
+      "at": 115,
+      "df": 105,
+      "sa": 65,
+      "sd": 70,
+      "sp": 80,
+      "sl": 70
+    },
+    "w": 40.5,
+    "abilities": [
+      "Swift Swim",
+      "Battle Armor"
+    ]
+  },
+  "Kadabra": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 40,
+      "at": 35,
+      "df": 30,
+      "sa": 120,
+      "sd": 70,
+      "sp": 105,
+      "sl": 120
+    },
+    "w": 56.5,
+    "abilities": [
+      "Synchronize",
+      "Inner Focus"
+    ]
+  },
+  "Kakuna": {
+    "t1": "Bug",
+    "t2": "Poison",
+    "bs": {
+      "hp": 45,
+      "at": 25,
+      "df": 50,
+      "sa": 25,
+      "sd": 25,
+      "sp": 35,
+      "sl": 25
+    },
+    "w": 10,
+    "ab": "Shed Skin",
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "Kangaskhan": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 105,
+      "at": 95,
+      "df": 80,
+      "sa": 40,
+      "sd": 80,
+      "sp": 90,
+      "sl": 40
+    },
+    "w": 80,
+    "abilities": [
+      "Early Bird"
+    ]
+  },
+  "Kingler": {
+    "t1": "Water",
+    "bs": {
+      "hp": 55,
+      "at": 130,
+      "df": 115,
+      "sa": 50,
+      "sd": 50,
+      "sp": 75,
+      "sl": 50
+    },
+    "w": 60,
+    "abilities": [
+      "Hyper Cutter",
+      "Shell Armor"
+    ]
+  },
+  "Koffing": {
+    "t1": "Poison",
+    "bs": {
+      "hp": 40,
+      "at": 65,
+      "df": 95,
+      "sa": 60,
+      "sd": 45,
+      "sp": 35,
+      "sl": 60
+    },
+    "w": 1,
+    "ab": "Levitate",
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "Krabby": {
+    "t1": "Water",
+    "bs": {
+      "hp": 30,
+      "at": 105,
+      "df": 90,
+      "sa": 25,
+      "sd": 25,
+      "sp": 50,
+      "sl": 25
+    },
+    "w": 6.5,
+    "abilities": [
+      "Hyper Cutter",
+      "Shell Armor"
+    ]
+  },
+  "Lapras": {
+    "t1": "Water",
+    "t2": "Ice",
+    "bs": {
+      "hp": 130,
+      "at": 85,
+      "df": 80,
+      "sa": 85,
+      "sd": 95,
+      "sp": 60,
+      "sl": 95
+    },
+    "w": 220,
+    "abilities": [
+      "Water Absorb",
+      "Shell Armor"
+    ]
+  },
+  "Lickitung": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 90,
+      "at": 55,
+      "df": 75,
+      "sa": 60,
+      "sd": 75,
+      "sp": 30,
+      "sl": 60
+    },
+    "w": 65.5,
+    "abilities": [
+      "Own Tempo",
+      "Oblivious"
+    ]
+  },
+  "Machamp": {
+    "t1": "Fighting",
+    "bs": {
+      "hp": 90,
+      "at": 130,
+      "df": 80,
+      "sa": 65,
+      "sd": 85,
+      "sp": 55,
+      "sl": 65
+    },
+    "w": 130,
+    "ab": "Guts",
+    "abilities": [
+      "Guts"
+    ]
+  },
+  "Machoke": {
+    "t1": "Fighting",
+    "bs": {
+      "hp": 80,
+      "at": 100,
+      "df": 70,
+      "sa": 50,
+      "sd": 60,
+      "sp": 45,
+      "sl": 50
+    },
+    "w": 70.5,
+    "ab": "Guts",
+    "abilities": [
+      "Guts"
+    ]
+  },
+  "Machop": {
+    "t1": "Fighting",
+    "bs": {
+      "hp": 70,
+      "at": 80,
+      "df": 50,
+      "sa": 35,
+      "sd": 35,
+      "sp": 35,
+      "sl": 35
+    },
+    "w": 19.5,
+    "ab": "Guts",
+    "abilities": [
+      "Guts"
+    ]
+  },
+  "Magikarp": {
+    "t1": "Water",
+    "bs": {
+      "hp": 20,
+      "at": 10,
+      "df": 55,
+      "sa": 15,
+      "sd": 20,
+      "sp": 80,
+      "sl": 20
+    },
+    "w": 10,
+    "ab": "Swift Swim",
+    "abilities": [
+      "Swift Swim"
+    ]
+  },
+  "Magmar": {
+    "t1": "Fire",
+    "bs": {
+      "hp": 65,
+      "at": 95,
+      "df": 57,
+      "sa": 100,
+      "sd": 85,
+      "sp": 93,
+      "sl": 85
+    },
+    "w": 44.5,
+    "abilities": [
+      "Flame Body"
+    ]
+  },
+  "Magnemite": {
+    "t1": "Electric",
+    "bs": {
+      "hp": 25,
+      "at": 35,
+      "df": 70,
+      "sa": 95,
+      "sd": 55,
+      "sp": 45,
+      "sl": 95
+    },
+    "w": 6,
+    "abilities": [
+      "Magnet Pull",
+      "Sturdy"
+    ],
+    "t2": "Steel"
+  },
+  "Magneton": {
+    "t1": "Electric",
+    "bs": {
+      "hp": 50,
+      "at": 60,
+      "df": 95,
+      "sa": 120,
+      "sd": 70,
+      "sp": 70,
+      "sl": 120
+    },
+    "w": 60,
+    "abilities": [
+      "Magnet Pull",
+      "Sturdy"
+    ],
+    "t2": "Steel"
+  },
+  "Mankey": {
+    "t1": "Fighting",
+    "bs": {
+      "hp": 40,
+      "at": 80,
+      "df": 35,
+      "sa": 35,
+      "sd": 45,
+      "sp": 70,
+      "sl": 35
+    },
+    "w": 28,
+    "abilities": [
+      "Vital Spirit"
+    ]
+  },
+  "Marowak": {
+    "t1": "Ground",
+    "bs": {
+      "hp": 60,
+      "at": 80,
+      "df": 110,
+      "sa": 50,
+      "sd": 80,
+      "sp": 45,
+      "sl": 50
+    },
+    "w": 45,
+    "abilities": [
+      "Rock Head",
+      "Lightning Rod"
+    ]
+  },
+  "Meowth": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 40,
+      "at": 45,
+      "df": 35,
+      "sa": 40,
+      "sd": 40,
+      "sp": 90,
+      "sl": 40
+    },
+    "w": 4.2,
+    "abilities": [
+      "Pickup"
+    ]
+  },
+  "Metapod": {
+    "t1": "Bug",
+    "bs": {
+      "hp": 50,
+      "at": 20,
+      "df": 55,
+      "sa": 25,
+      "sd": 25,
+      "sp": 30,
+      "sl": 25
+    },
+    "w": 9.9,
+    "ab": "Shed Skin",
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "Mew": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 100,
+      "at": 100,
+      "df": 100,
+      "sa": 100,
+      "sd": 100,
+      "sp": 100,
+      "sl": 100
+    },
+    "w": 4,
+    "ab": "Synchronize",
+    "abilities": [
+      "Synchronize"
+    ]
+  },
+  "Mewtwo": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 106,
+      "at": 110,
+      "df": 90,
+      "sa": 154,
+      "sd": 90,
+      "sp": 130,
+      "sl": 154
+    },
+    "w": 122,
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "Moltres": {
+    "t1": "Fire",
+    "t2": "Flying",
+    "bs": {
+      "hp": 90,
+      "at": 100,
+      "df": 90,
+      "sa": 125,
+      "sd": 85,
+      "sp": 90,
+      "sl": 125
+    },
+    "w": 60,
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "Mr. Mime": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 40,
+      "at": 45,
+      "df": 65,
+      "sa": 100,
+      "sd": 120,
+      "sp": 90,
+      "sl": 100
+    },
+    "w": 54.5,
+    "ab": "Soundproof",
+    "abilities": [
+      "Soundproof"
+    ]
+  },
+  "Muk": {
+    "t1": "Poison",
+    "bs": {
+      "hp": 105,
+      "at": 105,
+      "df": 75,
+      "sa": 65,
+      "sd": 100,
+      "sp": 50,
+      "sl": 65
+    },
+    "w": 30,
+    "abilities": [
+      "Stench",
+      "Sticky Hold"
+    ]
+  },
+  "Nidoking": {
+    "t1": "Poison",
+    "t2": "Ground",
+    "bs": {
+      "hp": 81,
+      "at": 92,
+      "df": 77,
+      "sa": 85,
+      "sd": 75,
+      "sp": 85,
+      "sl": 75
+    },
+    "w": 62,
+    "abilities": [
+      "Poison Point"
+    ]
+  },
+  "Nidoqueen": {
+    "t1": "Poison",
+    "t2": "Ground",
+    "bs": {
+      "hp": 90,
+      "at": 82,
+      "df": 87,
+      "sa": 75,
+      "sd": 85,
+      "sp": 76,
+      "sl": 75
+    },
+    "w": 60,
+    "abilities": [
+      "Poison Point"
+    ]
+  },
+  "Nidoran-F": {
+    "t1": "Poison",
+    "bs": {
+      "hp": 55,
+      "at": 47,
+      "df": 52,
+      "sa": 40,
+      "sd": 40,
+      "sp": 41,
+      "sl": 40
+    },
+    "w": 7,
+    "abilities": [
+      "Poison Point"
+    ]
+  },
+  "Nidoran-M": {
+    "t1": "Poison",
+    "bs": {
+      "hp": 46,
+      "at": 57,
+      "df": 40,
+      "sa": 40,
+      "sd": 40,
+      "sp": 50,
+      "sl": 40
+    },
+    "w": 9,
+    "abilities": [
+      "Poison Point"
+    ]
+  },
+  "Nidorina": {
+    "t1": "Poison",
+    "bs": {
+      "hp": 70,
+      "at": 62,
+      "df": 67,
+      "sa": 55,
+      "sd": 55,
+      "sp": 56,
+      "sl": 55
+    },
+    "w": 20,
+    "abilities": [
+      "Poison Point"
+    ]
+  },
+  "Nidorino": {
+    "t1": "Poison",
+    "bs": {
+      "hp": 61,
+      "at": 72,
+      "df": 57,
+      "sa": 55,
+      "sd": 55,
+      "sp": 65,
+      "sl": 55
+    },
+    "w": 19.5,
+    "abilities": [
+      "Poison Point"
+    ]
+  },
+  "Ninetales": {
+    "t1": "Fire",
+    "bs": {
+      "hp": 73,
+      "at": 76,
+      "df": 75,
+      "sa": 81,
+      "sd": 100,
+      "sp": 100,
+      "sl": 100
+    },
+    "w": 19.9,
+    "ab": "Flash Fire",
+    "abilities": [
+      "Flash Fire"
+    ]
+  },
+  "Oddish": {
+    "t1": "Grass",
+    "t2": "Poison",
+    "bs": {
+      "hp": 45,
+      "at": 50,
+      "df": 55,
+      "sa": 75,
+      "sd": 65,
+      "sp": 30,
+      "sl": 75
+    },
+    "w": 5.4,
+    "ab": "Chlorophyll",
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "Omanyte": {
+    "t1": "Rock",
+    "t2": "Water",
+    "bs": {
+      "hp": 35,
+      "at": 40,
+      "df": 100,
+      "sa": 90,
+      "sd": 55,
+      "sp": 35,
+      "sl": 90
+    },
+    "w": 7.5,
+    "abilities": [
+      "Swift Swim",
+      "Shell Armor"
+    ]
+  },
+  "Omastar": {
+    "t1": "Rock",
+    "t2": "Water",
+    "bs": {
+      "hp": 70,
+      "at": 60,
+      "df": 125,
+      "sa": 115,
+      "sd": 70,
+      "sp": 55,
+      "sl": 115
+    },
+    "w": 35,
+    "abilities": [
+      "Swift Swim",
+      "Shell Armor"
+    ]
+  },
+  "Onix": {
+    "t1": "Rock",
+    "t2": "Ground",
+    "bs": {
+      "hp": 35,
+      "at": 45,
+      "df": 160,
+      "sa": 30,
+      "sd": 45,
+      "sp": 70,
+      "sl": 30
+    },
+    "w": 210,
+    "abilities": [
+      "Rock Head",
+      "Sturdy"
+    ]
+  },
+  "Paras": {
+    "t1": "Bug",
+    "t2": "Grass",
+    "bs": {
+      "hp": 35,
+      "at": 70,
+      "df": 55,
+      "sa": 45,
+      "sd": 55,
+      "sp": 25,
+      "sl": 55
+    },
+    "w": 5.4,
+    "abilities": [
+      "Effect Spore"
+    ]
+  },
+  "Parasect": {
+    "t1": "Bug",
+    "t2": "Grass",
+    "bs": {
+      "hp": 60,
+      "at": 95,
+      "df": 80,
+      "sa": 60,
+      "sd": 80,
+      "sp": 30,
+      "sl": 80
+    },
+    "w": 29.5,
+    "abilities": [
+      "Effect Spore"
+    ]
+  },
+  "Persian": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 65,
+      "at": 70,
+      "df": 60,
+      "sa": 65,
+      "sd": 65,
+      "sp": 115,
+      "sl": 65
+    },
+    "w": 32,
+    "abilities": [
+      "Limber"
+    ]
+  },
+  "Pidgeot": {
+    "t1": "Normal",
+    "t2": "Flying",
+    "bs": {
+      "hp": 83,
+      "at": 80,
+      "df": 75,
+      "sa": 70,
+      "sd": 70,
+      "sp": 91,
+      "sl": 70
+    },
+    "w": 39.5,
+    "abilities": [
+      "Keen Eye"
+    ]
+  },
+  "Pidgeotto": {
+    "t1": "Normal",
+    "t2": "Flying",
+    "bs": {
+      "hp": 63,
+      "at": 60,
+      "df": 55,
+      "sa": 50,
+      "sd": 50,
+      "sp": 71,
+      "sl": 50
+    },
+    "w": 30,
+    "abilities": [
+      "Keen Eye"
+    ]
+  },
+  "Pidgey": {
+    "t1": "Normal",
+    "t2": "Flying",
+    "bs": {
+      "hp": 40,
+      "at": 45,
+      "df": 40,
+      "sa": 35,
+      "sd": 35,
+      "sp": 56,
+      "sl": 35
+    },
+    "w": 1.8,
+    "abilities": [
+      "Keen Eye"
+    ]
+  },
+  "Pikachu": {
+    "t1": "Electric",
+    "bs": {
+      "hp": 35,
+      "at": 55,
+      "df": 30,
+      "sa": 50,
+      "sd": 40,
+      "sp": 90,
+      "sl": 50
+    },
+    "w": 6,
+    "abilities": [
+      "Static"
+    ]
+  },
+  "Pinsir": {
+    "t1": "Bug",
+    "bs": {
+      "hp": 65,
+      "at": 125,
+      "df": 100,
+      "sa": 55,
+      "sd": 70,
+      "sp": 85,
+      "sl": 55
+    },
+    "w": 55,
+    "ab": "Hyper Cutter",
+    "abilities": [
+      "Hyper Cutter"
+    ]
+  },
+  "Poliwag": {
+    "t1": "Water",
+    "bs": {
+      "hp": 40,
+      "at": 50,
+      "df": 40,
+      "sa": 40,
+      "sd": 40,
+      "sp": 90,
+      "sl": 40
+    },
+    "w": 12.4,
+    "abilities": [
+      "Water Absorb",
+      "Damp"
+    ]
+  },
+  "Poliwhirl": {
+    "t1": "Water",
+    "bs": {
+      "hp": 65,
+      "at": 65,
+      "df": 65,
+      "sa": 50,
+      "sd": 50,
+      "sp": 90,
+      "sl": 50
+    },
+    "w": 20,
+    "abilities": [
+      "Water Absorb",
+      "Damp"
+    ]
+  },
+  "Poliwrath": {
+    "t1": "Water",
+    "t2": "Fighting",
+    "bs": {
+      "hp": 90,
+      "at": 85,
+      "df": 95,
+      "sa": 70,
+      "sd": 90,
+      "sp": 70,
+      "sl": 70
+    },
+    "w": 54,
+    "abilities": [
+      "Water Absorb",
+      "Damp"
+    ]
+  },
+  "Ponyta": {
+    "t1": "Fire",
+    "bs": {
+      "hp": 50,
+      "at": 85,
+      "df": 55,
+      "sa": 65,
+      "sd": 65,
+      "sp": 90,
+      "sl": 65
+    },
+    "w": 30,
+    "abilities": [
+      "Run Away",
+      "Flash Fire"
+    ]
+  },
+  "Porygon": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 65,
+      "at": 60,
+      "df": 70,
+      "sa": 85,
+      "sd": 75,
+      "sp": 40,
+      "sl": 75
+    },
+    "w": 36.5,
+    "abilities": [
+      "Trace"
+    ]
+  },
+  "Primeape": {
+    "t1": "Fighting",
+    "bs": {
+      "hp": 65,
+      "at": 105,
+      "df": 60,
+      "sa": 60,
+      "sd": 70,
+      "sp": 95,
+      "sl": 60
+    },
+    "w": 32,
+    "abilities": [
+      "Vital Spirit"
+    ]
+  },
+  "Psyduck": {
+    "t1": "Water",
+    "bs": {
+      "hp": 50,
+      "at": 52,
+      "df": 48,
+      "sa": 65,
+      "sd": 50,
+      "sp": 55,
+      "sl": 50
+    },
+    "w": 19.6,
+    "abilities": [
+      "Damp",
+      "Cloud Nine"
+    ]
+  },
+  "Raichu": {
+    "t1": "Electric",
+    "bs": {
+      "hp": 60,
+      "at": 90,
+      "df": 55,
+      "sa": 90,
+      "sd": 80,
+      "sp": 100,
+      "sl": 90
+    },
+    "w": 30,
+    "abilities": [
+      "Static"
+    ]
+  },
+  "Rapidash": {
+    "t1": "Fire",
+    "bs": {
+      "hp": 65,
+      "at": 100,
+      "df": 70,
+      "sa": 80,
+      "sd": 80,
+      "sp": 105,
+      "sl": 80
+    },
+    "w": 95,
+    "ab": "Flash Fire",
+    "abilities": [
+      "Run Away",
+      "Flash Fire"
+    ]
+  },
+  "Raticate": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 55,
+      "at": 81,
+      "df": 60,
+      "sa": 50,
+      "sd": 70,
+      "sp": 97,
+      "sl": 50
+    },
+    "w": 18.5,
+    "abilities": [
+      "Run Away",
+      "Guts"
+    ]
+  },
+  "Rattata": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 30,
+      "at": 56,
+      "df": 35,
+      "sa": 25,
+      "sd": 35,
+      "sp": 72,
+      "sl": 25
+    },
+    "w": 3.5,
+    "abilities": [
+      "Run Away",
+      "Guts"
+    ]
+  },
+  "Rhydon": {
+    "t1": "Ground",
+    "t2": "Rock",
+    "bs": {
+      "hp": 105,
+      "at": 130,
+      "df": 120,
+      "sa": 45,
+      "sd": 45,
+      "sp": 40,
+      "sl": 45
+    },
+    "w": 120,
+    "abilities": [
+      "Lightning Rod",
+      "Rock Head"
+    ]
+  },
+  "Rhyhorn": {
+    "t1": "Ground",
+    "t2": "Rock",
+    "bs": {
+      "hp": 80,
+      "at": 85,
+      "df": 95,
+      "sa": 30,
+      "sd": 30,
+      "sp": 25,
+      "sl": 30
+    },
+    "w": 115,
+    "abilities": [
+      "Lightning Rod",
+      "Rock Head"
+    ]
+  },
+  "Sandshrew": {
+    "t1": "Ground",
+    "bs": {
+      "hp": 50,
+      "at": 75,
+      "df": 85,
+      "sa": 20,
+      "sd": 30,
+      "sp": 40,
+      "sl": 30
+    },
+    "w": 12,
+    "ab": "Sand Veil",
+    "abilities": [
+      "Sand Veil"
+    ]
+  },
+  "Sandslash": {
+    "t1": "Ground",
+    "bs": {
+      "hp": 75,
+      "at": 100,
+      "df": 110,
+      "sa": 45,
+      "sd": 55,
+      "sp": 65,
+      "sl": 55
+    },
+    "w": 29.5,
+    "ab": "Sand Veil",
+    "abilities": [
+      "Sand Veil"
+    ]
+  },
+  "Scyther": {
+    "t1": "Bug",
+    "t2": "Flying",
+    "bs": {
+      "hp": 70,
+      "at": 110,
+      "df": 80,
+      "sa": 55,
+      "sd": 80,
+      "sp": 105,
+      "sl": 55
+    },
+    "w": 56,
+    "ab": "Swarm",
+    "abilities": [
+      "Swarm"
+    ]
+  },
+  "Seadra": {
+    "t1": "Water",
+    "bs": {
+      "hp": 55,
+      "at": 65,
+      "df": 95,
+      "sa": 95,
+      "sd": 45,
+      "sp": 85,
+      "sl": 95
+    },
+    "w": 25,
+    "abilities": [
+      "Poison Point"
+    ]
+  },
+  "Seaking": {
+    "t1": "Water",
+    "bs": {
+      "hp": 80,
+      "at": 92,
+      "df": 65,
+      "sa": 65,
+      "sd": 80,
+      "sp": 68,
+      "sl": 80
+    },
+    "w": 39,
+    "abilities": [
+      "Swift Swim",
+      "Water Veil"
+    ]
+  },
+  "Seel": {
+    "t1": "Water",
+    "bs": {
+      "hp": 65,
+      "at": 45,
+      "df": 55,
+      "sa": 45,
+      "sd": 70,
+      "sp": 45,
+      "sl": 70
+    },
+    "w": 90,
+    "ab": "Thick Fat",
+    "abilities": [
+      "Thick Fat"
+    ]
+  },
+  "Shellder": {
+    "t1": "Water",
+    "bs": {
+      "hp": 30,
+      "at": 65,
+      "df": 100,
+      "sa": 45,
+      "sd": 25,
+      "sp": 40,
+      "sl": 45
+    },
+    "w": 4,
+    "ab": "Shell Armor",
+    "abilities": [
+      "Shell Armor"
+    ]
+  },
+  "Slowbro": {
+    "t1": "Water",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 95,
+      "at": 75,
+      "df": 110,
+      "sa": 100,
+      "sd": 80,
+      "sp": 30,
+      "sl": 80
+    },
+    "w": 78.5,
+    "abilities": [
+      "Oblivious",
+      "Own Tempo"
+    ]
+  },
+  "Slowpoke": {
+    "t1": "Water",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 90,
+      "at": 65,
+      "df": 65,
+      "sa": 40,
+      "sd": 40,
+      "sp": 15,
+      "sl": 40
+    },
+    "w": 36,
+    "abilities": [
+      "Oblivious",
+      "Own Tempo"
+    ]
+  },
+  "Snorlax": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 160,
+      "at": 110,
+      "df": 65,
+      "sa": 65,
+      "sd": 110,
+      "sp": 30,
+      "sl": 65
+    },
+    "w": 460,
+    "abilities": [
+      "Immunity",
+      "Thick Fat"
+    ]
+  },
+  "Spearow": {
+    "t1": "Normal",
+    "t2": "Flying",
+    "bs": {
+      "hp": 40,
+      "at": 60,
+      "df": 30,
+      "sa": 31,
+      "sd": 31,
+      "sp": 70,
+      "sl": 31
+    },
+    "w": 2,
+    "abilities": [
+      "Keen Eye"
+    ]
+  },
+  "Squirtle": {
+    "t1": "Water",
+    "bs": {
+      "hp": 44,
+      "at": 48,
+      "df": 65,
+      "sa": 50,
+      "sd": 64,
+      "sp": 43,
+      "sl": 50
+    },
+    "w": 9,
+    "ab": "Torrent",
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "Starmie": {
+    "t1": "Water",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 60,
+      "at": 75,
+      "df": 85,
+      "sa": 100,
+      "sd": 85,
+      "sp": 115,
+      "sl": 100
+    },
+    "w": 80,
+    "abilities": [
+      "Illuminate",
+      "Natural Cure"
+    ]
+  },
+  "Staryu": {
+    "t1": "Water",
+    "bs": {
+      "hp": 30,
+      "at": 45,
+      "df": 55,
+      "sa": 70,
+      "sd": 55,
+      "sp": 85,
+      "sl": 70
+    },
+    "w": 34.5,
+    "abilities": [
+      "Illuminate",
+      "Natural Cure"
+    ]
+  },
+  "Tangela": {
+    "t1": "Grass",
+    "bs": {
+      "hp": 65,
+      "at": 55,
+      "df": 115,
+      "sa": 100,
+      "sd": 40,
+      "sp": 60,
+      "sl": 100
+    },
+    "w": 35,
+    "ab": "Chlorophyll",
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "Tauros": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 75,
+      "at": 100,
+      "df": 95,
+      "sa": 40,
+      "sd": 70,
+      "sp": 110,
+      "sl": 70
+    },
+    "w": 88.4,
+    "ab": "Intimidate",
+    "abilities": [
+      "Intimidate"
+    ]
+  },
+  "Tentacool": {
+    "t1": "Water",
+    "t2": "Poison",
+    "bs": {
+      "hp": 40,
+      "at": 40,
+      "df": 35,
+      "sa": 50,
+      "sd": 100,
+      "sp": 70,
+      "sl": 100
+    },
+    "w": 45.5,
+    "abilities": [
+      "Clear Body",
+      "Liquid Ooze"
+    ]
+  },
+  "Tentacruel": {
+    "t1": "Water",
+    "t2": "Poison",
+    "bs": {
+      "hp": 80,
+      "at": 70,
+      "df": 65,
+      "sa": 80,
+      "sd": 120,
+      "sp": 100,
+      "sl": 120
+    },
+    "w": 55,
+    "abilities": [
+      "Clear Body",
+      "Liquid Ooze"
+    ]
+  },
+  "Vaporeon": {
+    "t1": "Water",
+    "bs": {
+      "hp": 130,
+      "at": 65,
+      "df": 60,
+      "sa": 110,
+      "sd": 95,
+      "sp": 65,
+      "sl": 110
+    },
+    "w": 29,
+    "ab": "Water Absorb",
+    "abilities": [
+      "Water Absorb"
+    ]
+  },
+  "Venomoth": {
+    "t1": "Bug",
+    "t2": "Poison",
+    "bs": {
+      "hp": 70,
+      "at": 65,
+      "df": 60,
+      "sa": 90,
+      "sd": 75,
+      "sp": 90,
+      "sl": 90
+    },
+    "w": 12.5,
+    "abilities": [
+      "Shield Dust"
+    ]
+  },
+  "Venonat": {
+    "t1": "Bug",
+    "t2": "Poison",
+    "bs": {
+      "hp": 60,
+      "at": 55,
+      "df": 50,
+      "sa": 40,
+      "sd": 55,
+      "sp": 45,
+      "sl": 40
+    },
+    "w": 30,
+    "abilities": [
+      "Compound Eyes"
+    ]
+  },
+  "Venusaur": {
+    "t1": "Grass",
+    "t2": "Poison",
+    "bs": {
+      "hp": 80,
+      "at": 82,
+      "df": 83,
+      "sa": 100,
+      "sd": 100,
+      "sp": 80,
+      "sl": 100
+    },
+    "w": 100,
+    "ab": "Overgrow",
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "Victreebel": {
+    "t1": "Grass",
+    "t2": "Poison",
+    "bs": {
+      "hp": 80,
+      "at": 105,
+      "df": 65,
+      "sa": 100,
+      "sd": 60,
+      "sp": 70,
+      "sl": 100
+    },
+    "w": 15.5,
+    "ab": "Chlorophyll",
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "Vileplume": {
+    "t1": "Grass",
+    "t2": "Poison",
+    "bs": {
+      "hp": 75,
+      "at": 80,
+      "df": 85,
+      "sa": 100,
+      "sd": 90,
+      "sp": 50,
+      "sl": 100
+    },
+    "w": 18.6,
+    "ab": "Chlorophyll",
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "Voltorb": {
+    "t1": "Electric",
+    "bs": {
+      "hp": 40,
+      "at": 30,
+      "df": 50,
+      "sa": 55,
+      "sd": 55,
+      "sp": 100,
+      "sl": 55
+    },
+    "w": 10.4,
+    "abilities": [
+      "Soundproof",
+      "Static"
+    ]
+  },
+  "Vulpix": {
+    "t1": "Fire",
+    "bs": {
+      "hp": 38,
+      "at": 41,
+      "df": 40,
+      "sa": 50,
+      "sd": 65,
+      "sp": 65,
+      "sl": 65
+    },
+    "w": 9.9,
+    "ab": "Flash Fire",
+    "abilities": [
+      "Flash Fire"
+    ]
+  },
+  "Wartortle": {
+    "t1": "Water",
+    "bs": {
+      "hp": 59,
+      "at": 63,
+      "df": 80,
+      "sa": 65,
+      "sd": 80,
+      "sp": 58,
+      "sl": 65
+    },
+    "w": 22.5,
+    "ab": "Torrent",
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "Weedle": {
+    "t1": "Bug",
+    "t2": "Poison",
+    "bs": {
+      "hp": 40,
+      "at": 35,
+      "df": 30,
+      "sa": 20,
+      "sd": 20,
+      "sp": 50,
+      "sl": 20
+    },
+    "w": 3.2,
+    "abilities": [
+      "Shield Dust"
+    ]
+  },
+  "Weepinbell": {
+    "t1": "Grass",
+    "t2": "Poison",
+    "bs": {
+      "hp": 65,
+      "at": 90,
+      "df": 50,
+      "sa": 85,
+      "sd": 45,
+      "sp": 55,
+      "sl": 85
+    },
+    "w": 6.4,
+    "ab": "Chlorophyll",
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "Weezing": {
+    "t1": "Poison",
+    "bs": {
+      "hp": 65,
+      "at": 90,
+      "df": 120,
+      "sa": 85,
+      "sd": 70,
+      "sp": 60,
+      "sl": 85
+    },
+    "w": 9.5,
+    "ab": "Levitate",
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "Wigglytuff": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 140,
+      "at": 70,
+      "df": 45,
+      "sa": 75,
+      "sd": 50,
+      "sp": 45,
+      "sl": 50
+    },
+    "w": 12,
+    "abilities": [
+      "Cute Charm"
+    ]
+  },
+  "Zapdos": {
+    "t1": "Electric",
+    "t2": "Flying",
+    "bs": {
+      "hp": 90,
+      "at": 90,
+      "df": 85,
+      "sa": 125,
+      "sd": 90,
+      "sp": 100,
+      "sl": 125
+    },
+    "w": 52.6,
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "Zubat": {
+    "t1": "Poison",
+    "t2": "Flying",
+    "bs": {
+      "hp": 40,
+      "at": 45,
+      "df": 35,
+      "sa": 30,
+      "sd": 40,
+      "sp": 55,
+      "sl": 40
+    },
+    "w": 7.5,
+    "abilities": [
+      "Inner Focus"
+    ]
+  },
+  "Aipom": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 55,
+      "at": 70,
+      "df": 55,
+      "sa": 40,
+      "sd": 55,
+      "sp": 85
+    },
+    "w": 11.5,
+    "abilities": [
+      "Run Away",
+      "Pickup"
+    ]
+  },
+  "Ampharos": {
+    "t1": "Electric",
+    "bs": {
+      "hp": 90,
+      "at": 75,
+      "df": 75,
+      "sa": 115,
+      "sd": 90,
+      "sp": 55
+    },
+    "w": 61.5,
+    "abilities": [
+      "Static"
+    ]
+  },
+  "Ariados": {
+    "t1": "Bug",
+    "t2": "Poison",
+    "bs": {
+      "hp": 70,
+      "at": 90,
+      "df": 70,
+      "sa": 60,
+      "sd": 60,
+      "sp": 40
+    },
+    "w": 33.5,
+    "abilities": [
+      "Swarm",
+      "Insomnia"
+    ]
+  },
+  "Azumarill": {
+    "t1": "Water",
+    "bs": {
+      "hp": 100,
+      "at": 50,
+      "df": 80,
+      "sa": 50,
+      "sd": 80,
+      "sp": 50
+    },
+    "w": 28.5,
+    "abilities": [
+      "Thick Fat",
+      "Huge Power"
+    ]
+  },
+  "Bayleef": {
+    "t1": "Grass",
+    "bs": {
+      "hp": 60,
+      "at": 62,
+      "df": 80,
+      "sa": 63,
+      "sd": 80,
+      "sp": 60
+    },
+    "w": 15.8,
+    "ab": "Overgrow",
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "Bellossom": {
+    "t1": "Grass",
+    "bs": {
+      "hp": 75,
+      "at": 80,
+      "df": 85,
+      "sa": 90,
+      "sd": 100,
+      "sp": 50
+    },
+    "w": 5.8,
+    "ab": "Chlorophyll",
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "Blissey": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 255,
+      "at": 10,
+      "df": 10,
+      "sa": 75,
+      "sd": 135,
+      "sp": 55
+    },
+    "w": 46.8,
+    "abilities": [
+      "Natural Cure",
+      "Serene Grace"
+    ]
+  },
+  "Celebi": {
+    "t1": "Psychic",
+    "t2": "Grass",
+    "bs": {
+      "hp": 100,
+      "at": 100,
+      "df": 100,
+      "sa": 100,
+      "sd": 100,
+      "sp": 100
+    },
+    "w": 5,
+    "ab": "Natural Cure",
+    "abilities": [
+      "Natural Cure"
+    ]
+  },
+  "Chikorita": {
+    "t1": "Grass",
+    "bs": {
+      "hp": 45,
+      "at": 49,
+      "df": 65,
+      "sa": 49,
+      "sd": 65,
+      "sp": 45
+    },
+    "w": 6.4,
+    "ab": "Overgrow",
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "Chinchou": {
+    "t1": "Water",
+    "t2": "Electric",
+    "bs": {
+      "hp": 75,
+      "at": 38,
+      "df": 38,
+      "sa": 56,
+      "sd": 56,
+      "sp": 67
+    },
+    "w": 12,
+    "abilities": [
+      "Volt Absorb",
+      "Illuminate"
+    ]
+  },
+  "Cleffa": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 50,
+      "at": 25,
+      "df": 28,
+      "sa": 45,
+      "sd": 55,
+      "sp": 15
+    },
+    "w": 3,
+    "abilities": [
+      "Cute Charm"
+    ]
+  },
+  "Corsola": {
+    "t1": "Water",
+    "t2": "Rock",
+    "bs": {
+      "hp": 55,
+      "at": 55,
+      "df": 85,
+      "sa": 65,
+      "sd": 85,
+      "sp": 35
+    },
+    "w": 5,
+    "abilities": [
+      "Hustle",
+      "Natural Cure"
+    ]
+  },
+  "Crobat": {
+    "t1": "Poison",
+    "t2": "Flying",
+    "bs": {
+      "hp": 85,
+      "at": 90,
+      "df": 80,
+      "sa": 70,
+      "sd": 80,
+      "sp": 130
+    },
+    "w": 75,
+    "abilities": [
+      "Inner Focus"
+    ]
+  },
+  "Croconaw": {
+    "t1": "Water",
+    "bs": {
+      "hp": 65,
+      "at": 80,
+      "df": 80,
+      "sa": 59,
+      "sd": 63,
+      "sp": 58
+    },
+    "w": 25,
+    "ab": "Torrent",
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "Cyndaquil": {
+    "t1": "Fire",
+    "bs": {
+      "hp": 39,
+      "at": 52,
+      "df": 43,
+      "sa": 60,
+      "sd": 50,
+      "sp": 65
+    },
+    "w": 7.9,
+    "ab": "Blaze",
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "Delibird": {
+    "t1": "Ice",
+    "t2": "Flying",
+    "bs": {
+      "hp": 45,
+      "at": 55,
+      "df": 45,
+      "sa": 65,
+      "sd": 45,
+      "sp": 75
+    },
+    "w": 16,
+    "abilities": [
+      "Vital Spirit",
+      "Hustle"
+    ]
+  },
+  "Donphan": {
+    "t1": "Ground",
+    "bs": {
+      "hp": 90,
+      "at": 120,
+      "df": 120,
+      "sa": 60,
+      "sd": 60,
+      "sp": 50
+    },
+    "w": 120,
+    "abilities": [
+      "Sturdy"
+    ]
+  },
+  "Dunsparce": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 100,
+      "at": 70,
+      "df": 70,
+      "sa": 65,
+      "sd": 65,
+      "sp": 45
+    },
+    "w": 14,
+    "abilities": [
+      "Serene Grace",
+      "Run Away"
+    ]
+  },
+  "Elekid": {
+    "t1": "Electric",
+    "bs": {
+      "hp": 45,
+      "at": 63,
+      "df": 37,
+      "sa": 65,
+      "sd": 55,
+      "sp": 95
+    },
+    "w": 23.5,
+    "abilities": [
+      "Static"
+    ]
+  },
+  "Entei": {
+    "t1": "Fire",
+    "bs": {
+      "hp": 115,
+      "at": 115,
+      "df": 85,
+      "sa": 90,
+      "sd": 75,
+      "sp": 100
+    },
+    "w": 198,
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "Espeon": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 65,
+      "at": 65,
+      "df": 60,
+      "sa": 130,
+      "sd": 95,
+      "sp": 110
+    },
+    "w": 26.5,
+    "abilities": [
+      "Synchronize"
+    ]
+  },
+  "Feraligatr": {
+    "t1": "Water",
+    "bs": {
+      "hp": 85,
+      "at": 105,
+      "df": 100,
+      "sa": 79,
+      "sd": 83,
+      "sp": 78
+    },
+    "w": 88.8,
+    "ab": "Torrent",
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "Flaaffy": {
+    "t1": "Electric",
+    "bs": {
+      "hp": 70,
+      "at": 55,
+      "df": 55,
+      "sa": 80,
+      "sd": 60,
+      "sp": 45
+    },
+    "w": 13.3,
+    "abilities": [
+      "Static"
+    ]
+  },
+  "Forretress": {
+    "t1": "Bug",
+    "t2": "Steel",
+    "bs": {
+      "hp": 75,
+      "at": 90,
+      "df": 140,
+      "sa": 60,
+      "sd": 60,
+      "sp": 40
+    },
+    "w": 125.8,
+    "abilities": [
+      "Sturdy"
+    ]
+  },
+  "Furret": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 85,
+      "at": 76,
+      "df": 64,
+      "sa": 45,
+      "sd": 55,
+      "sp": 90
+    },
+    "w": 32.5,
+    "abilities": [
+      "Run Away",
+      "Keen Eye"
+    ]
+  },
+  "Girafarig": {
+    "t1": "Normal",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 70,
+      "at": 80,
+      "df": 65,
+      "sa": 90,
+      "sd": 65,
+      "sp": 85
+    },
+    "w": 41.5,
+    "abilities": [
+      "Inner Focus",
+      "Early Bird"
+    ]
+  },
+  "Gligar": {
+    "t1": "Ground",
+    "t2": "Flying",
+    "bs": {
+      "hp": 65,
+      "at": 75,
+      "df": 105,
+      "sa": 35,
+      "sd": 65,
+      "sp": 85
+    },
+    "w": 64.8,
+    "abilities": [
+      "Hyper Cutter",
+      "Sand Veil"
+    ]
+  },
+  "Granbull": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 90,
+      "at": 120,
+      "df": 75,
+      "sa": 60,
+      "sd": 60,
+      "sp": 45
+    },
+    "w": 48.7,
+    "ab": "Intimidate",
+    "abilities": [
+      "Intimidate"
+    ]
+  },
+  "Heracross": {
+    "t1": "Bug",
+    "t2": "Fighting",
+    "bs": {
+      "hp": 80,
+      "at": 125,
+      "df": 75,
+      "sa": 40,
+      "sd": 95,
+      "sp": 85
+    },
+    "w": 54,
+    "abilities": [
+      "Swarm",
+      "Guts"
+    ]
+  },
+  "Hitmontop": {
+    "t1": "Fighting",
+    "bs": {
+      "hp": 50,
+      "at": 95,
+      "df": 95,
+      "sa": 35,
+      "sd": 110,
+      "sp": 70
+    },
+    "w": 48,
+    "ab": "Intimidate",
+    "abilities": [
+      "Intimidate"
+    ]
+  },
+  "Ho-Oh": {
+    "t1": "Fire",
+    "t2": "Flying",
+    "bs": {
+      "hp": 106,
+      "at": 130,
+      "df": 90,
+      "sa": 110,
+      "sd": 154,
+      "sp": 90
+    },
+    "w": 199,
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "Hoothoot": {
+    "t1": "Normal",
+    "t2": "Flying",
+    "bs": {
+      "hp": 60,
+      "at": 30,
+      "df": 30,
+      "sa": 36,
+      "sd": 56,
+      "sp": 50
+    },
+    "w": 21.2,
+    "abilities": [
+      "Insomnia",
+      "Keen Eye"
+    ]
+  },
+  "Hoppip": {
+    "t1": "Grass",
+    "t2": "Flying",
+    "bs": {
+      "hp": 35,
+      "at": 35,
+      "df": 40,
+      "sa": 35,
+      "sd": 55,
+      "sp": 50
+    },
+    "w": 0.5,
+    "ab": "Chlorophyll",
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "Houndoom": {
+    "t1": "Dark",
+    "t2": "Fire",
+    "bs": {
+      "hp": 75,
+      "at": 90,
+      "df": 50,
+      "sa": 110,
+      "sd": 80,
+      "sp": 95
+    },
+    "w": 35,
+    "abilities": [
+      "Early Bird",
+      "Flash Fire"
+    ]
+  },
+  "Houndour": {
+    "t1": "Dark",
+    "t2": "Fire",
+    "bs": {
+      "hp": 45,
+      "at": 60,
+      "df": 30,
+      "sa": 80,
+      "sd": 50,
+      "sp": 65
+    },
+    "w": 10.8,
+    "abilities": [
+      "Early Bird",
+      "Flash Fire"
+    ]
+  },
+  "Igglybuff": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 90,
+      "at": 30,
+      "df": 15,
+      "sa": 40,
+      "sd": 20,
+      "sp": 15
+    },
+    "w": 1,
+    "abilities": [
+      "Cute Charm"
+    ]
+  },
+  "Jumpluff": {
+    "t1": "Grass",
+    "t2": "Flying",
+    "bs": {
+      "hp": 75,
+      "at": 55,
+      "df": 70,
+      "sa": 55,
+      "sd": 85,
+      "sp": 110
+    },
+    "w": 3,
+    "ab": "Chlorophyll",
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "Kingdra": {
+    "t1": "Water",
+    "t2": "Dragon",
+    "bs": {
+      "hp": 75,
+      "at": 95,
+      "df": 95,
+      "sa": 95,
+      "sd": 95,
+      "sp": 85
+    },
+    "w": 152,
+    "ab": "Swift Swim",
+    "abilities": [
+      "Swift Swim"
+    ]
+  },
+  "Lanturn": {
+    "t1": "Water",
+    "t2": "Electric",
+    "bs": {
+      "hp": 125,
+      "at": 58,
+      "df": 58,
+      "sa": 76,
+      "sd": 76,
+      "sp": 67
+    },
+    "w": 22.5,
+    "abilities": [
+      "Volt Absorb",
+      "Illuminate"
+    ]
+  },
+  "Larvitar": {
+    "t1": "Rock",
+    "t2": "Ground",
+    "bs": {
+      "hp": 50,
+      "at": 64,
+      "df": 50,
+      "sa": 45,
+      "sd": 50,
+      "sp": 41
+    },
+    "w": 72,
+    "ab": "Guts",
+    "abilities": [
+      "Guts"
+    ]
+  },
+  "Ledian": {
+    "t1": "Bug",
+    "t2": "Flying",
+    "bs": {
+      "hp": 55,
+      "at": 35,
+      "df": 50,
+      "sa": 55,
+      "sd": 110,
+      "sp": 85
+    },
+    "w": 35.6,
+    "abilities": [
+      "Swarm",
+      "Early Bird"
+    ]
+  },
+  "Ledyba": {
+    "t1": "Bug",
+    "t2": "Flying",
+    "bs": {
+      "hp": 40,
+      "at": 20,
+      "df": 30,
+      "sa": 40,
+      "sd": 80,
+      "sp": 55
+    },
+    "w": 10.8,
+    "abilities": [
+      "Swarm",
+      "Early Bird"
+    ]
+  },
+  "Lugia": {
+    "t1": "Psychic",
+    "t2": "Flying",
+    "bs": {
+      "hp": 106,
+      "at": 90,
+      "df": 130,
+      "sa": 90,
+      "sd": 154,
+      "sp": 110
+    },
+    "w": 216,
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "Magby": {
+    "t1": "Fire",
+    "bs": {
+      "hp": 45,
+      "at": 75,
+      "df": 37,
+      "sa": 70,
+      "sd": 55,
+      "sp": 83
+    },
+    "w": 21.4,
+    "abilities": [
+      "Flame Body"
+    ]
+  },
+  "Magcargo": {
+    "t1": "Fire",
+    "t2": "Rock",
+    "bs": {
+      "hp": 50,
+      "at": 50,
+      "df": 120,
+      "sa": 80,
+      "sd": 80,
+      "sp": 30
+    },
+    "w": 55,
+    "abilities": [
+      "Magma Armor",
+      "Flame Body"
+    ]
+  },
+  "Mantine": {
+    "t1": "Water",
+    "t2": "Flying",
+    "bs": {
+      "hp": 65,
+      "at": 40,
+      "df": 70,
+      "sa": 80,
+      "sd": 140,
+      "sp": 70
+    },
+    "w": 220,
+    "abilities": [
+      "Swift Swim",
+      "Water Absorb"
+    ]
+  },
+  "Mareep": {
+    "t1": "Electric",
+    "bs": {
+      "hp": 55,
+      "at": 40,
+      "df": 40,
+      "sa": 65,
+      "sd": 45,
+      "sp": 35
+    },
+    "w": 7.8,
+    "abilities": [
+      "Static"
+    ]
+  },
+  "Marill": {
+    "t1": "Water",
+    "bs": {
+      "hp": 70,
+      "at": 20,
+      "df": 50,
+      "sa": 20,
+      "sd": 50,
+      "sp": 40
+    },
+    "w": 8.5,
+    "abilities": [
+      "Thick Fat",
+      "Huge Power"
+    ]
+  },
+  "Meganium": {
+    "t1": "Grass",
+    "bs": {
+      "hp": 80,
+      "at": 82,
+      "df": 100,
+      "sa": 83,
+      "sd": 100,
+      "sp": 80
+    },
+    "w": 100.5,
+    "ab": "Overgrow",
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "Miltank": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 95,
+      "at": 80,
+      "df": 105,
+      "sa": 40,
+      "sd": 70,
+      "sp": 100
+    },
+    "w": 75.5,
+    "ab": "Thick Fat",
+    "abilities": [
+      "Thick Fat"
+    ]
+  },
+  "Misdreavus": {
+    "t1": "Ghost",
+    "bs": {
+      "hp": 60,
+      "at": 60,
+      "df": 60,
+      "sa": 85,
+      "sd": 85,
+      "sp": 85
+    },
+    "w": 1,
+    "ab": "Levitate",
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "Murkrow": {
+    "t1": "Dark",
+    "t2": "Flying",
+    "bs": {
+      "hp": 60,
+      "at": 85,
+      "df": 42,
+      "sa": 85,
+      "sd": 42,
+      "sp": 91
+    },
+    "w": 2.1,
+    "abilities": [
+      "Insomnia"
+    ]
+  },
+  "Natu": {
+    "t1": "Psychic",
+    "t2": "Flying",
+    "bs": {
+      "hp": 40,
+      "at": 50,
+      "df": 45,
+      "sa": 70,
+      "sd": 45,
+      "sp": 70
+    },
+    "w": 2,
+    "abilities": [
+      "Synchronize",
+      "Early Bird"
+    ]
+  },
+  "Noctowl": {
+    "t1": "Normal",
+    "t2": "Flying",
+    "bs": {
+      "hp": 100,
+      "at": 50,
+      "df": 50,
+      "sa": 76,
+      "sd": 96,
+      "sp": 70
+    },
+    "w": 40.8,
+    "abilities": [
+      "Insomnia",
+      "Keen Eye"
+    ]
+  },
+  "Octillery": {
+    "t1": "Water",
+    "bs": {
+      "hp": 75,
+      "at": 105,
+      "df": 75,
+      "sa": 105,
+      "sd": 75,
+      "sp": 45
+    },
+    "w": 28.5,
+    "abilities": [
+      "Suction Cups"
+    ]
+  },
+  "Phanpy": {
+    "t1": "Ground",
+    "bs": {
+      "hp": 90,
+      "at": 60,
+      "df": 60,
+      "sa": 40,
+      "sd": 40,
+      "sp": 40
+    },
+    "w": 33.5,
+    "abilities": [
+      "Pickup"
+    ]
+  },
+  "Pichu": {
+    "t1": "Electric",
+    "bs": {
+      "hp": 20,
+      "at": 40,
+      "df": 15,
+      "sa": 35,
+      "sd": 35,
+      "sp": 60
+    },
+    "w": 2,
+    "abilities": [
+      "Static"
+    ]
+  },
+  "Piloswine": {
+    "t1": "Ice",
+    "t2": "Ground",
+    "bs": {
+      "hp": 100,
+      "at": 100,
+      "df": 80,
+      "sa": 60,
+      "sd": 60,
+      "sp": 50
+    },
+    "w": 55.8,
+    "abilities": [
+      "Oblivious"
+    ]
+  },
+  "Pineco": {
+    "t1": "Bug",
+    "bs": {
+      "hp": 50,
+      "at": 65,
+      "df": 90,
+      "sa": 35,
+      "sd": 35,
+      "sp": 15
+    },
+    "w": 7.2,
+    "abilities": [
+      "Sturdy"
+    ]
+  },
+  "Politoed": {
+    "t1": "Water",
+    "bs": {
+      "hp": 90,
+      "at": 75,
+      "df": 75,
+      "sa": 90,
+      "sd": 100,
+      "sp": 70
+    },
+    "w": 33.9,
+    "abilities": [
+      "Water Absorb",
+      "Damp"
+    ]
+  },
+  "Porygon2": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 85,
+      "at": 80,
+      "df": 90,
+      "sa": 105,
+      "sd": 95,
+      "sp": 60
+    },
+    "w": 32.5,
+    "abilities": [
+      "Trace"
+    ]
+  },
+  "Pupitar": {
+    "t1": "Rock",
+    "t2": "Ground",
+    "bs": {
+      "hp": 70,
+      "at": 84,
+      "df": 70,
+      "sa": 65,
+      "sd": 70,
+      "sp": 51
+    },
+    "w": 152,
+    "ab": "Shed Skin",
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "Quagsire": {
+    "t1": "Water",
+    "t2": "Ground",
+    "bs": {
+      "hp": 95,
+      "at": 85,
+      "df": 85,
+      "sa": 65,
+      "sd": 65,
+      "sp": 35
+    },
+    "w": 75,
+    "abilities": [
+      "Damp",
+      "Water Absorb"
+    ]
+  },
+  "Quilava": {
+    "t1": "Fire",
+    "bs": {
+      "hp": 58,
+      "at": 64,
+      "df": 58,
+      "sa": 80,
+      "sd": 65,
+      "sp": 80
+    },
+    "w": 19,
+    "ab": "Blaze",
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "Qwilfish": {
+    "t1": "Water",
+    "t2": "Poison",
+    "bs": {
+      "hp": 65,
+      "at": 95,
+      "df": 75,
+      "sa": 55,
+      "sd": 55,
+      "sp": 85
+    },
+    "w": 3.9,
+    "abilities": [
+      "Poison Point",
+      "Swift Swim"
+    ]
+  },
+  "Raikou": {
+    "t1": "Electric",
+    "bs": {
+      "hp": 90,
+      "at": 85,
+      "df": 75,
+      "sa": 115,
+      "sd": 100,
+      "sp": 115
+    },
+    "w": 178,
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "Remoraid": {
+    "t1": "Water",
+    "bs": {
+      "hp": 35,
+      "at": 65,
+      "df": 35,
+      "sa": 65,
+      "sd": 35,
+      "sp": 65
+    },
+    "w": 12,
+    "abilities": [
+      "Hustle"
+    ]
+  },
+  "Scizor": {
+    "t1": "Bug",
+    "t2": "Steel",
+    "bs": {
+      "hp": 70,
+      "at": 130,
+      "df": 100,
+      "sa": 55,
+      "sd": 80,
+      "sp": 65
+    },
+    "w": 118,
+    "ab": "Swarm",
+    "abilities": [
+      "Swarm"
+    ]
+  },
+  "Sentret": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 35,
+      "at": 46,
+      "df": 34,
+      "sa": 35,
+      "sd": 45,
+      "sp": 20
+    },
+    "w": 6,
+    "abilities": [
+      "Run Away",
+      "Keen Eye"
+    ]
+  },
+  "Shuckle": {
+    "t1": "Bug",
+    "t2": "Rock",
+    "bs": {
+      "hp": 20,
+      "at": 10,
+      "df": 230,
+      "sa": 10,
+      "sd": 230,
+      "sp": 5
+    },
+    "w": 20.5,
+    "abilities": [
+      "Sturdy"
+    ]
+  },
+  "Skarmory": {
+    "t1": "Steel",
+    "t2": "Flying",
+    "bs": {
+      "hp": 65,
+      "at": 80,
+      "df": 140,
+      "sa": 40,
+      "sd": 70,
+      "sp": 70
+    },
+    "w": 50.5,
+    "abilities": [
+      "Keen Eye",
+      "Sturdy"
+    ]
+  },
+  "Skiploom": {
+    "t1": "Grass",
+    "t2": "Flying",
+    "bs": {
+      "hp": 55,
+      "at": 45,
+      "df": 50,
+      "sa": 45,
+      "sd": 65,
+      "sp": 80
+    },
+    "w": 1,
+    "ab": "Chlorophyll",
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "Slowking": {
+    "t1": "Water",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 95,
+      "at": 75,
+      "df": 80,
+      "sa": 100,
+      "sd": 110,
+      "sp": 30
+    },
+    "w": 79.5,
+    "abilities": [
+      "Oblivious",
+      "Own Tempo"
+    ]
+  },
+  "Slugma": {
+    "t1": "Fire",
+    "bs": {
+      "hp": 40,
+      "at": 40,
+      "df": 40,
+      "sa": 70,
+      "sd": 40,
+      "sp": 20
+    },
+    "w": 35,
+    "abilities": [
+      "Magma Armor",
+      "Flame Body"
+    ]
+  },
+  "Smeargle": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 55,
+      "at": 20,
+      "df": 35,
+      "sa": 20,
+      "sd": 45,
+      "sp": 75
+    },
+    "w": 58,
+    "abilities": [
+      "Own Tempo"
+    ]
+  },
+  "Smoochum": {
+    "t1": "Ice",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 45,
+      "at": 30,
+      "df": 15,
+      "sa": 85,
+      "sd": 65,
+      "sp": 65
+    },
+    "w": 6,
+    "abilities": [
+      "Oblivious"
+    ]
+  },
+  "Sneasel": {
+    "t1": "Dark",
+    "t2": "Ice",
+    "bs": {
+      "hp": 55,
+      "at": 95,
+      "df": 55,
+      "sa": 35,
+      "sd": 75,
+      "sp": 115
+    },
+    "w": 28,
+    "abilities": [
+      "Inner Focus",
+      "Keen Eye"
+    ]
+  },
+  "Snubbull": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 60,
+      "at": 80,
+      "df": 50,
+      "sa": 40,
+      "sd": 40,
+      "sp": 30
+    },
+    "w": 7.8,
+    "abilities": [
+      "Intimidate",
+      "Run Away"
+    ]
+  },
+  "Spinarak": {
+    "t1": "Bug",
+    "t2": "Poison",
+    "bs": {
+      "hp": 40,
+      "at": 60,
+      "df": 40,
+      "sa": 40,
+      "sd": 40,
+      "sp": 30
+    },
+    "w": 8.5,
+    "abilities": [
+      "Swarm",
+      "Insomnia"
+    ]
+  },
+  "Stantler": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 73,
+      "at": 95,
+      "df": 62,
+      "sa": 85,
+      "sd": 65,
+      "sp": 85
+    },
+    "w": 71.2,
+    "ab": "Intimidate",
+    "abilities": [
+      "Intimidate"
+    ]
+  },
+  "Steelix": {
+    "t1": "Steel",
+    "t2": "Ground",
+    "bs": {
+      "hp": 75,
+      "at": 85,
+      "df": 200,
+      "sa": 55,
+      "sd": 65,
+      "sp": 30
+    },
+    "w": 400,
+    "abilities": [
+      "Rock Head",
+      "Sturdy"
+    ]
+  },
+  "Sudowoodo": {
+    "t1": "Rock",
+    "bs": {
+      "hp": 70,
+      "at": 100,
+      "df": 115,
+      "sa": 30,
+      "sd": 65,
+      "sp": 30
+    },
+    "w": 38,
+    "abilities": [
+      "Sturdy",
+      "Rock Head"
+    ]
+  },
+  "Suicune": {
+    "t1": "Water",
+    "bs": {
+      "hp": 100,
+      "at": 75,
+      "df": 115,
+      "sa": 90,
+      "sd": 115,
+      "sp": 85
+    },
+    "w": 187,
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "Sunflora": {
+    "t1": "Grass",
+    "bs": {
+      "hp": 75,
+      "at": 75,
+      "df": 55,
+      "sa": 105,
+      "sd": 85,
+      "sp": 30
+    },
+    "w": 8.5,
+    "ab": "Chlorophyll",
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "Sunkern": {
+    "t1": "Grass",
+    "bs": {
+      "hp": 30,
+      "at": 30,
+      "df": 30,
+      "sa": 30,
+      "sd": 30,
+      "sp": 30
+    },
+    "w": 1.8,
+    "ab": "Chlorophyll",
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "Swinub": {
+    "t1": "Ice",
+    "t2": "Ground",
+    "bs": {
+      "hp": 50,
+      "at": 50,
+      "df": 40,
+      "sa": 30,
+      "sd": 30,
+      "sp": 50
+    },
+    "w": 6.5,
+    "abilities": [
+      "Oblivious"
+    ]
+  },
+  "Teddiursa": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 60,
+      "at": 80,
+      "df": 50,
+      "sa": 50,
+      "sd": 50,
+      "sp": 40
+    },
+    "w": 8.8,
+    "abilities": [
+      "Pickup"
+    ]
+  },
+  "Togepi": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 35,
+      "at": 20,
+      "df": 65,
+      "sa": 40,
+      "sd": 65,
+      "sp": 20
+    },
+    "w": 1.5,
+    "abilities": [
+      "Hustle",
+      "Serene Grace"
+    ]
+  },
+  "Togetic": {
+    "t1": "Normal",
+    "t2": "Flying",
+    "bs": {
+      "hp": 55,
+      "at": 40,
+      "df": 85,
+      "sa": 80,
+      "sd": 105,
+      "sp": 40
+    },
+    "w": 3.2,
+    "abilities": [
+      "Hustle",
+      "Serene Grace"
+    ]
+  },
+  "Totodile": {
+    "t1": "Water",
+    "bs": {
+      "hp": 50,
+      "at": 65,
+      "df": 64,
+      "sa": 44,
+      "sd": 48,
+      "sp": 43
+    },
+    "w": 9.5,
+    "ab": "Torrent",
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "Typhlosion": {
+    "t1": "Fire",
+    "bs": {
+      "hp": 78,
+      "at": 84,
+      "df": 78,
+      "sa": 109,
+      "sd": 85,
+      "sp": 100
+    },
+    "w": 79.5,
+    "ab": "Blaze",
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "Tyranitar": {
+    "t1": "Rock",
+    "t2": "Dark",
+    "bs": {
+      "hp": 100,
+      "at": 134,
+      "df": 110,
+      "sa": 95,
+      "sd": 100,
+      "sp": 61
+    },
+    "w": 202,
+    "ab": "Sand Stream",
+    "abilities": [
+      "Sand Stream"
+    ]
+  },
+  "Tyrogue": {
+    "t1": "Fighting",
+    "bs": {
+      "hp": 35,
+      "at": 35,
+      "df": 35,
+      "sa": 35,
+      "sd": 35,
+      "sp": 35
+    },
+    "w": 21,
+    "ab": "Guts",
+    "abilities": [
+      "Guts"
+    ]
+  },
+  "Umbreon": {
+    "t1": "Dark",
+    "bs": {
+      "hp": 95,
+      "at": 65,
+      "df": 110,
+      "sa": 60,
+      "sd": 130,
+      "sp": 65
+    },
+    "w": 27,
+    "abilities": [
+      "Synchronize"
+    ]
+  },
+  "Unown": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 48,
+      "at": 72,
+      "df": 48,
+      "sa": 72,
+      "sd": 48,
+      "sp": 48
+    },
+    "w": 5,
+    "ab": "Levitate",
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "Ursaring": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 90,
+      "at": 130,
+      "df": 75,
+      "sa": 75,
+      "sd": 75,
+      "sp": 55
+    },
+    "w": 125.8,
+    "ab": "Guts",
+    "abilities": [
+      "Guts"
+    ]
+  },
+  "Wobbuffet": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 190,
+      "at": 33,
+      "df": 58,
+      "sa": 33,
+      "sd": 58,
+      "sp": 33
+    },
+    "w": 28.5,
+    "abilities": [
+      "Shadow Tag"
+    ]
+  },
+  "Wooper": {
+    "t1": "Water",
+    "t2": "Ground",
+    "bs": {
+      "hp": 55,
+      "at": 45,
+      "df": 45,
+      "sa": 25,
+      "sd": 25,
+      "sp": 15
+    },
+    "w": 8.5,
+    "abilities": [
+      "Damp",
+      "Water Absorb"
+    ]
+  },
+  "Xatu": {
+    "t1": "Psychic",
+    "t2": "Flying",
+    "bs": {
+      "hp": 65,
+      "at": 75,
+      "df": 70,
+      "sa": 95,
+      "sd": 70,
+      "sp": 95
+    },
+    "w": 15,
+    "abilities": [
+      "Synchronize",
+      "Early Bird"
+    ]
+  },
+  "Yanma": {
+    "t1": "Bug",
+    "t2": "Flying",
+    "bs": {
+      "hp": 65,
+      "at": 65,
+      "df": 45,
+      "sa": 75,
+      "sd": 45,
+      "sp": 95
+    },
+    "w": 38,
+    "abilities": [
+      "Speed Boost",
+      "Compound Eyes"
+    ]
+  },
+  "Absol": {
+    "t1": "Dark",
+    "bs": {
+      "hp": 65,
+      "at": 130,
+      "df": 60,
+      "sa": 75,
+      "sd": 60,
+      "sp": 75
+    },
+    "w": 47,
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "Aggron": {
+    "t1": "Steel",
+    "t2": "Rock",
+    "bs": {
+      "hp": 70,
+      "at": 110,
+      "df": 180,
+      "sa": 60,
+      "sd": 60,
+      "sp": 50
+    },
+    "w": 360,
+    "abilities": [
+      "Sturdy",
+      "Rock Head"
+    ]
+  },
+  "Altaria": {
+    "t1": "Dragon",
+    "t2": "Flying",
+    "bs": {
+      "hp": 75,
+      "at": 70,
+      "df": 90,
+      "sa": 70,
+      "sd": 105,
+      "sp": 80
+    },
+    "w": 20.6,
+    "abilities": [
+      "Natural Cure"
+    ]
+  },
+  "Anorith": {
+    "t1": "Rock",
+    "t2": "Bug",
+    "bs": {
+      "hp": 45,
+      "at": 95,
+      "df": 50,
+      "sa": 40,
+      "sd": 50,
+      "sp": 75
+    },
+    "w": 12.5,
+    "ab": "Battle Armor",
+    "abilities": [
+      "Battle Armor"
+    ]
+  },
+  "Armaldo": {
+    "t1": "Rock",
+    "t2": "Bug",
+    "bs": {
+      "hp": 75,
+      "at": 125,
+      "df": 100,
+      "sa": 70,
+      "sd": 80,
+      "sp": 45
+    },
+    "w": 68.2,
+    "ab": "Battle Armor",
+    "abilities": [
+      "Battle Armor"
+    ]
+  },
+  "Aron": {
+    "t1": "Steel",
+    "t2": "Rock",
+    "bs": {
+      "hp": 50,
+      "at": 70,
+      "df": 100,
+      "sa": 40,
+      "sd": 40,
+      "sp": 30
+    },
+    "w": 60,
+    "abilities": [
+      "Sturdy",
+      "Rock Head"
+    ]
+  },
+  "Azurill": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 50,
+      "at": 20,
+      "df": 40,
+      "sa": 20,
+      "sd": 40,
+      "sp": 20
+    },
+    "w": 2,
+    "abilities": [
+      "Thick Fat",
+      "Huge Power"
+    ]
+  },
+  "Bagon": {
+    "t1": "Dragon",
+    "bs": {
+      "hp": 45,
+      "at": 75,
+      "df": 60,
+      "sa": 40,
+      "sd": 30,
+      "sp": 50
+    },
+    "w": 42.1,
+    "abilities": [
+      "Rock Head"
+    ]
+  },
+  "Baltoy": {
+    "t1": "Ground",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 40,
+      "at": 40,
+      "df": 55,
+      "sa": 40,
+      "sd": 70,
+      "sp": 55
+    },
+    "w": 21.5,
+    "ab": "Levitate",
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "Banette": {
+    "t1": "Ghost",
+    "bs": {
+      "hp": 64,
+      "at": 115,
+      "df": 65,
+      "sa": 83,
+      "sd": 63,
+      "sp": 65
+    },
+    "w": 12.5,
+    "abilities": [
+      "Insomnia"
+    ]
+  },
+  "Barboach": {
+    "t1": "Water",
+    "t2": "Ground",
+    "bs": {
+      "hp": 50,
+      "at": 48,
+      "df": 43,
+      "sa": 46,
+      "sd": 41,
+      "sp": 60
+    },
+    "w": 1.9,
+    "abilities": [
+      "Oblivious"
+    ]
+  },
+  "Beautifly": {
+    "t1": "Bug",
+    "t2": "Flying",
+    "bs": {
+      "hp": 60,
+      "at": 70,
+      "df": 50,
+      "sa": 90,
+      "sd": 50,
+      "sp": 65
+    },
+    "w": 28.4,
+    "ab": "Swarm",
+    "abilities": [
+      "Swarm"
+    ]
+  },
+  "Beldum": {
+    "t1": "Steel",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 40,
+      "at": 55,
+      "df": 80,
+      "sa": 35,
+      "sd": 60,
+      "sp": 30
+    },
+    "w": 95.2,
+    "ab": "Clear Body",
+    "abilities": [
+      "Clear Body"
+    ]
+  },
+  "Blaziken": {
+    "t1": "Fire",
+    "t2": "Fighting",
+    "bs": {
+      "hp": 80,
+      "at": 120,
+      "df": 70,
+      "sa": 110,
+      "sd": 70,
+      "sp": 80
+    },
+    "w": 52,
+    "ab": "Blaze",
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "Breloom": {
+    "t1": "Grass",
+    "t2": "Fighting",
+    "bs": {
+      "hp": 60,
+      "at": 130,
+      "df": 80,
+      "sa": 60,
+      "sd": 60,
+      "sp": 70
+    },
+    "w": 39.2,
+    "abilities": [
+      "Effect Spore"
+    ]
+  },
+  "Cacnea": {
+    "t1": "Grass",
+    "bs": {
+      "hp": 50,
+      "at": 85,
+      "df": 40,
+      "sa": 85,
+      "sd": 40,
+      "sp": 35
+    },
+    "w": 51.3,
+    "ab": "Sand Veil",
+    "abilities": [
+      "Sand Veil"
+    ]
+  },
+  "Cacturne": {
+    "t1": "Grass",
+    "t2": "Dark",
+    "bs": {
+      "hp": 70,
+      "at": 115,
+      "df": 60,
+      "sa": 115,
+      "sd": 60,
+      "sp": 55
+    },
+    "w": 77.4,
+    "ab": "Sand Veil",
+    "abilities": [
+      "Sand Veil"
+    ]
+  },
+  "Camerupt": {
+    "t1": "Fire",
+    "t2": "Ground",
+    "bs": {
+      "hp": 70,
+      "at": 100,
+      "df": 70,
+      "sa": 105,
+      "sd": 75,
+      "sp": 40
+    },
+    "w": 220,
+    "abilities": [
+      "Magma Armor"
+    ]
+  },
+  "Carvanha": {
+    "t1": "Water",
+    "t2": "Dark",
+    "bs": {
+      "hp": 45,
+      "at": 90,
+      "df": 20,
+      "sa": 65,
+      "sd": 20,
+      "sp": 65
+    },
+    "w": 20.8,
+    "abilities": [
+      "Rough Skin"
+    ]
+  },
+  "Cascoon": {
+    "t1": "Bug",
+    "bs": {
+      "hp": 50,
+      "at": 35,
+      "df": 55,
+      "sa": 25,
+      "sd": 25,
+      "sp": 15
+    },
+    "w": 11.5,
+    "ab": "Shed Skin",
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "Castform": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 70,
+      "at": 70,
+      "df": 70,
+      "sa": 70,
+      "sd": 70,
+      "sp": 70
+    },
+    "w": 0.8,
+    "ab": "Forecast",
+    "abilities": [
+      "Forecast"
+    ]
+  },
+  "Chimecho": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 65,
+      "at": 50,
+      "df": 70,
+      "sa": 95,
+      "sd": 80,
+      "sp": 65
+    },
+    "w": 1,
+    "ab": "Levitate",
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "Clamperl": {
+    "t1": "Water",
+    "bs": {
+      "hp": 35,
+      "at": 64,
+      "df": 85,
+      "sa": 74,
+      "sd": 55,
+      "sp": 32
+    },
+    "w": 52.5,
+    "ab": "Shell Armor",
+    "abilities": [
+      "Shell Armor"
+    ]
+  },
+  "Claydol": {
+    "t1": "Ground",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 60,
+      "at": 70,
+      "df": 105,
+      "sa": 70,
+      "sd": 120,
+      "sp": 75
+    },
+    "w": 108,
+    "ab": "Levitate",
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "Combusken": {
+    "t1": "Fire",
+    "t2": "Fighting",
+    "bs": {
+      "hp": 60,
+      "at": 85,
+      "df": 60,
+      "sa": 85,
+      "sd": 60,
+      "sp": 55
+    },
+    "w": 19.5,
+    "ab": "Blaze",
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "Corphish": {
+    "t1": "Water",
+    "bs": {
+      "hp": 43,
+      "at": 80,
+      "df": 65,
+      "sa": 50,
+      "sd": 35,
+      "sp": 35
+    },
+    "w": 11.5,
+    "abilities": [
+      "Hyper Cutter",
+      "Shell Armor"
+    ]
+  },
+  "Cradily": {
+    "t1": "Rock",
+    "t2": "Grass",
+    "bs": {
+      "hp": 86,
+      "at": 81,
+      "df": 97,
+      "sa": 81,
+      "sd": 107,
+      "sp": 43
+    },
+    "w": 60.4,
+    "abilities": [
+      "Suction Cups"
+    ]
+  },
+  "Crawdaunt": {
+    "t1": "Water",
+    "t2": "Dark",
+    "bs": {
+      "hp": 63,
+      "at": 120,
+      "df": 85,
+      "sa": 90,
+      "sd": 55,
+      "sp": 55
+    },
+    "w": 32.8,
+    "abilities": [
+      "Hyper Cutter",
+      "Shell Armor"
+    ]
+  },
+  "Delcatty": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 70,
+      "at": 65,
+      "df": 65,
+      "sa": 55,
+      "sd": 55,
+      "sp": 70
+    },
+    "w": 32.6,
+    "abilities": [
+      "Cute Charm"
+    ]
+  },
+  "Deoxys": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 50,
+      "at": 150,
+      "df": 50,
+      "sa": 150,
+      "sd": 50,
+      "sp": 150
+    },
+    "w": 60.8,
+    "ab": "Pressure",
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "Deoxys-A": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 50,
+      "at": 180,
+      "df": 20,
+      "sa": 180,
+      "sd": 20,
+      "sp": 150
+    },
+    "w": 60.8,
+    "ab": "Pressure",
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "Deoxys-D": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 50,
+      "at": 70,
+      "df": 160,
+      "sa": 70,
+      "sd": 160,
+      "sp": 90
+    },
+    "w": 60.8,
+    "ab": "Pressure",
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "Deoxys-S": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 50,
+      "at": 95,
+      "df": 90,
+      "sa": 95,
+      "sd": 90,
+      "sp": 180
+    },
+    "w": 60.8,
+    "ab": "Pressure",
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "Dusclops": {
+    "t1": "Ghost",
+    "bs": {
+      "hp": 40,
+      "at": 70,
+      "df": 130,
+      "sa": 60,
+      "sd": 130,
+      "sp": 25
+    },
+    "w": 30.6,
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "Duskull": {
+    "t1": "Ghost",
+    "bs": {
+      "hp": 20,
+      "at": 40,
+      "df": 90,
+      "sa": 30,
+      "sd": 90,
+      "sp": 25
+    },
+    "w": 15,
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "Dustox": {
+    "t1": "Bug",
+    "t2": "Poison",
+    "bs": {
+      "hp": 60,
+      "at": 50,
+      "df": 70,
+      "sa": 50,
+      "sd": 90,
+      "sp": 65
+    },
+    "w": 31.6,
+    "abilities": [
+      "Shield Dust"
+    ]
+  },
+  "Electrike": {
+    "t1": "Electric",
+    "bs": {
+      "hp": 40,
+      "at": 45,
+      "df": 40,
+      "sa": 65,
+      "sd": 40,
+      "sp": 65
+    },
+    "w": 15.2,
+    "abilities": [
+      "Static",
+      "Lightning Rod"
+    ]
+  },
+  "Exploud": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 104,
+      "at": 91,
+      "df": 63,
+      "sa": 91,
+      "sd": 63,
+      "sp": 68
+    },
+    "w": 84,
+    "ab": "Soundproof",
+    "abilities": [
+      "Soundproof"
+    ]
+  },
+  "Feebas": {
+    "t1": "Water",
+    "bs": {
+      "hp": 20,
+      "at": 15,
+      "df": 20,
+      "sa": 10,
+      "sd": 55,
+      "sp": 80
+    },
+    "w": 7.4,
+    "ab": "Swift Swim",
+    "abilities": [
+      "Swift Swim"
+    ]
+  },
+  "Flygon": {
+    "t1": "Ground",
+    "t2": "Dragon",
+    "bs": {
+      "hp": 80,
+      "at": 100,
+      "df": 80,
+      "sa": 80,
+      "sd": 80,
+      "sp": 100
+    },
+    "w": 82,
+    "ab": "Levitate",
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "Gardevoir": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 68,
+      "at": 65,
+      "df": 65,
+      "sa": 125,
+      "sd": 115,
+      "sp": 80
+    },
+    "w": 48.4,
+    "abilities": [
+      "Synchronize",
+      "Trace"
+    ]
+  },
+  "Glalie": {
+    "t1": "Ice",
+    "bs": {
+      "hp": 80,
+      "at": 80,
+      "df": 80,
+      "sa": 80,
+      "sd": 80,
+      "sp": 80
+    },
+    "w": 256.5,
+    "abilities": [
+      "Inner Focus"
+    ]
+  },
+  "Gorebyss": {
+    "t1": "Water",
+    "bs": {
+      "hp": 55,
+      "at": 84,
+      "df": 105,
+      "sa": 114,
+      "sd": 75,
+      "sp": 52
+    },
+    "w": 22.6,
+    "ab": "Swift Swim",
+    "abilities": [
+      "Swift Swim"
+    ]
+  },
+  "Groudon": {
+    "t1": "Ground",
+    "bs": {
+      "hp": 100,
+      "at": 150,
+      "df": 140,
+      "sa": 100,
+      "sd": 90,
+      "sp": 90
+    },
+    "w": 950,
+    "ab": "Drought",
+    "abilities": [
+      "Drought"
+    ]
+  },
+  "Grovyle": {
+    "t1": "Grass",
+    "bs": {
+      "hp": 50,
+      "at": 65,
+      "df": 45,
+      "sa": 85,
+      "sd": 65,
+      "sp": 95
+    },
+    "w": 21.6,
+    "ab": "Overgrow",
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "Grumpig": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 80,
+      "at": 45,
+      "df": 65,
+      "sa": 90,
+      "sd": 110,
+      "sp": 80
+    },
+    "w": 71.5,
+    "abilities": [
+      "Thick Fat",
+      "Own Tempo"
+    ]
+  },
+  "Gulpin": {
+    "t1": "Poison",
+    "bs": {
+      "hp": 70,
+      "at": 43,
+      "df": 53,
+      "sa": 43,
+      "sd": 53,
+      "sp": 40
+    },
+    "w": 10.3,
+    "abilities": [
+      "Liquid Ooze",
+      "Sticky Hold"
+    ]
+  },
+  "Hariyama": {
+    "t1": "Fighting",
+    "bs": {
+      "hp": 144,
+      "at": 120,
+      "df": 60,
+      "sa": 40,
+      "sd": 60,
+      "sp": 50
+    },
+    "w": 253.8,
+    "abilities": [
+      "Thick Fat",
+      "Guts"
+    ]
+  },
+  "Huntail": {
+    "t1": "Water",
+    "bs": {
+      "hp": 55,
+      "at": 104,
+      "df": 105,
+      "sa": 94,
+      "sd": 75,
+      "sp": 52
+    },
+    "w": 27,
+    "ab": "Swift Swim",
+    "abilities": [
+      "Swift Swim"
+    ]
+  },
+  "Illumise": {
+    "t1": "Bug",
+    "bs": {
+      "hp": 65,
+      "at": 47,
+      "df": 55,
+      "sa": 73,
+      "sd": 75,
+      "sp": 85
+    },
+    "w": 17.7,
+    "abilities": [
+      "Oblivious"
+    ]
+  },
+  "Jirachi": {
+    "t1": "Steel",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 100,
+      "at": 100,
+      "df": 100,
+      "sa": 100,
+      "sd": 100,
+      "sp": 100
+    },
+    "w": 1.1,
+    "ab": "Serene Grace",
+    "abilities": [
+      "Serene Grace"
+    ]
+  },
+  "Kecleon": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 60,
+      "at": 90,
+      "df": 70,
+      "sa": 60,
+      "sd": 120,
+      "sp": 40
+    },
+    "w": 22,
+    "abilities": [
+      "Color Change"
+    ]
+  },
+  "Kirlia": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 38,
+      "at": 35,
+      "df": 35,
+      "sa": 65,
+      "sd": 55,
+      "sp": 50
+    },
+    "w": 20.2,
+    "abilities": [
+      "Synchronize",
+      "Trace"
+    ]
+  },
+  "Kyogre": {
+    "t1": "Water",
+    "bs": {
+      "hp": 100,
+      "at": 100,
+      "df": 90,
+      "sa": 150,
+      "sd": 140,
+      "sp": 90
+    },
+    "w": 352,
+    "ab": "Drizzle",
+    "abilities": [
+      "Drizzle"
+    ]
+  },
+  "Lairon": {
+    "t1": "Steel",
+    "t2": "Rock",
+    "bs": {
+      "hp": 60,
+      "at": 90,
+      "df": 140,
+      "sa": 50,
+      "sd": 50,
+      "sp": 40
+    },
+    "w": 120,
+    "abilities": [
+      "Sturdy",
+      "Rock Head"
+    ]
+  },
+  "Latias": {
+    "t1": "Dragon",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 80,
+      "at": 80,
+      "df": 90,
+      "sa": 110,
+      "sd": 130,
+      "sp": 110
+    },
+    "w": 40,
+    "ab": "Levitate",
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "Latios": {
+    "t1": "Dragon",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 80,
+      "at": 90,
+      "df": 80,
+      "sa": 130,
+      "sd": 110,
+      "sp": 110
+    },
+    "w": 60,
+    "ab": "Levitate",
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "Lileep": {
+    "t1": "Rock",
+    "t2": "Grass",
+    "bs": {
+      "hp": 66,
+      "at": 41,
+      "df": 77,
+      "sa": 61,
+      "sd": 87,
+      "sp": 23
+    },
+    "w": 23.8,
+    "abilities": [
+      "Suction Cups"
+    ]
+  },
+  "Linoone": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 78,
+      "at": 70,
+      "df": 61,
+      "sa": 50,
+      "sd": 61,
+      "sp": 100
+    },
+    "w": 32.5,
+    "abilities": [
+      "Pickup"
+    ]
+  },
+  "Lombre": {
+    "t1": "Water",
+    "t2": "Grass",
+    "bs": {
+      "hp": 60,
+      "at": 50,
+      "df": 50,
+      "sa": 60,
+      "sd": 70,
+      "sp": 50
+    },
+    "w": 32.5,
+    "abilities": [
+      "Swift Swim",
+      "Rain Dish"
+    ]
+  },
+  "Lotad": {
+    "t1": "Water",
+    "t2": "Grass",
+    "bs": {
+      "hp": 40,
+      "at": 30,
+      "df": 30,
+      "sa": 40,
+      "sd": 50,
+      "sp": 30
+    },
+    "w": 2.6,
+    "abilities": [
+      "Swift Swim",
+      "Rain Dish"
+    ]
+  },
+  "Loudred": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 84,
+      "at": 71,
+      "df": 43,
+      "sa": 71,
+      "sd": 43,
+      "sp": 48
+    },
+    "w": 40.5,
+    "ab": "Soundproof",
+    "abilities": [
+      "Soundproof"
+    ]
+  },
+  "Ludicolo": {
+    "t1": "Water",
+    "t2": "Grass",
+    "bs": {
+      "hp": 80,
+      "at": 70,
+      "df": 70,
+      "sa": 90,
+      "sd": 100,
+      "sp": 70
+    },
+    "w": 55,
+    "abilities": [
+      "Swift Swim",
+      "Rain Dish"
+    ]
+  },
+  "Lunatone": {
+    "t1": "Rock",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 70,
+      "at": 55,
+      "df": 65,
+      "sa": 95,
+      "sd": 85,
+      "sp": 70
+    },
+    "w": 168,
+    "ab": "Levitate",
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "Luvdisc": {
+    "t1": "Water",
+    "bs": {
+      "hp": 43,
+      "at": 30,
+      "df": 55,
+      "sa": 40,
+      "sd": 65,
+      "sp": 97
+    },
+    "w": 8.7,
+    "ab": "Swift Swim",
+    "abilities": [
+      "Swift Swim"
+    ]
+  },
+  "Makuhita": {
+    "t1": "Fighting",
+    "bs": {
+      "hp": 72,
+      "at": 60,
+      "df": 30,
+      "sa": 20,
+      "sd": 30,
+      "sp": 25
+    },
+    "w": 86.4,
+    "abilities": [
+      "Thick Fat",
+      "Guts"
+    ]
+  },
+  "Manectric": {
+    "t1": "Electric",
+    "bs": {
+      "hp": 70,
+      "at": 75,
+      "df": 60,
+      "sa": 105,
+      "sd": 60,
+      "sp": 105
+    },
+    "w": 40.2,
+    "abilities": [
+      "Static",
+      "Lightning Rod"
+    ]
+  },
+  "Marshtomp": {
+    "t1": "Water",
+    "t2": "Ground",
+    "bs": {
+      "hp": 70,
+      "at": 85,
+      "df": 70,
+      "sa": 60,
+      "sd": 70,
+      "sp": 50
+    },
+    "w": 28,
+    "ab": "Torrent",
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "Masquerain": {
+    "t1": "Bug",
+    "t2": "Flying",
+    "bs": {
+      "hp": 70,
+      "at": 60,
+      "df": 62,
+      "sa": 80,
+      "sd": 82,
+      "sp": 60
+    },
+    "w": 3.6,
+    "ab": "Intimidate",
+    "abilities": [
+      "Intimidate"
+    ]
+  },
+  "Mawile": {
+    "t1": "Steel",
+    "bs": {
+      "hp": 50,
+      "at": 85,
+      "df": 85,
+      "sa": 55,
+      "sd": 55,
+      "sp": 50
+    },
+    "w": 11.5,
+    "abilities": [
+      "Hyper Cutter",
+      "Intimidate"
+    ]
+  },
+  "Medicham": {
+    "t1": "Fighting",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 60,
+      "at": 60,
+      "df": 75,
+      "sa": 60,
+      "sd": 75,
+      "sp": 80
+    },
+    "w": 31.5,
+    "ab": "Pure Power",
+    "abilities": [
+      "Pure Power"
+    ]
+  },
+  "Meditite": {
+    "t1": "Fighting",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 30,
+      "at": 40,
+      "df": 55,
+      "sa": 40,
+      "sd": 55,
+      "sp": 60
+    },
+    "w": 11.2,
+    "ab": "Pure Power",
+    "abilities": [
+      "Pure Power"
+    ]
+  },
+  "Metagross": {
+    "t1": "Steel",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 80,
+      "at": 135,
+      "df": 130,
+      "sa": 95,
+      "sd": 90,
+      "sp": 70
+    },
+    "w": 550,
+    "ab": "Clear Body",
+    "abilities": [
+      "Clear Body"
+    ]
+  },
+  "Metang": {
+    "t1": "Steel",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 60,
+      "at": 75,
+      "df": 100,
+      "sa": 55,
+      "sd": 80,
+      "sp": 50
+    },
+    "w": 202.5,
+    "ab": "Clear Body",
+    "abilities": [
+      "Clear Body"
+    ]
+  },
+  "Mightyena": {
+    "t1": "Dark",
+    "bs": {
+      "hp": 70,
+      "at": 90,
+      "df": 70,
+      "sa": 60,
+      "sd": 60,
+      "sp": 70
+    },
+    "w": 37,
+    "ab": "Intimidate",
+    "abilities": [
+      "Intimidate"
+    ]
+  },
+  "Milotic": {
+    "t1": "Water",
+    "bs": {
+      "hp": 95,
+      "at": 60,
+      "df": 79,
+      "sa": 100,
+      "sd": 125,
+      "sp": 81
+    },
+    "w": 162,
+    "ab": "Marvel Scale",
+    "abilities": [
+      "Marvel Scale"
+    ]
+  },
+  "Minun": {
+    "t1": "Electric",
+    "bs": {
+      "hp": 60,
+      "at": 40,
+      "df": 50,
+      "sa": 75,
+      "sd": 85,
+      "sp": 95
+    },
+    "w": 4.2,
+    "abilities": [
+      "Minus"
+    ]
+  },
+  "Mudkip": {
+    "t1": "Water",
+    "bs": {
+      "hp": 50,
+      "at": 70,
+      "df": 50,
+      "sa": 50,
+      "sd": 50,
+      "sp": 40
+    },
+    "w": 7.6,
+    "ab": "Torrent",
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "Nincada": {
+    "t1": "Bug",
+    "t2": "Ground",
+    "bs": {
+      "hp": 31,
+      "at": 45,
+      "df": 90,
+      "sa": 30,
+      "sd": 30,
+      "sp": 40
+    },
+    "w": 5.5,
+    "abilities": [
+      "Compound Eyes"
+    ]
+  },
+  "Ninjask": {
+    "t1": "Bug",
+    "t2": "Flying",
+    "bs": {
+      "hp": 61,
+      "at": 90,
+      "df": 45,
+      "sa": 50,
+      "sd": 50,
+      "sp": 160
+    },
+    "w": 12,
+    "abilities": [
+      "Speed Boost"
+    ]
+  },
+  "Nosepass": {
+    "t1": "Rock",
+    "bs": {
+      "hp": 30,
+      "at": 45,
+      "df": 135,
+      "sa": 45,
+      "sd": 90,
+      "sp": 30
+    },
+    "w": 97,
+    "abilities": [
+      "Sturdy",
+      "Magnet Pull"
+    ]
+  },
+  "Numel": {
+    "t1": "Fire",
+    "t2": "Ground",
+    "bs": {
+      "hp": 60,
+      "at": 60,
+      "df": 40,
+      "sa": 65,
+      "sd": 45,
+      "sp": 35
+    },
+    "w": 24,
+    "abilities": [
+      "Oblivious"
+    ]
+  },
+  "Nuzleaf": {
+    "t1": "Grass",
+    "t2": "Dark",
+    "bs": {
+      "hp": 70,
+      "at": 70,
+      "df": 40,
+      "sa": 60,
+      "sd": 40,
+      "sp": 60
+    },
+    "w": 28,
+    "abilities": [
+      "Chlorophyll",
+      "Early Bird"
+    ]
+  },
+  "Pelipper": {
+    "t1": "Water",
+    "t2": "Flying",
+    "bs": {
+      "hp": 60,
+      "at": 50,
+      "df": 100,
+      "sa": 85,
+      "sd": 70,
+      "sp": 65
+    },
+    "w": 28,
+    "abilities": [
+      "Keen Eye"
+    ]
+  },
+  "Plusle": {
+    "t1": "Electric",
+    "bs": {
+      "hp": 60,
+      "at": 50,
+      "df": 40,
+      "sa": 85,
+      "sd": 75,
+      "sp": 95
+    },
+    "w": 4.2,
+    "abilities": [
+      "Plus"
+    ]
+  },
+  "Poochyena": {
+    "t1": "Dark",
+    "bs": {
+      "hp": 35,
+      "at": 55,
+      "df": 35,
+      "sa": 30,
+      "sd": 30,
+      "sp": 35
+    },
+    "w": 13.6,
+    "abilities": [
+      "Run Away"
+    ]
+  },
+  "Ralts": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 28,
+      "at": 25,
+      "df": 25,
+      "sa": 45,
+      "sd": 35,
+      "sp": 40
+    },
+    "w": 6.6,
+    "abilities": [
+      "Synchronize",
+      "Trace"
+    ]
+  },
+  "Rayquaza": {
+    "t1": "Dragon",
+    "t2": "Flying",
+    "bs": {
+      "hp": 105,
+      "at": 150,
+      "df": 90,
+      "sa": 150,
+      "sd": 90,
+      "sp": 95
+    },
+    "w": 206.5,
+    "ab": "Air Lock",
+    "abilities": [
+      "Air Lock"
+    ]
+  },
+  "Regice": {
+    "t1": "Ice",
+    "bs": {
+      "hp": 80,
+      "at": 50,
+      "df": 100,
+      "sa": 100,
+      "sd": 200,
+      "sp": 50
+    },
+    "w": 175,
+    "ab": "Clear Body",
+    "abilities": [
+      "Clear Body"
+    ]
+  },
+  "Regirock": {
+    "t1": "Rock",
+    "bs": {
+      "hp": 80,
+      "at": 100,
+      "df": 200,
+      "sa": 50,
+      "sd": 100,
+      "sp": 50
+    },
+    "w": 230,
+    "ab": "Clear Body",
+    "abilities": [
+      "Clear Body"
+    ]
+  },
+  "Registeel": {
+    "t1": "Steel",
+    "bs": {
+      "hp": 80,
+      "at": 75,
+      "df": 150,
+      "sa": 75,
+      "sd": 150,
+      "sp": 50
+    },
+    "w": 205,
+    "ab": "Clear Body",
+    "abilities": [
+      "Clear Body"
+    ]
+  },
+  "Relicanth": {
+    "t1": "Water",
+    "t2": "Rock",
+    "bs": {
+      "hp": 100,
+      "at": 90,
+      "df": 130,
+      "sa": 45,
+      "sd": 65,
+      "sp": 55
+    },
+    "w": 23.4,
+    "abilities": [
+      "Swift Swim",
+      "Rock Head"
+    ]
+  },
+  "Roselia": {
+    "t1": "Grass",
+    "t2": "Poison",
+    "bs": {
+      "hp": 50,
+      "at": 60,
+      "df": 45,
+      "sa": 100,
+      "sd": 80,
+      "sp": 65
+    },
+    "w": 2,
+    "abilities": [
+      "Natural Cure",
+      "Poison Point"
+    ]
+  },
+  "Sableye": {
+    "t1": "Dark",
+    "t2": "Ghost",
+    "bs": {
+      "hp": 50,
+      "at": 75,
+      "df": 75,
+      "sa": 65,
+      "sd": 65,
+      "sp": 50
+    },
+    "w": 11,
+    "abilities": [
+      "Keen Eye"
+    ]
+  },
+  "Salamence": {
+    "t1": "Dragon",
+    "t2": "Flying",
+    "bs": {
+      "hp": 95,
+      "at": 135,
+      "df": 80,
+      "sa": 110,
+      "sd": 80,
+      "sp": 100
+    },
+    "w": 102.6,
+    "ab": "Intimidate",
+    "abilities": [
+      "Intimidate"
+    ]
+  },
+  "Sceptile": {
+    "t1": "Grass",
+    "bs": {
+      "hp": 70,
+      "at": 85,
+      "df": 65,
+      "sa": 105,
+      "sd": 85,
+      "sp": 120
+    },
+    "w": 52.2,
+    "ab": "Overgrow",
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "Sealeo": {
+    "t1": "Ice",
+    "t2": "Water",
+    "bs": {
+      "hp": 90,
+      "at": 60,
+      "df": 70,
+      "sa": 75,
+      "sd": 70,
+      "sp": 45
+    },
+    "w": 87.6,
+    "ab": "Thick Fat",
+    "abilities": [
+      "Thick Fat"
+    ]
+  },
+  "Seedot": {
+    "t1": "Grass",
+    "bs": {
+      "hp": 40,
+      "at": 40,
+      "df": 50,
+      "sa": 30,
+      "sd": 30,
+      "sp": 30
+    },
+    "w": 4,
+    "abilities": [
+      "Chlorophyll",
+      "Early Bird"
+    ]
+  },
+  "Seviper": {
+    "t1": "Poison",
+    "bs": {
+      "hp": 73,
+      "at": 100,
+      "df": 60,
+      "sa": 100,
+      "sd": 60,
+      "sp": 65
+    },
+    "w": 52.5,
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "Sharpedo": {
+    "t1": "Water",
+    "t2": "Dark",
+    "bs": {
+      "hp": 70,
+      "at": 120,
+      "df": 40,
+      "sa": 95,
+      "sd": 40,
+      "sp": 95
+    },
+    "w": 88.8,
+    "abilities": [
+      "Rough Skin"
+    ]
+  },
+  "Shedinja": {
+    "t1": "Bug",
+    "t2": "Ghost",
+    "bs": {
+      "hp": 1,
+      "at": 90,
+      "df": 45,
+      "sa": 30,
+      "sd": 30,
+      "sp": 40
+    },
+    "w": 1.2,
+    "ab": "Wonder Guard",
+    "abilities": [
+      "Wonder Guard"
+    ]
+  },
+  "Shelgon": {
+    "t1": "Dragon",
+    "bs": {
+      "hp": 65,
+      "at": 95,
+      "df": 100,
+      "sa": 60,
+      "sd": 50,
+      "sp": 50
+    },
+    "w": 110.5,
+    "abilities": [
+      "Rock Head"
+    ]
+  },
+  "Shiftry": {
+    "t1": "Grass",
+    "t2": "Dark",
+    "bs": {
+      "hp": 90,
+      "at": 100,
+      "df": 60,
+      "sa": 90,
+      "sd": 60,
+      "sp": 80
+    },
+    "w": 59.6,
+    "abilities": [
+      "Chlorophyll",
+      "Early Bird"
+    ]
+  },
+  "Shroomish": {
+    "t1": "Grass",
+    "bs": {
+      "hp": 60,
+      "at": 40,
+      "df": 60,
+      "sa": 40,
+      "sd": 60,
+      "sp": 35
+    },
+    "w": 4.5,
+    "abilities": [
+      "Effect Spore"
+    ]
+  },
+  "Shuppet": {
+    "t1": "Ghost",
+    "bs": {
+      "hp": 44,
+      "at": 75,
+      "df": 35,
+      "sa": 63,
+      "sd": 33,
+      "sp": 45
+    },
+    "w": 2.3,
+    "abilities": [
+      "Insomnia"
+    ]
+  },
+  "Silcoon": {
+    "t1": "Bug",
+    "bs": {
+      "hp": 50,
+      "at": 35,
+      "df": 55,
+      "sa": 25,
+      "sd": 25,
+      "sp": 15
+    },
+    "w": 10,
+    "ab": "Shed Skin",
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "Skitty": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 50,
+      "at": 45,
+      "df": 45,
+      "sa": 35,
+      "sd": 35,
+      "sp": 50
+    },
+    "w": 11,
+    "abilities": [
+      "Cute Charm"
+    ]
+  },
+  "Slaking": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 150,
+      "at": 160,
+      "df": 100,
+      "sa": 95,
+      "sd": 65,
+      "sp": 100
+    },
+    "w": 130.5,
+    "ab": "Truant",
+    "abilities": [
+      "Truant"
+    ]
+  },
+  "Slakoth": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 60,
+      "at": 60,
+      "df": 60,
+      "sa": 35,
+      "sd": 35,
+      "sp": 30
+    },
+    "w": 24,
+    "ab": "Truant",
+    "abilities": [
+      "Truant"
+    ]
+  },
+  "Snorunt": {
+    "t1": "Ice",
+    "bs": {
+      "hp": 50,
+      "at": 50,
+      "df": 50,
+      "sa": 50,
+      "sd": 50,
+      "sp": 50
+    },
+    "w": 16.8,
+    "abilities": [
+      "Inner Focus"
+    ]
+  },
+  "Solrock": {
+    "t1": "Rock",
+    "t2": "Psychic",
+    "bs": {
+      "hp": 70,
+      "at": 95,
+      "df": 85,
+      "sa": 55,
+      "sd": 65,
+      "sp": 70
+    },
+    "w": 154,
+    "ab": "Levitate",
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "Spheal": {
+    "t1": "Ice",
+    "t2": "Water",
+    "bs": {
+      "hp": 70,
+      "at": 40,
+      "df": 50,
+      "sa": 55,
+      "sd": 50,
+      "sp": 25
+    },
+    "w": 39.5,
+    "ab": "Thick Fat",
+    "abilities": [
+      "Thick Fat"
+    ]
+  },
+  "Spinda": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 60,
+      "at": 60,
+      "df": 60,
+      "sa": 60,
+      "sd": 60,
+      "sp": 60
+    },
+    "w": 5,
+    "abilities": [
+      "Own Tempo"
+    ]
+  },
+  "Spoink": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 60,
+      "at": 25,
+      "df": 35,
+      "sa": 70,
+      "sd": 80,
+      "sp": 60
+    },
+    "w": 30.6,
+    "abilities": [
+      "Thick Fat",
+      "Own Tempo"
+    ]
+  },
+  "Surskit": {
+    "t1": "Bug",
+    "t2": "Water",
+    "bs": {
+      "hp": 40,
+      "at": 30,
+      "df": 32,
+      "sa": 50,
+      "sd": 52,
+      "sp": 65
+    },
+    "w": 1.7,
+    "ab": "Swift Swim",
+    "abilities": [
+      "Swift Swim"
+    ]
+  },
+  "Swablu": {
+    "t1": "Normal",
+    "t2": "Flying",
+    "bs": {
+      "hp": 45,
+      "at": 40,
+      "df": 60,
+      "sa": 40,
+      "sd": 75,
+      "sp": 50
+    },
+    "w": 1.2,
+    "abilities": [
+      "Natural Cure"
+    ]
+  },
+  "Swalot": {
+    "t1": "Poison",
+    "bs": {
+      "hp": 100,
+      "at": 73,
+      "df": 83,
+      "sa": 73,
+      "sd": 83,
+      "sp": 55
+    },
+    "w": 80,
+    "abilities": [
+      "Liquid Ooze",
+      "Sticky Hold"
+    ]
+  },
+  "Swampert": {
+    "t1": "Water",
+    "t2": "Ground",
+    "bs": {
+      "hp": 100,
+      "at": 110,
+      "df": 90,
+      "sa": 85,
+      "sd": 90,
+      "sp": 60
+    },
+    "w": 81.9,
+    "ab": "Torrent",
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "Swellow": {
+    "t1": "Normal",
+    "t2": "Flying",
+    "bs": {
+      "hp": 60,
+      "at": 85,
+      "df": 60,
+      "sa": 50,
+      "sd": 50,
+      "sp": 125
+    },
+    "w": 19.8,
+    "ab": "Guts",
+    "abilities": [
+      "Guts"
+    ]
+  },
+  "Taillow": {
+    "t1": "Normal",
+    "t2": "Flying",
+    "bs": {
+      "hp": 40,
+      "at": 55,
+      "df": 30,
+      "sa": 30,
+      "sd": 30,
+      "sp": 85
+    },
+    "w": 2.3,
+    "ab": "Guts",
+    "abilities": [
+      "Guts"
+    ]
+  },
+  "Torchic": {
+    "t1": "Fire",
+    "bs": {
+      "hp": 45,
+      "at": 60,
+      "df": 40,
+      "sa": 70,
+      "sd": 50,
+      "sp": 45
+    },
+    "w": 2.5,
+    "ab": "Blaze",
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "Torkoal": {
+    "t1": "Fire",
+    "bs": {
+      "hp": 70,
+      "at": 85,
+      "df": 140,
+      "sa": 85,
+      "sd": 70,
+      "sp": 20
+    },
+    "w": 80.4,
+    "ab": "White Smoke",
+    "abilities": [
+      "White Smoke"
+    ]
+  },
+  "Trapinch": {
+    "t1": "Ground",
+    "bs": {
+      "hp": 45,
+      "at": 100,
+      "df": 45,
+      "sa": 45,
+      "sd": 45,
+      "sp": 10
+    },
+    "w": 15,
+    "abilities": [
+      "Hyper Cutter",
+      "Arena Trap"
+    ]
+  },
+  "Treecko": {
+    "t1": "Grass",
+    "bs": {
+      "hp": 40,
+      "at": 45,
+      "df": 35,
+      "sa": 65,
+      "sd": 55,
+      "sp": 70
+    },
+    "w": 5,
+    "ab": "Overgrow",
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "Tropius": {
+    "t1": "Grass",
+    "t2": "Flying",
+    "bs": {
+      "hp": 99,
+      "at": 68,
+      "df": 83,
+      "sa": 72,
+      "sd": 87,
+      "sp": 51
+    },
+    "w": 100,
+    "ab": "Chlorophyll",
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "Vibrava": {
+    "t1": "Ground",
+    "t2": "Dragon",
+    "bs": {
+      "hp": 50,
+      "at": 70,
+      "df": 50,
+      "sa": 50,
+      "sd": 50,
+      "sp": 70
+    },
+    "w": 15.3,
+    "ab": "Levitate",
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "Vigoroth": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 80,
+      "at": 80,
+      "df": 80,
+      "sa": 55,
+      "sd": 55,
+      "sp": 90
+    },
+    "w": 46.5,
+    "ab": "Vital Spirit",
+    "abilities": [
+      "Vital Spirit"
+    ]
+  },
+  "Volbeat": {
+    "t1": "Bug",
+    "bs": {
+      "hp": 65,
+      "at": 73,
+      "df": 55,
+      "sa": 47,
+      "sd": 75,
+      "sp": 85
+    },
+    "w": 17.7,
+    "abilities": [
+      "Illuminate",
+      "Swarm"
+    ]
+  },
+  "Wailmer": {
+    "t1": "Water",
+    "bs": {
+      "hp": 130,
+      "at": 70,
+      "df": 35,
+      "sa": 70,
+      "sd": 35,
+      "sp": 60
+    },
+    "w": 130,
+    "abilities": [
+      "Water Veil",
+      "Oblivious"
+    ]
+  },
+  "Wailord": {
+    "t1": "Water",
+    "bs": {
+      "hp": 170,
+      "at": 90,
+      "df": 45,
+      "sa": 90,
+      "sd": 45,
+      "sp": 60
+    },
+    "w": 398,
+    "abilities": [
+      "Water Veil",
+      "Oblivious"
+    ]
+  },
+  "Walrein": {
+    "t1": "Ice",
+    "t2": "Water",
+    "bs": {
+      "hp": 110,
+      "at": 80,
+      "df": 90,
+      "sa": 95,
+      "sd": 90,
+      "sp": 65
+    },
+    "w": 150.6,
+    "ab": "Thick Fat",
+    "abilities": [
+      "Thick Fat"
+    ]
+  },
+  "Whiscash": {
+    "t1": "Water",
+    "t2": "Ground",
+    "bs": {
+      "hp": 110,
+      "at": 78,
+      "df": 73,
+      "sa": 76,
+      "sd": 71,
+      "sp": 60
+    },
+    "w": 23.6,
+    "abilities": [
+      "Oblivious"
+    ]
+  },
+  "Whismur": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 64,
+      "at": 51,
+      "df": 23,
+      "sa": 51,
+      "sd": 23,
+      "sp": 28
+    },
+    "w": 16.3,
+    "ab": "Soundproof",
+    "abilities": [
+      "Soundproof"
+    ]
+  },
+  "Wingull": {
+    "t1": "Water",
+    "t2": "Flying",
+    "bs": {
+      "hp": 40,
+      "at": 30,
+      "df": 30,
+      "sa": 55,
+      "sd": 30,
+      "sp": 85
+    },
+    "w": 9.5,
+    "abilities": [
+      "Keen Eye"
+    ]
+  },
+  "Wurmple": {
+    "t1": "Bug",
+    "bs": {
+      "hp": 45,
+      "at": 45,
+      "df": 35,
+      "sa": 20,
+      "sd": 30,
+      "sp": 20
+    },
+    "w": 3.6,
+    "abilities": [
+      "Shield Dust"
+    ]
+  },
+  "Wynaut": {
+    "t1": "Psychic",
+    "bs": {
+      "hp": 95,
+      "at": 23,
+      "df": 48,
+      "sa": 23,
+      "sd": 48,
+      "sp": 23
+    },
+    "w": 14,
+    "abilities": [
+      "Shadow Tag"
+    ]
+  },
+  "Zangoose": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 73,
+      "at": 115,
+      "df": 60,
+      "sa": 60,
+      "sd": 60,
+      "sp": 90
+    },
+    "w": 40.3,
+    "abilities": [
+      "Immunity"
+    ]
+  },
+  "Zigzagoon": {
+    "t1": "Normal",
+    "bs": {
+      "hp": 38,
+      "at": 30,
+      "df": 41,
+      "sa": 30,
+      "sd": 41,
+      "sp": 60
+    },
+    "w": 17.5,
+    "abilities": [
+      "Pickup"
+    ]
+  }
+}
