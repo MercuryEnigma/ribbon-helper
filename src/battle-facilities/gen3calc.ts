@@ -81,6 +81,7 @@ export interface PokedexEntry {
 // --- Setdex data ---
 export interface SetdexEntry {
   evs: Partial<BaseStats>
+  ivs?: Partial<BaseStats>
   moves: string[]
   nature: string
   item: string
@@ -156,15 +157,18 @@ export function buildPokemon(
     hp: set.evs.hp || 0, at: set.evs.at || 0, df: set.evs.df || 0,
     sa: set.evs.sa || 0, sd: set.evs.sd || 0, sp: set.evs.sp || 0,
   }
-  const ivsMap: Record<string, number> = { hp: ivs, at: ivs, df: ivs, sa: ivs, sd: ivs, sp: ivs }
+  // Per-set IVs (e.g. Anabel Silver = 24) override the battle-range default
+  const ivsMap: Record<string, number> = set.ivs
+    ? { hp: set.ivs.hp ?? ivs, at: set.ivs.at ?? ivs, df: set.ivs.df ?? ivs, sa: set.ivs.sa ?? ivs, sd: set.ivs.sd ?? ivs, sp: set.ivs.sp ?? ivs }
+    : { hp: ivs, at: ivs, df: ivs, sa: ivs, sd: ivs, sp: ivs }
 
-  const maxHP = calcHP(bs.hp, ivs, evs.hp, level)
+  const maxHP = calcHP(bs.hp, ivsMap.hp, evs.hp, level)
   const rawStats: Record<string, number> = {
-    at: calcStat(bs.at, ivs, evs.at, level, set.nature, "at"),
-    df: calcStat(bs.df, ivs, evs.df, level, set.nature, "df"),
-    sa: calcStat(bs.sa, ivs, evs.sa, level, set.nature, "sa"),
-    sd: calcStat(bs.sd, ivs, evs.sd, level, set.nature, "sd"),
-    sp: calcStat(bs.sp, ivs, evs.sp, level, set.nature, "sp"),
+    at: calcStat(bs.at, ivsMap.at, evs.at, level, set.nature, "at"),
+    df: calcStat(bs.df, ivsMap.df, evs.df, level, set.nature, "df"),
+    sa: calcStat(bs.sa, ivsMap.sa, evs.sa, level, set.nature, "sa"),
+    sd: calcStat(bs.sd, ivsMap.sd, evs.sd, level, set.nature, "sd"),
+    sp: calcStat(bs.sp, ivsMap.sp, evs.sp, level, set.nature, "sp"),
   }
 
   const moves = set.moves.map(moveName => {

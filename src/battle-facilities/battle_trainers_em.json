@@ -2678,5 +2678,21 @@
     "battleRanges": [
       "50+"
     ]
+  },
+  {
+    "number": 301,
+    "class": "Salon Maiden",
+    "name": "Anabel (Silver)",
+    "battleRanges": [
+      "35"
+    ]
+  },
+  {
+    "number": 302,
+    "class": "Salon Maiden",
+    "name": "Anabel (Gold)",
+    "battleRanges": [
+      "70"
+    ]
   }
 ]

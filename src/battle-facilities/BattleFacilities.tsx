@@ -20,9 +20,22 @@ function getBattleRange(battleNum: number): string {
   return BATTLE_RANGES[index] || '1-7'
 }
 
+function getIVsForBattle(battleNum: number): number {
+  if (battleNum >= 50) return 31
+  if (battleNum >= 36) return 21
+  if (battleNum >= 29) return 15
+  if (battleNum >= 22) return 12
+  if (battleNum >= 15) return 9
+  if (battleNum >= 8) return 6
+  return 3
+}
+
 function getTrainersForBattle(battleNum: number) {
   const range = getBattleRange(battleNum)
-  return battleTrainers.filter(t => t.battleRanges.includes(range))
+  const exact = String(battleNum)
+  return battleTrainers.filter(t =>
+    t.battleRanges.includes(range) || t.battleRanges.includes(exact)
+  )
 }
 
 function getPokemonForTrainer(trainerName: string): string[] {
@@ -92,6 +105,8 @@ export default function BattleFacilities() {
     return availableSets[0] || ''
   }, [availableSets, p2Label])
 
+  const p2Ivs = getIVsForBattle(battleNum)
+
   const { p1Results, p2Results } = useMemo(() => {
     if (!effectiveP2Label) return { p1Results: [], p2Results: [] }
 
@@ -104,12 +119,12 @@ export default function BattleFacilities() {
     const p2Dex = POKEDEX_ADV[p2Match.species]
     if (!p2Dex) return { p1Results: [], p2Results: [] }
 
-    const p2 = buildPokemon(p2Match.species, p2Dex, p2Match.set, effectiveP2Label, 50)
+    const p2 = buildPokemon(p2Match.species, p2Dex, p2Match.set, effectiveP2Label, 50, p2Ivs)
     const field = buildField("singles", "")
     const [p1Results, p2Results] = calculateAllMovesGen3(p1, p2, field)
 
     return { p1Results, p2Results }
-  }, [effectiveP2Label])
+  }, [effectiveP2Label, p2Ivs])
 
   const handleBattleNumChange = (newNum: number) => {
     const clamped = Math.max(1, newNum)
