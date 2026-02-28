@@ -5,9 +5,9 @@ import {
   calculateAllMovesGen3,
   findSetByLabel,
   POKEDEX_ADV,
-  SETDEX_EM,
   type DamageResult,
 } from './gen3calc'
+import { TEAM_EM } from './setteam_gen3'
 import battleTrainers from './battle_trainers_em.json'
 import trainerPokemon from './trainer_pokemon_em.json'
 import './battle-facilities.css'
@@ -41,6 +41,8 @@ function getTrainersForBattle(battleNum: number) {
 function getPokemonForTrainer(trainerName: string): string[] {
   return (trainerPokemon as Record<string, string[]>)[trainerName] || []
 }
+
+const P1_OPTIONS = Object.keys(TEAM_EM)
 
 function MoveResults({ pokemonName, results }: { pokemonName: string; results: DamageResult[] }) {
   return (
@@ -77,6 +79,7 @@ function MoveResults({ pokemonName, results }: { pokemonName: string; results: D
 }
 
 export default function BattleFacilities() {
+  const [p1Label, setP1Label] = useState(P1_OPTIONS[0])
   const [battleNum, setBattleNum] = useState(1)
   const [trainerKey, setTrainerKey] = useState('')
   const [p2Label, setP2Label] = useState('')
@@ -110,21 +113,24 @@ export default function BattleFacilities() {
   const { p1Results, p2Results } = useMemo(() => {
     if (!effectiveP2Label) return { p1Results: [], p2Results: [] }
 
-    const claydolSet = SETDEX_EM["Claydol"]["Claydol-4 (717)"]
-    const p1 = buildPokemon("Claydol", POKEDEX_ADV["Claydol"], claydolSet, "Claydol-4 (717)", 50)
+    const p1Sets = TEAM_EM[p1Label]
+    if (!p1Sets) return { p1Results: [], p2Results: [] }
+    const p1Set = Object.values(p1Sets)[0]
+    const p1Dex = POKEDEX_ADV[p1Label]
+    if (!p1Dex) return { p1Results: [], p2Results: [] }
+    const p1 = buildPokemon(p1Label, p1Dex, p1Set, p1Label, 50)
 
     const p2Match = findSetByLabel(effectiveP2Label)
     if (!p2Match) return { p1Results: [], p2Results: [] }
-
     const p2Dex = POKEDEX_ADV[p2Match.species]
     if (!p2Dex) return { p1Results: [], p2Results: [] }
-
     const p2 = buildPokemon(p2Match.species, p2Dex, p2Match.set, effectiveP2Label, 50, p2Ivs)
+
     const field = buildField("singles", "")
     const [p1Results, p2Results] = calculateAllMovesGen3(p1, p2, field)
 
     return { p1Results, p2Results }
-  }, [effectiveP2Label, p2Ivs])
+  }, [p1Label, effectiveP2Label, p2Ivs])
 
   const handleBattleNumChange = (newNum: number) => {
     const clamped = Math.max(1, newNum)
@@ -134,8 +140,24 @@ export default function BattleFacilities() {
   return (
     <div className="battle-facilities">
       <h2>Battle Facilities — Emerald</h2>
+      <p className="bf-team-note">
+        Recommended team: <a href="https://pokepast.es/9f353ea337d86f51" target="_blank" rel="noopener noreferrer">Venty's Latios / Metagross / Suicune</a>
+      </p>
       <div className="bf-matchup">
-        <MoveResults pokemonName="Claydol-4" results={p1Results} />
+        <div className="bf-pokemon">
+          <div className="bf-p1-selector">
+            <label>Your Pokemon</label>
+            <select
+              value={p1Label}
+              onChange={e => setP1Label(e.target.value)}
+            >
+              {P1_OPTIONS.map(label => (
+                <option key={label} value={label}>{label}</option>
+              ))}
+            </select>
+          </div>
+          <MoveResults pokemonName={p1Label} results={p1Results} />
+        </div>
         <div className="bf-vs">vs.</div>
         <div className="bf-pokemon">
           <div className="bf-p2-selector">

@@ -3,7 +3,13 @@
 }
 
 .battle-facilities h2 {
+  margin-bottom: 0.25rem;
+}
+
+.bf-team-note {
   margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted, #666);
 }
 
 .bf-matchup {
@@ -50,6 +56,7 @@
   color: var(--text-muted, #888);
 }
 
+.bf-p1-selector,
 .bf-p2-selector {
   display: flex;
   flex-direction: column;
@@ -57,8 +64,14 @@
   margin-bottom: 0.5rem;
 }
 
+.bf-p1-selector > label,
 .bf-p2-selector > label {
   font-weight: 600;
+}
+
+.bf-p1-selector select {
+  padding: 0.3rem 0.4rem;
+  font-size: 0.95rem;
 }
 
 .bf-battle-num-row,
