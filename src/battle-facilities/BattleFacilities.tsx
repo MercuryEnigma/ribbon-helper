@@ -82,16 +82,6 @@ function getBattleRange(battleNum: number): string {
   return BATTLE_RANGES[index] || '1-7'
 }
 
-function getIVsForBattle(battleNum: number): number {
-  if (battleNum >= 50) return 31
-  if (battleNum >= 36) return 21
-  if (battleNum >= 29) return 15
-  if (battleNum >= 22) return 12
-  if (battleNum >= 15) return 9
-  if (battleNum >= 8) return 6
-  return 3
-}
-
 function getIVsForTrainer(trainer: { number: number; name: string } | null): number {
   if (!trainer) return 3
   if (trainer.name === 'Anabel (Silver)') return 24
