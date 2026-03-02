@@ -82,6 +82,19 @@ function getBattleRange(battleNum: number): string {
   return BATTLE_RANGES[index] || '1-7'
 }
 
+function battleRangeMatches(battleNum: number, range: string): boolean {
+  if (range.endsWith('+')) {
+    const start = parseInt(range.slice(0, -1), 10)
+    return Number.isFinite(start) && battleNum >= start
+  }
+  if (range.includes('-')) {
+    const [a, b] = range.split('-').map(v => parseInt(v, 10))
+    return Number.isFinite(a) && Number.isFinite(b) && battleNum >= a && battleNum <= b
+  }
+  const exact = parseInt(range, 10)
+  return Number.isFinite(exact) && battleNum === exact
+}
+
 function getIVsForTrainer(trainer: { number: number; name: string } | null): number {
   if (!trainer) return 3
   if (trainer.name === 'Anabel (Silver)') return 24
@@ -100,10 +113,8 @@ function getIVsForTrainer(trainer: { number: number; name: string } | null): num
 }
 
 function getTrainersForBattle(battleNum: number) {
-  const range = getBattleRange(battleNum)
-  const exact = String(battleNum)
   return battleTrainers.filter(t =>
-    t.battleRanges.includes(range) || t.battleRanges.includes(exact)
+    t.battleRanges.some(r => battleRangeMatches(battleNum, r))
   )
 }
 
