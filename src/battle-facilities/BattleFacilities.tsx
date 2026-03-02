@@ -18,8 +18,8 @@ import {
   deleteAllCustomSets,
   type StoredSet,
 } from './pokepaste'
-import battleTrainers from './battle_trainers_em.json'
-import trainerPokemon from './trainer_pokemon_em.json'
+import battleTrainers from '../data/battle-facilities/battle_trainers_em.json'
+import trainerPokemon from '../data/battle-facilities/trainer_pokemon_em.json'
 import './battle-facilities.css'
 
 const TEAM_EM = teamData as Record<string, Record<string, SetdexEntry>>
