@@ -289,7 +289,7 @@
   },
   {
     "number": 37,
-    "class": "Poké Fan|Pokéfan",
+    "class": "Pokéfan",
     "name": "Peyton",
     "battleRanges": [
       "1-7"
@@ -297,7 +297,7 @@
   },
   {
     "number": 38,
-    "class": "Poké Fan|Pokéfan",
+    "class": "Pokéfan",
     "name": "Julian",
     "battleRanges": [
       "1-7"
@@ -305,7 +305,7 @@
   },
   {
     "number": 39,
-    "class": "Poké Fan|Pokéfan",
+    "class": "Pokéfan",
     "name": "Quinn",
     "battleRanges": [
       "1-7"
@@ -313,7 +313,7 @@
   },
   {
     "number": 40,
-    "class": "Poké Fan|Pokéfan",
+    "class": "Pokéfan",
     "name": "Haylee",
     "battleRanges": [
       "1-7"
@@ -321,7 +321,7 @@
   },
   {
     "number": 41,
-    "class": "Poké Fan|Pokéfan",
+    "class": "Pokéfan",
     "name": "Amanda",
     "battleRanges": [
       "1-7"
@@ -329,7 +329,7 @@
   },
   {
     "number": 42,
-    "class": "Poké Fan|Pokéfan",
+    "class": "Pokéfan",
     "name": "Stacy",
     "battleRanges": [
       "1-7"
@@ -337,7 +337,7 @@
   },
   {
     "number": 43,
-    "class": "Pokémon Breeder|{{PK",
+    "class": "Pokémon Breeder",
     "name": "Rafael",
     "battleRanges": [
       "1-7"
@@ -345,7 +345,7 @@
   },
   {
     "number": 44,
-    "class": "Pokémon Breeder|{{PK",
+    "class": "Pokémon Breeder",
     "name": "Oliver",
     "battleRanges": [
       "1-7"
@@ -353,7 +353,7 @@
   },
   {
     "number": 45,
-    "class": "Pokémon Breeder|{{PK",
+    "class": "Pokémon Breeder",
     "name": "Payton",
     "battleRanges": [
       "1-7"
@@ -361,7 +361,7 @@
   },
   {
     "number": 46,
-    "class": "Pokémon Breeder|{{PK",
+    "class": "Pokémon Breeder",
     "name": "Pamela",
     "battleRanges": [
       "1-7"
@@ -369,7 +369,7 @@
   },
   {
     "number": 47,
-    "class": "Pokémon Breeder|{{PK",
+    "class": "Pokémon Breeder",
     "name": "Eliza",
     "battleRanges": [
       "1-7"
@@ -377,7 +377,7 @@
   },
   {
     "number": 48,
-    "class": "Pokémon Breeder|{{PK",
+    "class": "Pokémon Breeder",
     "name": "Marisa",
     "battleRanges": [
       "1-7"
@@ -457,7 +457,7 @@
   },
   {
     "number": 58,
-    "class": "Fisher|Fisherman",
+    "class": "Fisherman",
     "name": "Trenton",
     "battleRanges": [
       "1-7"
@@ -465,7 +465,7 @@
   },
   {
     "number": 59,
-    "class": "Fisher|Fisherman",
+    "class": "Fisherman",
     "name": "Jenson",
     "battleRanges": [
       "1-7"
@@ -473,7 +473,7 @@
   },
   {
     "number": 60,
-    "class": "Fisher|Fisherman",
+    "class": "Fisherman",
     "name": "Wesley",
     "battleRanges": [
       "1-7"
@@ -1111,7 +1111,7 @@
   },
   {
     "number": 130,
-    "class": "Poké Maniac|PokéManiac",
+    "class": "PokéManiac",
     "name": "Jalen",
     "battleRanges": [
       "8-14",
@@ -1121,7 +1121,7 @@
   },
   {
     "number": 131,
-    "class": "Poké Maniac|PokéManiac",
+    "class": "PokéManiac",
     "name": "Griffen",
     "battleRanges": [
       "8-14",
@@ -1131,7 +1131,7 @@
   },
   {
     "number": 132,
-    "class": "Poké Maniac|PokéManiac",
+    "class": "PokéManiac",
     "name": "Xander",
     "battleRanges": [
       "8-14",
@@ -1281,7 +1281,7 @@
   },
   {
     "number": 147,
-    "class": "Pokémon Ranger|{{PK",
+    "class": "Pokémon Ranger",
     "name": "Jovan",
     "battleRanges": [
       "15-21",
@@ -1291,7 +1291,7 @@
   },
   {
     "number": 148,
-    "class": "Pokémon Ranger|{{PK",
+    "class": "Pokémon Ranger",
     "name": "Dominic",
     "battleRanges": [
       "15-21",
@@ -1301,7 +1301,7 @@
   },
   {
     "number": 149,
-    "class": "Pokémon Ranger|{{PK",
+    "class": "Pokémon Ranger",
     "name": "Nikolas",
     "battleRanges": [
       "15-21",
@@ -1311,7 +1311,7 @@
   },
   {
     "number": 150,
-    "class": "Pokémon Ranger|{{PK",
+    "class": "Pokémon Ranger",
     "name": "Valeria",
     "battleRanges": [
       "15-21",
@@ -1321,7 +1321,7 @@
   },
   {
     "number": 151,
-    "class": "Pokémon Ranger|{{PK",
+    "class": "Pokémon Ranger",
     "name": "Delaney",
     "battleRanges": [
       "15-21",
@@ -1331,7 +1331,7 @@
   },
   {
     "number": 152,
-    "class": "Pokémon Ranger|{{PK",
+    "class": "Pokémon Ranger",
     "name": "Meghan",
     "battleRanges": [
       "15-21",
@@ -1381,7 +1381,7 @@
   },
   {
     "number": 157,
-    "class": "Poké Fan|Pokéfan",
+    "class": "Pokéfan",
     "name": "Tylor",
     "battleRanges": [
       "15-21",
@@ -1391,7 +1391,7 @@
   },
   {
     "number": 158,
-    "class": "Poké Fan|Pokéfan",
+    "class": "Pokéfan",
     "name": "Jaren",
     "battleRanges": [
       "15-21",
@@ -1401,7 +1401,7 @@
   },
   {
     "number": 159,
-    "class": "Pokémon Breeder|{{PK",
+    "class": "Pokémon Breeder",
     "name": "Cordell",
     "battleRanges": [
       "15-21",
@@ -1411,7 +1411,7 @@
   },
   {
     "number": 160,
-    "class": "Pokémon Breeder|{{PK",
+    "class": "Pokémon Breeder",
     "name": "Jazlyn",
     "battleRanges": [
       "15-21",
@@ -1641,7 +1641,7 @@
   },
   {
     "number": 183,
-    "class": "Fisher|Fisherman",
+    "class": "Fisherman",
     "name": "Ramiro",
     "battleRanges": [
       "29-35",
@@ -1651,7 +1651,7 @@
   },
   {
     "number": 184,
-    "class": "Fisher|Fisherman",
+    "class": "Fisherman",
     "name": "Hunter",
     "battleRanges": [
       "29-35",
@@ -1941,7 +1941,7 @@
   },
   {
     "number": 213,
-    "class": "Poké Fan|Pokéfan",
+    "class": "Pokéfan",
     "name": "Todd",
     "battleRanges": [
       "36-42",
@@ -1951,7 +1951,7 @@
   },
   {
     "number": 214,
-    "class": "Poké Fan|Pokéfan",
+    "class": "Pokéfan",
     "name": "Gavin",
     "battleRanges": [
       "36-42",
@@ -1961,7 +1961,7 @@
   },
   {
     "number": 215,
-    "class": "Poké Fan|Pokéfan",
+    "class": "Pokéfan",
     "name": "Malory",
     "battleRanges": [
       "36-42",
@@ -1971,7 +1971,7 @@
   },
   {
     "number": 216,
-    "class": "Poké Fan|Pokéfan",
+    "class": "Pokéfan",
     "name": "Esther",
     "battleRanges": [
       "36-42",
@@ -1981,7 +1981,7 @@
   },
   {
     "number": 217,
-    "class": "Pokémon Breeder|{{PK",
+    "class": "Pokémon Breeder",
     "name": "Oscar",
     "battleRanges": [
       "36-42",
@@ -1991,7 +1991,7 @@
   },
   {
     "number": 218,
-    "class": "Pokémon Breeder|{{PK",
+    "class": "Pokémon Breeder",
     "name": "Wilson",
     "battleRanges": [
       "36-42",
@@ -2001,7 +2001,7 @@
   },
   {
     "number": 219,
-    "class": "Pokémon Breeder|{{PK",
+    "class": "Pokémon Breeder",
     "name": "Clare",
     "battleRanges": [
       "36-42",
@@ -2011,7 +2011,7 @@
   },
   {
     "number": 220,
-    "class": "Pokémon Breeder|{{PK",
+    "class": "Pokémon Breeder",
     "name": "Tess",
     "battleRanges": [
       "36-42",
@@ -2093,7 +2093,7 @@
   },
   {
     "number": 229,
-    "class": "Pokémon Ranger|{{PK",
+    "class": "Pokémon Ranger",
     "name": "Tyler",
     "battleRanges": [
       "43-49",
@@ -2102,7 +2102,7 @@
   },
   {
     "number": 230,
-    "class": "Pokémon Ranger|{{PK",
+    "class": "Pokémon Ranger",
     "name": "Chaz",
     "battleRanges": [
       "43-49",
@@ -2111,7 +2111,7 @@
   },
   {
     "number": 231,
-    "class": "Pokémon Ranger|{{PK",
+    "class": "Pokémon Ranger",
     "name": "Nelson",
     "battleRanges": [
       "43-49",
@@ -2120,7 +2120,7 @@
   },
   {
     "number": 232,
-    "class": "Pokémon Ranger|{{PK",
+    "class": "Pokémon Ranger",
     "name": "Shania",
     "battleRanges": [
       "43-49",
@@ -2129,7 +2129,7 @@
   },
   {
     "number": 233,
-    "class": "Pokémon Ranger|{{PK",
+    "class": "Pokémon Ranger",
     "name": "Stella",
     "battleRanges": [
       "43-49",
@@ -2138,7 +2138,7 @@
   },
   {
     "number": 234,
-    "class": "Pokémon Ranger|{{PK",
+    "class": "Pokémon Ranger",
     "name": "Dorine",
     "battleRanges": [
       "43-49",
@@ -2345,7 +2345,7 @@
   },
   {
     "number": 259,
-    "class": "Poké Maniac|PokéManiac",
+    "class": "PokéManiac",
     "name": "Miller",
     "battleRanges": [
       "50+"
@@ -2353,7 +2353,7 @@
   },
   {
     "number": 260,
-    "class": "Poké Maniac|PokéManiac",
+    "class": "PokéManiac",
     "name": "Marv",
     "battleRanges": [
       "50+"
@@ -2361,7 +2361,7 @@
   },
   {
     "number": 261,
-    "class": "Poké Maniac|PokéManiac",
+    "class": "PokéManiac",
     "name": "Layton",
     "battleRanges": [
       "50+"
@@ -2505,7 +2505,7 @@
   },
   {
     "number": 279,
-    "class": "Fisher|Fisherman",
+    "class": "Fisherman",
     "name": "Theo",
     "battleRanges": [
       "50+"
@@ -2513,7 +2513,7 @@
   },
   {
     "number": 280,
-    "class": "Fisher|Fisherman",
+    "class": "Fisherman",
     "name": "Bailey",
     "battleRanges": [
       "50+"

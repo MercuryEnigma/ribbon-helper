@@ -1,6 +1,4 @@
-import type { PokedexEntry } from "./gen3calc"
-
-export const POKEDEX_ADV: Record<string, PokedexEntry> = {
+{
   "Abra": {
     "t1": "Psychic",
     "bs": {

@@ -1,4 +1,4 @@
-export const MOVES_ADV: Record<string, { bp: number; type: string; category?: string; isSpread?: boolean; isBullet?: boolean; isSound?: boolean; isMLG?: boolean; hasSecondaryEffect?: boolean; acc?: number; makesContact?: boolean; hasRecoil?: number | string; hits?: number; isTwoHit?: boolean; isThreeHit?: boolean; maxMultiHits?: number; alwaysCrit?: boolean; percentHealed?: number }> = {
+{
   "(No Move)": {
     "bp": 0,
     "type": "Normal",

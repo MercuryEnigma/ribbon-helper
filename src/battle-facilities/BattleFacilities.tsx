@@ -8,7 +8,7 @@ import {
   type DamageResult,
   type SetdexEntry,
 } from './gen3calc'
-import { TEAM_EM } from './setteam_gen3'
+import teamData from '../data/battle-facilities/setteam_em.json'
 import {
   parsePokepaste,
   loadRibbonMasterSet,
@@ -21,6 +21,8 @@ import {
 import battleTrainers from './battle_trainers_em.json'
 import trainerPokemon from './trainer_pokemon_em.json'
 import './battle-facilities.css'
+
+const TEAM_EM = teamData as Record<string, Record<string, SetdexEntry>>
 
 const BATTLE_RANGES = ['1-7', '8-14', '15-21', '22-28', '29-35', '36-42', '43-49', '50+'] as const
 
@@ -38,6 +40,23 @@ function getIVsForBattle(battleNum: number): number {
   if (battleNum >= 15) return 9
   if (battleNum >= 8) return 6
   return 3
+}
+
+function getIVsForTrainer(trainer: { number: number; name: string } | null): number {
+  if (!trainer) return 3
+  if (trainer.name === 'Anabel (Silver)') return 24
+  if (trainer.name === 'Anabel (Gold)') return 31
+
+  const n = trainer.number
+  if (n <= 100) return 3
+  if (n <= 120) return 6
+  if (n <= 140) return 9
+  if (n <= 160) return 12
+  if (n <= 180) return 15
+  if (n <= 200) return 18
+  if (n <= 220) return 21
+  if (n <= 300) return 31
+  return 31
 }
 
 function getTrainersForBattle(battleNum: number) {
@@ -333,7 +352,7 @@ export default function BattleFacilities() {
     return availableSets[0] || ''
   }, [availableSets, p2Label])
 
-  const p2Ivs = getIVsForBattle(battleNum)
+  const p2Ivs = getIVsForTrainer(selectedTrainer)
 
   const { p1Results, p2Results, p1MaxHP, p2MaxHP } = useMemo(() => {
     if (!selectedP1 || !effectiveP2Label) return { p1Results: [], p2Results: [], p1MaxHP: 0, p2MaxHP: 0 }
@@ -461,6 +480,7 @@ export default function BattleFacilities() {
                 title="Reset to battle 1"
               >Reset</button>
               <span className="bf-range-badge">{getBattleRange(battleNum)}</span>
+              <span className="bf-range-badge">{p2Ivs} IVs</span>
             </div>
             <div className="bf-trainer-row">
               <span className="bf-row-label">Trainer</span>

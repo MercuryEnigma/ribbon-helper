@@ -1,6 +1,4 @@
-import type { SetdexEntry } from './gen3calc'
-
-export const SETDEX_EM: Record<string, Record<string, SetdexEntry>> = {
+{
   "Sunkern": {
     "Sunkern-1 (1)": {
       "evs": {
@@ -10032,7 +10030,7 @@ export const SETDEX_EM: Record<string, Record<string, SetdexEntry>> = {
       "tier": "50"
     },
     "Shuckle (Lucy Silver)": {
-      "evs": { // this is not a mistake: https://github.com/DizzyEggg/pokeemerald/blob/ec89e519f912618e9168d8a616ed85c35cb6d966/src/frontier_util.c#L401C48
+      "evs": {
         "hp": 252,
         "sa": 106,
         "sd": 252

@@ -1,6 +1,4 @@
-import type { SetdexEntry } from './gen3calc'
-
-export const TEAM_EM: Record<string, Record<string, SetdexEntry>> = {
+{
   "Latios": {
     "Latios": {
       "evs": {

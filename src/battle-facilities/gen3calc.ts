@@ -1,12 +1,13 @@
 // Self-contained Gen 3 (Emerald) damage calculator
 // Ported from damage-calc/_scripts/damage_gen3.js without jQuery/DOM dependencies
 
-import { POKEDEX_ADV } from './pokedex_gen3'
-import { SETDEX_EM } from './setdex_gen3'
-import { MOVES_ADV } from './moves_gen3'
+import movesData from '../data/battle-facilities/moves_em.json'
+import pokedexData from '../data/battle-facilities/pokedex_em.json'
+import setdexData from '../data/battle-facilities/setdex_em.json'
 
-// --- Re-export data for consumers ---
-export { POKEDEX_ADV, SETDEX_EM, MOVES_ADV }
+export const MOVES_ADV = movesData as Record<string, { bp: number; type: string; category?: string; isSpread?: boolean; isBullet?: boolean; isSound?: boolean; isMLG?: boolean; hasSecondaryEffect?: boolean; acc?: number; makesContact?: boolean; hasRecoil?: number | string; hits?: number; isTwoHit?: boolean; isThreeHit?: boolean; maxMultiHits?: number; alwaysCrit?: boolean; percentHealed?: number }>
+export const POKEDEX_ADV = pokedexData as Record<string, PokedexEntry>
+export const SETDEX_EM = setdexData as Record<string, Record<string, SetdexEntry>>
 
 // --- Natures: [boosted stat, reduced stat] ---
 const NATURES: Record<string, [string, string]> = {
