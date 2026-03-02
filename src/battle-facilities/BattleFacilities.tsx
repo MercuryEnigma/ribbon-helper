@@ -187,25 +187,25 @@ function BattleStatusAccordion({
             </div>
           </div>
           <div className="bf-status-row">
-            <label className="bf-checkbox-label">
+            <label className={`bf-checkbox-label${side.isReflect ? ' bf-checkbox-active' : ''}`}>
               <input type="checkbox" checked={side.isReflect} onChange={e => onChange({ ...side, isReflect: e.target.checked })} />
               Reflect
             </label>
-            <label className="bf-checkbox-label">
+            <label className={`bf-checkbox-label${side.isLightScreen ? ' bf-checkbox-active' : ''}`}>
               <input type="checkbox" checked={side.isLightScreen} onChange={e => onChange({ ...side, isLightScreen: e.target.checked })} />
               Light Screen
             </label>
           </div>
           <div className="bf-status-row">
-            <label className="bf-checkbox-label">
+            <label className={`bf-checkbox-label${side.isHelpingHand ? ' bf-checkbox-active' : ''}`}>
               <input type="checkbox" checked={side.isHelpingHand} onChange={e => onChange({ ...side, isHelpingHand: e.target.checked })} />
               Helping Hand
             </label>
-            <label className="bf-checkbox-label">
+            <label className={`bf-checkbox-label${side.isCharge ? ' bf-checkbox-active' : ''}`}>
               <input type="checkbox" checked={side.isCharge} onChange={e => onChange({ ...side, isCharge: e.target.checked })} />
               Charge
             </label>
-            <label className="bf-checkbox-label">
+            <label className={`bf-checkbox-label${side.isSeeded ? ' bf-checkbox-active' : ''}`}>
               <input type="checkbox" checked={side.isSeeded} onChange={e => onChange({ ...side, isSeeded: e.target.checked })} />
               Leech Seed
             </label>
@@ -410,108 +410,117 @@ export default function BattleFacilities() {
   const handleBattleNumChange = (newNum: number) => {
     const clamped = Math.max(1, newNum)
     setBattleNum(clamped)
+    setWeather('')
+    setP1Side(s => ({ ...defaultSideState(), maxHP: s.maxHP, curHP: s.maxHP }))
+    setP2Side(s => ({ ...defaultSideState(), maxHP: s.maxHP, curHP: s.maxHP }))
+    setP1StatusOpen(false)
+    setP2StatusOpen(false)
   }
 
   return (
-    <div className="battle-facilities">
-      <h2>Battle Facilities — Emerald</h2>
-      <p className="bf-team-note">
-        Recommended team: <a href="https://pokepast.es/9f353ea337d86f51" target="_blank" rel="noopener noreferrer">Venty's Latios / Metagross / Suicune</a>
-      </p>
-      <div className="bf-matchup">
-        <div className="bf-side">
-          <div className="bf-p1-selector">
-            <label>Your Pokemon</label>
-            <div className="bf-custom-input">
-              <textarea
-                rows={6}
-                placeholder={"Claydol @ Leftovers\nAbility: Levitate\nEVs: 100 HP / 150 Def / 4 SpA / 252 SpD / 4 HP\nCalm Nature\n- Protect\n- Psychic\n- Ancient Power\n- Explosion"}
-                value={pasteText}
-                onChange={e => { setPasteText(e.target.value); setSaveError('') }}
-              />
-              <div className="bf-custom-controls">
-                <label className="bf-checkbox-label">
-                  <input
-                    type="checkbox"
-                    checked={isRibbonMaster}
-                    onChange={e => setIsRibbonMaster(e.target.checked)}
-                  />
-                  Ribbon Master
-                </label>
-                <button className="bf-btn" onClick={handleSave}>Save</button>
-                <button className="bf-btn bf-btn-danger" onClick={handleDelete}>Delete custom sets</button>
+    <div className="bf-card">
+      <div className="bf-header">Battle Facilities — Emerald</div>
+
+      <div className="bf-body">
+        <p className="bf-team-note">
+          Recommended team: <a href="https://pokepast.es/9f353ea337d86f51" target="_blank" rel="noopener noreferrer">Venty's Latios / Metagross / Suicune</a>
+        </p>
+        <div className="bf-matchup">
+          <div className="bf-side">
+            <div className="bf-p1-selector">
+              <label>Your Pokemon</label>
+              <div className="bf-custom-input">
+                <textarea
+                  rows={6}
+                  placeholder={"Claydol @ Leftovers\nAbility: Levitate\nEVs: 100 HP / 150 Def / 4 SpA / 252 SpD / 4 HP\nCalm Nature\n- Protect\n- Psychic\n- Ancient Power\n- Explosion"}
+                  value={pasteText}
+                  onChange={e => { setPasteText(e.target.value); setSaveError('') }}
+                />
+                <div className="bf-custom-controls">
+                  <label className={`bf-checkbox-label${isRibbonMaster ? ' bf-checkbox-active' : ''}`}>
+                    <input
+                      type="checkbox"
+                      checked={isRibbonMaster}
+                      onChange={e => setIsRibbonMaster(e.target.checked)}
+                    />
+                    Ribbon Master
+                  </label>
+                  <button className="bf-btn" onClick={handleSave}>Save</button>
+                  <button className="bf-btn bf-btn-danger" onClick={handleDelete}>Delete custom sets</button>
+                </div>
+                {saveError && <div className="bf-save-error">{saveError}</div>}
               </div>
-              {saveError && <div className="bf-save-error">{saveError}</div>}
-            </div>
-            <div className="bf-pokemon-row">
-              <span className="bf-row-label">Pokemon</span>
-              <select
-                value={selectedP1?.label ?? ''}
-                onChange={e => setP1Label(e.target.value)}
-              >
-                {p1Options.map(opt => (
-                  <option key={opt.label} value={opt.label}>{opt.label}</option>
-                ))}
-              </select>
+              <div className="bf-pokemon-row">
+                <span className="bf-row-label">Pokemon</span>
+                <select
+                  value={selectedP1?.label ?? ''}
+                  onChange={e => setP1Label(e.target.value)}
+                >
+                  {p1Options.map(opt => (
+                    <option key={opt.label} value={opt.label}>{opt.label}</option>
+                  ))}
+                </select>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="bf-vs">vs.</div>
-        <div className="bf-side">
-          <div className="bf-p2-selector">
-            <label>Opponent</label>
-            <div className="bf-battle-num-row">
-              <span className="bf-row-label">Battle #</span>
-              <input
-                type="number"
-                min={1}
-                value={battleNum}
-                onChange={e => handleBattleNumChange(parseInt(e.target.value) || 1)}
-                className="bf-battle-num-input"
-              />
-              <button
-                className="bf-btn"
-                onClick={() => handleBattleNumChange(battleNum + 1)}
-                title="Next battle"
-              >+1</button>
-              <button
-                className="bf-btn"
-                onClick={() => handleBattleNumChange(1)}
-                title="Reset to battle 1"
-              >Reset</button>
-              <span className="bf-range-badge">{getBattleRange(battleNum)}</span>
-              <span className="bf-range-badge">{p2Ivs} IVs</span>
-            </div>
-            <div className="bf-trainer-row">
-              <span className="bf-row-label">Trainer</span>
-              <select
-                value={effectiveTrainerKey}
-                onChange={e => setTrainerKey(e.target.value)}
-              >
-                {availableTrainers.map(t => {
-                  const key = `${t.class} ${t.name}`
-                  return <option key={key} value={key}>{key}</option>
-                })}
-              </select>
-            </div>
-            <div className="bf-pokemon-row">
-              <span className="bf-row-label">Pokemon</span>
-              <select
-                value={effectiveP2Label}
-                onChange={e => setP2Label(e.target.value)}
-              >
-                {availableSets.map((label: string) => (
-                  <option key={label} value={label}>{label}</option>
-                ))}
-              </select>
+          <div className="bf-side">
+            <div className="bf-p2-selector">
+              <label>Opponent</label>
+              <div className="bf-battle-num-row">
+                <span className="bf-row-label">Battle #</span>
+                <input
+                  type="number"
+                  min={1}
+                  value={battleNum}
+                  onChange={e => handleBattleNumChange(parseInt(e.target.value) || 1)}
+                  className="bf-battle-num-input"
+                />
+                <button
+                  className="bf-btn"
+                  onClick={() => handleBattleNumChange(battleNum + 1)}
+                  title="Next battle"
+                >+1</button>
+                <button
+                  className="bf-btn"
+                  onClick={() => handleBattleNumChange(1)}
+                  title="Reset to battle 1"
+                >Reset</button>
+                <span className="bf-range-badge">{getBattleRange(battleNum)}</span>
+                <span className="bf-range-badge">{p2Ivs} IVs</span>
+              </div>
+              <div className="bf-trainer-row">
+                <span className="bf-row-label">Trainer</span>
+                <select
+                  value={effectiveTrainerKey}
+                  onChange={e => setTrainerKey(e.target.value)}
+                >
+                  {availableTrainers.map(t => {
+                    const key = `${t.class} ${t.name}`
+                    return <option key={key} value={key}>{key}</option>
+                  })}
+                </select>
+              </div>
+              <div className="bf-pokemon-row">
+                <span className="bf-row-label">Pokemon</span>
+                <select
+                  value={effectiveP2Label}
+                  onChange={e => setP2Label(e.target.value)}
+                >
+                  {availableSets.map((label: string) => (
+                    <option key={label} value={label}>{label}</option>
+                  ))}
+                </select>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="bf-results">
-        <MoveResults pokemonName={selectedP1?.label ?? ''} results={p1Results} />
-        <div className="bf-vs-spacer" />
-        <MoveResults pokemonName={effectiveP2Label} results={p2Results} />
+
+      <div className="bf-results-panel">
+        <div className="bf-results">
+          <MoveResults pokemonName={selectedP1?.label ?? ''} results={p1Results} />
+          <MoveResults pokemonName={effectiveP2Label} results={p2Results} />
+        </div>
       </div>
 
       <div className="bf-battle-status">
