@@ -123,6 +123,8 @@ export interface FieldSide {
   isLightScreen: boolean
   isHelpingHand: boolean
   isCharge: boolean
+  isSeeded: boolean
+  spikes: number
 }
 
 // --- Stat calculation (Gen 3 formulas) ---
@@ -213,20 +215,27 @@ export function buildPokemon(
 }
 
 // --- Build a minimal Field ---
+export function makeFieldSide(overrides: Partial<FieldSide> = {}, format = "singles", weather = ""): FieldSide {
+  return {
+    format,
+    weather,
+    isReflect: false,
+    isLightScreen: false,
+    isHelpingHand: false,
+    isCharge: false,
+    isSeeded: false,
+    spikes: 0,
+    ...overrides,
+  }
+}
+
 export function buildField(format: string = "singles", weather: string = ""): {
   getWeather: () => string
   getSide: (i: number) => FieldSide
 } {
   return {
     getWeather: () => weather,
-    getSide: () => ({
-      format,
-      weather,
-      isReflect: false,
-      isLightScreen: false,
-      isHelpingHand: false,
-      isCharge: false,
-    }),
+    getSide: () => makeFieldSide({}, format, weather),
   }
 }
 
@@ -463,11 +472,13 @@ function statLabel(stat: string): string {
 export function calculateAllMovesGen3(
   p1: Pokemon,
   p2: Pokemon,
-  field: ReturnType<typeof buildField>,
+  p1Side: FieldSide,
+  p2Side: FieldSide,
 ): [DamageResult[], DamageResult[]] {
-  const side = field.getSide(0)
-  const results1 = p1.moves.map(move => getDamageResultGen3(p1, p2, move, side))
-  const results2 = p2.moves.map(move => getDamageResultGen3(p2, p1, move, side))
+  // p1 attacks into p2's side (p2Side has screens etc that defend p2)
+  const results1 = p1.moves.map(move => getDamageResultGen3(p1, p2, move, p2Side))
+  // p2 attacks into p1's side (p1Side has screens etc that defend p1)
+  const results2 = p2.moves.map(move => getDamageResultGen3(p2, p1, move, p1Side))
   return [results1, results2]
 }
 
