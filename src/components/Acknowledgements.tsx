@@ -8,9 +8,10 @@ interface AcknowledgementLink {
 
 interface AcknowledgementsProps {
   pageSpecific?: AcknowledgementLink[];
+  pageDescription?: string;
 }
 
-export default function Acknowledgements({ pageSpecific = [] }: AcknowledgementsProps) {
+export default function Acknowledgements({ pageSpecific = [], pageDescription }: AcknowledgementsProps) {
   const commonResources: AcknowledgementLink[] = [
     { name: 'PkmnShuffleMap', url: 'https://github.com/nileplumb/PkmnShuffleMap/' },
     { name: 'Bulbapedia', url: 'https://bulbapedia.bulbagarden.net/' },
@@ -24,7 +25,7 @@ export default function Acknowledgements({ pageSpecific = [] }: Acknowledgements
       <h4>Acknowledgements</h4>
       {pageSpecific.length > 0 && (
         <p>
-          It was developed to help Pokémon fans with love for the r/PokémonRibbons community. This page uses data provided by{' '}
+          It was developed to help Pokémon fans with love for the r/PokémonRibbons community. This page uses resources provided by{' '}
           {pageSpecific.map((item, index) => (
             <React.Fragment key={item.name}>
               {index > 0 && ', '}
@@ -33,8 +34,11 @@ export default function Acknowledgements({ pageSpecific = [] }: Acknowledgements
               </a>
             </React.Fragment>
           ))}
-          . Their contributions to the Pokémon Ribbons community are greatly appreciated.
+          .{!pageDescription && ' Their contributions to the Pokémon Ribbons community are greatly appreciated.'}
         </p>
+      )}
+      {pageDescription && (
+        <p>{pageDescription}</p>
       )}
       <p>
         Additional data and sprite assets have been sourced from{' '}

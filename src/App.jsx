@@ -60,9 +60,19 @@ export default function App() {
       return [{ name: 'SadisticMystic', url: 'https://docs.google.com/spreadsheets/d/1U2gGGy9nyGIKQcq9SVtIxKGJDNYAfhicEWr5ykQKM7k/copy' }]
     } else if (path.includes('/visual-decoration/bdsp-ball-stickers')) {
       return [{ name: 'Anubis', url: 'https://x.com/Sibuna_Switch' }]
+    } else if (path.startsWith('/battle-facilities')) {
+      return [{ name: 'EisenCalc', url: 'https://eisencalc.com' }]
     }
 
     return []
+  }
+
+  const getAcknowledgementDescription = () => {
+    const path = location.pathname
+    if (path.startsWith('/battle-facilities')) {
+      return 'This calculator is based on the work of Honko, gamut, and Zarel. It was optimized for players in the Pokémon Championship Series by Tapin, Firestorm, and squirrelboy1225, for Battle Spot Singles players by cant say and LegoFigure11, and for Battle Facilities by Eisenherz and SilverstarStream, and refined for obtaining ribbons by MercuryEnigma.'
+    }
+    return undefined
   }
 
   const isContestMovesPage = location.pathname.includes('/contest-moves')
@@ -128,7 +138,7 @@ export default function App() {
             </div>
           )}
 
-          <Acknowledgements pageSpecific={getAcknowledgements()} />
+          <Acknowledgements pageSpecific={getAcknowledgements()} pageDescription={getAcknowledgementDescription()} />
         </section>
       </main>
 
