@@ -1,6 +1,6 @@
 {
   "Latios": {
-    "Latios": {
+    "Latios (Singles)": {
       "evs": {
         "hp": 4,
         "sa": 252,
@@ -14,10 +14,25 @@
       ],
       "nature": "Timid",
       "item": "Lum Berry"
+    },
+    "Latios (Doubles)": {
+      "evs": {
+        "df": 4,
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Psychic",
+        "Ice Beam",
+        "Thunderbolt",
+        "Protect"
+      ],
+      "nature": "Timid",
+      "item": "Twisted Spoon"
     }
   },
   "Metagross": {
-    "Metagross": {
+    "Metagross (Singles)": {
       "evs": {
         "hp": 252,
         "at": 236,
@@ -32,10 +47,25 @@
       ],
       "nature": "Adamant",
       "item": "Choice Band"
+    },
+    "Metagross (Doubles)": {
+      "evs": {
+        "at": 252,
+        "sd": 4,
+        "sp": 252
+      },
+      "moves": [
+        "Explosion",
+        "Meteor Mash",
+        "Earthquake",
+        "Shadow Ball"
+      ],
+      "nature": "Adamant",
+      "item": "Choice Band"
     }
   },
   "Suicune": {
-    "Suicune": {
+    "Suicune (Singles)": {
       "evs": {
         "hp": 252,
         "df": 252,
@@ -49,6 +79,40 @@
       ],
       "nature": "Bold",
       "item": "Leftovers"
+    }
+  },
+  "Snorlax": {
+    "Snorlax (Doubles)": {
+      "evs": {
+        "hp": 252,
+        "at": 252,
+        "df": 4
+      },
+      "moves": [
+        "Self-Destruct",
+        "Body Slam",
+        "Earthquake",
+        "Shadow Ball"
+      ],
+      "nature": "Adamant",
+      "item": "Silk Scarf"
+    }
+  },
+  "Gengar": {
+    "Gengar (Doubles)": {
+      "evs": {
+        "sa": 252,
+        "sd": 6,
+        "sp": 252
+      },
+      "moves": [
+        "Psychic",
+        "Thunderbolt",
+        "Ice Punch",
+        "Protect"
+      ],
+      "nature": "Timid",
+      "item": "Lum Berry"
     }
   }
 }

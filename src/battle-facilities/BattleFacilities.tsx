@@ -24,6 +24,56 @@ import './battle-facilities.css'
 
 const TEAM_EM = teamData as Record<string, Record<string, SetdexEntry>>
 
+/* ===== Facility mode configuration ===== */
+interface FacilityMode {
+  id: string
+  label: string
+  defaultLevel: number
+  format: 'singles' | 'doubles'
+  teamUrl: string
+  teamName: string
+  pokemon: string[] // set labels from TEAM_EM to show in the P1 selector
+}
+
+const FACILITY_MODES: FacilityMode[] = [
+  {
+    id: 'lvl50-singles',
+    label: 'Lvl 50 Singles',
+    defaultLevel: 50,
+    format: 'singles',
+    teamUrl: 'https://pokepast.es/9f353ea337d86f51',
+    teamName: "Venty's Latios / Metagross / Suicune",
+    pokemon: ['Latios (Singles)', 'Metagross (Singles)', 'Suicune (Singles)'],
+  },
+  {
+    id: 'open-singles',
+    label: 'Open Singles',
+    defaultLevel: 60,
+    format: 'singles',
+    teamUrl: 'https://pokepast.es/9f353ea337d86f51',
+    teamName: "Venty's Latios / Metagross / Suicune",
+    pokemon: ['Latios (Singles)', 'Metagross (Singles)', 'Suicune (Singles)'],
+  },
+  {
+    id: 'lvl50-doubles',
+    label: 'Lvl 50 Doubles',
+    defaultLevel: 50,
+    format: 'doubles',
+    teamUrl: 'https://pokepast.es/773249e264806f40',
+    teamName: "Venty's Explosive doubles team",
+    pokemon: ['Latios (Doubles)', 'Metagross (Doubles)', 'Snorlax (Doubles)', 'Gengar (Doubles)'],
+  },
+  {
+    id: 'open-doubles',
+    label: 'Open Doubles',
+    defaultLevel: 60,
+    format: 'doubles',
+    teamUrl: 'https://pokepast.es/773249e264806f40',
+    teamName: "Venty's Explosive doubles team",
+    pokemon: ['Latios (Doubles)', 'Metagross (Doubles)', 'Snorlax (Doubles)', 'Gengar (Doubles)'],
+  },
+]
+
 const BATTLE_RANGES = ['1-7', '8-14', '15-21', '22-28', '29-35', '36-42', '43-49', '50+'] as const
 
 function getBattleRange(battleNum: number): string {
@@ -71,24 +121,31 @@ function getPokemonForTrainer(trainerName: string): string[] {
   return (trainerPokemon as Record<string, string[]>)[trainerName] || []
 }
 
-const BASE_P1_OPTIONS = Object.keys(TEAM_EM)
-
 interface P1Option {
   label: string
   species: string
   set: SetdexEntry
 }
 
-function buildP1Options(ribbonMaster: StoredSet | null, pokemonSets: StoredSet[]): P1Option[] {
+// Build a lookup from set label → { species, set } across all TEAM_EM entries
+const TEAM_EM_BY_LABEL: Record<string, { species: string; set: SetdexEntry }> = {}
+for (const [species, sets] of Object.entries(TEAM_EM)) {
+  for (const [label, set] of Object.entries(sets)) {
+    TEAM_EM_BY_LABEL[label] = { species, set }
+  }
+}
+
+function buildP1Options(ribbonMaster: StoredSet | null, pokemonSets: StoredSet[], modeLabels: string[]): P1Option[] {
   const options: P1Option[] = []
 
   if (ribbonMaster) {
     options.push({ label: ribbonMaster.label, species: ribbonMaster.species, set: ribbonMaster.set })
   }
 
-  for (const species of BASE_P1_OPTIONS) {
-    const set = Object.values(TEAM_EM[species])[0]
-    options.push({ label: species, species, set })
+  for (const label of modeLabels) {
+    const entry = TEAM_EM_BY_LABEL[label]
+    if (!entry) continue
+    options.push({ label, species: entry.species, set: entry.set })
   }
 
   for (const cs of pokemonSets) {
@@ -240,10 +297,105 @@ function BattleStatusAccordion({
   )
 }
 
-function MoveResults({ pokemonName, results }: { pokemonName: string; results: DamageResult[] }) {
+const EV_LABELS: Record<string, string> = { hp: 'HP', at: 'Atk', df: 'Def', sa: 'SpA', sd: 'SpD', sp: 'Spe' }
+
+interface PokeSummary {
+  evs: Partial<Record<string, number>>
+  nature: string
+  ability: string
+  abilities: string[]
+  item: string
+  speed: number
+}
+
+function formatEvs(evs: Partial<Record<string, number>>): string {
+  return Object.entries(evs)
+    .filter(([, v]) => v && v > 0)
+    .map(([k, v]) => `${v} ${EV_LABELS[k] ?? k}`)
+    .join(' / ')
+}
+
+function getModifiedStat(stat: number, mod: number): number {
+  if (mod > 0) return Math.floor(stat * (2 + mod) / 2)
+  if (mod < 0) return Math.floor(stat * 2 / (2 - mod))
+  return stat
+}
+
+function calcCurrentSpeed(pokemon: ReturnType<typeof buildPokemon>, weather: string): number {
+  // Start from computed stat (already includes IVs/EVs/nature)
+  let speed = pokemon.stats.sp
+  // Apply stage boosts
+  speed = getModifiedStat(speed, pokemon.boosts.sp)
+  // Status: paralysis (Gen 3 is 1/4)
+  if (pokemon.status === 'Paralyzed') {
+    speed = Math.floor(speed / 4)
+  }
+  // Item modifiers
+  if (pokemon.item === 'Macho Brace') {
+    speed = Math.floor(speed / 2)
+  }
+  // Weather-based abilities
+  if (weather === 'Sun' && pokemon.curAbility === 'Chlorophyll') {
+    speed *= 2
+  } else if (weather === 'Rain' && pokemon.curAbility === 'Swift Swim') {
+    speed *= 2
+  }
+  return speed
+}
+
+function MoveResults({ pokemonName, summary, opponentSpeed, isOpponent = false, results, onAbilityChange }: { pokemonName: string; summary?: PokeSummary; opponentSpeed?: number; isOpponent?: boolean; results: DamageResult[]; onAbilityChange?: (ability: string) => void }) {
+  const renderSpeed = () => {
+    if (!summary) return null
+    let className = ''
+    if (opponentSpeed !== undefined && summary.speed !== opponentSpeed) {
+      const isFaster = summary.speed > opponentSpeed
+      if (isFaster) {
+        className = isOpponent ? 'bf-speed-opp-fast' : 'bf-speed-player-fast'
+      }
+    }
+    return <span className={className}>{summary.speed} Speed</span>
+  }
+
+  const bestDamageIndex = useMemo(() => {
+    if (!summary || results.length === 0) return -1
+    let bestIdx = -1
+    let bestVal = -1
+    results.forEach((r, i) => {
+      const val = r.minDamage
+      if (val > bestVal) {
+        bestVal = val
+        bestIdx = i
+      }
+    })
+    return bestIdx
+  }, [results, summary])
+
+  const opponentFaster = isOpponent && summary && opponentSpeed !== undefined && summary.speed > opponentSpeed
+
   return (
     <div className="bf-pokemon">
-      <h3>{pokemonName}</h3>
+      <h3>{summary?.item ? `${pokemonName} @ ${summary.item}` : pokemonName}</h3>
+      {summary && (
+        <div className="bf-pokemon-summary">
+          <span>
+            {summary.abilities.length > 1 && onAbilityChange ? (
+              <select
+                value={summary.ability}
+                onChange={e => onAbilityChange(e.target.value)}
+                className="bf-ability-select"
+              >
+                {summary.abilities.map(a => (
+                  <option key={a} value={a}>{a}</option>
+                ))}
+              </select>
+            ) : (
+              summary.ability
+            )}
+            {' '}| {summary.nature} Nature | {renderSpeed()}
+          </span>
+          <span>EVs: {formatEvs(summary.evs)}</span>
+        </div>
+      )}
       <table className="bf-results-table">
         <thead>
           <tr>
@@ -253,8 +405,14 @@ function MoveResults({ pokemonName, results }: { pokemonName: string; results: D
           </tr>
         </thead>
         <tbody>
-          {results.map((result, i) => (
-            <tr key={i} className={result.move.bp === 0 ? 'bf-status-move' : ''}>
+          {results.map((result, i) => {
+            let rowClass = result.move.bp === 0 ? 'bf-status-move' : ''
+            if (i === bestDamageIndex) {
+              if (opponentFaster) rowClass += ' bf-best-move-opp'
+              else if (!isOpponent) rowClass += ' bf-best-move-player'
+            }
+            return (
+              <tr key={i} className={rowClass}>
               <td>{result.move.name}</td>
               <td>
                 {result.move.bp === 0
@@ -266,8 +424,9 @@ function MoveResults({ pokemonName, results }: { pokemonName: string; results: D
                   ? '—'
                   : `${result.minPercent}–${result.maxPercent}%`}
               </td>
-            </tr>
-          ))}
+              </tr>
+            )
+          })}
         </tbody>
       </table>
     </div>
@@ -281,7 +440,9 @@ export default function BattleFacilities() {
   const [ribbonMasterSet, setRibbonMasterSet] = useState<StoredSet | null>(loadRibbonMasterSet)
   const [pokemonSets, setPokemonSets] = useState<StoredSet[]>(loadPokemonSets)
 
-  const p1Options = useMemo(() => buildP1Options(ribbonMasterSet, pokemonSets), [ribbonMasterSet, pokemonSets])
+  const [mode, setMode] = useState<FacilityMode>(FACILITY_MODES[0])
+
+  const p1Options = useMemo(() => buildP1Options(ribbonMasterSet, pokemonSets, mode.pokemon), [ribbonMasterSet, pokemonSets, mode])
   const [p1Label, setP1Label] = useState(p1Options[0]?.label ?? '')
   const [battleNum, setBattleNum] = useState(1)
   const [trainerKey, setTrainerKey] = useState('')
@@ -289,11 +450,12 @@ export default function BattleFacilities() {
 
   // Field & battle status
   const [weather, setWeather] = useState('')
-  const [level, setLevel] = useState(50)
+  const [level, setLevel] = useState(mode.defaultLevel)
   const [p1Side, setP1Side] = useState<SideState>(defaultSideState)
   const [p2Side, setP2Side] = useState<SideState>(defaultSideState)
   const [p1StatusOpen, setP1StatusOpen] = useState(false)
   const [p2StatusOpen, setP2StatusOpen] = useState(false)
+  const [p2Ability, setP2Ability] = useState('')
 
   const selectedP1 = useMemo(() => {
     return p1Options.find(o => o.label === p1Label) ?? p1Options[0] ?? null
@@ -328,7 +490,7 @@ export default function BattleFacilities() {
     deleteAllCustomSets()
     setRibbonMasterSet(null)
     setPokemonSets([])
-    setP1Label(p1Options.find(o => BASE_P1_OPTIONS.includes(o.label))?.label ?? BASE_P1_OPTIONS[0])
+    setP1Label(mode.pokemon[0] ?? '')
   }
 
   // Trainers available for current battle number
@@ -354,18 +516,25 @@ export default function BattleFacilities() {
 
   const p2Ivs = getIVsForTrainer(selectedTrainer)
 
-  const { p1Results, p2Results, p1MaxHP, p2MaxHP } = useMemo(() => {
-    if (!selectedP1 || !effectiveP2Label) return { p1Results: [], p2Results: [], p1MaxHP: 0, p2MaxHP: 0 }
+  const emptyCalc = { p1Results: [] as DamageResult[], p2Results: [] as DamageResult[], p1MaxHP: 0, p2MaxHP: 0, p1Summary: undefined as PokeSummary | undefined, p2Summary: undefined as PokeSummary | undefined }
+  const { p1Results, p2Results, p1MaxHP, p2MaxHP, p1Summary, p2Summary } = useMemo(() => {
+    if (!selectedP1 || !effectiveP2Label) return emptyCalc
 
     const p1Dex = POKEDEX_ADV[selectedP1.species]
-    if (!p1Dex) return { p1Results: [], p2Results: [], p1MaxHP: 0, p2MaxHP: 0 }
+    if (!p1Dex) return emptyCalc
     const p1 = buildPokemon(selectedP1.species, p1Dex, selectedP1.set, selectedP1.label, level)
 
     const p2Match = findSetByLabel(effectiveP2Label)
-    if (!p2Match) return { p1Results: [], p2Results: [], p1MaxHP: 0, p2MaxHP: 0 }
+    if (!p2Match) return emptyCalc
     const p2Dex = POKEDEX_ADV[p2Match.species]
-    if (!p2Dex) return { p1Results: [], p2Results: [], p1MaxHP: 0, p2MaxHP: 0 }
+    if (!p2Dex) return emptyCalc
     const p2 = buildPokemon(p2Match.species, p2Dex, p2Match.set, effectiveP2Label, level, p2Ivs)
+
+    // Apply selected opponent ability (if user overrode it)
+    if (p2Ability && p2Dex.abilities.includes(p2Ability)) {
+      p2.ability = p2Ability
+      p2.curAbility = p2Ability
+    }
 
     // Apply boosts
     for (const stat of STAT_NAMES) {
@@ -383,17 +552,34 @@ export default function BattleFacilities() {
       isReflect: p1Side.isReflect, isLightScreen: p1Side.isLightScreen,
       isHelpingHand: p1Side.isHelpingHand, isCharge: p1Side.isCharge,
       isSeeded: p1Side.isSeeded, spikes: p1Side.spikes,
-    }, "singles", weather)
+    }, mode.format, weather)
     const p2FieldSide = makeFieldSide({
       isReflect: p2Side.isReflect, isLightScreen: p2Side.isLightScreen,
       isHelpingHand: p2Side.isHelpingHand, isCharge: p2Side.isCharge,
       isSeeded: p2Side.isSeeded, spikes: p2Side.spikes,
-    }, "singles", weather)
+    }, mode.format, weather)
 
     const [p1Results, p2Results] = calculateAllMovesGen3(p1, p2, p1FieldSide, p2FieldSide)
 
-    return { p1Results, p2Results, p1MaxHP: p1.maxHP, p2MaxHP: p2.maxHP }
-  }, [selectedP1, effectiveP2Label, p2Ivs, weather, level, p1Side, p2Side])
+    const p1Summary: PokeSummary = {
+      evs: p1.evs,
+      nature: p1.nature,
+      ability: p1.ability,
+      abilities: [p1.ability],
+      item: p1.item,
+      speed: calcCurrentSpeed(p1, weather),
+    }
+    const p2Summary: PokeSummary = {
+      evs: p2.evs,
+      nature: p2.nature,
+      ability: p2.ability,
+      abilities: p2Dex.abilities,
+      item: p2.item,
+      speed: calcCurrentSpeed(p2, weather),
+    }
+
+    return { p1Results, p2Results, p1MaxHP: p1.maxHP, p2MaxHP: p2.maxHP, p1Summary, p2Summary }
+  }, [selectedP1, effectiveP2Label, p2Ivs, weather, level, p1Side, p2Side, mode, p2Ability])
 
   // Sync maxHP/curHP when pokemon changes
   useEffect(() => {
@@ -406,6 +592,18 @@ export default function BattleFacilities() {
       setP2Side(s => ({ ...s, maxHP: p2MaxHP, curHP: p2MaxHP }))
     }
   }, [p2MaxHP])
+  // Reset ability override when opponent pokemon changes
+  useEffect(() => { setP2Ability('') }, [effectiveP2Label])
+
+  const handleModeChange = (newMode: FacilityMode) => {
+    setMode(newMode)
+    setLevel(newMode.defaultLevel)
+    // Reset P1 selection to first available pokemon in the new mode
+    const newOptions = buildP1Options(ribbonMasterSet, pokemonSets, newMode.pokemon)
+    if (newOptions.length > 0 && !newOptions.find(o => o.label === p1Label)) {
+      setP1Label(newOptions[0].label)
+    }
+  }
 
   const handleBattleNumChange = (newNum: number) => {
     const clamped = Math.max(1, newNum)
@@ -419,11 +617,31 @@ export default function BattleFacilities() {
 
   return (
     <div className="bf-card">
-      <div className="bf-header">Battle Facilities — Emerald</div>
+      <div className="bf-header">Emerald - Battle Frontier Tower</div>
 
       <div className="bf-body">
+        <div className="bf-radio-group bf-mode-selector">
+          <div className="bf-radio-buttons">
+            {FACILITY_MODES.map((m, i) => (
+              <label
+                key={m.id}
+                className={`bf-radio-btn${mode.id === m.id ? ' bf-radio-btn-active' : ''}${i === 0 ? ' bf-radio-btn-left' : ''}${i === FACILITY_MODES.length - 1 ? ' bf-radio-btn-right' : ''}`}
+              >
+                <input
+                  type="radio"
+                  name="facility-mode"
+                  value={m.id}
+                  checked={mode.id === m.id}
+                  onChange={() => handleModeChange(m)}
+                  className="bf-radio-input"
+                />
+                {m.label}
+              </label>
+            ))}
+          </div>
+        </div>
         <p className="bf-team-note">
-          Recommended team: <a href="https://pokepast.es/9f353ea337d86f51" target="_blank" rel="noopener noreferrer">Venty's Latios / Metagross / Suicune</a>
+          Recommended team: <a href={mode.teamUrl} target="_blank" rel="noopener noreferrer">{mode.teamName}</a>
         </p>
         <div className="bf-matchup">
           <div className="bf-side">
@@ -518,8 +736,21 @@ export default function BattleFacilities() {
 
       <div className="bf-results-panel">
         <div className="bf-results">
-          <MoveResults pokemonName={selectedP1?.label ?? ''} results={p1Results} />
-          <MoveResults pokemonName={effectiveP2Label} results={p2Results} />
+          <MoveResults
+            pokemonName={selectedP1?.label ?? ''}
+            summary={p1Summary}
+            opponentSpeed={p2Summary?.speed}
+            isOpponent={false}
+            results={p1Results}
+          />
+          <MoveResults
+            pokemonName={effectiveP2Label}
+            summary={p2Summary}
+            opponentSpeed={p1Summary?.speed}
+            isOpponent={true}
+            results={p2Results}
+            onAbilityChange={setP2Ability}
+          />
         </div>
       </div>
 
