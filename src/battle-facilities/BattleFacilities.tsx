@@ -1,14 +1,12 @@
 import { useState, useMemo, useEffect } from 'react'
 import {
-  buildPokemon,
-  makeFieldSide,
-  calculateAllMovesGen3,
-  findSetByLabel,
-  POKEDEX_ADV,
+  emeraldConfig,
+  type GameConfig,
+  type SideState,
+  type PokeSummary,
   type DamageResult,
-  type SetdexEntry,
-} from './gen3calc'
-import teamData from '../data/battle-facilities/setteam_em.json'
+  type SideStateFieldDef,
+} from './battleCalculator'
 import {
   parsePokepaste,
   loadRibbonMasterSet,
@@ -18,199 +16,68 @@ import {
   deleteAllCustomSets,
   type StoredSet,
 } from './pokepaste'
-import battleTrainers from '../data/battle-facilities/battle_trainers_em.json'
-import trainerPokemon from '../data/battle-facilities/trainer_pokemon_em.json'
 import './battle-facilities.css'
 
-const TEAM_EM = teamData as Record<string, Record<string, SetdexEntry>>
+// Currently hardcoded to Emerald; will be swappable per-game later
+const config: GameConfig = emeraldConfig
 
-/* ===== Facility mode configuration ===== */
-interface FacilityMode {
-  id: string
-  label: string
-  defaultLevel: number
-  format: 'singles' | 'doubles'
-  teamUrl: string
-  teamName: string
-  pokemon: string[] // set labels from TEAM_EM to show in the P1 selector
-}
-
-const FACILITY_MODES: FacilityMode[] = [
-  {
-    id: 'lvl50-singles',
-    label: 'Lvl 50 Singles',
-    defaultLevel: 50,
-    format: 'singles',
-    teamUrl: 'https://pokepast.es/9f353ea337d86f51',
-    teamName: "Venty's Latios / Metagross / Suicune",
-    pokemon: ['Latios (Singles)', 'Metagross (Singles)', 'Suicune (Singles)'],
-  },
-  {
-    id: 'open-singles',
-    label: 'Open Singles',
-    defaultLevel: 60,
-    format: 'singles',
-    teamUrl: 'https://pokepast.es/9f353ea337d86f51',
-    teamName: "Venty's Latios / Metagross / Suicune",
-    pokemon: ['Latios (Singles)', 'Metagross (Singles)', 'Suicune (Singles)'],
-  },
-  {
-    id: 'lvl50-doubles',
-    label: 'Lvl 50 Doubles',
-    defaultLevel: 50,
-    format: 'doubles',
-    teamUrl: 'https://pokepast.es/773249e264806f40',
-    teamName: "Venty's Explosive doubles team",
-    pokemon: ['Latios (Doubles)', 'Metagross (Doubles)', 'Snorlax (Doubles)', 'Gengar (Doubles)'],
-  },
-  {
-    id: 'open-doubles',
-    label: 'Open Doubles',
-    defaultLevel: 60,
-    format: 'doubles',
-    teamUrl: 'https://pokepast.es/773249e264806f40',
-    teamName: "Venty's Explosive doubles team",
-    pokemon: ['Latios (Doubles)', 'Metagross (Doubles)', 'Snorlax (Doubles)', 'Gengar (Doubles)'],
-  },
-]
-
-const BATTLE_RANGES = ['1-7', '8-14', '15-21', '22-28', '29-35', '36-42', '43-49', '50+'] as const
-
-function getBattleRange(battleNum: number): string {
-  if (battleNum >= 50) return '50+'
-  const index = Math.floor((battleNum - 1) / 7)
-  return BATTLE_RANGES[index] || '1-7'
-}
-
-function battleRangeMatches(battleNum: number, range: string): boolean {
-  if (range.endsWith('+')) {
-    const start = parseInt(range.slice(0, -1), 10)
-    return Number.isFinite(start) && battleNum >= start
-  }
-  if (range.includes('-')) {
-    const [a, b] = range.split('-').map(v => parseInt(v, 10))
-    return Number.isFinite(a) && Number.isFinite(b) && battleNum >= a && battleNum <= b
-  }
-  const exact = parseInt(range, 10)
-  return Number.isFinite(exact) && battleNum === exact
-}
-
-function getIVsForTrainer(trainer: { number: number; name: string } | null): number {
-  if (!trainer) return 3
-  if (trainer.name === 'Anabel (Silver)') return 24
-  if (trainer.name === 'Anabel (Gold)') return 31
-
-  const n = trainer.number
-  if (n <= 100) return 3
-  if (n <= 120) return 6
-  if (n <= 140) return 9
-  if (n <= 160) return 12
-  if (n <= 180) return 15
-  if (n <= 200) return 18
-  if (n <= 220) return 21
-  if (n <= 300) return 31
-  return 31
-}
-
-function getTrainersForBattle(battleNum: number) {
-  return battleTrainers.filter(t =>
-    t.battleRanges.some(r => battleRangeMatches(battleNum, r))
-  )
-}
-
-function getPokemonForTrainer(trainerName: string): string[] {
-  return (trainerPokemon as Record<string, string[]>)[trainerName] || []
-}
-
-interface P1Option {
-  label: string
-  species: string
-  set: SetdexEntry
-}
-
-// Build a lookup from set label → { species, set } across all TEAM_EM entries
-const TEAM_EM_BY_LABEL: Record<string, { species: string; set: SetdexEntry }> = {}
-for (const [species, sets] of Object.entries(TEAM_EM)) {
-  for (const [label, set] of Object.entries(sets)) {
-    TEAM_EM_BY_LABEL[label] = { species, set }
-  }
-}
-
-function buildP1Options(ribbonMaster: StoredSet | null, pokemonSets: StoredSet[], modeLabels: string[]): P1Option[] {
-  const options: P1Option[] = []
-
-  if (ribbonMaster) {
-    options.push({ label: ribbonMaster.label, species: ribbonMaster.species, set: ribbonMaster.set })
-  }
-
-  for (const label of modeLabels) {
-    const entry = TEAM_EM_BY_LABEL[label]
-    if (!entry) continue
-    options.push({ label, species: entry.species, set: entry.set })
-  }
-
-  for (const cs of pokemonSets) {
-    options.push({ label: cs.label, species: cs.species, set: cs.set })
-  }
-
-  return options
-}
-
-const WEATHER_OPTIONS = ['', 'Sun', 'Rain', 'Sand', 'Hail'] as const
-const WEATHER_LABELS: Record<string, string> = { '': 'None', Sun: 'Sun', Rain: 'Rain', Sand: 'Sand', Hail: 'Hail' }
 const STATUS_OPTIONS = ['Healthy', 'Poisoned', 'Badly Poisoned', 'Burned', 'Paralyzed', 'Asleep', 'Frozen'] as const
 const STAT_NAMES = ['at', 'df', 'sa', 'sd', 'sp'] as const
 const STAT_LABELS: Record<string, string> = { at: 'Atk', df: 'Def', sa: 'SpA', sd: 'SpD', sp: 'Spe' }
+const EV_LABELS: Record<string, string> = { hp: 'HP', at: 'Atk', df: 'Def', sa: 'SpA', sd: 'SpD', sp: 'Spe' }
 
-interface SideState {
-  isReflect: boolean
-  isLightScreen: boolean
-  isHelpingHand: boolean
-  isCharge: boolean
-  isSeeded: boolean
-  spikes: number
-  boosts: Record<string, number>
-  curHP: number
-  maxHP: number
-  status: string
-}
-
-function defaultSideState(): SideState {
-  return {
-    isReflect: false,
-    isLightScreen: false,
-    isHelpingHand: false,
-    isCharge: false,
-    isSeeded: false,
-    spikes: 0,
-    boosts: { at: 0, df: 0, sa: 0, sd: 0, sp: 0 },
-    curHP: 0,
-    maxHP: 0,
-    status: 'Healthy',
-  }
+function formatEvs(evs: Partial<Record<string, number>>): string {
+  return Object.entries(evs)
+    .filter(([, v]) => v && v > 0)
+    .map(([k, v]) => `${v} ${EV_LABELS[k] ?? k}`)
+    .join(' / ')
 }
 
 function BattleStatusAccordion({
-  label, side, onChange, open, onToggle,
+  label, side, level, onLevelChange, onChange, open, onToggle, fieldDefs,
 }: {
   label: string
   side: SideState
+  level: number
+  onLevelChange: (lvl: number) => void
   onChange: (s: SideState) => void
   open: boolean
   onToggle: () => void
+  fieldDefs: SideStateFieldDef[]
 }) {
   const setBoost = (stat: string, val: number) => {
     onChange({ ...side, boosts: { ...side.boosts, [stat]: Math.max(-6, Math.min(6, val)) } })
   }
 
+  // Group fields by row number
+  const rows = new Map<number, SideStateFieldDef[]>()
+  for (const f of fieldDefs) {
+    const row = f.row ?? 0
+    if (!rows.has(row)) rows.set(row, [])
+    rows.get(row)!.push(f)
+  }
+  const sortedRows = [...rows.entries()].sort(([a], [b]) => a - b)
+
   return (
     <div className="bf-accordion">
       <button className="bf-accordion-toggle" onClick={onToggle}>
         {open ? '\u25BE' : '\u25B8'} {label} Status
+        <span className="bf-level-badge">Lv. {level}</span>
         {side.maxHP > 0 && <span className="bf-hp-badge">{side.curHP}/{side.maxHP} HP</span>}
       </button>
       {open && (
         <div className="bf-accordion-body">
+          <div className="bf-status-row">
+            <span className="bf-status-label">Level</span>
+            <input
+              type="number"
+              min={1}
+              max={100}
+              value={level}
+              onChange={e => onLevelChange(Math.max(1, Math.min(100, parseInt(e.target.value) || 1)))}
+              className="bf-level-input"
+            />
+          </div>
           <div className="bf-status-row">
             <span className="bf-status-label">HP</span>
             <input
@@ -244,39 +111,33 @@ function BattleStatusAccordion({
               ))}
             </div>
           </div>
-          <div className="bf-status-row">
-            <label className={`bf-checkbox-label${side.isReflect ? ' bf-checkbox-active' : ''}`}>
-              <input type="checkbox" checked={side.isReflect} onChange={e => onChange({ ...side, isReflect: e.target.checked })} />
-              Reflect
-            </label>
-            <label className={`bf-checkbox-label${side.isLightScreen ? ' bf-checkbox-active' : ''}`}>
-              <input type="checkbox" checked={side.isLightScreen} onChange={e => onChange({ ...side, isLightScreen: e.target.checked })} />
-              Light Screen
-            </label>
-          </div>
-          <div className="bf-status-row">
-            <label className={`bf-checkbox-label${side.isHelpingHand ? ' bf-checkbox-active' : ''}`}>
-              <input type="checkbox" checked={side.isHelpingHand} onChange={e => onChange({ ...side, isHelpingHand: e.target.checked })} />
-              Helping Hand
-            </label>
-            <label className={`bf-checkbox-label${side.isCharge ? ' bf-checkbox-active' : ''}`}>
-              <input type="checkbox" checked={side.isCharge} onChange={e => onChange({ ...side, isCharge: e.target.checked })} />
-              Charge
-            </label>
-            <label className={`bf-checkbox-label${side.isSeeded ? ' bf-checkbox-active' : ''}`}>
-              <input type="checkbox" checked={side.isSeeded} onChange={e => onChange({ ...side, isSeeded: e.target.checked })} />
-              Leech Seed
-            </label>
-          </div>
-          <div className="bf-status-row">
-            <span className="bf-status-label">Spikes</span>
-            <select value={side.spikes} onChange={e => onChange({ ...side, spikes: parseInt(e.target.value) })}>
-              <option value={0}>0</option>
-              <option value={1}>1</option>
-              <option value={2}>2</option>
-              <option value={3}>3</option>
-            </select>
-          </div>
+          {sortedRows.map(([rowNum, fields]) => (
+            <div key={rowNum} className="bf-status-row">
+              {fields.map(f => {
+                if (f.type === 'checkbox') {
+                  return (
+                    <label key={f.key} className={`bf-checkbox-label${side[f.key] ? ' bf-checkbox-active' : ''}`}>
+                      <input type="checkbox" checked={!!side[f.key]} onChange={e => onChange({ ...side, [f.key]: e.target.checked })} />
+                      {f.label}
+                    </label>
+                  )
+                }
+                if (f.type === 'select') {
+                  return (
+                    <span key={f.key} className="bf-status-row">
+                      <span className="bf-status-label">{f.label}</span>
+                      <select value={side[f.key]} onChange={e => onChange({ ...side, [f.key]: parseInt(e.target.value) })}>
+                        {f.options.map(o => (
+                          <option key={o.value} value={o.value}>{o.label}</option>
+                        ))}
+                      </select>
+                    </span>
+                  )
+                }
+                return null
+              })}
+            </div>
+          ))}
           <div className="bf-boosts-row">
             {STAT_NAMES.map(stat => (
               <div key={stat} className="bf-boost-item">
@@ -296,52 +157,6 @@ function BattleStatusAccordion({
       )}
     </div>
   )
-}
-
-const EV_LABELS: Record<string, string> = { hp: 'HP', at: 'Atk', df: 'Def', sa: 'SpA', sd: 'SpD', sp: 'Spe' }
-
-interface PokeSummary {
-  evs: Partial<Record<string, number>>
-  nature: string
-  ability: string
-  abilities: string[]
-  item: string
-  speed: number
-}
-
-function formatEvs(evs: Partial<Record<string, number>>): string {
-  return Object.entries(evs)
-    .filter(([, v]) => v && v > 0)
-    .map(([k, v]) => `${v} ${EV_LABELS[k] ?? k}`)
-    .join(' / ')
-}
-
-function getModifiedStat(stat: number, mod: number): number {
-  if (mod > 0) return Math.floor(stat * (2 + mod) / 2)
-  if (mod < 0) return Math.floor(stat * 2 / (2 - mod))
-  return stat
-}
-
-function calcCurrentSpeed(pokemon: ReturnType<typeof buildPokemon>, weather: string): number {
-  // Start from computed stat (already includes IVs/EVs/nature)
-  let speed = pokemon.stats.sp
-  // Apply stage boosts
-  speed = getModifiedStat(speed, pokemon.boosts.sp)
-  // Status: paralysis (Gen 3 is 1/4)
-  if (pokemon.status === 'Paralyzed') {
-    speed = Math.floor(speed / 4)
-  }
-  // Item modifiers
-  if (pokemon.item === 'Macho Brace') {
-    speed = Math.floor(speed / 2)
-  }
-  // Weather-based abilities
-  if (weather === 'Sun' && pokemon.curAbility === 'Chlorophyll') {
-    speed *= 2
-  } else if (weather === 'Rain' && pokemon.curAbility === 'Swift Swim') {
-    speed *= 2
-  }
-  return speed
 }
 
 function MoveResults({ pokemonName, summary, opponentSpeed, isOpponent = false, results, onAbilityChange }: { pokemonName: string; summary?: PokeSummary; opponentSpeed?: number; isOpponent?: boolean; results: DamageResult[]; onAbilityChange?: (ability: string) => void }) {
@@ -441,9 +256,9 @@ export default function BattleFacilities() {
   const [ribbonMasterSet, setRibbonMasterSet] = useState<StoredSet | null>(loadRibbonMasterSet)
   const [pokemonSets, setPokemonSets] = useState<StoredSet[]>(loadPokemonSets)
 
-  const [mode, setMode] = useState<FacilityMode>(FACILITY_MODES[0])
+  const [mode, setMode] = useState(config.modes[0])
 
-  const p1Options = useMemo(() => buildP1Options(ribbonMasterSet, pokemonSets, mode.pokemon), [ribbonMasterSet, pokemonSets, mode])
+  const p1Options = useMemo(() => config.buildP1Options(ribbonMasterSet, pokemonSets, mode.pokemon), [ribbonMasterSet, pokemonSets, mode])
   const [p1Label, setP1Label] = useState(p1Options[0]?.label ?? '')
   const [battleNum, setBattleNum] = useState(1)
   const [trainerKey, setTrainerKey] = useState('')
@@ -451,12 +266,15 @@ export default function BattleFacilities() {
 
   // Field & battle status
   const [weather, setWeather] = useState('')
-  const [level, setLevel] = useState(mode.defaultLevel)
-  const [p1Side, setP1Side] = useState<SideState>(defaultSideState)
-  const [p2Side, setP2Side] = useState<SideState>(defaultSideState)
+  const [p1Level, setP1Level] = useState(mode.defaultLevel)
+  const [p2Level, setP2Level] = useState(mode.defaultLevel)
+  const [p1Side, setP1Side] = useState<SideState>(config.defaultSideState())
+  const [p2Side, setP2Side] = useState<SideState>(config.defaultSideState())
   const [p1StatusOpen, setP1StatusOpen] = useState(false)
   const [p2StatusOpen, setP2StatusOpen] = useState(false)
   const [p2Ability, setP2Ability] = useState('')
+
+  const currentRibbon = mode.ribbon
 
   const selectedP1 = useMemo(() => {
     return p1Options.find(o => o.label === p1Label) ?? p1Options[0] ?? null
@@ -469,7 +287,7 @@ export default function BattleFacilities() {
       setSaveError('Invalid moveset. Needs species, nature, and at least one move.')
       return
     }
-    if (!POKEDEX_ADV[parsed.species]) {
+    if (!config.isValidSpecies(parsed.species)) {
       setSaveError(`Unknown species: ${parsed.species}`)
       return
     }
@@ -495,7 +313,7 @@ export default function BattleFacilities() {
   }
 
   // Trainers available for current battle number
-  const availableTrainers = useMemo(() => getTrainersForBattle(battleNum), [battleNum])
+  const availableTrainers = useMemo(() => config.getTrainersForBattle(battleNum), [battleNum])
 
   const selectedTrainer = useMemo(() => {
     const match = availableTrainers.find(t => `${t.class} ${t.name}` === trainerKey)
@@ -507,7 +325,7 @@ export default function BattleFacilities() {
 
   const availableSets = useMemo(() => {
     if (!selectedTrainer) return []
-    return getPokemonForTrainer(selectedTrainer.name)
+    return config.getPokemonForTrainer(selectedTrainer.name)
   }, [selectedTrainer])
 
   const effectiveP2Label = useMemo(() => {
@@ -515,72 +333,28 @@ export default function BattleFacilities() {
     return availableSets[0] || ''
   }, [availableSets, p2Label])
 
-  const p2Ivs = getIVsForTrainer(selectedTrainer)
+  const p2Ivs = config.getIVsForTrainer(selectedTrainer)
 
   const emptyCalc = { p1Results: [] as DamageResult[], p2Results: [] as DamageResult[], p1MaxHP: 0, p2MaxHP: 0, p1Summary: undefined as PokeSummary | undefined, p2Summary: undefined as PokeSummary | undefined }
   const { p1Results, p2Results, p1MaxHP, p2MaxHP, p1Summary, p2Summary } = useMemo(() => {
     if (!selectedP1 || !effectiveP2Label) return emptyCalc
 
-    const p1Dex = POKEDEX_ADV[selectedP1.species]
-    if (!p1Dex) return emptyCalc
-    const p1 = buildPokemon(selectedP1.species, p1Dex, selectedP1.set, selectedP1.label, level)
+    const result = config.runCalc({
+      p1: selectedP1,
+      p2Label: effectiveP2Label,
+      p1Level,
+      p2Level,
+      p2Ivs,
+      p2Ability,
+      weather,
+      p1Side,
+      p2Side,
+      format: mode.format,
+    })
 
-    const p2Match = findSetByLabel(effectiveP2Label)
-    if (!p2Match) return emptyCalc
-    const p2Dex = POKEDEX_ADV[p2Match.species]
-    if (!p2Dex) return emptyCalc
-    const p2 = buildPokemon(p2Match.species, p2Dex, p2Match.set, effectiveP2Label, level, p2Ivs)
-
-    // Apply selected opponent ability (if user overrode it)
-    if (p2Ability && p2Dex.abilities.includes(p2Ability)) {
-      p2.ability = p2Ability
-      p2.curAbility = p2Ability
-    }
-
-    // Apply boosts
-    for (const stat of STAT_NAMES) {
-      p1.boosts[stat] = p1Side.boosts[stat]
-      p2.boosts[stat] = p2Side.boosts[stat]
-    }
-
-    // Apply current HP and status
-    if (p1Side.curHP > 0) p1.curHP = p1Side.curHP
-    if (p2Side.curHP > 0) p2.curHP = p2Side.curHP
-    p1.status = p1Side.status
-    p2.status = p2Side.status
-
-    const p1FieldSide = makeFieldSide({
-      isReflect: p1Side.isReflect, isLightScreen: p1Side.isLightScreen,
-      isHelpingHand: p1Side.isHelpingHand, isCharge: p1Side.isCharge,
-      isSeeded: p1Side.isSeeded, spikes: p1Side.spikes,
-    }, mode.format, weather)
-    const p2FieldSide = makeFieldSide({
-      isReflect: p2Side.isReflect, isLightScreen: p2Side.isLightScreen,
-      isHelpingHand: p2Side.isHelpingHand, isCharge: p2Side.isCharge,
-      isSeeded: p2Side.isSeeded, spikes: p2Side.spikes,
-    }, mode.format, weather)
-
-    const [p1Results, p2Results] = calculateAllMovesGen3(p1, p2, p1FieldSide, p2FieldSide)
-
-    const p1Summary: PokeSummary = {
-      evs: p1.evs,
-      nature: p1.nature,
-      ability: p1.ability,
-      abilities: [p1.ability],
-      item: p1.item,
-      speed: calcCurrentSpeed(p1, weather),
-    }
-    const p2Summary: PokeSummary = {
-      evs: p2.evs,
-      nature: p2.nature,
-      ability: p2.ability,
-      abilities: p2Dex.abilities,
-      item: p2.item,
-      speed: calcCurrentSpeed(p2, weather),
-    }
-
-    return { p1Results, p2Results, p1MaxHP: p1.maxHP, p2MaxHP: p2.maxHP, p1Summary, p2Summary }
-  }, [selectedP1, effectiveP2Label, p2Ivs, weather, level, p1Side, p2Side, mode, p2Ability])
+    if (!result) return emptyCalc
+    return result
+  }, [selectedP1, effectiveP2Label, p1Level, p2Level, p2Ivs, weather, p1Side, p2Side, mode, p2Ability])
 
   // Sync maxHP/curHP when pokemon changes
   useEffect(() => {
@@ -596,11 +370,11 @@ export default function BattleFacilities() {
   // Reset ability override when opponent pokemon changes
   useEffect(() => { setP2Ability('') }, [effectiveP2Label])
 
-  const handleModeChange = (newMode: FacilityMode) => {
+  const handleModeChange = (newMode: typeof mode) => {
     setMode(newMode)
-    setLevel(newMode.defaultLevel)
-    // Reset P1 selection to first available pokemon in the new mode
-    const newOptions = buildP1Options(ribbonMasterSet, pokemonSets, newMode.pokemon)
+    setP1Level(newMode.defaultLevel)
+    setP2Level(newMode.defaultLevel)
+    const newOptions = config.buildP1Options(ribbonMasterSet, pokemonSets, newMode.pokemon)
     if (newOptions.length > 0 && !newOptions.find(o => o.label === p1Label)) {
       setP1Label(newOptions[0].label)
     }
@@ -610,23 +384,23 @@ export default function BattleFacilities() {
     const clamped = Math.max(1, newNum)
     setBattleNum(clamped)
     setWeather('')
-    setP1Side(s => ({ ...defaultSideState(), maxHP: s.maxHP, curHP: s.maxHP }))
-    setP2Side(s => ({ ...defaultSideState(), maxHP: s.maxHP, curHP: s.maxHP }))
+    setP1Side(s => ({ ...config.defaultSideState(), maxHP: s.maxHP, curHP: s.maxHP }))
+    setP2Side(s => ({ ...config.defaultSideState(), maxHP: s.maxHP, curHP: s.maxHP }))
     setP1StatusOpen(false)
     setP2StatusOpen(false)
   }
 
   return (
     <div className="bf-card">
-      <div className="bf-header">Emerald - Battle Frontier Tower</div>
+      <div className="bf-header">{config.title}</div>
 
       <div className="bf-body">
         <div className="bf-radio-group bf-mode-selector">
           <div className="bf-radio-buttons">
-            {FACILITY_MODES.map((m, i) => (
+            {config.modes.map((m, i) => (
               <label
                 key={m.id}
-                className={`bf-radio-btn${mode.id === m.id ? ' bf-radio-btn-active' : ''}${i === 0 ? ' bf-radio-btn-left' : ''}${i === FACILITY_MODES.length - 1 ? ' bf-radio-btn-right' : ''}`}
+                className={`bf-radio-btn${mode.id === m.id ? ' bf-radio-btn-active' : ''}${i === 0 ? ' bf-radio-btn-left' : ''}${i === config.modes.length - 1 ? ' bf-radio-btn-right' : ''}`}
               >
                 <input
                   type="radio"
@@ -641,6 +415,17 @@ export default function BattleFacilities() {
             ))}
           </div>
         </div>
+        {currentRibbon && (
+          <p className="bf-ribbon-note">
+            <img src={currentRibbon.icon} alt={currentRibbon.name} className="bf-ribbon-icon" />
+            {currentRibbon.description}
+          </p>
+        )}
+        {currentRibbon && currentRibbon.warning && (
+          <p className="bf-warning">
+            {currentRibbon.warning}
+          </p>
+        )}
         <p className="bf-team-note">
           Recommended team: <a href={mode.teamUrl} target="_blank" rel="noopener noreferrer">{mode.teamName}</a>
         </p>
@@ -704,7 +489,7 @@ export default function BattleFacilities() {
                   onClick={() => handleBattleNumChange(1)}
                   title="Reset to battle 1"
                 >Reset</button>
-                <span className="bf-range-badge">{getBattleRange(battleNum)}</span>
+                <span className="bf-range-badge">{config.getBattleRange(battleNum)}</span>
                 <span className="bf-range-badge">{p2Ivs} IVs</span>
               </div>
               <div className="bf-trainer-row">
@@ -758,24 +543,13 @@ export default function BattleFacilities() {
       <div className="bf-battle-status">
         <h3>Battle Status</h3>
         <div className="bf-global-row">
-          <div className="bf-level-row">
-            <label>Level</label>
-            <input
-              type="number"
-              min={1}
-              max={100}
-              value={level}
-              onChange={e => setLevel(Math.max(1, Math.min(100, parseInt(e.target.value) || 1)))}
-              className="bf-level-input"
-            />
-          </div>
           <div className="bf-radio-group">
             <span className="bf-radio-group-label">Weather</span>
             <div className="bf-radio-buttons">
-              {WEATHER_OPTIONS.map((w, i) => (
+              {config.weatherOptions.map((w, i) => (
                 <label
                   key={w}
-                  className={`bf-radio-btn${weather === w ? ' bf-radio-btn-active' : ''}${i === 0 ? ' bf-radio-btn-left' : ''}${i === WEATHER_OPTIONS.length - 1 ? ' bf-radio-btn-right' : ''}`}
+                  className={`bf-radio-btn${weather === w ? ' bf-radio-btn-active' : ''}${i === 0 ? ' bf-radio-btn-left' : ''}${i === config.weatherOptions.length - 1 ? ' bf-radio-btn-right' : ''}`}
                 >
                   <input
                     type="radio"
@@ -785,7 +559,7 @@ export default function BattleFacilities() {
                     onChange={() => setWeather(w)}
                     className="bf-radio-input"
                   />
-                  {WEATHER_LABELS[w]}
+                  {config.weatherLabels[w]}
                 </label>
               ))}
             </div>
@@ -795,16 +569,22 @@ export default function BattleFacilities() {
           <BattleStatusAccordion
             label="Your"
             side={p1Side}
+            level={p1Level}
+            onLevelChange={setP1Level}
             onChange={setP1Side}
             open={p1StatusOpen}
             onToggle={() => setP1StatusOpen(o => !o)}
+            fieldDefs={config.sideStateFields}
           />
           <BattleStatusAccordion
             label="Opponent"
             side={p2Side}
+            level={p2Level}
+            onLevelChange={setP2Level}
             onChange={setP2Side}
             open={p2StatusOpen}
             onToggle={() => setP2StatusOpen(o => !o)}
+            fieldDefs={config.sideStateFields}
           />
         </div>
       </div>

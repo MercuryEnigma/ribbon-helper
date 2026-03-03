@@ -36,6 +36,28 @@
   color: #666;
 }
 
+.bf-ribbon-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.bf-ribbon-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.bf-warning {
+  margin: 0 0 0.75rem;
+  padding: 0.5rem 0.6rem;
+  color: #8c3a12;
+  font-size: 0.9rem;
+}
+
 .bf-matchup {
   display: flex;
   gap: 1.5rem;
@@ -408,11 +430,21 @@
 }
 
 .bf-hp-badge {
-  margin-left: auto;
+  margin-left: 0.4rem;
   font-size: 0.8rem;
   font-weight: normal;
   color: #888;
   padding: 0.1rem 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.bf-level-badge {
+  margin-left: auto;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #888;
+  padding: 0.12rem 0.35rem;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
