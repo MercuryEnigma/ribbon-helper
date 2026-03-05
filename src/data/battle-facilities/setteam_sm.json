@@ -1,0 +1,137 @@
+{
+  "Pheromosa": {
+    "Pheromosa (Doubles)": {
+      "evs": {
+        "at": 252,
+        "sa": 4,
+        "sp": 252
+      },
+      "ivs": {
+        "df": 0,
+        "sd": 0
+      },
+      "moves": [
+        "Low Kick",
+        "Lunge",
+        "Ice Beam",
+        "Protect"
+      ],
+      "nature": "Naughty",
+      "item": "Focus Sash"
+    },
+    "Pheromosa (Sectonia)": {
+      "evs": {
+        "at": 252,
+        "sa": 4,
+        "sp": 252
+      },
+      "moves": [
+        "High Jump Kick",
+        "Ice Beam",
+        "U-turn",
+        "Poison Jab"
+      ],
+      "nature": "Naive",
+      "item": "Focus Sash"
+    }
+  },
+  "Tapu Lele": {
+    "Tapu Lele (Doubles)": {
+      "evs": {
+        "hp": 252,
+        "df": 180,
+        "sa": 4,
+        "sd": 4,
+        "sp": 68
+      },
+      "ivs": {
+        "at": 0
+      },
+      "moves": [
+        "Psychic",
+        "Moonblast",
+        "Taunt",
+        "Protect"
+      ],
+      "nature": "Modest",
+      "item": "Psychium Z"
+    },
+    "Tapu Lele (Wendy Koopa)": {
+      "evs": {
+        "sa": 252,
+        "sd": 4,
+        "sp": 252
+      },
+      "ivs": {
+        "at": 0,
+        "sa": 30,
+        "sp": 30
+      },
+      "moves": [
+        "Psychic",
+        "Moonblast",
+        "Hidden Power Fire",
+        "Focus Blast"
+      ],
+      "nature": "Timid",
+      "item": "Life Orb"
+    }
+  },
+  "Salamence-Mega": {
+    "Salamence-Mega (Doubles)": {
+      "evs": {
+        "hp": 4,
+        "at": 252,
+        "df": 4,
+        "sd": 12,
+        "sp": 236
+      },
+      "moves": [
+        "Double-Edge",
+        "Earthquake",
+        "Flamethrower",
+        "Protect"
+      ],
+      "nature": "Jolly",
+      "item": "Salamencite"
+    }
+  },
+  "Aegislash": {
+    "Aegislash (Doubles)": {
+      "evs": {
+        "hp": 252,
+        "sa": 220,
+        "sd": 36
+      },
+      "ivs": {
+        "at": 0,
+        "sp": 0
+      },
+      "moves": [
+        "Shadow Ball",
+        "Flash Cannon",
+        "Wide Guard",
+        "King's Shield"
+      ],
+      "nature": "Quiet",
+      "item": "Leftovers"
+    }
+  },
+  "Celesteela": {
+    "Celesteela (Ventysteela)": {
+      "evs": {
+        "hp": 4,
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Heavy Slam",
+        "Seed Bomb",
+        "Earthquake",
+        "Stone Edge"
+      ],
+      "nature": "Adamant",
+      "item": "Choice Band"
+    }
+  }
+}

@@ -1,11 +1,14 @@
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo, useEffect, useCallback } from 'react'
 import {
   emeraldConfig,
+  sunMoonConfig,
   type GameConfig,
   type SideState,
   type PokeSummary,
   type DamageResult,
   type SideStateFieldDef,
+  type P1Option,
+  type Trainer,
 } from './battleCalculator'
 import {
   parsePokepaste,
@@ -18,8 +21,7 @@ import {
 } from './pokepaste'
 import './battle-facilities.css'
 
-// Currently hardcoded to Emerald; will be swappable per-game later
-const config: GameConfig = emeraldConfig
+const GAME_CONFIGS: GameConfig[] = [emeraldConfig, sunMoonConfig]
 
 const STATUS_OPTIONS = ['Healthy', 'Poisoned', 'Badly Poisoned', 'Burned', 'Paralyzed', 'Asleep', 'Frozen'] as const
 const STAT_NAMES = ['at', 'df', 'sa', 'sd', 'sp'] as const
@@ -34,11 +36,12 @@ function formatEvs(evs: Partial<Record<string, number>>): string {
 }
 
 function BattleStatusAccordion({
-  label, side, level, onLevelChange, onChange, open, onToggle, fieldDefs,
+  label, side, level, maxLevel, onLevelChange, onChange, open, onToggle, fieldDefs,
 }: {
   label: string
   side: SideState
   level: number
+  maxLevel?: number
   onLevelChange: (lvl: number) => void
   onChange: (s: SideState) => void
   open: boolean
@@ -72,9 +75,13 @@ function BattleStatusAccordion({
             <input
               type="number"
               min={1}
-              max={100}
+              max={maxLevel ?? 100}
               value={level}
-              onChange={e => onLevelChange(Math.max(1, Math.min(100, parseInt(e.target.value) || 1)))}
+              onChange={e => {
+                const n = parseInt(e.target.value) || 1
+                const cap = maxLevel ?? 100
+                onLevelChange(Math.max(1, Math.min(cap, n)))
+              }}
               className="bf-level-input"
             />
           </div>
@@ -250,6 +257,7 @@ function MoveResults({ pokemonName, summary, opponentSpeed, isOpponent = false, 
 }
 
 export default function BattleFacilities() {
+  const [config, setConfig] = useState<GameConfig>(emeraldConfig)
   const [pasteText, setPasteText] = useState('')
   const [isRibbonMaster, setIsRibbonMaster] = useState(true)
   const [saveError, setSaveError] = useState('')
@@ -258,7 +266,12 @@ export default function BattleFacilities() {
 
   const [mode, setMode] = useState(config.modes[0])
 
-  const p1Options = useMemo(() => config.buildP1Options(ribbonMasterSet, pokemonSets, mode.pokemon), [ribbonMasterSet, pokemonSets, mode])
+  function clampLevelToMode(lvl: number, targetMode: typeof mode): number {
+    const cap = targetMode.maxLevel ?? 100
+    return Math.max(1, Math.min(cap, lvl))
+  }
+
+  const p1Options = useMemo(() => config.buildP1Options(ribbonMasterSet, pokemonSets, mode.pokemon), [config, ribbonMasterSet, pokemonSets, mode])
   const [p1Label, setP1Label] = useState(p1Options[0]?.label ?? '')
   const [battleNum, setBattleNum] = useState(1)
   const [trainerKey, setTrainerKey] = useState('')
@@ -266,8 +279,10 @@ export default function BattleFacilities() {
 
   // Field & battle status
   const [weather, setWeather] = useState('')
-  const [p1Level, setP1Level] = useState(mode.defaultLevel)
-  const [p2Level, setP2Level] = useState(mode.defaultLevel)
+  const [terrain, setTerrain] = useState('')
+  const [gravity, setGravity] = useState(false)
+  const [p1Level, setP1Level] = useState(() => clampLevelToMode(mode.defaultLevel, mode))
+  const [p2Level, setP2Level] = useState(() => clampLevelToMode(mode.defaultLevel, mode))
   const [p1Side, setP1Side] = useState<SideState>(config.defaultSideState())
   const [p2Side, setP2Side] = useState<SideState>(config.defaultSideState())
   const [p1StatusOpen, setP1StatusOpen] = useState(false)
@@ -277,8 +292,29 @@ export default function BattleFacilities() {
   const currentRibbon = mode.ribbon
 
   const selectedP1 = useMemo(() => {
-    return p1Options.find(o => o.label === p1Label) ?? p1Options[0] ?? null
+    return p1Options.find((o: P1Option) => o.label === p1Label) ?? p1Options[0] ?? null
   }, [p1Options, p1Label])
+
+  const handleGameChange = useCallback((newConfig: GameConfig) => {
+    setConfig(newConfig)
+    const newMode = newConfig.modes[0]
+    setMode(newMode)
+    setP1Level(clampLevelToMode(newMode.defaultLevel, newMode))
+    setP2Level(clampLevelToMode(newMode.defaultLevel, newMode))
+    setBattleNum(1)
+    setTrainerKey('')
+    setP2Label('')
+    setWeather('')
+    setTerrain('')
+    setGravity(false)
+    setP1Side(newConfig.defaultSideState())
+    setP2Side(newConfig.defaultSideState())
+    setP1StatusOpen(false)
+    setP2StatusOpen(false)
+    setP2Ability('')
+    const newOptions = newConfig.buildP1Options(ribbonMasterSet, pokemonSets, newMode.pokemon)
+    setP1Label(newOptions[0]?.label ?? '')
+  }, [ribbonMasterSet, pokemonSets])
 
   const handleSave = () => {
     setSaveError('')
@@ -313,10 +349,10 @@ export default function BattleFacilities() {
   }
 
   // Trainers available for current battle number
-  const availableTrainers = useMemo(() => config.getTrainersForBattle(battleNum), [battleNum])
+  const availableTrainers = useMemo(() => config.getTrainersForBattle(battleNum, mode.id), [config, battleNum, mode])
 
   const selectedTrainer = useMemo(() => {
-    const match = availableTrainers.find(t => `${t.class} ${t.name}` === trainerKey)
+    const match = availableTrainers.find((t: Trainer) => `${t.class} ${t.name}` === trainerKey)
     if (match) return match
     return availableTrainers[0] || null
   }, [availableTrainers, trainerKey])
@@ -326,7 +362,7 @@ export default function BattleFacilities() {
   const availableSets = useMemo(() => {
     if (!selectedTrainer) return []
     return config.getPokemonForTrainer(selectedTrainer.name)
-  }, [selectedTrainer])
+  }, [config, selectedTrainer])
 
   const effectiveP2Label = useMemo(() => {
     if (availableSets.includes(p2Label)) return p2Label
@@ -347,6 +383,8 @@ export default function BattleFacilities() {
       p2Ivs,
       p2Ability,
       weather,
+      terrain,
+      gravity,
       p1Side,
       p2Side,
       format: mode.format,
@@ -354,45 +392,68 @@ export default function BattleFacilities() {
 
     if (!result) return emptyCalc
     return result
-  }, [selectedP1, effectiveP2Label, p1Level, p2Level, p2Ivs, weather, p1Side, p2Side, mode, p2Ability])
+  }, [config, selectedP1, effectiveP2Label, p1Level, p2Level, p2Ivs, weather, terrain, gravity, p1Side, p2Side, mode, p2Ability])
 
-  // Sync maxHP/curHP when pokemon changes
+  // Sync maxHP/curHP when pokemon changes or side state resets
   useEffect(() => {
     if (p1MaxHP > 0 && p1MaxHP !== p1Side.maxHP) {
       setP1Side(s => ({ ...s, maxHP: p1MaxHP, curHP: p1MaxHP }))
     }
-  }, [p1MaxHP])
+  }, [p1MaxHP, p1Side.maxHP])
   useEffect(() => {
     if (p2MaxHP > 0 && p2MaxHP !== p2Side.maxHP) {
       setP2Side(s => ({ ...s, maxHP: p2MaxHP, curHP: p2MaxHP }))
     }
-  }, [p2MaxHP])
+  }, [p2MaxHP, p2Side.maxHP])
   // Reset ability override when opponent pokemon changes
   useEffect(() => { setP2Ability('') }, [effectiveP2Label])
 
   const handleModeChange = (newMode: typeof mode) => {
     setMode(newMode)
-    setP1Level(newMode.defaultLevel)
-    setP2Level(newMode.defaultLevel)
+    setP1Level(clampLevelToMode(newMode.defaultLevel, newMode))
+    setP2Level(clampLevelToMode(newMode.defaultLevel, newMode))
     const newOptions = config.buildP1Options(ribbonMasterSet, pokemonSets, newMode.pokemon)
-    if (newOptions.length > 0 && !newOptions.find(o => o.label === p1Label)) {
+    if (newOptions.length > 0 && !newOptions.find((o: P1Option) => o.label === p1Label)) {
       setP1Label(newOptions[0].label)
     }
+    // Clamp battle number to the new mode's max (if any)
+    handleBattleNumChange(Math.min(battleNum, newMode.maxBattle ?? battleNum), newMode)
   }
 
-  const handleBattleNumChange = (newNum: number) => {
-    const clamped = Math.max(1, newNum)
+  const handleBattleNumChange = (newNum: number, targetMode: typeof mode = mode) => {
+    const upper = targetMode.maxBattle ?? Infinity
+    const clamped = Math.min(Math.max(1, newNum), upper)
     setBattleNum(clamped)
     setWeather('')
+    setTerrain('')
+    setGravity(false)
     setP1Side(s => ({ ...config.defaultSideState(), maxHP: s.maxHP, curHP: s.maxHP }))
     setP2Side(s => ({ ...config.defaultSideState(), maxHP: s.maxHP, curHP: s.maxHP }))
     setP1StatusOpen(false)
     setP2StatusOpen(false)
   }
 
+  const handleP1LevelChange = (lvl: number) => setP1Level(clampLevelToMode(lvl, mode))
+  const handleP2LevelChange = (lvl: number) => setP2Level(clampLevelToMode(lvl, mode))
+
+  const handleGameSelect = (title: string) => {
+    const gc = GAME_CONFIGS.find(g => g.title === title)
+    if (gc) handleGameChange(gc)
+  }
+
   return (
     <div className="bf-card">
-      <div className="bf-header">{config.title}</div>
+      <div className="bf-header">
+        <select
+          className="bf-header-select"
+          value={config.title}
+          onChange={e => handleGameSelect(e.target.value)}
+        >
+          {GAME_CONFIGS.map(gc => (
+            <option key={gc.title} value={gc.title}>{gc.title}</option>
+          ))}
+        </select>
+      </div>
 
       <div className="bf-body">
         <div className="bf-radio-group bf-mode-selector">
@@ -415,20 +476,22 @@ export default function BattleFacilities() {
             ))}
           </div>
         </div>
+        {currentRibbon && currentRibbon.warning && (
+          <p className="bf-warning">
+            {currentRibbon.warning}
+          </p>
+        )}
         {currentRibbon && (
           <p className="bf-ribbon-note">
             <img src={currentRibbon.icon} alt={currentRibbon.name} className="bf-ribbon-icon" />
             {currentRibbon.description}
           </p>
         )}
-        {currentRibbon && currentRibbon.warning && (
-          <p className="bf-warning">
-            {currentRibbon.warning}
+        {mode.teamUrl && (
+          <p className="bf-team-note">
+            Recommended team: <a href={mode.teamUrl} target="_blank" rel="noopener noreferrer">{mode.teamName}</a>
           </p>
         )}
-        <p className="bf-team-note">
-          Recommended team: <a href={mode.teamUrl} target="_blank" rel="noopener noreferrer">{mode.teamName}</a>
-        </p>
         <div className="bf-matchup">
           <div className="bf-side">
             <div className="bf-p1-selector">
@@ -460,7 +523,7 @@ export default function BattleFacilities() {
                   value={selectedP1?.label ?? ''}
                   onChange={e => setP1Label(e.target.value)}
                 >
-                  {p1Options.map(opt => (
+                  {p1Options.map((opt: P1Option) => (
                     <option key={opt.label} value={opt.label}>{opt.label}</option>
                   ))}
                 </select>
@@ -475,6 +538,7 @@ export default function BattleFacilities() {
                 <input
                   type="number"
                   min={1}
+                  max={mode.maxBattle ?? undefined}
                   value={battleNum}
                   onChange={e => handleBattleNumChange(parseInt(e.target.value) || 1)}
                   className="bf-battle-num-input"
@@ -498,7 +562,7 @@ export default function BattleFacilities() {
                   value={effectiveTrainerKey}
                   onChange={e => setTrainerKey(e.target.value)}
                 >
-                  {availableTrainers.map(t => {
+                  {availableTrainers.map((t: Trainer) => {
                     const key = `${t.class} ${t.name}`
                     return <option key={key} value={key}>{key}</option>
                   })}
@@ -564,13 +628,47 @@ export default function BattleFacilities() {
               ))}
             </div>
           </div>
+          {config.terrainOptions && config.terrainLabels && (
+            <div className="bf-radio-group">
+              <span className="bf-radio-group-label">Terrain</span>
+              <div className="bf-radio-buttons">
+                {config.terrainOptions.map((t, i) => (
+                  <label
+                    key={t}
+                    className={`bf-radio-btn${terrain === t ? ' bf-radio-btn-active' : ''}${i === 0 ? ' bf-radio-btn-left' : ''}${i === config.terrainOptions!.length - 1 ? ' bf-radio-btn-right' : ''}`}
+                  >
+                    <input
+                      type="radio"
+                      name="terrain"
+                      value={t}
+                      checked={terrain === t}
+                      onChange={() => setTerrain(t)}
+                      className="bf-radio-input"
+                    />
+                    {config.terrainLabels![t]}
+                  </label>
+                ))}
+              </div>
+            </div>
+          )}
+          {config.hasGravity && (
+            <label className={`bf-checkbox-label${gravity ? ' bf-checkbox-active' : ''}`}>
+              <input
+                type="checkbox"
+                checked={gravity}
+                onChange={() => setGravity(g => !g)}
+              />
+              Gravity
+            </label>
+          )}
         </div>
         <div className="bf-status-sides">
           <BattleStatusAccordion
             label="Your"
             side={p1Side}
             level={p1Level}
-            onLevelChange={setP1Level}
+            maxLevel={mode.maxLevel}
+            onLevelChange={handleP1LevelChange}
             onChange={setP1Side}
             open={p1StatusOpen}
             onToggle={() => setP1StatusOpen(o => !o)}
@@ -580,7 +678,8 @@ export default function BattleFacilities() {
             label="Opponent"
             side={p2Side}
             level={p2Level}
-            onLevelChange={setP2Level}
+            maxLevel={mode.maxLevel}
+            onLevelChange={handleP2LevelChange}
             onChange={setP2Side}
             open={p2StatusOpen}
             onToggle={() => setP2StatusOpen(o => !o)}

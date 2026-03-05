@@ -120,6 +120,7 @@ export interface Pokemon {
 export interface FieldSide {
   format: string
   weather: string
+  isProtect: boolean
   isReflect: boolean
   isLightScreen: boolean
   isHelpingHand: boolean
@@ -220,6 +221,7 @@ export function makeFieldSide(overrides: Partial<FieldSide> = {}, format = "sing
   return {
     format,
     weather,
+    isProtect: false,
     isReflect: false,
     isLightScreen: false,
     isHelpingHand: false,
@@ -280,6 +282,12 @@ export function getDamageResultGen3(
 
   if (move.bp === 0) {
     result.description = `${attacker.name} ${move.name} vs. ${defender.name}`
+    return result
+  }
+
+  // Protect blocks all damage
+  if (field.isProtect) {
+    result.description = `${attacker.name} ${move.name} vs. ${defender.name} (Protected)`
     return result
   }
 

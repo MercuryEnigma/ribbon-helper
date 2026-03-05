@@ -14,8 +14,49 @@
   color: #fff;
   font-size: 1.35rem;
   font-weight: 700;
-  padding: 0.6rem 1.2rem;
+  padding: 0.6rem 0.9rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bf-header-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #5cad5c;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23ffffff' d='M1 1l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 12px 8px;
+  color: #ffffff;
+  border: 2px solid #316931;
+  border-radius: 10px;
+  padding: 0.55rem 2.7rem 0.55rem 0.95rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  position: relative;
+  width: 66%;
+  max-width: 520px;
+  min-width: 260px;
+  margin-right: auto;
+  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.bf-header-select:hover,
+.bf-header-select:focus {
+  background-color: #6bbd6b;
+  border-color: #285528;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+
+.bf-header-select::-ms-expand {
+  display: none;
 }
 
 /* ===== White body (selectors) ===== */
@@ -52,10 +93,17 @@
 }
 
 .bf-warning {
-  margin: 0 0 0.75rem;
-  padding: 0.5rem 0.6rem;
-  color: #8c3a12;
+  display: block;
+  width: fit-content;
+  margin: 0 auto 0.85rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  background: #ffe8e8;
+  color: #5a1f1f;
+  border: 1px solid #f08a8a;
   font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .bf-matchup {
@@ -112,8 +160,17 @@
   color: #555;
   border: 1px solid #bbb;
   border-radius: 3px;
-  padding: 0 0.2rem;
-  background: transparent;
+  padding: 0.15rem 0.25rem;
+  background: #e8f3e8;
+  transition: background 0.12s ease, border-color 0.12s ease;
+  cursor: pointer;
+}
+
+.bf-ability-select:hover,
+.bf-ability-select:focus {
+  background: #d9e8d9;
+  border-color: #a8a8a8;
+  outline: none;
 }
 
 .bf-results-table {
@@ -236,6 +293,20 @@
   flex: 1;
   padding: 0.3rem 0.4rem;
   font-size: 0.95rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background: #f0f0f0;
+  transition: background 0.12s ease, border-color 0.12s ease;
+  cursor: pointer;
+}
+
+.bf-trainer-row select:hover,
+.bf-pokemon-row select:hover,
+.bf-trainer-row select:focus,
+.bf-pokemon-row select:focus {
+  background: #e0e0e0;
+  border-color: #a8a8a8;
+  outline: none;
 }
 
 .bf-custom-input {
@@ -481,8 +552,20 @@
 }
 
 .bf-status-row select {
-  padding: 0.2rem 0.3rem;
+  padding: 0.25rem 0.35rem;
   font-size: 0.85rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background: #f0f0f0;
+  transition: background 0.12s ease, border-color 0.12s ease;
+  cursor: pointer;
+}
+
+.bf-status-row select:hover,
+.bf-status-row select:focus {
+  background: #e0e0e0;
+  border-color: #a8a8a8;
+  outline: none;
 }
 
 .bf-boosts-row {
