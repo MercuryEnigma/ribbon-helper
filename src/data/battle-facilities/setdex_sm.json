@@ -14559,5 +14559,807 @@
       "nature": "Timid",
       "item": "Focus Band"
     }
+  },
+  "Mega Abomasnow": {
+    "Abomasnow-4-Mega": {
+      "evs": {
+        "hp": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Blizzard",
+        "Focus Blast",
+        "Protect",
+        "Ice Shard"
+      ],
+      "nature": "Quiet",
+      "item": "Abomasite"
+    }
+  },
+  "Mega Absol": {
+    "Absol-4-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Sucker Punch",
+        "Megahorn",
+        "Play Rough",
+        "Stone Edge"
+      ],
+      "nature": "Jolly",
+      "item": "Absolite"
+    }
+  },
+  "Mega Aerodactyl": {
+    "Aerodactyl-3-Mega": {
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Sky Drop",
+        "Iron Head",
+        "Fire Fang",
+        "Thunder Fang"
+      ],
+      "nature": "Adamant",
+      "item": "Aerodactylite"
+    }
+  },
+  "Mega Aggron": {
+    "Aggron-3-Mega": {
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Heavy Slam",
+        "Dragon Rush",
+        "Thunder Wave",
+        "Stone Edge"
+      ],
+      "nature": "Adamant",
+      "item": "Aggronite"
+    }
+  },
+  "Mega Alakazam": {
+    "Alakazam-3-Mega": {
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Psychic",
+        "Focus Blast",
+        "Shadow Ball",
+        "Grass Knot"
+      ],
+      "nature": "Timid",
+      "item": "Alakazite"
+    }
+  },
+  "Mega Altaria": {
+    "Altaria-3-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Dragon Dance",
+        "Dragon Rush",
+        "Giga Impact",
+        "Earthquake"
+      ],
+      "nature": "Jolly",
+      "item": "Altarianite"
+    }
+  },
+  "Mega Ampharos": {
+    "Ampharos-4-Mega": {
+      "evs": {
+        "hp": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Thunder",
+        "Focus Blast",
+        "Dragon Pulse",
+        "Confuse Ray"
+      ],
+      "nature": "Quiet",
+      "item": "Ampharosite"
+    }
+  },
+  "Mega Audino": {
+    "Audino-3-Mega": {
+      "evs": {
+        "df": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Flamethrower",
+        "Healing Wish",
+        "Calm Mind",
+        "Draining Kiss"
+      ],
+      "nature": "Bold",
+      "item": "Audinite"
+    }
+  },
+  "Mega Banette": {
+    "Banette-3-Mega": {
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Gunk Shot",
+        "Shadow Sneak",
+        "Will-O-Wisp",
+        "Destiny Bond"
+      ],
+      "nature": "Adamant",
+      "item": "Banettite"
+    },
+    "Banette-4-Mega": {
+      "evs": {
+        "hp": 252,
+        "df": 252
+      },
+      "moves": [
+        "Shadow Claw",
+        "Will-O-Wisp",
+        "Sucker Punch",
+        "Gunk Shot"
+      ],
+      "nature": "Impish",
+      "item": "Banettite"
+    }
+  },
+  "Mega Beedrill": {
+    "Beedrill-3-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Poison Jab",
+        "U-turn",
+        "Brick Break",
+        "X-Scissor"
+      ],
+      "nature": "Jolly",
+      "item": "Beedrillite"
+    },
+    "Beedrill-4-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Poison Jab",
+        "Pin Missile",
+        "Brick Break",
+        "Protect"
+      ],
+      "nature": "Adamant",
+      "item": "Beedrillite"
+    }
+  },
+  "Mega Blastoise": {
+    "Blastoise-2-Mega": {
+      "evs": {
+        "hp": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Water Pulse",
+        "Aura Sphere",
+        "Dark Pulse",
+        "Dragon Pulse"
+      ],
+      "nature": "Quiet",
+      "item": "Blastoisinite"
+    }
+  },
+  "Mega Blaziken": {
+    "Blaziken-4-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Night Slash",
+        "Flare Blitz",
+        "Stone Edge",
+        "Brave Bird"
+      ],
+      "nature": "Adamant",
+      "item": "Blazikenite"
+    }
+  },
+  "Mega Camerupt": {
+    "Camerupt-3-Mega": {
+      "evs": {
+        "hp": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Earth Power",
+        "Ancient Power",
+        "Fire Blast",
+        "Will-O-Wisp"
+      ],
+      "nature": "Quiet",
+      "item": "Cameruptite"
+    },
+    "Camerupt-4-Mega": {
+      "evs": {
+        "hp": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Earth Power",
+        "Heat Wave",
+        "Flash Cannon",
+        "Protect"
+      ],
+      "nature": "Quiet",
+      "item": "Cameruptite"
+    }
+  },
+  "Mega Charizard Y": {
+    "Charizard-3-Mega": {
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Heat Wave",
+        "Solar Beam",
+        "Air Slash",
+        "Focus Blast"
+      ],
+      "nature": "Timid",
+      "item": "Charizardite Y"
+    }
+  },
+  "Mega Charizard X": {
+    "Charizard-4-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Dragon Rush",
+        "Flare Blitz",
+        "Dragon Dance",
+        "Rock Slide"
+      ],
+      "nature": "Jolly",
+      "item": "Charizardite X"
+    }
+  },
+  "Mega Gallade": {
+    "Gallade-4-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Psycho Cut",
+        "Close Combat",
+        "Rock Slide",
+        "Destiny Bond"
+      ],
+      "nature": "Jolly",
+      "item": "Galladite"
+    }
+  },
+  "Mega Garchomp": {
+    "Garchomp-4-Mega": {
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Sandstorm",
+        "Stone Edge",
+        "Earthquake",
+        "Dragon Claw"
+      ],
+      "nature": "Adamant",
+      "item": "Garchompite"
+    }
+  },
+  "Mega Gardevoir": {
+    "Gardevoir-4-Mega": {
+      "evs": {
+        "hp": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Psychic",
+        "Hyper Beam",
+        "Shadow Ball",
+        "Focus Blast"
+      ],
+      "nature": "Modest",
+      "item": "Gardevoirite"
+    }
+  },
+  "Mega Gengar": {
+    "Gengar-4-Mega": {
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Sludge Bomb",
+        "Thunderbolt",
+        "Shadow Ball",
+        "Destiny Bond"
+      ],
+      "nature": "Timid",
+      "item": "Gengarite"
+    }
+  },
+  "Mega Glalie": {
+    "Glalie-4-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Earthquake",
+        "Explosion",
+        "Protect",
+        "Freeze-Dry"
+      ],
+      "nature": "Naive",
+      "item": "Glalitite"
+    }
+  },
+  "Mega Gyarados": {
+    "Gyarados-4-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Dragon Dance",
+        "Waterfall",
+        "Stone Edge",
+        "Crunch"
+      ],
+      "nature": "Jolly",
+      "item": "Gyaradosite"
+    }
+  },
+  "Mega Heracross": {
+    "Heracross-4-Mega": {
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Pin Missile",
+        "Rock Blast",
+        "Bullet Seed",
+        "Close Combat"
+      ],
+      "nature": "Adamant",
+      "item": "Heracronite"
+    }
+  },
+  "Mega Houndoom": {
+    "Houndoom-4-Mega": {
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Fire Blast",
+        "Dark Pulse",
+        "Solar Beam",
+        "Sunny Day"
+      ],
+      "nature": "Timid",
+      "item": "Houndoominite"
+    }
+  },
+  "Mega Kangaskhan": {
+    "Kangaskhan-3-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Fake Out",
+        "Facade",
+        "Rock Slide",
+        "Sucker Punch"
+      ],
+      "nature": "Jolly",
+      "item": "Kangaskhanite"
+    },
+    "Kangaskhan-4-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Fake Out",
+        "Double-Edge",
+        "Earthquake",
+        "Sucker Punch"
+      ],
+      "nature": "Jolly",
+      "item": "Kangaskhanite"
+    }
+  },
+  "Mega Latias": {
+    "Latias-4-Mega": {
+      "evs": {
+        "hp": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Dragon Pulse",
+        "Roost",
+        "Thunder Wave",
+        "Psychic"
+      ],
+      "nature": "Modest",
+      "item": "Latiasite"
+    }
+  },
+  "Mega Latios": {
+    "Latios-4-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Zen Headbutt",
+        "Earthquake",
+        "Dragon Dance",
+        "Dragon Claw"
+      ],
+      "nature": "Adamant",
+      "item": "Latiosite"
+    }
+  },
+  "Mega Lopunny": {
+    "Lopunny-3-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Sweet Kiss",
+        "Fake Out",
+        "High Jump Kick",
+        "Ice Punch"
+      ],
+      "nature": "Jolly",
+      "item": "Lopunnite"
+    },
+    "Lopunny-4-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "High Jump Kick",
+        "Quick Attack",
+        "Ice Punch",
+        "Double Hit"
+      ],
+      "nature": "Jolly",
+      "item": "Lopunnite"
+    }
+  },
+  "Mega Lucario": {
+    "Lucario-3-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Close Combat",
+        "Rock Slide",
+        "Blaze Kick",
+        "Bullet Punch"
+      ],
+      "nature": "Jolly",
+      "item": "Lucarionite"
+    }
+  },
+  "Mega Manectric": {
+    "Manectric-3-Mega": {
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Thunderbolt",
+        "Overheat",
+        "Snarl",
+        "Quick Attack"
+      ],
+      "nature": "Timid",
+      "item": "Manectite"
+    }
+  },
+  "Mega Mawile": {
+    "Mawile-3-Mega": {
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Play Rough",
+        "Iron Head",
+        "Sucker Punch",
+        "Swords Dance"
+      ],
+      "nature": "Adamant",
+      "item": "Mawilite"
+    },
+    "Mawile-4-Mega": {
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Sucker Punch",
+        "Play Rough",
+        "Fire Fang",
+        "Stone Edge"
+      ],
+      "nature": "Adamant",
+      "item": "Mawilite"
+    }
+  },
+  "Mega Medicham": {
+    "Medicham-4-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "High Jump Kick",
+        "Psycho Cut",
+        "Fake Out",
+        "Detect"
+      ],
+      "nature": "Adamant",
+      "item": "Medichamite"
+    }
+  },
+  "Mega Metagross": {
+    "Metagross-4-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Zen Headbutt",
+        "Meteor Mash",
+        "Brick Break",
+        "Bullet Punch"
+      ],
+      "nature": "Jolly",
+      "item": "Metagrossite"
+    }
+  },
+  "Mega Pidgeot": {
+    "Pidgeot-3-Mega": {
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Hurricane",
+        "Hyper Beam",
+        "Tailwind",
+        "Quick Attack"
+      ],
+      "nature": "Timid",
+      "item": "Pidgeotite"
+    },
+    "Pidgeot-4-Mega": {
+      "evs": {
+        "df": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Hurricane",
+        "Feather Dance",
+        "Roost",
+        "Hyper Beam"
+      ],
+      "nature": "Modest",
+      "item": "Pidgeotite"
+    }
+  },
+  "Mega Pinsir": {
+    "Pinsir-3-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "X-Scissor",
+        "Superpower",
+        "Stone Edge",
+        "Thrash"
+      ],
+      "nature": "Jolly",
+      "item": "Pinsirite"
+    }
+  },
+  "Mega Sableye": {
+    "Sableye-3-Mega": {
+      "evs": {
+        "hp": 252,
+        "df": 252
+      },
+      "moves": [
+        "Foul Play",
+        "Recover",
+        "Will-O-Wisp",
+        "Snarl"
+      ],
+      "nature": "Bold",
+      "item": "Sablenite"
+    }
+  },
+  "Mega Salamence": {
+    "Salamence-4-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Dragon Rush",
+        "Crunch",
+        "Earthquake",
+        "Double-Edge"
+      ],
+      "nature": "Jolly",
+      "item": "Salamencite"
+    }
+  },
+  "Mega Sceptile": {
+    "Sceptile-4-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Leaf Blade",
+        "Dual Chop",
+        "Earthquake",
+        "Rock Slide"
+      ],
+      "nature": "Jolly",
+      "item": "Sceptilite"
+    }
+  },
+  "Mega Scizor": {
+    "Scizor-4-Mega": {
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "X-Scissor",
+        "Aerial Ace",
+        "Roost",
+        "Bullet Punch"
+      ],
+      "nature": "Adamant",
+      "item": "Scizorite"
+    }
+  },
+  "Mega Sharpedo": {
+    "Sharpedo-3-Mega": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Crunch",
+        "Ice Fang",
+        "Aqua Jet",
+        "Poison Jab"
+      ],
+      "nature": "Adamant",
+      "item": "Sharpedonite"
+    }
+  },
+  "Mega Slowbro": {
+    "Slowbro-4-Mega": {
+      "evs": {
+        "hp": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Psychic",
+        "Surf",
+        "Blizzard",
+        "Trick Room"
+      ],
+      "nature": "Quiet",
+      "item": "Slowbronite"
+    }
+  },
+  "Mega Steelix": {
+    "Steelix-4-Mega": {
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Gyro Ball",
+        "Earthquake",
+        "Stone Edge",
+        "Sandstorm"
+      ],
+      "nature": "Adamant",
+      "item": "Steelixite"
+    }
+  },
+  "Mega Swampert": {
+    "Swampert-3-Mega": {
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Earthquake",
+        "Rock Slide",
+        "Waterfall",
+        "Rain Dance"
+      ],
+      "nature": "Adamant",
+      "item": "Swampertite"
+    }
+  },
+  "Mega Tyranitar": {
+    "Tyranitar-4-Mega": {
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Stone Edge",
+        "Earthquake",
+        "Ice Fang",
+        "Payback"
+      ],
+      "nature": "Brave",
+      "item": "Tyranitarite"
+    }
+  },
+  "Mega Venusaur": {
+    "Venusaur-4-Mega": {
+      "evs": {
+        "hp": 252,
+        "df": 252
+      },
+      "moves": [
+        "Synthesis",
+        "Substitute",
+        "Sludge Bomb",
+        "Giga Drain"
+      ],
+      "nature": "Bold",
+      "item": "Venusaurite"
+    }
   }
 }

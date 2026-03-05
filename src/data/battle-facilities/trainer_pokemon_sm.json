@@ -229,7 +229,10 @@
     "Tornadus-2",
     "Thundurus-2",
     "Latias-2",
-    "Latios-2"
+    "Latios-2",
+    "Moltres-1-Mega",
+    "Latias-2-Mega",
+    "Latios-2-Mega"
   ],
   "Brady": [
     "Azelf-1",
@@ -247,7 +250,8 @@
     "Heatran-2",
     "Cresselia-2",
     "Landorus-2",
-    "Regigigas-2"
+    "Regigigas-2",
+    "Heatran-2-Mega"
   ],
   "Sophia": [
     "Hawlucha-1",
@@ -467,7 +471,8 @@
     "Thundurus-4",
     "Latios-4",
     "Cresselia-4",
-    "Regigigas-4"
+    "Regigigas-4",
+    "Latios-4-Mega"
   ],
   "Inez": [
     "Uxie-1",
@@ -503,7 +508,10 @@
     "Tornadus-2",
     "Thundurus-2",
     "Latias-2",
-    "Latios-2"
+    "Latios-2",
+    "Moltres-1-Mega",
+    "Latias-2-Mega",
+    "Latios-2-Mega"
   ],
   "Ferdinand": [
     "Carbink-1",
@@ -886,7 +894,16 @@
     "Empoleon-4",
     "Serperior-4",
     "Emboar-4",
-    "Samurott-4"
+    "Samurott-4",
+    "Chesnaught-4-Mega",
+    "Delphox-4-Mega",
+    "Charizard-3-Mega",
+    "Sceptile-3-Mega",
+    "Swampert-3-Mega",
+    "Venusaur-4-Mega",
+    "Charizard-4-Mega",
+    "Sceptile-4-Mega",
+    "Blaziken-4-Mega"
   ],
   "Reina": [
     "Chesnaught-3",
@@ -931,7 +948,16 @@
     "Empoleon-4",
     "Serperior-4",
     "Emboar-4",
-    "Samurott-4"
+    "Samurott-4",
+    "Chesnaught-4-Mega",
+    "Delphox-4-Mega",
+    "Charizard-3-Mega",
+    "Sceptile-3-Mega",
+    "Swampert-3-Mega",
+    "Venusaur-4-Mega",
+    "Charizard-4-Mega",
+    "Sceptile-4-Mega",
+    "Blaziken-4-Mega"
   ],
   "Victor": [
     "Kommo-o-1",
@@ -967,7 +993,16 @@
     "Latios-4",
     "Heatran-4",
     "Cresselia-4",
-    "Landorus-4"
+    "Landorus-4",
+    "Goodra-4-Mega",
+    "Kommo-o-4-Mega",
+    "Tyranitar-4-Mega",
+    "Salamence-4-Mega",
+    "Metagross-4-Mega",
+    "Garchomp-4-Mega",
+    "Latias-4-Mega",
+    "Latios-4-Mega",
+    "Landorus-4-Mega"
   ],
   "Naya": [
     "Kommo-o-1",
@@ -1003,7 +1038,16 @@
     "Latios-4",
     "Heatran-4",
     "Cresselia-4",
-    "Landorus-4"
+    "Landorus-4",
+    "Goodra-4-Mega",
+    "Kommo-o-4-Mega",
+    "Tyranitar-4-Mega",
+    "Salamence-4-Mega",
+    "Metagross-4-Mega",
+    "Garchomp-4-Mega",
+    "Latias-4-Mega",
+    "Latios-4-Mega",
+    "Landorus-4-Mega"
   ],
   "Darla": [
     "Pyroar-1",
@@ -1144,7 +1188,8 @@
     "Heatran-2",
     "Cresselia-2",
     "Landorus-2",
-    "Regigigas-2"
+    "Regigigas-2",
+    "Heatran-2-Mega"
   ],
   "Fernanda": [
     "Articuno-3",
@@ -1166,7 +1211,9 @@
     "Tornadus-4",
     "Latias-4",
     "Heatran-4",
-    "Landorus-4"
+    "Landorus-4",
+    "Latias-4-Mega",
+    "Landorus-4-Mega"
   ],
   "Cleavant": [
     "Barbaracle-1",
@@ -1373,7 +1420,12 @@
     "Regirock-4",
     "Terrakion-4",
     "Cresselia-4",
-    "Probopass-4"
+    "Probopass-4",
+    "Aggron-3-Mega",
+    "Slowbro-4-Mega",
+    "Steelix-4-Mega",
+    "Tyranitar-4-Mega",
+    "Garchomp-4-Mega"
   ],
   "Stellan": [
     "Carbink-3",
@@ -1424,7 +1476,12 @@
     "Regirock-4",
     "Terrakion-4",
     "Cresselia-4",
-    "Probopass-4"
+    "Probopass-4",
+    "Aggron-3-Mega",
+    "Slowbro-4-Mega",
+    "Steelix-4-Mega",
+    "Tyranitar-4-Mega",
+    "Garchomp-4-Mega"
   ],
   "Percy": [
     "Trevenant-1",
@@ -1785,7 +1842,23 @@
     "Metagross-4",
     "Rotom-Mow-4",
     "Electivire-4",
-    "Electivire-4"
+    "Electivire-4",
+    "Mawile-3-Mega",
+    "Manectric-3-Mega",
+    "Alakazam-3-Mega",
+    "Porygon2-3-Mega",
+    "Lucario-3-Mega",
+    "Aggron-3-Mega",
+    "Medicham-4-Mega",
+    "Mawile-4-Mega",
+    "Ampharos-4-Mega",
+    "Scizor-4-Mega",
+    "Steelix-4-Mega",
+    "Porygon2-4-Mega",
+    "Gardevoir-4-Mega",
+    "Gallade-4-Mega",
+    "Metagross-4-Mega",
+    "Rotom-Mow-4-Mega"
   ],
   "Harding": [
     "Vikavolt-?",
@@ -1856,7 +1929,21 @@
     "Metagross-4",
     "Rotom-Mow-4",
     "Electivire-4",
-    "Electivire-4"
+    "Electivire-4",
+    "Manectric-3-Mega",
+    "Alakazam-3-Mega",
+    "Porygon2-3-Mega",
+    "Lucario-3-Mega",
+    "Aggron-3-Mega",
+    "Medicham-4-Mega",
+    "Ampharos-4-Mega",
+    "Scizor-4-Mega",
+    "Steelix-4-Mega",
+    "Porygon2-4-Mega",
+    "Gardevoir-4-Mega",
+    "Gallade-4-Mega",
+    "Metagross-4-Mega",
+    "Rotom-Mow-4-Mega"
   ],
   "Darrel": [
     "Carbink-3",
@@ -1945,7 +2032,13 @@
     "Milotic-4",
     "Togekiss-4",
     "Rotom-Frost-4",
-    "Lickilicky-4"
+    "Lickilicky-4",
+    "Goodra-4-Mega",
+    "Pidgeot-3-Mega",
+    "Mawile-3-Mega",
+    "Altaria-3-Mega",
+    "Mawile-4-Mega",
+    "Gardevoir-4-Mega"
   ],
   "Jana": [
     "Carbink-3",
@@ -2032,7 +2125,11 @@
     "Milotic-4",
     "Togekiss-4",
     "Rotom-Frost-4",
-    "Lickilicky-4"
+    "Lickilicky-4",
+    "Goodra-4-Mega",
+    "Pidgeot-3-Mega",
+    "Altaria-3-Mega",
+    "Gardevoir-4-Mega"
   ],
   "Kass": [
     "Barbaracle-1",
@@ -2265,7 +2362,13 @@
     "Gyarados-4",
     "Arcanine-4",
     "Salamence-4",
-    "Rotom-Fan-4"
+    "Rotom-Fan-4",
+    "Mawile-3-Mega",
+    "Manectric-3-Mega",
+    "Arcanine-3-Mega",
+    "Mawile-4-Mega",
+    "Gyarados-4-Mega",
+    "Salamence-4-Mega"
   ],
   "Dustin": [
     "Incineroar-?",
@@ -2288,7 +2391,13 @@
     "Gyarados-4",
     "Arcanine-4",
     "Salamence-4",
-    "Rotom-Fan-4"
+    "Rotom-Fan-4",
+    "Mawile-3-Mega",
+    "Manectric-3-Mega",
+    "Arcanine-3-Mega",
+    "Mawile-4-Mega",
+    "Gyarados-4-Mega",
+    "Salamence-4-Mega"
   ],
   "Myrna": [
     "Barbaracle-1",
@@ -2574,7 +2683,19 @@
     "Tyranitar-4",
     "Hydreigon-4",
     "Slaking-4",
-    "Rotom-Mow-4"
+    "Rotom-Mow-4",
+    "Beedrill-3-Mega",
+    "Beedrill-4-Mega",
+    "Sableye-3-Mega",
+    "Sharpedo-3-Mega",
+    "Alakazam-3-Mega",
+    "Absol-4-Mega",
+    "Glalie-4-Mega",
+    "Gengar-4-Mega",
+    "Houndoom-4-Mega",
+    "Gyarados-4-Mega",
+    "Tyranitar-4-Mega",
+    "Rotom-Mow-4-Mega"
   ],
   "Edda": [
     "Barbaracle-3",
@@ -2654,7 +2775,19 @@
     "Tyranitar-4",
     "Hydreigon-4",
     "Slaking-4",
-    "Rotom-Mow-4"
+    "Rotom-Mow-4",
+    "Beedrill-3-Mega",
+    "Beedrill-4-Mega",
+    "Sableye-3-Mega",
+    "Sharpedo-3-Mega",
+    "Alakazam-3-Mega",
+    "Absol-4-Mega",
+    "Glalie-4-Mega",
+    "Gengar-4-Mega",
+    "Houndoom-4-Mega",
+    "Gyarados-4-Mega",
+    "Tyranitar-4-Mega",
+    "Rotom-Mow-4-Mega"
   ],
   "Parker": [
     "Hawlucha-1",
@@ -2957,7 +3090,8 @@
     "Weavile-4",
     "Aerodactyl-4",
     "Jolteon-4",
-    "Crobat-4"
+    "Crobat-4",
+    "Aerodactyl-3-Mega"
   ],
   "Buddy": [
     "Talonflame-3",
@@ -2979,7 +3113,8 @@
     "Weavile-4",
     "Aerodactyl-4",
     "Jolteon-4",
-    "Crobat-4"
+    "Crobat-4",
+    "Aerodactyl-3-Mega"
   ],
   "Hilario": [
     "Hawlucha-3",
@@ -3007,7 +3142,10 @@
     "Raikou-1",
     "Raikou-2",
     "Raikou-3",
-    "Raikou-4"
+    "Raikou-4",
+    "Sceptile-3-Mega",
+    "Alakazam-3-Mega",
+    "Sceptile-4-Mega"
   ],
   "Thamina": [
     "Hawlucha-3",
@@ -3035,7 +3173,10 @@
     "Raikou-1",
     "Raikou-2",
     "Raikou-3",
-    "Raikou-4"
+    "Raikou-4",
+    "Sceptile-3-Mega",
+    "Alakazam-3-Mega",
+    "Sceptile-4-Mega"
   ],
   "Ryder": [
     "Chesnaught-1",
@@ -3251,7 +3392,8 @@
     "Suicune-4",
     "Tornadus-4",
     "Rotom-Wash-4",
-    "Magmortar-4"
+    "Magmortar-4",
+    "Swampert-3-Mega"
   ],
   "Joaquin": [
     "Goodra-3",
@@ -3285,7 +3427,8 @@
     "Suicune-4",
     "Tornadus-4",
     "Rotom-Wash-4",
-    "Magmortar-4"
+    "Magmortar-4",
+    "Swampert-3-Mega"
   ],
   "Erix": [
     "Delphox-3",
@@ -3319,7 +3462,13 @@
     "Heatran-2",
     "Moltres-3",
     "Heatran-3",
-    "Moltres-4"
+    "Moltres-4",
+    "Charizard-3-Mega",
+    "Arcanine-3-Mega",
+    "Venusaur-4-Mega",
+    "Houndoom-4-Mega",
+    "Moltres-1-Mega",
+    "Heatran-2-Mega"
   ],
   "Marianne": [
     "Delphox-3",
@@ -3353,7 +3502,13 @@
     "Heatran-2",
     "Moltres-3",
     "Heatran-3",
-    "Moltres-4"
+    "Moltres-4",
+    "Charizard-3-Mega",
+    "Arcanine-3-Mega",
+    "Venusaur-4-Mega",
+    "Houndoom-4-Mega",
+    "Moltres-1-Mega",
+    "Heatran-2-Mega"
   ],
   "Cooper": [
     "Pyroar-1",
@@ -3818,7 +3973,14 @@
     "Latios-3",
     "Heatran-3",
     "Latios-4",
-    "Heatran-4"
+    "Heatran-4",
+    "Alakazam-3-Mega",
+    "Chandelure-3-Mega",
+    "Volcarona-3-Mega",
+    "Gengar-4-Mega",
+    "Latios-2-Mega",
+    "Heatran-2-Mega",
+    "Latios-4-Mega"
   ],
   "Ezra": [
     "Vikavolt-?",
@@ -3851,7 +4013,14 @@
     "Latios-3",
     "Heatran-3",
     "Latios-4",
-    "Heatran-4"
+    "Heatran-4",
+    "Alakazam-3-Mega",
+    "Chandelure-3-Mega",
+    "Volcarona-3-Mega",
+    "Gengar-4-Mega",
+    "Latios-2-Mega",
+    "Heatran-2-Mega",
+    "Latios-4-Mega"
   ],
   "Jairo": [
     "Avalugg-1",
@@ -3929,7 +4098,8 @@
     "Eelektross-2",
     "Snorlax-2",
     "Kingdra-2",
-    "Slaking-2"
+    "Slaking-2",
+    "Blastoise-2-Mega"
   ],
   "Xaden": [
     "Minior-1",
@@ -4118,7 +4288,14 @@
     "Snorlax-4",
     "Kingdra-4",
     "Rotom-Mow-4",
-    "Probopass-4"
+    "Probopass-4",
+    "Beedrill-3-Mega",
+    "Goodra-4-Mega",
+    "Beedrill-4-Mega",
+    "Aggron-3-Mega",
+    "Gengar-4-Mega",
+    "Steelix-4-Mega",
+    "Rotom-Mow-4-Mega"
   ],
   "Paulo": [
     "Carbink-3",
@@ -4199,7 +4376,14 @@
     "Snorlax-4",
     "Kingdra-4",
     "Rotom-Mow-4",
-    "Probopass-4"
+    "Probopass-4",
+    "Beedrill-3-Mega",
+    "Goodra-4-Mega",
+    "Beedrill-4-Mega",
+    "Aggron-3-Mega",
+    "Gengar-4-Mega",
+    "Steelix-4-Mega",
+    "Rotom-Mow-4-Mega"
   ],
   "Skip": [
     "Aurorus-1",
@@ -4289,7 +4473,8 @@
     "Porygon-Z-?",
     "Porygon-Z-2",
     "Milotic-2",
-    "Dragonite-2"
+    "Dragonite-2",
+    "Porygon2-2-Mega"
   ],
   "JT": [
     "Avalugg-1",
@@ -4445,7 +4630,12 @@
     "Sandslash-Alola-2",
     "Rotom-Frost-4",
     "Electivire-4",
-    "Electivire-4"
+    "Electivire-4",
+    "Manectric-3-Mega",
+    "Flygon-3-Mega",
+    "Aggron-3-Mega",
+    "Ampharos-4-Mega",
+    "Steelix-4-Mega"
   ],
   "Omar": [
     "Barbaracle-3",
@@ -4537,7 +4727,12 @@
     "Sandslash-Alola-2",
     "Rotom-Frost-4",
     "Electivire-4",
-    "Electivire-4"
+    "Electivire-4",
+    "Manectric-3-Mega",
+    "Flygon-3-Mega",
+    "Aggron-3-Mega",
+    "Ampharos-4-Mega",
+    "Steelix-4-Mega"
   ],
   "Henry": [
     "Pyroar-1",
@@ -4744,7 +4939,8 @@
     "Landorus-4",
     "Regigigas-4",
     "Electivire-4",
-    "Electivire-4"
+    "Electivire-4",
+    "Landorus-4-Mega"
   ],
   "Abel": [
     "Electivire-?",
@@ -4802,7 +4998,8 @@
     "Landorus-4",
     "Regigigas-4",
     "Electivire-4",
-    "Electivire-4"
+    "Electivire-4",
+    "Landorus-4-Mega"
   ],
   "Cheryl": [
     "Talonflame-1",
@@ -4952,7 +5149,8 @@
     "Beartic-2",
     "Walrein-2",
     "Lapras-2",
-    "Kingdra-2"
+    "Kingdra-2",
+    "Blastoise-2-Mega"
   ],
   "Verna": [
     "Rotom-Wash-1",
@@ -5002,7 +5200,8 @@
     "Beartic-2",
     "Walrein-2",
     "Lapras-2",
-    "Kingdra-2"
+    "Kingdra-2",
+    "Blastoise-2-Mega"
   ],
   "Donny": [
     "Azelf-1",
@@ -5048,7 +5247,14 @@
     "Latias-4",
     "Latios-4",
     "Heatran-4",
-    "Cresselia-4"
+    "Cresselia-4",
+    "Kommo-o-4-Mega",
+    "Moltres-1-Mega",
+    "Latias-2-Mega",
+    "Latios-2-Mega",
+    "Heatran-2-Mega",
+    "Latias-4-Mega",
+    "Latios-4-Mega"
   ],
   "Gracie": [
     "Azelf-1",
@@ -5094,7 +5300,14 @@
     "Latias-4",
     "Latios-4",
     "Heatran-4",
-    "Cresselia-4"
+    "Cresselia-4",
+    "Kommo-o-4-Mega",
+    "Moltres-1-Mega",
+    "Latias-2-Mega",
+    "Latios-2-Mega",
+    "Heatran-2-Mega",
+    "Latias-4-Mega",
+    "Latios-4-Mega"
   ],
   "Duncan": [
     "Greninja-1",
@@ -5180,7 +5393,8 @@
     "Archeops-2",
     "Tyranitar-2",
     "Metagross-2",
-    "Hydreigon-2"
+    "Hydreigon-2",
+    "Porygon2-2-Mega"
   ],
   "Nobunaga": [
     "Greninja-1",
@@ -5266,7 +5480,8 @@
     "Archeops-2",
     "Tyranitar-2",
     "Metagross-2",
-    "Hydreigon-2"
+    "Hydreigon-2",
+    "Porygon2-2-Mega"
   ],
   "Sam": [
     "Barbaracle-3",
@@ -5340,7 +5555,19 @@
     "Garchomp-4",
     "Hydreigon-4",
     "Magmortar-4",
-    "Lickilicky-4"
+    "Lickilicky-4",
+    "Kangaskhan-3-Mega",
+    "Pinsir-3-Mega",
+    "Aerodactyl-3-Mega",
+    "Porygon2-3-Mega",
+    "Volcarona-3-Mega",
+    "Kangaskhan-4-Mega",
+    "Scizor-4-Mega",
+    "Porygon2-4-Mega",
+    "Tyranitar-4-Mega",
+    "Salamence-4-Mega",
+    "Metagross-4-Mega",
+    "Garchomp-4-Mega"
   ],
   "Dennis": [
     "Barbaracle-3",
@@ -5414,7 +5641,19 @@
     "Garchomp-4",
     "Hydreigon-4",
     "Magmortar-4",
-    "Lickilicky-4"
+    "Lickilicky-4",
+    "Kangaskhan-3-Mega",
+    "Pinsir-3-Mega",
+    "Aerodactyl-3-Mega",
+    "Porygon2-3-Mega",
+    "Volcarona-3-Mega",
+    "Kangaskhan-4-Mega",
+    "Scizor-4-Mega",
+    "Porygon2-4-Mega",
+    "Tyranitar-4-Mega",
+    "Salamence-4-Mega",
+    "Metagross-4-Mega",
+    "Garchomp-4-Mega"
   ],
   "Arnon": [
     "Pyroar-2",
@@ -5498,7 +5737,12 @@
     "Tyranitar-3",
     "Metagross-3",
     "Garchomp-3",
-    "Hydreigon-3"
+    "Hydreigon-3",
+    "Beedrill-3-Mega",
+    "Pidgeot-3-Mega",
+    "Audino-3-Mega",
+    "Lopunny-3-Mega",
+    "Volcarona-3-Mega"
   ],
   "Alim": [
     "Pyroar-2",
@@ -5581,7 +5825,11 @@
     "Tyranitar-3",
     "Metagross-3",
     "Garchomp-3",
-    "Hydreigon-3"
+    "Hydreigon-3",
+    "Beedrill-3-Mega",
+    "Audino-3-Mega",
+    "Lopunny-3-Mega",
+    "Volcarona-3-Mega"
   ],
   "Zeno": [
     "Sylveon-2",
@@ -5697,7 +5945,12 @@
     "Tyranitar-3",
     "Metagross-3",
     "Garchomp-3",
-    "Hydreigon-3"
+    "Hydreigon-3",
+    "Sceptile-3-Mega",
+    "Pidgeot-3-Mega",
+    "Audino-3-Mega",
+    "Lopunny-3-Mega",
+    "Volcarona-3-Mega"
   ],
   "Calliope": [
     "Pyroar-2",
@@ -5778,7 +6031,11 @@
     "Tyranitar-3",
     "Metagross-3",
     "Garchomp-3",
-    "Hydreigon-3"
+    "Hydreigon-3",
+    "Sceptile-3-Mega",
+    "Audino-3-Mega",
+    "Lopunny-3-Mega",
+    "Volcarona-3-Mega"
   ],
   "Patrick": [
     "Comfey-3",
@@ -5812,7 +6069,12 @@
     "Regigigas-3",
     "Zapdos-4",
     "Entei-4",
-    "Regigigas-4"
+    "Regigigas-4",
+    "Charizard-3-Mega",
+    "Flygon-3-Mega",
+    "Volcarona-3-Mega",
+    "Charizard-4-Mega",
+    "Salamence-4-Mega"
   ],
   "Moe": [
     "Vaporeon-3",
@@ -5876,7 +6138,12 @@
     "Regigigas-3",
     "Zapdos-4",
     "Entei-4",
-    "Regigigas-4"
+    "Regigigas-4",
+    "Charizard-3-Mega",
+    "Flygon-3-Mega",
+    "Volcarona-3-Mega",
+    "Charizard-4-Mega",
+    "Salamence-4-Mega"
   ],
   "Nedry": [
     "Talonflame-2",
@@ -5977,7 +6244,17 @@
     "Malamar-3",
     "Togekiss-3",
     "Slaking-3",
-    "Raichu-2"
+    "Raichu-2",
+    "Mawile-3-Mega",
+    "Banette-3-Mega",
+    "Sableye-3-Mega",
+    "Sharpedo-3-Mega",
+    "Manectric-3-Mega",
+    "Camerupt-3-Mega",
+    "Kangaskhan-3-Mega",
+    "Chandelure-3-Mega",
+    "Lucario-3-Mega",
+    "Aggron-3-Mega"
   ],
   "Sheridan": [
     "Talonflame-2",
@@ -6073,7 +6350,16 @@
     "Malamar-3",
     "Togekiss-3",
     "Slaking-3",
-    "Raichu-2"
+    "Raichu-2",
+    "Banette-3-Mega",
+    "Sableye-3-Mega",
+    "Sharpedo-3-Mega",
+    "Manectric-3-Mega",
+    "Camerupt-3-Mega",
+    "Kangaskhan-3-Mega",
+    "Chandelure-3-Mega",
+    "Lucario-3-Mega",
+    "Aggron-3-Mega"
   ],
   "Kiernan": [
     "Lurantis-1",
@@ -6110,7 +6396,9 @@
     "Exeggutor-2",
     "Leafeon-3",
     "Tangrowth-3",
-    "Arcanine-3"
+    "Arcanine-3",
+    "Charizard-3-Mega",
+    "Arcanine-3-Mega"
   ],
   "Gertrude": [
     "Lurantis-1",
@@ -6147,7 +6435,9 @@
     "Exeggutor-2",
     "Leafeon-3",
     "Tangrowth-3",
-    "Arcanine-3"
+    "Arcanine-3",
+    "Charizard-3-Mega",
+    "Arcanine-3-Mega"
   ],
   "Dara": [
     "Talonflame-2",
@@ -6244,7 +6534,15 @@
     "Milotic-3",
     "Togekiss-3",
     "Slaking-3",
-    "Raichu-2"
+    "Raichu-2",
+    "Mawile-3-Mega",
+    "Banette-3-Mega",
+    "Sableye-3-Mega",
+    "Manectric-3-Mega",
+    "Camerupt-3-Mega",
+    "Kangaskhan-3-Mega",
+    "Aerodactyl-3-Mega",
+    "Porygon2-3-Mega"
   ],
   "Rada": [
     "Talonflame-2",
@@ -6336,7 +6634,14 @@
     "Milotic-3",
     "Togekiss-3",
     "Slaking-3",
-    "Raichu-2"
+    "Raichu-2",
+    "Banette-3-Mega",
+    "Sableye-3-Mega",
+    "Manectric-3-Mega",
+    "Camerupt-3-Mega",
+    "Kangaskhan-3-Mega",
+    "Aerodactyl-3-Mega",
+    "Porygon2-3-Mega"
   ],
   "Lori": [
     "Avalugg-3",
@@ -6370,7 +6675,9 @@
     "Shuckle-4",
     "Gigalith-4",
     "Steelix-4",
-    "Snorlax-4"
+    "Snorlax-4",
+    "Slowbro-4-Mega",
+    "Steelix-4-Mega"
   ],
   "Colby": [
     "Avalugg-3",
@@ -6404,7 +6711,9 @@
     "Shuckle-4",
     "Gigalith-4",
     "Steelix-4",
-    "Snorlax-4"
+    "Snorlax-4",
+    "Slowbro-4-Mega",
+    "Steelix-4-Mega"
   ],
   "Danby": [
     "Toxapex-3",
@@ -6436,7 +6745,9 @@
     "Bronzong-4",
     "Wishiwashi-4",
     "Palossand-4",
-    "Rhyperior-4"
+    "Rhyperior-4",
+    "Camerupt-3-Mega",
+    "Camerupt-4-Mega"
   ],
   "Izel": [
     "Toxapex-3",
@@ -6468,7 +6779,9 @@
     "Bronzong-4",
     "Wishiwashi-4",
     "Palossand-4",
-    "Rhyperior-4"
+    "Rhyperior-4",
+    "Camerupt-3-Mega",
+    "Camerupt-4-Mega"
   ],
   "Dyson": [
     "Hawlucha-2",
@@ -6545,7 +6858,11 @@
     "Gallade-3",
     "Mamoswine-3",
     "Lapras-3",
-    "Dragonite-3"
+    "Dragonite-3",
+    "Sceptile-3-Mega",
+    "Lopunny-3-Mega",
+    "Alakazam-3-Mega",
+    "Altaria-3-Mega"
   ],
   "Chip": [
     "Hawlucha-2",
@@ -6621,7 +6938,11 @@
     "Gallade-3",
     "Mamoswine-3",
     "Lapras-3",
-    "Dragonite-3"
+    "Dragonite-3",
+    "Sceptile-3-Mega",
+    "Lopunny-3-Mega",
+    "Alakazam-3-Mega",
+    "Altaria-3-Mega"
   ],
   "Zero": [
     "Golisopod-1",
@@ -6653,7 +6974,10 @@
     "Dusknoir-3",
     "Gyarados-3",
     "Arcanine-3",
-    "Salamence-3"
+    "Salamence-3",
+    "Beedrill-3-Mega",
+    "Mawile-3-Mega",
+    "Arcanine-3-Mega"
   ],
   "Donna": [
     "Barbaracle-3",
@@ -6735,7 +7059,16 @@
     "Mamoswine-4",
     "Lapras-4",
     "Rotom-Fan-4",
-    "Lickilicky-4"
+    "Lickilicky-4",
+    "Lopunny-3-Mega",
+    "Alakazam-3-Mega",
+    "Lucario-3-Mega",
+    "Medicham-4-Mega",
+    "Lopunny-4-Mega",
+    "Scizor-4-Mega",
+    "Heracross-4-Mega",
+    "Gardevoir-4-Mega",
+    "Gallade-4-Mega"
   ],
   "Gilroy": [
     "Barbaracle-3",
@@ -6817,7 +7150,16 @@
     "Mamoswine-4",
     "Lapras-4",
     "Rotom-Fan-4",
-    "Lickilicky-4"
+    "Lickilicky-4",
+    "Lopunny-3-Mega",
+    "Alakazam-3-Mega",
+    "Lucario-3-Mega",
+    "Medicham-4-Mega",
+    "Lopunny-4-Mega",
+    "Scizor-4-Mega",
+    "Heracross-4-Mega",
+    "Gardevoir-4-Mega",
+    "Gallade-4-Mega"
   ],
   "Julien": [
     "Clawitzer-2",
@@ -6892,7 +7234,10 @@
     "Eelektross-3",
     "Gyarados-3",
     "Salamence-3",
-    "Muk-2"
+    "Muk-2",
+    "Swampert-3-Mega",
+    "Pinsir-3-Mega",
+    "Flygon-3-Mega"
   ],
   "Sly": [
     "Clawitzer-2",
@@ -6966,7 +7311,10 @@
     "Eelektross-3",
     "Gyarados-3",
     "Salamence-3",
-    "Muk-2"
+    "Muk-2",
+    "Swampert-3-Mega",
+    "Pinsir-3-Mega",
+    "Flygon-3-Mega"
   ],
   "Noah": [
     "Golisopod-1",
@@ -7000,7 +7348,10 @@
     "Dusknoir-3",
     "Gyarados-3",
     "Arcanine-3",
-    "Salamence-3"
+    "Salamence-3",
+    "Beedrill-3-Mega",
+    "Mawile-3-Mega",
+    "Arcanine-3-Mega"
   ],
   "Larry": [
     "Pyroar-3",
@@ -7076,7 +7427,16 @@
     "Eelektross-4",
     "Gyarados-4",
     "Malamar-4",
-    "Magmortar-4"
+    "Magmortar-4",
+    "Pyroar-4-Mega",
+    "Sharpedo-3-Mega",
+    "Camerupt-3-Mega",
+    "Flygon-3-Mega",
+    "Chandelure-3-Mega",
+    "Glalie-4-Mega",
+    "Camerupt-4-Mega",
+    "Houndoom-4-Mega",
+    "Gyarados-4-Mega"
   ],
   "Tony": [
     "Pyroar-3",
@@ -7152,7 +7512,16 @@
     "Eelektross-4",
     "Gyarados-4",
     "Malamar-4",
-    "Magmortar-4"
+    "Magmortar-4",
+    "Pyroar-4-Mega",
+    "Sharpedo-3-Mega",
+    "Camerupt-3-Mega",
+    "Flygon-3-Mega",
+    "Chandelure-3-Mega",
+    "Glalie-4-Mega",
+    "Camerupt-4-Mega",
+    "Houndoom-4-Mega",
+    "Gyarados-4-Mega"
   ],
   "Brantley": [
     "Greninja-2",
@@ -7197,7 +7566,9 @@
     "Tentacruel-3",
     "Jolteon-3",
     "Beartic-3",
-    "Kingdra-3"
+    "Kingdra-3",
+    "Blastoise-2-Mega",
+    "Swampert-3-Mega"
   ],
   "Camber": [
     "Greninja-2",
@@ -7242,7 +7613,9 @@
     "Tentacruel-3",
     "Jolteon-3",
     "Beartic-3",
-    "Kingdra-3"
+    "Kingdra-3",
+    "Blastoise-2-Mega",
+    "Swampert-3-Mega"
   ],
   "Presta": [
     "Barbaracle-3",
@@ -7324,7 +7697,14 @@
     "Milotic-4",
     "Archeops-4",
     "Salamence-4",
-    "Rotom-Wash-4"
+    "Rotom-Wash-4",
+    "Pyroar-4-Mega",
+    "Goodra-4-Mega",
+    "Sharpedo-3-Mega",
+    "Aerodactyl-3-Mega",
+    "Slowbro-4-Mega",
+    "Gyarados-4-Mega",
+    "Salamence-4-Mega"
   ],
   "Calder": [
     "Barbaracle-3",
@@ -7406,7 +7786,14 @@
     "Milotic-4",
     "Archeops-4",
     "Salamence-4",
-    "Rotom-Wash-4"
+    "Rotom-Wash-4",
+    "Pyroar-4-Mega",
+    "Goodra-4-Mega",
+    "Sharpedo-3-Mega",
+    "Aerodactyl-3-Mega",
+    "Slowbro-4-Mega",
+    "Gyarados-4-Mega",
+    "Salamence-4-Mega"
   ],
   "Rendor": [
     "Rotom-Wash-3",
@@ -7483,7 +7870,18 @@
     "Salamence-4",
     "Rotom-Wash-4",
     "Electivire-4",
-    "Electivire-4"
+    "Electivire-4",
+    "Medicham-4-Mega",
+    "Mawile-4-Mega",
+    "Absol-4-Mega",
+    "Glalie-4-Mega",
+    "Gengar-4-Mega",
+    "Ampharos-4-Mega",
+    "Scizor-4-Mega",
+    "Heracross-4-Mega",
+    "Gardevoir-4-Mega",
+    "Gallade-4-Mega",
+    "Salamence-4-Mega"
   ],
   "Lou": [
     "Lycanroc-2",
@@ -7521,7 +7919,11 @@
     "Tyranitar-4",
     "Garchomp-4",
     "Rotom-Mow-4",
-    "Probopass-4"
+    "Probopass-4",
+    "Steelix-4-Mega",
+    "Tyranitar-4-Mega",
+    "Garchomp-4-Mega",
+    "Rotom-Mow-4-Mega"
   ],
   "Benji": [
     "Lycanroc-2",
@@ -7559,7 +7961,11 @@
     "Tyranitar-4",
     "Garchomp-4",
     "Rotom-Mow-4",
-    "Probopass-4"
+    "Probopass-4",
+    "Steelix-4-Mega",
+    "Tyranitar-4-Mega",
+    "Garchomp-4-Mega",
+    "Rotom-Mow-4-Mega"
   ],
   "Cal": [
     "Carbink-3",
@@ -7599,7 +8005,11 @@
     "Aggron-4",
     "Tangrowth-4",
     "Eelektross-4",
-    "Rotom-Frost-4"
+    "Rotom-Frost-4",
+    "Audino-3-Mega",
+    "Aggron-3-Mega",
+    "Slowbro-4-Mega",
+    "Steelix-4-Mega"
   ],
   "Tivon": [
     "Carbink-3",
@@ -7641,7 +8051,11 @@
     "Tangrowth-4",
     "Eelektross-4",
     "Rotom-Frost-4",
-    "Lickilicky-4"
+    "Lickilicky-4",
+    "Audino-3-Mega",
+    "Aggron-3-Mega",
+    "Slowbro-4-Mega",
+    "Steelix-4-Mega"
   ],
   "Robyn": [
     "Carbink-3",
@@ -7683,7 +8097,11 @@
     "Tangrowth-4",
     "Eelektross-4",
     "Rotom-Frost-4",
-    "Lickilicky-4"
+    "Lickilicky-4",
+    "Audino-3-Mega",
+    "Aggron-3-Mega",
+    "Slowbro-4-Mega",
+    "Steelix-4-Mega"
   ],
   "Stein": [
     "Carbink-3",
@@ -7718,7 +8136,8 @@
     "Rhyperior-4",
     "Cresselia-4",
     "Rotom-Frost-4",
-    "Lickilicky-4"
+    "Lickilicky-4",
+    "Slowbro-4-Mega"
   ],
   "Cadel": [
     "Carbink-3",
@@ -7753,7 +8172,8 @@
     "Rhyperior-4",
     "Cresselia-4",
     "Rotom-Frost-4",
-    "Lickilicky-4"
+    "Lickilicky-4",
+    "Slowbro-4-Mega"
   ],
   "Chucky": [
     "Barbaracle-4",
@@ -7811,7 +8231,19 @@
     "Rotom-Fan-4",
     "Magmortar-4",
     "Probopass-4",
-    "Lickilicky-4"
+    "Lickilicky-4",
+    "Chesnaught-4-Mega",
+    "Goodra-4-Mega",
+    "Medicham-4-Mega",
+    "Mawile-4-Mega",
+    "Absol-4-Mega",
+    "Lopunny-4-Mega",
+    "Kangaskhan-4-Mega",
+    "Ampharos-4-Mega",
+    "Scizor-4-Mega",
+    "Heracross-4-Mega",
+    "Gallade-4-Mega",
+    "Gyarados-4-Mega"
   ],
   "Iniko": [
     "Aurorus-2",
@@ -7874,7 +8306,14 @@
     "Hydreigon-4",
     "Rotom-Fan-4",
     "Electivire-4",
-    "Electivire-4"
+    "Electivire-4",
+    "Chesnaught-4-Mega",
+    "Beedrill-4-Mega",
+    "Pidgeot-4-Mega",
+    "Banette-4-Mega",
+    "Camerupt-4-Mega",
+    "Lopunny-4-Mega",
+    "Abomasnow-4-Mega"
   ],
   "Arnold": [
     "Aurorus-2",
@@ -7937,7 +8376,14 @@
     "Hydreigon-4",
     "Rotom-Fan-4",
     "Electivire-4",
-    "Electivire-4"
+    "Electivire-4",
+    "Chesnaught-4-Mega",
+    "Beedrill-4-Mega",
+    "Pidgeot-4-Mega",
+    "Banette-4-Mega",
+    "Camerupt-4-Mega",
+    "Lopunny-4-Mega",
+    "Abomasnow-4-Mega"
   ],
   "Boris": [
     "Chesnaught-3",
@@ -8007,7 +8453,19 @@
     "Virizion-2",
     "Heatran-2",
     "Regigigas-2",
-    "Magmortar-4"
+    "Magmortar-4",
+    "Chesnaught-4-Mega",
+    "Delphox-4-Mega",
+    "Charizard-3-Mega",
+    "Sceptile-3-Mega",
+    "Swampert-3-Mega",
+    "Aggron-3-Mega",
+    "Volcarona-3-Mega",
+    "Charizard-4-Mega",
+    "Sceptile-4-Mega",
+    "Blaziken-4-Mega",
+    "Tyranitar-4-Mega",
+    "Heatran-2-Mega"
   ],
   "Bryson": [
     "Chesnaught-3",
@@ -8079,7 +8537,18 @@
     "Tornadus-2",
     "Thundurus-2",
     "Landorus-2",
-    "Magmortar-4"
+    "Magmortar-4",
+    "Chesnaught-4-Mega",
+    "Delphox-4-Mega",
+    "Charizard-3-Mega",
+    "Sceptile-3-Mega",
+    "Swampert-3-Mega",
+    "Aggron-3-Mega",
+    "Volcarona-3-Mega",
+    "Charizard-4-Mega",
+    "Sceptile-4-Mega",
+    "Blaziken-4-Mega",
+    "Tyranitar-4-Mega"
   ],
   "Carrie": [
     "Sylveon-4",
@@ -8143,7 +8612,21 @@
     "Gyarados-4",
     "Haxorus-4",
     "Volcarona-4",
-    "Rotom-Mow-4"
+    "Rotom-Mow-4",
+    "Medicham-4-Mega",
+    "Pidgeot-4-Mega",
+    "Mawile-4-Mega",
+    "Banette-4-Mega",
+    "Absol-4-Mega",
+    "Camerupt-4-Mega",
+    "Abomasnow-4-Mega",
+    "Ampharos-4-Mega",
+    "Scizor-4-Mega",
+    "Heracross-4-Mega",
+    "Houndoom-4-Mega",
+    "Gardevoir-4-Mega",
+    "Gyarados-4-Mega",
+    "Rotom-Mow-4-Mega"
   ],
   "Variel": [
     "Greninja-2",
@@ -8183,7 +8666,8 @@
     "Politoed-4",
     "Beartic-4",
     "Kingdra-4",
-    "Rotom-Wash-4"
+    "Rotom-Wash-4",
+    "Swampert-3-Mega"
   ],
   "Atalanta": [
     "Greninja-2",
@@ -8223,7 +8707,8 @@
     "Politoed-4",
     "Beartic-4",
     "Kingdra-4",
-    "Rotom-Wash-4"
+    "Rotom-Wash-4",
+    "Swampert-3-Mega"
   ],
   "Jo": [
     "Goodra-3",
@@ -8286,7 +8771,17 @@
     "Moltres-2",
     "Latias-2",
     "Latios-2",
-    "Rotom-Mow-4"
+    "Rotom-Mow-4",
+    "Goodra-4-Mega",
+    "Arcanine-3-Mega",
+    "Gyarados-4-Mega",
+    "Salamence-4-Mega",
+    "Metagross-4-Mega",
+    "Garchomp-4-Mega",
+    "Moltres-1-Mega",
+    "Latias-2-Mega",
+    "Latios-2-Mega",
+    "Rotom-Mow-4-Mega"
   ],
   "Tasanee": [
     "Mesprit-1",
@@ -8349,7 +8844,14 @@
     "Entei-2",
     "Suicune-2",
     "Cresselia-2",
-    "Rotom-Mow-4"
+    "Rotom-Mow-4",
+    "Goodra-4-Mega",
+    "Arcanine-3-Mega",
+    "Gyarados-4-Mega",
+    "Salamence-4-Mega",
+    "Metagross-4-Mega",
+    "Garchomp-4-Mega",
+    "Rotom-Mow-4-Mega"
   ],
   "Harvey": [
     "Pyroar-4",
@@ -8423,7 +8925,15 @@
     "Rotom-Frost-4",
     "Electivire-4",
     "Electivire-4",
-    "Lickilicky-4"
+    "Lickilicky-4",
+    "Pyroar-4-Mega",
+    "Goodra-4-Mega",
+    "Glalie-4-Mega",
+    "Kangaskhan-4-Mega",
+    "Gengar-4-Mega",
+    "Porygon2-4-Mega",
+    "Salamence-4-Mega",
+    "Metagross-4-Mega"
   ],
   "Luke": [
     "Pyroar-4",
@@ -8495,7 +9005,15 @@
     "Slaking-4",
     "Rotom-Frost-4",
     "Magmortar-4",
-    "Probopass-4"
+    "Probopass-4",
+    "Pyroar-4-Mega",
+    "Goodra-4-Mega",
+    "Glalie-4-Mega",
+    "Kangaskhan-4-Mega",
+    "Gengar-4-Mega",
+    "Porygon2-4-Mega",
+    "Salamence-4-Mega",
+    "Metagross-4-Mega"
   ],
   "Heidi": [
     "Rotom-Wash-3",
@@ -8574,7 +9092,17 @@
     "Rotom-Wash-4",
     "Electivire-4",
     "Electivire-4",
-    "Lickilicky-4"
+    "Lickilicky-4",
+    "Pyroar-4-Mega",
+    "Goodra-4-Mega",
+    "Kangaskhan-4-Mega",
+    "Porygon2-4-Mega",
+    "Gardevoir-4-Mega",
+    "Gallade-4-Mega",
+    "Gyarados-4-Mega",
+    "Tyranitar-4-Mega",
+    "Metagross-4-Mega",
+    "Garchomp-4-Mega"
   ],
   "Haley": [
     "Rotom-Wash-3",
@@ -8649,7 +9177,18 @@
     "Slaking-4",
     "Rotom-Wash-4",
     "Magmortar-4",
-    "Probopass-4"
+    "Probopass-4",
+    "Pyroar-4-Mega",
+    "Delphox-4-Mega",
+    "Goodra-4-Mega",
+    "Beedrill-4-Mega",
+    "Venusaur-4-Mega",
+    "Charizard-4-Mega",
+    "Sceptile-4-Mega",
+    "Blaziken-4-Mega",
+    "Kangaskhan-4-Mega",
+    "Porygon2-4-Mega",
+    "Metagross-4-Mega"
   ],
   "Granville": [
     "Talonflame-3",
@@ -8678,7 +9217,11 @@
     "Weavile-4",
     "Aerodactyl-4",
     "Jolteon-4",
-    "Crobat-4"
+    "Crobat-4",
+    "Sceptile-3-Mega",
+    "Alakazam-3-Mega",
+    "Aerodactyl-3-Mega",
+    "Sceptile-4-Mega"
   ],
   "Raz": [
     "Talonflame-3",
@@ -8707,7 +9250,11 @@
     "Weavile-4",
     "Aerodactyl-4",
     "Jolteon-4",
-    "Crobat-4"
+    "Crobat-4",
+    "Sceptile-3-Mega",
+    "Alakazam-3-Mega",
+    "Aerodactyl-3-Mega",
+    "Sceptile-4-Mega"
   ],
   "Lea": [
     "Delphox-3",
@@ -8749,7 +9296,15 @@
     "Chandelure-4",
     "Leafeon-4",
     "Tangrowth-4",
-    "Magmortar-4"
+    "Magmortar-4",
+    "Delphox-4-Mega",
+    "Charizard-3-Mega",
+    "Chandelure-3-Mega",
+    "Arcanine-3-Mega",
+    "Venusaur-4-Mega",
+    "Charizard-4-Mega",
+    "Blaziken-4-Mega",
+    "Houndoom-4-Mega"
   ],
   "Sylvia": [
     "Delphox-3",
@@ -8791,7 +9346,15 @@
     "Chandelure-4",
     "Leafeon-4",
     "Tangrowth-4",
-    "Magmortar-4"
+    "Magmortar-4",
+    "Delphox-4-Mega",
+    "Charizard-3-Mega",
+    "Chandelure-3-Mega",
+    "Arcanine-3-Mega",
+    "Venusaur-4-Mega",
+    "Charizard-4-Mega",
+    "Blaziken-4-Mega",
+    "Houndoom-4-Mega"
   ],
   "Levi": [
     "Delphox-3",
@@ -8828,7 +9391,14 @@
     "Arcanine-4",
     "Metagross-4",
     "Rotom-Wash-4",
-    "Magmortar-4"
+    "Magmortar-4",
+    "Delphox-4-Mega",
+    "Charizard-3-Mega",
+    "Volcarona-3-Mega",
+    "Arcanine-3-Mega",
+    "Charizard-4-Mega",
+    "Blaziken-4-Mega",
+    "Metagross-4-Mega"
   ],
   "Hashim": [
     "Kommo-o-1",
@@ -8890,7 +9460,15 @@
     "Volcarona-4",
     "Archeops-4",
     "Rotom-Fan-4",
-    "Probopass-4"
+    "Probopass-4",
+    "Swampert-3-Mega",
+    "Pinsir-3-Mega",
+    "Aerodactyl-3-Mega",
+    "Aggron-3-Mega",
+    "Volcarona-3-Mega",
+    "Scizor-4-Mega",
+    "Heracross-4-Mega",
+    "Gyarados-4-Mega"
   ],
   "Munin": [
     "Tyrantrum-3",
@@ -8953,7 +9531,17 @@
     "Hydreigon-4",
     "Rotom-Mow-4",
     "Electivire-4",
-    "Electivire-4"
+    "Electivire-4",
+    "Chesnaught-4-Mega",
+    "Goodra-4-Mega",
+    "Sceptile-3-Mega",
+    "Flygon-3-Mega",
+    "Venusaur-4-Mega",
+    "Sceptile-4-Mega",
+    "Ampharos-4-Mega",
+    "Salamence-4-Mega",
+    "Garchomp-4-Mega",
+    "Rotom-Mow-4-Mega"
   ],
   "Poppy": [
     "Kommo-o-1",
@@ -9008,7 +9596,14 @@
     "Metagross-4",
     "Hydreigon-4",
     "Rotom-Mow-4",
-    "Probopass-4"
+    "Probopass-4",
+    "Lucario-3-Mega",
+    "Aggron-3-Mega",
+    "Gyarados-4-Mega",
+    "Tyranitar-4-Mega",
+    "Salamence-4-Mega",
+    "Metagross-4-Mega",
+    "Rotom-Mow-4-Mega"
   ],
   "Tamah": [
     "Sylveon-3",
@@ -9049,7 +9644,13 @@
     "Garchomp-4",
     "Slaking-4",
     "Rotom-Fan-4",
-    "Lickilicky-4"
+    "Lickilicky-4",
+    "Swampert-3-Mega",
+    "Porygon2-3-Mega",
+    "Flygon-3-Mega",
+    "Porygon2-4-Mega",
+    "Gardevoir-4-Mega",
+    "Garchomp-4-Mega"
   ],
   "Bette": [
     "Chesnaught-3",
@@ -9091,7 +9692,14 @@
     "Dusknoir-4",
     "Crobat-4",
     "Rotom-Wash-4",
-    "Magmortar-4"
+    "Magmortar-4",
+    "Chesnaught-4-Mega",
+    "Chandelure-3-Mega",
+    "Lucario-3-Mega",
+    "Venusaur-4-Mega",
+    "Blaziken-4-Mega",
+    "Gengar-4-Mega",
+    "Gallade-4-Mega"
   ],
   "Horace": [
     "Azelf-1",
@@ -9121,7 +9729,8 @@
     "Registeel-3",
     "Regirock-4",
     "Regice-4",
-    "Registeel-4"
+    "Registeel-4",
+    "Kommo-o-4-Mega"
   ],
   "Kikujiro": [
     "Togedemaru-2",
@@ -9144,7 +9753,9 @@
     "Raikou-2",
     "Thundurus-2",
     "Electivire-4",
-    "Electivire-4"
+    "Electivire-4",
+    "Manectric-3-Mega",
+    "Ampharos-4-Mega"
   ],
   "Xenophon": [
     "Florges-2",
@@ -9164,7 +9775,9 @@
     "Exeggutor-Alola-2",
     "Virizion-1",
     "Virizion-2",
-    "Rotom-Mow-4"
+    "Rotom-Mow-4",
+    "Venusaur-4-Mega",
+    "Rotom-Mow-4-Mega"
   ],
   "Placido": [
     "Azelf-1",
@@ -9188,7 +9801,10 @@
     "Tornadus-2",
     "Latias-2",
     "Heatran-2",
-    "Landorus-2"
+    "Landorus-2",
+    "Moltres-1-Mega",
+    "Latias-2-Mega",
+    "Heatran-2-Mega"
   ],
   "Ignacio": [
     "Azelf-3",
@@ -9210,7 +9826,10 @@
     "Tornadus-4",
     "Thundurus-4",
     "Latias-4",
-    "Latios-4"
+    "Latios-4",
+    "Kommo-o-4-Mega",
+    "Latias-4-Mega",
+    "Latios-4-Mega"
   ],
   "Candy": [
     "Azelf-3",
@@ -9232,7 +9851,10 @@
     "Tornadus-4",
     "Thundurus-4",
     "Latias-4",
-    "Latios-4"
+    "Latios-4",
+    "Kommo-o-4-Mega",
+    "Latias-4-Mega",
+    "Latios-4-Mega"
   ],
   "Aino": [
     "Uxie-1",
@@ -9251,7 +9873,11 @@
     "Gardevoir-4",
     "Gallade-4",
     "Metagross-4",
-    "Rotom-Wash-4"
+    "Rotom-Wash-4",
+    "Medicham-4-Mega",
+    "Gardevoir-4-Mega",
+    "Gallade-4-Mega",
+    "Metagross-4-Mega"
   ],
   "Xio": [
     "Sylveon-1",
@@ -9275,7 +9901,10 @@
     "Shiinotic-4",
     "Mimikyu-4",
     "Gardevoir-4",
-    "Togekiss-4"
+    "Togekiss-4",
+    "Mawile-3-Mega",
+    "Mawile-4-Mega",
+    "Gardevoir-4-Mega"
   ],
   "Priya": [
     "Azelf-1",
@@ -9299,7 +9928,8 @@
     "Thundurus-2",
     "Latios-2",
     "Cresselia-2",
-    "Regigigas-2"
+    "Regigigas-2",
+    "Latios-2-Mega"
   ],
   "Dooley": [
     "Sylveon-3",
@@ -9347,7 +9977,20 @@
     "Heatran-4",
     "Cresselia-4",
     "Landorus-4",
-    "Rotom-Wash-4"
+    "Rotom-Wash-4",
+    "Kommo-o-4-Mega",
+    "Charizard-3-Mega",
+    "Mawile-3-Mega",
+    "Kangaskhan-3-Mega",
+    "Charizard-4-Mega",
+    "Mawile-4-Mega",
+    "Kangaskhan-4-Mega",
+    "Tyranitar-4-Mega",
+    "Salamence-4-Mega",
+    "Metagross-4-Mega",
+    "Garchomp-4-Mega",
+    "Latios-4-Mega",
+    "Landorus-4-Mega"
   ],
   "Demiathena": [
     "Azelf-3",
@@ -9371,7 +10014,9 @@
     "Thundurus-4",
     "Latias-4",
     "Latios-4",
-    "Cresselia-4"
+    "Cresselia-4",
+    "Latias-4-Mega",
+    "Latios-4-Mega"
   ],
   "Perri": [
     "Sylveon-2",
@@ -9415,7 +10060,10 @@
     "Slowking-4",
     "Gardevoir-4",
     "Blissey-4",
-    "Togekiss-4"
+    "Togekiss-4",
+    "Audino-3-Mega",
+    "Slowbro-4-Mega",
+    "Gardevoir-4-Mega"
   ],
   "Anabel": [
     "Alakazam-3",
@@ -9435,7 +10083,11 @@
     "Latios-3",
     "Raikou-4",
     "Entei-4",
-    "Latios-4"
+    "Latios-4",
+    "Alakazam-3-Mega",
+    "Lucario-3-Mega",
+    "Latios-2-Mega",
+    "Latios-4-Mega"
   ],
   "Colress": [
     "Muk-1",
@@ -9455,7 +10107,10 @@
     "Magnezone-4",
     "Magnezone-4",
     "Porygon-Z-4",
-    "Metagross-4"
+    "Metagross-4",
+    "Porygon2-3-Mega",
+    "Porygon2-4-Mega",
+    "Metagross-4-Mega"
   ],
   "Cynthia": [
     "Spiritomb-3",
@@ -9467,7 +10122,9 @@
     "Lucario-4",
     "Milotic-4",
     "Togekiss-4",
-    "Garchomp-3"
+    "Garchomp-3",
+    "Lucario-3-Mega",
+    "Garchomp-4-Mega"
   ],
   "Dexio": [
     "Turtonator-3",
@@ -9483,7 +10140,8 @@
     "Passimian-4",
     "Ninetales-Alola-2",
     "Braviary-4",
-    "Espeon-4"
+    "Espeon-4",
+    "Slowbro-4-Mega"
   ],
   "Grimsley": [
     "Absol-3",
@@ -9502,7 +10160,11 @@
     "Houndoom-4",
     "Drapion-4",
     "Liepard-4",
-    "Tyranitar-4"
+    "Tyranitar-4",
+    "Sharpedo-3-Mega",
+    "Absol-4-Mega",
+    "Houndoom-4-Mega",
+    "Tyranitar-4-Mega"
   ],
   "Guzma": [
     "Toxapex-3",
@@ -9518,7 +10180,8 @@
     "Bisharp-4",
     "Pinsir-4",
     "Honchkrow-4",
-    "Liepard-4"
+    "Liepard-4",
+    "Pinsir-3-Mega"
   ],
   "Kiawe": [
     "Talonflame-3",
@@ -9530,7 +10193,10 @@
     "Marowak-Alola-2",
     "Kangaskhan-4",
     "Salazzle-4",
-    "Arcanine-4"
+    "Arcanine-4",
+    "Kangaskhan-3-Mega",
+    "Arcanine-3-Mega",
+    "Kangaskhan-4-Mega"
   ],
   "Mallow": [
     "Talonflame-3",
@@ -9546,7 +10212,9 @@
     "Tsareena-3",
     "Sceptile-4",
     "Toucannon-4",
-    "Tsareena-4"
+    "Tsareena-4",
+    "Sceptile-3-Mega",
+    "Sceptile-4-Mega"
   ],
   "Plumeria": [
     "Toxapex-3",
@@ -9558,7 +10226,8 @@
     "Crobat-4",
     "Salazzle-4",
     "Gengar-4",
-    "Crobat-3"
+    "Crobat-3",
+    "Gengar-4-Mega"
   ],
   "Sina": [
     "Drampa-3",
@@ -9574,7 +10243,8 @@
     "Oranguru-4",
     "Mandibuzz-4",
     "Glaceon-4",
-    "Sandslash-Alola-2"
+    "Sandslash-Alola-2",
+    "Abomasnow-4-Mega"
   ],
   "Wally": [
     "Altaria-3",
@@ -9586,7 +10256,10 @@
     "Gallade-3",
     "Magnezone-4",
     "Magnezone-4",
-    "Garchomp-4"
+    "Garchomp-4",
+    "Altaria-3-Mega",
+    "Gallade-4-Mega",
+    "Garchomp-4-Mega"
   ],
   "Red (Regular)": [
     "Venusaur-1",
@@ -9598,7 +10271,8 @@
     "Lapras-1",
     "Lapras-2",
     "Snorlax-1",
-    "Snorlax-2"
+    "Snorlax-2",
+    "Blastoise-2-Mega"
   ],
   "Red (Super)": [
     "Venusaur-3",
@@ -9610,7 +10284,10 @@
     "Lapras-3",
     "Lapras-4",
     "Snorlax-3",
-    "Snorlax-4"
+    "Snorlax-4",
+    "Venusaur-4-Mega",
+    "Charizard-3-Mega",
+    "Charizard-4-Mega"
   ],
   "Blue (Regular)": [
     "Pidgeot-1",
@@ -9648,6 +10325,13 @@
     "Tyranitar-3",
     "Tyranitar-4",
     "Rhyperior-3",
-    "Rhyperior-4"
+    "Rhyperior-4",
+    "Pidgeot-3-Mega",
+    "Pidgeot-4-Mega",
+    "Arcanine-3-Mega",
+    "Alakazam-3-Mega",
+    "Gyarados-4-Mega",
+    "Aerodactyl-3-Mega",
+    "Tyranitar-4-Mega"
   ]
 }
