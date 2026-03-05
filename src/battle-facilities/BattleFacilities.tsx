@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect, useCallback } from 'react'
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import {
   emeraldConfig,
   sunMoonConfig,
@@ -21,7 +22,10 @@ import {
 } from './pokepaste'
 import './battle-facilities.css'
 
-const GAME_CONFIGS: GameConfig[] = [emeraldConfig, sunMoonConfig]
+const GAME_OPTIONS: { slug: string; config: GameConfig }[] = [
+  { slug: 'emerald', config: emeraldConfig },
+  { slug: 'sunmoon', config: sunMoonConfig },
+]
 
 const STATUS_OPTIONS = ['Healthy', 'Poisoned', 'Badly Poisoned', 'Burned', 'Paralyzed', 'Asleep', 'Frozen'] as const
 const STAT_NAMES = ['at', 'df', 'sa', 'sd', 'sp'] as const
@@ -257,14 +261,35 @@ function MoveResults({ pokemonName, summary, opponentSpeed, isOpponent = false, 
 }
 
 export default function BattleFacilities() {
-  const [config, setConfig] = useState<GameConfig>(emeraldConfig)
+  const navigate = useNavigate()
+  const { game } = useParams()
+  const [searchParams, setSearchParams] = useSearchParams()
+
+  const getConfigForSlug = (slug?: string): GameConfig => {
+    const match = GAME_OPTIONS.find(o => o.slug === slug)
+    return match ? match.config : GAME_OPTIONS[0].config
+  }
+
+  const getSlugForConfig = (cfg: GameConfig): string => {
+    return GAME_OPTIONS.find(o => o.config === cfg)?.slug ?? GAME_OPTIONS[0].slug
+  }
+
+  const getModeForConfig = (cfg: GameConfig, modeId?: string) => {
+    if (modeId) {
+      const found = cfg.modes.find(m => m.id === modeId)
+      if (found) return found
+    }
+    return cfg.modes[0]
+  }
+
+  const [config, setConfig] = useState<GameConfig>(() => getConfigForSlug(game))
   const [pasteText, setPasteText] = useState('')
   const [isRibbonMaster, setIsRibbonMaster] = useState(true)
   const [saveError, setSaveError] = useState('')
   const [ribbonMasterSet, setRibbonMasterSet] = useState<StoredSet | null>(loadRibbonMasterSet)
   const [pokemonSets, setPokemonSets] = useState<StoredSet[]>(loadPokemonSets)
 
-  const [mode, setMode] = useState(config.modes[0])
+  const [mode, setMode] = useState(() => getModeForConfig(config, searchParams.get('mode') || undefined))
 
   function clampLevelToMode(lvl: number, targetMode: typeof mode): number {
     const cap = targetMode.maxLevel ?? 100
@@ -295,7 +320,7 @@ export default function BattleFacilities() {
     return p1Options.find((o: P1Option) => o.label === p1Label) ?? p1Options[0] ?? null
   }, [p1Options, p1Label])
 
-  const handleGameChange = useCallback((newConfig: GameConfig) => {
+  const handleGameChange = useCallback((newConfig: GameConfig, shouldNavigate = true) => {
     setConfig(newConfig)
     const newMode = newConfig.modes[0]
     setMode(newMode)
@@ -314,7 +339,18 @@ export default function BattleFacilities() {
     setP2Ability('')
     const newOptions = newConfig.buildP1Options(ribbonMasterSet, pokemonSets, newMode.pokemon)
     setP1Label(newOptions[0]?.label ?? '')
-  }, [ribbonMasterSet, pokemonSets])
+    if (shouldNavigate) {
+      const slug = getSlugForConfig(newConfig)
+      setSearchParams({ mode: newMode.id })
+      navigate(`/battle-facilities/${slug}?mode=${newMode.id}`, { replace: true })
+    } else {
+      setSearchParams(prev => {
+        const params = new URLSearchParams(prev)
+        params.set('mode', newMode.id)
+        return params
+      })
+    }
+  }, [ribbonMasterSet, pokemonSets, navigate, setSearchParams])
 
   const handleSave = () => {
     setSaveError('')
@@ -408,7 +444,7 @@ export default function BattleFacilities() {
   // Reset ability override when opponent pokemon changes
   useEffect(() => { setP2Ability('') }, [effectiveP2Label])
 
-  const handleModeChange = (newMode: typeof mode) => {
+  const handleModeChange = (newMode: typeof mode, shouldNavigate = true) => {
     setMode(newMode)
     setP1Level(clampLevelToMode(newMode.defaultLevel, newMode))
     setP2Level(clampLevelToMode(newMode.defaultLevel, newMode))
@@ -418,6 +454,11 @@ export default function BattleFacilities() {
     }
     // Clamp battle number to the new mode's max (if any)
     handleBattleNumChange(Math.min(battleNum, newMode.maxBattle ?? battleNum), newMode)
+    if (shouldNavigate) {
+      const slug = getSlugForConfig(config)
+      setSearchParams({ mode: newMode.id })
+      navigate(`/battle-facilities/${slug}?mode=${newMode.id}`, { replace: true })
+    }
   }
 
   const handleBattleNumChange = (newNum: number, targetMode: typeof mode = mode) => {
@@ -436,9 +477,31 @@ export default function BattleFacilities() {
   const handleP1LevelChange = (lvl: number) => setP1Level(clampLevelToMode(lvl, mode))
   const handleP2LevelChange = (lvl: number) => setP2Level(clampLevelToMode(lvl, mode))
 
-  const handleGameSelect = (title: string) => {
-    const gc = GAME_CONFIGS.find(g => g.title === title)
-    if (gc) handleGameChange(gc)
+  // Sync config to route param
+  useEffect(() => {
+    const cfg = getConfigForSlug(game)
+    const modeId = searchParams.get('mode') || undefined
+    const desiredMode = getModeForConfig(cfg, modeId)
+    const needsConfig = cfg !== config
+    const needsMode = desiredMode.id !== mode.id
+    if (needsConfig) {
+      handleGameChange(cfg, false)
+    }
+    if (needsMode) {
+      handleModeChange(desiredMode, false)
+    }
+    // If mode param missing, push default for this config
+    if (!modeId) {
+      const slug = getSlugForConfig(cfg)
+      setSearchParams({ mode: desiredMode.id })
+      navigate(`/battle-facilities/${slug}?mode=${desiredMode.id}`, { replace: true })
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [game, searchParams])
+
+  const handleGameSelect = (slug: string) => {
+    const opt = GAME_OPTIONS.find(o => o.slug === slug)
+    if (opt) handleGameChange(opt.config)
   }
 
   return (
@@ -446,11 +509,11 @@ export default function BattleFacilities() {
       <div className="bf-header">
         <select
           className="bf-header-select"
-          value={config.title}
+          value={getSlugForConfig(config)}
           onChange={e => handleGameSelect(e.target.value)}
         >
-          {GAME_CONFIGS.map(gc => (
-            <option key={gc.title} value={gc.title}>{gc.title}</option>
+          {GAME_OPTIONS.map(opt => (
+            <option key={opt.slug} value={opt.slug}>{opt.config.title}</option>
           ))}
         </select>
       </div>

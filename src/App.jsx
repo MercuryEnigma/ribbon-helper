@@ -124,7 +124,12 @@ export default function App() {
             <Route path="/berry-blending/*" element={<BerryBlending />} />
             <Route path="/contest-moves/*" element={<ContestMoves />} />
             <Route path="/visual-decoration/*" element={<VisualDecoration />} />
-            {ENABLE_BATTLE && <Route path="/battle-facilities/*" element={<BattleFacilities />} />}
+            {ENABLE_BATTLE && (
+              <>
+                <Route path="/battle-facilities" element={<Navigate to="/battle-facilities/emerald" replace />} />
+                <Route path="/battle-facilities/:game" element={<BattleFacilities />} />
+              </>
+            )}
             <Route path="*" element={<Navigate to="/game-compatibility" replace />} />
           </Routes>
 
