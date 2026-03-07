@@ -32,6 +32,57 @@ const STAT_NAMES = ['at', 'df', 'sa', 'sd', 'sp'] as const
 const STAT_LABELS: Record<string, string> = { at: 'Atk', df: 'Def', sa: 'SpA', sd: 'SpD', sp: 'Spe' }
 const EV_LABELS: Record<string, string> = { hp: 'HP', at: 'Atk', df: 'Def', sa: 'SpA', sd: 'SpD', sp: 'Spe' }
 
+type RadioOption = {
+  value: string
+  label: string        // shown in <select>
+  buttonLabel?: string // shown on button when different from label
+}
+
+function RadioOrSelect({
+  options, value, onChange, name, label, groupClassName, smallButtons,
+}: {
+  options: RadioOption[]
+  value: string
+  onChange: (val: string) => void
+  name: string
+  label?: string
+  groupClassName?: string
+  smallButtons?: boolean
+}) {
+  return (
+    <div className={`bf-radio-group${groupClassName ? ` ${groupClassName}` : ''}`}>
+      {label && <span className="bf-radio-group-label">{label}</span>}
+      <div className="bf-radio-buttons">
+        {options.map((o, i) => (
+          <label
+            key={o.value}
+            className={`bf-radio-btn${smallButtons ? ' bf-radio-btn-sm' : ''}${value === o.value ? ' bf-radio-btn-active' : ''}${i === 0 ? ' bf-radio-btn-left' : ''}${i === options.length - 1 ? ' bf-radio-btn-right' : ''}`}
+          >
+            <input
+              type="radio"
+              name={name}
+              value={o.value}
+              checked={value === o.value}
+              onChange={() => onChange(o.value)}
+              className="bf-radio-input"
+            />
+            {o.buttonLabel ?? o.label}
+          </label>
+        ))}
+      </div>
+      <select
+        className="bf-overflow-select"
+        value={value}
+        onChange={e => onChange(e.target.value)}
+      >
+        {options.map(o => (
+          <option key={o.value} value={o.value}>{o.label}</option>
+        ))}
+      </select>
+    </div>
+  )
+}
+
 function formatEvs(evs: Partial<Record<string, number>>): string {
   return Object.entries(evs)
     .filter(([, v]) => v && v > 0)
@@ -101,26 +152,16 @@ function BattleStatusAccordion({
             />
             <span className="bf-hp-max">/ {side.maxHP}</span>
           </div>
-          <div className="bf-radio-group bf-radio-group-compact">
-            <span className="bf-radio-group-label">Status</span>
-            <div className="bf-radio-buttons">
-              {STATUS_OPTIONS.map((s, i) => (
-                <label
-                  key={s}
-                  className={`bf-radio-btn bf-radio-btn-sm${side.status === s ? ' bf-radio-btn-active' : ''}${i === 0 ? ' bf-radio-btn-left' : ''}${i === STATUS_OPTIONS.length - 1 ? ' bf-radio-btn-right' : ''}`}
-                >
-                  <input
-                    type="radio"
-                    name={`${label}-status`}
-                    value={s}
-                    checked={side.status === s}
-                    onChange={() => onChange({ ...side, status: s })}
-                    className="bf-radio-input"
-                  />
-                  {s === 'Badly Poisoned' ? 'Badly Psn' : s === 'Poisoned' ? 'Psn' : s === 'Paralyzed' ? 'Par' : s === 'Burned' ? 'Brn' : s === 'Asleep' ? 'Slp' : s === 'Frozen' ? 'Frz' : s}
-                </label>
+          <div className="bf-status-row">
+            <span className="bf-status-label">Status</span>
+            <select
+              value={side.status}
+              onChange={e => onChange({ ...side, status: e.target.value as typeof side.status })}
+            >
+              {STATUS_OPTIONS.map(s => (
+                <option key={s} value={s}>{s}</option>
               ))}
-            </div>
+            </select>
           </div>
           {sortedRows.map(([rowNum, fields]) => (
             <div key={rowNum} className="bf-status-row">
@@ -519,26 +560,13 @@ export default function BattleFacilities() {
       </div>
 
       <div className="bf-body">
-        <div className="bf-radio-group bf-mode-selector">
-          <div className="bf-radio-buttons">
-            {config.modes.map((m, i) => (
-              <label
-                key={m.id}
-                className={`bf-radio-btn${mode.id === m.id ? ' bf-radio-btn-active' : ''}${i === 0 ? ' bf-radio-btn-left' : ''}${i === config.modes.length - 1 ? ' bf-radio-btn-right' : ''}`}
-              >
-                <input
-                  type="radio"
-                  name="facility-mode"
-                  value={m.id}
-                  checked={mode.id === m.id}
-                  onChange={() => handleModeChange(m)}
-                  className="bf-radio-input"
-                />
-                {m.label}
-              </label>
-            ))}
-          </div>
-        </div>
+        <RadioOrSelect
+          options={config.modes.map(m => ({ value: m.id, label: m.label }))}
+          value={mode.id}
+          onChange={v => handleModeChange(config.modes.find(m => m.id === v)!)}
+          name="facility-mode"
+          groupClassName="bf-mode-selector"
+        />
         {currentRibbon && currentRibbon.warning && (
           <p className="bf-warning">
             {currentRibbon.warning}
@@ -670,49 +698,21 @@ export default function BattleFacilities() {
       <div className="bf-battle-status">
         <h3>Battle Status</h3>
         <div className="bf-global-row">
-          <div className="bf-radio-group">
-            <span className="bf-radio-group-label">Weather</span>
-            <div className="bf-radio-buttons">
-              {config.weatherOptions.map((w, i) => (
-                <label
-                  key={w}
-                  className={`bf-radio-btn${weather === w ? ' bf-radio-btn-active' : ''}${i === 0 ? ' bf-radio-btn-left' : ''}${i === config.weatherOptions.length - 1 ? ' bf-radio-btn-right' : ''}`}
-                >
-                  <input
-                    type="radio"
-                    name="weather"
-                    value={w}
-                    checked={weather === w}
-                    onChange={() => setWeather(w)}
-                    className="bf-radio-input"
-                  />
-                  {config.weatherLabels[w]}
-                </label>
-              ))}
-            </div>
-          </div>
+          <RadioOrSelect
+            options={config.weatherOptions.map(w => ({ value: w, label: config.weatherLabels[w] }))}
+            value={weather}
+            onChange={setWeather}
+            name="weather"
+            label="Weather"
+          />
           {config.terrainOptions && config.terrainLabels && (
-            <div className="bf-radio-group">
-              <span className="bf-radio-group-label">Terrain</span>
-              <div className="bf-radio-buttons">
-                {config.terrainOptions.map((t, i) => (
-                  <label
-                    key={t}
-                    className={`bf-radio-btn${terrain === t ? ' bf-radio-btn-active' : ''}${i === 0 ? ' bf-radio-btn-left' : ''}${i === config.terrainOptions!.length - 1 ? ' bf-radio-btn-right' : ''}`}
-                  >
-                    <input
-                      type="radio"
-                      name="terrain"
-                      value={t}
-                      checked={terrain === t}
-                      onChange={() => setTerrain(t)}
-                      className="bf-radio-input"
-                    />
-                    {config.terrainLabels![t]}
-                  </label>
-                ))}
-              </div>
-            </div>
+            <RadioOrSelect
+              options={config.terrainOptions.map(t => ({ value: t, label: config.terrainLabels![t] }))}
+              value={terrain}
+              onChange={setTerrain}
+              name="terrain"
+              label="Terrain"
+            />
           )}
           {config.hasGravity && (
             <label className={`bf-checkbox-label${gravity ? ' bf-checkbox-active' : ''}`}>

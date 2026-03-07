@@ -1069,6 +1069,7 @@
   }
 
   .rse-blending .block-item {
+    grid-template-columns: auto minmax(0, 1fr) auto;
     grid-template-areas: "header berries players";
   }
 
@@ -1081,9 +1082,8 @@
   }
 
   .rse-blending .block-berry-grid {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .kit-blocks {

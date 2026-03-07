@@ -96,7 +96,7 @@ export default function App() {
         <div className="header-actions">
           <nav className="nav">
             <NavLink to="/game-compatibility" className={({ isActive }) => isActive ? 'active' : ''}>
-              Game Compatibility
+              Pokémon Compatibility
             </NavLink>
             <NavLink to="/berry-blending" className={({ isActive }) => isActive ? 'active' : ''}>
               Berry blending
