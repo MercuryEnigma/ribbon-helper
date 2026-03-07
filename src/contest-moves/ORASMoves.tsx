@@ -151,6 +151,15 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
           }
         }
       }
+
+      // Exclude moves with warnings by default
+      const allMoves = getSelectableMoves(moves, { 'level-up': true, 'machine': true, 'tutor': true, 'egg': true, 'purify': true, 'pre-evolution': true, 'other': true });
+      for (const move of allMoves) {
+        const effect = getContestEffectForMove(move, contestMoves, contestEffects);
+        if (effect?.id === 1) {
+          initialExcludedMoves.add(move);
+        }
+      }
     }
 
     setExcludedMoves(initialExcludedMoves);
@@ -706,7 +715,7 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
                     <div className="move-details-description">
                       {selectedMoveEffect.id === 1 && (
                         <div className="move-warning-badge">
-                          This move is encouraged to filter out as the “more easily startled” leads to more inconsistent results.
+                          We recommend filting out this move because the “more easily startled” leads to more inconsistent results.
                         </div>
                       )}
                       {selectedMoveEffect.flavor_text && (

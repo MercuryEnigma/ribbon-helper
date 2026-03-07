@@ -197,7 +197,6 @@ export default function RSEBlending() {
                       </div>
                     ))}
                   </div>
-                  <div className="block-rpm">@ {block.rpm}</div>
                 </div>
               );
             })}

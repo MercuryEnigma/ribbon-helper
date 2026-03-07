@@ -220,7 +220,6 @@ export default function DPPtBlending() {
                     <div className="block-name">{poffin.name}</div>
                   </div>
                   <div className="block-berry">{berryDescription}</div>
-                  <div className="block-time">@ {poffin.time ? `${poffin.time} sec` : '-'}</div>
                 </div>
               );
             })}

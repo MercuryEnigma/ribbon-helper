@@ -146,6 +146,15 @@ export default function RSEMoves({ selectedGame, onNavigate }: RSEMovesProps) {
           }
         }
       }
+
+      // Exclude moves with warnings by default
+      const allMoves = getSelectableMoves(moves, { 'level-up': true, 'machine': true, 'tutor': true, 'egg': true, 'purify': true, 'pre-evolution': true, 'other': true });
+      for (const move of allMoves) {
+        const effect = getContestEffectForMove(move, contestMoves, contestEffects);
+        if (effect?.id === 3) {
+          initialExcludedMoves.add(move);
+        }
+      }
     }
 
     setExcludedMoves(initialExcludedMoves);
@@ -711,7 +720,7 @@ export default function RSEMoves({ selectedGame, onNavigate }: RSEMovesProps) {
                     <div className="move-details-description">
                       {selectedMoveEffect.id === 3 && (
                         <div className="move-warning-badge">
-                          This move is encouraged to filter out as the “more easily startled” leads to more inconsistent results.
+                          We recommend filting out this move because the “more easily startled” leads to more inconsistent results.
                         </div>
                       )}
                       {selectedMoveEffect.flavor_text && (
