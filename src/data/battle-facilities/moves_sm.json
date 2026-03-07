@@ -3681,7 +3681,7 @@
     "category": "Special"
   },
   "Fell Stinger": {
-    "bp": "50",
+    "bp": 50,
     "type": "Bug",
     "category": "Physical",
     "makesContact": true,

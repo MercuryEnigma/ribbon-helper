@@ -137,6 +137,7 @@ export interface FieldSide {
   isVictoryStar: boolean
   isFriendGuard: boolean
   isBattery: boolean
+  isZMove: boolean
   spikes: number
   stealthRock: boolean
   toxicSpikes: number
@@ -282,6 +283,7 @@ export function makeFieldSide(overrides: Partial<FieldSide> = {}, format = "sing
     isVictoryStar: false,
     isFriendGuard: false,
     isBattery: false,
+    isZMove: false,
     spikes: 0,
     stealthRock: false,
     toxicSpikes: 0,
@@ -351,8 +353,11 @@ export function getDamageResultGen7(
     return result
   }
 
-  // Protect blocks all damage
-  if (field.isProtect) {
+  const isZMove = !!attackerSide?.isZMove
+  const zPower = isZMove ? (MOVES_SM[move.name]?.zp ?? 0) : 0
+
+  // Protect blocks all damage (Z-Moves deal 25% through Protect)
+  if (field.isProtect && !isZMove) {
     result.description = `${attacker.name} ${move.name} vs. ${defender.name} (Protected)`
     return result
   }
@@ -404,7 +409,7 @@ export function getDamageResultGen7(
     return result
   }
 
-  let basePower = move.bp
+  let basePower = (isZMove && zPower > 0) ? zPower : move.bp
 
   // -ate ability power boost (1.2x in Gen 7)
   if (atePowerBoost) {
@@ -484,8 +489,8 @@ export function getDamageResultGen7(
     baseDamage = Math.floor(baseDamage / 2)
   }
 
-  // Screens
-  if (!move.isCrit) {
+  // Screens (Z-Moves bypass screens)
+  if (!move.isCrit && !isZMove) {
     const hasScreen = (isPhysical && field.isReflect) || (!isPhysical && field.isLightScreen) || field.isAuroraVeil
     if (hasScreen) {
       if (field.format === "singles") {
@@ -587,8 +592,15 @@ export function getDamageResultGen7(
     damage[i - 85] = Math.max(1, Math.floor(baseDamage * i / 100))
   }
 
-  // Parental Bond: add second hit at 25% power
-  if (attacker.curAbility === "Parental Bond" && move.bp > 0 && !move.isSpread) {
+  // Z-Moves deal 25% damage through Protect
+  if (field.isProtect && isZMove) {
+    for (let i = 0; i < damage.length; i++) {
+      damage[i] = Math.max(1, Math.floor(damage[i] / 4))
+    }
+  }
+
+  // Parental Bond: add second hit at 25% power (Z-Moves don't trigger second hit)
+  if (attacker.curAbility === "Parental Bond" && move.bp > 0 && !move.isSpread && !isZMove) {
     for (let i = 0; i < 16; i++) {
       damage[i] += Math.max(1, Math.floor(damage[i] * 0.25))
     }

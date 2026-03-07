@@ -127,7 +127,7 @@ function BattleStatusAccordion({
               {fields.map(f => {
                 if (f.type === 'checkbox') {
                   return (
-                    <label key={f.key} className={`bf-checkbox-label${side[f.key] ? ' bf-checkbox-active' : ''}`}>
+                    <label key={f.key} className={`bf-checkbox-label${f.className ? ' ' + f.className : ''}${side[f.key] ? ' bf-checkbox-active' : ''}`}>
                       <input type="checkbox" checked={!!side[f.key]} onChange={e => onChange({ ...side, [f.key]: e.target.checked })} />
                       {f.label}
                     </label>

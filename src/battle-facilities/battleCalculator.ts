@@ -73,7 +73,7 @@ export interface PokeSummary {
 }
 
 export type SideStateFieldDef =
-  | { type: 'checkbox'; key: string; label: string; row?: number }
+  | { type: 'checkbox'; key: string; label: string; row?: number; className?: string }
   | { type: 'select'; key: string; label: string; options: { value: number; label: string }[]; row?: number }
 
 export interface CalcParams {
@@ -563,6 +563,7 @@ function smDefaultSideState(): SideState {
     isVictoryStar: false,
     isFriendGuard: false,
     isBattery: false,
+    isZMove: false,
     spikes: 0,
     stealthRock: false,
     toxicSpikes: 0,
@@ -574,6 +575,7 @@ function smDefaultSideState(): SideState {
 }
 
 const SM_SIDE_STATE_FIELDS: SideStateFieldDef[] = [
+  { type: 'checkbox', key: 'isZMove', label: '⚡ Z-Move', row: 0, className: 'bf-zmove-label' },
   { type: 'checkbox', key: 'isProtect', label: 'Protect', row: 1 },
   { type: 'checkbox', key: 'isReflect', label: 'Reflect', row: 1 },
   { type: 'checkbox', key: 'isLightScreen', label: 'Light Screen', row: 1 },
@@ -678,6 +680,7 @@ function smRunCalc(params: CalcParams): CalcResult | null {
     isLeechSeed: p1Side.isLeechSeed, isGravity: g,
     isVictoryStar: p1Side.isVictoryStar,
     isFriendGuard: p1Side.isFriendGuard, isBattery: p1Side.isBattery,
+    isZMove: p1Side.isZMove,
     spikes: p1Side.spikes, stealthRock: p1Side.stealthRock, toxicSpikes: p1Side.toxicSpikes,
   }, format, weather, t)
   const p2FieldSide = makeFieldSideGen7({
@@ -688,6 +691,7 @@ function smRunCalc(params: CalcParams): CalcResult | null {
     isLeechSeed: p2Side.isLeechSeed, isGravity: g,
     isVictoryStar: p2Side.isVictoryStar,
     isFriendGuard: p2Side.isFriendGuard, isBattery: p2Side.isBattery,
+    isZMove: p2Side.isZMove,
     spikes: p2Side.spikes, stealthRock: p2Side.stealthRock, toxicSpikes: p2Side.toxicSpikes,
   }, format, weather, t)
 
