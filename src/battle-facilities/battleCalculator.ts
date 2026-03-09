@@ -286,8 +286,6 @@ function defaultSideState(): SideState {
     isLightScreen: false,
     isHelpingHand: false,
     isCharge: false,
-    isSeeded: false,
-    spikes: 0,
     boosts: { at: 0, df: 0, sa: 0, sd: 0, sp: 0 },
     curHP: 0,
     maxHP: 0,
@@ -301,11 +299,6 @@ const EMERALD_SIDE_STATE_FIELDS: SideStateFieldDef[] = [
   { type: 'checkbox', key: 'isLightScreen', label: 'Light Screen', row: 1 },
   { type: 'checkbox', key: 'isHelpingHand', label: 'Helping Hand', row: 2 },
   { type: 'checkbox', key: 'isCharge', label: 'Charge', row: 2 },
-  { type: 'checkbox', key: 'isSeeded', label: 'Leech Seed', row: 2 },
-  { type: 'select', key: 'spikes', label: 'Spikes', options: [
-    { value: 0, label: '0' }, { value: 1, label: '1' },
-    { value: 2, label: '2' }, { value: 3, label: '3' },
-  ]},
 ]
 
 const STAT_NAMES = ['at', 'df', 'sa', 'sd', 'sp'] as const
@@ -368,13 +361,11 @@ function runCalc(params: CalcParams): CalcResult | null {
     isProtect: p1Side.isProtect,
     isReflect: p1Side.isReflect, isLightScreen: p1Side.isLightScreen,
     isHelpingHand: p1Side.isHelpingHand, isCharge: p1Side.isCharge,
-    isSeeded: p1Side.isSeeded, spikes: p1Side.spikes,
   }, format, weather)
   const p2FieldSide = makeFieldSide({
     isProtect: p2Side.isProtect,
     isReflect: p2Side.isReflect, isLightScreen: p2Side.isLightScreen,
     isHelpingHand: p2Side.isHelpingHand, isCharge: p2Side.isCharge,
-    isSeeded: p2Side.isSeeded, spikes: p2Side.spikes,
   }, format, weather)
 
   const [p1Results, p2Results] = calculateAllMovesGen3(p1Poke, p2Poke, p1FieldSide, p2FieldSide)
@@ -559,14 +550,9 @@ function smDefaultSideState(): SideState {
     isHelpingHand: false,
     isTailwind: false,
     isCharge: false,
-    isLeechSeed: false,
-    isVictoryStar: false,
     isFriendGuard: false,
     isBattery: false,
     isZMove: false,
-    spikes: 0,
-    stealthRock: false,
-    toxicSpikes: 0,
     boosts: { at: 0, df: 0, sa: 0, sd: 0, sp: 0 },
     curHP: 0,
     maxHP: 0,
@@ -583,18 +569,8 @@ const SM_SIDE_STATE_FIELDS: SideStateFieldDef[] = [
   { type: 'checkbox', key: 'isHelpingHand', label: 'Helping Hand', row: 2 },
   { type: 'checkbox', key: 'isTailwind', label: 'Tailwind', row: 2 },
   { type: 'checkbox', key: 'isCharge', label: 'Charge', row: 2 },
-  { type: 'checkbox', key: 'isLeechSeed', label: 'Leech Seed', row: 2 },
-  { type: 'checkbox', key: 'isVictoryStar', label: 'Victory Star', row: 2 },
   { type: 'checkbox', key: 'isFriendGuard', label: 'Friend Guard', row: 2 },
   { type: 'checkbox', key: 'isBattery', label: 'Battery', row: 2 },
-  { type: 'checkbox', key: 'stealthRock', label: 'Stealth Rock', row: 3 },
-  { type: 'select', key: 'spikes', label: 'Spikes', options: [
-    { value: 0, label: '0' }, { value: 1, label: '1' },
-    { value: 2, label: '2' }, { value: 3, label: '3' },
-  ], row: 3 },
-  { type: 'select', key: 'toxicSpikes', label: 'T.Spikes', options: [
-    { value: 0, label: '0' }, { value: 1, label: '1' }, { value: 2, label: '2' },
-  ], row: 3 },
 ]
 
 const SM_STAT_NAMES = ['at', 'df', 'sa', 'sd', 'sp'] as const
@@ -677,22 +653,18 @@ function smRunCalc(params: CalcParams): CalcResult | null {
     isReflect: p1Side.isReflect, isLightScreen: p1Side.isLightScreen,
     isAuroraVeil: p1Side.isAuroraVeil, isHelpingHand: p1Side.isHelpingHand,
     isTailwind: p1Side.isTailwind, isCharge: p1Side.isCharge,
-    isLeechSeed: p1Side.isLeechSeed, isGravity: g,
-    isVictoryStar: p1Side.isVictoryStar,
+    isGravity: g,
     isFriendGuard: p1Side.isFriendGuard, isBattery: p1Side.isBattery,
     isZMove: p1Side.isZMove,
-    spikes: p1Side.spikes, stealthRock: p1Side.stealthRock, toxicSpikes: p1Side.toxicSpikes,
   }, format, weather, t)
   const p2FieldSide = makeFieldSideGen7({
     isProtect: p2Side.isProtect,
     isReflect: p2Side.isReflect, isLightScreen: p2Side.isLightScreen,
     isAuroraVeil: p2Side.isAuroraVeil, isHelpingHand: p2Side.isHelpingHand,
     isTailwind: p2Side.isTailwind, isCharge: p2Side.isCharge,
-    isLeechSeed: p2Side.isLeechSeed, isGravity: g,
-    isVictoryStar: p2Side.isVictoryStar,
+    isGravity: g,
     isFriendGuard: p2Side.isFriendGuard, isBattery: p2Side.isBattery,
     isZMove: p2Side.isZMove,
-    spikes: p2Side.spikes, stealthRock: p2Side.stealthRock, toxicSpikes: p2Side.toxicSpikes,
   }, format, weather, t)
 
   const [p1Results, p2Results] = calculateAllMovesGen7(p1Poke, p2Poke, p1FieldSide, p2FieldSide)
@@ -700,12 +672,12 @@ function smRunCalc(params: CalcParams): CalcResult | null {
   const p1Summary: PokeSummary = {
     evs: p1Poke.evs, nature: p1Poke.nature, ability: p1Poke.ability,
     abilities: [p1Poke.ability], item: p1Poke.item,
-    speed: smCalcCurrentSpeed(p1Poke, weather, t),
+    speed: smCalcCurrentSpeed(p1Poke, weather, t) * (p1Side.isTailwind ? 2 : 1),
   }
   const p2Summary: PokeSummary = {
     evs: p2Poke.evs, nature: p2Poke.nature, ability: p2Poke.ability,
     abilities: p2Dex.abilities, item: p2Poke.item,
-    speed: smCalcCurrentSpeed(p2Poke, weather, t),
+    speed: smCalcCurrentSpeed(p2Poke, weather, t) * (p2Side.isTailwind ? 2 : 1),
   }
 
   return {
