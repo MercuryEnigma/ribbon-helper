@@ -436,7 +436,7 @@ const SM_MODES: FacilityMode[] = [
     pokemon: ['Pheromosa (Sectonia)', 'Celesteela (Ventysteela)', 'Tapu Lele (Wendy Koopa)'],
     ribbon: {
       name: 'Battle Tree Great Ribbon',
-      description: 'Win 20 consecutive battles in Regular Singles to earn the Battle Tree Great Ribbon. We recommend getting this ribbon in Ultra Sun / Ultra Moon for the unlimited level cap.',
+      description: 'Win the 20th battle against Trainer Red in Regular Singles to earn the Battle Tree Great Ribbon. We recommend getting this ribbon in Ultra Sun / Ultra Moon for the unlimited level cap.',
       icon: '/images/ribbons/battle-tree-great-ribbon.png',
     },
   },
@@ -451,7 +451,7 @@ const SM_MODES: FacilityMode[] = [
     pokemon: ['Pheromosa (Doubles)', 'Tapu Lele (Doubles)', 'Salamence-Mega (Doubles)', 'Aegislash (Doubles)'],
     ribbon: {
       name: 'Battle Tree Great Ribbon',
-      description: 'Win 20 consecutive battles in Regular Doubles to earn the Battle Tree Great Ribbon. We recommend getting this ribbon in Ultra Sun / Ultra Moon for the unlimited level cap.',
+      description: 'Win the 20th battle against Trainer Blue in Regular Doubles to earn the Battle Tree Great Ribbon. We recommend getting this ribbon in Ultra Sun / Ultra Moon for the unlimited level cap.',
       icon: '/images/ribbons/battle-tree-great-ribbon.png',
     },
   },
@@ -466,7 +466,7 @@ const SM_MODES: FacilityMode[] = [
     pokemon: ['Pheromosa (Sectonia)', 'Celesteela (Ventysteela)', 'Tapu Lele (Wendy Koopa)'],
     ribbon: {
       name: 'Battle Tree Master Ribbon',
-      description: 'Win 50 consecutive battles in Super Singles to earn the Battle Tree Master Ribbon.',
+      description: 'With the 50th battle against Trainer Red in Super Singles to earn the Battle Tree Master Ribbon. After 51 consecutive wins, you need to restart the streak to earn the ribbon.',
       warning: 'We recommend getting this ribbon in Super Doubles for greater consistency.',
       icon: '/images/ribbons/battle-tree-master-ribbon.png',
     },
@@ -480,7 +480,7 @@ const SM_MODES: FacilityMode[] = [
     teamUrl: 'https://pokepast.es/219b988b78930fea',
     teamName: "Regiultima's Pheromosa Lele Super Doubles",
     pokemon: ['Pheromosa (Doubles)', 'Tapu Lele (Doubles)', 'Salamence-Mega (Doubles)', 'Aegislash (Doubles)'],
-    ribbon: { name: 'Battle Tree Master Ribbon', description: 'Win 50 consecutive battles in Super Doubles to earn the Battle Tree Master Ribbon.', icon: '/images/ribbons/battle-tree-master-ribbon.png' },
+    ribbon: { name: 'Battle Tree Master Ribbon', description: 'With the 50th battle against Trainer Blue in Super Doubles to earn the Battle Tree Master Ribbon. After 51 consecutive wins, you need to restart the streak to earn the ribbon.', icon: '/images/ribbons/battle-tree-master-ribbon.png' },
   },
 ]
 
