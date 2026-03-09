@@ -73,8 +73,8 @@ export interface PokeSummary {
 }
 
 export type SideStateFieldDef =
-  | { type: 'checkbox'; key: string; label: string; row?: number; className?: string }
-  | { type: 'select'; key: string; label: string; options: { value: number; label: string }[]; row?: number }
+  | { type: 'checkbox'; key: string; label: string; row?: number; className?: string; disabled?: boolean }
+  | { type: 'select'; key: string; label: string; options: { value: number; label: string }[]; row?: number; disabled?: boolean }
 
 export interface CalcParams {
   p1: P1Option
@@ -286,6 +286,7 @@ function defaultSideState(): SideState {
     isLightScreen: false,
     isHelpingHand: false,
     isCharge: false,
+    itemUsed: false,
     boosts: { at: 0, df: 0, sa: 0, sd: 0, sp: 0 },
     curHP: 0,
     maxHP: 0,
@@ -294,6 +295,7 @@ function defaultSideState(): SideState {
 }
 
 const EMERALD_SIDE_STATE_FIELDS: SideStateFieldDef[] = [
+  { type: 'checkbox', key: 'itemUsed', label: 'Used/Lost Item', row: 0 },
   { type: 'checkbox', key: 'isProtect', label: 'Protect', row: 1 },
   { type: 'checkbox', key: 'isReflect', label: 'Reflect', row: 1 },
   { type: 'checkbox', key: 'isLightScreen', label: 'Light Screen', row: 1 },
@@ -356,6 +358,10 @@ function runCalc(params: CalcParams): CalcResult | null {
   if (p2Side.curHP > 0) p2Poke.curHP = p2Side.curHP
   p1Poke.status = p1Side.status
   p2Poke.status = p2Side.status
+
+  // Treat used/lost items as no item for damage + speed calcs
+  if (p1Side.itemUsed) p1Poke.item = ''
+  if (p2Side.itemUsed) p2Poke.item = ''
 
   const p1FieldSide = makeFieldSide({
     isProtect: p1Side.isProtect,
@@ -479,13 +485,9 @@ const SM_MODES: FacilityMode[] = [
 ]
 
 function smGetBattleRange(battleNum: number): string {
-  if (battleNum % 10 === 0) return `Battle ${battleNum} (Boss)`
+  if (battleNum % 10 === 0) return `Boss`
   if (battleNum >= 51) return '51+'
-  if (battleNum >= 41) return '41-49'
-  if (battleNum >= 31) return '31-39'
-  if (battleNum >= 21) return '21-29'
-  if (battleNum >= 11) return '11-19'
-  return '1-9'
+  return ''
 }
 
 function smGetIVsForTrainer(trainer: Trainer | null): number {
@@ -543,6 +545,7 @@ function smBuildP1Options(ribbonMaster: StoredSet | null, pokemonSets: StoredSet
 
 function smDefaultSideState(): SideState {
   return {
+    itemUsed: false,
     isProtect: false,
     isReflect: false,
     isLightScreen: false,
@@ -561,6 +564,7 @@ function smDefaultSideState(): SideState {
 }
 
 const SM_SIDE_STATE_FIELDS: SideStateFieldDef[] = [
+  { type: 'checkbox', key: 'itemUsed', label: 'Used/Lost Item', row: 0 },
   { type: 'checkbox', key: 'isZMove', label: '⚡ Z-Move', row: 0, className: 'bf-zmove-label' },
   { type: 'checkbox', key: 'isProtect', label: 'Protect', row: 1 },
   { type: 'checkbox', key: 'isReflect', label: 'Reflect', row: 1 },
@@ -645,6 +649,10 @@ function smRunCalc(params: CalcParams): CalcResult | null {
   if (p2Side.curHP > 0) p2Poke.curHP = p2Side.curHP
   p1Poke.status = p1Side.status
   p2Poke.status = p2Side.status
+
+  // Treat used/lost items as no item for damage + speed calcs
+  if (p1Side.itemUsed) p1Poke.item = ''
+  if (p2Side.itemUsed) p2Poke.item = ''
 
   const t = terrain || ''
   const g = !!gravity

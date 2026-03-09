@@ -11,6 +11,7 @@ import {
   type P1Option,
   type Trainer,
 } from './battleCalculator'
+import { findSetByLabel as findSetByLabelGen7, getZCrystalType } from './gen7calc'
 import {
   parsePokepaste,
   loadRibbonMasterSet,
@@ -168,8 +169,16 @@ function BattleStatusAccordion({
               {fields.map(f => {
                 if (f.type === 'checkbox') {
                   return (
-                    <label key={f.key} className={`bf-checkbox-label${f.className ? ' ' + f.className : ''}${side[f.key] ? ' bf-checkbox-active' : ''}`}>
-                      <input type="checkbox" checked={!!side[f.key]} onChange={e => onChange({ ...side, [f.key]: e.target.checked })} />
+                    <label
+                      key={f.key}
+                      className={`bf-checkbox-label${f.className ? ' ' + f.className : ''}${side[f.key] ? ' bf-checkbox-active' : ''}${f.disabled ? ' bf-checkbox-disabled' : ''}`}
+                    >
+                      <input
+                        type="checkbox"
+                        checked={!!side[f.key]}
+                        disabled={f.disabled}
+                        onChange={e => onChange({ ...side, [f.key]: e.target.checked })}
+                      />
                       {f.label}
                     </label>
                   )
@@ -178,7 +187,11 @@ function BattleStatusAccordion({
                   return (
                     <span key={f.key} className="bf-status-row">
                       <span className="bf-status-label">{f.label}</span>
-                      <select value={side[f.key]} onChange={e => onChange({ ...side, [f.key]: parseInt(e.target.value) })}>
+                      <select
+                        value={side[f.key]}
+                        disabled={f.disabled}
+                        onChange={e => onChange({ ...side, [f.key]: parseInt(e.target.value) })}
+                      >
                         {f.options.map(o => (
                           <option key={o.value} value={o.value}>{o.label}</option>
                         ))}
@@ -446,7 +459,27 @@ export default function BattleFacilities() {
     return availableSets[0] || ''
   }, [availableSets, p2Label])
 
+  // Z-Crystal awareness (Gen 7 only)
+  const p1Item = selectedP1?.set.item ?? ''
+  const p1ZType = config === sunMoonConfig ? getZCrystalType(p1Side.itemUsed ? '' : p1Item) : null
+  const p2Item = useMemo(() => {
+    if (config !== sunMoonConfig) return ''
+    const match = findSetByLabelGen7(effectiveP2Label)
+    return match?.set.item ?? ''
+  }, [config, effectiveP2Label])
+  const p2ZType = config === sunMoonConfig ? getZCrystalType(p2Side.itemUsed ? '' : p2Item) : null
+
   const p2Ivs = config.getIVsForTrainer(selectedTrainer)
+
+  const p1FieldDefs = useMemo(() => {
+    if (config !== sunMoonConfig) return config.sideStateFields
+    return config.sideStateFields.map(f => f.key === 'isZMove' ? { ...f, disabled: !p1ZType } : f)
+  }, [config, p1ZType])
+
+  const p2FieldDefs = useMemo(() => {
+    if (config !== sunMoonConfig) return config.sideStateFields
+    return config.sideStateFields.map(f => f.key === 'isZMove' ? { ...f, disabled: !p2ZType } : f)
+  }, [config, p2ZType])
 
   const emptyCalc = { p1Results: [] as DamageResult[], p2Results: [] as DamageResult[], p1MaxHP: 0, p2MaxHP: 0, p1Summary: undefined as PokeSummary | undefined, p2Summary: undefined as PokeSummary | undefined }
   const { p1Results, p2Results, p1MaxHP, p2MaxHP, p1Summary, p2Summary } = useMemo(() => {
@@ -482,6 +515,18 @@ export default function BattleFacilities() {
       setP2Side(s => ({ ...s, maxHP: p2MaxHP, curHP: p2MaxHP }))
     }
   }, [p2MaxHP, p2Side.maxHP])
+
+  // Disable lingering Z-Move toggles when no Z-Crystal is held
+  useEffect(() => {
+    if (config === sunMoonConfig && !p1ZType && p1Side.isZMove) {
+      setP1Side(s => ({ ...s, isZMove: false }))
+    }
+  }, [config, p1ZType, p1Side.isZMove])
+  useEffect(() => {
+    if (config === sunMoonConfig && !p2ZType && p2Side.isZMove) {
+      setP2Side(s => ({ ...s, isZMove: false }))
+    }
+  }, [config, p2ZType, p2Side.isZMove])
   // Reset ability override when opponent pokemon changes
   useEffect(() => { setP2Ability('') }, [effectiveP2Label])
 
@@ -644,7 +689,7 @@ export default function BattleFacilities() {
                   onClick={() => handleBattleNumChange(1)}
                   title="Reset to battle 1"
                 >Reset</button>
-                <span className="bf-range-badge">{config.getBattleRange(battleNum)}</span>
+                {config.getBattleRange(battleNum) && <span className="bf-range-badge">{config.getBattleRange(battleNum)}</span>}
                 <span className="bf-range-badge">{p2Ivs} IVs</span>
               </div>
               <div className="bf-trainer-row">
@@ -735,7 +780,7 @@ export default function BattleFacilities() {
             onChange={setP1Side}
             open={p1StatusOpen}
             onToggle={() => setP1StatusOpen(o => !o)}
-            fieldDefs={config.sideStateFields}
+            fieldDefs={p1FieldDefs}
           />
           <BattleStatusAccordion
             label="Opponent"
@@ -746,7 +791,7 @@ export default function BattleFacilities() {
             onChange={setP2Side}
             open={p2StatusOpen}
             onToggle={() => setP2StatusOpen(o => !o)}
-            fieldDefs={config.sideStateFields}
+            fieldDefs={p2FieldDefs}
           />
         </div>
       </div>

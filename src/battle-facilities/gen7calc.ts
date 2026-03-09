@@ -303,6 +303,50 @@ function asZMove(move: MoveData): MoveData {
 }
 
 // --- Main calculation ---
+const Z_CRYSTAL_TYPE_MAP: Record<string, string> = {
+  // Type crystals
+  'Normalium Z': 'Normal',
+  'Firium Z': 'Fire',
+  'Waterium Z': 'Water',
+  'Electrium Z': 'Electric',
+  'Grassium Z': 'Grass',
+  'Icium Z': 'Ice',
+  'Fightinium Z': 'Fighting',
+  'Poisonium Z': 'Poison',
+  'Groundium Z': 'Ground',
+  'Flyinium Z': 'Flying',
+  'Psychium Z': 'Psychic',
+  'Buginium Z': 'Bug',
+  'Rockium Z': 'Rock',
+  'Ghostium Z': 'Ghost',
+  'Dragonium Z': 'Dragon',
+  'Darkinium Z': 'Dark',
+  'Steelium Z': 'Steel',
+  'Fairium Z': 'Fairy',
+  // Signature crystals
+  'Snorlium Z': 'Normal',
+  'Eevium Z': 'Normal',
+  'Pikanium Z': 'Electric',
+  'Pikashunium Z': 'Electric',
+  'Aloraichium Z': 'Electric',
+  'Mewnium Z': 'Psychic',
+  'Decidium Z': 'Ghost',
+  'Incinium Z': 'Dark',
+  'Primarium Z': 'Water',
+  'Tapunium Z': 'Fairy',
+  'Lycanium Z': 'Rock',
+  'Kommonium Z': 'Dragon',
+  'Marshadium Z': 'Ghost',
+  'Solganium Z': 'Steel',
+  'Lunalium Z': 'Ghost',
+  'Ultranecrozium Z': 'Psychic',
+}
+
+export function getZCrystalType(item?: string): string | null {
+  if (!item) return null
+  return Z_CRYSTAL_TYPE_MAP[item] ?? null
+}
+
 export function calculateAllMovesGen7(
   p1: Pokemon,
   p2: Pokemon,
@@ -337,14 +381,16 @@ export function calculateAllMovesGen7(
   const side2 = buildAttackSide(p2Side, p1Side, weather) // p2 attacks p1
 
   const results1: DamageResult[] = p1.moves.map(move => {
-    const m = p1Side.isZMove ? asZMove(move) : move
+    const useZ = p1Side.isZMove && getZCrystalType(p1.item) === move.type
+    const m = useZ ? asZMove(move) : move
     const raw = getDamageResult(p1, p2, m as ModernMove, side1)
     p2.resetCurAbility()
     return enrichResult(raw, move, p2.maxHP)
   })
 
   const results2: DamageResult[] = p2.moves.map(move => {
-    const m = p2Side.isZMove ? asZMove(move) : move
+    const useZ = p2Side.isZMove && getZCrystalType(p2.item) === move.type
+    const m = useZ ? asZMove(move) : move
     const raw = getDamageResult(p2, p1, m as ModernMove, side2)
     p1.resetCurAbility()
     return enrichResult(raw, move, p1.maxHP)
