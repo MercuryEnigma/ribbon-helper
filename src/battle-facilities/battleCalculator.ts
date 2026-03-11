@@ -25,12 +25,12 @@ import {
   type SetdexEntry as SetdexEntryGen7,
 } from './gen7calc'
 import type { StoredSet } from './pokepaste'
-import teamData from '../data/battle-facilities/setteam_em.json'
-import battleTrainers from '../data/battle-facilities/battle_trainers_em.json'
-import trainerPokemon from '../data/battle-facilities/trainer_pokemon_em.json'
-import smTeamData from '../data/battle-facilities/setteam_sm.json'
-import smBattleTrainers from '../data/battle-facilities/battle_trainers_sm.json'
-import smTrainerPokemon from '../data/battle-facilities/trainer_pokemon_sm.json'
+import teamData from '../data/battle-facilities/emerald/setteam_em.json'
+import battleTrainers from '../data/battle-facilities/emerald/battle_trainers_em.json'
+import trainerPokemon from '../data/battle-facilities/emerald/trainer_pokemon_em.json'
+import smTeamData from '../data/battle-facilities/sunmoon/setteam_sm.json'
+import smBattleTrainers from '../data/battle-facilities/sunmoon/battle_trainers_sm.json'
+import smTrainerPokemon from '../data/battle-facilities/sunmoon/trainer_pokemon_sm.json'
 
 // ──────────────────────────────────────────────
 // Shared types (used by both GameConfig and UI)

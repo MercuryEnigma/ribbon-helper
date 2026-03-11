@@ -3,7 +3,7 @@
  * damage-calc JS files which use jQuery $.extend() inheritance chains.
  *
  * Usage: node extract_sm_data.js
- * Outputs JSON files to ../../data/battle-facilities/
+ * Outputs JSON files to ../../data/battle-facilities/sunmoon/
  */
 
 const fs = require('fs');
@@ -65,7 +65,7 @@ eval(fs.readFileSync(path.join(__dirname, 'game_data/setdex_gen7_sets.js'), 'utf
 const setdexSM = SETDEX_GEN7;
 
 // ── Output ──
-const outDir = path.join(__dirname, '../../data/battle-facilities');
+const outDir = path.join(__dirname, '../../data/battle-facilities/sunmoon');
 
 // Remove the "sl" (special) stat from pokedex entries - not used in gen7
 for (const mon of Object.values(pokedexSM)) {

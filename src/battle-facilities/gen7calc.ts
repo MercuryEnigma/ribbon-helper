@@ -4,9 +4,9 @@
 //   - Pre-calc helpers (checkAirLock, checkKlutz)
 //   - Bridging to getDamageResult from src/damage-calc/gen7-damage-modern.ts
 
-import movesData from '../data/battle-facilities/moves_sm.json'
-import pokedexData from '../data/battle-facilities/pokedex_sm.json'
-import setdexData from '../data/battle-facilities/setdex_sm.json'
+import movesData from '../data/battle-facilities/sunmoon/moves_sm.json'
+import pokedexData from '../data/battle-facilities/sunmoon/pokedex_sm.json'
+import setdexData from '../data/battle-facilities/sunmoon/setdex_sm.json'
 import {
   getDamageResult,
   getModifiedStat,

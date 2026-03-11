@@ -4,9 +4,9 @@
 //   - Pre-calc helpers (checkAirLock)
 //   - Bridging to getDamageResultADV from src/damage-calc/gen3-damage-adv.ts
 
-import movesData from '../data/battle-facilities/moves_em.json'
-import pokedexData from '../data/battle-facilities/pokedex_em.json'
-import setdexData from '../data/battle-facilities/setdex_em.json'
+import movesData from '../data/battle-facilities/emerald/moves_em.json'
+import pokedexData from '../data/battle-facilities/emerald/pokedex_em.json'
+import setdexData from '../data/battle-facilities/emerald/setdex_em.json'
 import {
   getDamageResultADV,
   getModifiedStat,

@@ -141,6 +141,6 @@ const specialTrainers = [
 
 trainers2.push(...specialTrainers);
 
-const outDir = path.join(__dirname, '../../data/battle-facilities');
+const outDir = path.join(__dirname, '../../data/battle-facilities/sunmoon');
 fs.writeFileSync(path.join(outDir, 'battle_trainers_sm.json'), JSON.stringify(trainers2, null, 2));
 console.log(`\nWrote battle_trainers_sm.json (${trainers2.length} trainers)`);

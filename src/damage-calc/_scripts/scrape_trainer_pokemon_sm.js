@@ -16,7 +16,7 @@ const https = require('https');
 
 // Load setdex
 const setdex = JSON.parse(fs.readFileSync(
-  path.join(__dirname, '../../data/battle-facilities/setdex_sm.json'), 'utf8'
+  path.join(__dirname, '../../data/battle-facilities/sunmoon/setdex_sm.json'), 'utf8'
 ));
 
 // Normalize move names - setdex has "(Doubled)" suffix for Avalanche/Revenge etc.
@@ -302,7 +302,7 @@ async function main() {
     console.error(`  Error fetching special trainers: ${err.message}`);
   }
 
-  const outDir = path.join(__dirname, '../../data/battle-facilities');
+  const outDir = path.join(__dirname, '../../data/battle-facilities/sunmoon');
   fs.writeFileSync(
     path.join(outDir, 'trainer_pokemon_sm.json'),
     JSON.stringify(allTrainerPokemon, null, 2)
