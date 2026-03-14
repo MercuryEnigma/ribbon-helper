@@ -3,6 +3,7 @@ import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import {
   emeraldConfig,
   sunMoonConfig,
+  orasConfig,
   type GameConfig,
   type SideState,
   type PokeSummary,
@@ -25,6 +26,7 @@ import './battle-facilities.css'
 
 const GAME_OPTIONS: { slug: string; config: GameConfig }[] = [
   { slug: 'emerald', config: emeraldConfig },
+  { slug: 'oras', config: orasConfig },
   { slug: 'sunmoon', config: sunMoonConfig },
 ]
 
