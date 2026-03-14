@@ -29,6 +29,19 @@ const GAME_OPTIONS: { slug: string; config: GameConfig }[] = [
 ]
 
 const STATUS_OPTIONS = ['Healthy', 'Poisoned', 'Badly Poisoned', 'Burned', 'Paralyzed', 'Asleep', 'Frozen'] as const
+
+const ABILITY_WEATHER: Record<string, string> = {
+  'Drought': 'Sun',
+  'Drizzle': 'Rain',
+  'Sand Stream': 'Sand',
+  'Snow Warning': 'Hail',
+}
+const ABILITY_TERRAIN: Record<string, string> = {
+  'Electric Surge': 'Electric',
+  'Grassy Surge': 'Grassy',
+  'Misty Surge': 'Misty',
+  'Psychic Surge': 'Psychic',
+}
 const STAT_NAMES = ['at', 'df', 'sa', 'sd', 'sp'] as const
 const STAT_LABELS: Record<string, string> = { at: 'Atk', df: 'Def', sa: 'SpA', sd: 'SpD', sp: 'Spe' }
 const EV_LABELS: Record<string, string> = { hp: 'HP', at: 'Atk', df: 'Def', sa: 'SpA', sd: 'SpD', sp: 'Spe' }
@@ -207,14 +220,15 @@ function BattleStatusAccordion({
             {STAT_NAMES.map(stat => (
               <div key={stat} className="bf-boost-item">
                 <span>{STAT_LABELS[stat]}</span>
-                <input
-                  type="number"
-                  min={-6}
-                  max={6}
+                <select
                   value={side.boosts[stat]}
-                  onChange={e => setBoost(stat, parseInt(e.target.value) || 0)}
-                  className="bf-boost-input"
-                />
+                  onChange={e => setBoost(stat, parseInt(e.target.value))}
+                  className="bf-boost-select"
+                >
+                  {[6,5,4,3,2,1,0,-1,-2,-3,-4,-5,-6].map(n => (
+                    <option key={n} value={n}>{n > 0 ? `+${n}` : n}</option>
+                  ))}
+                </select>
               </div>
             ))}
           </div>
@@ -530,6 +544,17 @@ export default function BattleFacilities() {
   // Reset ability override when opponent pokemon changes
   useEffect(() => { setP2Ability('') }, [effectiveP2Label])
 
+  // Auto-set weather/terrain from weather-setting abilities
+  useEffect(() => {
+    const p1Weather = p1Summary?.ability ? ABILITY_WEATHER[p1Summary.ability] : undefined
+    const p2Weather = p2Summary?.ability ? ABILITY_WEATHER[p2Summary.ability] : undefined
+    setWeather(p2Weather ?? p1Weather ?? '')
+
+    const p1Terrain = p1Summary?.ability ? ABILITY_TERRAIN[p1Summary.ability] : undefined
+    const p2Terrain = p2Summary?.ability ? ABILITY_TERRAIN[p2Summary.ability] : undefined
+    setTerrain(p2Terrain ?? p1Terrain ?? '')
+  }, [p1Summary?.ability, p2Summary?.ability])
+
   const handleModeChange = (newMode: typeof mode, shouldNavigate = true) => {
     setMode(newMode)
     setP1Level(clampLevelToMode(newMode.defaultLevel, newMode))
@@ -659,7 +684,7 @@ export default function BattleFacilities() {
                   value={selectedP1?.label ?? ''}
                   onChange={e => setP1Label(e.target.value)}
                 >
-                  {p1Options.map((opt: P1Option) => (
+                  {[...p1Options].sort((a: P1Option, b: P1Option) => a.label.localeCompare(b.label)).map((opt: P1Option) => (
                     <option key={opt.label} value={opt.label}>{opt.label}</option>
                   ))}
                 </select>
@@ -698,7 +723,11 @@ export default function BattleFacilities() {
                   value={effectiveTrainerKey}
                   onChange={e => setTrainerKey(e.target.value)}
                 >
-                  {availableTrainers.map((t: Trainer) => {
+                  {[...availableTrainers].sort((a, b) => {
+                    const ka = `${a.class} ${a.name}`
+                    const kb = `${b.class} ${b.name}`
+                    return ka.localeCompare(kb)
+                  }).map((t: Trainer) => {
                     const key = `${t.class} ${t.name}`
                     return <option key={key} value={key}>{key}</option>
                   })}
@@ -710,7 +739,7 @@ export default function BattleFacilities() {
                   value={effectiveP2Label}
                   onChange={e => setP2Label(e.target.value)}
                 >
-                  {availableSets.map((label: string) => (
+                  {[...availableSets].sort((a, b) => a.localeCompare(b)).map((label: string) => (
                     <option key={label} value={label}>{label}</option>
                   ))}
                 </select>
