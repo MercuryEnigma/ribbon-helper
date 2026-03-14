@@ -232,6 +232,17 @@
       ],
       "nature": "Jolly",
       "item": "Choice Band"
+    },
+    "Aerodactyl-SM": {
+      "item": "Choice Scarf",
+      "nature": "Jolly",
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Rock Slide"
+      ]
     }
   },
   "Aggron": {
@@ -3731,6 +3742,20 @@
       ],
       "nature": "Adamant",
       "item": "Life Orb"
+    },
+    "Electivire-SM": {
+      "item": "Shuca Berry",
+      "nature": "Adamant",
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Wild Charge",
+        "Feint",
+        "Ice Punch",
+        "Cross Chop"
+      ]
     }
   },
   "Electrode": {
@@ -5253,6 +5278,21 @@
       ],
       "nature": "Jolly",
       "item": "Weakness Policy"
+    },
+    "Golem-Alola-SM": {
+      "item": "Quick Claw",
+      "nature": "Impish",
+      "evs": {
+        "hp": 170,
+        "at": 170,
+        "df": 170
+      },
+      "moves": [
+        "Wild Charge",
+        "Smack Down",
+        "Bulldoze",
+        "Counter"
+      ]
     }
   },
   "Golisopod": {
@@ -6248,6 +6288,20 @@
       ],
       "nature": "Adamant",
       "item": "Quick Claw"
+    },
+    "Incineroar-SM": {
+      "item": "Firium Z",
+      "nature": "Adamant",
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Darkest Lariat",
+        "Throat Chop",
+        "Earthquake",
+        "Outrage"
+      ]
     }
   },
   "Infernape": {
@@ -7715,6 +7769,20 @@
       ],
       "nature": "Modest",
       "item": "Assault Vest"
+    },
+    "Magnezone-SM": {
+      "item": "Bright Powder",
+      "nature": "Modest",
+      "evs": {
+        "df": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Charge Beam",
+        "Flash Cannon",
+        "Magnet Rise",
+        "Thunder Wave"
+      ]
     }
   },
   "Malamar": {
@@ -9652,6 +9720,17 @@
       ],
       "nature": "Timid",
       "item": "Normalium Z"
+    },
+    "Porygon-Z-SM": {
+      "item": "Choice Specs",
+      "nature": "Modest",
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Hyper Beam"
+      ]
     }
   },
   "Primarina": {
@@ -10356,6 +10435,18 @@
       ],
       "nature": "Brave",
       "item": "Rockium Z"
+    },
+    "Rhyperior-SM": {
+      "item": "Hard Stone",
+      "nature": "Lonely",
+      "evs": {
+        "df": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Rock Wrecker",
+        "Rock Polish"
+      ]
     }
   },
   "Ribombee": {
@@ -12690,6 +12781,20 @@
       ],
       "nature": "Jolly",
       "item": "Electrium Z"
+    },
+    "Togedemaru-SM": {
+      "item": "Air Balloon",
+      "nature": "Adamant",
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Wild Charge",
+        "Spiky Shield",
+        "Fell Stinger",
+        "Poison Jab"
+      ]
     }
   },
   "Togekiss": {
@@ -13919,6 +14024,20 @@
       ],
       "nature": "Modest",
       "item": "Groundium Z"
+    },
+    "Vikavolt-SM": {
+      "item": "Electrium Z",
+      "nature": "Modest",
+      "evs": {
+        "hp": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Thunderbolt",
+        "Air Slash",
+        "Flash Cannon",
+        "Thunder Wave"
+      ]
     }
   },
   "Virizion": {

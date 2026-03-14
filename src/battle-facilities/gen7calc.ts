@@ -136,10 +136,13 @@ export function buildPokemon(
 ): Pokemon {
   let effectiveDex = dexEntry
   let effectiveName = speciesName
-  const megaName = findMegaForme(speciesName, set.item)
-  if (megaName && POKEDEX_SM[megaName]) {
-    effectiveDex = POKEDEX_SM[megaName]
-    effectiveName = megaName
+  const isMegaLabel = /-Mega(-[XY])?$/i.test(setLabel)
+  if (isMegaLabel) {
+    const megaName = findMegaForme(speciesName, set.item)
+    if (megaName && POKEDEX_SM[megaName]) {
+      effectiveDex = POKEDEX_SM[megaName]
+      effectiveName = megaName
+    }
   }
 
   const bs = effectiveDex.bs

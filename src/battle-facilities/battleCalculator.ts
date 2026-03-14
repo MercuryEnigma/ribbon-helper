@@ -256,7 +256,8 @@ function getTrainersForBattle(battleNum: number): Trainer[] {
 }
 
 function getPokemonForTrainer(trainerName: string): string[] {
-  return (trainerPokemon as Record<string, string[]>)[trainerName] || []
+  const all = (trainerPokemon as Record<string, string[]>)[trainerName] || []
+  return all.filter(label => findSetByLabel(label) !== null)
 }
 
 function buildP1Options(ribbonMaster: StoredSet | null, pokemonSets: StoredSet[], modeLabels: string[]): P1Option[] {
@@ -448,7 +449,7 @@ const SM_MODES: FacilityMode[] = [
     maxBattle: 20,
     teamUrl: 'https://pokepast.es/219b988b78930fea',
     teamName: "Regiultima's Pheromosa Lele Super Doubles",
-    pokemon: ['Pheromosa (Doubles)', 'Tapu Lele (Doubles)', 'Salamence-Mega (Doubles)', 'Aegislash (Doubles)'],
+    pokemon: ['Pheromosa (Doubles)', 'Tapu Lele (Doubles)', 'Salamence (Doubles)', 'Salamence-Mega (Doubles)', 'Aegislash (Doubles)'],
     ribbon: {
       name: 'Battle Tree Great Ribbon',
       description: 'Win the 20th battle against Trainer Blue in Regular Doubles to earn the Battle Tree Great Ribbon. We recommend getting this ribbon in Ultra Sun / Ultra Moon for the unlimited level cap.',
@@ -479,7 +480,7 @@ const SM_MODES: FacilityMode[] = [
     maxLevel: 50,
     teamUrl: 'https://pokepast.es/219b988b78930fea',
     teamName: "Regiultima's Pheromosa Lele Super Doubles",
-    pokemon: ['Pheromosa (Doubles)', 'Tapu Lele (Doubles)', 'Salamence-Mega (Doubles)', 'Aegislash (Doubles)'],
+    pokemon: ['Pheromosa (Doubles)', 'Tapu Lele (Doubles)', 'Salamence (Doubles)', 'Salamence-Mega (Doubles)', 'Aegislash (Doubles)'],
     ribbon: { name: 'Battle Tree Master Ribbon', description: 'With the 50th battle against Trainer Blue in Super Doubles to earn the Battle Tree Master Ribbon. After 51 consecutive wins, you need to restart the streak to earn the ribbon.', icon: '/images/ribbons/battle-tree-master-ribbon.png' },
   },
 ]
@@ -520,7 +521,8 @@ function smGetTrainersForBattle(battleNum: number, modeId?: string): Trainer[] {
 }
 
 function smGetPokemonForTrainer(trainerName: string): string[] {
-  return (smTrainerPokemon as Record<string, string[]>)[trainerName] || []
+  const all = (smTrainerPokemon as Record<string, string[]>)[trainerName] || []
+  return all.filter(label => findSetByLabelGen7(label) !== null)
 }
 
 function smBuildP1Options(ribbonMaster: StoredSet | null, pokemonSets: StoredSet[], modeLabels: string[]): P1Option[] {

@@ -96,6 +96,25 @@
       "item": "Salamencite"
     }
   },
+  "Salamence": {
+    "Salamence (Doubles)": {
+      "evs": {
+        "hp": 4,
+        "at": 252,
+        "df": 4,
+        "sd": 12,
+        "sp": 236
+      },
+      "moves": [
+        "Double-Edge",
+        "Earthquake",
+        "Flamethrower",
+        "Protect"
+      ],
+      "nature": "Jolly",
+      "item": "Salamencite"
+    }
+  },
   "Aegislash": {
     "Aegislash (Doubles)": {
       "evs": {
