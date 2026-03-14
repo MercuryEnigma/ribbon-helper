@@ -762,7 +762,7 @@ const ORAS_MODES: FacilityMode[] = [
     pokemon: ['Durant (Singles)', 'Cloyster (Singles)', 'Gliscor (Singles)'],
     ribbon: {
       name: 'Skillful Battler Ribbon',
-      description: 'Win the Normal Singles course (20 consecutive battles) in the Battle Maison to earn the Skillful Battler Ribbon.',
+      description: 'Win the 20th battle against Chatelaine Nita in Regular Singles to earn the Skillful Battler Ribbon.',
       icon: '/images/ribbons/skillful-battler-ribbon.png',
     },
   },
@@ -778,7 +778,7 @@ const ORAS_MODES: FacilityMode[] = [
     pokemon: ['Aromatisse (Doubles)', 'Aron (Doubles)', 'Talonflame (Doubles)', 'Gliscor (Doubles)'],
     ribbon: {
       name: 'Skillful Battler Ribbon',
-      description: 'Win the Normal Doubles course (20 consecutive battles) in the Battle Maison to earn the Skillful Battler Ribbon.',
+      description: 'Win the 20th battle against Chatelaine Evelyn in Regular Singles to earn the Skillful Battler Ribbon.',
       icon: '/images/ribbons/skillful-battler-ribbon.png',
     },
   },
@@ -793,7 +793,7 @@ const ORAS_MODES: FacilityMode[] = [
     pokemon: ['Durant (Singles)', 'Cloyster (Singles)', 'Gliscor (Singles)'],
     ribbon: {
       name: 'Expert Battler Ribbon',
-      description: 'Win 50 consecutive battles in Super Singles at the Battle Maison to earn the Expert Battler Ribbon.',
+      description: 'With the 50th battle against Chatelaine Nita in Super Singles to earn the Expert Battler Ribbon. After 51 consecutive wins, you need to restart the streak to earn the ribbon.',
       icon: '/images/ribbons/expert-battler-ribbon.png',
     },
   },
@@ -808,7 +808,7 @@ const ORAS_MODES: FacilityMode[] = [
     pokemon: ['Aromatisse (Doubles)', 'Aron (Doubles)', 'Talonflame (Doubles)', 'Gliscor (Doubles)'],
     ribbon: {
       name: 'Expert Battler Ribbon',
-      description: 'Win 50 consecutive battles in Super Doubles at the Battle Maison to earn the Expert Battler Ribbon.',
+      description: 'With the 50th battle against Chatelaine Evelyn in Super Singles to earn the Expert Battler Ribbon. After 51 consecutive wins, you need to restart the streak to earn the ribbon.',
       icon: '/images/ribbons/expert-battler-ribbon.png',
     },
   }

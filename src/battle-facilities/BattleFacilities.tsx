@@ -545,8 +545,10 @@ export default function BattleFacilities() {
   }, [config, p2ZType, p2Side.isZMove])
   // Reset p1 side state when player pokemon changes (keep weather/terrain/gravity)
   // Also sync level if the set specifies one (e.g. level 1 Aron)
+  // Preserve old maxHP temporarily — HP sync effect will update it if the new Pokemon has a different maxHP.
+  // curHP is reset to maxHP (full HP) for the new Pokemon. Never set maxHP=0 to avoid a 0/0 flash.
   useEffect(() => {
-    setP1Side(config.defaultSideState())
+    setP1Side(s => ({ ...config.defaultSideState(), maxHP: s.maxHP, curHP: s.maxHP }))
     const setLevel = (selectedP1?.set as any)?.level
     if (setLevel) setP1Level(setLevel)
   }, [p1Label]) // eslint-disable-line react-hooks/exhaustive-deps
@@ -554,7 +556,7 @@ export default function BattleFacilities() {
   // Reset p2 side state + ability override when opponent pokemon changes (keep weather/terrain/gravity)
   useEffect(() => {
     setP2Ability('')
-    setP2Side(config.defaultSideState())
+    setP2Side(s => ({ ...config.defaultSideState(), maxHP: s.maxHP, curHP: s.maxHP }))
   }, [effectiveP2Label]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Auto-set weather/terrain from weather-setting abilities (only sets, never clears)
@@ -610,8 +612,9 @@ export default function BattleFacilities() {
     setWeather(abilityWeather)
     setTerrain(abilityTerrain)
     setGravity(false)
-    setP1Side(config.defaultSideState())
-    setP2Side(config.defaultSideState())
+    // Preserve p1 HP exactly (player didn't change); preserve p2 maxHP to avoid 0/0 flash (HP sync will update if opponent HP differs)
+    setP1Side(s => ({ ...config.defaultSideState(), maxHP: s.maxHP, curHP: s.curHP }))
+    setP2Side(s => ({ ...config.defaultSideState(), maxHP: s.maxHP, curHP: s.maxHP }))
     setP1StatusOpen(false)
     setP2StatusOpen(false)
   }
