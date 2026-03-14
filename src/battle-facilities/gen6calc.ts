@@ -57,6 +57,7 @@ export interface SetdexEntry {
   moves: string[]
   nature: string
   item: string
+  level?: number
   tier?: string
 }
 

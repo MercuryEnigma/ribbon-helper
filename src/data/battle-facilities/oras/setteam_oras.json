@@ -1,1 +1,120 @@
-{}
+{
+  "Durant": {
+    "Durant (Singles)": {
+      "evs": {
+        "hp": 252,
+        "df": 28,
+        "sp": 228
+      },
+      "moves": [
+        "Guillotine",
+        "Entrainment"
+      ],
+      "nature": "Jolly",
+      "item": "Choice Scarf"
+    }
+  },
+  "Cloyster": {
+    "Cloyster (Singles)": {
+      "evs": {
+        "hp": 60,
+        "at": 252,
+        "sp": 196
+      },
+      "moves": [
+        "Shell Smash",
+        "Protect",
+        "Icicle Spear",
+        "Substitute"
+      ],
+      "nature": "Adamant",
+      "item": "Leftovers"
+    }
+  },
+  "Gliscor": {
+    "Gliscor (Singles)": {
+      "evs": {
+        "hp": 212,
+        "sd": 252,
+        "sp": 44
+      },
+      "moves": [
+        "Bulldoze",
+        "Protect",
+        "Toxic",
+        "Substitute"
+      ],
+      "nature": "Careful",
+      "item": "Toxic Orb"
+    },
+    "Gliscor (Doubles)": {
+      "evs": {
+        "hp": 228,
+        "at": 4,
+        "df": 4,
+        "sd": 252,
+        "sp": 20
+      },
+      "moves": [
+        "Toxic",
+        "Protect",
+        "Bulldoze",
+        "Substitute"
+      ],
+      "nature": "Careful",
+      "item": "Toxic Orb"
+    }
+  },
+  "Aromatisse": {
+    "Aromatisse (Doubles)": {
+      "evs": {
+        "hp": 252,
+        "df": 252,
+        "sa": 4
+      },
+      "ivs": {
+        "at": 0,
+        "sp": 0
+      },
+      "moves": [
+        "Odor Sleuth",
+        "Dazzling Gleam",
+        "Moonblast",
+        "Trick Room"
+      ],
+      "nature": "Relaxed",
+      "item": "Lum Berry"
+    }
+  },
+  "Aron": {
+    "Aron (Doubles)": {
+      "level": 1,
+      "evs": {},
+      "moves": [
+        "Toxic",
+        "Endeavor",
+        "Sandstorm",
+        "Protect"
+      ],
+      "nature": "Mild",
+      "item": "Berry Juice"
+    }
+  },
+  "Talonflame": {
+    "Talonflame (Doubles)": {
+      "evs": {
+        "hp": 236,
+        "at": 252,
+        "sd": 20
+      },
+      "moves": [
+        "Brave Bird",
+        "Flare Blitz",
+        "Tailwind",
+        "Protect"
+      ],
+      "nature": "Adamant",
+      "item": "Sharp Beak"
+    }
+  }
+}

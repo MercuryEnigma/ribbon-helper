@@ -544,8 +544,11 @@ export default function BattleFacilities() {
     }
   }, [config, p2ZType, p2Side.isZMove])
   // Reset p1 side state when player pokemon changes (keep weather/terrain/gravity)
+  // Also sync level if the set specifies one (e.g. level 1 Aron)
   useEffect(() => {
     setP1Side(config.defaultSideState())
+    const setLevel = (selectedP1?.set as any)?.level
+    if (setLevel) setP1Level(setLevel)
   }, [p1Label]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Reset p2 side state + ability override when opponent pokemon changes (keep weather/terrain/gravity)

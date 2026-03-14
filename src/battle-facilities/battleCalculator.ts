@@ -757,9 +757,9 @@ const ORAS_MODES: FacilityMode[] = [
     format: 'singles',
     maxLevel: 50,
     maxBattle: 20,
-    teamUrl: 'https://pokepast.es/',
-    teamName: 'Battle Maison Singles Team',
-    pokemon: [],
+    teamUrl: 'https://pokepast.es/c431d238fc4a3e43',
+    teamName: 'nq8r\'s Durant/Cloyster Singles Team',
+    pokemon: ['Durant (Singles)', 'Cloyster (Singles)', 'Gliscor (Singles)'],
     ribbon: {
       name: 'Skillful Battler Ribbon',
       description: 'Win the Normal Singles course (20 consecutive battles) in the Battle Maison to earn the Skillful Battler Ribbon.',
@@ -773,9 +773,9 @@ const ORAS_MODES: FacilityMode[] = [
     format: 'doubles',
     maxLevel: 50,
     maxBattle: 20,
-    teamUrl: 'https://pokepast.es/',
-    teamName: 'Battle Maison Doubles Team',
-    pokemon: [],
+    teamUrl: 'https://pokepast.es/ec414befed89b451',
+    teamName: "nq8r's Aron / Aromatisse TR Doubles Team",
+    pokemon: ['Aromatisse (Doubles)', 'Aron (Doubles)', 'Talonflame (Doubles)', 'Gliscor (Doubles)'],
     ribbon: {
       name: 'Skillful Battler Ribbon',
       description: 'Win the Normal Doubles course (20 consecutive battles) in the Battle Maison to earn the Skillful Battler Ribbon.',
@@ -788,9 +788,9 @@ const ORAS_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'singles',
     maxLevel: 50,
-    teamUrl: 'https://pokepast.es/',
-    teamName: 'Battle Maison Super Singles Team',
-    pokemon: [],
+    teamUrl: 'https://pokepast.es/c431d238fc4a3e43',
+    teamName: 'nq8r\'s Durant/Cloyster Singles Team',
+    pokemon: ['Durant (Singles)', 'Cloyster (Singles)', 'Gliscor (Singles)'],
     ribbon: {
       name: 'Expert Battler Ribbon',
       description: 'Win 50 consecutive battles in Super Singles at the Battle Maison to earn the Expert Battler Ribbon.',
@@ -803,9 +803,9 @@ const ORAS_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'doubles',
     maxLevel: 50,
-    teamUrl: 'https://pokepast.es/',
-    teamName: 'Battle Maison Super Doubles Team',
-    pokemon: [],
+    teamUrl: 'https://pokepast.es/ec414befed89b451',
+    teamName: "nq8r's Aron / Aromatisse TR Doubles Team",
+    pokemon: ['Aromatisse (Doubles)', 'Aron (Doubles)', 'Talonflame (Doubles)', 'Gliscor (Doubles)'],
     ribbon: {
       name: 'Expert Battler Ribbon',
       description: 'Win 50 consecutive battles in Super Doubles at the Battle Maison to earn the Expert Battler Ribbon.',
@@ -947,7 +947,9 @@ function orasRunCalc(params: CalcParams): CalcResult | null {
   const p1SpeciesKey = resolveSpeciesNameGen6(p1.species)
   const p1Dex = POKEDEX_ORAS[p1SpeciesKey]
   if (!p1Dex) return null
-  const p1Poke = buildPokemonGen6(p1SpeciesKey, p1Dex, p1.set as SetdexEntryGen6, p1.label, p1Level)
+  const p1SetGen6 = p1.set as SetdexEntryGen6
+  const effectiveP1Level = p1SetGen6.level ?? p1Level
+  const p1Poke = buildPokemonGen6(p1SpeciesKey, p1Dex, p1SetGen6, p1.label, effectiveP1Level)
 
   const p2Match = findSetByLabelGen6(p2Label)
   if (!p2Match) return null
