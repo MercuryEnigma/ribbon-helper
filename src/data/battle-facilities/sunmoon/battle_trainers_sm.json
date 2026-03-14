@@ -1733,6 +1733,14 @@
   },
   {
     "number": 200,
+    "class": "Pokémon Trainer",
+    "name": "Kukui",
+    "battleRanges": [
+      "10x"
+    ]
+  },
+  {
+    "number": 201,
     "class": "Captain",
     "name": "Mallow",
     "battleRanges": [
@@ -1740,7 +1748,7 @@
     ]
   },
   {
-    "number": 201,
+    "number": 202,
     "class": "Pokémon Trainer",
     "name": "Plumeria",
     "battleRanges": [
@@ -1748,7 +1756,7 @@
     ]
   },
   {
-    "number": 202,
+    "number": 203,
     "class": "Pokémon Trainer",
     "name": "Sina",
     "battleRanges": [
@@ -1756,7 +1764,7 @@
     ]
   },
   {
-    "number": 203,
+    "number": 204,
     "class": "Pokémon Trainer",
     "name": "Wally",
     "battleRanges": [

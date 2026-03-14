@@ -541,19 +541,22 @@ export default function BattleFacilities() {
       setP2Side(s => ({ ...s, isZMove: false }))
     }
   }, [config, p2ZType, p2Side.isZMove])
-  // Reset ability override when opponent pokemon changes
-  useEffect(() => { setP2Ability('') }, [effectiveP2Label])
-
-  // Auto-set weather/terrain from weather-setting abilities
+  // Reset p1 side state when player pokemon changes (keep weather/terrain/gravity)
   useEffect(() => {
-    const p1Weather = p1Summary?.ability ? ABILITY_WEATHER[p1Summary.ability] : undefined
-    const p2Weather = p2Summary?.ability ? ABILITY_WEATHER[p2Summary.ability] : undefined
-    setWeather(p2Weather ?? p1Weather ?? '')
+    setP1Side(config.defaultSideState())
+  }, [p1Label]) // eslint-disable-line react-hooks/exhaustive-deps
 
-    const p1Terrain = p1Summary?.ability ? ABILITY_TERRAIN[p1Summary.ability] : undefined
-    const p2Terrain = p2Summary?.ability ? ABILITY_TERRAIN[p2Summary.ability] : undefined
-    setTerrain(p2Terrain ?? p1Terrain ?? '')
-  }, [p1Summary?.ability, p2Summary?.ability])
+  // Reset p2 side state + ability override when opponent pokemon changes (keep weather/terrain/gravity)
+  useEffect(() => {
+    setP2Ability('')
+    setP2Side(config.defaultSideState())
+  }, [effectiveP2Label]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Auto-set weather/terrain from weather-setting abilities (only sets, never clears)
+  useEffect(() => {
+    if (abilityWeather) setWeather(abilityWeather)
+    if (abilityTerrain) setTerrain(abilityTerrain)
+  }, [p1Summary?.ability, p2Summary?.ability]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleModeChange = (newMode: typeof mode, shouldNavigate = true) => {
     setMode(newMode)
@@ -572,15 +575,38 @@ export default function BattleFacilities() {
     }
   }
 
+  const _p1Weather = p1Summary?.ability ? ABILITY_WEATHER[p1Summary.ability] : undefined
+  const _p2Weather = p2Summary?.ability ? ABILITY_WEATHER[p2Summary.ability] : undefined
+  const abilityWeather = _p1Weather !== undefined && _p2Weather !== undefined
+    ? ((p1Summary!.speed <= p2Summary!.speed) ? _p1Weather : _p2Weather)
+    : (_p2Weather ?? _p1Weather ?? '')
+
+  const _p1Terrain = p1Summary?.ability ? ABILITY_TERRAIN[p1Summary.ability] : undefined
+  const _p2Terrain = p2Summary?.ability ? ABILITY_TERRAIN[p2Summary.ability] : undefined
+  const abilityTerrain = _p1Terrain !== undefined && _p2Terrain !== undefined
+    ? ((p1Summary!.speed <= p2Summary!.speed) ? _p1Terrain : _p2Terrain)
+    : (_p2Terrain ?? _p1Terrain ?? '')
+
   const handleBattleNumChange = (newNum: number, targetMode: typeof mode = mode) => {
     const upper = targetMode.maxBattle ?? Infinity
     const clamped = Math.min(Math.max(1, newNum), upper)
     setBattleNum(clamped)
-    setWeather('')
-    setTerrain('')
+    setWeather(abilityWeather)
+    setTerrain(abilityTerrain)
     setGravity(false)
     setP1Side(s => ({ ...config.defaultSideState(), maxHP: s.maxHP, curHP: s.maxHP }))
     setP2Side(s => ({ ...config.defaultSideState(), maxHP: s.maxHP, curHP: s.maxHP }))
+    setP1StatusOpen(false)
+    setP2StatusOpen(false)
+  }
+
+  const handleTrainerChange = (key: string) => {
+    setTrainerKey(key)
+    setWeather(abilityWeather)
+    setTerrain(abilityTerrain)
+    setGravity(false)
+    setP1Side(config.defaultSideState())
+    setP2Side(config.defaultSideState())
     setP1StatusOpen(false)
     setP2StatusOpen(false)
   }
@@ -721,7 +747,7 @@ export default function BattleFacilities() {
                 <span className="bf-row-label">Trainer</span>
                 <select
                   value={effectiveTrainerKey}
-                  onChange={e => setTrainerKey(e.target.value)}
+                  onChange={e => handleTrainerChange(e.target.value)}
                 >
                   {[...availableTrainers].sort((a, b) => {
                     const ka = `${a.class} ${a.name}`
