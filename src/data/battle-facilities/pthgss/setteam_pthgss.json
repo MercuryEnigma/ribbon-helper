@@ -6,7 +6,7 @@
       "nature": "Jolly",
       "item": "Focus Sash"
     },
-    "Garchomp (Multi)": {
+    "Garchomp (Multi Duo)": {
       "evs": { "at": 252, "sp": 252, "sd": 6 },
       "moves": ["Dragon Claw", "Swords Dance", "Earthquake", "Fire Fang"],
       "nature": "Jolly",
@@ -28,7 +28,7 @@
       "nature": "Adamant",
       "item": "Life Orb"
     },
-    "Metagross (Multi)": {
+    "Metagross (Multi Duo)": {
       "evs": { "at": 252, "sp": 252, "sd": 6 },
       "moves": ["Iron Head", "Earthquake", "Explosion", "Bullet Punch"],
       "nature": "Adamant",

@@ -75,7 +75,7 @@ const PTHGSS_MODES: FacilityMode[] = [
     teamUrl: 'https://pokepast.es/d7c808ac7ba1e426',
     teamName: "Venty's MetaChomp Duo",
     pokemon: [
-      'Metagross (Multi)', 'Garchomp (Multi)',
+      'Metagross (Multi Duo)', 'Garchomp (Multi Duo)',
       'Alakazam 1 (Mira)', 'Alakazam 2 (Mira)', 'Alakazam 3 (Mira)', 'Alakazam 4 (Mira)',
       'Gengar 1 (Mira)', 'Gengar 2 (Mira)', 'Gengar 3 (Mira)', 'Gengar 4 (Mira)',
       'Exeggutor 1 (Mira)', 'Exeggutor 2 (Mira)', 'Exeggutor 3 (Mira)',
