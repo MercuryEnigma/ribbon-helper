@@ -42,9 +42,9 @@ const PTHGSS_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'singles',
     maxLevel: 50,
-    teamUrl: '',
-    teamName: '',
-    pokemon: [],
+    teamUrl: 'https://pokepast.es/be7d1a59be75bbc9',
+    teamName: "Venty's Garchomp / CroCune / Metagross Singles Team",
+    pokemon: ['Garchomp (Singles)', 'Suicune (Singles)', 'Metagross (Singles)'],
     ribbon: {
       name: 'Ability Ribbon',
       description: 'Win the 21st battle against Palmer in Singles to earn the Ability Ribbon. Win the 49th battle against Palmer in Singles to earn the Great Ability Ribbon. After 49 consecutive wins, you need to restart the streak to earn the ribbons again.',
@@ -57,9 +57,9 @@ const PTHGSS_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'doubles',
     maxLevel: 50,
-    teamUrl: '',
-    teamName: '',
-    pokemon: [],
+    teamUrl: 'https://pokepast.es/f47d3272d04f9f92',
+    teamName: "SirToastyToes's Trick Room Doubles",
+    pokemon: ['Bronzong (Doubles)', 'Togekiss (Doubles)', 'Machamp (Doubles)', 'Slowbro (Doubles)'],
     ribbon: {
       name: 'Double Ability Ribbon',
       description: 'Win battle 50 or greater in Doubles to earn the Double Ability Ribbon. You do not need to win the entire set, and you do not need to reset.',
@@ -72,9 +72,9 @@ const PTHGSS_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'doubles',
     maxLevel: 50,
-    teamUrl: '',
-    teamName: '',
-    pokemon: [],
+    teamUrl: 'https://pokepast.es/d7c808ac7ba1e426',
+    teamName: "Venty's MetaChomp Duo",
+    pokemon: ['Metagross (Multi)', 'Garchomp (Multi)'],
     ribbon: {
       name: 'Multi Ability Ribbon',
       description: 'Win battle 50 or greater in Multi (with NPC) to earn the Multi Ability Ribbon. You do not need to win the entire set, and you do not need to reset.',
@@ -87,9 +87,9 @@ const PTHGSS_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'doubles',
     maxLevel: 50,
-    teamUrl: '',
-    teamName: '',
-    pokemon: [],
+    teamUrl: 'https://pokepast.es/f47d3272d04f9f92',
+    teamName: "SirToastyToes's Trick Room Doubles",
+    pokemon: ['Bronzong (Doubles)', 'Togekiss (Doubles)', 'Machamp (Doubles)', 'Slowbro (Doubles)'],
     ribbon: {
       name: 'Pair Ability Ribbon',
       description: 'Win battle 50 or greater in Multi with friends (2-player) to earn the Pair Ability Ribbon. You do not need to win the entire set, and you do not need to reset.',
@@ -202,7 +202,8 @@ function pthgssRunCalc(params: CalcParams): CalcResult | null {
   const p1Dex = POKEDEX_DPP[p1SpeciesKey]
   if (!p1Dex) return null
   const p1SetGen4 = p1.set as SetdexEntryGen4
-  const p1Poke = buildPokemonGen4(p1SpeciesKey, p1Dex, p1SetGen4, p1.label, p1Level)
+  const effectiveP1Level = (p1SetGen4 as any).level ?? p1Level
+  const p1Poke = buildPokemonGen4(p1SpeciesKey, p1Dex, p1SetGen4, p1.label, effectiveP1Level)
 
   const p2Match = findSetByLabelGen4(p2Label)
   if (!p2Match) return null
@@ -270,7 +271,7 @@ function pthgssCalcCurrentSpeed(pokemon: any, weather: string): number {
 }
 
 export const gen4Config: GameConfig = {
-  title: 'Pt / HGSS - Battle Tower',
+  title: 'Platinum / HGSS - Battle Tower',
   modes: PTHGSS_MODES,
   defaultSideState: pthgssDefaultSideState,
   sideStateFields: PTHGSS_SIDE_STATE_FIELDS,

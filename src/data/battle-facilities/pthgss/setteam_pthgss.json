@@ -1,1 +1,75 @@
-{}
+{
+  "Garchomp": {
+    "Garchomp (Singles)": {
+      "evs": { "at": 252, "sp": 252, "sd": 6 },
+      "moves": ["Outrage", "Swords Dance", "Earthquake", "Fire Fang"],
+      "nature": "Jolly",
+      "item": "Focus Sash"
+    },
+    "Garchomp (Multi)": {
+      "evs": { "at": 252, "sp": 252, "sd": 6 },
+      "moves": ["Dragon Claw", "Swords Dance", "Earthquake", "Fire Fang"],
+      "nature": "Jolly",
+      "item": "Focus Sash"
+    }
+  },
+  "Suicune": {
+    "Suicune (Singles)": {
+      "evs": { "hp": 252, "df": 252, "sd": 6 },
+      "moves": ["Surf", "Ice Beam", "Calm Mind", "Rest"],
+      "nature": "Bold",
+      "item": "Leftovers"
+    }
+  },
+  "Metagross": {
+    "Metagross (Singles)": {
+      "evs": { "hp": 252, "at": 236, "df": 12, "sp": 8 },
+      "moves": ["Iron Head", "Earthquake", "Explosion", "Bullet Punch"],
+      "nature": "Adamant",
+      "item": "Life Orb"
+    },
+    "Metagross (Multi)": {
+      "evs": { "at": 252, "sp": 252, "sd": 6 },
+      "moves": ["Iron Head", "Earthquake", "Explosion", "Bullet Punch"],
+      "nature": "Adamant",
+      "item": "Life Orb"
+    }
+  },
+  "Bronzong": {
+    "Bronzong (Doubles)": {
+      "evs": { "hp": 252, "at": 252, "sd": 6 },
+      "ivs": { "sp": 0 },
+      "moves": ["Iron Head", "Earthquake", "Explosion", "Trick Room"],
+      "nature": "Brave",
+      "item": "Lum Berry"
+    }
+  },
+  "Togekiss": {
+    "Togekiss (Doubles)": {
+      "evs": {},
+      "ivs": { "hp": 0 },
+      "moves": ["Encore", "Protect", "Follow Me", "Endeavor"],
+      "nature": "Careful",
+      "item": "Focus Sash",
+      "level": 2
+    }
+  },
+  "Machamp": {
+    "Machamp (Doubles)": {
+      "evs": { "hp": 252, "at": 252, "sd": 6 },
+      "ivs": { "sp": 0 },
+      "moves": ["Protect", "Fling", "Dynamic Punch", "Stone Edge"],
+      "nature": "Brave",
+      "item": "Iron Ball"
+    }
+  },
+  "Slowbro": {
+    "Slowbro (Doubles)": {
+      "evs": { "hp": 252, "sa": 252, "sd": 6 },
+      "ivs": { "at": 0, "sp": 0 },
+      "moves": ["Psychic", "Grass Knot", "Flamethrower", "Trick Room"],
+      "nature": "Quiet",
+      "item": "Life Orb"
+    }
+  }
+}
