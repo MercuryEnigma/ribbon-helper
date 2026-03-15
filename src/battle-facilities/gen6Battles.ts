@@ -80,7 +80,7 @@ const ORAS_MODES: FacilityMode[] = [
     pokemon: ['Durant (Singles)', 'Cloyster (Singles)', 'Gliscor (Singles)'],
     ribbon: {
       name: 'Expert Battler Ribbon',
-      description: 'With the 50th battle against Chatelaine Nita in Super Singles to earn the Expert Battler Ribbon. After 51 consecutive wins, you need to restart the streak to earn the ribbon.',
+      description: 'Win the 50th battle against Chatelaine Nita in Super Singles to earn the Expert Battler Ribbon. After 51 consecutive wins, you need to restart the streak to earn the ribbon.',
       icon: '/images/ribbons/expert-battler-ribbon.png',
     },
   },
@@ -95,7 +95,7 @@ const ORAS_MODES: FacilityMode[] = [
     pokemon: ['Aromatisse (Doubles)', 'Aron (Doubles)', 'Talonflame (Doubles)', 'Gliscor (Doubles)'],
     ribbon: {
       name: 'Expert Battler Ribbon',
-      description: 'With the 50th battle against Chatelaine Evelyn in Super Singles to earn the Expert Battler Ribbon. After 51 consecutive wins, you need to restart the streak to earn the ribbon.',
+      description: 'Win the 50th battle against Chatelaine Evelyn in Super Singles to earn the Expert Battler Ribbon. After 51 consecutive wins, you need to restart the streak to earn the ribbon.',
       icon: '/images/ribbons/expert-battler-ribbon.png',
     },
   },

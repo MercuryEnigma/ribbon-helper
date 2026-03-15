@@ -4,6 +4,7 @@ import {
   emeraldConfig,
   sunMoonConfig,
   orasConfig,
+  gen4Config,
   type GameConfig,
   type SideState,
   type PokeSummary,
@@ -26,6 +27,7 @@ import './battle-facilities.css'
 
 const GAME_OPTIONS: { slug: string; config: GameConfig }[] = [
   { slug: 'emerald', config: emeraldConfig },
+  { slug: 'pthgss', config: gen4Config },
   { slug: 'oras', config: orasConfig },
   { slug: 'sunmoon', config: sunMoonConfig },
 ]

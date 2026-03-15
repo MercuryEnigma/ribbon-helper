@@ -1,0 +1,2760 @@
+[
+  {
+    "number": 1,
+    "class": "Youngster",
+    "name": "Jim",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 2,
+    "class": "Youngster",
+    "name": "Erroll",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 3,
+    "class": "Youngster",
+    "name": "Casimir",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 4,
+    "class": "Lass",
+    "name": "Cameron",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 5,
+    "class": "Lass",
+    "name": "Peaches",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 6,
+    "class": "Lass",
+    "name": "Yasmin",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 7,
+    "class": "School Kid",
+    "name": "Foster",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 8,
+    "class": "School Kid",
+    "name": "Ken",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 9,
+    "class": "School Kid",
+    "name": "Owen",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 10,
+    "class": "School Kid",
+    "name": "Marcy",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 11,
+    "class": "School Kid",
+    "name": "Shelly",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 12,
+    "class": "School Kid",
+    "name": "Aspen",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 13,
+    "class": "Rich Boy",
+    "name": "Matt",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 14,
+    "class": "Rich Boy",
+    "name": "Alvan",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 15,
+    "class": "Rich Boy",
+    "name": "Asa",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 16,
+    "class": "Lady",
+    "name": "Isabel",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 17,
+    "class": "Lady",
+    "name": "Nichole",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 18,
+    "class": "Lady",
+    "name": "Juanita",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 19,
+    "class": "Camper",
+    "name": "Bernard",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 20,
+    "class": "Camper",
+    "name": "Herbert",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 21,
+    "class": "Camper",
+    "name": "Colbert",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 22,
+    "class": "Picnicker",
+    "name": "Maggie",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 23,
+    "class": "Picnicker",
+    "name": "Melanie",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 24,
+    "class": "Picnicker",
+    "name": "Ann",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 25,
+    "class": "Tuber",
+    "name": "Manford",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 26,
+    "class": "Tuber",
+    "name": "Hank",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 27,
+    "class": "Tuber",
+    "name": "Percy",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 28,
+    "class": "Tuber",
+    "name": "Dakota",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 29,
+    "class": "Tuber",
+    "name": "Jenny",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 30,
+    "class": "Tuber",
+    "name": "Tia",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 31,
+    "class": "Guitarist",
+    "name": "Malcolm",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 32,
+    "class": "Guitarist",
+    "name": "Tad",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 33,
+    "class": "Guitarist",
+    "name": "Concord",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 34,
+    "class": "Idol",
+    "name": "Penny",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 35,
+    "class": "Idol",
+    "name": "Lana",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 36,
+    "class": "Idol",
+    "name": "Crimson",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 37,
+    "class": "Pokéfan",
+    "name": "Ewan",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 38,
+    "class": "Pokéfan",
+    "name": "Kane",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 39,
+    "class": "Pokéfan",
+    "name": "Theo",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 40,
+    "class": "Pokéfan",
+    "name": "Alexia",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 41,
+    "class": "Pokéfan",
+    "name": "Luna",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 42,
+    "class": "Pokéfan",
+    "name": "Celene",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 43,
+    "class": "Waiter",
+    "name": "Cyan",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 44,
+    "class": "Waiter",
+    "name": "Indigo",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 45,
+    "class": "Waiter",
+    "name": "Orin",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 46,
+    "class": "Waitress",
+    "name": "Ashley",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 47,
+    "class": "Waitress",
+    "name": "Noelle",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 48,
+    "class": "Waitress",
+    "name": "Kandace",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 49,
+    "class": "Bug Catcher",
+    "name": "Floyd",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 50,
+    "class": "Bug Catcher",
+    "name": "Hoffman",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 51,
+    "class": "Bug Catcher",
+    "name": "Amadeus",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 52,
+    "class": "Ninja Boy",
+    "name": "Shia",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 53,
+    "class": "Ninja Boy",
+    "name": "Vincent",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 54,
+    "class": "Ninja Boy",
+    "name": "Pierre",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 55,
+    "class": "Poké Kid",
+    "name": "Alice",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 56,
+    "class": "Poké Kid",
+    "name": "Anita",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 57,
+    "class": "Poké Kid",
+    "name": "Allison",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 58,
+    "class": "Fisherman",
+    "name": "Kiefer",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 59,
+    "class": "Fisherman",
+    "name": "Basil",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 60,
+    "class": "Ruin Maniac",
+    "name": "Henrik",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 61,
+    "class": "Ruin Maniac",
+    "name": "Aubry",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 62,
+    "class": "Collector",
+    "name": "Upton",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 63,
+    "class": "Collector",
+    "name": "Emil",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 64,
+    "class": "Parasol Lady",
+    "name": "Bridget",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 65,
+    "class": "Parasol Lady",
+    "name": "Blanche",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 66,
+    "class": "Parasol Lady",
+    "name": "Colette",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 67,
+    "class": "Beauty",
+    "name": "Tiffany",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 68,
+    "class": "Beauty",
+    "name": "Britney",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 69,
+    "class": "Beauty",
+    "name": "Harmony",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 70,
+    "class": "Aroma Lady",
+    "name": "Lucy",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 71,
+    "class": "Aroma Lady",
+    "name": "Jackie",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 72,
+    "class": "Aroma Lady",
+    "name": "Kara",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 73,
+    "class": "Guitarist",
+    "name": "Bernie",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 74,
+    "class": "Guitarist",
+    "name": "Curtis",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 75,
+    "class": "Bird Keeper",
+    "name": "Nancy",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 76,
+    "class": "Bird Keeper",
+    "name": "Trinity",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 77,
+    "class": "Bird Keeper",
+    "name": "Shawna",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 78,
+    "class": "Sailor",
+    "name": "Layton",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 79,
+    "class": "Sailor",
+    "name": "Godwin",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 80,
+    "class": "Hiker",
+    "name": "Everett",
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 81,
+    "class": "Hiker",
+    "name": "Raiden",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 82,
+    "class": "Idol",
+    "name": "Ada",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 83,
+    "class": "Idol",
+    "name": "Annie",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 84,
+    "class": "Idol",
+    "name": "Basia",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 85,
+    "class": "Jogger",
+    "name": "Steve",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 86,
+    "class": "Jogger",
+    "name": "Dave",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 87,
+    "class": "Worker",
+    "name": "Shane",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 88,
+    "class": "Worker",
+    "name": "Benji",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 89,
+    "class": "Rancher",
+    "name": "Pierce",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 90,
+    "class": "Rancher",
+    "name": "Etienne",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 91,
+    "class": "Rancher",
+    "name": "Leon",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 92,
+    "class": "Cowgirl",
+    "name": "Doris",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 93,
+    "class": "Cowgirl",
+    "name": "Paisley",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 94,
+    "class": "Cowgirl",
+    "name": "Leslie",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 95,
+    "class": "Cameraman",
+    "name": "Hudson",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 96,
+    "class": "Cameraman",
+    "name": "Xenon",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 97,
+    "class": "Cameraman",
+    "name": "Amleth",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 98,
+    "class": "Reporter",
+    "name": "Dot",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 99,
+    "class": "Reporter",
+    "name": "Marble",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 100,
+    "class": "Reporter",
+    "name": "Gingham",
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 101,
+    "class": "Cyclist",
+    "name": "Gaspar",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 102,
+    "class": "Cyclist",
+    "name": "Ignatio",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 103,
+    "class": "Cyclist",
+    "name": "Kaylene",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 104,
+    "class": "Cyclist",
+    "name": "Kaya",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 105,
+    "class": "Black Belt",
+    "name": "Clement",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 106,
+    "class": "Black Belt",
+    "name": "Mason",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 107,
+    "class": "Battle Girl",
+    "name": "Kodi",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 108,
+    "class": "Battle Girl",
+    "name": "Aileen",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 109,
+    "class": "Black Belt",
+    "name": "Jericho",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 110,
+    "class": "Black Belt",
+    "name": "Harris",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 111,
+    "class": "Black Belt",
+    "name": "Soren",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 112,
+    "class": "Battle Girl",
+    "name": "Trina",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 113,
+    "class": "Battle Girl",
+    "name": "Alta",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 114,
+    "class": "Battle Girl",
+    "name": "Ingrid",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 115,
+    "class": "Veteran",
+    "name": "Beck",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 116,
+    "class": "Veteran",
+    "name": "Eric",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 117,
+    "class": "Veteran",
+    "name": "Padgett",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 118,
+    "class": "Socialite",
+    "name": "Barbara",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 119,
+    "class": "Socialite",
+    "name": "Isabel",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 120,
+    "class": "Socialite",
+    "name": "Carmen",
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 121,
+    "class": "Psychic",
+    "name": "Alpha",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 122,
+    "class": "Psychic",
+    "name": "Beta",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 123,
+    "class": "Psychic",
+    "name": "Essie",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 124,
+    "class": "Psychic",
+    "name": "Amelia",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 125,
+    "class": "Psychic",
+    "name": "Celine",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 126,
+    "class": "Psychic",
+    "name": "Jillian",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 127,
+    "class": "Pokémon Breeder",
+    "name": "Howard",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 128,
+    "class": "Pokémon Breeder",
+    "name": "Derrell",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 129,
+    "class": "Pokémon Breeder",
+    "name": "Baldwin",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 130,
+    "class": "Pokémon Breeder",
+    "name": "Adriana",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 131,
+    "class": "Pokémon Breeder��",
+    "name": "Sonya",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 132,
+    "class": "Pokémon Breeder",
+    "name": "Tatyana",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 133,
+    "class": "Gentleman",
+    "name": "Zante",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 134,
+    "class": "Gentleman",
+    "name": "Giliam",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 135,
+    "class": "Roughneck",
+    "name": "Rodney",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 136,
+    "class": "Roughneck",
+    "name": "Rainier",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 137,
+    "class": "Scientist",
+    "name": "Jean",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 138,
+    "class": "Scientist",
+    "name": "Brad",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 139,
+    "class": "Clown",
+    "name": "Francis",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 140,
+    "class": "Clown",
+    "name": "Prescot",
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 141,
+    "class": "Ace Trainer",
+    "name": "Yardley",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 142,
+    "class": "Ace Trainer",
+    "name": "Stavros",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 143,
+    "class": "Ace Trainer",
+    "name": "Zane",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 144,
+    "class": "Ace Trainer",
+    "name": "Kim",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 145,
+    "class": "Ace Trainer",
+    "name": "Macy",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 146,
+    "class": "Ace Trainer",
+    "name": "Faun",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 147,
+    "class": "Pokémon Ranger",
+    "name": "Doyle",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 148,
+    "class": "Pokémon Ranger",
+    "name": "Duke",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 149,
+    "class": "Pokémon Ranger",
+    "name": "Deacon",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 150,
+    "class": "Pokémon Ranger",
+    "name": "Mena",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 151,
+    "class": "Pokémon Ranger",
+    "name": "Mercy",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 152,
+    "class": "Pokémon Ranger",
+    "name": "Evita",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 153,
+    "class": "Dragon Tamer",
+    "name": "Harold",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 154,
+    "class": "Dragon Tamer",
+    "name": "Herman",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 155,
+    "class": "Dragon Tamer",
+    "name": "Emmett",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 156,
+    "class": "Dragon Tamer",
+    "name": "Erich",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 157,
+    "class": "Ace Trainer*",
+    "name": "Garvey",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 158,
+    "class": "Ace Trainer*",
+    "name": "Cruz",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 159,
+    "class": "Ace Trainer*",
+    "name": "Pamela",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 160,
+    "class": "Ace Trainer*",
+    "name": "Daniela",
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 161,
+    "class": "Youngster",
+    "name": "Kaden",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 162,
+    "class": "Youngster",
+    "name": "Kolby",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 163,
+    "class": "Lass",
+    "name": "Karissa",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 164,
+    "class": "Lass",
+    "name": "Liliana",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 165,
+    "class": "School Kid",
+    "name": "Jonas",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 166,
+    "class": "School Kid",
+    "name": "Keon",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 167,
+    "class": "School Kid",
+    "name": "Chelsie",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 168,
+    "class": "School Kid",
+    "name": "Regina",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 169,
+    "class": "Rich Boy",
+    "name": "Daulton",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 170,
+    "class": "Rich Boy",
+    "name": "Hanson",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 171,
+    "class": "Lady",
+    "name": "Amory",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 172,
+    "class": "Lady",
+    "name": "Juliana",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 173,
+    "class": "Bug Catcher",
+    "name": "Camui",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 174,
+    "class": "Bug Catcher",
+    "name": "Orlando",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 175,
+    "class": "Ninja Boy",
+    "name": "Zack",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 176,
+    "class": "Ninja Boy",
+    "name": "Vance",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 177,
+    "class": "Poké Kid",
+    "name": "Kyla",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 178,
+    "class": "Poké Kid",
+    "name": "Ruby",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 179,
+    "class": "Idol",
+    "name": "Kiley",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 180,
+    "class": "Idol",
+    "name": "Utah",
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 181,
+    "class": "Jogger",
+    "name": "Colt",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 182,
+    "class": "Jogger",
+    "name": "Tory",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 183,
+    "class": "Fisherman",
+    "name": "Farley",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 184,
+    "class": "Fisherman",
+    "name": "Mark",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 185,
+    "class": "Ruin Maniac",
+    "name": "Samuel",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 186,
+    "class": "Ruin Maniac",
+    "name": "Penn",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 187,
+    "class": "Collector",
+    "name": "Marquez",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 188,
+    "class": "Collector",
+    "name": "Arnold",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 189,
+    "class": "Guitarist",
+    "name": "Fred",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 190,
+    "class": "Guitarist",
+    "name": "Chase",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 191,
+    "class": "Bird Keeper",
+    "name": "McKenna",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 192,
+    "class": "Bird Keeper",
+    "name": "Sally",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 193,
+    "class": "Sailor",
+    "name": "Casper",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 194,
+    "class": "Sailor",
+    "name": "Derrian",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 195,
+    "class": "Hiker",
+    "name": "Monty",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 196,
+    "class": "Hiker",
+    "name": "Rocky",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 197,
+    "class": "Policeman",
+    "name": "Reggie",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 198,
+    "class": "Policeman",
+    "name": "Quincy",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 199,
+    "class": "PI",
+    "name": "Neil",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 200,
+    "class": "PI",
+    "name": "Sergei",
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 201,
+    "class": "Camper",
+    "name": "Freddy",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 202,
+    "class": "Camper",
+    "name": "Andre",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 203,
+    "class": "Picnicker",
+    "name": "Inga",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 204,
+    "class": "Picnicker",
+    "name": "Tonya",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 205,
+    "class": "Guitarist",
+    "name": "Tobias",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 206,
+    "class": "Guitarist",
+    "name": "Cecil",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 207,
+    "class": "Idol",
+    "name": "Maranda",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 208,
+    "class": "Idol",
+    "name": "Helene",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 209,
+    "class": "Pokéfan",
+    "name": "Simon",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 210,
+    "class": "Pokéfan",
+    "name": "Turner",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 211,
+    "class": "Pokéfan",
+    "name": "Europa",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 212,
+    "class": "Pokéfan",
+    "name": "Pandora",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 213,
+    "class": "Rancher",
+    "name": "Vern",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 214,
+    "class": "Rancher",
+    "name": "Boris",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 215,
+    "class": "Cowgirl",
+    "name": "Carly",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 216,
+    "class": "Cowgirl",
+    "name": "Ginger",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 217,
+    "class": "Pokémon Breeder",
+    "name": "Peter",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 218,
+    "class": "Pokémon Breeder",
+    "name": "Tyron",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 219,
+    "class": "Pokémon Breeder",
+    "name": "Zorya",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 220,
+    "class": "Pokémon Breeder",
+    "name": "Antonia",
+    "battleRanges": [
+      "42",
+      "43-48",
+      "50+"
+    ]
+  },
+  {
+    "number": 221,
+    "class": "Ace Trainer",
+    "name": "Sawyer",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 222,
+    "class": "Ace Trainer",
+    "name": "Charlie",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 223,
+    "class": "Ace Trainer",
+    "name": "Chloe",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 224,
+    "class": "Ace Trainer",
+    "name": "Daphne",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 225,
+    "class": "Ace Trainer*",
+    "name": "Thad",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 226,
+    "class": "Ace Trainer*",
+    "name": "Lew",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 227,
+    "class": "Ace Trainer*",
+    "name": "Opal",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 228,
+    "class": "Ace Trainer*",
+    "name": "Leda",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 229,
+    "class": "Pokémon Ranger",
+    "name": "Geoff",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 230,
+    "class": "Pokémon Ranger",
+    "name": "Gunther",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 231,
+    "class": "Pokémon Ranger",
+    "name": "Alma",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 232,
+    "class": "Pokémon Ranger",
+    "name": "Elise",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 233,
+    "class": "Dragon Tamer",
+    "name": "Harvey",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 234,
+    "class": "Dragon Tamer",
+    "name": "Nicolas",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 235,
+    "class": "Black Belt",
+    "name": "Fergus",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 236,
+    "class": "Black Belt",
+    "name": "Ronni",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 237,
+    "class": "Battle Girl",
+    "name": "Eve",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 238,
+    "class": "Battle Girl",
+    "name": "Mariane",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 239,
+    "class": "Veteran",
+    "name": "Costin",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 240,
+    "class": "Veteran",
+    "name": "Alfred",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 241,
+    "class": "Socialite",
+    "name": "Rioha",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 242,
+    "class": "Socialite",
+    "name": "Janice",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 243,
+    "class": "Psychic",
+    "name": "Denver",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 244,
+    "class": "Psychic",
+    "name": "Berkley",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 245,
+    "class": "Psychic",
+    "name": "Irene",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 246,
+    "class": "Psychic",
+    "name": "Sylvie",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 247,
+    "class": "Waiter",
+    "name": "Xander",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 248,
+    "class": "Waiter",
+    "name": "Warren",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 249,
+    "class": "Waitress",
+    "name": "Leslie",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 250,
+    "class": "Waitress",
+    "name": "Kathy",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 251,
+    "class": "Cameraman",
+    "name": "Darren",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 252,
+    "class": "Cameraman",
+    "name": "Skip",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 253,
+    "class": "Reporter",
+    "name": "Katie",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 254,
+    "class": "Reporter",
+    "name": "Elaine",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 255,
+    "class": "Cyclist",
+    "name": "Clive",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 256,
+    "class": "Cyclist",
+    "name": "Ward",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 257,
+    "class": "Cyclist",
+    "name": "Hilda",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 258,
+    "class": "Cyclist",
+    "name": "Vanita",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 259,
+    "class": "PI",
+    "name": "Ralph",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 260,
+    "class": "PI",
+    "name": "Conway",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 261,
+    "class": "Idol",
+    "name": "Kristi",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 262,
+    "class": "Idol",
+    "name": "Trista",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 263,
+    "class": "Jogger",
+    "name": "Austin",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 264,
+    "class": "Jogger",
+    "name": "Dimitri",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 265,
+    "class": "Fisherman",
+    "name": "Delaney",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 266,
+    "class": "Fisherman",
+    "name": "Keaton",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 267,
+    "class": "Sailor",
+    "name": "Carlo",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 268,
+    "class": "Sailor",
+    "name": "Horatio",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 269,
+    "class": "Hiker",
+    "name": "Lyle",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 270,
+    "class": "Hiker",
+    "name": "Glen",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 271,
+    "class": "Ruin Maniac",
+    "name": "Isadore",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 272,
+    "class": "Ruin Maniac",
+    "name": "Walton",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 273,
+    "class": "Guitarist",
+    "name": "Roget",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 274,
+    "class": "Guitarist",
+    "name": "Iggy",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 275,
+    "class": "Collector",
+    "name": "Leroy",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 276,
+    "class": "Collector",
+    "name": "Newman",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 277,
+    "class": "Roughneck",
+    "name": "Ross",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 278,
+    "class": "Roughneck",
+    "name": "Ron",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 279,
+    "class": "Scientist",
+    "name": "Irwin",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 280,
+    "class": "Scientist",
+    "name": "Flynn",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 281,
+    "class": "Gentleman",
+    "name": "Joachim",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 282,
+    "class": "Gentleman",
+    "name": "Karston",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 283,
+    "class": "Worker",
+    "name": "Boyce",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 284,
+    "class": "Worker",
+    "name": "Tyrell",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 285,
+    "class": "Clown",
+    "name": "Frank",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 286,
+    "class": "Clown",
+    "name": "Enzo",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 287,
+    "class": "Policeman",
+    "name": "Hugh",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 288,
+    "class": "Policeman",
+    "name": "Kegan",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 289,
+    "class": "PI",
+    "name": "Chester",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 290,
+    "class": "PI",
+    "name": "River",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 291,
+    "class": "Bird Keeper",
+    "name": "Kira",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 292,
+    "class": "Bird Keeper",
+    "name": "Eliza",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 293,
+    "class": "Parasol Lady",
+    "name": "Angie",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 294,
+    "class": "Parasol Lady",
+    "name": "Sami",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 295,
+    "class": "Beauty",
+    "name": "Nadia",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 296,
+    "class": "Beauty",
+    "name": "Becky",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 297,
+    "class": "Aroma Lady",
+    "name": "Elisha",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 298,
+    "class": "Aroma Lady",
+    "name": "Ambre",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 299,
+    "class": "Idol",
+    "name": "Cocoa",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 300,
+    "class": "Idol",
+    "name": "Nissa",
+    "battleRanges": [
+      "49",
+      "50+"
+    ]
+  },
+  {
+    "number": 9001,
+    "class": "Tower Tycoon",
+    "name": "Palmer (Silver)",
+    "battleRanges": [
+      "21"
+    ],
+    "boss": "singles"
+  },
+  {
+    "number": 9002,
+    "class": "Tower Tycoon",
+    "name": "Palmer (Gold)",
+    "battleRanges": [
+      "49"
+    ],
+    "boss": "singles"
+  }
+]

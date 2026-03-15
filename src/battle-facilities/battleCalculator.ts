@@ -128,6 +128,7 @@ export interface GameConfig {
 export { emeraldConfig } from './gen3Battles'
 export { sunMoonConfig } from './gen7Battles'
 export { orasConfig } from './gen6Battles'
+export { gen4Config } from './gen4Battles'
 
 // Re-export DamageResult for the UI
 export type { DamageResult } from './gen3calc'
