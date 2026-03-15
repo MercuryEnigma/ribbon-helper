@@ -74,7 +74,21 @@ const PTHGSS_MODES: FacilityMode[] = [
     maxLevel: 50,
     teamUrl: 'https://pokepast.es/d7c808ac7ba1e426',
     teamName: "Venty's MetaChomp Duo",
-    pokemon: ['Metagross (Multi)', 'Garchomp (Multi)'],
+    pokemon: [
+      'Metagross (Multi)', 'Garchomp (Multi)',
+      'Alakazam 1 (Mira)', 'Alakazam 2 (Mira)', 'Alakazam 3 (Mira)', 'Alakazam 4 (Mira)',
+      'Gengar 1 (Mira)', 'Gengar 2 (Mira)', 'Gengar 3 (Mira)', 'Gengar 4 (Mira)',
+      'Exeggutor 1 (Mira)', 'Exeggutor 2 (Mira)', 'Exeggutor 3 (Mira)',
+      'Zapdos 1 (Mira)', 'Zapdos 2 (Mira)',
+      'Moltres 1 (Mira)', 'Moltres 2 (Mira)', 'Moltres 3 (Mira)',
+      'Espeon 1 (Mira)', 'Espeon 2 (Mira)', 'Espeon 3 (Mira)', 'Espeon 4 (Mira)',
+      'Gardevoir 1 (Mira)', 'Gardevoir 2 (Mira)', 'Gardevoir 3 (Mira)', 'Gardevoir 4 (Mira)',
+      'Latias 1 (Mira)', 'Latias 2 (Mira)', 'Latias 3 (Mira)', 'Latias 4 (Mira)',
+      'Latios 1 (Mira)', 'Latios 2 (Mira)', 'Latios 3 (Mira)', 'Latios 4 (Mira)',
+      'Empoleon 1 (Mira)', 'Empoleon 2 (Mira)',
+      'Roserade 1 (Mira)', 'Roserade 2 (Mira)', 'Roserade 3 (Mira)', 'Roserade 4 (Mira)',
+      'Magnezone 1 (Mira)', 'Magnezone 2 (Mira)',
+    ],
     ribbon: {
       name: 'Multi Ability Ribbon',
       description: 'Win battle 50 or greater in Multi (with NPC) to earn the Multi Ability Ribbon. You do not need to win the entire set, and you do not need to reset.',
@@ -136,10 +150,12 @@ const PTHGSS_TRAINERS = pthgssBattleTrainers as Trainer[]
 const PTHGSS_TP = pthgssTrainerPokemon as Record<string, string[]>
 
 function pthgssGetTrainersForBattle(battleNum: number, modeId?: string): Trainer[] {
-  return PTHGSS_TRAINERS.filter(t =>
+  const matches = PTHGSS_TRAINERS.filter(t =>
     t.battleRanges.some(r => battleRangeMatches(battleNum, r)) &&
     (!t.boss || t.boss === modeId)
   )
+  const bosses = matches.filter(t => t.boss)
+  return bosses.length > 0 ? bosses : matches
 }
 
 function pthgssGetPokemonForTrainer(trainerName: string): string[] {
