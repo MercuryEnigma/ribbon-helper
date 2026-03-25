@@ -77,6 +77,14 @@
   color: #666;
 }
 
+.bf-footnote {
+  padding: 0 1.2rem 1.2rem;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+  background: #fff;
+}
+
 .bf-ribbon-note {
   display: flex;
   align-items: center;
@@ -361,12 +369,6 @@
   cursor: not-allowed;
 }
 
-.bf-zmove-label {
-  font-size: 0.95rem;
-  font-weight: 700;
-  padding: 0.35rem 1rem;
-  letter-spacing: 0.03em;
-}
 
 .bf-btn-danger {
   color: #c33;

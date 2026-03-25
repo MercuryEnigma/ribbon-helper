@@ -13,7 +13,6 @@ import {
   type P1Option,
   type Trainer,
 } from './battleCalculator'
-import { findSetByLabel as findSetByLabelGen7, getZCrystalType } from './gen7calc'
 import {
   parsePokepaste,
   loadRibbonMasterSet,
@@ -477,27 +476,7 @@ export default function BattleFacilities() {
     return availableSets[0] || ''
   }, [availableSets, p2Label])
 
-  // Z-Crystal awareness (Gen 7 only)
-  const p1Item = selectedP1?.set.item ?? ''
-  const p1ZType = config === sunMoonConfig ? getZCrystalType(p1Side.itemUsed ? '' : p1Item) : null
-  const p2Item = useMemo(() => {
-    if (config !== sunMoonConfig) return ''
-    const match = findSetByLabelGen7(effectiveP2Label)
-    return match?.set.item ?? ''
-  }, [config, effectiveP2Label])
-  const p2ZType = config === sunMoonConfig ? getZCrystalType(p2Side.itemUsed ? '' : p2Item) : null
-
   const p2Ivs = config.getIVsForTrainer(selectedTrainer)
-
-  const p1FieldDefs = useMemo(() => {
-    if (config !== sunMoonConfig) return config.sideStateFields
-    return config.sideStateFields.map(f => f.key === 'isZMove' ? { ...f, disabled: !p1ZType } : f)
-  }, [config, p1ZType])
-
-  const p2FieldDefs = useMemo(() => {
-    if (config !== sunMoonConfig) return config.sideStateFields
-    return config.sideStateFields.map(f => f.key === 'isZMove' ? { ...f, disabled: !p2ZType } : f)
-  }, [config, p2ZType])
 
   const emptyCalc = { p1Results: [] as DamageResult[], p2Results: [] as DamageResult[], p1MaxHP: 0, p2MaxHP: 0, p1Summary: undefined as PokeSummary | undefined, p2Summary: undefined as PokeSummary | undefined }
   const { p1Results, p2Results, p1MaxHP, p2MaxHP, p1Summary, p2Summary } = useMemo(() => {
@@ -534,17 +513,6 @@ export default function BattleFacilities() {
     }
   }, [p2MaxHP, p2Side.maxHP])
 
-  // Disable lingering Z-Move toggles when no Z-Crystal is held
-  useEffect(() => {
-    if (config === sunMoonConfig && !p1ZType && p1Side.isZMove) {
-      setP1Side(s => ({ ...s, isZMove: false }))
-    }
-  }, [config, p1ZType, p1Side.isZMove])
-  useEffect(() => {
-    if (config === sunMoonConfig && !p2ZType && p2Side.isZMove) {
-      setP2Side(s => ({ ...s, isZMove: false }))
-    }
-  }, [config, p2ZType, p2Side.isZMove])
   // Reset p1 side state when player pokemon changes (keep weather/terrain/gravity)
   // Also sync level if the set specifies one (e.g. level 1 Aron)
   // Preserve old maxHP temporarily — HP sync effect will update it if the new Pokemon has a different maxHP.
@@ -707,7 +675,7 @@ export default function BattleFacilities() {
                       checked={isRibbonMaster}
                       onChange={e => setIsRibbonMaster(e.target.checked)}
                     />
-                    Ribbon Master
+                    Ribbon Master<sup>*</sup>
                   </label>
                   <button className="bf-btn" onClick={handleSave}>Save</button>
                   <button className="bf-btn bf-btn-danger" onClick={handleDelete}>Delete custom sets</button>
@@ -845,7 +813,7 @@ export default function BattleFacilities() {
             onChange={setP1Side}
             open={p1StatusOpen}
             onToggle={() => setP1StatusOpen(o => !o)}
-            fieldDefs={p1FieldDefs}
+            fieldDefs={config.sideStateFields}
           />
           <BattleStatusAccordion
             label="Opponent"
@@ -856,10 +824,13 @@ export default function BattleFacilities() {
             onChange={setP2Side}
             open={p2StatusOpen}
             onToggle={() => setP2StatusOpen(o => !o)}
-            fieldDefs={p2FieldDefs}
+            fieldDefs={config.sideStateFields}
           />
         </div>
       </div>
+      <p className="bf-footnote">
+        <sup>*</sup> This app only saves one set as the Ribbon Master at a time, labeled "(RM)". If you want to save multiple sets, unselect "Ribbon Master".
+      </p>
     </div>
   )
 }

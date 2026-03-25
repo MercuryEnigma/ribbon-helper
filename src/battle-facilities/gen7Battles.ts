@@ -162,7 +162,6 @@ function smDefaultSideState(): SideState {
     isCharge: false,
     isFriendGuard: false,
     isBattery: false,
-    isZMove: false,
     boosts: { at: 0, df: 0, sa: 0, sd: 0, sp: 0 },
     curHP: 0,
     maxHP: 0,
@@ -172,7 +171,6 @@ function smDefaultSideState(): SideState {
 
 const SM_SIDE_STATE_FIELDS: SideStateFieldDef[] = [
   { type: 'checkbox', key: 'itemUsed', label: 'Used/Lost Item', row: 0 },
-  { type: 'checkbox', key: 'isZMove', label: '⚡ Z-Move', row: 0, className: 'bf-zmove-label' },
   { type: 'checkbox', key: 'isProtect', label: 'Protect', row: 1 },
   { type: 'checkbox', key: 'isReflect', label: 'Reflect', row: 1 },
   { type: 'checkbox', key: 'isLightScreen', label: 'Light Screen', row: 1 },
@@ -260,7 +258,6 @@ function smRunCalc(params: CalcParams): CalcResult | null {
     isTailwind: p1Side.isTailwind, isCharge: p1Side.isCharge,
     isGravity: g,
     isFriendGuard: p1Side.isFriendGuard, isBattery: p1Side.isBattery,
-    isZMove: p1Side.isZMove,
   }, format, weather, t)
   const p2FieldSide = makeFieldSideGen7({
     isProtect: p2Side.isProtect,
@@ -269,7 +266,6 @@ function smRunCalc(params: CalcParams): CalcResult | null {
     isTailwind: p2Side.isTailwind, isCharge: p2Side.isCharge,
     isGravity: g,
     isFriendGuard: p2Side.isFriendGuard, isBattery: p2Side.isBattery,
-    isZMove: p2Side.isZMove,
   }, format, weather, t)
 
   const [p1Results, p2Results] = calculateAllMovesGen7(p1Poke, p2Poke, p1FieldSide, p2FieldSide)
