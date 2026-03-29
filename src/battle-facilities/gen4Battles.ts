@@ -91,7 +91,7 @@ const PTHGSS_MODES: FacilityMode[] = [
     ],
     ribbon: {
       name: 'Multi Ability Ribbon',
-      description: 'Win battle 50 or greater in Multi (with NPC) to earn the Multi Ability Ribbon. You do not need to win the entire set, and you do not need to reset.',
+      description: 'Win battle 50 or greater in Multi (with NPC) to earn the Multi Ability Ribbon. We recommend only selecting Mira for the last couple of sets, and make sure both of her pokemon are Moltres, Zapdos, Latios, or Latias. You do not need to win the entire set, and you do not need to reset.',
       icon: '/images/ribbons/multi-ability-ribbon.png',
     },
   },
