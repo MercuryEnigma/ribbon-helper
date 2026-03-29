@@ -581,6 +581,7 @@
   color: #666;
 }
 
+
 .bf-hp-input {
   width: 4rem;
   padding: 0.2rem 0.3rem;
@@ -628,4 +629,20 @@
   padding: 0.2rem 0.3rem;
   font-size: 0.85rem;
   text-align: center;
+}
+
+.bf-boost-item .bf-status-label {
+  min-width: unset;
+  text-align: center;
+}
+
+.bf-boost-item .bf-range-badge {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.bf-modified-stat {
+  color: #444;
+  font-weight: 600;
 }

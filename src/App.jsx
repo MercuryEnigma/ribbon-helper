@@ -8,11 +8,12 @@ import VisualDecoration from './visual-decoration/VisualDecoration'
 import BattleFacilities from './battle-facilities/BattleFacilities'
 
 const ENABLE_BATTLE = (() => {
-  if (typeof localStorage === 'undefined') return false
+  if (typeof localStorage === 'undefined') return true
   try {
-    return localStorage.getItem('enable_battle') === 'true'
+    const val = localStorage.getItem('enable_battle')
+    return val === null ? true : val === 'true'
   } catch {
-    return false
+    return true
   }
 })()
 
@@ -109,7 +110,7 @@ export default function App() {
             </NavLink>
             {ENABLE_BATTLE && (
               <NavLink to="/battle-facilities" className={({ isActive }) => isActive ? 'active' : ''}>
-                Battle Facilities
+                Battle Facilities<sup> (Beta)</sup>
               </NavLink>
             )}
           </nav>

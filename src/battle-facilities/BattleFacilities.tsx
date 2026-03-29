@@ -108,7 +108,7 @@ function formatEvs(evs: Partial<Record<string, number>>): string {
 }
 
 function BattleStatusAccordion({
-  label, side, level, maxLevel, onLevelChange, onChange, open, onToggle, fieldDefs,
+  label, side, level, maxLevel, onLevelChange, onChange, open, onToggle, fieldDefs, summary,
 }: {
   label: string
   side: SideState
@@ -119,6 +119,7 @@ function BattleStatusAccordion({
   open: boolean
   onToggle: () => void
   fieldDefs: SideStateFieldDef[]
+  summary?: PokeSummary
 }) {
   const setBoost = (stat: string, val: number) => {
     onChange({ ...side, boosts: { ...side.boosts, [stat]: Math.max(-6, Math.min(6, val)) } })
@@ -220,20 +221,27 @@ function BattleStatusAccordion({
             </div>
           ))}
           <div className="bf-boosts-row">
-            {STAT_NAMES.map(stat => (
-              <div key={stat} className="bf-boost-item">
-                <span>{STAT_LABELS[stat]}</span>
-                <select
-                  value={side.boosts[stat]}
-                  onChange={e => setBoost(stat, parseInt(e.target.value))}
-                  className="bf-boost-select"
-                >
-                  {[6,5,4,3,2,1,0,-1,-2,-3,-4,-5,-6].map(n => (
-                    <option key={n} value={n}>{n > 0 ? `+${n}` : n}</option>
-                  ))}
-                </select>
-              </div>
-            ))}
+            {STAT_NAMES.map(stat => {
+              const statKey = ({ at: 'atk', df: 'def', sa: 'spa', sd: 'spd', sp: 'spe' } as const)[stat]
+              const statValue = summary?.stats?.[statKey]
+              const modifiedValue = summary?.modifiedStats?.[statKey]
+              return (
+                <div key={stat} className="bf-boost-item">
+                  <span className="bf-status-label">{STAT_LABELS[stat]}</span>
+                  {statValue !== undefined && <span className="bf-range-badge">{statValue}</span>}
+                  <select
+                    value={side.boosts[stat]}
+                    onChange={e => setBoost(stat, parseInt(e.target.value))}
+                    className="bf-boost-select"
+                  >
+                    {[6,5,4,3,2,1,0,-1,-2,-3,-4,-5,-6].map(n => (
+                      <option key={n} value={n}>{n > 0 ? `+${n}` : n}</option>
+                    ))}
+                  </select>
+                  {modifiedValue !== undefined && <span className="bf-range-badge bf-modified-stat">{modifiedValue}</span>}
+                </div>
+              )
+            })}
           </div>
         </div>
       )}
@@ -814,6 +822,7 @@ export default function BattleFacilities() {
             open={p1StatusOpen}
             onToggle={() => setP1StatusOpen(o => !o)}
             fieldDefs={config.sideStateFields}
+            summary={p1Summary}
           />
           <BattleStatusAccordion
             label="Opponent"
@@ -825,6 +834,7 @@ export default function BattleFacilities() {
             open={p2StatusOpen}
             onToggle={() => setP2StatusOpen(o => !o)}
             fieldDefs={config.sideStateFields}
+            summary={p2Summary}
           />
         </div>
       </div>

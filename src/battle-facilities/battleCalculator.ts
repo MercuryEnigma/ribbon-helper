@@ -46,6 +46,8 @@ export interface PokeSummary {
   abilities: string[]
   item: string
   speed: number
+  stats: { atk: number; def: number; spa: number; spd: number; spe: number }
+  modifiedStats: { atk: number; def: number; spa: number; spd: number; spe: number }
 }
 
 export type SideStateFieldDef =

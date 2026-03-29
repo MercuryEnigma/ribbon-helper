@@ -274,11 +274,15 @@ function smRunCalc(params: CalcParams): CalcResult | null {
     evs: p1Poke.evs, nature: p1Poke.nature, ability: p1Poke.ability,
     abilities: [p1Poke.ability], item: p1Poke.item,
     speed: smCalcCurrentSpeed(p1Poke, weather, t) * (p1Side.isTailwind ? 2 : 1),
+    stats: { atk: p1Poke.rawStats.at, def: p1Poke.rawStats.df, spa: p1Poke.rawStats.sa, spd: p1Poke.rawStats.sd, spe: p1Poke.rawStats.sp },
+    modifiedStats: { atk: p1Poke.stats.at, def: p1Poke.stats.df, spa: p1Poke.stats.sa, spd: p1Poke.stats.sd, spe: p1Poke.stats.sp },
   }
   const p2Summary: PokeSummary = {
     evs: p2Poke.evs, nature: p2Poke.nature, ability: p2Poke.ability,
     abilities: p2Dex.abilities, item: p2Poke.item,
     speed: smCalcCurrentSpeed(p2Poke, weather, t) * (p2Side.isTailwind ? 2 : 1),
+    stats: { atk: p2Poke.rawStats.at, def: p2Poke.rawStats.df, spa: p2Poke.rawStats.sa, spd: p2Poke.rawStats.sd, spe: p2Poke.rawStats.sp },
+    modifiedStats: { atk: p2Poke.stats.at, def: p2Poke.stats.df, spa: p2Poke.stats.sa, spd: p2Poke.stats.sd, spe: p2Poke.stats.sp },
   }
 
   return {
