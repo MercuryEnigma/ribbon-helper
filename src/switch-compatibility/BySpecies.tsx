@@ -1,7 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { PokemonDatabase } from './types';
-import { ENABLE_PLZA } from './types';
 import { getGamesForPokemon, getGameGroupNames, searchPokemonByName, getPokemonDisplayName, getAvailableGenerations, GENERATION_ORDER, shouldExcludePokemon } from './utils';
 import { getPokemonIconProps, getPokemonLargeImageProps } from './iconUtils';
 import { getAvailableRibbons } from './ribbonUtils';
@@ -142,11 +141,7 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
 
   // Calculate available generations based on Pokemon's games
   const availableGenerations = useMemo(() => {
-    const gens = getAvailableGenerations(selectedPokemonData, pokemonDb, selectedPokemon);
-    if (ENABLE_PLZA && selectedPokemonData?.games?.includes('plza')) {
-      gens.add('PLZA');
-    }
-    return gens;
+    return getAvailableGenerations(selectedPokemonData, pokemonDb, selectedPokemon);
   }, [pokemonDb, selectedPokemonData]);
 
   // Initialize generation when Pokemon is selected

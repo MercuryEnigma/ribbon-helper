@@ -1,8 +1,7 @@
 import type { PokemonDatabase, PokemonData, SwitchGame, SwitchGameInfo } from './types';
-import { ENABLE_PLZA } from './types';
 import games from '../data/games.json';
 
-const switchGamesList: SwitchGameInfo[] = [
+export const SWITCH_GAMES: SwitchGameInfo[] = [
   { id: 'lgp', name: "Let's Go Pikachu / Eevee" },
   { id: 'lge', name: "Let's Go Pikachu / Eevee" },
   { id: 'sw', name: 'Sword / Shield' },
@@ -12,31 +11,20 @@ const switchGamesList: SwitchGameInfo[] = [
   { id: 'pla', name: 'Legends: Arceus' },
   { id: 'scar', name: 'Scarlet / Violet' },
   { id: 'vio', name: 'Scarlet / Violet' },
+  { id: 'plza', name: 'Legends: Z-A' },
 ];
 
-if (ENABLE_PLZA) {
-  switchGamesList.push({ id: 'plza' as SwitchGame, name: 'Legends: Z-A' });
-}
-
-export const SWITCH_GAMES: SwitchGameInfo[] = switchGamesList;
-
-// Unique game groups for user selection
-const gameGroups = [
+export const GAME_GROUPS = [
   { ids: ['lgp', 'lge'], name: "Let's Go Pikachu / Eevee" },
   { ids: ['sw', 'sh'], name: 'Sword / Shield' },
   { ids: ['bd', 'sp'], name: 'Brilliant Diamond / Shining Pearl' },
   { ids: ['pla'], name: 'Legends: Arceus' },
   { ids: ['scar', 'vio'], name: 'Scarlet / Violet' },
+  { ids: ['plza'], name: 'Legends: Z-A' },
 ];
 
-if (ENABLE_PLZA) {
-  gameGroups.push({ ids: ['plza'], name: 'Legends: Z-A' });
-}
-
-export const GAME_GROUPS = gameGroups;
-
 // Generation order for dropdown and selection
-export const GENERATION_ORDER = ['Gen 3', 'Gen 4', 'Gen 5', 'Gen 6', 'VC', 'Gen 7', 'GO', 'Switch'] as const;
+export const GENERATION_ORDER = ['Gen 3', 'Gen 4', 'Gen 5', 'Gen 6', 'VC', 'Gen 7', 'GO', 'Switch', 'PLZA'] as const;
 
 export const EXCLUDED_GO_POKEMON = new Set([
   'pichu-spiky-eared',
@@ -460,7 +448,6 @@ export function getAvailableGenerations(
   })();
 
   const generations = new Set<string>();
-  // const switchGames = ['lgpe', 'lgp', 'lge', 'swsh', 'sw', 'sh', 'bdsp', 'bd', 'sp', 'pla', 'sv', 'scar', 'vio', ...(ENABLE_PLZA ? ['plza'] : [])];
   const switchGames = ['lgpe', 'lgp', 'lge', 'swsh', 'sw', 'sh', 'bdsp', 'bd', 'sp', 'pla', 'sv', 'scar', 'vio'];
 
   if (!EXCLUDED_GO_POKEMON.has(pokemonKey)) {
@@ -470,6 +457,11 @@ export function getAvailableGenerations(
   for (const gameId of gameIds) {
     const gameEntry = (games as any)[gameId];
     if (!gameEntry) continue;
+
+    if (gameId === 'plza') {
+      generations.add('PLZA');
+      continue;
+    }
 
     // Check if it's a Switch game
     if (switchGames.includes(gameId)) {

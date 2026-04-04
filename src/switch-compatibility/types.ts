@@ -30,19 +30,7 @@ export interface PokemonDatabase {
   [key: string]: PokemonData;
 }
 
-// Feature flag to optionally include Legends: Z-A data (persisted in localStorage)
-export const ENABLE_PLZA: boolean = (() => {
-  if (typeof localStorage === 'undefined') return false;
-  try {
-    return localStorage.getItem('enable_plza') === 'true';
-  } catch {
-    return false;
-  }
-})();
-
-type BaseSwitchGame = 'lgp' | 'lge' | 'sw' | 'sh' | 'bd' | 'sp' | 'pla' | 'scar' | 'vio';
-// Note: type includes plza; runtime gating is controlled by ENABLE_PLZA.
-export type SwitchGame = BaseSwitchGame | 'plza';
+export type SwitchGame = 'lgp' | 'lge' | 'sw' | 'sh' | 'bd' | 'sp' | 'pla' | 'scar' | 'vio' | 'plza';
 
 export interface SwitchGameInfo {
   id: SwitchGame;
