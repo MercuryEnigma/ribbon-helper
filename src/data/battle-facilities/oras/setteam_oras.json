@@ -29,6 +29,19 @@
       ],
       "nature": "Adamant",
       "item": "Leftovers"
+    },
+    "Cloyster (Nita Singles)": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Shell Smash",
+        "Icicle Spear",
+        "Ice Shard"
+      ],
+      "nature": "Jolly",
+      "item": "Focus Sash"
     }
   },
   "Gliscor": {
@@ -84,6 +97,24 @@
       ],
       "nature": "Relaxed",
       "item": "Lum Berry"
+    },
+    "Aromatisse (Less FS Doubles)": {
+      "evs": {
+        "hp": 252,
+        "df": 252,
+        "sa": 4
+      },
+      "ivs": {
+        "sp": 1
+      },
+      "moves": [
+        "Odor Sleuth",
+        "Dazzling Gleam",
+        "Trick Room",
+        "Moonblast"
+      ],
+      "nature": "Relaxed",
+      "item": "Lum Berry"
     }
   },
   "Aron": {
@@ -97,6 +128,29 @@
         "Protect"
       ],
       "nature": "Mild",
+      "item": "Berry Juice"
+    },
+    "Aron (Rain Dance Doubles)": {
+      "level": 1,
+      "evs": {},
+      "moves": [
+        "Toxic",
+        "Endeavor",
+        "Protect",
+        "Rain Dance"
+      ],
+      "nature": "Mild",
+      "item": "Berry Juice"
+    },
+    "Aron (Evelyn Doubles)": {
+      "level": 1,
+      "evs": {},
+      "moves": [
+        "Endeavor",
+        "Protect",
+        "Spite"
+      ],
+      "nature": "Hardy",
       "item": "Berry Juice"
     }
   },
@@ -115,6 +169,385 @@
       ],
       "nature": "Adamant",
       "item": "Sharp Beak"
+    }
+  },
+  "Kangaskhan-Mega": {
+    "Kangaskhan-Mega (Less FS Doubles)": {
+      "evs": {
+        "hp": 252,
+        "at": 252,
+        "sd": 4
+      },
+      "moves": [
+        "Sucker Punch",
+        "Fake Out",
+        "Double-Edge",
+        "Power-Up Punch"
+      ],
+      "nature": "Adamant",
+      "item": "Kangaskhanite"
+    },
+    "Kangaskhan-Mega (Crab Man Doubles)": {
+      "evs": {
+        "hp": 84,
+        "at": 204,
+        "df": 28,
+        "sd": 4,
+        "sp": 188
+      },
+      "moves": [
+        "Fake Out",
+        "Power-Up Punch",
+        "Return",
+        "Sucker Punch"
+      ],
+      "nature": "Adamant",
+      "item": "Kangaskhanite"
+    },
+    "Kangaskhan-Mega (maasa Singles)": {
+      "evs": {
+        "at": 252,
+        "sd": 4,
+        "sp": 252
+      },
+      "moves": [
+        "Sucker Punch",
+        "Frustration",
+        "Earthquake",
+        "Power-Up Punch"
+      ],
+      "nature": "Adamant",
+      "item": "Kangaskhanite"
+    },
+    "Kangaskhan-Mega (Wrath of Khan Singles)": {
+      "evs": {
+        "at": 252,
+        "sd": 4,
+        "sp": 252
+      },
+      "moves": [
+        "Sucker Punch",
+        "Power-Up Punch",
+        "Ice Punch",
+        "Return"
+      ],
+      "nature": "Jolly",
+      "item": "Kangaskhanite"
+    }
+  },
+  "Jellicent": {
+    "Jellicent (Jellicent Doubles)": {
+      "evs": {
+        "hp": 252,
+        "df": 252,
+        "sa": 4
+      },
+      "ivs": {
+        "sp": 1
+      },
+      "moves": [
+        "Shadow Ball",
+        "Water Spout",
+        "Trick Room",
+        "Protect"
+      ],
+      "nature": "Relaxed",
+      "item": "Lum Berry"
+    }
+  },
+  "Mawile-Mega": {
+    "Mawile-Mega (Jellicent Doubles)": {
+      "evs": {
+        "hp": 252,
+        "at": 252,
+        "sd": 4
+      },
+      "ivs": {
+        "sp": 1
+      },
+      "moves": [
+        "Sucker Punch",
+        "Iron Head",
+        "Play Rough",
+        "Rock Slide"
+      ],
+      "nature": "Brave",
+      "item": "Mawilite"
+    }
+  },
+  "Chansey": {
+    "Chansey (Jellicent Doubles)": {
+      "evs": {
+        "hp": 28,
+        "at": 4,
+        "df": 252,
+        "sd": 4,
+        "sp": 220
+      },
+      "moves": [
+        "Seismic Toss",
+        "Minimize",
+        "Soft-Boiled",
+        "Substitute"
+      ],
+      "nature": "Jolly",
+      "item": "Eviolite"
+    }
+  },
+  "Weavile": {
+    "Weavile (Lumari Doubles)": {
+      "evs": {
+        "at": 252,
+        "sd": 4,
+        "sp": 252
+      },
+      "moves": [
+        "Fake Out",
+        "Knock Off",
+        "Ice Punch",
+        "Protect"
+      ],
+      "nature": "Jolly",
+      "item": "Focus Sash"
+    }
+  },
+  "Gardevoir-Mega": {
+    "Gardevoir-Mega (Lumari Doubles)": {
+      "evs": {
+        "hp": 4,
+        "df": 4,
+        "sa": 248,
+        "sp": 252
+      },
+      "ivs": {
+        "at": 1,
+        "sa": 30,
+        "sd": 30
+      },
+      "moves": [
+        "Hyper Voice",
+        "Psyshock",
+        "Hidden Power Ground",
+        "Protect"
+      ],
+      "nature": "Timid",
+      "item": "Gardevoirite"
+    }
+  },
+  "Gastrodon": {
+    "Gastrodon (Lumari Doubles)": {
+      "evs": {
+        "hp": 164,
+        "df": 108,
+        "sa": 220,
+        "sd": 12
+      },
+      "ivs": {
+        "at": 0,
+        "sp": 0
+      },
+      "moves": [
+        "Scald",
+        "Earth Power",
+        "Icy Wind",
+        "Clear Smog"
+      ],
+      "nature": "Quiet",
+      "item": "Assault Vest"
+    }
+  },
+  "Scizor": {
+    "Scizor (Lumari Doubles)": {
+      "evs": {
+        "hp": 212,
+        "at": 252,
+        "sp": 44
+      },
+      "moves": [
+        "Bullet Punch",
+        "Bug Bite",
+        "Superpower",
+        "Protect"
+      ],
+      "nature": "Adamant",
+      "item": "Life Orb"
+    }
+  },
+  "Raichu": {
+    "Raichu (Crab Man Doubles)": {
+      "evs": {
+        "hp": 4,
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Nuzzle",
+        "Fake Out",
+        "Encore",
+        "Charm"
+      ],
+      "nature": "Jolly",
+      "item": "Focus Sash"
+    }
+  },
+  "Azumarill": {
+    "Azumarill (Crab Man Doubles)": {
+      "evs": {
+        "hp": 196,
+        "at": 252,
+        "df": 20,
+        "sd": 12,
+        "sp": 28
+      },
+      "moves": [
+        "Protect",
+        "Belly Drum",
+        "Play Rough",
+        "Aqua Jet"
+      ],
+      "nature": "Adamant",
+      "item": "Sitrus Berry"
+    }
+  },
+  "Aegislash": {
+    "Aegislash (maasa Singles)": {
+      "evs": {
+        "hp": 252,
+        "at": 252,
+        "sd": 4
+      },
+      "moves": [
+        "Shadow Sneak",
+        "King's Shield",
+        "Iron Head",
+        "Swords Dance"
+      ],
+      "nature": "Adamant",
+      "item": "Leftovers"
+    },
+    "Aegislash (Wrath of Khan Singles)": {
+      "evs": {
+        "hp": 252,
+        "at": 252,
+        "df": 4
+      },
+      "ivs": {
+        "sp": 0
+      },
+      "moves": [
+        "King's Shield",
+        "Swords Dance",
+        "Sacred Sword",
+        "Shadow Claw"
+      ],
+      "nature": "Sassy",
+      "item": "Leftovers"
+    }
+  },
+  "Garchomp": {
+    "Garchomp (maasa Singles)": {
+      "evs": {
+        "at": 252,
+        "df": 4,
+        "sp": 252
+      },
+      "moves": [
+        "Earthquake",
+        "Substitute",
+        "Outrage",
+        "Swords Dance"
+      ],
+      "nature": "Jolly",
+      "item": "Lum Berry"
+    },
+    "Garchomp (Ravage Singles)": {
+      "evs": {
+        "at": 252,
+        "df": 4,
+        "sp": 252
+      },
+      "moves": [
+        "Outrage",
+        "Iron Head",
+        "Earthquake",
+        "Protect"
+      ],
+      "nature": "Jolly",
+      "item": "Life Orb"
+    }
+  },
+  "Scizor-Mega": {
+    "Scizor-Mega (Ravage Singles)": {
+      "evs": {
+        "hp": 252,
+        "at": 252,
+        "sd": 4
+      },
+      "moves": [
+        "Swords Dance",
+        "Bullet Punch",
+        "Bug Bite",
+        "Knock Off"
+      ],
+      "nature": "Adamant",
+      "item": "Scizorite"
+    }
+  },
+  "Starmie": {
+    "Starmie (Ravage Singles)": {
+      "evs": {
+        "hp": 4,
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Scald",
+        "Psyshock",
+        "Thunderbolt",
+        "Ice Beam"
+      ],
+      "nature": "Timid",
+      "item": "Expert Belt"
+    },
+    "Starmie (Evelyn Doubles)": {
+      "evs": {
+        "hp": 252,
+        "sa": 4,
+        "sd": 252
+      },
+      "ivs": {
+        "sp": 27
+      },
+      "moves": [
+        "Grass Knot",
+        "Dazzling Gleam",
+        "Trick Room",
+        "Ice Beam"
+      ],
+      "nature": "Sassy",
+      "item": "Expert Belt"
+    }
+  },
+  "Hydreigon": {
+    "Hydreigon (Crab Man Doubles)": {
+      "evs": {
+        "hp": 12,
+        "df": 12,
+        "sa": 252,
+        "sd": 12,
+        "sp": 220
+      },
+      "ivs": {
+        "at": 0
+      },
+      "moves": [
+        "Dark Pulse",
+        "Dragon Pulse",
+        "Earth Power",
+        "Flamethrower"
+      ],
+      "nature": "Timid",
+      "item": "Life Orb"
     }
   }
 }
