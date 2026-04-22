@@ -41,7 +41,15 @@ const SM_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'singles',
     maxBattle: 20,
-    teams: [{ name: "Venty's Ventysteela Super Singles Super Star", url: 'https://pokepast.es/282d7548ba34edd5', description: 'Recommended team:', pokemon: ['Pheromosa (Sectonia)', 'Celesteela (Ventysteela)', 'Tapu Lele (Wendy Koopa)'] }],
+    teams: [
+      { name: "Venty's Ventysteela Super Singles Super Star", url: 'https://pokepast.es/282d7548ba34edd5', description: 'Recommended team (requires Pheromosa, Celesteela, and Tapu Lele):', pokemon: ['Pheromosa (Sectonia)', 'Celesteela (Ventysteela)', 'Tapu Lele (Wendy Koopa)'] },
+      { name: "Regiultima's Dragonite / Chansey / Aegislash", url: 'https://pokepast.es/ab16a780317d3f38', description: 'Easiest to build (requires Aegislash):', pokemon: ['Dragonite (Regi Singles)', 'Chansey (Regi Singles)', 'Aegislash (Regi Singles)'] },
+      { name: "Durant / Glalie Singles", url: 'https://pokepast.es/93cf0abd6049a44d', description: 'Most consistent but slow (requires HA Truant Durant and HA Moody Glalie):', pokemon: ['Durant (DG Singles)', 'Glalie (DG Singles)', 'Mimikyu (DG Singles)'] },
+      { name: "Metakazam's Durant / Mega Salamence", url: 'https://pokepast.es/f0364d6773afc371', description: 'Extremely consistent (requires HA Truant Durant and Salamencite):', pokemon: ['Durant (Meta Singles)', 'Salamence-Mega (Meta Singles)', 'Toxapex (Meta Singles)'] },
+      { name: "Venty's Dragon / Steel / Water", url: 'https://pokepast.es/74628316023deccd', description: 'Reusable with other facilities (requires Suicune and Metagrossite):', pokemon: ['Garchomp (DSW Singles)', 'Metagross-Mega (DSW Singles)', 'Suicune (DSW Singles)'] },
+      { name: "SadisticMystic's Durant / Acupressure", url: 'https://pokepast.es/76c04294c1d6215d', description: 'Alternative (requires HA Truant Durant and Suicune):', pokemon: ['Durant (SM Singles)', 'Drapion (SM Singles)', 'Suicune (SM Singles)'] },
+      { name: 'Tapu Koko / Nihilego vs Trainer Red', url: 'https://pokepast.es/bd2463a0228eb753', description: 'For Battle 50 Trainer Red (requires Tapu Koko and Nihilego):', pokemon: ['Tapu Koko (Red Singles)', 'Nihilego (Red Singles)'] },
+    ],
     ribbon: {
       name: 'Battle Tree Great Ribbon',
       description: 'Win the 20th battle against Trainer Red in Regular Singles to earn the Battle Tree Great Ribbon. We recommend getting this ribbon in Ultra Sun / Ultra Moon for the unlimited level cap.',
@@ -55,8 +63,10 @@ const SM_MODES: FacilityMode[] = [
     format: 'doubles',
     maxBattle: 20,
     teams: [
-      { name: "Regiultima's Pheromosa Lele Super Doubles", url: 'https://pokepast.es/219b988b78930fea', description: 'Recommended team:', pokemon: ['Pheromosa (Doubles)', 'Tapu Lele (Doubles)', 'Salamence (Doubles)', 'Salamence-Mega (Doubles)', 'Aegislash (Doubles)'] },
+      { name: "Regiultima's Pheromosa Lele Super Doubles", url: 'https://pokepast.es/219b988b78930fea', description: 'Recommended team (requires Pheromosa and Tapu Lele):', pokemon: ['Pheromosa (Doubles)', 'Tapu Lele (Doubles)', 'Salamence (Doubles)', 'Salamence-Mega (Doubles)', 'Aegislash (Doubles)'] },
       { name: 'Budget TR Lv1 Endeavor Doubles', url: 'https://pokepast.es/dc57c6c05f6d2758', description: 'Easiest to build (requires Ultra Sun or Ultra Moon):', pokemon: ['Aron (Budget Doubles)', 'Jellicent (Budget Doubles)', 'Kommo-o (Budget Doubles)', 'Mawile-Mega (Budget Doubles)'] },
+      { name: 'Aromatisse TR Doubles', url: 'https://pokepast.es/070ff958c30b5959', description: 'Most consistent (requires Aromatisse):', pokemon: ['Aron (Aromatisse Doubles)', 'Aromatisse (Aromatisse Doubles)', 'Jellicent (Aromatisse Doubles)', 'Torkoal (Aromatisse Doubles)'] },
+      { name: 'Pelipper / Tapu Koko Doubles', url: 'https://pokepast.es/b8b55c74ffba0876', description: 'Alternative (requires Celesteela and Tapu Koko):', pokemon: ['Pelipper (Koko Doubles)', 'Tapu Koko (Koko Doubles)', 'Celesteela (Ventysteela)', 'Garchomp (Koko Doubles)'] },
     ],
     ribbon: {
       name: 'Battle Tree Great Ribbon',
@@ -70,7 +80,15 @@ const SM_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'singles',
     maxLevel: 50,
-    teams: [{ name: "Venty's Ventysteela Super Singles Super Star", url: 'https://pokepast.es/282d7548ba34edd5', description: 'Recommended team:', pokemon: ['Pheromosa (Sectonia)', 'Celesteela (Ventysteela)', 'Tapu Lele (Wendy Koopa)'] }],
+    teams: [
+      { name: "Durant / Glalie Singles", url: 'https://pokepast.es/93cf0abd6049a44d', description: 'Durant / Glalie team (requires HA Truant Durant and HA Moody Glalie):', pokemon: ['Durant (DG Singles)', 'Glalie (DG Singles)', 'Mimikyu (DG Singles)'] },
+      { name: "Regiultima's Dragonite / Chansey / Aegislash", url: 'https://pokepast.es/ab16a780317d3f38', description: 'Easiest to build (requires Aegislash):', pokemon: ['Dragonite (Regi Singles)', 'Chansey (Regi Singles)', 'Aegislash (Regi Singles)'] },
+      { name: "Metakazam's Durant / Mega Salamence", url: 'https://pokepast.es/f0364d6773afc371', description: 'Most consistent (requires HA Truant Durant and Salamencite):', pokemon: ['Durant (Meta Singles)', 'Salamence-Mega (Meta Singles)', 'Toxapex (Meta Singles)'] },
+      { name: "Venty's Ventysteela Super Singles Super Star", url: 'https://pokepast.es/282d7548ba34edd5', description: 'Recommended team (requires Pheromosa, Celesteela, and Tapu Lele):', pokemon: ['Pheromosa (Sectonia)', 'Celesteela (Ventysteela)', 'Tapu Lele (Wendy Koopa)'] },
+      { name: "Venty's Dragon / Steel / Water", url: 'https://pokepast.es/74628316023deccd', description: 'Reusable with other facilities (requires Suicune and Metagrossite):', pokemon: ['Garchomp (DSW Singles)', 'Metagross-Mega (DSW Singles)', 'Suicune (DSW Singles)'] },
+      { name: "SadisticMystic's Durant / Acupressure", url: 'https://pokepast.es/76c04294c1d6215d', description: 'Alternative (requires HA Truant Durant and Suicune):', pokemon: ['Durant (SM Singles)', 'Drapion (SM Singles)', 'Suicune (SM Singles)'] },
+      { name: 'Tapu Koko / Nihilego vs Trainer Red', url: 'https://pokepast.es/bd2463a0228eb753', description: 'For Battle 50 Trainer Red (requires Tapu Koko and Nihilego):', pokemon: ['Tapu Koko (Red Singles)', 'Nihilego (Red Singles)'] },
+    ],
     ribbon: {
       name: 'Battle Tree Master Ribbon',
       description: 'Win the 50th battle against Trainer Red in Super Singles to earn the Battle Tree Master Ribbon. After 51 consecutive wins, you need to restart the streak to earn the ribbon.',
@@ -87,6 +105,8 @@ const SM_MODES: FacilityMode[] = [
     teams: [
       { name: "Regiultima's Pheromosa Lele Super Doubles", url: 'https://pokepast.es/219b988b78930fea', description: 'Recommended team:', pokemon: ['Pheromosa (Doubles)', 'Tapu Lele (Doubles)', 'Salamence (Doubles)', 'Salamence-Mega (Doubles)', 'Aegislash (Doubles)'] },
       { name: 'Budget TR Lv1 Endeavor Doubles', url: 'https://pokepast.es/dc57c6c05f6d2758', description: 'Easiest to build (requires Ultra Sun or Ultra Moon):', pokemon: ['Aron (Budget Doubles)', 'Jellicent (Budget Doubles)', 'Kommo-o (Budget Doubles)', 'Mawile-Mega (Budget Doubles)'] },
+      { name: 'Aromatisse TR Doubles', url: 'https://pokepast.es/070ff958c30b5959', description: 'Most consistent (requires Aromatisse):', pokemon: ['Aron (Aromatisse Doubles)', 'Aromatisse (Aromatisse Doubles)', 'Jellicent (Aromatisse Doubles)', 'Torkoal (Aromatisse Doubles)'] },
+      { name: 'Pelipper / Tapu Koko Doubles', url: 'https://pokepast.es/b8b55c74ffba0876', description: 'Alternative (requires Celesteela and Tapu Koko):', pokemon: ['Pelipper (Koko Doubles)', 'Tapu Koko (Koko Doubles)', 'Celesteela (Ventysteela)', 'Garchomp (Koko Doubles)'] },
     ],
     ribbon: { name: 'Battle Tree Master Ribbon', description: 'Win the 50th battle against Trainer Blue in Super Doubles to earn the Battle Tree Master Ribbon. After 51 consecutive wins, you need to restart the streak to earn the ribbon.', icon: '/images/ribbons/battle-tree-master-ribbon.png' },
   },

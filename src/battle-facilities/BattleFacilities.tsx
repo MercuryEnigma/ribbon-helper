@@ -664,11 +664,15 @@ export default function BattleFacilities() {
             {currentRibbon.description}
           </p>
         )}
-        {mode.teams.filter(t => t.url).map((t, i) => (
-          <p key={i} className="bf-team-note">
-            {t.description} <a href={t.url} target="_blank" rel="noopener noreferrer">{t.name}</a>
-          </p>
-        ))}
+        {mode.teams.some(t => t.url) && (
+          <ul className="bf-team-note-list">
+            {mode.teams.filter(t => t.url).map((t, i) => (
+              <li key={i} className="bf-team-note">
+                {t.description} <a href={t.url} target="_blank" rel="noopener noreferrer">{t.name}</a>
+              </li>
+            ))}
+          </ul>
+        )}
         <div className="bf-matchup">
           <div className="bf-side">
             <div className="bf-p1-selector">

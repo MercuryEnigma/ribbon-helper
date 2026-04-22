@@ -94,6 +94,21 @@
       ],
       "nature": "Jolly",
       "item": "Salamencite"
+    },
+    "Salamence-Mega (Meta Singles)": {
+      "evs": {
+        "hp": 252,
+        "at": 252,
+        "sp": 4
+      },
+      "moves": [
+        "Protect",
+        "Return",
+        "Earthquake",
+        "Dragon Dance"
+      ],
+      "nature": "Jolly",
+      "item": "Salamencite"
     }
   },
   "Salamence": {
@@ -134,6 +149,24 @@
       ],
       "nature": "Quiet",
       "item": "Leftovers"
+    },
+    "Aegislash (Regi Singles)": {
+      "evs": {
+        "hp": 252,
+        "at": 252,
+        "sd": 4
+      },
+      "ivs": {
+        "sp": 0
+      },
+      "moves": [
+        "Sacred Sword",
+        "Shadow Sneak",
+        "Swords Dance",
+        "King's Shield"
+      ],
+      "nature": "Brave",
+      "item": "Leftovers"
     }
   },
   "Aron": {
@@ -148,6 +181,39 @@
       ],
       "nature": "Mild",
       "item": "Berry Juice"
+    },
+    "Aron (Aromatisse Doubles)": {
+      "evs": {},
+      "level": 1,
+      "moves": [
+        "Protect",
+        "Endeavor",
+        "Toxic",
+        "Sandstorm"
+      ],
+      "nature": "Hardy",
+      "item": "Berry Juice"
+    }
+  },
+  "Aromatisse": {
+    "Aromatisse (Aromatisse Doubles)": {
+      "evs": {
+        "hp": 252,
+        "df": 252,
+        "sa": 4
+      },
+      "ivs": {
+        "at": 0,
+        "sp": 0
+      },
+      "moves": [
+        "Odor Sleuth",
+        "Dazzling Gleam",
+        "Moonblast",
+        "Trick Room"
+      ],
+      "nature": "Relaxed",
+      "item": "Lum Berry"
     }
   },
   "Jellicent": {
@@ -168,6 +234,44 @@
       ],
       "nature": "Relaxed",
       "item": "Lum Berry"
+    },
+    "Jellicent (Aromatisse Doubles)": {
+      "evs": {
+        "hp": 252,
+        "df": 252,
+        "sa": 4
+      },
+      "ivs": {
+        "sp": 0
+      },
+      "moves": [
+        "Shadow Ball",
+        "Water Spout",
+        "Trick Room",
+        "Protect"
+      ],
+      "nature": "Relaxed",
+      "item": "Leftovers"
+    }
+  },
+  "Torkoal": {
+    "Torkoal (Aromatisse Doubles)": {
+      "evs": {
+        "hp": 252,
+        "sa": 252,
+        "sd": 4
+      },
+      "ivs": {
+        "sp": 0
+      },
+      "moves": [
+        "Protect",
+        "Flamethrower",
+        "Heat Wave",
+        "Solar Beam"
+      ],
+      "nature": "Quiet",
+      "item": "Flame Plate"
     }
   },
   "Kommo-o": {
@@ -222,6 +326,324 @@
       ],
       "nature": "Adamant",
       "item": "Choice Band"
+    }
+  },
+  "Pelipper": {
+    "Pelipper (Koko Doubles)": {
+      "evs": {
+        "hp": 4,
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Scald",
+        "Hurricane",
+        "Soak",
+        "U-turn"
+      ],
+      "nature": "Timid",
+      "item": "Choice Scarf"
+    }
+  },
+  "Tapu Koko": {
+    "Tapu Koko (Koko Doubles)": {
+      "evs": {
+        "hp": 28,
+        "df": 36,
+        "sa": 252,
+        "sd": 4,
+        "sp": 188
+      },
+      "ivs": {
+        "at": 0
+      },
+      "moves": [
+        "Thunder",
+        "Dazzling Gleam",
+        "Volt Switch",
+        "Protect"
+      ],
+      "nature": "Timid",
+      "item": "Life Orb"
+    },
+    "Tapu Koko (Red Singles)": {
+      "evs": {
+        "hp": 252,
+        "at": 252,
+        "sd": 4
+      },
+      "moves": [
+        "Wild Charge",
+        "Brave Bird",
+        "Substitute",
+        "U-turn"
+      ],
+      "nature": "Adamant",
+      "item": "Electrium Z"
+    }
+  },
+  "Nihilego": {
+    "Nihilego (Red Singles)": {
+      "evs": {
+        "sa": 252,
+        "sd": 4,
+        "sp": 252
+      },
+      "ivs": {
+        "at": 0
+      },
+      "moves": [
+        "Power Gem",
+        "Sludge Wave",
+        "Thunderbolt",
+        "Psychic"
+      ],
+      "nature": "Timid",
+      "item": "Choice Scarf"
+    }
+  },
+  "Garchomp": {
+    "Garchomp (Koko Doubles)": {
+      "evs": {
+        "at": 252,
+        "sd": 4,
+        "sp": 252
+      },
+      "moves": [
+        "Earthquake",
+        "Dragon Claw",
+        "Iron Head",
+        "Rock Slide"
+      ],
+      "nature": "Jolly",
+      "item": "Focus Sash"
+    },
+    "Garchomp (DSW Singles)": {
+      "evs": {
+        "hp": 4,
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Outrage",
+        "Earthquake",
+        "Swords Dance",
+        "Iron Head"
+      ],
+      "nature": "Jolly",
+      "item": "Focus Sash"
+    }
+  },
+  "Durant": {
+    "Durant (DG Singles)": {
+      "evs": {
+        "hp": 252,
+        "df": 20,
+        "sp": 236
+      },
+      "moves": [
+        "Entrainment",
+        "X-Scissor",
+        "Iron Head",
+        "Substitute"
+      ],
+      "nature": "Jolly",
+      "item": "Choice Scarf"
+    },
+    "Durant (Meta Singles)": {
+      "evs": {
+        "hp": 252,
+        "df": 20,
+        "sp": 236
+      },
+      "moves": [
+        "Entrainment",
+        "Bug Bite",
+        "Crunch",
+        "Iron Head"
+      ],
+      "nature": "Jolly",
+      "item": "Choice Scarf"
+    },
+    "Durant (SM Singles)": {
+      "evs": {
+        "hp": 196,
+        "at": 108,
+        "df": 46,
+        "sd": 76,
+        "sp": 82
+      },
+      "moves": [
+        "Entrainment",
+        "X-Scissor",
+        "Iron Head",
+        "Baton Pass"
+      ],
+      "nature": "Jolly",
+      "item": "Choice Scarf"
+    }
+  },
+  "Glalie": {
+    "Glalie (DG Singles)": {
+      "evs": {
+        "hp": 172,
+        "df": 4,
+        "sa": 140,
+        "sd": 4,
+        "sp": 188
+      },
+      "ivs": {
+        "at": 0
+      },
+      "moves": [
+        "Frost Breath",
+        "Protect",
+        "Substitute",
+        "Taunt"
+      ],
+      "nature": "Timid",
+      "item": "Leftovers"
+    }
+  },
+  "Mimikyu": {
+    "Mimikyu (DG Singles)": {
+      "evs": {
+        "hp": 252,
+        "sd": 20,
+        "sp": 236
+      },
+      "moves": [
+        "Thief",
+        "Thunder Wave",
+        "Taunt",
+        "Confide"
+      ],
+      "nature": "Jolly",
+      "item": "Red Card"
+    }
+  },
+  "Dragonite": {
+    "Dragonite (Regi Singles)": {
+      "evs": {
+        "hp": 4,
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Outrage",
+        "Earthquake",
+        "Dragon Dance",
+        "Roost"
+      ],
+      "nature": "Adamant",
+      "item": "Lum Berry"
+    }
+  },
+  "Chansey": {
+    "Chansey (Regi Singles)": {
+      "evs": {
+        "df": 244,
+        "sd": 20,
+        "sp": 244
+      },
+      "moves": [
+        "Seismic Toss",
+        "Soft-Boiled",
+        "Minimize",
+        "Substitute"
+      ],
+      "nature": "Timid",
+      "item": "Eviolite"
+    }
+  },
+  "Toxapex": {
+    "Toxapex (Meta Singles)": {
+      "evs": {
+        "hp": 252,
+        "df": 4,
+        "sd": 252
+      },
+      "ivs": {
+        "at": 0
+      },
+      "moves": [
+        "Baneful Bunker",
+        "Toxic",
+        "Recover",
+        "Scald"
+      ],
+      "nature": "Bold",
+      "item": "Black Sludge"
+    }
+  },
+  "Metagross-Mega": {
+    "Metagross-Mega (DSW Singles)": {
+      "evs": {
+        "hp": 4,
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Iron Head",
+        "Zen Headbutt",
+        "Bullet Punch",
+        "Hammer Arm"
+      ],
+      "nature": "Adamant",
+      "item": "Metagrossite"
+    }
+  },
+  "Suicune": {
+    "Suicune (DSW Singles)": {
+      "evs": {
+        "hp": 252,
+        "df": 252,
+        "sp": 4
+      },
+      "moves": [
+        "Scald",
+        "Ice Beam",
+        "Calm Mind",
+        "Rest"
+      ],
+      "nature": "Bold",
+      "item": "Leftovers"
+    },
+    "Suicune (SM Singles)": {
+      "evs": {
+        "hp": 242,
+        "df": 252,
+        "sd": 4,
+        "sp": 10
+      },
+      "moves": [
+        "Substitute",
+        "Calm Mind",
+        "Rest",
+        "Scald"
+      ],
+      "nature": "Bold",
+      "item": "Leftovers"
+    }
+  },
+  "Drapion": {
+    "Drapion (SM Singles)": {
+      "evs": {
+        "hp": 252,
+        "df": 76,
+        "sd": 180
+      },
+      "ivs": {
+        "sp": 29
+      },
+      "moves": [
+        "Substitute",
+        "Acupressure",
+        "Protect",
+        "Dark Pulse"
+      ],
+      "nature": "Calm",
+      "item": "Black Sludge"
     }
   }
 }
