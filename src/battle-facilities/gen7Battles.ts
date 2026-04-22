@@ -41,9 +41,7 @@ const SM_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'singles',
     maxBattle: 20,
-    teamUrl: 'https://pokepast.es/282d7548ba34edd5',
-    teamName: "Venty's Ventysteela Super Singles Super Star",
-    pokemon: ['Pheromosa (Sectonia)', 'Celesteela (Ventysteela)', 'Tapu Lele (Wendy Koopa)'],
+    teams: [{ name: "Venty's Ventysteela Super Singles Super Star", url: 'https://pokepast.es/282d7548ba34edd5', description: 'Recommended team:', pokemon: ['Pheromosa (Sectonia)', 'Celesteela (Ventysteela)', 'Tapu Lele (Wendy Koopa)'] }],
     ribbon: {
       name: 'Battle Tree Great Ribbon',
       description: 'Win the 20th battle against Trainer Red in Regular Singles to earn the Battle Tree Great Ribbon. We recommend getting this ribbon in Ultra Sun / Ultra Moon for the unlimited level cap.',
@@ -56,9 +54,10 @@ const SM_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'doubles',
     maxBattle: 20,
-    teamUrl: 'https://pokepast.es/219b988b78930fea',
-    teamName: "Regiultima's Pheromosa Lele Super Doubles",
-    pokemon: ['Pheromosa (Doubles)', 'Tapu Lele (Doubles)', 'Salamence (Doubles)', 'Salamence-Mega (Doubles)', 'Aegislash (Doubles)'],
+    teams: [
+      { name: "Regiultima's Pheromosa Lele Super Doubles", url: 'https://pokepast.es/219b988b78930fea', description: 'Recommended team:', pokemon: ['Pheromosa (Doubles)', 'Tapu Lele (Doubles)', 'Salamence (Doubles)', 'Salamence-Mega (Doubles)', 'Aegislash (Doubles)'] },
+      { name: 'Budget TR Lv1 Endeavor Doubles', url: 'https://pokepast.es/dc57c6c05f6d2758', description: 'Easiest to build (requires Ultra Sun or Ultra Moon):', pokemon: ['Aron (Budget Doubles)', 'Jellicent (Budget Doubles)', 'Kommo-o (Budget Doubles)', 'Mawile-Mega (Budget Doubles)'] },
+    ],
     ribbon: {
       name: 'Battle Tree Great Ribbon',
       description: 'Win the 20th battle against Trainer Blue in Regular Doubles to earn the Battle Tree Great Ribbon. We recommend getting this ribbon in Ultra Sun / Ultra Moon for the unlimited level cap.',
@@ -71,9 +70,7 @@ const SM_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'singles',
     maxLevel: 50,
-    teamUrl: 'https://pokepast.es/282d7548ba34edd5',
-    teamName: "Venty's Ventysteela Super Singles Super Star",
-    pokemon: ['Pheromosa (Sectonia)', 'Celesteela (Ventysteela)', 'Tapu Lele (Wendy Koopa)'],
+    teams: [{ name: "Venty's Ventysteela Super Singles Super Star", url: 'https://pokepast.es/282d7548ba34edd5', description: 'Recommended team:', pokemon: ['Pheromosa (Sectonia)', 'Celesteela (Ventysteela)', 'Tapu Lele (Wendy Koopa)'] }],
     ribbon: {
       name: 'Battle Tree Master Ribbon',
       description: 'Win the 50th battle against Trainer Red in Super Singles to earn the Battle Tree Master Ribbon. After 51 consecutive wins, you need to restart the streak to earn the ribbon.',
@@ -87,9 +84,10 @@ const SM_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'doubles',
     maxLevel: 50,
-    teamUrl: 'https://pokepast.es/219b988b78930fea',
-    teamName: "Regiultima's Pheromosa Lele Super Doubles",
-    pokemon: ['Pheromosa (Doubles)', 'Tapu Lele (Doubles)', 'Salamence (Doubles)', 'Salamence-Mega (Doubles)', 'Aegislash (Doubles)'],
+    teams: [
+      { name: "Regiultima's Pheromosa Lele Super Doubles", url: 'https://pokepast.es/219b988b78930fea', description: 'Recommended team:', pokemon: ['Pheromosa (Doubles)', 'Tapu Lele (Doubles)', 'Salamence (Doubles)', 'Salamence-Mega (Doubles)', 'Aegislash (Doubles)'] },
+      { name: 'Budget TR Lv1 Endeavor Doubles', url: 'https://pokepast.es/dc57c6c05f6d2758', description: 'Easiest to build (requires Ultra Sun or Ultra Moon):', pokemon: ['Aron (Budget Doubles)', 'Jellicent (Budget Doubles)', 'Kommo-o (Budget Doubles)', 'Mawile-Mega (Budget Doubles)'] },
+    ],
     ribbon: { name: 'Battle Tree Master Ribbon', description: 'Win the 50th battle against Trainer Blue in Super Doubles to earn the Battle Tree Master Ribbon. After 51 consecutive wins, you need to restart the streak to earn the ribbon.', icon: '/images/ribbons/battle-tree-master-ribbon.png' },
   },
 ]

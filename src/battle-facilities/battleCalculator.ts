@@ -12,6 +12,13 @@ import type { StoredSet } from './pokepaste'
 // Shared types (used by both GameConfig and UI)
 // ──────────────────────────────────────────────
 
+export interface FacilityTeam {
+  name: string
+  url: string
+  description: string
+  pokemon: string[]
+}
+
 export interface FacilityMode {
   id: string
   label: string
@@ -19,9 +26,7 @@ export interface FacilityMode {
   format: 'singles' | 'doubles'
   maxBattle?: number
   maxLevel?: number
-  teamUrl: string
-  teamName: string
-  pokemon: string[] // set labels to show in the P1 selector
+  teams: FacilityTeam[]
   ribbon: { name: string; description: string; warning?: string; icon: string }
 }
 

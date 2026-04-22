@@ -44,9 +44,7 @@ const ORAS_MODES: FacilityMode[] = [
     format: 'singles',
     maxLevel: 50,
     maxBattle: 20,
-    teamUrl: 'https://pokepast.es/c431d238fc4a3e43',
-    teamName: 'nq8r\'s Durant/Cloyster Singles Team',
-    pokemon: ['Durant (Singles)', 'Cloyster (Singles)', 'Gliscor (Singles)'],
+    teams: [{ name: "nq8r's Durant/Cloyster Singles Team", url: 'https://pokepast.es/c431d238fc4a3e43', description: 'Recommended team:', pokemon: ['Durant (Singles)', 'Cloyster (Singles)', 'Gliscor (Singles)'] }],
     ribbon: {
       name: 'Skillful Battler Ribbon',
       description: 'Win the 20th battle against Chatelaine Nita in Regular Singles to earn the Skillful Battler Ribbon.',
@@ -60,9 +58,7 @@ const ORAS_MODES: FacilityMode[] = [
     format: 'doubles',
     maxLevel: 50,
     maxBattle: 20,
-    teamUrl: 'https://pokepast.es/ec414befed89b451',
-    teamName: "nq8r's Aron / Aromatisse TR Doubles Team",
-    pokemon: ['Aromatisse (Doubles)', 'Aron (Doubles)', 'Talonflame (Doubles)', 'Gliscor (Doubles)'],
+    teams: [{ name: "nq8r's Aron / Aromatisse TR Doubles Team", url: 'https://pokepast.es/ec414befed89b451', description: 'Recommended team:', pokemon: ['Aromatisse (Doubles)', 'Aron (Doubles)', 'Talonflame (Doubles)', 'Gliscor (Doubles)'] }],
     ribbon: {
       name: 'Skillful Battler Ribbon',
       description: 'Win the 20th battle against Chatelaine Evelyn in Regular Singles to earn the Skillful Battler Ribbon.',
@@ -75,9 +71,7 @@ const ORAS_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'singles',
     maxLevel: 50,
-    teamUrl: 'https://pokepast.es/c431d238fc4a3e43',
-    teamName: 'nq8r\'s Durant/Cloyster Singles Team',
-    pokemon: ['Durant (Singles)', 'Cloyster (Singles)', 'Gliscor (Singles)'],
+    teams: [{ name: "nq8r's Durant/Cloyster Singles Team", url: 'https://pokepast.es/c431d238fc4a3e43', description: 'Recommended team:', pokemon: ['Durant (Singles)', 'Cloyster (Singles)', 'Gliscor (Singles)'] }],
     ribbon: {
       name: 'Expert Battler Ribbon',
       description: 'Win the 50th battle against Chatelaine Nita in Super Singles to earn the Expert Battler Ribbon. After 51 consecutive wins, you need to restart the streak to earn the ribbon.',
@@ -90,9 +84,7 @@ const ORAS_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'doubles',
     maxLevel: 50,
-    teamUrl: 'https://pokepast.es/ec414befed89b451',
-    teamName: "nq8r's Aron / Aromatisse TR Doubles Team",
-    pokemon: ['Aromatisse (Doubles)', 'Aron (Doubles)', 'Talonflame (Doubles)', 'Gliscor (Doubles)'],
+    teams: [{ name: "nq8r's Aron / Aromatisse TR Doubles Team", url: 'https://pokepast.es/ec414befed89b451', description: 'Recommended team:', pokemon: ['Aromatisse (Doubles)', 'Aron (Doubles)', 'Talonflame (Doubles)', 'Gliscor (Doubles)'] }],
     ribbon: {
       name: 'Expert Battler Ribbon',
       description: 'Win the 50th battle against Chatelaine Evelyn in Super Singles to earn the Expert Battler Ribbon. After 51 consecutive wins, you need to restart the streak to earn the ribbon.',

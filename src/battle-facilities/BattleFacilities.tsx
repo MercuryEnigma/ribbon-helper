@@ -375,7 +375,9 @@ export default function BattleFacilities() {
     return Math.max(1, Math.min(cap, lvl))
   }
 
-  const p1Options = useMemo(() => config.buildP1Options(ribbonMasterSet, pokemonSets, mode.pokemon), [config, ribbonMasterSet, pokemonSets, mode])
+  const [selectedTeamIdx, setSelectedTeamIdx] = useState(0)
+  const selectedTeam = mode.teams[selectedTeamIdx] ?? mode.teams[0]
+  const p1Options = useMemo(() => config.buildP1Options(ribbonMasterSet, pokemonSets, selectedTeam.pokemon), [config, ribbonMasterSet, pokemonSets, selectedTeam])
   const [p1Label, setP1Label] = useState(p1Options[0]?.label ?? '')
   const [battleNum, setBattleNum] = useState(1)
   const [trainerKey, setTrainerKey] = useState('')
@@ -416,7 +418,8 @@ export default function BattleFacilities() {
     setP1StatusOpen(false)
     setP2StatusOpen(false)
     setP2Ability('')
-    const newOptions = newConfig.buildP1Options(ribbonMasterSet, pokemonSets, newMode.pokemon)
+    setSelectedTeamIdx(0)
+    const newOptions = newConfig.buildP1Options(ribbonMasterSet, pokemonSets, newMode.teams[0].pokemon)
     setP1Label(newOptions[0]?.label ?? '')
     if (shouldNavigate) {
       const slug = getSlugForConfig(newConfig)
@@ -547,7 +550,8 @@ export default function BattleFacilities() {
     setMode(newMode)
     setP1Level(clampLevelToMode(newMode.defaultLevel, newMode))
     setP2Level(clampLevelToMode(newMode.defaultLevel, newMode))
-    const newOptions = config.buildP1Options(ribbonMasterSet, pokemonSets, newMode.pokemon)
+    setSelectedTeamIdx(0)
+    const newOptions = config.buildP1Options(ribbonMasterSet, pokemonSets, newMode.teams[0].pokemon)
     if (newOptions.length > 0 && !newOptions.find((o: P1Option) => o.label === p1Label)) {
       setP1Label(newOptions[0].label)
     }
@@ -660,11 +664,11 @@ export default function BattleFacilities() {
             {currentRibbon.description}
           </p>
         )}
-        {mode.teamUrl && (
-          <p className="bf-team-note">
-            Recommended team: <a href={mode.teamUrl} target="_blank" rel="noopener noreferrer">{mode.teamName}</a>
+        {mode.teams.filter(t => t.url).map((t, i) => (
+          <p key={i} className="bf-team-note">
+            {t.description} <a href={t.url} target="_blank" rel="noopener noreferrer">{t.name}</a>
           </p>
-        )}
+        ))}
         <div className="bf-matchup">
           <div className="bf-side">
             <div className="bf-p1-selector">
@@ -690,6 +694,26 @@ export default function BattleFacilities() {
                 </div>
                 {saveError && <div className="bf-save-error">{saveError}</div>}
               </div>
+              {mode.teams.length > 1 && (
+                <div className="bf-pokemon-row">
+                  <span className="bf-row-label">Team</span>
+                  <select
+                    value={selectedTeamIdx}
+                    onChange={e => {
+                      const idx = parseInt(e.target.value)
+                      setSelectedTeamIdx(idx)
+                      const newOptions = config.buildP1Options(ribbonMasterSet, pokemonSets, mode.teams[idx].pokemon)
+                      if (newOptions.length > 0 && !newOptions.find((o: P1Option) => o.label === p1Label)) {
+                        setP1Label(newOptions[0].label)
+                      }
+                    }}
+                  >
+                    {mode.teams.map((t, i) => (
+                      <option key={i} value={i}>{t.name}</option>
+                    ))}
+                  </select>
+                </div>
+              )}
               <div className="bf-pokemon-row">
                 <span className="bf-row-label">Pokemon</span>
                 <select

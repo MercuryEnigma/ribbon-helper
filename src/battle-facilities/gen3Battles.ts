@@ -39,9 +39,7 @@ const EMERALD_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'singles',
     maxLevel: 50,
-    teamUrl: 'https://pokepast.es/9f353ea337d86f51',
-    teamName: "Venty's Latios / Metagross / Suicune",
-    pokemon: ['Latios (Singles)', 'Metagross (Singles)', 'Suicune (Singles)'],
+    teams: [{ name: "Venty's Latios / Metagross / Suicune", url: 'https://pokepast.es/9f353ea337d86f51', description: 'Recommended team:', pokemon: ['Latios (Singles)', 'Metagross (Singles)', 'Suicune (Singles)'] }],
     ribbon: { name: 'Winning Ribbon', description: 'Win a full 7-set from battle 50-56 onwards. The Battle Tower awards the Winning Ribbon.', warning: 'We recommend getting this ribbon in R/S Battle Tower.', icon: '/images/ribbons/winning-ribbon.png' },
   },
   {
@@ -49,9 +47,7 @@ const EMERALD_MODES: FacilityMode[] = [
     label: 'Open Singles',
     defaultLevel: 60,
     format: 'singles',
-    teamUrl: 'https://pokepast.es/9f353ea337d86f51',
-    teamName: "Venty's Latios / Metagross / Suicune",
-    pokemon: ['Latios (Singles)', 'Metagross (Singles)', 'Suicune (Singles)'],
+    teams: [{ name: "Venty's Latios / Metagross / Suicune", url: 'https://pokepast.es/9f353ea337d86f51', description: 'Recommended team:', pokemon: ['Latios (Singles)', 'Metagross (Singles)', 'Suicune (Singles)'] }],
     ribbon: { name: 'Victory Ribbon', description: 'Win a full 7-set from battle 50-56 onwards. The Battle Tower awards the Victory Ribbon.', warning: 'We recommend getting this ribbon in R/S Battle Tower.', icon: '/images/ribbons/victory-ribbon.png' },
   },
   {
@@ -60,9 +56,7 @@ const EMERALD_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'doubles',
     maxLevel: 50,
-    teamUrl: 'https://pokepast.es/773249e264806f40',
-    teamName: "Venty's Explosive doubles team",
-    pokemon: ['Latios (Doubles)', 'Metagross (Doubles)', 'Snorlax (Doubles)', 'Gengar (Doubles)'],
+    teams: [{ name: "Venty's Explosive doubles team", url: 'https://pokepast.es/773249e264806f40', description: 'Recommended team:', pokemon: ['Latios (Doubles)', 'Metagross (Doubles)', 'Snorlax (Doubles)', 'Gengar (Doubles)'] }],
     ribbon: { name: 'Winning Ribbon', description: 'Win a full 7-set from battle 50-56 onwards. The Battle Tower awards the Winning Ribbon.', warning: 'We recommend getting this ribbon in R/S Battle Tower.', icon: '/images/ribbons/winning-ribbon.png' },
   },
   {
@@ -70,9 +64,7 @@ const EMERALD_MODES: FacilityMode[] = [
     label: 'Open Doubles',
     defaultLevel: 60,
     format: 'doubles',
-    teamUrl: 'https://pokepast.es/773249e264806f40',
-    teamName: "Venty's Explosive doubles team",
-    pokemon: ['Latios (Doubles)', 'Metagross (Doubles)', 'Snorlax (Doubles)', 'Gengar (Doubles)'],
+    teams: [{ name: "Venty's Explosive doubles team", url: 'https://pokepast.es/773249e264806f40', description: 'Recommended team:', pokemon: ['Latios (Doubles)', 'Metagross (Doubles)', 'Snorlax (Doubles)', 'Gengar (Doubles)'] }],
     ribbon: { name: 'Victory Ribbon', description: 'Win a full 7-set from battle 50-56 onwards. The Battle Tower awards the Victory Ribbon.', warning: 'We recommend getting this ribbon in R/S Battle Tower.', icon: '/images/ribbons/victory-ribbon.png' },
   },
 ]

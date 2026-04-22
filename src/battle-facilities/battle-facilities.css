@@ -213,8 +213,8 @@
   flex: 1;
 }
 
-.bf-p1-selector .bf-pokemon-row,
-.bf-p2-selector .bf-pokemon-row {
+.bf-p1-selector > .bf-pokemon-row:last-child,
+.bf-p2-selector > .bf-pokemon-row:last-child {
   margin-top: auto;
 }
 
@@ -227,6 +227,7 @@
 .bf-p1-selector .bf-pokemon-row select,
 .bf-p2-selector .bf-pokemon-row select {
   flex: 1;
+  min-width: 0;
   padding: 0.3rem 0.4rem;
   font-size: 0.95rem;
 }

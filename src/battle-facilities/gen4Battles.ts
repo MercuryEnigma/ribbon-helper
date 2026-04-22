@@ -42,9 +42,7 @@ const PTHGSS_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'singles',
     maxLevel: 50,
-    teamUrl: 'https://pokepast.es/be7d1a59be75bbc9',
-    teamName: "Venty's Garchomp / CroCune / Metagross Singles Team",
-    pokemon: ['Garchomp (Singles)', 'Suicune (Singles)', 'Metagross (Singles)'],
+    teams: [{ name: "Venty's Garchomp / CroCune / Metagross Singles Team", url: 'https://pokepast.es/be7d1a59be75bbc9', description: 'Recommended team:', pokemon: ['Garchomp (Singles)', 'Suicune (Singles)', 'Metagross (Singles)'] }],
     ribbon: {
       name: 'Ability Ribbon',
       description: 'Win the 21st battle against Palmer in Singles to earn the Ability Ribbon. Win the 49th battle against Palmer in Singles to earn the Great Ability Ribbon. After 49 consecutive wins, you need to restart the streak to earn the ribbons again.',
@@ -57,9 +55,7 @@ const PTHGSS_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'doubles',
     maxLevel: 50,
-    teamUrl: 'https://pokepast.es/f47d3272d04f9f92',
-    teamName: "SirToastyToes's Trick Room Doubles",
-    pokemon: ['Bronzong (Doubles)', 'Togekiss (Doubles)', 'Machamp (Doubles)', 'Slowbro (Doubles)'],
+    teams: [{ name: "SirToastyToes's Trick Room Doubles", url: 'https://pokepast.es/f47d3272d04f9f92', description: 'Recommended team:', pokemon: ['Bronzong (Doubles)', 'Togekiss (Doubles)', 'Machamp (Doubles)', 'Slowbro (Doubles)'] }],
     ribbon: {
       name: 'Double Ability Ribbon',
       description: 'Win battle 50 or greater in Doubles to earn the Double Ability Ribbon. You do not need to win the entire set, and you do not need to reset.',
@@ -72,9 +68,7 @@ const PTHGSS_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'doubles',
     maxLevel: 50,
-    teamUrl: 'https://pokepast.es/d7c808ac7ba1e426',
-    teamName: "Venty's MetaChomp Duo",
-    pokemon: [
+    teams: [{ name: "Venty's MetaChomp Duo", url: 'https://pokepast.es/d7c808ac7ba1e426', description: 'Recommended team:', pokemon: [
       'Metagross (Multi Duo)', 'Garchomp (Multi Duo)',
       'Alakazam 1 (Mira)', 'Alakazam 2 (Mira)', 'Alakazam 3 (Mira)', 'Alakazam 4 (Mira)',
       'Gengar 1 (Mira)', 'Gengar 2 (Mira)', 'Gengar 3 (Mira)', 'Gengar 4 (Mira)',
@@ -88,7 +82,7 @@ const PTHGSS_MODES: FacilityMode[] = [
       'Empoleon 1 (Mira)', 'Empoleon 2 (Mira)',
       'Roserade 1 (Mira)', 'Roserade 2 (Mira)', 'Roserade 3 (Mira)', 'Roserade 4 (Mira)',
       'Magnezone 1 (Mira)', 'Magnezone 2 (Mira)',
-    ],
+    ] }],
     ribbon: {
       name: 'Multi Ability Ribbon',
       description: 'Win battle 50 or greater in Multi (with NPC) to earn the Multi Ability Ribbon. We recommend only selecting Mira for the last couple of sets, and make sure both of her pokemon are Moltres, Zapdos, Latios, or Latias. You do not need to win the entire set, and you do not need to reset.',
@@ -101,9 +95,7 @@ const PTHGSS_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'doubles',
     maxLevel: 50,
-    teamUrl: 'https://pokepast.es/f47d3272d04f9f92',
-    teamName: "SirToastyToes's Trick Room Doubles",
-    pokemon: ['Bronzong (Doubles)', 'Togekiss (Doubles)', 'Machamp (Doubles)', 'Slowbro (Doubles)'],
+    teams: [{ name: "SirToastyToes's Trick Room Doubles", url: 'https://pokepast.es/f47d3272d04f9f92', description: 'Recommended team:', pokemon: ['Bronzong (Doubles)', 'Togekiss (Doubles)', 'Machamp (Doubles)', 'Slowbro (Doubles)'] }],
     ribbon: {
       name: 'Pair Ability Ribbon',
       description: 'Win battle 50 or greater in Multi with friends (2-player) to earn the Pair Ability Ribbon. You do not need to win the entire set, and you do not need to reset.',

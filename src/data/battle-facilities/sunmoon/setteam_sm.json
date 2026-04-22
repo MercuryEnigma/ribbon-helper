@@ -136,6 +136,77 @@
       "item": "Leftovers"
     }
   },
+  "Aron": {
+    "Aron (Budget Doubles)": {
+      "evs": {},
+      "level": 1,
+      "moves": [
+        "Endeavor",
+        "Toxic",
+        "Rain Dance",
+        "Protect"
+      ],
+      "nature": "Mild",
+      "item": "Berry Juice"
+    }
+  },
+  "Jellicent": {
+    "Jellicent (Budget Doubles)": {
+      "evs": {
+        "hp": 252,
+        "df": 252,
+        "sd": 4
+      },
+      "ivs": {
+        "sp": 1
+      },
+      "moves": [
+        "Water Spout",
+        "Shadow Ball",
+        "Toxic",
+        "Trick Room"
+      ],
+      "nature": "Relaxed",
+      "item": "Lum Berry"
+    }
+  },
+  "Kommo-o": {
+    "Kommo-o (Budget Doubles)": {
+      "evs": {
+        "at": 20,
+        "sa": 236,
+        "sp": 252
+      },
+      "moves": [
+        "Clanging Scales",
+        "Superpower",
+        "Flamethrower",
+        "Protect"
+      ],
+      "nature": "Modest",
+      "item": "Kommonium Z"
+    }
+  },
+  "Mawile-Mega": {
+    "Mawile-Mega (Budget Doubles)": {
+      "evs": {
+        "hp": 252,
+        "at": 252,
+        "sd": 4
+      },
+      "ivs": {
+        "sp": 1
+      },
+      "moves": [
+        "Iron Head",
+        "Sucker Punch",
+        "Rock Slide",
+        "Play Rough"
+      ],
+      "nature": "Brave",
+      "item": "Mawilite"
+    }
+  },
   "Celesteela": {
     "Celesteela (Ventysteela)": {
       "evs": {
