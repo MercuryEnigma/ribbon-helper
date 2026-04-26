@@ -1,45 +1,249 @@
 {
   "Garchomp": {
     "Garchomp (Singles)": {
-      "evs": { "at": 252, "sp": 252, "sd": 6 },
-      "moves": ["Outrage", "Swords Dance", "Earthquake", "Fire Fang"],
+      "evs": {
+        "at": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Outrage",
+        "Swords Dance",
+        "Earthquake",
+        "Fire Fang"
+      ],
       "nature": "Jolly",
       "item": "Focus Sash"
     },
     "Garchomp (Multi Duo)": {
-      "evs": { "at": 252, "sp": 252, "sd": 6 },
-      "moves": ["Dragon Claw", "Swords Dance", "Earthquake", "Fire Fang"],
+      "evs": {
+        "at": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Dragon Claw",
+        "Swords Dance",
+        "Earthquake",
+        "Fire Fang"
+      ],
       "nature": "Jolly",
       "item": "Focus Sash"
+    },
+    "Garchomp (K1K1 Singles)": {
+      "evs": {
+        "at": 252,
+        "sd": 6,
+        "sp": 252
+      },
+      "moves": [
+        "Swords Dance",
+        "Outrage",
+        "Fire Fang",
+        "Earthquake"
+      ],
+      "nature": "Jolly",
+      "item": "Focus Sash",
+      "ability": "Sand Veil"
+    },
+    "Garchomp (Budget Singles)": {
+      "evs": {
+        "at": 252,
+        "sd": 4,
+        "sp": 252
+      },
+      "moves": [
+        "Outrage",
+        "Earthquake",
+        "Fire Fang",
+        "Swords Dance"
+      ],
+      "nature": "Jolly",
+      "item": "Focus Sash",
+      "ability": "Sand Veil"
+    },
+    "Garchomp (Drapion Singles)": {
+      "evs": {
+        "at": 252,
+        "df": 4,
+        "sp": 252
+      },
+      "moves": [
+        "Swords Dance",
+        "Outrage",
+        "Earthquake",
+        "Substitute"
+      ],
+      "nature": "Jolly",
+      "item": "Lum Berry",
+      "ability": "Sand Veil"
+    },
+    "Garchomp (Doubles Alt)": {
+      "evs": {
+        "at": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Dragon Claw",
+        "Swords Dance",
+        "Earthquake",
+        "Fire Fang"
+      ],
+      "nature": "Jolly",
+      "item": "Yache Berry"
     }
   },
   "Suicune": {
     "Suicune (Singles)": {
-      "evs": { "hp": 252, "df": 252, "sd": 6 },
-      "moves": ["Surf", "Ice Beam", "Calm Mind", "Rest"],
+      "evs": {
+        "hp": 252,
+        "df": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Surf",
+        "Ice Beam",
+        "Calm Mind",
+        "Rest"
+      ],
       "nature": "Bold",
       "item": "Leftovers"
+    },
+    "Suicune (K1K1 Singles)": {
+      "evs": {
+        "hp": 252,
+        "df": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Calm Mind",
+        "Rest",
+        "Ice Beam",
+        "Surf"
+      ],
+      "nature": "Bold",
+      "item": "Leftovers",
+      "ability": "Pressure"
+    },
+    "Suicune (Doubles Alt)": {
+      "evs": {
+        "hp": 252,
+        "df": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Surf",
+        "Ice Beam",
+        "Calm Mind",
+        "Rest"
+      ],
+      "nature": "Bold",
+      "item": "Leftovers",
+      "ability": "Pressure"
     }
   },
   "Metagross": {
     "Metagross (Singles)": {
-      "evs": { "hp": 252, "at": 236, "df": 12, "sp": 8 },
-      "moves": ["Iron Head", "Earthquake", "Explosion", "Bullet Punch"],
+      "evs": {
+        "hp": 252,
+        "at": 236,
+        "df": 12,
+        "sp": 8
+      },
+      "moves": [
+        "Iron Head",
+        "Earthquake",
+        "Explosion",
+        "Bullet Punch"
+      ],
       "nature": "Adamant",
       "item": "Life Orb"
     },
     "Metagross (Multi Duo)": {
-      "evs": { "at": 252, "sp": 252, "sd": 6 },
-      "moves": ["Iron Head", "Earthquake", "Explosion", "Bullet Punch"],
+      "evs": {
+        "at": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Iron Head",
+        "Earthquake",
+        "Explosion",
+        "Bullet Punch"
+      ],
       "nature": "Adamant",
       "item": "Life Orb"
+    },
+    "Metagross (Doubles)": {
+      "evs": {
+        "hp": 84,
+        "at": 252,
+        "df": 4,
+        "sd": 4,
+        "sp": 164
+      },
+      "moves": [
+        "Iron Head",
+        "Earthquake",
+        "Explosion",
+        "Bullet Punch"
+      ],
+      "nature": "Adamant",
+      "item": "Metal Coat",
+      "ability": "Clear Body"
+    },
+    "Metagross (Doubles Alt)": {
+      "evs": {
+        "hp": 252,
+        "at": 236,
+        "df": 12,
+        "sp": 8
+      },
+      "moves": [
+        "Iron Head",
+        "Earthquake",
+        "Explosion",
+        "Bullet Punch"
+      ],
+      "nature": "Adamant",
+      "item": "Life Orb",
+      "ability": "Clear Body"
+    },
+    "Metagross (Multi Alt)": {
+      "evs": {
+        "hp": 252,
+        "at": 236,
+        "df": 12,
+        "sd": 10
+      },
+      "moves": [
+        "Earthquake",
+        "Iron Head",
+        "Explosion",
+        "Bullet Punch"
+      ],
+      "nature": "Adamant",
+      "item": "Life Orb",
+      "ability": "Clear Body"
     }
   },
   "Bronzong": {
     "Bronzong (Doubles)": {
-      "evs": { "hp": 252, "at": 252, "sd": 6 },
-      "ivs": { "sp": 0 },
-      "moves": ["Iron Head", "Earthquake", "Explosion", "Trick Room"],
+      "evs": {
+        "hp": 252,
+        "at": 252,
+        "sd": 6
+      },
+      "ivs": {
+        "sp": 0
+      },
+      "moves": [
+        "Iron Head",
+        "Earthquake",
+        "Explosion",
+        "Trick Room"
+      ],
       "nature": "Brave",
       "item": "Lum Berry"
     }
@@ -47,8 +251,15 @@
   "Togekiss": {
     "Togekiss (Doubles)": {
       "evs": {},
-      "ivs": { "hp": 0 },
-      "moves": ["Encore", "Protect", "Follow Me", "Endeavor"],
+      "ivs": {
+        "hp": 0
+      },
+      "moves": [
+        "Encore",
+        "Protect",
+        "Follow Me",
+        "Endeavor"
+      ],
       "nature": "Careful",
       "item": "Focus Sash",
       "level": 2
@@ -56,284 +267,867 @@
   },
   "Machamp": {
     "Machamp (Doubles)": {
-      "evs": { "hp": 252, "at": 252, "sd": 6 },
-      "ivs": { "sp": 0 },
-      "moves": ["Protect", "Fling", "Dynamic Punch", "Stone Edge"],
+      "evs": {
+        "hp": 252,
+        "at": 252,
+        "sd": 6
+      },
+      "ivs": {
+        "sp": 0
+      },
+      "moves": [
+        "Protect",
+        "Fling",
+        "Dynamic Punch",
+        "Stone Edge"
+      ],
       "nature": "Brave",
       "item": "Iron Ball"
     }
   },
   "Slowbro": {
     "Slowbro (Doubles)": {
-      "evs": { "hp": 252, "sa": 252, "sd": 6 },
-      "ivs": { "at": 0, "sp": 0 },
-      "moves": ["Psychic", "Grass Knot", "Flamethrower", "Trick Room"],
+      "evs": {
+        "hp": 252,
+        "sa": 252,
+        "sd": 6
+      },
+      "ivs": {
+        "at": 0,
+        "sp": 0
+      },
+      "moves": [
+        "Psychic",
+        "Grass Knot",
+        "Flamethrower",
+        "Trick Room"
+      ],
       "nature": "Quiet",
       "item": "Life Orb"
     }
   },
   "Alakazam": {
     "Alakazam 1 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Psychic", "Shadow Ball", "Calm Mind", "Future Sight"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Psychic",
+        "Shadow Ball",
+        "Calm Mind",
+        "Future Sight"
+      ],
       "nature": "Timid",
       "item": "BrightPowder"
     },
     "Alakazam 2 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Psychic", "Focus Blast", "Charge Beam", "Recover"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Psychic",
+        "Focus Blast",
+        "Charge Beam",
+        "Recover"
+      ],
       "nature": "Modest",
       "item": "Colbur Berry"
     },
     "Alakazam 3 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Psychic", "Charge Beam", "Signal Beam", "Grass Knot"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Psychic",
+        "Charge Beam",
+        "Signal Beam",
+        "Grass Knot"
+      ],
       "nature": "Timid",
       "item": "Wise Glasses"
     },
     "Alakazam 4 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Psychic", "Shadow Ball", "Energy Ball", "Focus Blast"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Psychic",
+        "Shadow Ball",
+        "Energy Ball",
+        "Focus Blast"
+      ],
       "nature": "Modest",
       "item": "Expert Belt"
     }
   },
   "Gengar": {
+    "Gengar (Doubles Alt)": {
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "hp": 6
+      },
+      "moves": [
+        "Shadow Ball",
+        "Thunderbolt",
+        "Destiny Bond",
+        "Protect"
+      ],
+      "nature": "Hasty",
+      "item": "Focus Sash"
+    },
     "Gengar 1 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Shadow Ball", "Sludge Bomb", "Spite", "Confuse Ray"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Shadow Ball",
+        "Sludge Bomb",
+        "Spite",
+        "Confuse Ray"
+      ],
       "nature": "Timid",
       "item": "Payapa Berry"
     },
     "Gengar 2 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Shadow Ball", "Dream Eater", "Hypnosis", "Substitute"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Shadow Ball",
+        "Dream Eater",
+        "Hypnosis",
+        "Substitute"
+      ],
       "nature": "Modest",
       "item": "Life Orb"
     },
     "Gengar 3 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Psychic", "Energy Ball", "Focus Blast", "Confuse Ray"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Psychic",
+        "Energy Ball",
+        "Focus Blast",
+        "Confuse Ray"
+      ],
       "nature": "Modest",
       "item": "Scope Lens"
     },
     "Gengar 4 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Shadow Ball", "Sludge Bomb", "Thunderbolt", "Destiny Bond"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Shadow Ball",
+        "Sludge Bomb",
+        "Thunderbolt",
+        "Destiny Bond"
+      ],
       "nature": "Modest",
       "item": "Lum Berry"
     }
   },
   "Exeggutor": {
     "Exeggutor 1 (Mira)": {
-      "evs": { "hp": 252, "sa": 252, "sd": 6 },
-      "moves": ["Solar Beam", "Psychic", "Synthesis", "Sunny Day"],
+      "evs": {
+        "hp": 252,
+        "sa": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Solar Beam",
+        "Psychic",
+        "Synthesis",
+        "Sunny Day"
+      ],
       "nature": "Modest",
       "item": "BrightPowder"
     },
     "Exeggutor 2 (Mira)": {
-      "evs": { "hp": 252, "sa": 252, "sd": 6 },
-      "moves": ["Dream Eater", "Hypnosis", "Leech Seed", "Ingrain"],
+      "evs": {
+        "hp": 252,
+        "sa": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Dream Eater",
+        "Hypnosis",
+        "Leech Seed",
+        "Ingrain"
+      ],
       "nature": "Modest",
       "item": "Lum Berry"
     },
     "Exeggutor 3 (Mira)": {
-      "evs": { "hp": 252, "sa": 252, "sd": 6 },
-      "moves": ["Leaf Storm", "Psychic", "Sludge Bomb", "Ancient Power"],
+      "evs": {
+        "hp": 252,
+        "sa": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Leaf Storm",
+        "Psychic",
+        "Sludge Bomb",
+        "Ancient Power"
+      ],
       "nature": "Modest",
       "item": "Expert Belt"
     }
   },
   "Zapdos": {
-    "Zapdos 1 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Thunderbolt", "Ancient Power", "Ominous Wind", "Light Screen"],
+    "Zapdos (Doubles)": {
+      "evs": {
+        "sa": 252,
+        "sd": 4,
+        "sp": 252
+      },
+      "moves": [
+        "Thunderbolt",
+        "Heat Wave",
+        "Hidden Power Ice",
+        "Detect"
+      ],
       "nature": "Timid",
-      "item": "Focus Band"
+      "item": "Life Orb",
+      "ability": "Pressure"
+    },
+    "Zapdos (Doubles Alt)": {
+      "evs": {
+        "sa": 252,
+        "sd": 6,
+        "sp": 252
+      },
+      "moves": [
+        "Discharge",
+        "Heat Wave",
+        "Hidden Power Ice",
+        "Detect"
+      ],
+      "nature": "Timid",
+      "item": "Lum Berry",
+      "ability": "Pressure"
+    },
+    "Zapdos 1 (Mira)": {
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Thunderbolt",
+        "Ancient Power",
+        "Ominous Wind",
+        "Light Screen"
+      ],
+      "nature": "Timid",
+      "item": "Focus Band",
+      "ability": "Pressure"
     },
     "Zapdos 2 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Thunderbolt", "Air Cutter", "Heat Wave", "Signal Beam"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Thunderbolt",
+        "Air Cutter",
+        "Heat Wave",
+        "Signal Beam"
+      ],
       "nature": "Modest",
-      "item": "BrightPowder"
+      "item": "BrightPowder",
+      "ability": "Pressure"
     }
   },
   "Moltres": {
     "Moltres 1 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Flamethrower", "Air Slash", "Ancient Power", "Roost"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Flamethrower",
+        "Air Slash",
+        "Ancient Power",
+        "Roost"
+      ],
       "nature": "Timid",
       "item": "Passho Berry"
     },
     "Moltres 2 (Mira)": {
-      "evs": { "hp": 252, "sa": 252, "sd": 6 },
-      "moves": ["Fire Blast", "Solar Beam", "Hyper Beam", "Sunny Day"],
+      "evs": {
+        "hp": 252,
+        "sa": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Fire Blast",
+        "Solar Beam",
+        "Hyper Beam",
+        "Sunny Day"
+      ],
       "nature": "Timid",
       "item": "Heat Rock"
     },
     "Moltres 3 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Overheat", "Air Slash", "Ancient Power", "Ominous Wind"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Overheat",
+        "Air Slash",
+        "Ancient Power",
+        "Ominous Wind"
+      ],
       "nature": "Modest",
       "item": "White Herb"
     }
   },
   "Espeon": {
     "Espeon 1 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Psychic", "Reflect", "Calm Mind", "Baton Pass"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Psychic",
+        "Reflect",
+        "Calm Mind",
+        "Baton Pass"
+      ],
       "nature": "Timid",
       "item": "Lum Berry"
     },
     "Espeon 2 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Psychic", "Swift", "Charm", "Attract"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Psychic",
+        "Swift",
+        "Charm",
+        "Attract"
+      ],
       "nature": "Timid",
       "item": "BrightPowder"
     },
     "Espeon 3 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Psychic", "Shadow Ball", "Hyper Beam", "Grass Knot"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Psychic",
+        "Shadow Ball",
+        "Hyper Beam",
+        "Grass Knot"
+      ],
       "nature": "Modest",
       "item": "Lum Berry"
     },
     "Espeon 4 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Psychic", "Shadow Ball", "Signal Beam", "Morning Sun"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Psychic",
+        "Shadow Ball",
+        "Signal Beam",
+        "Morning Sun"
+      ],
       "nature": "Modest",
       "item": "Wise Glasses"
     }
   },
   "Gardevoir": {
     "Gardevoir 1 (Mira)": {
-      "evs": { "sa": 252, "sd": 252, "hp": 6 },
-      "moves": ["Psychic", "Shadow Ball", "Thunder Wave", "Confuse Ray"],
+      "evs": {
+        "sa": 252,
+        "sd": 252,
+        "hp": 6
+      },
+      "moves": [
+        "Psychic",
+        "Shadow Ball",
+        "Thunder Wave",
+        "Confuse Ray"
+      ],
       "nature": "Calm",
       "item": "Lum Berry"
     },
     "Gardevoir 2 (Mira)": {
-      "evs": { "df": 252, "sa": 252, "hp": 6 },
-      "moves": ["Psychic", "Thunderbolt", "Calm Mind", "Rest"],
+      "evs": {
+        "df": 252,
+        "sa": 252,
+        "hp": 6
+      },
+      "moves": [
+        "Psychic",
+        "Thunderbolt",
+        "Calm Mind",
+        "Rest"
+      ],
       "nature": "Modest",
       "item": "Chesto Berry"
     },
     "Gardevoir 3 (Mira)": {
-      "evs": { "df": 252, "sa": 252, "hp": 6 },
-      "moves": ["Psychic", "Charge Beam", "Energy Ball", "Focus Blast"],
+      "evs": {
+        "df": 252,
+        "sa": 252,
+        "hp": 6
+      },
+      "moves": [
+        "Psychic",
+        "Charge Beam",
+        "Energy Ball",
+        "Focus Blast"
+      ],
       "nature": "Modest",
       "item": "BrightPowder"
     },
     "Gardevoir 4 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Psychic", "Thunderbolt", "Shadow Ball", "Destiny Bond"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Psychic",
+        "Thunderbolt",
+        "Shadow Ball",
+        "Destiny Bond"
+      ],
       "nature": "Timid",
       "item": "Wise Glasses"
     }
   },
   "Latias": {
+    "Latias (K1K1 Singles)": {
+      "evs": {
+        "hp": 252,
+        "df": 182,
+        "sp": 76
+      },
+      "moves": [
+        "Trick",
+        "Thunder Wave",
+        "Charm",
+        "Psychic"
+      ],
+      "nature": "Timid",
+      "item": "Choice Scarf",
+      "ability": "Levitate"
+    },
     "Latias 1 (Mira)": {
-      "evs": { "sa": 252, "sd": 252, "hp": 6 },
-      "moves": ["Psychic", "Dragon Pulse", "Attract", "Calm Mind"],
+      "evs": {
+        "sa": 252,
+        "sd": 252,
+        "hp": 6
+      },
+      "moves": [
+        "Psychic",
+        "Dragon Pulse",
+        "Attract",
+        "Calm Mind"
+      ],
       "nature": "Calm",
-      "item": "Lum Berry"
+      "item": "Lum Berry",
+      "ability": "Levitate"
     },
     "Latias 2 (Mira)": {
-      "evs": { "at": 252, "sp": 252, "sd": 6 },
-      "moves": ["Dragon Claw", "Zen Headbutt", "Earthquake", "Aerial Ace"],
+      "evs": {
+        "at": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Dragon Claw",
+        "Zen Headbutt",
+        "Earthquake",
+        "Aerial Ace"
+      ],
       "nature": "Adamant",
-      "item": "Expert Belt"
+      "item": "Expert Belt",
+      "ability": "Levitate"
     },
     "Latias 3 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Psychic", "Ice Beam", "Energy Ball", "Shadow Ball"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Psychic",
+        "Ice Beam",
+        "Energy Ball",
+        "Shadow Ball"
+      ],
       "nature": "Timid",
-      "item": "BrightPowder"
+      "item": "BrightPowder",
+      "ability": "Levitate"
     },
     "Latias 4 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Mist Ball", "Draco Meteor", "Thunderbolt", "Surf"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Mist Ball",
+        "Draco Meteor",
+        "Thunderbolt",
+        "Surf"
+      ],
       "nature": "Modest",
-      "item": "White Herb"
+      "item": "White Herb",
+      "ability": "Levitate"
     }
   },
   "Latios": {
+    "Latios (Doubles)": {
+      "evs": {
+        "hp": 4,
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Psychic",
+        "Dragon Pulse",
+        "Thunderbolt",
+        "Draco Meteor"
+      ],
+      "nature": "Timid",
+      "item": "Choice Specs",
+      "ability": "Levitate"
+    },
     "Latios 1 (Mira)": {
-      "evs": { "sa": 252, "sd": 252, "hp": 6 },
-      "moves": ["Psychic", "Dragon Pulse", "Thunder Wave", "Calm Mind"],
+      "evs": {
+        "sa": 252,
+        "sd": 252,
+        "hp": 6
+      },
+      "moves": [
+        "Psychic",
+        "Dragon Pulse",
+        "Thunder Wave",
+        "Calm Mind"
+      ],
       "nature": "Calm",
-      "item": "Focus Band"
+      "item": "Focus Band",
+      "ability": "Levitate"
     },
     "Latios 2 (Mira)": {
-      "evs": { "at": 252, "sp": 252, "sd": 6 },
-      "moves": ["Dragon Claw", "Shadow Claw", "Earthquake", "Dragon Dance"],
+      "evs": {
+        "at": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Dragon Claw",
+        "Shadow Claw",
+        "Earthquake",
+        "Dragon Dance"
+      ],
       "nature": "Adamant",
-      "item": "Lum Berry"
+      "item": "Lum Berry",
+      "ability": "Levitate"
     },
     "Latios 3 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Psychic", "Thunderbolt", "Ice Beam", "Energy Ball"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Psychic",
+        "Thunderbolt",
+        "Ice Beam",
+        "Energy Ball"
+      ],
       "nature": "Timid",
-      "item": "BrightPowder"
+      "item": "BrightPowder",
+      "ability": "Levitate"
     },
     "Latios 4 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Luster Purge", "Draco Meteor", "Hyper Beam", "Surf"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Luster Purge",
+        "Draco Meteor",
+        "Hyper Beam",
+        "Surf"
+      ],
       "nature": "Modest",
-      "item": "White Herb"
+      "item": "White Herb",
+      "ability": "Levitate"
     }
   },
   "Empoleon": {
     "Empoleon 1 (Mira)": {
-      "evs": { "at": 252, "sa": 252, "hp": 6 },
-      "moves": ["Surf", "Earthquake", "Blizzard", "Signal Beam"],
+      "evs": {
+        "at": 252,
+        "sa": 252,
+        "hp": 6
+      },
+      "moves": [
+        "Surf",
+        "Earthquake",
+        "Blizzard",
+        "Signal Beam"
+      ],
       "nature": "Brave",
       "item": "Quick Claw"
     },
     "Empoleon 2 (Mira)": {
-      "evs": { "at": 252, "sa": 252, "hp": 6 },
-      "moves": ["Hydro Cannon", "Flash Cannon", "Drill Peck", "Earthquake"],
+      "evs": {
+        "at": 252,
+        "sa": 252,
+        "hp": 6
+      },
+      "moves": [
+        "Hydro Cannon",
+        "Flash Cannon",
+        "Drill Peck",
+        "Earthquake"
+      ],
       "nature": "Brave",
       "item": "Quick Claw"
     }
   },
   "Roserade": {
     "Roserade 1 (Mira)": {
-      "evs": { "sa": 252, "sd": 252, "hp": 6 },
-      "moves": ["Sludge Bomb", "Magical Leaf", "Stun Spore", "Mud-Slap"],
+      "evs": {
+        "sa": 252,
+        "sd": 252,
+        "hp": 6
+      },
+      "moves": [
+        "Sludge Bomb",
+        "Magical Leaf",
+        "Stun Spore",
+        "Mud-Slap"
+      ],
       "nature": "Calm",
       "item": "Coba Berry"
     },
     "Roserade 2 (Mira)": {
-      "evs": { "sa": 252, "sd": 252, "hp": 6 },
-      "moves": ["Giga Drain", "Leech Seed", "Ingrain", "Synthesis"],
+      "evs": {
+        "sa": 252,
+        "sd": 252,
+        "hp": 6
+      },
+      "moves": [
+        "Giga Drain",
+        "Leech Seed",
+        "Ingrain",
+        "Synthesis"
+      ],
       "nature": "Calm",
       "item": "Big Root"
     },
     "Roserade 3 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Leaf Storm", "Sludge Bomb", "Hyper Beam", "Grass Whistle"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Leaf Storm",
+        "Sludge Bomb",
+        "Hyper Beam",
+        "Grass Whistle"
+      ],
       "nature": "Modest",
       "item": "White Herb"
     },
     "Roserade 4 (Mira)": {
-      "evs": { "sa": 252, "sp": 252, "sd": 6 },
-      "moves": ["Leaf Storm", "Sludge Bomb", "Shadow Ball", "Weather Ball"],
+      "evs": {
+        "sa": 252,
+        "sp": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Leaf Storm",
+        "Sludge Bomb",
+        "Shadow Ball",
+        "Weather Ball"
+      ],
       "nature": "Modest",
       "item": "White Herb"
     }
   },
   "Magnezone": {
     "Magnezone 1 (Mira)": {
-      "evs": { "df": 252, "sa": 252, "hp": 6 },
-      "moves": ["Thunderbolt", "Mirror Shot", "Light Screen", "Reflect"],
+      "evs": {
+        "df": 252,
+        "sa": 252,
+        "hp": 6
+      },
+      "moves": [
+        "Thunderbolt",
+        "Mirror Shot",
+        "Light Screen",
+        "Reflect"
+      ],
       "nature": "Bold",
       "item": "Light Clay"
     },
     "Magnezone 2 (Mira)": {
-      "evs": { "df": 252, "sa": 252, "hp": 6 },
-      "moves": ["Charge Beam", "Flash Cannon", "Magnet Rise", "Thunder Wave"],
+      "evs": {
+        "df": 252,
+        "sa": 252,
+        "hp": 6
+      },
+      "moves": [
+        "Charge Beam",
+        "Flash Cannon",
+        "Magnet Rise",
+        "Thunder Wave"
+      ],
       "nature": "Modest",
       "item": "Chesto Berry"
+    }
+  },
+  "Umbreon": {
+    "Umbreon (Budget Singles)": {
+      "evs": {
+        "hp": 252,
+        "at": 6,
+        "df": 252
+      },
+      "moves": [
+        "Curse",
+        "Baton Pass",
+        "Toxic",
+        "Payback"
+      ],
+      "nature": "Sassy",
+      "item": "Leftovers",
+      "ability": "Synchronize"
+    }
+  },
+  "Dusknoir": {
+    "Dusknoir (Budget Singles)": {
+      "evs": {
+        "hp": 6,
+        "at": 252,
+        "sd": 252
+      },
+      "moves": [
+        "Shadow Sneak",
+        "Ice Punch",
+        "Fire Punch",
+        "Brick Break"
+      ],
+      "nature": "Adamant",
+      "item": "Expert Belt",
+      "ability": "Pressure"
+    }
+  },
+  "Mesprit": {
+    "Mesprit (Drapion Singles)": {
+      "evs": {
+        "hp": 252,
+        "df": 4,
+        "sp": 252
+      },
+      "moves": [
+        "Trick",
+        "Thunder Wave",
+        "Charm",
+        "Flash"
+      ],
+      "nature": "Bold",
+      "item": "Choice Scarf",
+      "ability": "Levitate"
+    }
+  },
+  "Drapion": {
+    "Drapion (Drapion Singles)": {
+      "evs": {
+        "hp": 252,
+        "df": 56,
+        "sd": 196,
+        "sp": 4
+      },
+      "moves": [
+        "Crunch",
+        "Acupressure",
+        "Substitute",
+        "Rest"
+      ],
+      "nature": "Careful",
+      "item": "Black Sludge",
+      "ability": "Battle Armor"
+    }
+  },
+  "Hitmonlee": {
+    "Hitmonlee (Doubles)": {
+      "evs": {
+        "hp": 4,
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Fake Out",
+        "Mach Punch",
+        "Sucker Punch",
+        "Close Combat"
+      ],
+      "nature": "Adamant",
+      "item": "Focus Sash",
+      "ability": "Limber"
+    }
+  },
+  "Staraptor": {
+    "Staraptor (Multi Alt)": {
+      "evs": {
+        "hp": 4,
+        "at": 252,
+        "df": 76,
+        "sd": 4,
+        "sp": 172
+      },
+      "moves": [
+        "Brave Bird",
+        "Giga Impact",
+        "U-turn",
+        "Close Combat"
+      ],
+      "nature": "Adamant",
+      "item": "Choice Scarf",
+      "ability": "Intimidate"
     }
   }
 }
