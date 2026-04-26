@@ -692,7 +692,7 @@ export default function ORASMoves({ selectedGame, onNavigate }: ORASMovesProps) 
                       }}
                     >
                       <div className="move-type-badge">{contestMove.type.toUpperCase()}</div>
-                      <div className="move-name">{contestMove.move.replace(/-/g, ' ')}</div>
+                      <div className="move-name">Turn {index + 1}: {contestMove.move.replace(/-/g, ' ')}</div>
                       <div className="move-value">{contestMove.appeal}</div>
                     </div>
                   ))}

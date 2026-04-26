@@ -697,7 +697,7 @@ export default function RSEMoves({ selectedGame, onNavigate }: RSEMovesProps) {
                       }}
                     >
                       <div className="move-type-badge">{contestMove.type.toUpperCase()}</div>
-                      <div className="move-name">{contestMove.move.replace(/-/g, ' ')}</div>
+                      <div className="move-name">Turn {index + 1}: {contestMove.move.replace(/-/g, ' ')}</div>
                       <div className="move-value">{contestMove.appeal}</div>
                     </div>
                   ))}
