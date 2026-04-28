@@ -5,6 +5,7 @@ import {
   sunMoonConfig,
   orasConfig,
   gen4Config,
+  bdspConfig,
   type GameConfig,
   type SideState,
   type PokeSummary,
@@ -29,6 +30,7 @@ const GAME_OPTIONS: { slug: string; config: GameConfig }[] = [
   { slug: 'pthgss', config: gen4Config },
   { slug: 'oras', config: orasConfig },
   { slug: 'sunmoon', config: sunMoonConfig },
+  { slug: 'bdsp', config: bdspConfig },
 ]
 
 const STATUS_OPTIONS = ['Healthy', 'Poisoned', 'Badly Poisoned', 'Burned', 'Paralyzed', 'Asleep', 'Frozen'] as const
@@ -377,7 +379,7 @@ export default function BattleFacilities() {
 
   const [selectedTeamIdx, setSelectedTeamIdx] = useState(0)
   const selectedTeam = mode.teams[selectedTeamIdx] ?? mode.teams[0]
-  const p1Options = useMemo(() => config.buildP1Options(ribbonMasterSet, pokemonSets, selectedTeam.pokemon), [config, ribbonMasterSet, pokemonSets, selectedTeam])
+  const p1Options = useMemo(() => config.buildP1Options(ribbonMasterSet, pokemonSets, selectedTeam?.pokemon ?? []), [config, ribbonMasterSet, pokemonSets, selectedTeam])
   const [p1Label, setP1Label] = useState(p1Options[0]?.label ?? '')
   const [battleNum, setBattleNum] = useState(1)
   const [trainerKey, setTrainerKey] = useState('')
@@ -419,7 +421,7 @@ export default function BattleFacilities() {
     setP2StatusOpen(false)
     setP2Ability('')
     setSelectedTeamIdx(0)
-    const newOptions = newConfig.buildP1Options(ribbonMasterSet, pokemonSets, newMode.teams[0].pokemon)
+    const newOptions = newConfig.buildP1Options(ribbonMasterSet, pokemonSets, newMode.teams[0]?.pokemon ?? [])
     setP1Label(newOptions[0]?.label ?? '')
     if (shouldNavigate) {
       const slug = getSlugForConfig(newConfig)
@@ -463,7 +465,7 @@ export default function BattleFacilities() {
     deleteAllCustomSets()
     setRibbonMasterSet(null)
     setPokemonSets([])
-    setP1Label(mode.pokemon[0] ?? '')
+    setP1Label(mode.teams[0]?.pokemon[0] ?? '')
   }
 
   // Trainers available for current battle number
@@ -479,8 +481,8 @@ export default function BattleFacilities() {
 
   const availableSets = useMemo(() => {
     if (!selectedTrainer) return []
-    return config.getPokemonForTrainer(selectedTrainer.name)
-  }, [config, selectedTrainer])
+    return config.getPokemonForTrainer(selectedTrainer.name, mode.id, battleNum)
+  }, [config, selectedTrainer, mode, battleNum])
 
   const effectiveP2Label = useMemo(() => {
     if (availableSets.includes(p2Label)) return p2Label
@@ -551,7 +553,7 @@ export default function BattleFacilities() {
     setP1Level(clampLevelToMode(newMode.defaultLevel, newMode))
     setP2Level(clampLevelToMode(newMode.defaultLevel, newMode))
     setSelectedTeamIdx(0)
-    const newOptions = config.buildP1Options(ribbonMasterSet, pokemonSets, newMode.teams[0].pokemon)
+    const newOptions = config.buildP1Options(ribbonMasterSet, pokemonSets, newMode.teams[0]?.pokemon ?? [])
     if (newOptions.length > 0 && !newOptions.find((o: P1Option) => o.label === p1Label)) {
       setP1Label(newOptions[0].label)
     }
@@ -658,9 +660,9 @@ export default function BattleFacilities() {
             {currentRibbon.warning}
           </p>
         )}
-        {currentRibbon && (
+        {currentRibbon && currentRibbon.description && (
           <p className="bf-ribbon-note">
-            <img src={currentRibbon.icon} alt={currentRibbon.name} className="bf-ribbon-icon" />
+            {currentRibbon.icon && <img src={currentRibbon.icon} alt={currentRibbon.name} className="bf-ribbon-icon" />}
             {currentRibbon.description}
           </p>
         )}
@@ -754,7 +756,7 @@ export default function BattleFacilities() {
                   onClick={() => handleBattleNumChange(1)}
                   title="Reset to battle 1"
                 >Reset</button>
-                {config.getBattleRange(battleNum) && <span className="bf-range-badge">{config.getBattleRange(battleNum)}</span>}
+                {config.getBattleRange(battleNum, mode.id) && <span className="bf-range-badge">{config.getBattleRange(battleNum, mode.id)}</span>}
                 <span className="bf-range-badge">{p2Ivs} IVs</span>
               </div>
               <div className="bf-trainer-row">

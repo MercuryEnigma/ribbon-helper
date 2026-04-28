@@ -1,0 +1,70 @@
+{
+  "Garchomp": {
+    "Garchomp (Singles)": {
+      "evs": {"at": 252, "sp": 252, "sd": 6},
+      "moves": ["Outrage", "Swords Dance", "Earthquake", "Iron Head"],
+      "nature": "Jolly",
+      "item": "Focus Sash",
+      "ability": "Rough Skin"
+    }
+  },
+  "Suicune": {
+    "Suicune (Singles)": {
+      "evs": {"hp": 252, "df": 252, "sp": 6},
+      "moves": ["Scald", "Ice Beam", "Calm Mind", "Rest"],
+      "nature": "Bold",
+      "item": "Leftovers",
+      "ability": "Pressure"
+    }
+  },
+  "Scizor": {
+    "Scizor (Singles)": {
+      "evs": {"hp": 252, "at": 252, "sp": 6},
+      "moves": ["X-Scissor", "Bullet Punch", "Swords Dance", "Thief"],
+      "nature": "Adamant",
+      "item": "Sitrus Berry",
+      "ability": "Technician"
+    }
+  },
+  "Dusknoir": {
+    "Dusknoir (Doubles)": {
+      "evs": {"hp": 252, "df": 124, "sd": 132},
+      "ivs": {"sp": 0},
+      "moves": ["Gravity", "Trick Room", "Brick Break", "Night Shade"],
+      "nature": "Relaxed",
+      "item": "Lum Berry",
+      "ability": "Pressure"
+    }
+  },
+  "Aron": {
+    "Aron (Doubles)": {
+      "evs": {"at": 252},
+      "ivs": {"sp": 0},
+      "moves": ["Attract", "Rock Slide", "Endeavor", "Protect"],
+      "nature": "Brave",
+      "item": "Berry Juice",
+      "ability": "Sturdy",
+      "level": 1
+    }
+  },
+  "Hariyama": {
+    "Hariyama (Doubles)": {
+      "evs": {"hp": 28, "at": 252, "df": 116, "sd": 112},
+      "ivs": {"sp": 0},
+      "moves": ["Knock Off", "Facade", "Close Combat", "Fake Out"],
+      "nature": "Brave",
+      "item": "Flame Orb",
+      "ability": "Guts"
+    }
+  },
+  "Torkoal": {
+    "Torkoal (Doubles)": {
+      "evs": {"hp": 252, "sa": 252, "sd": 6},
+      "ivs": {"sp": 0},
+      "moves": ["Eruption", "Protect", "Solar Beam", "Heat Wave"],
+      "nature": "Quiet",
+      "item": "Charcoal",
+      "ability": "Drought"
+    }
+  }
+}

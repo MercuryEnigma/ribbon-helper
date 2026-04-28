@@ -1,0 +1,10134 @@
+{
+  "Lloyd": {
+    "regular-singles-1": [
+      "Mudkip-1",
+      "Combee-1,2",
+      "Staravia-1",
+      "Larvitar-1",
+      "Smoochum-1",
+      "Shieldon-1",
+      "Happiny-1,2",
+      "Charmander-2",
+      "Clefairy-1"
+    ],
+    "regular-singles-2": [
+      "Azumarill-1",
+      "Ponyta-1",
+      "Sableye-1"
+    ],
+    "regular-doubles-1": [
+      "Torchic-1",
+      "Duskull-1,2",
+      "Buneary-1",
+      "Cacnea-1",
+      "Snubbull-1,2",
+      "Squirtle-2",
+      "Psyduck-1",
+      "Mudkip-1",
+      "Bulbasaur-2",
+      "Voltorb-1"
+    ],
+    "regular-doubles-2": [
+      "Anorith-1",
+      "Torchic-2",
+      "Voltorb-1",
+      "Delibird-1"
+    ]
+  },
+  "Ben": {
+    "regular-singles-1": [
+      "Shedinja-1",
+      "Bidoof-2",
+      "Snover-1",
+      "Larvitar-1",
+      "Swablu-1,2",
+      "Cubone-1",
+      "Charmander-1",
+      "Psyduck-1"
+    ],
+    "regular-singles-2": [
+      "Parasect-1",
+      "Yanma-1",
+      "Nosepass-1"
+    ],
+    "regular-doubles-1": [
+      "Chikorita-1",
+      "Combee-1,2",
+      "Mime Jr.-1",
+      "Koffing-1",
+      "Kricketot-1,2",
+      "Chimchar-2",
+      "Skorupi-1"
+    ],
+    "regular-doubles-2": [
+      "Kricketune-1",
+      "Ledian-1",
+      "Azumarill-1",
+      "Magby-1"
+    ]
+  },
+  "Ezekiel": {
+    "regular-singles-1": [
+      "Remoraid-1",
+      "Bonsly-1,2",
+      "Clefairy-1",
+      "Burmy-1,2",
+      "Starly-2",
+      "Teddiursa-1",
+      "Combee-1,2",
+      "Duskull-1,2",
+      "Krabby-1"
+    ],
+    "regular-singles-2": [
+      "Parasect-1",
+      "Nidorina-1",
+      "Murkrow-1"
+    ],
+    "regular-doubles-1": [
+      "Cherubi-1,2",
+      "Totodile-2",
+      "Teddiursa-1",
+      "Shellos-1",
+      "Numel-1,2",
+      "Combee-1,2",
+      "Drowzee-1",
+      "Cubone-1"
+    ],
+    "regular-doubles-2": [
+      "Gloom-1",
+      "Budew-1,2",
+      "Parasect-1",
+      "Wobbuffet-1"
+    ]
+  },
+  "Tobias": {
+    "regular-singles-5": [
+      "Quagsire-1",
+      "Rhydon-1",
+      "Blaziken-1",
+      "Breloom-1",
+      "Feraligatr-1"
+    ],
+    "regular-singles-6": [
+      "Heracross-1",
+      "Rampardos-1",
+      "Altaria-1"
+    ],
+    "regular-doubles-5": [
+      "Staraptor-1",
+      "Mantine-1",
+      "Absol-1",
+      "Golem-1",
+      "Sceptile-1",
+      "Seaking-1",
+      "Breloom-1",
+      "Forretress-1"
+    ],
+    "regular-doubles-6": [
+      "Starmie-1",
+      "Blaziken-1",
+      "Lickilicky-1",
+      "Steelix-1"
+    ]
+  },
+  "Reese": {
+    "regular-singles-5": [
+      "Sceptile-1",
+      "Tropius-1",
+      "Scyther-1",
+      "Charizard-1",
+      "Hypno-1",
+      "Breloom-1"
+    ],
+    "regular-singles-6": [
+      "Toxicroak-1",
+      "Steelix-1",
+      "Altaria-1"
+    ],
+    "regular-doubles-5": [
+      "Forretress-1",
+      "Crawdaunt-1",
+      "Froslass-1",
+      "Ambipom-1",
+      "Blastoise-1",
+      "Swampert-?",
+      "Shiftry-1"
+    ],
+    "regular-doubles-6": [
+      "Gardevoir-1",
+      "Houndoom-1",
+      "Exeggutor-1",
+      "Scizor-1"
+    ]
+  },
+  "Elory": {
+    "regular-singles-1": [
+      "Snorunt-1,2",
+      "Machop-?",
+      "Shieldon-1",
+      "Chimchar-1",
+      "Glameow-1,2",
+      "Shellos-1",
+      "Bonsly-1,2",
+      "Vulpix-1,2",
+      "Cubone-1"
+    ],
+    "regular-singles-2": [
+      "Haunter-1",
+      "Aipom-1",
+      "Wailmer-1"
+    ],
+    "regular-doubles-1": [
+      "Budew-1,2",
+      "Snubbull-1,2",
+      "Spoink-1",
+      "Eevee-1",
+      "Venonat-1,2",
+      "Mantyke-1",
+      "Pidgeotto-1"
+    ],
+    "regular-doubles-2": [
+      "Illumise-1",
+      "Baltoy-1",
+      "Azumarill-1",
+      "Loudred-1"
+    ]
+  },
+  "Jenny": {
+    "regular-singles-1": [
+      "Treecko-1",
+      "Remoraid-1",
+      "Voltorb-1",
+      "Vulpix-1,2",
+      "Geodude-1,2",
+      "Chinchou-1",
+      "Shinx-1",
+      "Totodile-2",
+      "Buneary-1"
+    ],
+    "regular-singles-2": [
+      "Ponyta-1",
+      "Graveler-1",
+      "Azumarill-1"
+    ],
+    "regular-doubles-1": [
+      "Smoochum-1",
+      "Riolu-1,2",
+      "Staravia-1",
+      "Buizel-1",
+      "Starly-1",
+      "Totodile-2",
+      "Delibird-1",
+      "Cacnea-1",
+      "Budew-1,2",
+      "Bronzor-1,2",
+      "Krabby-1",
+      "Cranidos-1"
+    ],
+    "regular-doubles-2": [
+      "Baltoy-1",
+      "Dratini-1,2",
+      "Houndour-1",
+      "Elekid-1"
+    ]
+  },
+  "Arianna": {
+    "regular-singles-1": [
+      "Chikorita-1",
+      "Shinx-2",
+      "Cubone-1",
+      "Natu-1",
+      "Charmander-1",
+      "Pikachu-1,2",
+      "Lombre-1"
+    ],
+    "regular-singles-2": [
+      "Smoochum-1",
+      "Nosepass-1",
+      "Ledian-1"
+    ],
+    "regular-doubles-1": [
+      "Mudkip-1",
+      "Sandshrew-1,2",
+      "Finneon-1",
+      "Staravia-1",
+      "Snorunt-1,2",
+      "Bronzor-1,2",
+      "Staryu-1",
+      "Vibrava-1"
+    ],
+    "regular-doubles-2": [
+      "Murkrow-1",
+      "Kricketune-1",
+      "Delcatty-1",
+      "Sableye-1"
+    ]
+  },
+  "Donna": {
+    "regular-singles-5": [
+      "Carnivine-1",
+      "Slowbro-1",
+      "Ludicolo-1",
+      "Absol-1",
+      "Hypno-1",
+      "Lopunny-1"
+    ],
+    "regular-singles-6": [
+      "Donphan-1",
+      "Scizor-1",
+      "Ursaring-1"
+    ],
+    "regular-doubles-5": [
+      "Mr. Mime-1",
+      "Seviper-1",
+      "Manectric-1",
+      "Xatu-1",
+      "Granbull-1",
+      "Girafarig-1",
+      "Shiftry-1",
+      "Sandslash-1"
+    ],
+    "regular-doubles-6": [
+      "Vileplume-1",
+      "Gengar-1",
+      "Lickilicky-1",
+      "Glalie-1"
+    ]
+  },
+  "McKenna": {
+    "regular-singles-5": [
+      "Lumineon-1",
+      "Gastrodon-1",
+      "Breloom-1",
+      "Ludicolo-1",
+      "Hitmontop-1",
+      "Octillery-1"
+    ],
+    "regular-singles-6": [
+      "Wailord-?",
+      "Shuckle-1",
+      "Muk-1"
+    ],
+    "regular-doubles-5": [
+      "Typhlosion-1",
+      "Infernape-1",
+      "Swampert-?",
+      "Meganium-1",
+      "Exploud-1",
+      "Gastrodon-1",
+      "Electrode-1",
+      "Ludicolo-1"
+    ],
+    "regular-doubles-6": [
+      "Golduck-1",
+      "Cradily-1",
+      "Nidoking-1",
+      "Pinsir-1"
+    ]
+  },
+  "Chaz": {
+    "regular-singles-1": [
+      "Venonat-1,2",
+      "Happiny-1,2",
+      "Seel-1",
+      "Corphish-1,2",
+      "Numel-1,2",
+      "Hippopotas-1",
+      "Larvitar-1",
+      "Turtwig-2",
+      "Vibrava-1"
+    ],
+    "regular-singles-2": [
+      "Lickitung-1",
+      "Graveler-1",
+      "Minun-1"
+    ],
+    "regular-doubles-1": [
+      "Bulbasaur-1",
+      "Riolu-1,2",
+      "Snover-1",
+      "Staravia-1",
+      "Doduo-1",
+      "Starly-2",
+      "Finneon-1",
+      "Chinchou-1",
+      "Bidoof-1",
+      "Kricketot-1,2",
+      "Farfetch'd-1",
+      "Exeggcute-1"
+    ],
+    "regular-doubles-2": [
+      "Kricketot-1,2",
+      "Piplup-2",
+      "Buneary-1",
+      "Cubone-1"
+    ]
+  },
+  "Everett": {
+    "regular-singles-1": [
+      "Snubbull-1,2",
+      "Chikorita-2",
+      "Grimer-1",
+      "Machop-?",
+      "Bulbasaur-2",
+      "Lombre-1"
+    ],
+    "regular-singles-2": [
+      "Butterfree-1",
+      "Magby-1",
+      "Kabuto-1"
+    ],
+    "regular-doubles-1": [
+      "Kricketot-1,2",
+      "Machop-?",
+      "Seel-1",
+      "Aron-1",
+      "Treecko-1",
+      "Torchic-2",
+      "Growlithe-1",
+      "Vibrava-1",
+      "Bulbasaur-1",
+      "Piplup-2",
+      "Shellos-1",
+      "Spoink-1"
+    ],
+    "regular-doubles-2": [
+      "Omanyte-1",
+      "Teddiursa-1",
+      "Dustox-1",
+      "Cubone-1"
+    ]
+  },
+  "Lamont": {
+    "regular-singles-1": [
+      "Gible-1,2",
+      "Cherubi-1,2",
+      "Hippopotas-1",
+      "Sandshrew-1,2",
+      "Chimecho-2",
+      "Finneon-1",
+      "Turtwig-1",
+      "Squirtle-2",
+      "Magnemite-1"
+    ],
+    "regular-singles-2": [
+      "Butterfree-1",
+      "Beautifly-1",
+      "Magby-1"
+    ],
+    "regular-doubles-1": [
+      "Starly-1",
+      "Corphish-1,2",
+      "Lombre-1",
+      "Spoink-1",
+      "Riolu-1,2",
+      "Bulbasaur-2",
+      "Natu-1",
+      "Hippopotas-1",
+      "Chimecho-1",
+      "Shedinja-2",
+      "Farfetch'd-1",
+      "Eevee-1"
+    ],
+    "regular-doubles-2": [
+      "Nidorino-1",
+      "Mantyke-1",
+      "Azumarill-1",
+      "Delibird-1"
+    ]
+  },
+  "Glorya": {
+    "regular-singles-1": [
+      "Pikachu-1,2",
+      "Carvanha-1,2",
+      "Slowpoke-1",
+      "Corphish-1,2",
+      "Shuppet-1,2",
+      "Koffing-1",
+      "Bidoof-1",
+      "Treecko-2",
+      "Nuzleaf-1"
+    ],
+    "regular-singles-2": [
+      "Pachirisu-1",
+      "Elekid-1",
+      "Machoke-1"
+    ],
+    "regular-doubles-1": [
+      "Machop-?",
+      "Torchic-2",
+      "Finneon-1",
+      "Buizel-1",
+      "Torchic-1",
+      "Smoochum-1",
+      "Cranidos-1",
+      "Psyduck-1",
+      "Baltoy-1",
+      "Croagunk-1,2",
+      "Slowpoke-1"
+    ],
+    "regular-doubles-2": [
+      "Parasect-1",
+      "Pikachu-1,2",
+      "Graveler-1",
+      "Beautifly-1"
+    ]
+  },
+  "Toni": {
+    "regular-singles-1": [
+      "Treecko-1",
+      "Machop-?",
+      "Buizel-1",
+      "Chimchar-1",
+      "Bonsly-1,2",
+      "Delibird-1",
+      "Squirtle-1",
+      "Gible-1,2"
+    ],
+    "regular-singles-2": [
+      "Flaaffy-1",
+      "Magby-1",
+      "Loudred-1"
+    ],
+    "regular-doubles-1": [
+      "Doduo-1",
+      "Dratini-1,2",
+      "Drowzee-1",
+      "Vibrava-1",
+      "Sandshrew-1,2",
+      "Chikorita-2",
+      "Phanpy-1",
+      "Geodude-1,2",
+      "Totodile-2",
+      "Skorupi-1",
+      "Houndour-1"
+    ],
+    "regular-doubles-2": [
+      "Squirtle-1",
+      "Swablu-1,2",
+      "Drowzee-1",
+      "Lombre-1"
+    ]
+  },
+  "Cecilia": {
+    "regular-singles-1": [
+      "Remoraid-1",
+      "Dratini-1,2",
+      "Oddish-1",
+      "Carvanha-1,2",
+      "Venonat-1,2",
+      "Mantyke-1",
+      "Swablu-1,2",
+      "Baltoy-1",
+      "Eevee-1"
+    ],
+    "regular-singles-2": [
+      "Volbeat-1",
+      "Kadabra-1",
+      "Murkrow-1"
+    ],
+    "regular-doubles-1": [
+      "Carvanha-1,2",
+      "Cherubi-1,2",
+      "Snover-1",
+      "Shieldon-1",
+      "Corphish-1,2",
+      "Bagon-1,2",
+      "Mime Jr.-1",
+      "Mantyke-1",
+      "Turtwig-1",
+      "Larvitar-1",
+      "Hippopotas-1",
+      "Stunky-1"
+    ],
+    "regular-doubles-2": [
+      "Wobbuffet-1",
+      "Spinda-1",
+      "Onix-1",
+      "Weepinbell-1"
+    ]
+  },
+  "Floyd": {
+    "regular-singles-5": [
+      "Empoleon-1",
+      "Banette-1",
+      "Camerupt-1",
+      "Marowak-1",
+      "Swampert-?",
+      "Skarmory-1"
+    ],
+    "regular-singles-6": [
+      "Gengar-1",
+      "Nidoqueen-1",
+      "Steelix-1"
+    ],
+    "regular-doubles-5": [
+      "Venomoth-1",
+      "Staraptor-1",
+      "Skarmory-1",
+      "Swalot-1",
+      "Medicham-1",
+      "Absol-1",
+      "Vileplume-1",
+      "Vespiquen-1"
+    ],
+    "regular-doubles-6": [
+      "Absol-1",
+      "Gardevoir-1",
+      "Tentacruel-1",
+      "Typhlosion-1"
+    ]
+  },
+  "Allyson": {
+    "regular-singles-5": [
+      "Zangoose-1",
+      "Dewgong-1",
+      "Whiscash-1",
+      "Medicham-1",
+      "Raichu-1"
+    ],
+    "regular-singles-6": [
+      "Typhlosion-1",
+      "Poliwrath-1",
+      "Heracross-1"
+    ],
+    "regular-doubles-5": [
+      "Whiscash-1",
+      "Golbat-1",
+      "Swampert-?",
+      "Lanturn-1",
+      "Noctowl-1",
+      "Shiftry-1",
+      "Golem-1",
+      "Camerupt-1"
+    ],
+    "regular-doubles-6": [
+      "Starmie-1",
+      "Golduck-1",
+      "Nidoking-1",
+      "Slowking-1"
+    ]
+  },
+  "Ciara": {
+    "regular-singles-5": [
+      "Mr. Mime-1",
+      "Octillery-1",
+      "Swalot-1",
+      "Dugtrio-1",
+      "Purugly-1",
+      "Kingler-1"
+    ],
+    "regular-singles-6": [
+      "Ampharos-1",
+      "Miltank-1",
+      "Houndoom-1"
+    ],
+    "regular-doubles-5": [
+      "Hypno-1",
+      "Magmar-1",
+      "Infernape-1",
+      "Clefable-1",
+      "Omastar-1",
+      "Quagsire-1",
+      "Jynx-1",
+      "Ninjask-1"
+    ],
+    "regular-doubles-6": [
+      "Rapidash-1",
+      "Gastrodon-1",
+      "Houndoom-1",
+      "Alakazam-1"
+    ]
+  },
+  "Vance": {
+    "regular-singles-5": [
+      "Skarmory-1",
+      "Vileplume-1",
+      "Victreebel-1",
+      "Carnivine-1",
+      "Blaziken-1",
+      "Shiftry-1"
+    ],
+    "regular-singles-6": [
+      "Ninetales-1",
+      "Weezing-1",
+      "Granbull-1"
+    ],
+    "regular-doubles-5": [
+      "Slowbro-1",
+      "Jumpluff-1",
+      "Dewgong-1",
+      "Lanturn-1",
+      "Skuntank-1",
+      "Sceptile-1",
+      "Empoleon-1"
+    ],
+    "regular-doubles-6": [
+      "Shuckle-1",
+      "Swampert-?",
+      "Golduck-1",
+      "Toxicroak-1"
+    ]
+  },
+  "Milton": {
+    "regular-singles-1": [
+      "Totodile-1",
+      "Kricketot-1,2",
+      "Phanpy-1",
+      "Chimecho-1",
+      "Corphish-1,2",
+      "Farfetch'd-1",
+      "Snubbull-1,2",
+      "Cyndaquil-2",
+      "Tentacool-1"
+    ],
+    "regular-singles-2": [
+      "Luxio-1",
+      "Graveler-1",
+      "Porygon-1"
+    ],
+    "regular-doubles-1": [
+      "Squirtle-1",
+      "Cyndaquil-2",
+      "Stunky-1",
+      "Krabby-1",
+      "Happiny-1,2",
+      "Snubbull-1,2",
+      "Cacnea-1",
+      "Shieldon-1",
+      "Bonsly-1,2",
+      "Glameow-1,2",
+      "Tentacool-1",
+      "Lombre-1"
+    ],
+    "regular-doubles-2": [
+      "Torchic-1",
+      "Burmy-1,2",
+      "Finneon-1",
+      "Phanpy-1"
+    ]
+  },
+  "Cortez": {
+    "regular-singles-1": [
+      "Doduo-1",
+      "Chimchar-2",
+      "Clamperl-1",
+      "Carvanha-1,2",
+      "Larvitar-1",
+      "Chinchou-1",
+      "Bagon-1,2",
+      "Remoraid-1",
+      "Skiploom-1"
+    ],
+    "regular-singles-2": [
+      "Vulpix-1,2",
+      "Lickitung-1",
+      "Plusle-1"
+    ],
+    "regular-doubles-1": [
+      "Torchic-1",
+      "Remoraid-1",
+      "Cranidos-1",
+      "Delibird-1",
+      "Shinx-1",
+      "Mudkip-?",
+      "Nuzleaf-1",
+      "Voltorb-1",
+      "Bronzor-1,2",
+      "Bulbasaur-2",
+      "Koffing-1",
+      "Hippopotas-1"
+    ],
+    "regular-doubles-2": [
+      "Anorith-1",
+      "Flaaffy-1",
+      "Ledian-1",
+      "Illumise-1"
+    ]
+  },
+  "Jaden": {
+    "regular-singles-1": [
+      "Doduo-1",
+      "Budew-1,2",
+      "Voltorb-1",
+      "Cherubi-1,2",
+      "Squirtle-2",
+      "Cranidos-1"
+    ],
+    "regular-singles-2": [
+      "Nidorina-1",
+      "Gloom-1",
+      "Azumarill-1"
+    ],
+    "regular-doubles-1": [
+      "Burmy-1,2",
+      "Venonat-1,2",
+      "Snover-1",
+      "Staravia-1",
+      "Cyndaquil-1",
+      "Remoraid-1",
+      "Teddiursa-1",
+      "Pidgeotto-1"
+    ],
+    "regular-doubles-2": [
+      "Farfetch'd-1",
+      "Machoke-1",
+      "Ariados-1",
+      "Skiploom-1"
+    ]
+  },
+  "Quinten": {
+    "regular-singles-5": [
+      "Typhlosion-1",
+      "Victreebel-1",
+      "Absol-1",
+      "Glalie-1",
+      "Raichu-1",
+      "Breloom-1"
+    ],
+    "regular-singles-6": [
+      "Shuckle-1",
+      "Claydol-1",
+      "Donphan-1"
+    ],
+    "regular-doubles-5": [
+      "Hitmonlee-1",
+      "Victreebel-1",
+      "Kangaskhan-1",
+      "Omastar-1"
+    ],
+    "regular-doubles-6": [
+      "Bronzong-1",
+      "Vespiquen-1",
+      "Toxicroak-1",
+      "Electrode-1"
+    ]
+  },
+  "Elmer": {
+    "regular-singles-5": [
+      "Breloom-1",
+      "Whiscash-1",
+      "Marowak-1",
+      "Froslass-1",
+      "Typhlosion-1",
+      "Kangaskhan-1"
+    ],
+    "regular-singles-6": [
+      "Drifblim-1",
+      "Shuckle-1",
+      "Exeggutor-1"
+    ],
+    "regular-doubles-5": [
+      "Manectric-1",
+      "Golem-1",
+      "Feraligatr-1",
+      "Granbull-1",
+      "Raichu-1",
+      "Swalot-1",
+      "Ludicolo-1",
+      "Jynx-1"
+    ],
+    "regular-doubles-6": [
+      "Hariyama-1",
+      "Scizor-1",
+      "Cradily-1",
+      "Feraligatr-1"
+    ]
+  },
+  "Camille": {
+    "regular-singles-1": [
+      "Torchic-1",
+      "Happiny-1,2",
+      "Magnemite-1",
+      "Turtwig-1",
+      "Dratini-1,2",
+      "Drowzee-1",
+      "Cyndaquil-1",
+      "Carvanha-1,2",
+      "Mime Jr.-1"
+    ],
+    "regular-singles-2": [
+      "Machoke-1",
+      "Sableye-1",
+      "Togetic-1"
+    ],
+    "regular-doubles-1": [
+      "Duskull-1,2",
+      "Glameow-1,2",
+      "Snover-1",
+      "Drowzee-1",
+      "Charmander-1",
+      "Shinx-2",
+      "Skiploom-1",
+      "Delibird-1"
+    ],
+    "regular-doubles-2": [
+      "Onix-1",
+      "Koffing-1",
+      "Roselia-1",
+      "Exeggcute-1"
+    ]
+  },
+  "Tiana": {
+    "regular-singles-1": [
+      "Shuppet-1,2",
+      "Torchic-2",
+      "Skiploom-1",
+      "Snorunt-1,2",
+      "Swablu-1,2",
+      "Houndour-1",
+      "Shedinja-1",
+      "Piplup-2",
+      "Oddish-1"
+    ],
+    "regular-singles-2": [
+      "Spinda-1",
+      "Glameow-1,2",
+      "Grimer-1"
+    ],
+    "regular-doubles-1": [
+      "Baltoy-1",
+      "Happiny-1,2",
+      "Hippopotas-1",
+      "Drifloon-1",
+      "Glameow-1,2",
+      "Bagon-1,2",
+      "Mantyke-1",
+      "Houndour-1",
+      "Geodude-1,2",
+      "Corphish-1,2",
+      "Cranidos-1"
+    ],
+    "regular-doubles-2": [
+      "Luxio-1",
+      "Mudkip-?",
+      "Ariados-1",
+      "Aipom-1"
+    ]
+  },
+  "Marina": {
+    "regular-singles-1": [
+      "Totodile-1",
+      "Gible-1,2",
+      "Buneary-1",
+      "Bronzor-1,2",
+      "Exeggcute-1",
+      "Bulbasaur-1",
+      "Venonat-1,2",
+      "Staravia-1"
+    ],
+    "regular-singles-2": [
+      "Dustox-1",
+      "Volbeat-1",
+      "Machoke-1"
+    ],
+    "regular-doubles-1": [
+      "Larvitar-1",
+      "Numel-1,2",
+      "Cranidos-1",
+      "Magnemite-1",
+      "Vulpix-1,2",
+      "Budew-1,2",
+      "Buizel-1",
+      "Clamperl-1",
+      "Bronzor-1,2",
+      "Exeggcute-1",
+      "Skorupi-1"
+    ],
+    "regular-doubles-2": [
+      "Omanyte-1",
+      "Kricketot-1,2",
+      "Nidorina-1",
+      "Togetic-1"
+    ]
+  },
+  "Kali": {
+    "regular-singles-5": [
+      "Magneton-1",
+      "Feraligatr-1",
+      "Hariyama-1",
+      "Medicham-1",
+      "Golem-1",
+      "Meganium-1"
+    ],
+    "regular-singles-6": [
+      "Bronzong-1",
+      "Dewgong-1",
+      "Empoleon-1"
+    ],
+    "regular-doubles-5": [
+      "Electrode-1",
+      "Breloom-1",
+      "Typhlosion-1",
+      "Hypno-1"
+    ],
+    "regular-doubles-6": [
+      "Rhydon-1",
+      "Gliscor-1",
+      "Politoed-1",
+      "Typhlosion-1"
+    ]
+  },
+  "Christy": {
+    "regular-singles-5": [
+      "Electabuzz-1",
+      "Rhydon-1",
+      "Glalie-1"
+    ],
+    "regular-singles-6": [
+      "Steelix-1",
+      "Donphan-1",
+      "Bastiodon-1"
+    ],
+    "regular-doubles-5": [
+      "Quagsire-1",
+      "Manectric-1",
+      "Vespiquen-1",
+      "Breloom-1",
+      "Empoleon-1",
+      "Seviper-1",
+      "Blaziken-1",
+      "Hypno-1"
+    ],
+    "regular-doubles-6": [
+      "Roserade-1",
+      "Marowak-1",
+      "Slowking-1",
+      "Yanmega-1"
+    ]
+  },
+  "Nestor": {
+    "regular-singles-1": [
+      "Croagunk-1,2",
+      "Chikorita-2",
+      "Luvdisc-1",
+      "Venonat-1,2",
+      "Smoochum-1",
+      "Phanpy-1",
+      "Treecko-1",
+      "Sandshrew-1,2",
+      "Slowpoke-1",
+      "Pikachu-1,2",
+      "Chimchar-2",
+      "Chinchou-1",
+      "Houndour-1",
+      "Shuppet-1,2",
+      "Treecko-2"
+    ],
+    "regular-singles-2": [
+      "Larvitar-1",
+      "Illumise-1",
+      "Lileep-1"
+    ]
+  },
+  "Houston": {
+    "regular-singles-1": [
+      "Dratini-1,2",
+      "Turtwig-2",
+      "Staryu-1",
+      "Smoochum-1",
+      "Bagon-1,2",
+      "Koffing-1",
+      "Machop-?",
+      "Piplup-2",
+      "Eevee-1",
+      "Shuppet-1,2",
+      "Riolu-1,2",
+      "Snover-1",
+      "Lombre-1",
+      "Croagunk-1,2",
+      "Doduo-1",
+      "Voltorb-1",
+      "Seel-1",
+      "Combee-1,2",
+      "Swablu-1,2",
+      "Buneary-1",
+      "Skiploom-1"
+    ],
+    "regular-singles-2": [
+      "Wobbuffet-1",
+      "Delcatty-1",
+      "Mawile-1"
+    ]
+  },
+  "Clark": {
+    "regular-singles-1": [
+      "Vulpix-1,2",
+      "Snubbull-1,2",
+      "Skorupi-1",
+      "Kricketot-1,2",
+      "Pikachu-1,2",
+      "Spoink-1",
+      "Shuppet-1,2",
+      "Duskull-1,2",
+      "Growlithe-1",
+      "Grimer-1",
+      "Combee-1,2",
+      "Chimecho-2",
+      "Aron-1",
+      "Phanpy-1",
+      "Cyndaquil-1",
+      "Starly-2",
+      "Vibrava-1",
+      "Clamperl-1"
+    ],
+    "regular-singles-2": [
+      "Sableye-1",
+      "Lickitung-1",
+      "Ledian-1"
+    ]
+  },
+  "Leland": {
+    "regular-singles-6": [
+      "Weavile-1",
+      "Machamp-1",
+      "Porygon2-1",
+      "Golem-1",
+      "Exeggutor-1",
+      "Muk-1"
+    ]
+  },
+  "Justyn": {
+    "regular-singles-6": [
+      "Gengar-1",
+      "Rapidash-1",
+      "Porygon2-1"
+    ]
+  },
+  "Esther": {
+    "regular-singles-1": [
+      "Pikachu-1,2",
+      "Sandshrew-1,2",
+      "Mime Jr.-1",
+      "Squirtle-1",
+      "Charmander-2",
+      "Stunky-1",
+      "Glameow-1,2",
+      "Snorunt-1,2",
+      "Magnemite-1"
+    ],
+    "regular-singles-2": [
+      "Delcatty-1",
+      "Croagunk-1,2",
+      "Phanpy-1"
+    ],
+    "regular-doubles-1": [
+      "Remoraid-1",
+      "Vulpix-1,2",
+      "Staryu-1",
+      "Tentacool-1",
+      "Chikorita-1",
+      "Squirtle-2",
+      "Rhyhorn-1",
+      "Pikachu-1,2",
+      "Cherubi-1,2",
+      "Voltorb-1",
+      "Vibrava-1"
+    ],
+    "regular-doubles-2": [
+      "Sableye-1",
+      "Venonat-1,2",
+      "Roselia-1",
+      "Magby-1"
+    ]
+  },
+  "Nichole": {
+    "regular-singles-1": [
+      "Budew-1,2",
+      "Bidoof-2",
+      "Growlithe-1",
+      "Cherubi-1,2",
+      "Snubbull-1,2",
+      "Spoink-1",
+      "Doduo-1",
+      "Slowpoke-1"
+    ],
+    "regular-singles-2": [
+      "Poliwhirl-1",
+      "Magby-1",
+      "Anorith-1"
+    ],
+    "regular-doubles-1": [
+      "Happiny-1,2",
+      "Croagunk-1,2",
+      "Oddish-1",
+      "Lombre-1",
+      "Riolu-1,2",
+      "Larvitar-1",
+      "Eevee-1",
+      "Cranidos-1",
+      "Bidoof-1",
+      "Venonat-1,2",
+      "Drifloon-1",
+      "Clamperl-1"
+    ],
+    "regular-doubles-2": [
+      "Cubone-1",
+      "Yanma-1",
+      "Volbeat-1",
+      "Luvdisc-1"
+    ]
+  },
+  "Martha": {
+    "regular-singles-1": [
+      "Gible-1,2",
+      "Glameow-1,2",
+      "Oddish-1",
+      "Riolu-1,2",
+      "Budew-1,2",
+      "Delibird-1",
+      "Smoochum-1",
+      "Torchic-2",
+      "Stunky-1"
+    ],
+    "regular-singles-2": [
+      "Togetic-1",
+      "Poliwhirl-1",
+      "Beedrill-1"
+    ],
+    "regular-doubles-1": [
+      "Croagunk-1,2",
+      "Remoraid-1",
+      "Clefairy-1",
+      "Koffing-1",
+      "Totodile-1",
+      "Bagon-1,2",
+      "Cranidos-1",
+      "Bonsly-1,2"
+    ],
+    "regular-doubles-2": [
+      "Dustox-1",
+      "Volbeat-1",
+      "Slowpoke-1",
+      "Kadabra-1"
+    ]
+  },
+  "Serena": {
+    "regular-singles-6": [
+      "Nidoqueen-1",
+      "Gliscor-1",
+      "Bastiodon-1",
+      "Ursaring-1",
+      "Feraligatr-1",
+      "Whiscash-1"
+    ],
+    "regular-singles-7": [
+      "Dugtrio-2",
+      "Crobat-1",
+      "Snorlax-1"
+    ],
+    "regular-doubles-6": [
+      "Toxicroak-1",
+      "Houndoom-1",
+      "Porygon2-1",
+      "Wailord-?",
+      "Luxray-1",
+      "Pinsir-1",
+      "Exeggutor-1",
+      "Rampardos-1"
+    ],
+    "regular-doubles-7": [
+      "Charizard-2",
+      "Rampardos-1",
+      "Empoleon-2",
+      "Gallade-1"
+    ]
+  },
+  "Kyra": {
+    "regular-singles-6": [
+      "Torterra-1",
+      "Alakazam-1",
+      "Miltank-1",
+      "Drifblim-1",
+      "Claydol-1"
+    ],
+    "regular-singles-7": [
+      "Typhlosion-2",
+      "Rhyperior-1 (Palmer Classic)",
+      "Electivire-1"
+    ],
+    "regular-doubles-6": [
+      "Muk-1",
+      "Gastrodon-1",
+      "Alakazam-1",
+      "Gallade-1"
+    ],
+    "regular-doubles-7": [
+      "Feraligatr-2",
+      "Flygon-1",
+      "Magmortar-1",
+      "Empoleon-2"
+    ]
+  },
+  "Vernon": {
+    "regular-singles-1": [
+      "Baltoy-1",
+      "Kricketot-1,2",
+      "Slowpoke-1",
+      "Bidoof-1",
+      "Snorunt-1,2",
+      "Exeggcute-1"
+    ],
+    "regular-singles-2": [
+      "Loudred-1",
+      "Larvitar-1",
+      "Eevee-1"
+    ],
+    "regular-doubles-1": [
+      "Bonsly-1,2",
+      "Shedinja-2",
+      "Finneon-1",
+      "Shellos-1",
+      "Remoraid-1",
+      "Treecko-2",
+      "Phanpy-1",
+      "Rhyhorn-1",
+      "Piplup-1",
+      "Bidoof-2",
+      "Psyduck-1",
+      "Voltorb-1"
+    ],
+    "regular-doubles-2": [
+      "Porygon-1",
+      "Elekid-1",
+      "Loudred-1",
+      "Togetic-1"
+    ]
+  },
+  "Clifton": {
+    "regular-singles-1": [
+      "Numel-1,2",
+      "Croagunk-1,2",
+      "Mantyke-1",
+      "Bronzor-1,2",
+      "Bulbasaur-2",
+      "Shieldon-1"
+    ],
+    "regular-singles-2": [
+      "Azumarill-1",
+      "Nidorino-1",
+      "Lileep-1"
+    ],
+    "regular-doubles-1": [
+      "Glameow-1,2",
+      "Chikorita-2",
+      "Oddish-1",
+      "Farfetch'd-1",
+      "Venonat-1,2",
+      "Smoochum-1",
+      "Cubone-1",
+      "Tentacool-1",
+      "Snorunt-1,2",
+      "Shuppet-1,2",
+      "Slowpoke-1",
+      "Mime Jr.-1"
+    ],
+    "regular-doubles-2": [
+      "Growlithe-1",
+      "Machoke-1",
+      "Wobbuffet-1",
+      "Cubone-1"
+    ]
+  },
+  "Rick": {
+    "regular-singles-1": [
+      "Swablu-1,2",
+      "Mudkip-?",
+      "Drifloon-1",
+      "Bidoof-1",
+      "Bagon-1,2",
+      "Hippopotas-1",
+      "Piplup-1",
+      "Larvitar-1",
+      "Pidgeotto-1"
+    ],
+    "regular-singles-2": [
+      "Minun-1",
+      "Starly-2",
+      "Rhyhorn-1"
+    ],
+    "regular-doubles-1": [
+      "Bagon-1,2",
+      "Happiny-1,2",
+      "Lombre-1",
+      "Seel-1",
+      "Chimchar-1",
+      "Gible-1,2",
+      "Shieldon-1",
+      "Natu-1"
+    ],
+    "regular-doubles-2": [
+      "Gloom-1",
+      "Nosepass-1",
+      "Beedrill-1",
+      "Yanma-1"
+    ]
+  },
+  "Ellen": {
+    "regular-singles-1": [
+      "Snubbull-1,2",
+      "Happiny-1,2",
+      "Seel-1",
+      "Cyndaquil-1",
+      "Charmander-2",
+      "Pidgeotto-1",
+      "Numel-1,2",
+      "Riolu-1,2",
+      "Aron-1"
+    ],
+    "regular-singles-2": [
+      "Machoke-1",
+      "Wobbuffet-1",
+      "Haunter-1"
+    ],
+    "regular-doubles-1": [
+      "Cherubi-1,2",
+      "Charmander-2",
+      "Shellos-1",
+      "Magnemite-1",
+      "Bronzor-1,2",
+      "Sandshrew-1,2",
+      "Luvdisc-1",
+      "Chinchou-1",
+      "Squirtle-1",
+      "Burmy-1,2",
+      "Houndour-1",
+      "Snover-1"
+    ],
+    "regular-doubles-2": [
+      "Skiploom-1",
+      "Plusle-1",
+      "Illumise-1",
+      "Buneary-1"
+    ]
+  },
+  "Aimee": {
+    "regular-singles-1": [
+      "Numel-1,2",
+      "Shuppet-1,2",
+      "Cacnea-1",
+      "Baltoy-1",
+      "Shedinja-2",
+      "Voltorb-1",
+      "Kricketot-1,2"
+    ],
+    "regular-singles-2": [
+      "Onix-1",
+      "Minun-1",
+      "Haunter-1"
+    ],
+    "regular-doubles-1": [
+      "Swablu-1,2",
+      "Squirtle-2",
+      "Psyduck-1",
+      "Snover-1",
+      "Piplup-1",
+      "Chimecho-2",
+      "Voltorb-1",
+      "Slowpoke-1",
+      "Sandshrew-1,2",
+      "Burmy-1,2",
+      "Clamperl-1",
+      "Staravia-1"
+    ],
+    "regular-doubles-2": [
+      "Glameow-1,2",
+      "Corphish-1,2",
+      "Chinchou-1",
+      "Tentacool-1"
+    ]
+  },
+  "Tyra": {
+    "regular-singles-1": [
+      "Riolu-1,2",
+      "Mudkip-?",
+      "Cranidos-1",
+      "Carvanha-1,2",
+      "Geodude-1,2",
+      "Shellos-1"
+    ],
+    "regular-singles-2": [
+      "Smoochum-1",
+      "Minun-1",
+      "Anorith-1"
+    ],
+    "regular-doubles-1": [
+      "Burmy-1,2",
+      "Mudkip-?",
+      "Exeggcute-1",
+      "Mime Jr.-1",
+      "Shedinja-1",
+      "Snorunt-1,2",
+      "Luvdisc-1",
+      "Koffing-1",
+      "Corphish-1,2",
+      "Machop-?",
+      "Pidgeotto-1",
+      "Oddish-1"
+    ],
+    "regular-doubles-2": [
+      "Pachirisu-1",
+      "Mime Jr.-1",
+      "Nidorino-1",
+      "Farfetch'd-1"
+    ]
+  },
+  "Arnold": {
+    "regular-singles-1": [
+      "Remoraid-1",
+      "Burmy-1,2",
+      "Drowzee-1",
+      "Duskull-1,2",
+      "Riolu-1,2",
+      "Psyduck-1"
+    ],
+    "regular-singles-2": [
+      "Kabuto-1",
+      "Volbeat-1",
+      "Kadabra-1"
+    ],
+    "regular-doubles-1": [
+      "Charmander-1",
+      "Turtwig-2",
+      "Nuzleaf-1",
+      "Growlithe-1",
+      "Snubbull-1,2",
+      "Chimecho-2",
+      "Clamperl-1",
+      "Spoink-1",
+      "Gible-1,2",
+      "Chikorita-2",
+      "Seel-1"
+    ],
+    "regular-doubles-2": [
+      "Sableye-1",
+      "Grimer-1",
+      "Murkrow-1",
+      "Snover-1"
+    ]
+  },
+  "Marcel": {
+    "regular-singles-1": [
+      "Kricketot-1,2",
+      "Treecko-2",
+      "Rhyhorn-1",
+      "Sandshrew-1,2",
+      "Bronzor-1,2",
+      "Natu-1",
+      "Duskull-1,2",
+      "Corphish-1,2",
+      "Krabby-1"
+    ],
+    "regular-singles-2": [
+      "Luxio-1",
+      "Volbeat-1",
+      "Kabuto-1"
+    ],
+    "regular-doubles-1": [
+      "Happiny-1,2",
+      "Chimecho-2",
+      "Spoink-1",
+      "Voltorb-1",
+      "Machop-?",
+      "Starly-2",
+      "Pidgeotto-1",
+      "Gible-1,2",
+      "Duskull-1,2",
+      "Chinchou-1",
+      "Krabby-1"
+    ],
+    "regular-doubles-2": [
+      "Bulbasaur-1",
+      "Carvanha-1,2",
+      "Clamperl-1",
+      "Drowzee-1"
+    ]
+  },
+  "Irvin": {
+    "regular-singles-1": [
+      "Bulbasaur-1",
+      "Croagunk-1,2",
+      "Drifloon-1",
+      "Starly-1",
+      "Machop-?",
+      "Pidgeotto-1",
+      "Geodude-1,2",
+      "Doduo-1",
+      "Grimer-1"
+    ],
+    "regular-singles-2": [
+      "Azumarill-1",
+      "Yanma-1",
+      "Sableye-1"
+    ],
+    "regular-doubles-1": [
+      "Charmander-1",
+      "Larvitar-1",
+      "Houndour-1",
+      "Stunky-1",
+      "Totodile-1",
+      "Venonat-1,2",
+      "Grimer-1",
+      "Farfetch'd-1",
+      "Sandshrew-1,2",
+      "Happiny-1,2",
+      "Nuzleaf-1",
+      "Chinchou-1"
+    ],
+    "regular-doubles-2": [
+      "Aipom-1",
+      "Haunter-1",
+      "Kadabra-1",
+      "Luxio-1"
+    ]
+  },
+  "Herbert": {
+    "regular-singles-3": [
+      "Quilava-1",
+      "Monferno-1",
+      "Gabite-1",
+      "Bibarel-1",
+      "Graveler-1",
+      "Tangela-1"
+    ],
+    "regular-singles-4": [
+      "Clefable-1",
+      "Hitmonlee-1",
+      "Gorebyss-1",
+      "Bellossom-1",
+      "Banette-1",
+      "Ninjask-1",
+      "Grumpig-1",
+      "Zangoose-1",
+      "Tropius-1"
+    ],
+    "regular-doubles-3": [
+      "Arbok-1",
+      "Sneasel-1",
+      "Seadra-1",
+      "Croconaw-1",
+      "Anorith-1",
+      "Shelgon-1",
+      "Murkrow-1"
+    ],
+    "regular-doubles-4": [
+      "Sandslash-1",
+      "Arbok-1",
+      "Seviper-1",
+      "Fearow-1"
+    ]
+  },
+  "Jimmie": {
+    "regular-singles-3": [
+      "Tangela-1",
+      "Dragonair-1",
+      "Misdreavus-1",
+      "Charmeleon-1",
+      "Mightyena-1",
+      "Swellow-1"
+    ],
+    "regular-singles-4": [
+      "Fearow-1",
+      "Kabutops-1",
+      "Primeape-1",
+      "Metang-1",
+      "Pidgeot-1"
+    ],
+    "regular-doubles-3": [
+      "Gabite-1",
+      "Pachirisu-1",
+      "Kecleon-1",
+      "Azumarill-1",
+      "Onix-1",
+      "Lairon-1",
+      "Dragonair-1",
+      "Kadabra-1"
+    ],
+    "regular-doubles-4": [
+      "Kingler-1",
+      "Masquerain-1",
+      "Grumpig-1",
+      "Dodrio-1"
+    ]
+  },
+  "Markell": {
+    "regular-singles-6": [
+      "Skuntank-1",
+      "Bastiodon-1",
+      "Ursaring-1"
+    ],
+    "regular-singles-7": [
+      "Feraligatr-2",
+      "Tyranitar-1",
+      "Jolteon-1"
+    ],
+    "regular-doubles-6": [
+      "Cradily-1",
+      "Shiftry-1",
+      "Armaldo-1",
+      "Manectric-1"
+    ],
+    "regular-doubles-7": [
+      "Gyarados-1",
+      "Rhydon-?",
+      "Magmortar-1",
+      "Tyranitar-1"
+    ]
+  },
+  "Marquez": {
+    "regular-singles-6": [
+      "Miltank-1",
+      "Politoed-1",
+      "Exeggutor-1",
+      "Luxray-1",
+      "Gliscor-1",
+      "Poliwrath-1"
+    ],
+    "regular-singles-7": [
+      "Snorlax-1",
+      "Espeon-1",
+      "Porygon-Z-1"
+    ],
+    "regular-doubles-6": [
+      "Ampharos-1",
+      "Drapion-1",
+      "Nidoking-1",
+      "Weavile-1"
+    ],
+    "regular-doubles-7": [
+      "Hippowdon-1",
+      "Pinsir-1",
+      "Gyarados-1",
+      "Alakazam-1"
+    ]
+  },
+  "Tayler": {
+    "regular-singles-6": [
+      "Claydol-1",
+      "Ninetales-1",
+      "Gallade-1",
+      "Ampharos-1",
+      "Staraptor-1",
+      "Marowak-1"
+    ],
+    "regular-singles-7": [
+      "Togekiss-1",
+      "Swampert-2",
+      "Blissey-1"
+    ],
+    "regular-doubles-6": [
+      "Miltank-1",
+      "Weezing-1",
+      "Ampharos-1",
+      "Heracross-1",
+      "Houndoom-1",
+      "Infernape-1",
+      "Gardevoir-1"
+    ],
+    "regular-doubles-7": [
+      "Marowak-2",
+      "Charizard-2",
+      "Infernape-2",
+      "Vaporeon-1"
+    ]
+  },
+  "Tory": {
+    "regular-singles-6": [
+      "Altaria-1",
+      "Muk-1",
+      "Floatzel-1",
+      "Gallade-1",
+      "Pinsir-1",
+      "Charizard-1"
+    ],
+    "regular-singles-7": [
+      "Lapras-1",
+      "Charizard-2",
+      "Blissey-1"
+    ],
+    "regular-doubles-6": [
+      "Aerodactyl-1",
+      "Floatzel-1",
+      "Shuckle-1",
+      "Starmie-1",
+      "Poliwrath-1",
+      "Machamp-1",
+      "Donphan-1",
+      "Scizor-1"
+    ],
+    "regular-doubles-7": [
+      "Sceptile-2",
+      "Feraligatr-2",
+      "Blastoise-2",
+      "Rhyperior-1 (Palmer Classic)"
+    ]
+  },
+  "Tyrell": {
+    "master-singles": [
+      "Espeon-2",
+      "Cresselia-3",
+      "Froslass-2",
+      "Bastiodon-2",
+      "Gyarados-2",
+      "Miltank-3",
+      "Mamoswine-3,5",
+      "Miltank-4",
+      "Entei-5",
+      "Scizor-4"
+    ]
+  },
+  "Dalvin": {
+    "master-singles": [
+      "Kangaskhan-3",
+      "Heracross-3",
+      "Gallade-2",
+      "Pinsir-3",
+      "Mr. Mime-2",
+      "Skuntank-2",
+      "Lickilicky-3",
+      "Flygon-3",
+      "Zapdos-8",
+      "Zapdos-1"
+    ]
+  },
+  "Elena": {
+    "regular-singles-1": [
+      "Bonsly-1,2",
+      "Combee-1,2",
+      "Buizel-1",
+      "Mudkip-1",
+      "Cyndaquil-2",
+      "Staravia-1",
+      "Glameow-1,2",
+      "Riolu-1,2",
+      "Staryu-1"
+    ],
+    "regular-singles-2": [
+      "Nosepass-1",
+      "Munchlax-1",
+      "Azumarill-1"
+    ],
+    "regular-doubles-1": [
+      "Bulbasaur-1",
+      "Snubbull-1,2",
+      "Luvdisc-1",
+      "Houndour-1",
+      "Larvitar-1",
+      "Mudkip-?",
+      "Goldeen-1",
+      "Oddish-1",
+      "Shinx-1",
+      "Geodude-1,2",
+      "Pidgeotto-1",
+      "Delibird-1"
+    ],
+    "regular-doubles-2": [
+      "Chimecho-1",
+      "Doduo-1",
+      "Skiploom-1",
+      "Buizel-1"
+    ]
+  },
+  "Viv": {
+    "regular-singles-1": [
+      "Croagunk-1,2",
+      "Larvitar-1",
+      "Delibird-1",
+      "Bagon-1,2",
+      "Snubbull-1,2",
+      "Aron-1",
+      "Machop-?",
+      "Bronzor-1,2",
+      "Houndour-1"
+    ],
+    "regular-singles-2": [
+      "Yanma-1",
+      "Bonsly-1,2",
+      "Skorupi-1"
+    ],
+    "regular-doubles-1": [
+      "Duskull-1,2",
+      "Pikachu-1,2",
+      "Vibrava-1",
+      "Pidgeotto-1",
+      "Swablu-1,2",
+      "Carvanha-1,2",
+      "Nuzleaf-1",
+      "Finneon-1",
+      "Dratini-1,2",
+      "Turtwig-2",
+      "Clamperl-1",
+      "Skiploom-1"
+    ],
+    "regular-doubles-2": [
+      "Togetic-1",
+      "Shieldon-1",
+      "Onix-1",
+      "Kricketune-1"
+    ]
+  },
+  "Selena": {
+    "regular-singles-1": [
+      "Starly-1",
+      "Bagon-1,2",
+      "Staryu-1",
+      "Torchic-1",
+      "Chimecho-2",
+      "Voltorb-1",
+      "Bronzor-1,2",
+      "Totodile-2",
+      "Goldeen-1"
+    ],
+    "regular-singles-2": [
+      "Corphish-1,2",
+      "Kricketune-1",
+      "Haunter-1"
+    ],
+    "regular-doubles-1": [
+      "Carvanha-1,2",
+      "Piplup-2",
+      "Shellos-1",
+      "Aron-1",
+      "Bagon-1,2",
+      "Chimecho-2",
+      "Shieldon-1",
+      "Spoink-1",
+      "Kricketot-1,2",
+      "Bidoof-2",
+      "Koffing-1",
+      "Finneon-1"
+    ],
+    "regular-doubles-2": [
+      "Cherubi-1,2",
+      "Turtwig-2",
+      "Koffing-1",
+      "Farfetch'd-1"
+    ]
+  },
+  "Alana": {
+    "regular-singles-3": [
+      "Croconaw-1",
+      "Onix-1",
+      "Metang-1",
+      "Sudowoodo-1",
+      "Lileep-1",
+      "Mawile-1"
+    ],
+    "regular-singles-4": [
+      "Omastar-1",
+      "Tropius-1",
+      "Rotom-1"
+    ],
+    "regular-doubles-3": [
+      "Omanyte-1",
+      "Grotle-1",
+      "Kecleon-1",
+      "Furret-1",
+      "Swellow-1",
+      "Cherrim-1",
+      "Tangela-1",
+      "Combusken-1"
+    ],
+    "regular-doubles-4": [
+      "Arbok-1",
+      "Omastar-1",
+      "Rotom-1",
+      "Persian-1"
+    ]
+  },
+  "Carla": {
+    "regular-singles-3": [
+      "Grovyle-1",
+      "Kecleon-1",
+      "Castform-1",
+      "Persian-1",
+      "Mightyena-1",
+      "Masquerain-1",
+      "Sudowoodo-1",
+      "Anorith-1",
+      "Volbeat-1"
+    ],
+    "regular-singles-4": [
+      "Gorebyss-1",
+      "Jumpluff-1",
+      "Hitmonlee-1",
+      "Grovyle-1",
+      "Cloyster-1",
+      "Grumpig-1"
+    ],
+    "regular-doubles-3": [
+      "Monferno-1",
+      "Machoke-1",
+      "Grovyle-1",
+      "Beedrill-1",
+      "Bayleef-1",
+      "Arbok-1",
+      "Lunatone-1",
+      "Metang-1"
+    ],
+    "regular-doubles-4": [
+      "Magmar-1",
+      "Lumineon-1",
+      "Magneton-1",
+      "Scyther-1"
+    ]
+  },
+  "Liliana": {
+    "regular-singles-3": [
+      "Grotle-1",
+      "Nosepass-1",
+      "Beedrill-1",
+      "Omanyte-1",
+      "Sneasel-1",
+      "Kecleon-1"
+    ],
+    "regular-singles-4": [
+      "Purugly-1",
+      "Grumpig-1",
+      "Crawdaunt-1",
+      "Pidgeot-1",
+      "Chansey-1",
+      "Electabuzz-1"
+    ],
+    "regular-doubles-3": [
+      "Pachirisu-1",
+      "Qwilfish-1",
+      "Marshtomp-1",
+      "Minun-1",
+      "Pelipper-1",
+      "Furret-1",
+      "Mothim-1",
+      "Shelgon-1"
+    ],
+    "regular-doubles-4": [
+      "Camerupt-1",
+      "Swellow-1",
+      "Noctowl-1",
+      "Monferno-1"
+    ]
+  },
+  "Kyla": {
+    "regular-singles-6": [
+      "Rapidash-1",
+      "Hariyama-1",
+      "Manectric-1",
+      "Armaldo-1",
+      "Gardevoir-1",
+      "Bronzong-1"
+    ],
+    "regular-singles-7": [
+      "Magnezone-1",
+      "Torterra-2",
+      "Gyarados-1"
+    ],
+    "regular-doubles-6": [
+      "Froslass-1",
+      "Politoed-1",
+      "Exeggutor-1",
+      "Dugtrio-1",
+      "Houndoom-1",
+      "Skuntank-1",
+      "Altaria-1",
+      "Ninetales-1"
+    ],
+    "regular-doubles-7": [
+      "Marowak-2",
+      "Probopass-1",
+      "Espeon-1",
+      "Leafeon-1"
+    ]
+  },
+  "Claudia": {
+    "regular-singles-6": [
+      "Slowking-1",
+      "Steelix-1",
+      "Rapidash-1",
+      "Jynx-1",
+      "Poliwrath-1",
+      "Armaldo-1"
+    ],
+    "regular-singles-7": [
+      "Infernape-2",
+      "Dragonite-2",
+      "Blissey-1"
+    ],
+    "regular-doubles-6": [
+      "Poliwrath-1",
+      "Miltank-1",
+      "Floatzel-1",
+      "Lickilicky-1"
+    ],
+    "regular-doubles-7": [
+      "Garchomp-1",
+      "Gardevoir-3",
+      "Marowak-2",
+      "Gyarados-1"
+    ]
+  },
+  "Kari": {
+    "regular-singles-6": [
+      "Luxray-1",
+      "Gardevoir-1",
+      "Tentacruel-1",
+      "Gliscor-1",
+      "Ninetales-1",
+      "Golduck-1"
+    ],
+    "regular-singles-7": [
+      "Garchomp-1",
+      "Togekiss-1",
+      "Starmie-1"
+    ],
+    "regular-doubles-6": [
+      "Drapion-1",
+      "Shiftry-1",
+      "Roserade-1",
+      "Floatzel-1",
+      "Rampardos-1",
+      "Bastiodon-1",
+      "Mismagius-1"
+    ],
+    "regular-doubles-7": [
+      "Jolteon-1",
+      "Marowak-2",
+      "Mamoswine-3,5",
+      "Garchomp-1"
+    ]
+  },
+  "Maranda": {
+    "regular-singles-6": [
+      "Floatzel-1",
+      "Blastoise-1",
+      "Ambipom-1",
+      "Pinsir-1",
+      "Gardevoir-1",
+      "Slowking-1"
+    ],
+    "regular-singles-7": [
+      "Blaziken-2",
+      "Milotic-2",
+      "Mamoswine-3,5"
+    ],
+    "regular-doubles-6": [
+      "Scizor-1",
+      "Froslass-1",
+      "Rapidash-1",
+      "Whiscash-1",
+      "Drapion-1",
+      "Mr. Mime-1",
+      "Nidoking-1",
+      "Shuckle-1"
+    ],
+    "regular-doubles-7": [
+      "Espeon-1",
+      "Abomasnow-6,10 (Candice)",
+      "Aggron-1",
+      "Kingdra-1"
+    ]
+  },
+  "Sidney": {
+    "master-singles": [
+      "Regigigas-3",
+      "Suicune-2",
+      "Articuno-2",
+      "Snorlax-2",
+      "Heatran-1 (Palmer Classic)",
+      "Dragonite-3",
+      "Porygon-Z-3",
+      "Cradily-4",
+      "Garchomp-3,8",
+      "Gengar-3"
+    ]
+  },
+  "Elaine": {
+    "master-singles": [
+      "Flareon-2",
+      "Zapdos-2",
+      "Regigigas-2",
+      "Lopunny-2",
+      "Entei-1",
+      "Abomasnow-3",
+      "Politoed-5",
+      "Ninetales-6",
+      "Infernape-4",
+      "Tyranitar-5"
+    ]
+  },
+  "Yvette": {
+    "master-singles": [
+      "Forretress-3",
+      "Toxicroak-3",
+      "Abomasnow-?",
+      "Gengar-5",
+      "Heracross-4",
+      "Steelix-3",
+      "Ambipom-3",
+      "Latios-5"
+    ]
+  },
+  "Tasha": {
+    "master-singles": [
+      "Golem-2",
+      "Kangaskhan-3",
+      "Breloom-2",
+      "Aerodactyl-3,6,7 (Riley/Marley)",
+      "Regice-5",
+      "Dragonite-4",
+      "Garchomp-3,8",
+      "Salamence-2"
+    ]
+  },
+  "Tate": {
+    "regular-singles-2": [
+      "Roselia-1",
+      "Combee-1,2",
+      "Koffing-1",
+      "Plusle-1",
+      "Porygon-1",
+      "Weepinbell-1"
+    ],
+    "regular-singles-3": [
+      "Linoone-1",
+      "Monferno-1",
+      "Combusken-1"
+    ],
+    "regular-doubles-2": [
+      "Ariados-1",
+      "Weepinbell-1",
+      "Loudred-1",
+      "Pachirisu-1",
+      "Croagunk-1,2",
+      "Chikorita-2",
+      "Luvdisc-1",
+      "Skorupi-1"
+    ],
+    "regular-doubles-3": [
+      "Lairon-1",
+      "Dustox-1",
+      "Dragonair-1",
+      "Chimecho-3"
+    ]
+  },
+  "Brooks": {
+    "regular-singles-2": [
+      "Omanyte-1",
+      "Corsola-1",
+      "Poliwhirl-1",
+      "Aipom-1",
+      "Happiny-1,2",
+      "Buizel-1"
+    ],
+    "regular-singles-3": [
+      "Pachirisu-1",
+      "Tangela-1",
+      "Gligar-1"
+    ],
+    "regular-doubles-2": [
+      "Plusle-1",
+      "Shellos-1",
+      "Ponyta-1",
+      "Staryu-1",
+      "Haunter-1",
+      "Spinda-1",
+      "Growlithe-1",
+      "Mawile-1"
+    ],
+    "regular-doubles-3": [
+      "Haunter-1",
+      "Chatot-1",
+      "Grovyle-1",
+      "Nidorina-1"
+    ]
+  },
+  "Dusty": {
+    "regular-singles-2": [
+      "Porygon-1",
+      "Snubbull-1,2",
+      "Psyduck-1",
+      "Butterfree-1",
+      "Dustox-1",
+      "Nidorino-1"
+    ],
+    "regular-singles-3": [
+      "Linoone-1",
+      "Shelgon-1",
+      "Marshtomp-1"
+    ],
+    "regular-doubles-2": [
+      "Bagon-1,2",
+      "Duskull-1,2",
+      "Voltorb-1",
+      "Natu-1",
+      "Mudkip-1",
+      "Kricketot-1,2",
+      "Eevee-1",
+      "Staravia-1"
+    ],
+    "regular-doubles-3": [
+      "Raticate-1",
+      "Kadabra-1",
+      "Misdreavus-1",
+      "Sealeo-1"
+    ]
+  },
+  "Brandy": {
+    "regular-singles-2": [
+      "Nidorina-1",
+      "Charmander-2",
+      "Cubone-1",
+      "Aipom-1",
+      "Ariados-1"
+    ],
+    "regular-singles-3": [
+      "Castform-1",
+      "Chatot-1",
+      "Solrock-1"
+    ],
+    "regular-doubles-2": [
+      "Shinx-1",
+      "Bagon-1,2",
+      "Snover-1",
+      "Krabby-1",
+      "Gible-1,2",
+      "Buneary-1",
+      "Pidgeotto-1"
+    ],
+    "regular-doubles-3": [
+      "Minun-1",
+      "Pupitar-1",
+      "Persian-1",
+      "Beautifly-1"
+    ]
+  },
+  "Marie": {
+    "regular-singles-2": [
+      "Cyndaquil-1",
+      "Luxio-1",
+      "Roselia-1",
+      "Gloom-1",
+      "Corsola-1",
+      "Yanma-1"
+    ],
+    "regular-singles-3": [
+      "Nidorino-1",
+      "Mightyena-1",
+      "Dunsparce-1"
+    ],
+    "regular-doubles-2": [
+      "Snubbull-1,2",
+      "Corphish-1,2",
+      "Teddiursa-1",
+      "Seel-1",
+      "Cherubi-1,2",
+      "Snorunt-1,2",
+      "Shellos-1",
+      "Aron-1"
+    ],
+    "regular-doubles-3": [
+      "Solrock-1",
+      "Seadra-1",
+      "Misdreavus-1",
+      "Swellow-1"
+    ]
+  },
+  "Imani": {
+    "regular-singles-2": [
+      "Beedrill-1",
+      "Beautifly-1",
+      "Ledian-1",
+      "Murkrow-1",
+      "Roselia-1"
+    ],
+    "regular-singles-3": [
+      "Combusken-1",
+      "Misdreavus-1",
+      "Persian-1"
+    ],
+    "regular-doubles-2": [
+      "Phanpy-1",
+      "Flaaffy-1",
+      "Machoke-1",
+      "Exeggcute-1",
+      "Bonsly-1,2",
+      "Glameow-1,2",
+      "Shellos-1",
+      "Staryu-1"
+    ],
+    "regular-doubles-3": [
+      "Mightyena-1",
+      "Dunsparce-1",
+      "Arbok-1",
+      "Chimecho-3"
+    ]
+  },
+  "Ted": {
+    "regular-singles-6": [
+      "Bronzong-1",
+      "Feraligatr-1",
+      "Marowak-1"
+    ],
+    "regular-singles-7": [
+      "Espeon-1",
+      "Gliscor-1",
+      "Nidoking-1"
+    ],
+    "regular-doubles-6": [
+      "Wailord-?",
+      "Rhydon-1",
+      "Abomasnow-1",
+      "Politoed-1"
+    ],
+    "regular-doubles-7": [
+      "Steelix-1",
+      "Dusknoir-1",
+      "Torterra-2",
+      "Roserade-1"
+    ]
+  },
+  "Cecil": {
+    "regular-singles-6": [
+      "Gardevoir-1",
+      "Drapion-1",
+      "Glalie-1"
+    ],
+    "regular-singles-7": [
+      "Miltank-1",
+      "Charizard-2",
+      "Marowak-2"
+    ],
+    "regular-doubles-6": [
+      "Rapidash-1",
+      "Honchkrow-1",
+      "Armaldo-1",
+      "Toxicroak-1"
+    ],
+    "regular-doubles-7": [
+      "Lickilicky-1",
+      "Blaziken-2",
+      "Magmortar-1",
+      "Ninetales-2"
+    ]
+  },
+  "Selina": {
+    "regular-singles-6": [
+      "Rampardos-1",
+      "Poliwrath-1",
+      "Lickilicky-1",
+      "Miltank-1",
+      "Drapion-1",
+      "Machamp-1"
+    ],
+    "regular-singles-7": [
+      "Flareon-1",
+      "Umbreon-1",
+      "Metagross-1"
+    ],
+    "regular-doubles-6": [
+      "Gengar-1",
+      "Bronzong-1",
+      "Altaria-1",
+      "Muk-1",
+      "Mismagius-1",
+      "Abomasnow-1",
+      "Machamp-1",
+      "Nidoqueen-1"
+    ],
+    "regular-doubles-7": [
+      "Charizard-2",
+      "Hippowdon-2",
+      "Lapras-1",
+      "Scizor-1"
+    ]
+  },
+  "Carley": {
+    "regular-singles-7": [
+      "Porygon-Z-1",
+      "Lapras-1",
+      "Togekiss-1",
+      "Electivire-1",
+      "Mamoswine-1",
+      "Magnezone-1"
+    ],
+    "master-singles": [
+      "Zapdos-3",
+      "Mismagius-3",
+      "Steelix-2"
+    ],
+    "regular-doubles-7": [
+      "Charizard-2",
+      "Metagross-1",
+      "Magnezone-1",
+      "Tangrowth-1",
+      "Marowak-2",
+      "Garchomp-1",
+      "Feraligatr-2",
+      "Miltank-1"
+    ]
+  },
+  "Darin": {
+    "regular-singles-2": [
+      "Beautifly-1",
+      "Nidorino-1",
+      "Haunter-1",
+      "Elekid-1",
+      "Glameow-1,2",
+      "Skorupi-1"
+    ],
+    "regular-singles-3": [
+      "Masquerain-1",
+      "Arbok-1",
+      "Magcargo-1"
+    ],
+    "regular-doubles-2": [
+      "Shuppet-1,2",
+      "Baltoy-1",
+      "Pidgeotto-1",
+      "Drifloon-1",
+      "Wailmer-1",
+      "Lickitung-1",
+      "Buneary-1",
+      "Mawile-1"
+    ],
+    "regular-doubles-3": [
+      "Tangela-1",
+      "Wartortle-1",
+      "Raticate-1",
+      "Ivysaur-1"
+    ]
+  },
+  "Duane": {
+    "regular-singles-2": [
+      "Mawile-1",
+      "Nidorino-1",
+      "Plusle-1",
+      "Onix-1",
+      "Machoke-1",
+      "Kricketune-1"
+    ],
+    "regular-singles-3": [
+      "Swellow-1",
+      "Wormadam-1",
+      "Wartortle-1"
+    ],
+    "regular-doubles-2": [
+      "Remoraid-1",
+      "Gible-1,2",
+      "Buizel-1",
+      "Farfetch'd-1",
+      "Weepinbell-1",
+      "Oddish-1",
+      "Omanyte-1",
+      "Magnemite-1"
+    ],
+    "regular-doubles-3": [
+      "Wormadam-1",
+      "Omanyte-1",
+      "Gligar-1",
+      "Spinda-1"
+    ]
+  },
+  "Gerard": {
+    "regular-singles-2": [
+      "Lileep-1",
+      "Anorith-1",
+      "Loudred-1",
+      "Illumise-1",
+      "Ponyta-1",
+      "Beautifly-1"
+    ],
+    "regular-singles-3": [
+      "Linoone-1",
+      "Monferno-1",
+      "Swellow-1"
+    ],
+    "regular-doubles-2": [
+      "Minun-1",
+      "Magnemite-1",
+      "Kabuto-1",
+      "Staryu-1",
+      "Baltoy-1",
+      "Shedinja-2",
+      "Staravia-1",
+      "Cubone-1"
+    ],
+    "regular-doubles-3": [
+      "Mightyena-1",
+      "Misdreavus-1",
+      "Monferno-1",
+      "Gabite-1"
+    ]
+  },
+  "Kelby": {
+    "master-singles": [
+      "Raikou-2",
+      "Latias-2",
+      "Claydol-2",
+      "Raikou-3",
+      "Shiftry-2",
+      "Heatran-1 (Palmer Classic)",
+      "Honchkrow-3",
+      "Claydol-3",
+      "Venusaur-6",
+      "Metagross-3"
+    ]
+  },
+  "Kevon": {
+    "master-singles": [
+      "Manectric-2",
+      "Torterra-3",
+      "Armaldo-3",
+      "Breloom-3",
+      "Arcanine-2",
+      "Golduck-3",
+      "Drifblim-4",
+      "Gliscor-3",
+      "Nidoqueen-4",
+      "Glalie-2"
+    ]
+  },
+  "Carissa": {
+    "regular-singles-2": [
+      "Corsola-1",
+      "Azumarill-1",
+      "Pachirisu-1",
+      "Lickitung-1",
+      "Butterfree-1",
+      "Luxio-1"
+    ],
+    "regular-singles-3": [
+      "Murkrow-1",
+      "Sneasel-1",
+      "Tangela-1"
+    ],
+    "regular-doubles-2": [
+      "Nosepass-1",
+      "Porygon-1",
+      "Shellos-1",
+      "Flaaffy-1",
+      "Bulbasaur-1",
+      "Minun-1",
+      "Exeggcute-1",
+      "Teddiursa-1"
+    ],
+    "regular-doubles-3": [
+      "Graveler-1",
+      "Monferno-1",
+      "Sudowoodo-1",
+      "Illumise-1"
+    ]
+  },
+  "Cassie": {
+    "regular-singles-2": [
+      "Gloom-1",
+      "Geodude-1,2",
+      "Seel-1",
+      "Illumise-1",
+      "Onix-1",
+      "Mawile-1"
+    ],
+    "regular-singles-3": [
+      "Sunflora-1",
+      "Bayleef-1",
+      "Shelgon-1"
+    ],
+    "regular-doubles-2": [
+      "Carvanha-1,2",
+      "Mudkip-?",
+      "Natu-1",
+      "Clamperl-1",
+      "Duskull-1,2",
+      "Bidoof-2",
+      "Growlithe-1",
+      "Snover-1"
+    ],
+    "regular-doubles-3": [
+      "Persian-1",
+      "Charmeleon-1",
+      "Dragonair-1",
+      "Prinplup-1"
+    ]
+  },
+  "Alexia": {
+    "regular-singles-2": [
+      "Doduo-1",
+      "Parasect-1",
+      "Porygon-1",
+      "Gloom-1",
+      "Ariados-1",
+      "Delcatty-1"
+    ],
+    "regular-singles-3": [
+      "Furret-1",
+      "Mawile-1",
+      "Lileep-1"
+    ],
+    "regular-doubles-2": [
+      "Butterfree-1",
+      "Delcatty-1",
+      "Graveler-1",
+      "Corsola-1",
+      "Lickitung-1",
+      "Beedrill-1",
+      "Buizel-1",
+      "Yanma-1"
+    ],
+    "regular-doubles-3": [
+      "Mothim-1",
+      "Solrock-1",
+      "Cherrim-1",
+      "Pupitar-1"
+    ]
+  },
+  "Kaila": {
+    "master-singles": [
+      "Poliwrath-2",
+      "Absol-3",
+      "Hariyama-3",
+      "Staraptor-2",
+      "Heracross-3",
+      "Roserade-2,3",
+      "Blaziken-5",
+      "Rhyperior-5,8 (Buck/Bertha)",
+      "Jolteon-3",
+      "Salamence-4"
+    ]
+  },
+  "Jaime": {
+    "master-singles": [
+      "Scizor-2",
+      "Regigigas-4",
+      "Skarmory-3",
+      "Lickilicky-2",
+      "Salamence-2",
+      "Whiscash-3",
+      "Rhyperior-5,8 (Buck/Bertha)",
+      "Machamp-3",
+      "Starmie-3",
+      "Medicham-3"
+    ]
+  },
+  "Fred": {
+    "regular-singles-2": [
+      "Wailmer-1",
+      "Roselia-1",
+      "Anorith-1",
+      "Beedrill-1",
+      "Haunter-1",
+      "Omanyte-1"
+    ]
+  },
+  "Kenyon": {
+    "regular-singles-2": [
+      "Poliwhirl-1",
+      "Chimchar-2",
+      "Cubone-1",
+      "Larvitar-1",
+      "Aipom-1",
+      "Lileep-1"
+    ]
+  },
+  "Jaleel": {
+    "regular-singles-2": [
+      "Sableye-1",
+      "Kricketune-1",
+      "Munchlax-1",
+      "Luxio-1",
+      "Gible-1,2",
+      "Psyduck-1"
+    ]
+  },
+  "Daulton": {
+    "regular-singles-5": [
+      "Vespiquen-1",
+      "Lanturn-1",
+      "Sceptile-1",
+      "Venusaur-1",
+      "Golbat-1",
+      "Ambipom-1",
+      "Mantine-1"
+    ],
+    "regular-singles-6": [
+      "Skarmory-1",
+      "Drifblim-1",
+      "Honchkrow-1"
+    ]
+  },
+  "Aric": {
+    "regular-singles-5": [
+      "Medicham-1",
+      "Manectric-1",
+      "Ambipom-1",
+      "Dugtrio-1",
+      "Magmar-1",
+      "Feraligatr-1",
+      "Skarmory-1",
+      "Mr. Mime-1",
+      "Torterra-1",
+      "Lopunny-1",
+      "Meganium-1"
+    ],
+    "regular-singles-6": [
+      "Starmie-1",
+      "Honchkrow-1",
+      "Tentacruel-1"
+    ]
+  },
+  "Colt": {
+    "regular-singles-2": [
+      "Venonat-1,2",
+      "Kadabra-1",
+      "Ponyta-1",
+      "Chimecho-1",
+      "Munchlax-1",
+      "Flaaffy-1"
+    ],
+    "regular-singles-3": [
+      "Pelipper-1",
+      "Chimecho-3",
+      "Arbok-1"
+    ],
+    "regular-doubles-2": [
+      "Totodile-1",
+      "Turtwig-2",
+      "Rhyhorn-1",
+      "Luvdisc-1"
+    ],
+    "regular-doubles-3": [
+      "Sneasel-1",
+      "Gloom-1",
+      "Dragonair-1",
+      "Sealeo-1"
+    ]
+  },
+  "Trever": {
+    "regular-singles-2": [
+      "Ledian-1",
+      "Yanma-1",
+      "Weepinbell-1",
+      "Bronzor-1,2",
+      "Poliwhirl-1",
+      "Parasect-1"
+    ],
+    "regular-singles-3": [
+      "Grovyle-1",
+      "Pupitar-1",
+      "Wartortle-1"
+    ],
+    "regular-doubles-2": [
+      "Mudkip-1",
+      "Corsola-1",
+      "Pidgeotto-1",
+      "Grimer-1",
+      "Cherubi-1,2",
+      "Bagon-1,2",
+      "Skorupi-1",
+      "Teddiursa-1"
+    ],
+    "regular-doubles-3": [
+      "Bibarel-1",
+      "Nosepass-1",
+      "Linoone-1",
+      "Roselia-1"
+    ]
+  },
+  "Will": {
+    "regular-singles-2": [
+      "Duskull-1,2",
+      "Magby-1",
+      "Spinda-1",
+      "Wobbuffet-1",
+      "Combee-1,2",
+      "Seel-1"
+    ],
+    "regular-singles-3": [
+      "Grovyle-1",
+      "Wigglytuff-1",
+      "Sudowoodo-1"
+    ],
+    "regular-doubles-2": [
+      "Cherubi-1,2",
+      "Doduo-1",
+      "Psyduck-1",
+      "Chinchou-1",
+      "Stunky-1",
+      "Butterfree-1",
+      "Nidorino-1",
+      "Slowpoke-1"
+    ],
+    "regular-doubles-3": [
+      "Gabite-1",
+      "Raticate-1",
+      "Dunsparce-1",
+      "Sudowoodo-1"
+    ]
+  },
+  "Elisha": {
+    "regular-singles-5": [
+      "Cacturne-?",
+      "Tauros-1",
+      "Shiftry-1"
+    ],
+    "regular-singles-6": [
+      "Rapidash-1",
+      "Exeggutor-1",
+      "Ursaring-1"
+    ],
+    "regular-doubles-5": [
+      "Tauros-1",
+      "Electrode-1",
+      "Infernape-1",
+      "Blaziken-1",
+      "Breloom-1",
+      "Venomoth-1",
+      "Quagsire-1",
+      "Granbull-1"
+    ],
+    "regular-doubles-6": [
+      "Nidoqueen-1",
+      "Cradily-1",
+      "Yanmega-1",
+      "Wailord-?"
+    ]
+  },
+  "Josef": {
+    "regular-singles-5": [
+      "Quagsire-1",
+      "Jynx-1",
+      "Golem-1"
+    ],
+    "regular-singles-6": [
+      "Golem-1",
+      "Wailord-?",
+      "Luxray-1"
+    ],
+    "regular-doubles-5": [
+      "Electabuzz-1",
+      "Venusaur-1",
+      "Forretress-1",
+      "Gorebyss-1"
+    ],
+    "regular-doubles-6": [
+      "Lickilicky-1",
+      "Floatzel-1",
+      "Armaldo-1",
+      "Abomasnow-1"
+    ]
+  },
+  "Lillian": {
+    "regular-singles-2": [
+      "Weepinbell-1",
+      "Loudred-1",
+      "Onix-1",
+      "Haunter-1",
+      "Magby-1",
+      "Pachirisu-1"
+    ],
+    "regular-singles-3": [
+      "Pelipper-1",
+      "Quilava-1",
+      "Sunflora-1"
+    ],
+    "regular-doubles-2": [
+      "Clefairy-1",
+      "Elekid-1",
+      "Haunter-1",
+      "Anorith-1",
+      "Swablu-1,2",
+      "Happiny-1,2",
+      "Mime Jr.-1",
+      "Psyduck-1"
+    ],
+    "regular-doubles-3": [
+      "Yanma-1",
+      "Dragonair-1",
+      "Pelipper-1",
+      "Beautifly-1"
+    ]
+  },
+  "Ruth": {
+    "regular-singles-2": [
+      "Ledian-1",
+      "Baltoy-1",
+      "Houndour-1",
+      "Murkrow-1",
+      "Yanma-1",
+      "Munchlax-1"
+    ],
+    "regular-singles-3": [
+      "Delcatty-1",
+      "Wormadam-1",
+      "Sunflora-1"
+    ],
+    "regular-doubles-2": [
+      "Treecko-1",
+      "Shuppet-1,2",
+      "Buneary-1",
+      "Cranidos-1",
+      "Bronzor-1,2",
+      "Charmander-2",
+      "Grimer-1",
+      "Shieldon-1"
+    ],
+    "regular-doubles-3": [
+      "Furret-1",
+      "Vigoroth-1",
+      "Ivysaur-1",
+      "Mightyena-1"
+    ]
+  },
+  "Janelle": {
+    "regular-singles-2": [
+      "Butterfree-1",
+      "Volbeat-1",
+      "Togetic-1",
+      "Lileep-1",
+      "Kricketune-1",
+      "Kadabra-1"
+    ],
+    "regular-singles-3": [
+      "Cherrim-1",
+      "Dragonair-1",
+      "Pelipper-1"
+    ],
+    "regular-doubles-2": [
+      "Lileep-1",
+      "Machop-?",
+      "Buizel-1",
+      "Nuzleaf-1",
+      "Pachirisu-1",
+      "Plusle-1",
+      "Aron-1",
+      "Minun-1"
+    ],
+    "regular-doubles-3": [
+      "Cherrim-1",
+      "Castform-1",
+      "Monferno-1",
+      "Kecleon-1"
+    ]
+  },
+  "Tracy": {
+    "regular-singles-6": [
+      "Venusaur-1",
+      "Roserade-1",
+      "Tentacruel-1",
+      "Alakazam-1",
+      "Mismagius-1",
+      "Pinsir-1"
+    ],
+    "regular-singles-7": [
+      "Empoleon-2",
+      "Aerodactyl-1",
+      "Gardevoir-1"
+    ],
+    "regular-doubles-6": [
+      "Absol-1",
+      "Tentacruel-1",
+      "Ursaring-1",
+      "Dewgong-1",
+      "Pinsir-1",
+      "Donphan-1",
+      "Golduck-1",
+      "Luxray-1"
+    ],
+    "regular-doubles-7": [
+      "Milotic-2",
+      "Feraligatr-2",
+      "Dragonite-2",
+      "Vaporeon-1"
+    ]
+  },
+  "Juliana": {
+    "regular-singles-6": [
+      "Scizor-1",
+      "Blaziken-1",
+      "Manectric-1",
+      "Rhydon-1",
+      "Nidoking-1",
+      "Machamp-1"
+    ],
+    "regular-singles-7": [
+      "Ampharos-1",
+      "Tyranitar-1",
+      "Typhlosion-2"
+    ],
+    "regular-doubles-6": [
+      "Machamp-1",
+      "Yanmega-1",
+      "Luxray-1",
+      "Honchkrow-1",
+      "Raichu-1",
+      "Abomasnow-1",
+      "Claydol-1",
+      "Shiftry-1"
+    ],
+    "regular-doubles-7": [
+      "Umbreon-1",
+      "Ursaring-1",
+      "Blaziken-2",
+      "Marowak-2"
+    ]
+  },
+  "Bennett": {
+    "regular-singles-2": [
+      "Ariados-1",
+      "Mawile-1",
+      "Nosepass-1",
+      "Omanyte-1",
+      "Shuppet-1,2",
+      "Vibrava-1"
+    ],
+    "regular-singles-3": [
+      "Magcargo-1",
+      "Solrock-1",
+      "Pupitar-1"
+    ],
+    "regular-doubles-2": [
+      "Delcatty-1",
+      "Dustox-1",
+      "Natu-1",
+      "Graveler-1"
+    ],
+    "regular-doubles-3": [
+      "Mightyena-1",
+      "Ivysaur-1",
+      "Cherrim-1",
+      "Wormadam-1"
+    ]
+  },
+  "Braxton": {
+    "regular-singles-2": [
+      "Turtwig-1",
+      "Machoke-1",
+      "Porygon-1",
+      "Riolu-1,2",
+      "Flaaffy-1",
+      "Kabuto-1"
+    ],
+    "regular-singles-3": [
+      "Qwilfish-1",
+      "Togetic-1",
+      "Kadabra-1"
+    ],
+    "regular-doubles-2": [
+      "Poliwhirl-1",
+      "Geodude-1,2",
+      "Ledian-1",
+      "Munchlax-1"
+    ],
+    "regular-doubles-3": [
+      "Ivysaur-1",
+      "Persian-1",
+      "Sudowoodo-1",
+      "Combusken-1"
+    ]
+  },
+  "Bronson": {
+    "regular-singles-6": [
+      "Yanmega-1",
+      "Kangaskhan-1",
+      "Electrode-1",
+      "Wailord-?",
+      "Golduck-1",
+      "Abomasnow-1"
+    ],
+    "regular-singles-7": [
+      "Glaceon-1",
+      "Probopass-1",
+      "Jolteon-1"
+    ],
+    "regular-doubles-6": [
+      "Miltank-1",
+      "Glalie-1",
+      "Weavile-1",
+      "Blaziken-1",
+      "Bastiodon-1",
+      "Floatzel-1",
+      "Drapion-1",
+      "Pinsir-1"
+    ],
+    "regular-doubles-7": [
+      "Gliscor-1",
+      "Meganium-2",
+      "Umbreon-1",
+      "Gengar-1"
+    ]
+  },
+  "Camden": {
+    "regular-singles-6": [
+      "Houndoom-1",
+      "Starmie-1",
+      "Gallade-1",
+      "Gliscor-1",
+      "Ludicolo-1",
+      "Vespiquen-1"
+    ],
+    "regular-singles-7": [
+      "Infernape-2",
+      "Arcanine-1",
+      "Espeon-1"
+    ],
+    "regular-doubles-6": [
+      "Rapidash-1",
+      "Altaria-1",
+      "Tentacruel-1",
+      "Muk-1",
+      "Wailord-?",
+      "Golem-1",
+      "Yanmega-1",
+      "Pinsir-1"
+    ],
+    "regular-doubles-7": [
+      "Slaking-1",
+      "Honchkrow-1",
+      "Snorlax-1",
+      "Luxray-1"
+    ]
+  },
+  "Turner": {
+    "master-singles": [
+      "Ampharos-2",
+      "Crobat-2",
+      "Froslass-2",
+      "Quagsire-2",
+      "Rapidash-3",
+      "Suicune-1",
+      "Moltres-5,6 (Byron)",
+      "Zapdos-8",
+      "Tyranitar-5",
+      "Articuno-5"
+    ]
+  },
+  "Bryon": {
+    "master-singles": [
+      "Rampardos-2",
+      "Bastiodon-2",
+      "Heatran-3",
+      "Wailord-3",
+      "Tentacruel-2",
+      "Absol-3",
+      "Blaziken-5",
+      "Gyarados-3,4",
+      "Latios-5",
+      "Suicune-6"
+    ]
+  },
+  "Winston": {
+    "regular-singles-2": [
+      "Dustox-1",
+      "Nosepass-1",
+      "Spinda-1"
+    ],
+    "regular-singles-3": [
+      "Linoone-1",
+      "Luxio-1",
+      "Volbeat-1"
+    ],
+    "regular-doubles-2": [
+      "Snubbull-1,2",
+      "Happiny-1,2",
+      "Buneary-1",
+      "Voltorb-1",
+      "Vibrava-1",
+      "Kabuto-1",
+      "Munchlax-1",
+      "Grimer-1"
+    ],
+    "regular-doubles-3": [
+      "Wailmer-1",
+      "Chatot-1",
+      "Pupitar-1",
+      "Kadabra-1"
+    ]
+  },
+  "Gino": {
+    "regular-singles-2": [
+      "Bonsly-1,2",
+      "Dustox-1",
+      "Wailmer-1"
+    ],
+    "regular-singles-3": [
+      "Volbeat-1",
+      "Prinplup-1",
+      "Wartortle-1"
+    ],
+    "regular-doubles-2": [
+      "Butterfree-1",
+      "Luxio-1",
+      "Lileep-1",
+      "Lickitung-1",
+      "Turtwig-1",
+      "Doduo-1",
+      "Houndour-1",
+      "Pidgeotto-1"
+    ],
+    "regular-doubles-3": [
+      "Wigglytuff-1",
+      "Loudred-1",
+      "Lunatone-1",
+      "Magby-1"
+    ]
+  },
+  "Trace": {
+    "regular-singles-6": [
+      "Abomasnow-1",
+      "Kangaskhan-1",
+      "Quagsire-1",
+      "Granbull-1",
+      "Mismagius-1",
+      "Porygon2-1"
+    ],
+    "regular-singles-7": [
+      "Gallade-1",
+      "Venusaur-2",
+      "Tyranitar-1"
+    ],
+    "regular-doubles-6": [
+      "Typhlosion-1",
+      "Muk-1",
+      "Slowking-1",
+      "Blastoise-1",
+      "Ludicolo-1",
+      "Nidoqueen-1",
+      "Mismagius-1",
+      "Shiftry-1"
+    ],
+    "regular-doubles-7": [
+      "Electivire-1",
+      "Rhyperior-1 (Palmer Classic)",
+      "Sceptile-2",
+      "Flygon-1"
+    ]
+  },
+  "Rocky": {
+    "regular-singles-6": [
+      "Kangaskhan-1",
+      "Luxray-1",
+      "Toxicroak-1",
+      "Rampardos-1",
+      "Ampharos-1",
+      "Floatzel-1"
+    ],
+    "regular-singles-7": [
+      "Dusknoir-1",
+      "Swampert-2",
+      "Sceptile-2"
+    ],
+    "regular-doubles-6": [
+      "Ursaring-1",
+      "Gengar-1",
+      "Rapidash-1",
+      "Poliwrath-1",
+      "Tentacruel-1",
+      "Kangaskhan-1",
+      "Armaldo-1",
+      "Mr. Mime-1"
+    ],
+    "regular-doubles-7": [
+      "Togekiss-1",
+      "Marowak-2",
+      "Tyranitar-1",
+      "Metagross-1"
+    ]
+  },
+  "Jaylin": {
+    "master-singles": [
+      "Golem-2",
+      "Meganium-3",
+      "Charizard-3",
+      "Politoed-3",
+      "Gliscor-2",
+      "Suicune-3",
+      "Staraptor-4",
+      "Cradily-4",
+      "Weezing-4",
+      "Mamoswine-3,5",
+      "Togekiss-5"
+    ]
+  },
+  "Titus": {
+    "master-singles": [
+      "Drifblim-3",
+      "Mamoswine-?",
+      "Latios-1",
+      "Marowak-3",
+      "Snorlax-2",
+      "Alakazam-3",
+      "Rampardos-3,4 (Roark)",
+      "Dragonite-4",
+      "Honchkrow-3",
+      "Alakazam-5"
+    ]
+  },
+  "Jamison": {
+    "regular-singles-2": [
+      "Chikorita-1",
+      "Ariados-1",
+      "Kadabra-1",
+      "Poliwhirl-1",
+      "Corsola-1",
+      "Togetic-1"
+    ],
+    "regular-singles-3": [
+      "Sneasel-1",
+      "Wailmer-1",
+      "Machoke-1"
+    ],
+    "regular-doubles-2": [
+      "Burmy-1,2",
+      "Pikachu-1,2",
+      "Cranidos-1",
+      "Spoink-1",
+      "Combee-1,2",
+      "Duskull-1,2",
+      "Exeggcute-1",
+      "Snover-1"
+    ],
+    "regular-doubles-3": [
+      "Sunflora-1",
+      "Wailmer-1",
+      "Swellow-1",
+      "Aipom-1"
+    ]
+  },
+  "Davis": {
+    "regular-singles-2": [
+      "Lickitung-1",
+      "Budew-1,2",
+      "Cranidos-1"
+    ],
+    "regular-singles-3": [
+      "Shelgon-1",
+      "Mightyena-1",
+      "Masquerain-1"
+    ],
+    "regular-doubles-2": [
+      "Bulbasaur-1",
+      "Shinx-2",
+      "Aron-1",
+      "Grimer-1"
+    ],
+    "regular-doubles-3": [
+      "Chatot-1",
+      "Shelgon-1",
+      "Seadra-1",
+      "Magcargo-1"
+    ]
+  },
+  "Josh": {
+    "regular-singles-6": [
+      "Dugtrio-1",
+      "Heracross-1",
+      "Tentacruel-1",
+      "Abomasnow-1",
+      "Nidoking-1",
+      "Yanmega-1"
+    ],
+    "regular-singles-7": [
+      "Dugtrio-2",
+      "Aggron-1",
+      "Flareon-1"
+    ],
+    "regular-doubles-6": [
+      "Mr. Mime-1",
+      "Machamp-1",
+      "Claydol-1",
+      "Exploud-1",
+      "Yanmega-1",
+      "Lickilicky-1",
+      "Golduck-1",
+      "Politoed-1"
+    ],
+    "regular-doubles-7": [
+      "Dugtrio-2",
+      "Honchkrow-1",
+      "Jolteon-1",
+      "Machamp-1"
+    ]
+  },
+  "Jim": {
+    "regular-singles-6": [
+      "Toxicroak-1",
+      "Starmie-1",
+      "Yanmega-1",
+      "Rapidash-1",
+      "Porygon2-1",
+      "Claydol-1"
+    ],
+    "regular-singles-7": [
+      "Probopass-1",
+      "Blaziken-2",
+      "Dragonite-2"
+    ],
+    "regular-doubles-6": [
+      "Froslass-1",
+      "Scizor-1",
+      "Bronzong-1",
+      "Venusaur-1",
+      "Heracross-1",
+      "Staraptor-1",
+      "Nidoqueen-1",
+      "Porygon2-1"
+    ],
+    "regular-doubles-7": [
+      "Tyranitar-1",
+      "Politoed-1",
+      "Vaporeon-1",
+      "Swampert-2"
+    ]
+  },
+  "Edmund": {
+    "master-singles": [
+      "Honchkrow-2",
+      "Magnezone-2",
+      "Heatran-3",
+      "Tyranitar-2",
+      "Cresselia-4",
+      "Aerodactyl-2",
+      "Staraptor-4",
+      "Gardevoir-5",
+      "Medicham-4",
+      "Garchomp-3,8"
+    ]
+  },
+  "Kelton": {
+    "master-singles": [
+      "Poliwrath-3",
+      "Muk-3",
+      "Weezing-2",
+      "Lapras-2",
+      "Vespiquen-2",
+      "Raichu-2",
+      "Lickilicky-3",
+      "Breloom-5",
+      "Abomasnow-5",
+      "Lickilicky-2",
+      "Breloom-3",
+      "Milotic-4"
+    ]
+  },
+  "Mikaela": {
+    "regular-singles-2": [
+      "Omanyte-1",
+      "Corsola-1",
+      "Spinda-1",
+      "Chimchar-1",
+      "Beedrill-1",
+      "Pachirisu-1"
+    ],
+    "regular-singles-3": [
+      "Grovyle-1",
+      "Bibarel-1",
+      "Kecleon-1"
+    ],
+    "regular-doubles-2": [
+      "Roselia-1",
+      "Ponyta-1",
+      "Volbeat-1",
+      "Nidorina-1",
+      "Gible-1,2",
+      "Budew-1,2",
+      "Exeggcute-1",
+      "Snover-1"
+    ],
+    "regular-doubles-3": [
+      "Sealeo-1",
+      "Togetic-1",
+      "Grovyle-1",
+      "Sudowoodo-1"
+    ]
+  },
+  "Sharon": {
+    "regular-singles-2": [
+      "Charmander-1",
+      "Aipom-1",
+      "Flaaffy-1"
+    ],
+    "regular-singles-3": [
+      "Swellow-1",
+      "Wormadam-1",
+      "Gligar-1"
+    ],
+    "regular-doubles-2": [
+      "Poliwhirl-1",
+      "Gible-1,2",
+      "Spinda-1",
+      "Lileep-1"
+    ],
+    "regular-doubles-3": [
+      "Kricketune-1",
+      "Seadra-1",
+      "Pelipper-1",
+      "Elekid-1"
+    ]
+  },
+  "Mia": {
+    "regular-singles-2": [
+      "Illumise-1",
+      "Pachirisu-1",
+      "Nidorino-1",
+      "Beedrill-1",
+      "Ponyta-1",
+      "Weepinbell-1"
+    ],
+    "regular-singles-3": [
+      "Misdreavus-1",
+      "Chatot-1",
+      "Sunflora-1"
+    ],
+    "regular-doubles-2": [
+      "Nosepass-1",
+      "Aron-1",
+      "Wailmer-1",
+      "Seel-1",
+      "Piplup-1",
+      "Bagon-1,2",
+      "Slowpoke-1",
+      "Pidgeotto-1"
+    ],
+    "regular-doubles-3": [
+      "Bayleef-1",
+      "Lileep-1",
+      "Prinplup-1",
+      "Aipom-1"
+    ]
+  },
+  "Christa": {
+    "master-singles": [
+      "Ninetales-2",
+      "Lucario-2",
+      "Raikou-1",
+      "Breloom-5",
+      "Alakazam-5",
+      "Arcanine-4",
+      "Breloom-3",
+      "Infernape-4",
+      "Togekiss-5"
+    ]
+  },
+  "Madelyn": {
+    "master-singles": [
+      "Latios-2",
+      "Granbull-3",
+      "Sceptile-3",
+      "Vileplume-2",
+      "Vespiquen-3",
+      "Electrode-3",
+      "Jolteon-3",
+      "Snorlax-3",
+      "Gliscor-3",
+      "Togekiss-2",
+      "Arcanine-4"
+    ]
+  },
+  "Barbara": {
+    "regular-singles-2": [
+      "Chikorita-1",
+      "Wobbuffet-1",
+      "Elekid-1"
+    ],
+    "regular-singles-3": [
+      "Quilava-1",
+      "Anorith-1",
+      "Prinplup-1"
+    ],
+    "regular-doubles-2": [
+      "Luvdisc-1",
+      "Murkrow-1",
+      "Beautifly-1",
+      "Cacnea-1",
+      "Corsola-1",
+      "Gloom-1",
+      "Natu-1"
+    ],
+    "regular-doubles-3": [
+      "Wartortle-1",
+      "Porygon-1",
+      "Raticate-1",
+      "Furret-1"
+    ]
+  },
+  "Stacy": {
+    "regular-singles-2": [
+      "Delcatty-1",
+      "Baltoy-1",
+      "Chinchou-1"
+    ],
+    "regular-singles-3": [
+      "Loudred-1",
+      "Combusken-1",
+      "Dunsparce-1"
+    ],
+    "regular-doubles-2": [
+      "Burmy-1,2",
+      "Treecko-2",
+      "Exeggcute-1",
+      "Oddish-1"
+    ],
+    "regular-doubles-3": [
+      "Dunsparce-1",
+      "Omanyte-1",
+      "Kecleon-1",
+      "Sunflora-1"
+    ]
+  },
+  "Alena": {
+    "regular-singles-2": [
+      "Elekid-1",
+      "Nidorino-1",
+      "Omanyte-1",
+      "Graveler-1",
+      "Gible-1,2",
+      "Stunky-1"
+    ],
+    "regular-singles-3": [
+      "Seadra-1",
+      "Persian-1",
+      "Monferno-1"
+    ],
+    "regular-doubles-2": [
+      "Mawile-1",
+      "Parasect-1",
+      "Beedrill-1",
+      "Wailmer-1",
+      "Munchlax-1",
+      "Chimchar-2",
+      "Kabuto-1",
+      "Beautifly-1"
+    ],
+    "regular-doubles-3": [
+      "Sableye-1",
+      "Gligar-1",
+      "Quilava-1",
+      "Spinda-1"
+    ]
+  },
+  "Jaclyn": {
+    "master-singles": [
+      "Nidoqueen-2",
+      "Cresselia-3",
+      "Skuntank-2",
+      "Flygon-3",
+      "Starmie-3",
+      "Snorlax-3",
+      "Slaking-3",
+      "Infernape-4"
+    ]
+  },
+  "Noelle": {
+    "master-singles": [
+      "Latios-4",
+      "Slowbro-2",
+      "Rhydon-?",
+      "Latias-5",
+      "Ninetales-6",
+      "Togekiss-5",
+      "Latios-5"
+    ]
+  },
+  "Sadie": {
+    "regular-singles-2": [
+      "Nidorina-1",
+      "Chikorita-2",
+      "Seel-1",
+      "Ariados-1",
+      "Kabuto-1",
+      "Roselia-1"
+    ],
+    "regular-singles-3": [
+      "Pupitar-1",
+      "Vigoroth-1",
+      "Chimecho-3"
+    ],
+    "regular-doubles-2": [
+      "Cyndaquil-1",
+      "Dratini-1,2",
+      "Lombre-1",
+      "Magnemite-1",
+      "Venonat-1,2",
+      "Treecko-2",
+      "Goldeen-1"
+    ],
+    "regular-doubles-3": [
+      "Togetic-1",
+      "Castform-1",
+      "Seadra-1",
+      "Luxio-1"
+    ]
+  },
+  "Kierra": {
+    "regular-singles-2": [
+      "Bonsly-1,2",
+      "Munchlax-1",
+      "Wailmer-1",
+      "Illumise-1",
+      "Plusle-1",
+      "Gloom-1"
+    ],
+    "regular-singles-3": [
+      "Metang-1",
+      "Shelgon-1",
+      "Mothim-1"
+    ],
+    "regular-doubles-2": [
+      "Nidorina-1",
+      "Porygon-1",
+      "Ponyta-1",
+      "Magby-1",
+      "Bulbasaur-1",
+      "Shuppet-1,2",
+      "Phanpy-1",
+      "Drifloon-1"
+    ],
+    "regular-doubles-3": [
+      "Castform-1",
+      "Lickitung-1",
+      "Qwilfish-1",
+      "Sudowoodo-1"
+    ]
+  },
+  "Nikki": {
+    "regular-singles-3": [
+      "Grotle-1",
+      "Grovyle-1",
+      "Gabite-1",
+      "Cherrim-1",
+      "Machoke-1",
+      "Pachirisu-1"
+    ],
+    "regular-doubles-3": [
+      "Sealeo-1",
+      "Minun-1",
+      "Sunflora-1",
+      "Marshtomp-1",
+      "Combusken-1",
+      "Butterfree-1",
+      "Bibarel-1",
+      "Lunatone-1"
+    ],
+    "regular-doubles-4": [
+      "Chansey-1",
+      "Pupitar-1",
+      "Magmar-1",
+      "Swalot-1"
+    ]
+  },
+  "Haylee": {
+    "master-singles": [
+      "Gengar-2",
+      "Ludicolo-2",
+      "Flygon-2",
+      "Swampert-4",
+      "Togekiss-5",
+      "Garchomp-3,8",
+      "Togekiss-3",
+      "Dragonite-4"
+    ]
+  },
+  "Nadia": {
+    "master-singles": [
+      "Milotic-3",
+      "Lanturn-3",
+      "Regice-2",
+      "Lanturn-2",
+      "Absol-2",
+      "Gengar-2",
+      "Regigigas-6",
+      "Porygon-Z-3",
+      "Salamence-4",
+      "Espeon-2",
+      "Salamence-3"
+    ]
+  },
+  "Shayla": {
+    "regular-singles-3": [
+      "Furret-1",
+      "Qwilfish-1",
+      "Wormadam-1",
+      "Metang-1",
+      "Sunflora-1",
+      "Gligar-1"
+    ],
+    "regular-singles-4": [
+      "Swalot-1",
+      "Magneton-1",
+      "Camerupt-1"
+    ],
+    "regular-doubles-3": [
+      "Chimecho-3",
+      "Yanma-1",
+      "Mothim-1",
+      "Prinplup-1",
+      "Misdreavus-1",
+      "Haunter-1",
+      "Linoone-1",
+      "Wormadam-1"
+    ],
+    "regular-doubles-4": [
+      "Zangoose-1",
+      "Relicanth-1",
+      "Dusclops-1",
+      "Carnivine-1"
+    ]
+  },
+  "Tierra": {
+    "regular-singles-3": [
+      "Bibarel-1",
+      "Haunter-1",
+      "Anorith-1",
+      "Wigglytuff-1",
+      "Sealeo-1",
+      "Lunatone-1"
+    ],
+    "regular-singles-4": [
+      "Bellossom-1",
+      "Carnivine-1",
+      "Ninjask-1",
+      "Xatu-1",
+      "Magmar-1",
+      "Dodrio-1"
+    ],
+    "regular-doubles-3": [
+      "Tangela-1",
+      "Elekid-1",
+      "Croconaw-1",
+      "Solrock-1",
+      "Sealeo-1",
+      "Quilava-1",
+      "Magcargo-1",
+      "Prinplup-1"
+    ],
+    "regular-doubles-4": [
+      "Xatu-1",
+      "Camerupt-1",
+      "Huntail-1",
+      "Piloswine-1"
+    ]
+  },
+  "Elise": {
+    "regular-singles-3": [
+      "Weepinbell-1",
+      "Wartortle-1",
+      "Linoone-1",
+      "Grotle-1",
+      "Magcargo-1",
+      "Shelgon-1"
+    ],
+    "regular-singles-4": [
+      "Cherrim-1",
+      "Noctowl-1",
+      "Electabuzz-1",
+      "Lumineon-1",
+      "Wigglytuff-1",
+      "Ivysaur-1"
+    ],
+    "regular-doubles-3": [
+      "Mawile-1",
+      "Mothim-1",
+      "Solrock-1",
+      "Wailmer-1",
+      "Cherrim-1",
+      "Kricketune-1",
+      "Vigoroth-1",
+      "Delcatty-1"
+    ],
+    "regular-doubles-4": [
+      "Clefable-1",
+      "Relicanth-1",
+      "Gorebyss-1",
+      "Seviper-1"
+    ]
+  },
+  "Skylar": {
+    "regular-singles-6": [
+      "Armaldo-1",
+      "Bastiodon-1",
+      "Drapion-1",
+      "Miltank-1",
+      "Pinsir-1",
+      "Cradily-1"
+    ],
+    "regular-singles-7": [
+      "Drapion-1",
+      "Marowak-2",
+      "Vaporeon-1"
+    ],
+    "regular-doubles-6": [
+      "Donphan-1",
+      "Granbull-1",
+      "Alakazam-1",
+      "Aerodactyl-1",
+      "Miltank-1",
+      "Weavile-1",
+      "Exeggutor-1",
+      "Floatzel-1"
+    ],
+    "regular-doubles-7": [
+      "Salamence-1",
+      "Umbreon-1",
+      "Torterra-2",
+      "Metagross-1"
+    ]
+  },
+  "Paula": {
+    "regular-singles-6": [
+      "Heracross-1",
+      "Aerodactyl-1",
+      "Alakazam-1",
+      "Blastoise-1",
+      "Slowking-1",
+      "Gardevoir-1"
+    ],
+    "regular-singles-7": [
+      "Drifblim-1",
+      "Charizard-2",
+      "Crobat-1"
+    ],
+    "regular-doubles-6": [
+      "Heracross-1",
+      "Alakazam-1",
+      "Drifblim-1",
+      "Rampardos-1",
+      "Gallade-1",
+      "Gastrodon-1",
+      "Altaria-1",
+      "Exploud-1"
+    ],
+    "regular-doubles-7": [
+      "Leafeon-1",
+      "Abomasnow-1",
+      "Crobat-1",
+      "Flareon-1"
+    ]
+  },
+  "Allie": {
+    "master-singles": [
+      "Rapidash-3",
+      "Lapras-2",
+      "Gastrodon-3",
+      "Lapras-4",
+      "Aerodactyl-3,6,7 (Riley/Marley)",
+      "Electivire-3",
+      "Aerodactyl-2"
+    ]
+  },
+  "Anissa": {
+    "master-singles": [
+      "Latios-4",
+      "Entei-3",
+      "Golduck-3",
+      "Porygon2-2",
+      "Dugtrio-3",
+      "Donphan-3",
+      "Heatran-6",
+      "Moltres-5,6 (Byron)",
+      "Feraligatr-4",
+      "Zapdos-8",
+      "Breloom-5"
+    ]
+  },
+  "Kerry": {
+    "regular-singles-3": [
+      "Lunatone-1",
+      "Mightyena-1",
+      "Sudowoodo-1",
+      "Seadra-1",
+      "Munchlax-1",
+      "Spinda-1"
+    ],
+    "regular-singles-4": [
+      "Jumpluff-1",
+      "Kabutops-1",
+      "Torkoal-1",
+      "Cherrim-1",
+      "Octillery-1",
+      "Chatot-1",
+      "Carnivine-1",
+      "Rotom-1"
+    ],
+    "regular-doubles-3": [
+      "Croconaw-1",
+      "Tangela-1",
+      "Quilava-1",
+      "Qwilfish-1",
+      "Linoone-1",
+      "Volbeat-1",
+      "Misdreavus-1",
+      "Shelgon-1"
+    ],
+    "regular-doubles-4": [
+      "Relicanth-1",
+      "Octillery-1",
+      "Grumpig-1",
+      "Sharpedo-1"
+    ]
+  },
+  "Reuben": {
+    "regular-singles-3": [
+      "Raticate-1",
+      "Lairon-1",
+      "Dunsparce-1",
+      "Seadra-1",
+      "Cherrim-1",
+      "Misdreavus-1"
+    ],
+    "regular-doubles-3": [
+      "Grotle-1",
+      "Chimecho-3",
+      "Linoone-1",
+      "Dragonair-1",
+      "Pupitar-1",
+      "Chatot-1",
+      "Shelgon-1",
+      "Wartortle-1"
+    ],
+    "regular-doubles-4": [
+      "Stantler-1",
+      "Persian-1",
+      "Piloswine-1",
+      "Magmar-1"
+    ]
+  },
+  "Bernard": {
+    "regular-singles-6": [
+      "Quagsire-1",
+      "Politoed-1",
+      "Poliwrath-1",
+      "Shuckle-1",
+      "Gardevoir-1",
+      "Bronzong-1"
+    ],
+    "regular-singles-7": [
+      "Swampert-2",
+      "Vaporeon-1",
+      "Mamoswine-1"
+    ],
+    "regular-doubles-6": [
+      "Weavile-1",
+      "Lopunny-1",
+      "Drifblim-1",
+      "Raichu-1",
+      "Nidoking-1",
+      "Kangaskhan-1",
+      "Gallade-1",
+      "Skarmory-1"
+    ],
+    "regular-doubles-7": [
+      "Tangrowth-1",
+      "Steelix-1",
+      "Milotic-2",
+      "Glaceon-1"
+    ]
+  },
+  "Hugh": {
+    "regular-singles-6": [
+      "Abomasnow-1",
+      "Donphan-1",
+      "Ampharos-1",
+      "Alakazam-1",
+      "Roserade-1",
+      "Bastiodon-1"
+    ],
+    "regular-singles-7": [
+      "Metagross-1",
+      "Jolteon-1",
+      "Flareon-1"
+    ],
+    "regular-doubles-6": [
+      "Luxray-1",
+      "Starmie-1",
+      "Claydol-1",
+      "Ninetales-1",
+      "Bronzong-1",
+      "Dugtrio-1",
+      "Mismagius-1"
+    ],
+    "regular-doubles-7": [
+      "Probopass-1",
+      "Porygon2-1",
+      "Swampert-2",
+      "Empoleon-2"
+    ]
+  },
+  "Cain": {
+    "master-singles": [
+      "Regirock-2",
+      "Floatzel-3",
+      "Entei-2",
+      "Regice-1",
+      "Armaldo-3",
+      "Suicune-3",
+      "Blissey-3",
+      "Milotic-4",
+      "Scizor-4",
+      "Blissey-2"
+    ]
+  },
+  "Kegan": {
+    "master-singles": [
+      "Torterra-3",
+      "Latias-1",
+      "Raikou-4",
+      "Suicune-2",
+      "Golem-3",
+      "Cresselia-7",
+      "Charizard-5",
+      "Regirock-5",
+      "Abomasnow-5"
+    ]
+  },
+  "Madison": {
+    "regular-singles-3": [
+      "Chimecho-3",
+      "Qwilfish-1",
+      "Magcargo-1",
+      "Pupitar-1",
+      "Beautifly-1",
+      "Roselia-1"
+    ],
+    "regular-doubles-3": [
+      "Lunatone-1",
+      "Castform-1",
+      "Metang-1",
+      "Dunsparce-1",
+      "Combusken-1",
+      "Qwilfish-1",
+      "Swellow-1"
+    ],
+    "regular-doubles-4": [
+      "Tropius-1",
+      "Scyther-1",
+      "Fearow-1",
+      "Jumpluff-1"
+    ]
+  },
+  "Don": {
+    "regular-singles-3": [
+      "Dragonair-1",
+      "Raticate-1",
+      "Lunatone-1",
+      "Anorith-1",
+      "Ivysaur-1",
+      "Lairon-1"
+    ],
+    "regular-singles-4": [
+      "Fearow-1",
+      "Kabutops-1",
+      "Hitmonlee-1",
+      "Cherrim-1",
+      "Chansey-1",
+      "Kingler-1"
+    ],
+    "regular-doubles-3": [
+      "Butterfree-1",
+      "Mothim-1",
+      "Grovyle-1",
+      "Porygon-1",
+      "Shelgon-1",
+      "Sneasel-1",
+      "Gligar-1",
+      "Gabite-1"
+    ],
+    "regular-doubles-4": [
+      "Scyther-1",
+      "Wormadam-1",
+      "Carnivine-1",
+      "Octillery-1"
+    ]
+  },
+  "Jessy": {
+    "regular-singles-6": [
+      "Cradily-1",
+      "Starmie-1",
+      "Weavile-1",
+      "Nidoqueen-1",
+      "Steelix-1",
+      "Porygon2-1"
+    ],
+    "regular-singles-7": [
+      "Gengar-1",
+      "Hippowdon-1",
+      "Mamoswine-1"
+    ],
+    "regular-doubles-6": [
+      "Steelix-1",
+      "Medicham-1",
+      "Porygon2-1",
+      "Ampharos-1",
+      "Poliwrath-1",
+      "Typhlosion-1",
+      "Yanmega-1",
+      "Marowak-1",
+      "Drifblim-1",
+      "Slowbro-1",
+      "Ursaring-1",
+      "Dewgong-1",
+      "Wailord-?",
+      "Skarmory-1",
+      "Heracross-1",
+      "Blaziken-1",
+      "Gliscor-1",
+      "Machamp-1",
+      "Exeggutor-1",
+      "Honchkrow-1"
+    ],
+    "regular-doubles-7": [
+      "Milotic-2",
+      "Umbreon-1",
+      "Porygon-Z-1",
+      "Tangrowth-1"
+    ]
+  },
+  "Stetson": {
+    "regular-singles-6": [
+      "Empoleon-1",
+      "Yanmega-1",
+      "Houndoom-1",
+      "Typhlosion-1",
+      "Toxicroak-1",
+      "Aerodactyl-1"
+    ],
+    "regular-singles-7": [
+      "Nidoking-1",
+      "Blissey-1",
+      "Infernape-2"
+    ],
+    "regular-doubles-6": [
+      "Glalie-1",
+      "Heracross-1",
+      "Gliscor-1",
+      "Raichu-1",
+      "Nidoking-1",
+      "Shuckle-1",
+      "Golduck-1",
+      "Armaldo-1"
+    ],
+    "regular-doubles-7": [
+      "Kingdra-1",
+      "Nidoqueen-1",
+      "Metagross-1",
+      "Shuckle-1"
+    ]
+  },
+  "Aldo": {
+    "master-singles": [
+      "Slowking-3",
+      "Ambipom-2",
+      "Regirock-2",
+      "Gengar-3",
+      "Latias-4",
+      "Feraligatr-4",
+      "Gastrodon-5",
+      "Leafeon-3",
+      "Gliscor-3",
+      "Tyranitar-2"
+    ]
+  },
+  "Andreas": {
+    "master-singles": [
+      "Registeel-1",
+      "Politoed-2",
+      "Venusaur-3",
+      "Suicune-3",
+      "Regigigas-5",
+      "Hippowdon-3",
+      "Infernape-4",
+      "Vaporeon-3",
+      "Tangrowth-3",
+      "Suicune-6"
+    ]
+  },
+  "Keon": {
+    "regular-singles-3": [
+      "Kabuto-1",
+      "Mothim-1",
+      "Ivysaur-1",
+      "Wartortle-1",
+      "Arbok-1",
+      "Bibarel-1"
+    ],
+    "regular-doubles-3": [
+      "Grovyle-1",
+      "Bibarel-1",
+      "Wartortle-1",
+      "Charmeleon-1",
+      "Chatot-1",
+      "Beedrill-1",
+      "Quilava-1",
+      "Sunflora-1"
+    ],
+    "regular-doubles-4": [
+      "Girafarig-1",
+      "Magneton-1",
+      "Primeape-1",
+      "Dodrio-1"
+    ]
+  },
+  "Jovan": {
+    "regular-singles-3": [
+      "Vigoroth-1",
+      "Dragonair-1",
+      "Charmeleon-1",
+      "Bayleef-1",
+      "Croconaw-1",
+      "Solrock-1"
+    ],
+    "regular-singles-4": [
+      "Cherrim-1",
+      "Noctowl-1",
+      "Scyther-1"
+    ],
+    "regular-doubles-3": [
+      "Prinplup-1",
+      "Vigoroth-1",
+      "Solrock-1",
+      "Castform-1",
+      "Masquerain-1",
+      "Wobbuffet-1",
+      "Mightyena-1",
+      "Kricketune-1"
+    ],
+    "regular-doubles-4": [
+      "Cloyster-1",
+      "Hitmonchan-1",
+      "Camerupt-1",
+      "Octillery-1"
+    ]
+  },
+  "Rico": {
+    "regular-singles-6": [
+      "Claydol-1",
+      "Ninetales-1",
+      "Cradily-1",
+      "Drapion-1",
+      "Weavile-1",
+      "Honchkrow-1"
+    ],
+    "regular-singles-7": [
+      "Heracross-1",
+      "Vaporeon-1",
+      "Tangrowth-1"
+    ],
+    "regular-doubles-6": [
+      "Politoed-1",
+      "Wailord-?",
+      "Cradily-1",
+      "Gengar-1",
+      "Roserade-1",
+      "Honchkrow-1",
+      "Steelix-1",
+      "Luxray-1"
+    ],
+    "regular-doubles-7": [
+      "Swampert-2",
+      "Houndoom-1",
+      "Porygon-Z-1",
+      "Rampardos-1"
+    ]
+  },
+  "Dan": {
+    "regular-singles-6": [
+      "Wailord-?",
+      "Machamp-1",
+      "Weavile-1",
+      "Charizard-1",
+      "Cradily-1",
+      "Politoed-1"
+    ],
+    "regular-singles-7": [
+      "Ampharos-1",
+      "Tangrowth-1",
+      "Porygon-Z-1"
+    ],
+    "regular-doubles-6": [
+      "Weavile-1",
+      "Honchkrow-1",
+      "Slowking-1",
+      "Shuckle-1",
+      "Lanturn-1",
+      "Scizor-1",
+      "Ninetales-1",
+      "Typhlosion-1"
+    ],
+    "regular-doubles-7": [
+      "Weavile-1",
+      "Sceptile-2",
+      "Leafeon-1",
+      "Ursaring-1"
+    ]
+  },
+  "Sherman": {
+    "master-singles": [
+      "Regice-2",
+      "Absol-2",
+      "Tangrowth-2",
+      "Dewgong-3",
+      "Drifblim-2",
+      "Exeggutor-2",
+      "Scizor-4",
+      "Umbreon-3",
+      "Gengar-5",
+      "Gastrodon-5"
+    ]
+  },
+  "Ryne": {
+    "master-singles": [
+      "Latias-3",
+      "Latios-3",
+      "Heatran-2",
+      "Feraligatr-3",
+      "Cradily-3",
+      "Magmortar-2",
+      "Magmortar-3",
+      "Milotic-4",
+      "Zapdos-8"
+    ]
+  },
+  "Kade": {
+    "regular-singles-3": [
+      "Prinplup-1",
+      "Sealeo-1",
+      "Marshtomp-1",
+      "Chimecho-3",
+      "Sneasel-1",
+      "Raticate-1"
+    ],
+    "regular-singles-4": [
+      "Scyther-1",
+      "Wigglytuff-1",
+      "Ivysaur-1"
+    ],
+    "regular-doubles-3": [
+      "Furret-1",
+      "Haunter-1",
+      "Wartortle-1",
+      "Lileep-1",
+      "Marshtomp-1",
+      "Tangela-1",
+      "Pelipper-1",
+      "Sneasel-1"
+    ],
+    "regular-doubles-4": [
+      "Bellossom-1",
+      "Ninjask-1",
+      "Rotom-1",
+      "Cloyster-1"
+    ]
+  },
+  "Antwan": {
+    "regular-singles-3": [
+      "Castform-1",
+      "Wartortle-1",
+      "Mothim-1",
+      "Lunatone-1",
+      "Chimecho-3",
+      "Bibarel-1"
+    ],
+    "regular-singles-4": [
+      "Clefable-1",
+      "Cacturne-?",
+      "Venomoth-1",
+      "Octillery-1",
+      "Piloswine-1",
+      "Dodrio-1"
+    ],
+    "regular-doubles-3": [
+      "Charmeleon-1",
+      "Arbok-1",
+      "Bibarel-1",
+      "Wigglytuff-1",
+      "Illumise-1",
+      "Gabite-1",
+      "Grotle-1",
+      "Ponyta-1"
+    ],
+    "regular-doubles-4": [
+      "Golbat-1",
+      "Clefable-1",
+      "Primeape-1",
+      "Xatu-1"
+    ]
+  },
+  "Hans": {
+    "master-singles": [
+      "Altaria-3",
+      "Nidoqueen-?",
+      "Manectric-2",
+      "Articuno-4",
+      "Heatran-4",
+      "Zapdos-4",
+      "Politoed-5",
+      "Registeel-5",
+      "Claydol-3",
+      "Kingdra-2",
+      "Scizor-5,7,8 (Crasher Wake)"
+    ]
+  },
+  "Layne": {
+    "master-singles": [
+      "Lanturn-2",
+      "Glaceon-?",
+      "Ninetales-2",
+      "Poliwrath-2",
+      "Muk-2",
+      "Cresselia-5",
+      "Drapion-3",
+      "Weavile-3",
+      "Magmortar-3",
+      "Weavile-2",
+      "Salamence-4"
+    ]
+  },
+  "Sheldon": {
+    "regular-singles-3": [
+      "Castform-1",
+      "Bibarel-1",
+      "Charmeleon-1",
+      "Masquerain-1",
+      "Qwilfish-1",
+      "Quilava-1"
+    ],
+    "regular-singles-4": [
+      "Clefable-1",
+      "Golbat-1",
+      "Stantler-1"
+    ],
+    "regular-doubles-3": [
+      "Grotle-1",
+      "Lunatone-1",
+      "Gabite-1",
+      "Bibarel-1",
+      "Mothim-1",
+      "Murkrow-1",
+      "Gligar-1",
+      "Parasect-1"
+    ],
+    "regular-doubles-4": [
+      "Bayleef-1",
+      "Sharpedo-1",
+      "Pidgeot-1",
+      "Chimecho-3"
+    ]
+  },
+  "Ezra": {
+    "regular-singles-3": [
+      "Gloom-1",
+      "Furret-1",
+      "Pelipper-1",
+      "Croconaw-1",
+      "Pupitar-1",
+      "Linoone-1"
+    ],
+    "regular-singles-4": [
+      "Sharpedo-1",
+      "Piloswine-1",
+      "Scyther-1"
+    ],
+    "regular-doubles-3": [
+      "Metang-1",
+      "Wormadam-1",
+      "Masquerain-1",
+      "Qwilfish-1",
+      "Magcargo-1",
+      "Poliwhirl-1",
+      "Combusken-1",
+      "Bayleef-1"
+    ],
+    "regular-doubles-4": [
+      "Pidgeot-1",
+      "Sudowoodo-1",
+      "Zangoose-1",
+      "Persian-1"
+    ]
+  },
+  "Pierce": {
+    "regular-singles-3": [
+      "Swellow-1",
+      "Lunatone-1",
+      "Bayleef-1"
+    ],
+    "regular-singles-4": [
+      "Bellossom-1",
+      "Mantine-1",
+      "Jumpluff-1",
+      "Purugly-1",
+      "Misdreavus-1",
+      "Furret-1"
+    ],
+    "regular-doubles-3": [
+      "Sealeo-1",
+      "Combusken-1",
+      "Bayleef-1",
+      "Lairon-1",
+      "Swellow-1",
+      "Kadabra-1",
+      "Monferno-1",
+      "Mawile-1"
+    ],
+    "regular-doubles-4": [
+      "Mothim-1",
+      "Purugly-1",
+      "Kingler-1",
+      "Vigoroth-1"
+    ]
+  },
+  "Kellen": {
+    "regular-singles-7": [
+      "Typhlosion-2",
+      "Nidoqueen-1",
+      "Miltank-1",
+      "Gengar-1",
+      "Lapras-1",
+      "Blaziken-2"
+    ],
+    "master-singles": [
+      "Tyranitar-2",
+      "Raichu-2",
+      "Dewgong-2"
+    ],
+    "regular-doubles-7": [
+      "Typhlosion-2",
+      "Vaporeon-1",
+      "Metagross-1",
+      "Salamence-1",
+      "Jolteon-1",
+      "Rhyperior-1 (Palmer Classic)",
+      "Dugtrio-2"
+    ]
+  },
+  "Alton": {
+    "regular-singles-7": [
+      "Espeon-1",
+      "Torterra-2",
+      "Leafeon-1",
+      "Dugtrio-2",
+      "Honchkrow-1",
+      "Poliwrath-1"
+    ],
+    "master-singles": [
+      "Skarmory-2",
+      "Staraptor-3",
+      "Articuno-4",
+      "Politoed-2",
+      "Ampharos-3",
+      "Blissey-2"
+    ],
+    "regular-doubles-7": [
+      "Glaceon-1",
+      "Aggron-1",
+      "Espeon-1",
+      "Milotic-2",
+      "Walrein-1",
+      "Blastoise-2",
+      "Blaziken-2",
+      "Torterra-2"
+    ]
+  },
+  "Shawna": {
+    "regular-singles-3": [
+      "Wailmer-1",
+      "Prinplup-1",
+      "Arbok-1",
+      "Charmeleon-1",
+      "Porygon-1",
+      "Illumise-1"
+    ],
+    "regular-singles-4": [
+      "Piloswine-1",
+      "Kabutops-1",
+      "Torkoal-1",
+      "Cherrim-1",
+      "Noctowl-1",
+      "Kingler-1"
+    ],
+    "regular-doubles-3": [
+      "Persian-1",
+      "Vigoroth-1",
+      "Magcargo-1",
+      "Lairon-1",
+      "Monferno-1",
+      "Marshtomp-1",
+      "Chimecho-3"
+    ],
+    "regular-doubles-4": [
+      "Grotle-1",
+      "Golbat-1",
+      "Mantine-1",
+      "Ivysaur-1"
+    ]
+  },
+  "Annie": {
+    "regular-singles-3": [
+      "Cherrim-1",
+      "Azumarill-1",
+      "Dustox-1",
+      "Croconaw-1",
+      "Sealeo-1",
+      "Dunsparce-1"
+    ],
+    "regular-doubles-3": [
+      "Croconaw-1",
+      "Flaaffy-1",
+      "Quilava-1",
+      "Nosepass-1",
+      "Aipom-1",
+      "Grovyle-1",
+      "Kecleon-1",
+      "Haunter-1"
+    ],
+    "regular-doubles-4": [
+      "Cacturne-?",
+      "Electabuzz-1",
+      "Hitmonchan-1",
+      "Seaking-1"
+    ]
+  },
+  "Rose": {
+    "regular-singles-3": [
+      "Ivysaur-1",
+      "Ledian-1",
+      "Wobbuffet-1",
+      "Pupitar-1",
+      "Haunter-1",
+      "Anorith-1"
+    ],
+    "regular-doubles-3": [
+      "Qwilfish-1",
+      "Weepinbell-1",
+      "Bibarel-1",
+      "Masquerain-1",
+      "Tangela-1",
+      "Charmeleon-1",
+      "Wormadam-1",
+      "Raticate-1"
+    ],
+    "regular-doubles-4": [
+      "Purugly-1",
+      "Grotle-1",
+      "Dodrio-1",
+      "Noctowl-1"
+    ]
+  },
+  "Margot": {
+    "regular-singles-7": [
+      "Drifblim-1",
+      "Walrein-1",
+      "Lucario-1",
+      "Vaporeon-1",
+      "Metagross-1",
+      "Sceptile-2"
+    ],
+    "master-singles": [
+      "Whiscash-2",
+      "Leafeon-2",
+      "Meganium-3",
+      "Floatzel-2",
+      "Rhydon-3",
+      "Houndoom-3"
+    ],
+    "regular-doubles-7": [
+      "Walrein-1",
+      "Blastoise-2",
+      "Empoleon-2",
+      "Meganium-2",
+      "Swampert-2",
+      "Flygon-1",
+      "Dusknoir-1",
+      "Kingdra-1"
+    ]
+  },
+  "Sophie": {
+    "regular-singles-7": [
+      "Flareon-1",
+      "Flygon-1",
+      "Typhlosion-2",
+      "Empoleon-2",
+      "Roserade-1",
+      "Politoed-1"
+    ],
+    "master-singles": [
+      "Gliscor-2",
+      "Tentacruel-2",
+      "Regirock-3"
+    ],
+    "regular-doubles-7": [
+      "Magmortar-1",
+      "Ursaring-1",
+      "Aggron-1",
+      "Mamoswine-1",
+      "Gyarados-1",
+      "Salamence-1",
+      "Empoleon-2",
+      "Feraligatr-2"
+    ]
+  },
+  "Rory": {
+    "regular-singles-4": [
+      "Magmar-1",
+      "Dusclops-1",
+      "Hitmonchan-1",
+      "Venomoth-1"
+    ]
+  },
+  "Codey": {
+    "regular-singles-4": [
+      "Piloswine-1",
+      "Grumpig-1",
+      "Huntail-1",
+      "Seaking-1"
+    ]
+  },
+  "Sammy": {
+    "regular-singles-4": [
+      "Metang-1",
+      "Cacturne-?",
+      "Omastar-1",
+      "Sneasel-1"
+    ]
+  },
+  "Barrett": {
+    "master-singles": [
+      "Ambipom-3",
+      "Jynx-2",
+      "Regice-3",
+      "Manectric-3",
+      "Rhydon-3",
+      "Granbull-2",
+      "Blissey-3",
+      "Typhlosion-4",
+      "Venusaur-6",
+      "Machamp-2"
+    ]
+  },
+  "Jess": {
+    "master-singles": [
+      "Froslass-3",
+      "Swampert-3",
+      "Mamoswine-?",
+      "Registeel-3",
+      "Electivire-2",
+      "Staraptor-2",
+      "Suicune-6",
+      "Starmie-3",
+      "Typhlosion-4",
+      "Suicune-3",
+      "Venusaur-6",
+      "Flygon-2"
+    ]
+  },
+  "Valeria": {
+    "regular-singles-3": [
+      "Kabuto-1",
+      "Castform-1",
+      "Raticate-1",
+      "Chimecho-3",
+      "Persian-1",
+      "Kecleon-1"
+    ],
+    "regular-singles-4": [
+      "Xatu-1",
+      "Magmar-1",
+      "Golbat-1",
+      "Kabutops-1",
+      "Chimecho-3",
+      "Sealeo-1",
+      "Chansey-1",
+      "Grumpig-1",
+      "Seviper-1",
+      "Stantler-1",
+      "Wigglytuff-1",
+      "Ivysaur-1"
+    ],
+    "regular-doubles-3": [
+      "Metang-1",
+      "Wigglytuff-1",
+      "Arbok-1",
+      "Chatot-1",
+      "Raticate-1",
+      "Gloom-1",
+      "Dunsparce-1",
+      "Plusle-1"
+    ],
+    "regular-doubles-4": [
+      "Sandslash-1",
+      "Ivysaur-1",
+      "Cacturne-?",
+      "Chatot-1"
+    ]
+  },
+  "Shanice": {
+    "regular-singles-3": [
+      "Metang-1",
+      "Mawile-1",
+      "Poliwhirl-1",
+      "Monferno-1",
+      "Wigglytuff-1"
+    ],
+    "regular-doubles-3": [
+      "Wormadam-1",
+      "Anorith-1",
+      "Swellow-1",
+      "Masquerain-1"
+    ],
+    "regular-doubles-4": [
+      "Kabutops-1",
+      "Grumpig-1",
+      "Pidgeot-1",
+      "Purugly-1"
+    ]
+  },
+  "Callie": {
+    "regular-singles-3": [
+      "Marshtomp-1",
+      "Ivysaur-1",
+      "Cherrim-1"
+    ],
+    "regular-singles-4": [
+      "Dusclops-1",
+      "Pupitar-1",
+      "Furret-1",
+      "Purugly-1",
+      "Rotom-1",
+      "Dodrio-1",
+      "Xatu-1",
+      "Girafarig-1"
+    ],
+    "regular-doubles-3": [
+      "Prinplup-1",
+      "Furret-1",
+      "Persian-1",
+      "Metang-1",
+      "Pupitar-1",
+      "Masquerain-1",
+      "Vigoroth-1",
+      "Sneasel-1"
+    ],
+    "regular-doubles-4": [
+      "Pidgeot-1",
+      "Omastar-1",
+      "Sharpedo-1",
+      "Jumpluff-1"
+    ]
+  },
+  "Johanna": {
+    "master-singles": [
+      "Cresselia-2",
+      "Regigigas-5",
+      "Golduck-2",
+      "Garchomp-2",
+      "Mismagius-2",
+      "Aggron-?",
+      "Articuno-5",
+      "Entei-5",
+      "Nidoking-4",
+      "Regirock-5"
+    ]
+  },
+  "Josie": {
+    "master-singles": [
+      "Dewgong-3",
+      "Armaldo-2",
+      "Blaziken-3",
+      "Houndoom-2",
+      "Starmie-1",
+      "Shuckle-2",
+      "Latias-5",
+      "Mamoswine-3,5",
+      "Lanturn-4",
+      "Latias-3",
+      "Mamoswine-?"
+    ]
+  },
+  "Cordell": {
+    "regular-singles-3": [
+      "Omanyte-1",
+      "Grotle-1",
+      "Dragonair-1",
+      "Solrock-1",
+      "Sneasel-1",
+      "Mothim-1"
+    ],
+    "regular-singles-4": [
+      "Cherrim-1",
+      "Sandslash-1",
+      "Stantler-1"
+    ],
+    "regular-doubles-3": [
+      "Chimecho-3",
+      "Nosepass-1",
+      "Pelipper-1",
+      "Croconaw-1",
+      "Ponyta-1",
+      "Linoone-1",
+      "Marshtomp-1",
+      "Aipom-1"
+    ],
+    "regular-doubles-4": [
+      "Electabuzz-1",
+      "Seadra-1",
+      "Purugly-1",
+      "Solrock-1"
+    ]
+  },
+  "Kaden": {
+    "regular-singles-3": [
+      "Combusken-1",
+      "Mightyena-1",
+      "Magcargo-1",
+      "Haunter-1",
+      "Gabite-1",
+      "Charmeleon-1"
+    ],
+    "regular-singles-4": [
+      "Sealeo-1",
+      "Sandslash-1",
+      "Clefable-1",
+      "Prinplup-1",
+      "Ninjask-1",
+      "Camerupt-1",
+      "Golbat-1",
+      "Bayleef-1",
+      "Omastar-1",
+      "Venomoth-1",
+      "Dusclops-1",
+      "Crawdaunt-1",
+      "Sharpedo-1",
+      "Xatu-1",
+      "Magmar-1",
+      "Girafarig-1"
+    ],
+    "regular-doubles-3": [
+      "Persian-1",
+      "Yanma-1",
+      "Lairon-1",
+      "Gligar-1"
+    ],
+    "regular-doubles-4": [
+      "Primeape-1",
+      "Sealeo-1",
+      "Electabuzz-1",
+      "Furret-1"
+    ]
+  },
+  "Devin": {
+    "regular-singles-3": [
+      "Pelipper-1",
+      "Vigoroth-1",
+      "Bayleef-1"
+    ],
+    "regular-singles-4": [
+      "Seaking-1",
+      "Gorebyss-1",
+      "Magneton-1"
+    ],
+    "regular-doubles-3": [
+      "Grotle-1",
+      "Mawile-1",
+      "Misdreavus-1",
+      "Poliwhirl-1",
+      "Charmeleon-1",
+      "Linoone-1",
+      "Kecleon-1",
+      "Ivysaur-1"
+    ],
+    "regular-doubles-4": [
+      "Xatu-1",
+      "Sunflora-1",
+      "Mantine-1",
+      "Stantler-1"
+    ]
+  },
+  "Karissa": {
+    "regular-singles-3": [
+      "Onix-1",
+      "Vigoroth-1",
+      "Prinplup-1",
+      "Gabite-1",
+      "Mothim-1",
+      "Bayleef-1"
+    ],
+    "regular-singles-4": [
+      "Zangoose-1",
+      "Carnivine-1",
+      "Chansey-1"
+    ],
+    "regular-doubles-3": [
+      "Vigoroth-1",
+      "Dustox-1",
+      "Bayleef-1",
+      "Dunsparce-1"
+    ],
+    "regular-doubles-4": [
+      "Hitmonchan-1",
+      "Solrock-1",
+      "Carnivine-1",
+      "Dusclops-1"
+    ]
+  },
+  "Demetri": {
+    "master-singles": [
+      "Leafeon-2",
+      "Jolteon-2",
+      "Moltres-3",
+      "Articuno-3",
+      "Entei-3",
+      "Infernape-3",
+      "Electivire-3",
+      "Cresselia-7",
+      "Machamp-3",
+      "Staraptor-3"
+    ]
+  },
+  "Lyle": {
+    "master-singles": [
+      "Victreebel-2",
+      "Toxicroak-2",
+      "Umbreon-2",
+      "Garchomp-2",
+      "Bronzong-2",
+      "Latias-4",
+      "Heracross-4",
+      "Steelix-3",
+      "Tangrowth-3",
+      "Regirock-5",
+      "Abomasnow-5"
+    ]
+  },
+  "Kristi": {
+    "master-singles": [
+      "Hypno-3",
+      "Latios-1",
+      "Rhydon-?",
+      "Registeel-4",
+      "Weezing-2",
+      "Wailord-3",
+      "Articuno-5",
+      "Metagross-3",
+      "Gyarados-3,4",
+      "Gyarados-2"
+    ]
+  },
+  "Mariana": {
+    "master-singles": [
+      "Registeel-4",
+      "Golduck-2",
+      "Wailord-2",
+      "Houndoom-2",
+      "Ursaring-3",
+      "Nidoking-3",
+      "Nidoqueen-4",
+      "Swampert-4",
+      "Quagsire-4",
+      "Porygon-Z-3"
+    ]
+  },
+  "Kolby": {
+    "regular-singles-4": [
+      "Ivysaur-1",
+      "Octillery-1",
+      "Hitmontop-1",
+      "Grovyle-1"
+    ]
+  },
+  "Jonas": {
+    "regular-singles-4": [
+      "Bellossom-1",
+      "Golbat-1",
+      "Ninjask-1",
+      "Lumineon-1"
+    ]
+  },
+  "Irving": {
+    "regular-singles-5": [
+      "Glalie-1",
+      "Lanturn-1",
+      "Infernape-1",
+      "Tauros-1",
+      "Rotom-1",
+      "Rhydon-1",
+      "Torkoal-1"
+    ],
+    "regular-singles-4": [
+      "Noctowl-1",
+      "Grovyle-1",
+      "Tropius-1",
+      "Metang-1",
+      "Huntail-1",
+      "Kabutops-1",
+      "Jumpluff-1"
+    ]
+  },
+  "Vaughn": {
+    "regular-singles-5": [
+      "Hitmontop-1",
+      "Feraligatr-1",
+      "Venusaur-1",
+      "Glalie-1",
+      "Skuntank-1",
+      "Empoleon-1",
+      "Raichu-1"
+    ],
+    "regular-singles-4": [
+      "Clefable-1",
+      "Shelgon-1",
+      "Seaking-1",
+      "Monferno-1",
+      "Sandslash-1",
+      "Grotle-1",
+      "Swalot-1",
+      "Misdreavus-1"
+    ]
+  },
+  "Gene": {
+    "regular-singles-5": [
+      "Vileplume-1",
+      "Lanturn-1",
+      "Sceptile-1",
+      "Manectric-1",
+      "Victreebel-1",
+      "Shiftry-1"
+    ],
+    "regular-singles-4": [
+      "Scyther-1",
+      "Zangoose-1",
+      "Golbat-1",
+      "Hitmonchan-1",
+      "Lairon-1",
+      "Venomoth-1",
+      "Pidgeot-1",
+      "Kecleon-1"
+    ]
+  },
+  "Daron": {
+    "master-singles": [
+      "Medicham-3",
+      "Dragonite-3",
+      "Forretress-2"
+    ]
+  },
+  "Benny": {
+    "master-singles": [
+      "Glaceon-?",
+      "Magmortar-2",
+      "Electrode-3"
+    ]
+  },
+  "Leslie": {
+    "regular-singles-4": [
+      "Hitmonchan-1",
+      "Mightyena-1",
+      "Croconaw-1",
+      "Bellossom-1",
+      "Crawdaunt-1",
+      "Ninjask-1",
+      "Camerupt-1",
+      "Dodrio-1",
+      "Octillery-1"
+    ],
+    "regular-singles-5": [
+      "Venusaur-1",
+      "Ambipom-1",
+      "Quagsire-1"
+    ],
+    "regular-doubles-4": [
+      "Kabutops-1",
+      "Torkoal-1",
+      "Girafarig-1",
+      "Lumineon-1",
+      "Bellossom-1",
+      "Charmeleon-1",
+      "Rotom-1"
+    ],
+    "regular-doubles-5": [
+      "Lopunny-1",
+      "Whiscash-1",
+      "Vespiquen-1",
+      "Ludicolo-1"
+    ]
+  },
+  "Santos": {
+    "regular-singles-4": [
+      "Gorebyss-1",
+      "Omastar-1",
+      "Dusclops-1",
+      "Relicanth-1",
+      "Lumineon-1",
+      "Huntail-1"
+    ],
+    "regular-singles-5": [
+      "Zangoose-1",
+      "Skarmory-1",
+      "Exploud-1"
+    ],
+    "regular-doubles-4": [
+      "Monferno-1",
+      "Jumpluff-1",
+      "Stantler-1",
+      "Masquerain-1",
+      "Purugly-1",
+      "Seviper-1",
+      "Electabuzz-1"
+    ],
+    "regular-doubles-5": [
+      "Sharpedo-1",
+      "Skarmory-1",
+      "Vileplume-1",
+      "Crawdaunt-1"
+    ]
+  },
+  "Cruz": {
+    "regular-singles-5": [
+      "Torterra-1",
+      "Medicham-1",
+      "Blaziken-1"
+    ],
+    "regular-doubles-4": [
+      "Xatu-1",
+      "Huntail-1",
+      "Grumpig-1",
+      "Piloswine-1",
+      "Bayleef-1",
+      "Seaking-1",
+      "Swalot-1",
+      "Raticate-1"
+    ],
+    "regular-doubles-5": [
+      "Empoleon-1",
+      "Staraptor-1",
+      "Skarmory-1",
+      "Lopunny-1"
+    ]
+  },
+  "Antony": {
+    "regular-singles-7": [
+      "Togekiss-1",
+      "Slaking-1",
+      "Marowak-2",
+      "Magmortar-1",
+      "Bronzong-1",
+      "Alakazam-1"
+    ],
+    "master-singles": [
+      "Skuntank-3",
+      "Exeggutor-2",
+      "Regigigas-4"
+    ],
+    "regular-doubles-7": [
+      "Flareon-1",
+      "Swampert-2",
+      "Blaziken-2",
+      "Sceptile-2"
+    ]
+  },
+  "Mikel": {
+    "regular-singles-7": [
+      "Blissey-1",
+      "Gallade-1",
+      "Gengar-1",
+      "Armaldo-1",
+      "Glaceon-1",
+      "Lucario-1"
+    ],
+    "master-singles": [
+      "Gastrodon-2",
+      "Empoleon-?",
+      "Probopass-2"
+    ],
+    "regular-doubles-7": [
+      "Aggron-1",
+      "Walrein-1",
+      "Gyarados-1",
+      "Lucario-1"
+    ]
+  },
+  "Jerrod": {
+    "regular-singles-4": [
+      "Cherrim-1",
+      "Purugly-1",
+      "Relicanth-1",
+      "Kingler-1",
+      "Grumpig-1",
+      "Venomoth-1"
+    ],
+    "regular-singles-5": [
+      "Kangaskhan-1",
+      "Slowbro-1",
+      "Exploud-1"
+    ],
+    "regular-doubles-4": [
+      "Gorebyss-1",
+      "Swalot-1",
+      "Magneton-1",
+      "Cacturne-?"
+    ],
+    "regular-doubles-5": [
+      "Weezing-1",
+      "Electabuzz-1",
+      "Empoleon-1",
+      "Jumpluff-1"
+    ]
+  },
+  "August": {
+    "regular-singles-5": [
+      "Vespiquen-1",
+      "Vileplume-1",
+      "Torterra-1"
+    ],
+    "regular-doubles-4": [
+      "Swalot-1",
+      "Grotle-1",
+      "Magmar-1",
+      "Pupitar-1",
+      "Sudowoodo-1",
+      "Sandslash-1",
+      "Xatu-1",
+      "Chimecho-3"
+    ],
+    "regular-doubles-5": [
+      "Rhydon-1",
+      "Relicanth-1",
+      "Lanturn-1",
+      "Hariyama-1"
+    ]
+  },
+  "Carlo": {
+    "master-singles": [
+      "Heatran-4",
+      "Arcanine-2",
+      "Latios-2",
+      "Tauros-3",
+      "Slowbro-2",
+      "Regirock-4",
+      "Raikou-5",
+      "Medicham-4",
+      "Vaporeon-3",
+      "Raikou-4",
+      "Leafeon-3",
+      "Gyarados-3,4"
+    ]
+  },
+  "Jarred": {
+    "master-singles": [
+      "Suicune-1",
+      "Togekiss-2",
+      "Glalie-3",
+      "Staraptor-3",
+      "Dewgong-2",
+      "Lickilicky-2",
+      "Lucario-3,10 (Cynthia)",
+      "Flygon-3",
+      "Exeggutor-3",
+      "Flygon-2",
+      "Porygon-Z-3"
+    ]
+  },
+  "Lester": {
+    "regular-singles-4": [
+      "Sandslash-1",
+      "Purugly-1",
+      "Fearow-1",
+      "Combusken-1",
+      "Qwilfish-1"
+    ],
+    "regular-singles-5": [
+      "Infernape-1",
+      "Kangaskhan-1",
+      "Golem-1"
+    ],
+    "regular-doubles-4": [
+      "Carnivine-1",
+      "Bibarel-1",
+      "Chansey-1",
+      "Hitmonchan-1",
+      "Seaking-1",
+      "Lairon-1",
+      "Noctowl-1",
+      "Mothim-1"
+    ],
+    "regular-doubles-5": [
+      "Victreebel-1",
+      "Hitmonchan-1",
+      "Jynx-1",
+      "Golbat-1"
+    ]
+  },
+  "Larissa": {
+    "regular-singles-4": [
+      "Magneton-1",
+      "Wigglytuff-1",
+      "Ivysaur-1",
+      "Cherrim-1",
+      "Noctowl-1",
+      "Omastar-1",
+      "Dusclops-1",
+      "Kingler-1",
+      "Rotom-1"
+    ],
+    "regular-singles-5": [
+      "Froslass-1",
+      "Manectric-1",
+      "Charizard-1"
+    ],
+    "regular-doubles-4": [
+      "Fearow-1",
+      "Grotle-1",
+      "Lumineon-1",
+      "Sunflora-1",
+      "Kingler-1",
+      "Chatot-1",
+      "Crawdaunt-1",
+      "Sandslash-1"
+    ],
+    "regular-doubles-5": [
+      "Ambipom-1",
+      "Ninjask-1",
+      "Blastoise-1",
+      "Forretress-1"
+    ]
+  },
+  "Nico": {
+    "regular-singles-4": [
+      "Cherrim-1",
+      "Sandslash-1",
+      "Kingler-1"
+    ],
+    "regular-singles-5": [
+      "Skarmory-1",
+      "Electrode-1",
+      "Charizard-1"
+    ],
+    "regular-doubles-4": [
+      "Cacturne-?",
+      "Xatu-1",
+      "Banette-1",
+      "Clefable-1",
+      "Cloyster-1",
+      "Piloswine-1",
+      "Dodrio-1",
+      "Stantler-1"
+    ],
+    "regular-doubles-5": [
+      "Whiscash-1",
+      "Huntail-1",
+      "Kangaskhan-1",
+      "Piloswine-1"
+    ]
+  },
+  "Sonia": {
+    "regular-singles-4": [
+      "Lumineon-1",
+      "Wigglytuff-1",
+      "Primeape-1",
+      "Seviper-1",
+      "Magmar-1",
+      "Venomoth-1"
+    ],
+    "regular-singles-5": [
+      "Staraptor-1",
+      "Victreebel-1",
+      "Absol-1"
+    ],
+    "regular-doubles-4": [
+      "Seviper-1",
+      "Raticate-1",
+      "Ninjask-1",
+      "Sandslash-1",
+      "Crawdaunt-1",
+      "Banette-1",
+      "Primeape-1",
+      "Fearow-1"
+    ],
+    "regular-doubles-5": [
+      "Grumpig-1",
+      "Exploud-1",
+      "Marowak-1",
+      "Hitmonlee-1"
+    ]
+  },
+  "Pierre": {
+    "regular-singles-5": [
+      "Hariyama-1",
+      "Meganium-1",
+      "Exploud-1"
+    ],
+    "regular-doubles-4": [
+      "Crawdaunt-1",
+      "Ivysaur-1",
+      "Hitmonlee-1",
+      "Kingler-1",
+      "Dusclops-1",
+      "Omastar-1",
+      "Swalot-1",
+      "Kabutops-1"
+    ],
+    "regular-doubles-5": [
+      "Medicham-1",
+      "Stantler-1",
+      "Kangaskhan-1",
+      "Slowbro-1"
+    ]
+  },
+  "Kylee": {
+    "regular-singles-5": [
+      "Granbull-1",
+      "Rhydon-1",
+      "Electrode-1"
+    ],
+    "regular-doubles-4": [
+      "Scyther-1",
+      "Charmeleon-1",
+      "Fearow-1",
+      "Gabite-1",
+      "Primeape-1",
+      "Crawdaunt-1",
+      "Seviper-1",
+      "Hitmonlee-1"
+    ],
+    "regular-doubles-5": [
+      "Charizard-1",
+      "Marowak-1",
+      "Dewgong-1",
+      "Medicham-1"
+    ]
+  },
+  "Blair": {
+    "regular-singles-7": [
+      "Infernape-2",
+      "Swampert-2",
+      "Glaceon-1",
+      "Walrein-1",
+      "Empoleon-2",
+      "Rhyperior-1 (Palmer Classic)"
+    ],
+    "master-singles": [
+      "Ludicolo-2",
+      "Whiscash-3",
+      "Sceptile-3"
+    ],
+    "regular-doubles-7": [
+      "Salamence-1",
+      "Cradily-1",
+      "Crobat-1",
+      "Probopass-1",
+      "Espeon-1",
+      "Snorlax-1",
+      "Dusknoir-1",
+      "Blaziken-2"
+    ]
+  },
+  "Emilee": {
+    "regular-singles-7": [
+      "Garchomp-1",
+      "Flareon-1",
+      "Salamence-1",
+      "Glaceon-1",
+      "Tyranitar-1"
+    ],
+    "master-singles": [
+      "Cresselia-4",
+      "Hariyama-3",
+      "Rapidash-2",
+      "Espeon-2",
+      "Zapdos-3",
+      "Altaria-2"
+    ],
+    "regular-doubles-7": [
+      "Lickilicky-1",
+      "Jolteon-1",
+      "Magnezone-1",
+      "Bronzong-1",
+      "Granbull-2",
+      "Lucario-1",
+      "Dusknoir-1"
+    ]
+  },
+  "Tiffani": {
+    "regular-singles-7": [
+      "Sceptile-2",
+      "Flygon-1",
+      "Slaking-1",
+      "Blastoise-2",
+      "Dusknoir-1",
+      "Arcanine-1"
+    ],
+    "master-singles": [
+      "Mismagius-3",
+      "Glalie-3",
+      "Hippowdon-2"
+    ],
+    "regular-doubles-7": [
+      "Nidoqueen-1",
+      "Torterra-2",
+      "Hippowdon-1",
+      "Poliwrath-1",
+      "Snorlax-1",
+      "Nidoking-1",
+      "Walrein-1",
+      "Bronzong-1"
+    ]
+  },
+  "Harvey": {
+    "regular-singles-7": [
+      "Typhlosion-2",
+      "Gyarados-1",
+      "Jolteon-1",
+      "Salamence-1",
+      "Snorlax-1",
+      "Walrein-1"
+    ],
+    "master-singles": [
+      "Bastiodon-3",
+      "Exploud-?",
+      "Articuno-1"
+    ],
+    "regular-doubles-7": [
+      "Claydol-1",
+      "Togekiss-1",
+      "Arcanine-1",
+      "Drapion-1",
+      "Lapras-1",
+      "Magnezone-1",
+      "Blissey-1"
+    ]
+  },
+  "Jasper": {
+    "regular-singles-4": [
+      "Pidgeot-1",
+      "Venomoth-1",
+      "Sharpedo-1",
+      "Seviper-1",
+      "Zangoose-1",
+      "Primeape-1"
+    ],
+    "regular-singles-5": [
+      "Mr. Mime-1",
+      "Octillery-1",
+      "Girafarig-1"
+    ],
+    "regular-doubles-4": [
+      "Castform-1",
+      "Chansey-1",
+      "Hitmontop-1",
+      "Mothim-1",
+      "Metang-1",
+      "Kabutops-1",
+      "Girafarig-1"
+    ],
+    "regular-doubles-5": [
+      "Meganium-1",
+      "Lumineon-1",
+      "Rhydon-1",
+      "Zangoose-1"
+    ]
+  },
+  "Aliyah": {
+    "regular-singles-4": [
+      "Cacturne-?",
+      "Piloswine-1",
+      "Hitmonchan-1",
+      "Jumpluff-1",
+      "Seaking-1",
+      "Bellossom-1",
+      "Swalot-1",
+      "Golbat-1",
+      "Octillery-1",
+      "Wigglytuff-1",
+      "Ivysaur-1"
+    ],
+    "regular-singles-5": [
+      "Gastrodon-1",
+      "Mantine-1",
+      "Clefable-1"
+    ],
+    "regular-doubles-4": [
+      "Magcargo-1",
+      "Cloyster-1",
+      "Chansey-1",
+      "Ivysaur-1",
+      "Venomoth-1",
+      "Camerupt-1",
+      "Piloswine-1",
+      "Rotom-1"
+    ],
+    "regular-doubles-5": [
+      "Huntail-1",
+      "Staraptor-1",
+      "Swampert-?",
+      "Kabutops-1"
+    ]
+  },
+  "Tina": {
+    "regular-singles-4": [
+      "Cherrim-1",
+      "Fearow-1",
+      "Kingler-1",
+      "Huntail-1",
+      "Carnivine-1",
+      "Primeape-1",
+      "Golbat-1",
+      "Mantine-1",
+      "Hitmonlee-1"
+    ],
+    "regular-singles-5": [
+      "Sceptile-1",
+      "Swalot-1",
+      "Magmar-1"
+    ],
+    "regular-doubles-4": [
+      "Mantine-1",
+      "Marshtomp-1",
+      "Banette-1",
+      "Sealeo-1",
+      "Cloyster-1",
+      "Torkoal-1",
+      "Golbat-1",
+      "Girafarig-1"
+    ],
+    "regular-doubles-5": [
+      "Blastoise-1",
+      "Omastar-1",
+      "Glalie-1",
+      "Vespiquen-1"
+    ]
+  },
+  "Stewart": {
+    "regular-singles-4": [
+      "Chatot-1",
+      "Seaking-1",
+      "Mantine-1"
+    ],
+    "regular-singles-5": [
+      "Quagsire-1",
+      "Marowak-1",
+      "Skuntank-1"
+    ],
+    "regular-doubles-4": [
+      "Torkoal-1",
+      "Charmeleon-1",
+      "Zangoose-1",
+      "Magneton-1",
+      "Venomoth-1",
+      "Stantler-1",
+      "Bellossom-1"
+    ],
+    "regular-doubles-5": [
+      "Charizard-1",
+      "Quagsire-1",
+      "Electrode-1",
+      "Ambipom-1"
+    ]
+  },
+  "Kolton": {
+    "regular-singles-4": [
+      "Cacturne-?",
+      "Crawdaunt-1",
+      "Torkoal-1"
+    ],
+    "regular-singles-5": [
+      "Jynx-1",
+      "Dewgong-1",
+      "Whiscash-1"
+    ],
+    "regular-doubles-4": [
+      "Quilava-1",
+      "Sharpedo-1",
+      "Chansey-1",
+      "Qwilfish-1",
+      "Pupitar-1",
+      "Magneton-1",
+      "Relicanth-1",
+      "Raticate-1"
+    ],
+    "regular-doubles-5": [
+      "Magneton-1",
+      "Marowak-1",
+      "Slowbro-1",
+      "Seviper-1"
+    ]
+  },
+  "Melody": {
+    "regular-singles-5": [
+      "Staraptor-1",
+      "Empoleon-1",
+      "Tauros-1"
+    ],
+    "regular-doubles-4": [
+      "Primeape-1",
+      "Raticate-1",
+      "Grumpig-1",
+      "Mantine-1",
+      "Seadra-1",
+      "Kingler-1",
+      "Hitmonlee-1",
+      "Furret-1"
+    ],
+    "regular-doubles-5": [
+      "Tropius-1",
+      "Skuntank-1",
+      "Shiftry-1",
+      "Venomoth-1"
+    ]
+  },
+  "Clyde": {
+    "regular-singles-7": [
+      "Togekiss-1",
+      "Blastoise-2",
+      "Lapras-1"
+    ],
+    "master-singles": [
+      "Gallade-2",
+      "Gastrodon-3",
+      "Ludicolo-3",
+      "Shuckle-2",
+      "Exploud-2",
+      "Jolteon-2"
+    ],
+    "regular-doubles-7": [
+      "Jolteon-1",
+      "Muk-1",
+      "Hippowdon-1",
+      "Bastiodon-1",
+      "Claydol-1",
+      "Garchomp-1",
+      "Meganium-2",
+      "Gallade-1"
+    ]
+  },
+  "Clara": {
+    "regular-singles-7": [
+      "Rhyperior-1 (Palmer Classic)",
+      "Hippowdon-1",
+      "Meganium-2"
+    ],
+    "master-singles": [
+      "Gastrodon-2",
+      "Shiftry-3",
+      "Miltank-2",
+      "Latias-2",
+      "Medicham-2",
+      "Blaziken-3"
+    ],
+    "regular-doubles-7": [
+      "Feraligatr-2",
+      "Politoed-1",
+      "Dragonite-2",
+      "Bronzong-1"
+    ]
+  },
+  "Alma": {
+    "regular-singles-7": [
+      "Meganium-2",
+      "Dragonite-2",
+      "Leafeon-1",
+      "Tangrowth-1",
+      "Slaking-1"
+    ],
+    "master-singles": [
+      "Quagsire-2",
+      "Regirock-4",
+      "Regigigas-3"
+    ],
+    "regular-doubles-7": [
+      "Typhlosion-2",
+      "Gliscor-1",
+      "Flareon-1",
+      "Gardevoir-1",
+      "Alakazam-1",
+      "Blissey-1",
+      "Porygon-Z-1",
+      "Scizor-1"
+    ]
+  },
+  "Gunner": {
+    "regular-singles-7": [
+      "Gyarados-1",
+      "Roserade-1",
+      "Floatzel-1",
+      "Milotic-2",
+      "Magnezone-1",
+      "Umbreon-1"
+    ],
+    "master-singles": [
+      "Jynx-3",
+      "Regirock-1",
+      "Skarmory-2"
+    ],
+    "regular-doubles-7": [
+      "Garchomp-1",
+      "Hippowdon-2",
+      "Blastoise-2",
+      "Meganium-2",
+      "Walrein-1",
+      "Shuckle-1",
+      "Kingdra-1",
+      "Altaria-1"
+    ]
+  },
+  "Benito": {
+    "regular-singles-4": [
+      "Arbok-1",
+      "Sharpedo-1",
+      "Stantler-1"
+    ],
+    "regular-singles-5": [
+      "Absol-1",
+      "Carnivine-1",
+      "Lumineon-1"
+    ],
+    "regular-doubles-4": [
+      "Carnivine-1",
+      "Torkoal-1",
+      "Electabuzz-1",
+      "Huntail-1"
+    ],
+    "regular-doubles-5": [
+      "Torterra-1",
+      "Absol-1",
+      "Feraligatr-1",
+      "Weezing-1"
+    ]
+  },
+  "Jesse": {
+    "regular-singles-4": [
+      "Magneton-1",
+      "Cloyster-1",
+      "Hitmontop-1",
+      "Swalot-1",
+      "Noctowl-1",
+      "Hitmonlee-1"
+    ],
+    "regular-singles-5": [
+      "Victreebel-1",
+      "Typhlosion-1",
+      "Vileplume-1"
+    ],
+    "regular-doubles-4": [
+      "Hitmonlee-1",
+      "Huntail-1",
+      "Pidgeot-1",
+      "Dodrio-1"
+    ],
+    "regular-doubles-5": [
+      "Skuntank-1",
+      "Blaziken-1",
+      "Rhydon-1",
+      "Vespiquen-1"
+    ]
+  },
+  "River": {
+    "master-singles": [
+      "Ursaring-2",
+      "Porygon2-2",
+      "Granbull-3",
+      "Walrein-2",
+      "Abomasnow-3",
+      "Weavile-3",
+      "Slaking-3",
+      "Suicune-6",
+      "Feraligatr-4",
+      "Raikou-5"
+    ]
+  },
+  "Kendel": {
+    "master-singles": [
+      "Lucario-2",
+      "Nidoking-2",
+      "Rhyperior-?",
+      "Cradily-3",
+      "Regirock-1",
+      "Drapion-2",
+      "Tangrowth-3",
+      "Leafeon-3",
+      "Drapion-3",
+      "Tangrowth-2",
+      "Snorlax-3",
+      "Typhlosion-4"
+    ]
+  },
+  "Donnell": {
+    "regular-singles-4": [
+      "Pidgeot-1",
+      "Electabuzz-1",
+      "Hitmontop-1",
+      "Prinplup-1",
+      "Rotom-1",
+      "Camerupt-1"
+    ],
+    "regular-singles-5": [
+      "Electrode-1",
+      "Skuntank-1",
+      "Forretress-1"
+    ],
+    "regular-doubles-4": [
+      "Gorebyss-1",
+      "Magcargo-1",
+      "Zangoose-1",
+      "Wartortle-1",
+      "Furret-1",
+      "Sharpedo-1",
+      "Jumpluff-1",
+      "Swellow-1"
+    ],
+    "regular-doubles-5": [
+      "Sceptile-1",
+      "Medicham-1",
+      "Raichu-1",
+      "Lanturn-1"
+    ]
+  },
+  "Royce": {
+    "regular-singles-5": [
+      "Forretress-1",
+      "Fearow-1",
+      "Seviper-1"
+    ],
+    "regular-doubles-4": [
+      "Rotom-1",
+      "Magcargo-1",
+      "Mantine-1",
+      "Kabutops-1",
+      "Crawdaunt-1",
+      "Gabite-1",
+      "Camerupt-1",
+      "Swellow-1"
+    ],
+    "regular-doubles-5": [
+      "Raichu-1",
+      "Golbat-1",
+      "Ludicolo-1",
+      "Skarmory-1"
+    ]
+  },
+  "Brant": {
+    "master-singles": [
+      "Crobat-2",
+      "Cresselia-2",
+      "Weezing-3",
+      "Victreebel-2",
+      "Moltres-4",
+      "Vileplume-3",
+      "Raikou-5",
+      "Snorlax-3",
+      "Entei-5",
+      "Suicune-6"
+    ]
+  },
+  "Aidan": {
+    "master-singles": [
+      "Kangaskhan-2",
+      "Shiftry-2",
+      "Tangrowth-2",
+      "Entei-4",
+      "Tauros-2",
+      "Jynx-3",
+      "Metagross-3",
+      "Slaking-3",
+      "Quagsire-4",
+      "Dragonite-4"
+    ]
+  },
+  "Herman": {
+    "regular-singles-4": [
+      "Tropius-1",
+      "Wigglytuff-1",
+      "Ivysaur-1",
+      "Purugly-1",
+      "Seadra-1",
+      "Chimecho-3"
+    ],
+    "regular-singles-5": [
+      "Staraptor-1",
+      "Rhydon-1",
+      "Weezing-1"
+    ],
+    "regular-singles-6": [
+      "Floatzel-1",
+      "Weavile-1",
+      "Claydol-1"
+    ],
+    "master-singles": [
+      "Rotom-Wash-1",
+      "Arcanine-3",
+      "Metagross-3",
+      "Zapdos-5"
+    ],
+    "regular-doubles-5": [
+      "Rhydon-1",
+      "Magneton-1",
+      "Ludicolo-1",
+      "Meganium-1",
+      "Venusaur-1",
+      "Dewgong-1",
+      "Purugly-1"
+    ],
+    "regular-doubles-6": [
+      "Ninetales-1",
+      "Muk-1",
+      "Abomasnow-1",
+      "Gardevoir-1"
+    ]
+  },
+  "Lincoln": {
+    "regular-singles-5": [
+      "Blastoise-1",
+      "Victreebel-1",
+      "Infernape-1",
+      "Torterra-1",
+      "Ambipom-1",
+      "Mr. Mime-1"
+    ],
+    "regular-singles-6": [
+      "Porygon2-1",
+      "Donphan-1",
+      "Lickilicky-1"
+    ],
+    "regular-doubles-5": [
+      "Staraptor-1",
+      "Sharpedo-1",
+      "Ludicolo-1",
+      "Dodrio-1",
+      "Weezing-1",
+      "Vespiquen-1",
+      "Electrode-1",
+      "Hariyama-1"
+    ],
+    "regular-doubles-6": [
+      "Aerodactyl-1",
+      "Altaria-1",
+      "Ursaring-1",
+      "Starmie-1"
+    ]
+  },
+  "Alaina": {
+    "regular-singles-5": [
+      "Jynx-1",
+      "Dodrio-1",
+      "Cloyster-1",
+      "Lopunny-1",
+      "Manectric-1",
+      "Blaziken-1"
+    ],
+    "regular-singles-6": [
+      "Shuckle-1",
+      "Slowking-1",
+      "Starmie-1"
+    ],
+    "regular-doubles-5": [
+      "Octillery-1",
+      "Swampert-?",
+      "Marowak-1",
+      "Huntail-1",
+      "Lanturn-1",
+      "Blastoise-1",
+      "Glalie-1",
+      "Froslass-1"
+    ],
+    "regular-doubles-6": [
+      "Bronzong-1",
+      "Meganium-1",
+      "Gliscor-1",
+      "Breloom-1"
+    ]
+  },
+  "Harold": {
+    "regular-singles-5": [
+      "Lanturn-1",
+      "Shiftry-1",
+      "Empoleon-1",
+      "Raichu-1",
+      "Blastoise-1"
+    ],
+    "regular-singles-6": [
+      "Altaria-1",
+      "Scizor-1",
+      "Floatzel-1"
+    ],
+    "regular-doubles-5": [
+      "Dodrio-1",
+      "Quagsire-1",
+      "Granbull-1",
+      "Gorebyss-1"
+    ],
+    "regular-doubles-6": [
+      "Gallade-1",
+      "Honchkrow-1",
+      "Drifblim-1",
+      "Aerodactyl-1"
+    ]
+  },
+  "Regina": {
+    "regular-singles-5": [
+      "Mr. Mime-1",
+      "Granbull-1",
+      "Skarmory-1",
+      "Huntail-1",
+      "Golem-1",
+      "Dewgong-1"
+    ],
+    "regular-singles-6": [
+      "Gliscor-1",
+      "Golduck-1",
+      "Gengar-1"
+    ],
+    "regular-doubles-5": [
+      "Medicham-1",
+      "Jynx-1",
+      "Gastrodon-1",
+      "Dugtrio-1",
+      "Pidgeot-1",
+      "Exploud-1",
+      "Dewgong-1",
+      "Kabutops-1"
+    ],
+    "regular-doubles-6": [
+      "Porygon2-1",
+      "Raichu-1",
+      "Drifblim-1",
+      "Golem-1"
+    ]
+  },
+  "Natalia": {
+    "regular-singles-5": [
+      "Hypno-1",
+      "Torterra-1",
+      "Dugtrio-1",
+      "Venusaur-1",
+      "Electrode-1"
+    ],
+    "regular-singles-6": [
+      "Houndoom-1",
+      "Raichu-1",
+      "Torterra-1"
+    ],
+    "master-singles": [
+      "Pelipper-2",
+      "Kingdra-3",
+      "Scizor-4",
+      "Pelipper-3",
+      "Relicanth-2",
+      "Zapdos-6"
+    ],
+    "regular-doubles-5": [
+      "Mr. Mime-1",
+      "Infernape-1",
+      "Tauros-1",
+      "Weezing-1",
+      "Hitmonchan-1",
+      "Dugtrio-1",
+      "Hypno-1",
+      "Huntail-1"
+    ],
+    "regular-doubles-6": [
+      "Blaziken-1",
+      "Miltank-1",
+      "Rampardos-1",
+      "Meganium-1"
+    ]
+  },
+  "Donnie": {
+    "regular-singles-5": [
+      "Magneton-1",
+      "Jynx-1",
+      "Dewgong-1",
+      "Hariyama-1",
+      "Weezing-1",
+      "Empoleon-1"
+    ],
+    "regular-singles-6": [
+      "Golduck-1",
+      "Exeggutor-1",
+      "Toxicroak-1"
+    ],
+    "master-singles": [
+      "Garchomp-3,8",
+      "Suicune-3",
+      "Togekiss-3",
+      "Latios-5"
+    ],
+    "regular-doubles-5": [
+      "Whiscash-1",
+      "Blaziken-1",
+      "Mr. Mime-1",
+      "Jynx-1",
+      "Granbull-1",
+      "Lumineon-1",
+      "Weezing-1",
+      "Forretress-1"
+    ],
+    "regular-doubles-6": [
+      "Rampardos-1",
+      "Tentacruel-1",
+      "Donphan-1",
+      "Roserade-1"
+    ]
+  },
+  "Jane": {
+    "regular-singles-5": [
+      "Venusaur-1",
+      "Skarmory-1",
+      "Froslass-1",
+      "Torterra-1",
+      "Vespiquen-1",
+      "Feraligatr-1"
+    ],
+    "regular-singles-6": [
+      "Gengar-1",
+      "Charizard-1",
+      "Froslass-1"
+    ],
+    "master-singles": [
+      "Ninetales-3",
+      "Venusaur-4",
+      "Dragonite-4",
+      "Ninetales-4",
+      "Shiftry-4",
+      "Latios-5"
+    ],
+    "regular-doubles-5": [
+      "Banette-1",
+      "Froslass-1",
+      "Slowbro-1",
+      "Purugly-1",
+      "Vileplume-1",
+      "Charizard-1",
+      "Torterra-1",
+      "Hariyama-1"
+    ],
+    "regular-doubles-6": [
+      "Ursaring-1",
+      "Quagsire-1",
+      "Abomasnow-1",
+      "Manectric-1"
+    ]
+  },
+  "Myron": {
+    "regular-singles-5": [
+      "Ludicolo-1",
+      "Golbat-1",
+      "Venomoth-1"
+    ],
+    "master-singles": [
+      "Mamoswine-3,5",
+      "Dragonite-4",
+      "Togekiss-3"
+    ],
+    "regular-doubles-4": [
+      "Venomoth-1",
+      "Pupitar-1",
+      "Banette-1",
+      "Croconaw-1"
+    ],
+    "regular-doubles-5": [
+      "Ninjask-1",
+      "Skuntank-1",
+      "Whiscash-1",
+      "Sandslash-1"
+    ]
+  },
+  "Sasha": {
+    "regular-singles-5": [
+      "Staraptor-1",
+      "Charizard-1",
+      "Lopunny-1",
+      "Mr. Mime-1",
+      "Gorebyss-1",
+      "Kabutops-1"
+    ],
+    "regular-singles-6": [
+      "Gallade-1",
+      "Roserade-1",
+      "Aerodactyl-1"
+    ],
+    "master-singles": [
+      "Salamence-3",
+      "Magnezone-3",
+      "Suicune-3",
+      "Mamoswine-3,5",
+      "Zapdos-5"
+    ],
+    "regular-doubles-5": [
+      "Blastoise-1",
+      "Mantine-1",
+      "Gastrodon-1",
+      "Cloyster-1",
+      "Mr. Mime-1",
+      "Weezing-1",
+      "Manectric-1",
+      "Dugtrio-1"
+    ],
+    "regular-doubles-6": [
+      "Donphan-1",
+      "Jynx-1",
+      "Ninetales-1",
+      "Mr. Mime-1"
+    ]
+  },
+  "Dallin": {
+    "regular-singles-7": [
+      "Rampardos-1",
+      "Tyranitar-1",
+      "Leafeon-1",
+      "Magnezone-1",
+      "Meganium-2"
+    ],
+    "master-singles": [
+      "Luxray-2",
+      "Whiscash-2",
+      "Shiftry-3",
+      "Glalie-2",
+      "Honchkrow-2",
+      "Victreebel-3"
+    ],
+    "regular-doubles-7": [
+      "Snorlax-1",
+      "Regigigas-1 (Palmer Classic)",
+      "Jolteon-1",
+      "Scizor-1",
+      "Gyarados-1",
+      "Tyranitar-1",
+      "Infernape-2",
+      "Slaking-1"
+    ]
+  },
+  "Cortney": {
+    "regular-singles-7": [
+      "Torterra-2",
+      "Salamence-1",
+      "Kingdra-1",
+      "Feraligatr-2",
+      "Vaporeon-1"
+    ],
+    "master-singles": [
+      "Zapdos-4",
+      "Hippowdon-2",
+      "Nidoking-2",
+      "Porygon-Z-2",
+      "Entei-4",
+      "Dragonite-3"
+    ],
+    "regular-doubles-7": [
+      "Heracross-1",
+      "Umbreon-1",
+      "Kingdra-1",
+      "Ninetales-1",
+      "Dugtrio-2",
+      "Aerodactyl-1",
+      "Probopass-1",
+      "Scizor-1"
+    ]
+  },
+  "Jayden": {
+    "regular-singles-7": [
+      "Blaziken-2",
+      "Blastoise-2",
+      "Sceptile-2",
+      "Probopass-1",
+      "Toxicroak-1",
+      "Bronzong-1"
+    ],
+    "master-singles": [
+      "Breloom-3",
+      "Raikou-1",
+      "Vileplume-3",
+      "Bastiodon-3",
+      "Quagsire-3",
+      "Floatzel-3"
+    ],
+    "regular-doubles-7": [
+      "Magnezone-1",
+      "Lapras-1",
+      "Tangrowth-1",
+      "Milotic-2",
+      "Ninetales-1",
+      "Garchomp-1",
+      "Leafeon-1",
+      "Floatzel-1"
+    ]
+  },
+  "Ellis": {
+    "regular-singles-7": [
+      "Scizor-1",
+      "Politoed-1",
+      "Aggron-1",
+      "Blastoise-2",
+      "Dragonite-2",
+      "Hippowdon-1"
+    ],
+    "master-singles": [
+      "Skarmory-4",
+      "Gengar-4",
+      "Dragonite-4",
+      "Cloyster-1",
+      "Magnezone-3"
+    ],
+    "regular-doubles-7": [
+      "Magmortar-1",
+      "Abomasnow-1",
+      "Walrein-1",
+      "Flygon-1",
+      "Vaporeon-1",
+      "Armaldo-1",
+      "Electivire-1",
+      "Espeon-1"
+    ]
+  },
+  "Celina": {
+    "regular-singles-7": [
+      "Feraligatr-2",
+      "Dusknoir-1",
+      "Snorlax-1",
+      "Mamoswine-1",
+      "Electivire-1",
+      "Lucario-1"
+    ],
+    "master-singles": [
+      "Electivire-2",
+      "Electrode-2",
+      "Drifblim-3"
+    ],
+    "regular-doubles-7": [
+      "Slaking-1",
+      "Cradily-2",
+      "Togekiss-1",
+      "Meganium-2",
+      "Dugtrio-2",
+      "Typhlosion-2",
+      "Dusknoir-1",
+      "Arcanine-1"
+    ]
+  },
+  "Abbey": {
+    "regular-singles-7": [
+      "Umbreon-1",
+      "Feraligatr-2",
+      "Infernape-2",
+      "Probopass-1",
+      "Poliwrath-1",
+      "Armaldo-1"
+    ],
+    "master-singles": [
+      "Abomasnow-6,10 (Candice)",
+      "Walrein-3",
+      "Mamoswine-4",
+      "Froslass-4"
+    ],
+    "regular-doubles-7": [
+      "Pinsir-1",
+      "Electivire-1",
+      "Sceptile-2",
+      "Gardevoir-1",
+      "Nidoking-1",
+      "Slaking-1",
+      "Swampert-2",
+      "Luxray-1"
+    ]
+  },
+  "Irene": {
+    "regular-singles-7": [
+      "Marowak-2",
+      "Umbreon-1",
+      "Arcanine-1",
+      "Porygon-Z-1",
+      "Blaziken-2",
+      "Crobat-1"
+    ],
+    "master-singles": [
+      "Espeon-3",
+      "Cloyster-3",
+      "Raikou-4",
+      "Blaziken-4",
+      "Clefable-2"
+    ],
+    "regular-doubles-7": [
+      "Salamence-1",
+      "Floatzel-1",
+      "Blissey-1",
+      "Gliscor-1",
+      "Glaceon-1",
+      "Slaking-1",
+      "Dragonite-2",
+      "Venusaur-2"
+    ]
+  },
+  "Lionel": {
+    "regular-singles-7": [
+      "Mamoswine-1",
+      "Dragonite-2",
+      "Rhyperior-1 (Palmer Classic)",
+      "Gliscor-1",
+      "Kingdra-1",
+      "Venusaur-2"
+    ],
+    "master-singles": [
+      "Tyranitar-7 (Roark)",
+      "Garchomp-4",
+      "Gastrodon-4",
+      "Dugtrio-4",
+      "Cradily-4"
+    ],
+    "regular-doubles-7": [
+      "Yanmega-1",
+      "Arcanine-1",
+      "Blissey-1",
+      "Floatzel-1",
+      "Dusknoir-1",
+      "Wailord-?",
+      "Steelix-1"
+    ]
+  },
+  "Brianne": {
+    "regular-singles-4": [
+      "Magcargo-1",
+      "Cloyster-1",
+      "Banette-1",
+      "Xatu-1",
+      "Magmar-1",
+      "Piloswine-1",
+      "Cacturne-?",
+      "Stantler-1",
+      "Torkoal-1"
+    ],
+    "regular-singles-5": [
+      "Vileplume-1",
+      "Swampert-?",
+      "Ludicolo-1"
+    ],
+    "regular-doubles-4": [
+      "Noctowl-1",
+      "Bibarel-1",
+      "Ninjask-1",
+      "Lumineon-1",
+      "Stantler-1",
+      "Quilava-1",
+      "Zangoose-1",
+      "Magmar-1"
+    ],
+    "regular-doubles-5": [
+      "Dewgong-1",
+      "Primeape-1",
+      "Exploud-1",
+      "Mantine-1"
+    ]
+  },
+  "Kate": {
+    "regular-singles-4": [
+      "Electabuzz-1",
+      "Magneton-1",
+      "Relicanth-1",
+      "Chansey-1",
+      "Carnivine-1",
+      "Hitmontop-1"
+    ],
+    "regular-singles-5": [
+      "Hitmontop-1",
+      "Skuntank-1",
+      "Electrode-1"
+    ],
+    "regular-doubles-4": [
+      "Girafarig-1",
+      "Chatot-1",
+      "Dusclops-1",
+      "Raticate-1",
+      "Relicanth-1",
+      "Cloyster-1",
+      "Fearow-1",
+      "Hitmonlee-1"
+    ],
+    "regular-doubles-5": [
+      "Huntail-1",
+      "Slowbro-1",
+      "Raichu-1",
+      "Breloom-1"
+    ]
+  },
+  "Chelsie": {
+    "regular-singles-5": [
+      "Ambipom-1",
+      "Meganium-1",
+      "Tauros-1"
+    ],
+    "regular-doubles-4": [
+      "Magcargo-1",
+      "Bellossom-1",
+      "Carnivine-1",
+      "Kecleon-1",
+      "Gorebyss-1",
+      "Relicanth-1",
+      "Seviper-1",
+      "Hitmonlee-1"
+    ],
+    "regular-doubles-5": [
+      "Froslass-1",
+      "Omastar-1",
+      "Golem-1",
+      "Golbat-1"
+    ]
+  },
+  "Kailey": {
+    "regular-singles-7": [
+      "Jolteon-1",
+      "Dugtrio-2",
+      "Venusaur-2",
+      "Donphan-1",
+      "Porygon-Z-1",
+      "Blaziken-2"
+    ],
+    "master-singles": [
+      "Gardevoir-2",
+      "Metagross-2",
+      "Moltres-1"
+    ],
+    "regular-doubles-7": [
+      "Typhlosion-2",
+      "Lucario-1",
+      "Porygon-Z-1",
+      "Umbreon-1",
+      "Gliscor-1",
+      "Dragonite-2",
+      "Flygon-1",
+      "Luxray-1"
+    ]
+  },
+  "Mayra": {
+    "regular-singles-7": [
+      "Salamence-1",
+      "Aerodactyl-1",
+      "Roserade-1",
+      "Luxray-1",
+      "Kingdra-1",
+      "Meganium-2"
+    ],
+    "master-singles": [
+      "Dusknoir-2",
+      "Mismagius-2",
+      "Slaking-2"
+    ],
+    "regular-doubles-7": [
+      "Togekiss-1",
+      "Heatran-1 (Palmer Classic)",
+      "Tyranitar-1",
+      "Nidoking-1",
+      "Meganium-2",
+      "Cradily-1",
+      "Crobat-1",
+      "Dragonite-2"
+    ]
+  },
+  "Pamela": {
+    "regular-singles-4": [
+      "Cacturne-?",
+      "Hitmontop-1",
+      "Torkoal-1"
+    ],
+    "regular-singles-5": [
+      "Hitmontop-1",
+      "Granbull-1",
+      "Gastrodon-1"
+    ],
+    "regular-doubles-4": [
+      "Banette-1",
+      "Castform-1",
+      "Ninjask-1",
+      "Raticate-1",
+      "Combusken-1",
+      "Dodrio-1",
+      "Camerupt-1"
+    ],
+    "regular-doubles-5": [
+      "Skarmory-1",
+      "Victreebel-1",
+      "Swampert-?",
+      "Infernape-1"
+    ]
+  },
+  "Daniela": {
+    "regular-singles-5": [
+      "Kabutops-1",
+      "Raichu-1",
+      "Granbull-1"
+    ],
+    "regular-doubles-4": [
+      "Ninjask-1",
+      "Tropius-1",
+      "Bellossom-1",
+      "Clefable-1",
+      "Banette-1",
+      "Rotom-1",
+      "Seaking-1",
+      "Venomoth-1"
+    ],
+    "regular-doubles-5": [
+      "Whiscash-1",
+      "Absol-1",
+      "Marowak-1",
+      "Granbull-1"
+    ]
+  },
+  "Melinda": {
+    "regular-singles-5": [
+      "Tropius-1",
+      "Raichu-1",
+      "Ambipom-1"
+    ],
+    "regular-doubles-4": [
+      "Crawdaunt-1",
+      "Cacturne-?",
+      "Lumineon-1",
+      "Electabuzz-1",
+      "Girafarig-1",
+      "Tropius-1",
+      "Hitmontop-1",
+      "Gorebyss-1"
+    ],
+    "regular-doubles-5": [
+      "Typhlosion-1",
+      "Gorebyss-1",
+      "Hypno-1",
+      "Charizard-1"
+    ]
+  },
+  "Lorena": {
+    "regular-singles-5": [
+      "Medicham-1",
+      "Lopunny-1",
+      "Slowbro-1"
+    ],
+    "regular-doubles-4": [
+      "Clefable-1",
+      "Chansey-1",
+      "Gorebyss-1",
+      "Raticate-1",
+      "Octillery-1",
+      "Solrock-1",
+      "Kingler-1",
+      "Chimecho-3"
+    ],
+    "regular-doubles-5": [
+      "Zangoose-1",
+      "Tauros-1",
+      "Blaziken-1",
+      "Cloyster-1"
+    ]
+  },
+  "Eva": {
+    "regular-singles-5": [
+      "Absol-1",
+      "Camerupt-1",
+      "Jumpluff-1"
+    ],
+    "regular-doubles-4": [
+      "Mantine-1",
+      "Golbat-1",
+      "Noctowl-1",
+      "Tropius-1",
+      "Metang-1",
+      "Omastar-1",
+      "Hitmontop-1",
+      "Sudowoodo-1"
+    ],
+    "regular-doubles-5": [
+      "Breloom-1",
+      "Glalie-1",
+      "Typhlosion-1",
+      "Hariyama-1"
+    ]
+  },
+  "Sylvia": {
+    "regular-singles-7": [
+      "Venusaur-2",
+      "Jolteon-1",
+      "Marowak-2"
+    ],
+    "master-singles": [
+      "Slowking-2",
+      "Granbull-2",
+      "Vaporeon-2",
+      "Raikou-3",
+      "Alakazam-2",
+      "Pinsir-2"
+    ],
+    "regular-doubles-7": [
+      "Venusaur-2",
+      "Machamp-1",
+      "Dugtrio-2",
+      "Electivire-1",
+      "Hippowdon-1",
+      "Dragonite-2",
+      "Snorlax-1",
+      "Aggron-1"
+    ]
+  },
+  "Kristy": {
+    "regular-singles-7": [
+      "Wailord-?",
+      "Magnezone-1",
+      "Blissey-1"
+    ],
+    "master-singles": [
+      "Starmie-1",
+      "Ambipom-3",
+      "Articuno-2",
+      "Ampharos-3",
+      "Registeel-2",
+      "Milotic-3"
+    ],
+    "regular-doubles-7": [
+      "Glaceon-1",
+      "Nidoqueen-1",
+      "Blastoise-2",
+      "Gardevoir-1",
+      "Flygon-1",
+      "Tangrowth-1",
+      "Lucario-1",
+      "Infernape-2"
+    ]
+  },
+  "Grady": {
+    "regular-singles-4": [
+      "Electabuzz-1",
+      "Chimecho-3",
+      "Grotle-1",
+      "Seviper-1",
+      "Sealeo-1",
+      "Cherrim-1",
+      "Scyther-1",
+      "Omastar-1",
+      "Purugly-1",
+      "Sharpedo-1",
+      "Sneasel-1",
+      "Hitmontop-1",
+      "Octillery-1",
+      "Wormadam-1"
+    ],
+    "regular-singles-5": [
+      "Blastoise-1",
+      "Typhlosion-1",
+      "Ambipom-1",
+      "Weezing-1",
+      "Charizard-1",
+      "Dugtrio-1",
+      "Feraligatr-1"
+    ]
+  },
+  "Jackie": {
+    "regular-singles-4": [
+      "Cloyster-1",
+      "Carnivine-1",
+      "Scyther-1",
+      "Dusclops-1",
+      "Seadra-1",
+      "Torkoal-1",
+      "Gligar-1"
+    ],
+    "regular-singles-5": [
+      "Rhydon-1",
+      "Glalie-1",
+      "Lanturn-1",
+      "Sandslash-1",
+      "Jynx-1",
+      "Cacturne-?"
+    ]
+  },
+  "Jerrell": {
+    "master-singles": [
+      "Porygon-Z-2",
+      "Hariyama-2",
+      "Registeel-1",
+      "Suicune-3",
+      "Machamp-2",
+      "Drifblim-2",
+      "Scizor-4",
+      "Lucario-3,10 (Cynthia)",
+      "Breloom-5",
+      "Lucario-2",
+      "Venusaur-6"
+    ]
+  },
+  "Kennedy": {
+    "master-singles": [
+      "Blastoise-3",
+      "Flareon-2",
+      "Regice-4",
+      "Lopunny-3",
+      "Heracross-2",
+      "Weavile-2",
+      "Lanturn-4",
+      "Probopass-3",
+      "Heatran-6",
+      "Milotic-4",
+      "Tyranitar-5",
+      "Latios-5"
+    ]
+  },
+  "Bradly": {
+    "regular-singles-5": [
+      "Slowbro-1",
+      "Xatu-1",
+      "Hitmonlee-1",
+      "Gastrodon-1",
+      "Marowak-1",
+      "Kangaskhan-1"
+    ],
+    "regular-singles-6": [
+      "Lickilicky-1",
+      "Vileplume-1",
+      "Absol-1"
+    ],
+    "regular-doubles-5": [
+      "Marowak-1",
+      "Sceptile-1",
+      "Lanturn-1",
+      "Froslass-1",
+      "Exploud-1",
+      "Gastrodon-1",
+      "Absol-1",
+      "Infernape-1"
+    ],
+    "regular-doubles-6": [
+      "Gardevoir-1",
+      "Altaria-1",
+      "Rapidash-1",
+      "Roserade-1"
+    ]
+  },
+  "Cyril": {
+    "regular-singles-5": [
+      "Magmar-1",
+      "Typhlosion-1",
+      "Dugtrio-1",
+      "Octillery-1",
+      "Forretress-1",
+      "Breloom-1"
+    ],
+    "regular-singles-6": [
+      "Steelix-1",
+      "Yanmega-1",
+      "Lickilicky-1"
+    ],
+    "regular-doubles-5": [
+      "Sceptile-1",
+      "Lopunny-1",
+      "Raichu-1",
+      "Tauros-1",
+      "Shiftry-1",
+      "Primeape-1",
+      "Feraligatr-1",
+      "Hariyama-1"
+    ],
+    "regular-doubles-6": [
+      "Alakazam-1",
+      "Porygon2-1",
+      "Gliscor-1",
+      "Ampharos-1"
+    ]
+  },
+  "Macy": {
+    "regular-singles-5": [
+      "Tauros-1",
+      "Meganium-1",
+      "Jynx-1",
+      "Sharpedo-1",
+      "Zangoose-1"
+    ],
+    "regular-singles-6": [
+      "Gallade-1",
+      "Cradily-1",
+      "Houndoom-1"
+    ],
+    "regular-doubles-5": [
+      "Slowbro-1",
+      "Grumpig-1",
+      "Torterra-1",
+      "Jumpluff-1",
+      "Golem-1",
+      "Tauros-1",
+      "Sceptile-1",
+      "Venusaur-1"
+    ],
+    "regular-doubles-6": [
+      "Aerodactyl-1",
+      "Steelix-1",
+      "Armaldo-1",
+      "Alakazam-1"
+    ]
+  },
+  "Kira": {
+    "regular-singles-5": [
+      "Vespiquen-1",
+      "Jynx-1",
+      "Staraptor-1",
+      "Magneton-1",
+      "Exploud-1",
+      "Weezing-1"
+    ],
+    "regular-singles-6": [
+      "Swampert-?",
+      "Yanmega-1",
+      "Shuckle-1"
+    ],
+    "regular-doubles-5": [
+      "Staraptor-1",
+      "Meganium-1",
+      "Vileplume-1",
+      "Skuntank-1",
+      "Blaziken-1",
+      "Victreebel-1",
+      "Glalie-1"
+    ],
+    "regular-doubles-6": [
+      "Electrode-1",
+      "Machamp-1",
+      "Gallade-1",
+      "Whiscash-1"
+    ]
+  },
+  "Breana": {
+    "regular-singles-5": [
+      "Glalie-1",
+      "Marowak-1",
+      "Vileplume-1",
+      "Blastoise-1",
+      "Infernape-1",
+      "Hariyama-1"
+    ],
+    "regular-singles-6": [
+      "Nidoqueen-1",
+      "Rhydon-1",
+      "Ambipom-1"
+    ],
+    "regular-doubles-5": [
+      "Kangaskhan-1",
+      "Magmar-1",
+      "Typhlosion-1",
+      "Torterra-1",
+      "Lopunny-1",
+      "Primeape-1",
+      "Absol-1",
+      "Gastrodon-1"
+    ],
+    "regular-doubles-6": [
+      "Exploud-1",
+      "Drifblim-1",
+      "Nidoqueen-1",
+      "Staraptor-1"
+    ]
+  },
+  "Darrian": {
+    "regular-singles-5": [
+      "Typhlosion-1",
+      "Kingler-1",
+      "Girafarig-1",
+      "Rhydon-1",
+      "Shiftry-1",
+      "Hariyama-1"
+    ],
+    "regular-singles-6": [
+      "Machamp-1",
+      "Aerodactyl-1",
+      "Drifblim-1"
+    ],
+    "regular-doubles-5": [
+      "Kangaskhan-1",
+      "Grumpig-1",
+      "Venusaur-1",
+      "Jumpluff-1",
+      "Torterra-1",
+      "Charizard-1",
+      "Typhlosion-1",
+      "Hypno-1"
+    ],
+    "regular-doubles-6": [
+      "Exeggutor-1",
+      "Claydol-1",
+      "Bronzong-1",
+      "Bastiodon-1"
+    ]
+  },
+  "Darcy": {
+    "regular-singles-7": [
+      "Charizard-2",
+      "Typhlosion-2",
+      "Empoleon-2",
+      "Gyarados-1",
+      "Gallade-1",
+      "Machamp-1"
+    ],
+    "master-singles": [
+      "Roserade-2,3",
+      "Salamence-2",
+      "Lopunny-2",
+      "Exploud-?",
+      "Metagross-2",
+      "Umbreon-2"
+    ],
+    "regular-doubles-7": [
+      "Mamoswine-1",
+      "Glaceon-1",
+      "Dugtrio-2",
+      "Espeon-1",
+      "Aggron-1",
+      "Gardevoir-1",
+      "Charizard-2",
+      "Blastoise-2"
+    ]
+  },
+  "Denver": {
+    "regular-singles-7": [
+      "Glaceon-1",
+      "Gardevoir-1",
+      "Claydol-1",
+      "Aggron-1",
+      "Metagross-1",
+      "Flygon-1"
+    ],
+    "master-singles": [
+      "Jynx-2",
+      "Typhlosion-3",
+      "Nidoqueen-2",
+      "Politoed-3",
+      "Kingdra-2",
+      "Zapdos-1"
+    ],
+    "regular-doubles-7": [
+      "Floatzel-1",
+      "Rhyperior-1 (Palmer Classic)",
+      "Blissey-1",
+      "Gardevoir-1",
+      "Lapras-1",
+      "Kingdra-1",
+      "Flareon-1"
+    ]
+  },
+  "Rusty": {
+    "regular-singles-7": [
+      "Walrein-1",
+      "Snorlax-1",
+      "Dugtrio-2",
+      "Marowak-2",
+      "Aggron-1",
+      "Tangrowth-1"
+    ],
+    "master-singles": [
+      "Kangaskhan-2",
+      "Aggron-?",
+      "Charizard-3",
+      "Muk-2",
+      "Regirock-3",
+      "Infernape-3"
+    ],
+    "regular-doubles-7": [
+      "Garchomp-1",
+      "Bronzong-1",
+      "Electivire-1",
+      "Venusaur-2",
+      "Blissey-1",
+      "Metagross-1",
+      "Arcanine-1",
+      "Espeon-1"
+    ]
+  },
+  "Joy": {
+    "regular-singles-7": [
+      "Lucario-1",
+      "Honchkrow-1",
+      "Gallade-1",
+      "Mamoswine-1",
+      "Charizard-2"
+    ],
+    "master-singles": [
+      "Toxicroak-2",
+      "Bronzong-2",
+      "Yanmega-2",
+      "Registeel-3",
+      "Cradily-2",
+      "Scizor-3"
+    ],
+    "regular-doubles-7": [
+      "Gastrodon-2",
+      "Slaking-1",
+      "Crobat-1",
+      "Machamp-1",
+      "Togekiss-1",
+      "Arcanine-1",
+      "Snorlax-1",
+      "Venusaur-2"
+    ]
+  },
+  "Codie": {
+    "regular-singles-5": [
+      "Noctowl-1",
+      "Dugtrio-1",
+      "Weezing-1",
+      "Manectric-1",
+      "Sceptile-1",
+      "Froslass-1",
+      "Mr. Mime-1",
+      "Vespiquen-1",
+      "Quagsire-1"
+    ],
+    "regular-singles-6": [
+      "Muk-1",
+      "Tauros-1",
+      "Breloom-1"
+    ],
+    "regular-doubles-5": [
+      "Medicham-1",
+      "Banette-1",
+      "Hariyama-1",
+      "Sandslash-1",
+      "Magneton-1",
+      "Quagsire-1",
+      "Froslass-1",
+      "Kingler-1"
+    ],
+    "regular-doubles-6": [
+      "Gardevoir-1",
+      "Infernape-1",
+      "Gengar-1",
+      "Blaziken-1"
+    ]
+  },
+  "Erich": {
+    "regular-singles-5": [
+      "Blastoise-1",
+      "Granbull-1",
+      "Sceptile-1",
+      "Swampert-?",
+      "Omastar-1",
+      "Grumpig-1"
+    ],
+    "regular-singles-6": [
+      "Mismagius-1",
+      "Skuntank-1",
+      "Froslass-1"
+    ],
+    "regular-doubles-5": [
+      "Blastoise-1",
+      "Golem-1",
+      "Meganium-1",
+      "Feraligatr-1",
+      "Venusaur-1",
+      "Empoleon-1",
+      "Glalie-1",
+      "Electrode-1"
+    ],
+    "regular-doubles-6": [
+      "Miltank-1",
+      "Nidoqueen-1",
+      "Bastiodon-1",
+      "Quagsire-1"
+    ]
+  },
+  "Garett": {
+    "regular-singles-5": [
+      "Meganium-1",
+      "Electabuzz-1",
+      "Girafarig-1",
+      "Skuntank-1",
+      "Forretress-1",
+      "Whiscash-1"
+    ],
+    "regular-singles-6": [
+      "Venusaur-1",
+      "Golduck-1",
+      "Nidoking-1"
+    ],
+    "regular-doubles-5": [
+      "Octillery-1",
+      "Manectric-1",
+      "Ambipom-1",
+      "Swalot-1",
+      "Mr. Mime-1",
+      "Rotom-1",
+      "Lopunny-1",
+      "Cacturne-?"
+    ],
+    "regular-doubles-6": [
+      "Mismagius-1",
+      "Blaziken-1",
+      "Houndoom-1",
+      "Aerodactyl-1"
+    ]
+  },
+  "Rhett": {
+    "regular-singles-5": [
+      "Forretress-1",
+      "Venomoth-1",
+      "Dodrio-1",
+      "Charizard-1",
+      "Tauros-1",
+      "Swampert-?"
+    ],
+    "regular-singles-6": [
+      "Ursaring-1",
+      "Poliwrath-1",
+      "Weavile-1"
+    ],
+    "regular-doubles-5": [
+      "Ambipom-1",
+      "Jumpluff-1",
+      "Kangaskhan-1",
+      "Venomoth-1",
+      "Exploud-1",
+      "Gastrodon-1",
+      "Dugtrio-1",
+      "Victreebel-1"
+    ],
+    "regular-doubles-6": [
+      "Gliscor-1",
+      "Feraligatr-1",
+      "Claydol-1",
+      "Vileplume-1"
+    ]
+  },
+  "Hernan": {
+    "regular-singles-7": [
+      "Feraligatr-2",
+      "Starmie-1",
+      "Luxray-1",
+      "Milotic-2",
+      "Gyarados-1",
+      "Umbreon-1"
+    ],
+    "master-singles": [
+      "Breloom-2",
+      "Ampharos-2",
+      "Ludicolo-3",
+      "Raikou-2",
+      "Regice-1",
+      "Latias-3"
+    ],
+    "regular-doubles-7": [
+      "Mamoswine-1",
+      "Infernape-2",
+      "Hippowdon-1",
+      "Lapras-1"
+    ]
+  },
+  "Alonso": {
+    "regular-singles-7": [
+      "Crobat-1",
+      "Dragonite-2",
+      "Probopass-1",
+      "Milotic-2",
+      "Slowking-1",
+      "Weavile-1"
+    ],
+    "master-singles": [
+      "Heracross-2",
+      "Forretress-3",
+      "Scizor-2"
+    ],
+    "regular-doubles-7": [
+      "Gyarados-1",
+      "Poliwrath-1",
+      "Leafeon-1",
+      "Abomasnow-1",
+      "Vaporeon-1",
+      "Infernape-2",
+      "Typhlosion-2",
+      "Mamoswine-1"
+    ]
+  },
+  "Emmett": {
+    "regular-singles-6": [
+      "Armaldo-1",
+      "Nidoking-1",
+      "Slowking-1"
+    ],
+    "regular-singles-7": [
+      "Gengar-1",
+      "Magmortar-1",
+      "Dusknoir-1"
+    ],
+    "regular-doubles-6": [
+      "Venusaur-1",
+      "Tentacruel-1",
+      "Mismagius-1",
+      "Tauros-1"
+    ],
+    "regular-doubles-7": [
+      "Glaceon-1",
+      "Lapras-1",
+      "Probopass-1",
+      "Lucario-1"
+    ]
+  },
+  "Quincy": {
+    "regular-singles-6": [
+      "Aerodactyl-1",
+      "Rampardos-1",
+      "Mismagius-1",
+      "Armaldo-1",
+      "Toxicroak-1",
+      "Floatzel-1"
+    ],
+    "regular-singles-7": [
+      "Infernape-2",
+      "Swampert-2",
+      "Magmortar-1"
+    ],
+    "regular-doubles-6": [
+      "Exploud-1",
+      "Slowking-1",
+      "Lickilicky-1",
+      "Victreebel-1"
+    ],
+    "regular-doubles-7": [
+      "Golduck-1",
+      "Magnezone-1",
+      "Lucario-1",
+      "Alakazam-1"
+    ]
+  },
+  "Auston": {
+    "master-singles": [
+      "Nidoking-3",
+      "Slowbro-3",
+      "Moltres-2",
+      "Rhyperior-?",
+      "Medicham-2",
+      "Electrode-2",
+      "Drifblim-4",
+      "Moltres-5,6 (Byron)",
+      "Latios-5",
+      "Garchomp-3,8",
+      "Tyranitar-5"
+    ]
+  },
+  "Coby": {
+    "master-singles": [
+      "Exploud-2",
+      "Moltres-1",
+      "Rapidash-2",
+      "Vileplume-2",
+      "Hariyama-2",
+      "Regice-3",
+      "Umbreon-3",
+      "Weezing-4",
+      "Tyranitar-5",
+      "Drapion-3"
+    ]
+  },
+  "Chester": {
+    "master-singles": [
+      "Mr. Mime-2",
+      "Articuno-3",
+      "Hypno-2",
+      "Forretress-2",
+      "Moltres-4",
+      "Gastrodon-5",
+      "Articuno-5",
+      "Regirock-5",
+      "Gastrodon-3",
+      "Gliscor-3"
+    ]
+  },
+  "Codi": {
+    "master-singles": [
+      "Marowak-3",
+      "Entei-1",
+      "Medicham-3",
+      "Politoed-3",
+      "Kingdra-2",
+      "Nidoqueen-?",
+      "Alakazam-5",
+      "Salamence-4",
+      "Exeggutor-3",
+      "Salamence-2",
+      "Weavile-3"
+    ]
+  },
+  "Rex": {
+    "regular-doubles-6": [
+      "Ampharos-1",
+      "Venusaur-1",
+      "Shuckle-1",
+      "Lanturn-1",
+      "Starmie-1",
+      "Muk-1",
+      "Steelix-1",
+      "Toxicroak-1"
+    ],
+    "regular-doubles-7": [
+      "Sceptile-2",
+      "Salamence-1",
+      "Tyranitar-1",
+      "Porygon-Z-1"
+    ]
+  },
+  "Tyron": {
+    "regular-doubles-6": [
+      "Drapion-1",
+      "Ambipom-1",
+      "Gallade-1",
+      "Porygon2-1",
+      "Gengar-1",
+      "Manectric-1",
+      "Heracross-1",
+      "Skuntank-1"
+    ],
+    "regular-doubles-7": [
+      "Empoleon-2",
+      "Toxicroak-1",
+      "Porygon-Z-1",
+      "Blaziken-2"
+    ]
+  },
+  "Kenton": {
+    "master-singles": [
+      "Pinsir-2",
+      "Registeel-2",
+      "Vespiquen-2",
+      "Cresselia-5",
+      "Latias-1",
+      "Weavile-2",
+      "Gardevoir-5",
+      "Charizard-5",
+      "Rampardos-3,4 (Roark)",
+      "Espeon-2"
+    ]
+  },
+  "Tavon": {
+    "master-singles": [
+      "Altaria-3",
+      "Blissey-2",
+      "Latios-3",
+      "Zapdos-1",
+      "Moltres-2",
+      "Pinsir-3",
+      "Lapras-4",
+      "Miltank-4",
+      "Regigigas-6",
+      "Gengar-5"
+    ]
+  },
+  "Myron and Jane": {
+    "master-doubles": [
+      "Ninetales-5",
+      "Charizard-4",
+      "Venusaur-5",
+      "Garchomp-5",
+      "Rhyperior-4"
+    ]
+  },
+  "Myron and Natalia": {
+    "master-doubles": [
+      "Suicune-5",
+      "Togekiss-4",
+      "Garchomp-7",
+      "Tyranitar-4"
+    ]
+  },
+  "Herman and Natalia": {
+    "master-doubles": [
+      "Politoed-4",
+      "Zapdos-7",
+      "Kingdra-4",
+      "Scizor-5,7,8 (Crasher Wake)",
+      "Lapras-3"
+    ]
+  },
+  "Donnie and Sasha": {
+    "master-doubles": [
+      "Hitmontop-2",
+      "Gardevoir-4",
+      "Alakazam-4",
+      "Garchomp-6",
+      "Mamoswine-3,5"
+    ]
+  },
+  "Kellen and Alton": {
+    "master-doubles": [
+      "Lickilicky-3",
+      "Scizor-4",
+      "Miltank-4",
+      "Aerodactyl-3,6,7 (Riley/Marley)"
+    ]
+  },
+  "Kellen and Mikel": {
+    "master-doubles": [
+      "Drifblim-2",
+      "Wailord-3",
+      "Muk-3",
+      "Raichu-2"
+    ]
+  },
+  "Kellen and Carlo": {
+    "master-doubles": [
+      "Probopass-3",
+      "Typhlosion-4",
+      "Feraligatr-4",
+      "Latias-5"
+    ]
+  },
+  "Alton and Joy": {
+    "master-doubles": [
+      "Swampert-3",
+      "Miltank-3",
+      "Entei-2",
+      "Bronzong-2"
+    ]
+  },
+  "Alton and Lyle": {
+    "master-doubles": [
+      "Abomasnow-5",
+      "Charizard-5",
+      "Registeel-5",
+      "Articuno-5"
+    ]
+  },
+  "Alton and Andreas": {
+    "master-doubles": [
+      "Abomasnow-5",
+      "Lapras-4",
+      "Arcanine-4",
+      "Medicham-4"
+    ]
+  },
+  "Alton and Tyrell": {
+    "master-doubles": [
+      "Typhlosion-4",
+      "Nidoking-4",
+      "Probopass-3",
+      "Articuno-5"
+    ]
+  },
+  "Margot and Turner": {
+    "master-doubles": [
+      "Gastrodon-2",
+      "Entei-1",
+      "Charizard-3",
+      "Forretress-2"
+    ]
+  },
+  "Margot and Christa": {
+    "master-doubles": [
+      "Salamence-2",
+      "Nidoqueen-2",
+      "Moltres-3",
+      "Heracross-2"
+    ]
+  },
+  "Sophie and Irene": {
+    "master-doubles": [
+      "Regirock-4",
+      "Blissey-2",
+      "Latios-4",
+      "Lapras-2"
+    ]
+  },
+  "Sophie and Benny": {
+    "master-doubles": [
+      "Jolteon-3",
+      "Lickilicky-3",
+      "Regice-5",
+      "Nidoqueen-4"
+    ]
+  },
+  "Sophie and Kevon": {
+    "master-doubles": [
+      "Vileplume-3",
+      "Rapidash-2",
+      "Weavile-2",
+      "Vespiquen-3"
+    ]
+  },
+  "Sophie and Codi": {
+    "master-doubles": [
+      "Lanturn-4",
+      "Moltres-5,6 (Byron)",
+      "Alakazam-5",
+      "Blissey-3"
+    ]
+  },
+  "Blair and Kelby": {
+    "master-doubles": [
+      "Tangrowth-2",
+      "Registeel-2",
+      "Forretress-3",
+      "Exploud-2"
+    ]
+  },
+  "Blair and Dalvin": {
+    "master-doubles": [
+      "Regirock-5",
+      "Swampert-4",
+      "Gardevoir-5",
+      "Umbreon-3"
+    ]
+  },
+  "Harvey and Sophie": {
+    "master-doubles": [
+      "Jolteon-3",
+      "Honchkrow-3",
+      "Regice-5",
+      "Gyarados-3,4"
+    ]
+  },
+  "Harvey and Lyle": {
+    "master-doubles": [
+      "Hypno-3",
+      "Rhydon-?",
+      "Heatran-1 (Palmer Classic)",
+      "Glalie-3"
+    ]
+  },
+  "Harvey and Edmund": {
+    "master-doubles": [
+      "Mr. Mime-3",
+      "Skuntank-3",
+      "Zapdos-2",
+      "Ludicolo-3"
+    ]
+  },
+  "Emilee and Carlo": {
+    "master-doubles": [
+      "Snorlax-3",
+      "Lapras-4",
+      "Entei-5",
+      "Medicham-4"
+    ]
+  },
+  "Tiffani and Barrett": {
+    "master-doubles": [
+      "Typhlosion-3",
+      "Heatran-4",
+      "Electrode-3",
+      "Ludicolo-3"
+    ]
+  },
+  "Tiffani and Elaine": {
+    "master-doubles": [
+      "Porygon-Z-3",
+      "Alakazam-5",
+      "Regice-5",
+      "Gengar-5"
+    ]
+  },
+  "Tiffani and Turner": {
+    "master-doubles": [
+      "Tangrowth-3",
+      "Hippowdon-3",
+      "Zapdos-8",
+      "Drapion-3"
+    ]
+  },
+  "Tiffani and Kenton": {
+    "master-doubles": [
+      "Lucario-2",
+      "Victreebel-3",
+      "Lopunny-2",
+      "Arcanine-2"
+    ]
+  },
+  "Ellis and Irene": {
+    "master-doubles": [
+      "Abomasnow-4",
+      "Rhyperior-4",
+      "Bronzong-3",
+      "Rotom-Wash-2",
+      "Torkoal-2"
+    ]
+  },
+  "Ellis and Barrett": {
+    "master-doubles": [
+      "Registeel-4",
+      "Gyarados-2",
+      "Porygon-Z-2",
+      "Suicune-3"
+    ]
+  },
+  "Ellis and Sherman": {
+    "master-doubles": [
+      "Flygon-3",
+      "Gyarados-3,4",
+      "Cresselia-7",
+      "Blaziken-5"
+    ]
+  },
+  "Ellis and Kelton": {
+    "master-doubles": [
+      "Houndoom-2",
+      "Kangaskhan-3",
+      "Ampharos-3",
+      "Cresselia-4"
+    ]
+  },
+  "Ellis and Layne": {
+    "master-doubles": [
+      "Raikou-5",
+      "Blaziken-5",
+      "Honchkrow-3",
+      "Moltres-5,6 (Byron)"
+    ]
+  },
+  "Lionel and Ellis": {
+    "master-doubles": [
+      "Flygon-3",
+      "Garchomp-3,8",
+      "Cresselia-7",
+      "Lapras-4"
+    ]
+  },
+  "Lionel and Abbey": {
+    "master-doubles": [
+      "Bellossom-2",
+      "Lapras-3",
+      "Torkoal-2",
+      "Cresselia-6",
+      "Rhyperior-4"
+    ]
+  },
+  "Lionel and Kristi": {
+    "master-doubles": [
+      "Electivire-3",
+      "Lucario-3,10 (Cynthia)",
+      "Snorlax-3",
+      "Feraligatr-4"
+    ]
+  },
+  "Lionel and Mariana": {
+    "master-doubles": [
+      "Armaldo-3",
+      "Rhyperior-?",
+      "Venusaur-3",
+      "Lickilicky-2"
+    ]
+  },
+  "Lionel and Tyrell": {
+    "master-doubles": [
+      "Entei-2",
+      "Cresselia-5",
+      "Alakazam-3",
+      "Gengar-2"
+    ]
+  },
+  "Irene and Darcy": {
+    "master-doubles": [
+      "Flygon-2",
+      "Nidoking-2",
+      "Granbull-3",
+      "Articuno-3"
+    ]
+  },
+  "Irene and Alonso": {
+    "master-doubles": [
+      "Electivire-3",
+      "Alakazam-5",
+      "Vaporeon-3",
+      "Latios-5"
+    ]
+  },
+  "Irene and Kevon": {
+    "master-doubles": [
+      "Gastrodon-5",
+      "Lanturn-4",
+      "Rhyperior-5,8 (Buck/Bertha)",
+      "Machamp-3"
+    ]
+  },
+  "Irene and Kaila": {
+    "master-doubles": [
+      "Magmortar-2",
+      "Manectric-2",
+      "Gliscor-2",
+      "Regigigas-2"
+    ]
+  },
+  "Irene and Haylee": {
+    "master-doubles": [
+      "Nidoking-4",
+      "Arcanine-4",
+      "Weavile-3",
+      "Gardevoir-5"
+    ]
+  },
+  "Abbey and Carley": {
+    "master-doubles": [
+      "Abomasnow-?",
+      "Registeel-3",
+      "Lopunny-3",
+      "Ampharos-2"
+    ]
+  },
+  "Abbey and Brant": {
+    "master-doubles": [
+      "Staraptor-3",
+      "Floatzel-2",
+      "Mismagius-3",
+      "Latias-4"
+    ]
+  },
+  "Dallin and Barrett": {
+    "master-doubles": [
+      "Crobat-2",
+      "Regirock-4",
+      "Regice-2",
+      "Electivire-2"
+    ]
+  },
+  "Dallin and Ryne": {
+    "master-doubles": [
+      "Weavile-3",
+      "Quagsire-4",
+      "Dragonite-4",
+      "Weezing-4"
+    ]
+  },
+  "Dallin and Jaylin": {
+    "master-doubles": [
+      "Swampert-3",
+      "Arcanine-2",
+      "Heracross-3",
+      "Vileplume-3",
+      "Tyranitar-5",
+      "Metagross-3",
+      "Swampert-4",
+      "Blissey-3"
+    ]
+  },
+  "Jayden and Josie": {
+    "master-doubles": [
+      "Manectric-3",
+      "Rhydon-?",
+      "Torterra-3",
+      "Feraligatr-3",
+      "Entei-1",
+      "Raikou-2",
+      "Dewgong-3",
+      "Umbreon-2"
+    ]
+  },
+  "Cortney and Celina": {
+    "master-doubles": [
+      "Miltank-2",
+      "Entei-4",
+      "Moltres-2",
+      "Glalie-3"
+    ]
+  },
+  "Cortney and Tavon": {
+    "master-doubles": [
+      "Milotic-4",
+      "Cradily-4",
+      "Mamoswine-3,5",
+      "Venusaur-6"
+    ]
+  },
+  "Cortney and Haylee": {
+    "master-doubles": [
+      "Regice-5",
+      "Typhlosion-4",
+      "Regigigas-6",
+      "Rhyperior-5,8 (Buck/Bertha)"
+    ]
+  },
+  "Celina and Kevon": {
+    "master-doubles": [
+      "Regigigas-4",
+      "Altaria-3",
+      "Venusaur-3",
+      "Alakazam-2"
+    ]
+  },
+  "Celina and Kendel": {
+    "master-doubles": [
+      "Donphan-2",
+      "Shuckle-2",
+      "Vileplume-2",
+      "Lucario-2"
+    ]
+  },
+  "Denver and Benny": {
+    "master-doubles": [
+      "Gastrodon-5",
+      "Suicune-6",
+      "Charizard-5",
+      "Honchkrow-3"
+    ]
+  },
+  "Denver and Kennedy": {
+    "master-doubles": [
+      "Golem-2",
+      "Forretress-2",
+      "Mismagius-3",
+      "Toxicroak-3"
+    ]
+  },
+  "Rusty and Elaine": {
+    "master-doubles": [
+      "Bastiodon-2",
+      "Heracross-3",
+      "Suicune-3",
+      "Vespiquen-2"
+    ]
+  },
+  "Rusty and Jarred": {
+    "master-doubles": [
+      "Tauros-2",
+      "Quagsire-2",
+      "Slowking-3",
+      "Moltres-2"
+    ]
+  },
+  "Rusty and Kenton": {
+    "master-doubles": [
+      "Magmortar-3",
+      "Weezing-4",
+      "Togekiss-5",
+      "Zapdos-8"
+    ]
+  },
+  "Rusty and Tavon": {
+    "master-doubles": [
+      "Moltres-3",
+      "Electivire-2",
+      "Breloom-3",
+      "Latias-4"
+    ]
+  },
+  "Darcy and Bryon": {
+    "master-doubles": [
+      "Rhyperior-5,8 (Buck/Bertha)",
+      "Swampert-4",
+      "Gliscor-3",
+      "Umbreon-3"
+    ]
+  },
+  "Joy and Brant": {
+    "master-doubles": [
+      "Machamp-3",
+      "Medicham-4",
+      "Abomasnow-6,10 (Candice)",
+      "Salamence-4"
+    ]
+  },
+  "Joy and Tasha": {
+    "master-doubles": [
+      "Hariyama-2",
+      "Honchkrow-2",
+      "Registeel-1",
+      "Latias-3"
+    ]
+  },
+  "Alonso and Daron": {
+    "master-doubles": [
+      "Ursaring-2",
+      "Articuno-3",
+      "Porygon2-2",
+      "Suicune-1"
+    ]
+  },
+  "Alonso and River": {
+    "master-doubles": [
+      "Slowbro-2",
+      "Swampert-3",
+      "Nidoking-2",
+      "Regice-3"
+    ]
+  },
+  "Alonso and Yvette": {
+    "master-doubles": [
+      "Electivire-3",
+      "Nidoqueen-4",
+      "Vaporeon-3",
+      "Snorlax-3"
+    ]
+  },
+  "Hernan and Clyde": {
+    "master-doubles": [
+      "Gliscor-3",
+      "Ninetales-6",
+      "Garchomp-3,8",
+      "Steelix-3"
+    ]
+  },
+  "Hernan and Kevon": {
+    "master-doubles": [
+      "Manectric-2",
+      "Latias-3",
+      "Tyranitar-2",
+      "Forretress-3"
+    ]
+  },
+  "Hernan and Dalvin": {
+    "master-doubles": [
+      "Hippowdon-2",
+      "Breloom-3",
+      "Glaceon-?",
+      "Raikou-3"
+    ]
+  },
+  "Benny and Mariana": {
+    "master-doubles": [
+      "Gastrodon-5",
+      "Latios-5",
+      "Charizard-5",
+      "Heatran-6"
+    ]
+  },
+  "Benny and Layne": {
+    "master-doubles": [
+      "Miltank-4",
+      "Raikou-5",
+      "Milotic-4",
+      "Staraptor-4"
+    ]
+  },
+  "Daron and Jaime": {
+    "master-doubles": [
+      "Articuno-2",
+      "Golduck-3",
+      "Blaziken-3",
+      "Hypno-3"
+    ]
+  },
+  "Daron and Jess": {
+    "master-doubles": [
+      "Latios-2",
+      "Suicune-2",
+      "Dewgong-2",
+      "Gallade-2"
+    ]
+  },
+  "Sylvia and Lyle": {
+    "master-doubles": [
+      "Absol-3",
+      "Regigigas-3",
+      "Registeel-1",
+      "Golem-3"
+    ]
+  },
+  "Sylvia and Dalvin": {
+    "master-doubles": [
+      "Machamp-2",
+      "Raikou-1",
+      "Weezing-2",
+      "Regirock-3"
+    ]
+  },
+  "Sylvia and Jaclyn": {
+    "master-doubles": [
+      "Machamp-3",
+      "Rampardos-3,4 (Roark)",
+      "Lickilicky-3",
+      "Heracross-4"
+    ]
+  },
+  "Kristy and Lionel": {
+    "master-doubles": [
+      "Aerodactyl-3,6,7 (Riley/Marley)",
+      "Porygon-Z-3",
+      "Regigigas-6",
+      "Jolteon-3"
+    ]
+  },
+  "Kristy and Ryne": {
+    "master-doubles": [
+      "Moltres-5,6 (Byron)",
+      "Scizor-4",
+      "Heracross-4",
+      "Registeel-5"
+    ]
+  },
+  "Kristy and Nadia": {
+    "master-doubles": [
+      "Zapdos-2",
+      "Absol-2",
+      "Blissey-2",
+      "Bastiodon-3"
+    ]
+  },
+  "Mikel and Denver": {
+    "master-doubles": [
+      "Breloom-5",
+      "Togekiss-5",
+      "Raikou-5",
+      "Claydol-3"
+    ]
+  },
+  "Mikel and Lyle": {
+    "master-doubles": [
+      "Staraptor-3",
+      "Rhydon-?",
+      "Torterra-3",
+      "Blastoise-3"
+    ]
+  },
+  "Antony and Haylee": {
+    "master-doubles": [
+      "Porygon-Z-2",
+      "Cresselia-3",
+      "Dewgong-3",
+      "Houndoom-3"
+    ]
+  },
+  "Kailey and Madelyn": {
+    "master-doubles": [
+      "Latios-1",
+      "Tauros-2",
+      "Heracross-2",
+      "Latias-1"
+    ]
+  },
+  "Kailey and Jaclyn": {
+    "master-doubles": [
+      "Zapdos-3",
+      "Weezing-2",
+      "Whiscash-2",
+      "Altaria-2"
+    ]
+  },
+  "Clyde and Tiffani": {
+    "master-doubles": [
+      "Tangrowth-3",
+      "Steelix-3",
+      "Zapdos-8",
+      "Starmie-3"
+    ]
+  },
+  "Clyde and Jess": {
+    "master-doubles": [
+      "Forretress-2",
+      "Zapdos-4",
+      "Regice-4",
+      "Jynx-3"
+    ]
+  },
+  "Gunner and Kegan": {
+    "master-doubles": [
+      "Wailord-3",
+      "Golduck-3",
+      "Blaziken-3",
+      "Alakazam-3"
+    ]
+  },
+  "Gunner and Jerrell": {
+    "master-doubles": [
+      "Electrode-2",
+      "Cresselia-4",
+      "Empoleon-?",
+      "Gengar-2"
+    ]
+  },
+  "Clara and Cortney": {
+    "master-doubles": [
+      "Suicune-1",
+      "Donphan-2",
+      "Dusknoir-2",
+      "Tyranitar-2"
+    ]
+  },
+  "Clara and Jaime": {
+    "master-doubles": [
+      "Tauros-2",
+      "Flareon-2",
+      "Heracross-3",
+      "Slaking-2"
+    ]
+  },
+  "Alma and Irene": {
+    "master-doubles": [
+      "Nidoking-4",
+      "Weezing-4",
+      "Weavile-3",
+      "Zapdos-8"
+    ]
+  },
+  "Alma and Kristi": {
+    "master-doubles": [
+      "Bastiodon-3",
+      "Blissey-2",
+      "Glalie-3",
+      "Weavile-2"
+    ]
+  },
+  "Alma and Kelton": {
+    "master-doubles": [
+      "Abomasnow-?",
+      "Aerodactyl-2",
+      "Typhlosion-3",
+      "Glaceon-?"
+    ]
+  },
+  "Kelby and Codi": {
+    "master-doubles": [
+      "Slaking-2",
+      "Blaziken-3",
+      "Shiftry-2",
+      "Raikou-1"
+    ]
+  },
+  "Kelby and Haylee": {
+    "master-doubles": [
+      "Moltres-1",
+      "Donphan-2",
+      "Mamoswine-?",
+      "Nidoqueen-2"
+    ]
+  },
+  "Kevon and Carley": {
+    "master-doubles": [
+      "Shiftry-3",
+      "Latios-3",
+      "Cradily-3",
+      "Ninetales-2"
+    ]
+  },
+  "Kevon and Cortney": {
+    "master-doubles": [
+      "Regice-5",
+      "Togekiss-5",
+      "Regigigas-6",
+      "Steelix-3"
+    ]
+  },
+  "Kaila and Mayra": {
+    "master-doubles": [
+      "Raikou-3",
+      "Regice-1",
+      "Zapdos-2",
+      "Rampardos-2"
+    ]
+  },
+  "Jaime and Jaylin": {
+    "master-doubles": [
+      "Exploud-?",
+      "Rapidash-3",
+      "Mr. Mime-3",
+      "Heatran-1 (Palmer Classic)"
+    ]
+  },
+  "Jaime and Jaclyn": {
+    "master-doubles": [
+      "Nidoking-4",
+      "Cresselia-7",
+      "Leafeon-3",
+      "Exeggutor-3"
+    ]
+  },
+  "Jaime and Nadia": {
+    "master-doubles": [
+      "Leafeon-3",
+      "Weezing-4",
+      "Politoed-5",
+      "Abomasnow-6,10 (Candice)"
+    ]
+  },
+  "Barrett and Sophie": {
+    "master-doubles": [
+      "Exploud-?",
+      "Raikou-1",
+      "Lanturn-2",
+      "Milotic-3"
+    ]
+  },
+  "Jess and Emilee": {
+    "master-doubles": [
+      "Whiscash-2",
+      "Vaporeon-2",
+      "Manectric-2",
+      "Luxray-2"
+    ]
+  },
+  "Jess and Abbey": {
+    "master-doubles": [
+      "Lopunny-2",
+      "Breloom-3",
+      "Salamence-2",
+      "Gallade-2"
+    ]
+  },
+  "Johanna and Blair": {
+    "master-doubles": [
+      "Mamoswine-?",
+      "Tauros-3",
+      "Gengar-3",
+      "Regirock-3"
+    ]
+  },
+  "Johanna and Clyde": {
+    "master-doubles": [
+      "Ursaring-3",
+      "Rhydon-3",
+      "Exeggutor-2",
+      "Infernape-3"
+    ]
+  },
+  "Johanna and Yvette": {
+    "master-doubles": [
+      "Regice-3",
+      "Shiftry-2",
+      "Houndoom-3",
+      "Mr. Mime-3"
+    ]
+  },
+  "Josie and Clara": {
+    "master-doubles": [
+      "Roserade-2,3",
+      "Regigigas-5",
+      "Muk-2",
+      "Hypno-2"
+    ]
+  },
+  "Demetri and Margot": {
+    "master-doubles": [
+      "Porygon2-2",
+      "Togekiss-2",
+      "Poliwrath-2",
+      "Suicune-1"
+    ]
+  },
+  "Demetri and Titus": {
+    "master-doubles": [
+      "Metagross-3",
+      "Scizor-4",
+      "Tyranitar-5",
+      "Aerodactyl-3,6,7 (Riley/Marley)"
+    ]
+  },
+  "Demetri and Layne": {
+    "master-doubles": [
+      "Regice-2",
+      "Latias-1",
+      "Gastrodon-3",
+      "Registeel-2"
+    ]
+  },
+  "Lyle and Jaylin": {
+    "master-doubles": [
+      "Scizor-4",
+      "Suicune-6",
+      "Staraptor-4",
+      "Cresselia-7"
+    ]
+  },
+  "Lyle and Anissa": {
+    "master-doubles": [
+      "Breloom-2",
+      "Drifblim-3",
+      "Dragonite-3",
+      "Ninetales-2"
+    ]
+  },
+  "Kristi and Sylvia": {
+    "master-doubles": [
+      "Machamp-3",
+      "Quagsire-4",
+      "Lickilicky-3",
+      "Weezing-4"
+    ]
+  },
+  "Kristi and Antony": {
+    "master-doubles": [
+      "Torterra-3",
+      "Exploud-?",
+      "Gengar-2",
+      "Gastrodon-3"
+    ]
+  },
+  "Mariana and Jayden": {
+    "master-doubles": [
+      "Politoed-3",
+      "Weezing-3",
+      "Medicham-3",
+      "Entei-3"
+    ]
+  },
+  "Mariana and Tyrell": {
+    "master-doubles": [
+      "Nidoqueen-4",
+      "Arcanine-4",
+      "Starmie-3",
+      "Gardevoir-5"
+    ]
+  },
+  "Mariana and Jarred": {
+    "master-doubles": [
+      "Drapion-2",
+      "Granbull-2",
+      "Articuno-1",
+      "Magmortar-2"
+    ]
+  },
+  "Auston and Brant": {
+    "master-doubles": [
+      "Lopunny-3",
+      "Roserade-2,3",
+      "Scizor-3",
+      "Skuntank-3"
+    ]
+  },
+  "Auston and Codi": {
+    "master-doubles": [
+      "Mismagius-2",
+      "Feraligatr-3",
+      "Whiscash-3",
+      "Suicune-3"
+    ]
+  },
+  "Coby and Clyde": {
+    "master-doubles": [
+      "Nidoqueen-?",
+      "Glalie-2",
+      "Quagsire-2",
+      "Claydol-2"
+    ]
+  },
+  "Sidney and Cain": {
+    "master-doubles": [
+      "Ursaring-3",
+      "Sceptile-3",
+      "Roserade-2,3",
+      "Shiftry-3"
+    ]
+  },
+  "Sidney and Chester": {
+    "master-doubles": [
+      "Togekiss-5",
+      "Charizard-5",
+      "Blissey-3",
+      "Articuno-5"
+    ]
+  },
+  "Sidney and Allie": {
+    "master-doubles": [
+      "Articuno-4",
+      "Staraptor-2",
+      "Rampardos-2",
+      "Snorlax-2"
+    ]
+  },
+  "Elaine and Coby": {
+    "master-doubles": [
+      "Zapdos-1",
+      "Marowak-3",
+      "Ludicolo-2",
+      "Dewgong-2"
+    ]
+  },
+  "Elaine and Titus": {
+    "master-doubles": [
+      "Granbull-3",
+      "Abomasnow-3",
+      "Drifblim-2",
+      "Entei-2"
+    ]
+  },
+  "Elaine and Kennedy": {
+    "master-doubles": [
+      "Lucario-3,10 (Cynthia)",
+      "Lickilicky-3",
+      "Articuno-5",
+      "Nidoqueen-4"
+    ]
+  },
+  "Sherman and Antony": {
+    "master-doubles": [
+      "Hariyama-2",
+      "Moltres-4",
+      "Regirock-2",
+      "Latios-3"
+    ]
+  },
+  "Sherman and Mayra": {
+    "master-doubles": [
+      "Gardevoir-3",
+      "Nidoking-3",
+      "Garchomp-2",
+      "Cradily-2"
+    ]
+  },
+  "Sherman and Ryne": {
+    "master-doubles": [
+      "Skuntank-2",
+      "Muk-2",
+      "Victreebel-3",
+      "Mr. Mime-2"
+    ]
+  },
+  "Sherman and Nadia": {
+    "master-doubles": [
+      "Regirock-5",
+      "Blaziken-5",
+      "Latias-5",
+      "Moltres-5,6 (Byron)"
+    ]
+  },
+  "Ryne and Alton": {
+    "master-doubles": [
+      "Gardevoir-3",
+      "Entei-3",
+      "Nidoqueen-?",
+      "Slowbro-2"
+    ]
+  },
+  "Ryne and Hans": {
+    "master-doubles": [
+      "Heatran-6",
+      "Garchomp-3,8",
+      "Hippowdon-3",
+      "Quagsire-4"
+    ]
+  },
+  "Ryne and River": {
+    "master-doubles": [
+      "Infernape-4",
+      "Ninetales-6",
+      "Medicham-4",
+      "Tyranitar-5"
+    ]
+  },
+  "Ryne and Tavon": {
+    "master-doubles": [
+      "Ampharos-2",
+      "Poliwrath-2",
+      "Kangaskhan-2",
+      "Bronzong-2"
+    ]
+  },
+  "Turner and Jerrell": {
+    "master-doubles": [
+      "Lanturn-4",
+      "Nidoqueen-4",
+      "Ninetales-6",
+      "Snorlax-3"
+    ]
+  },
+  "Bryon and Dallin": {
+    "master-doubles": [
+      "Golduck-2",
+      "Registeel-4",
+      "Latios-4",
+      "Latias-4"
+    ]
+  },
+  "Bryon and Hernan": {
+    "master-doubles": [
+      "Slowking-3",
+      "Moltres-2",
+      "Froslass-2",
+      "Blastoise-3"
+    ]
+  },
+  "Bryon and Kristi": {
+    "master-doubles": [
+      "Zapdos-1",
+      "Politoed-3",
+      "Starmie-1",
+      "Froslass-2"
+    ]
+  },
+  "Bryon and Jarred": {
+    "master-doubles": [
+      "Snorlax-2",
+      "Toxicroak-3",
+      "Slaking-2",
+      "Suicune-3"
+    ]
+  },
+  "Bryon and Kennedy": {
+    "master-doubles": [
+      "Rhyperior-5,8 (Buck/Bertha)",
+      "Raikou-5",
+      "Gliscor-3",
+      "Staraptor-4"
+    ]
+  },
+  "Cain and Alton": {
+    "master-doubles": [
+      "Typhlosion-4",
+      "Feraligatr-4",
+      "Probopass-3",
+      "Politoed-5"
+    ]
+  },
+  "Cain and Auston": {
+    "master-doubles": [
+      "Floatzel-3",
+      "Claydol-2",
+      "Armaldo-3",
+      "Luxray-2"
+    ]
+  },
+  "Cain and Hans": {
+    "master-doubles": [
+      "Golem-3",
+      "Cresselia-2",
+      "Electrode-3",
+      "Hariyama-2"
+    ]
+  },
+  "Kegan and Noelle": {
+    "master-doubles": [
+      "Staraptor-2",
+      "Raikou-3",
+      "Togekiss-2",
+      "Mismagius-3"
+    ]
+  },
+  "Aldo and Kellen": {
+    "master-doubles": [
+      "Tangrowth-3",
+      "Garchomp-3,8",
+      "Dragonite-4",
+      "Quagsire-4"
+    ]
+  },
+  "Aldo and Blair": {
+    "master-doubles": [
+      "Ursaring-2",
+      "Entei-1",
+      "Donphan-3",
+      "Weezing-3"
+    ]
+  },
+  "Aldo and Kailey": {
+    "master-doubles": [
+      "Drifblim-3",
+      "Miltank-3",
+      "Golduck-2",
+      "Entei-4"
+    ]
+  },
+  "Aldo and Cain": {
+    "master-doubles": [
+      "Latias-5",
+      "Exeggutor-3",
+      "Jolteon-3",
+      "Lucario-3,10 (Cynthia)"
+    ]
+  },
+  "Aldo and Carlo": {
+    "master-doubles": [
+      "Articuno-2",
+      "Tentacruel-2",
+      "Regirock-3",
+      "Salamence-2"
+    ]
+  },
+  "Andreas and Kristy": {
+    "master-doubles": [
+      "Scizor-3",
+      "Cradily-2",
+      "Froslass-3",
+      "Magmortar-2"
+    ]
+  },
+  "Andreas and Johanna": {
+    "master-doubles": [
+      "Vileplume-2",
+      "Ambipom-2",
+      "Marowak-3",
+      "Armaldo-2"
+    ]
+  },
+  "Andreas and Kristi": {
+    "master-doubles": [
+      "Hariyama-3",
+      "Probopass-2",
+      "Umbreon-2",
+      "Absol-2"
+    ]
+  },
+  "Andreas and Dalvin": {
+    "master-doubles": [
+      "Staraptor-2",
+      "Ambipom-2",
+      "Marowak-3",
+      "Armaldo-2"
+    ]
+  },
+  "Andreas and Edmund": {
+    "master-doubles": [
+      "Flygon-3",
+      "Salamence-4",
+      "Magmortar-3",
+      "Aerodactyl-3,6,7 (Riley/Marley)"
+    ]
+  },
+  "Andreas and Tasha": {
+    "master-doubles": [
+      "Abomasnow-5",
+      "Latios-5",
+      "Arcanine-4",
+      "Porygon-Z-3"
+    ]
+  },
+  "Jaylin and Denver": {
+    "master-doubles": [
+      "Garchomp-2",
+      "Aggron-?",
+      "Abomasnow-?",
+      "Floatzel-2"
+    ]
+  },
+  "Jaylin and Demetri": {
+    "master-doubles": [
+      "Scizor-4",
+      "Gengar-5",
+      "Staraptor-4",
+      "Zapdos-8"
+    ]
+  },
+  "Jaylin and Edmund": {
+    "master-doubles": [
+      "Tyranitar-5",
+      "Typhlosion-4",
+      "Swampert-4",
+      "Latias-5"
+    ]
+  },
+  "Titus and Ryne": {
+    "master-doubles": [
+      "Heatran-1 (Palmer Classic)",
+      "Rapidash-3",
+      "Zapdos-4",
+      "Gallade-2"
+    ]
+  },
+  "Titus and Dalvin": {
+    "master-doubles": [
+      "Metagross-3",
+      "Suicune-6",
+      "Tyranitar-5",
+      "Cresselia-7"
+    ]
+  },
+  "Titus and Edmund": {
+    "master-doubles": [
+      "Regigigas-4",
+      "Cresselia-3",
+      "Articuno-1",
+      "Victreebel-2"
+    ]
+  },
+  "Tyrell and Kristy": {
+    "master-doubles": [
+      "Metagross-2",
+      "Walrein-2",
+      "Hariyama-3",
+      "Skarmory-2"
+    ]
+  },
+  "Tyrell and Mikel": {
+    "master-doubles": [
+      "Meganium-3",
+      "Walrein-2",
+      "Weezing-3",
+      "Skarmory-2"
+    ]
+  },
+  "Tyrell and Mayra": {
+    "master-doubles": [
+      "Miltank-2",
+      "Breloom-2",
+      "Altaria-2",
+      "Tentacruel-2"
+    ]
+  },
+  "Tyrell and Alma": {
+    "master-doubles": [
+      "Nidoqueen-4",
+      "Suicune-6",
+      "Starmie-3",
+      "Slaking-3"
+    ]
+  },
+  "Tyrell and Jerrell": {
+    "master-doubles": [
+      "Venusaur-6",
+      "Moltres-5,6 (Byron)",
+      "Drapion-3",
+      "Blissey-3"
+    ]
+  },
+  "Dalvin and Kellen": {
+    "master-doubles": [
+      "Lickilicky-3",
+      "Latios-5",
+      "Miltank-4",
+      "Porygon-Z-3"
+    ]
+  },
+  "Dalvin and Andreas": {
+    "master-doubles": [
+      "Flygon-3",
+      "Vaporeon-3",
+      "Magmortar-3",
+      "Entei-5"
+    ]
+  },
+  "Edmund and Alton": {
+    "master-doubles": [
+      "Abomasnow-5",
+      "Gengar-5",
+      "Registeel-5",
+      "Zapdos-8"
+    ]
+  },
+  "Edmund and Edmund": {
+    "master-doubles": [
+      "Gengar-5",
+      "Scizor-4",
+      "Regirock-5",
+      "Registeel-5"
+    ]
+  },
+  "Edmund and Brant": {
+    "master-doubles": [
+      "Gengar-5",
+      "Vaporeon-3",
+      "Regirock-5",
+      "Entei-5"
+    ]
+  },
+  "Edmund and Jarred": {
+    "master-doubles": [
+      "Registeel-1",
+      "Wailord-2",
+      "Heatran-2",
+      "Poliwrath-3"
+    ]
+  },
+  "Edmund and Noelle": {
+    "master-doubles": [
+      "Electivire-3",
+      "Cresselia-7",
+      "Rampardos-3,4 (Roark)",
+      "Exeggutor-3"
+    ]
+  },
+  "Kelton and Joy": {
+    "master-doubles": [
+      "Skarmory-2",
+      "Slowbro-3",
+      "Regice-1",
+      "Mr. Mime-2"
+    ]
+  },
+  "Kelton and Anissa": {
+    "master-doubles": [
+      "Leafeon-2",
+      "Cradily-3",
+      "Heatran-1 (Palmer Classic)",
+      "Absol-2"
+    ]
+  },
+  "Brant and Sophie": {
+    "master-doubles": [
+      "Lanturn-4",
+      "Ninetales-6",
+      "Alakazam-5",
+      "Cradily-4"
+    ]
+  },
+  "Brant and Kristy": {
+    "master-doubles": [
+      "Moltres-5,6 (Byron)",
+      "Swampert-4",
+      "Heracross-4",
+      "Regigigas-6"
+    ]
+  },
+  "Brant and Chester": {
+    "master-doubles": [
+      "Mamoswine-3,5",
+      "Rampardos-3,4 (Roark)",
+      "Venusaur-6",
+      "Abomasnow-6,10 (Candice)"
+    ]
+  },
+  "Aidan and Brant": {
+    "master-doubles": [
+      "Whiscash-3",
+      "Pinsir-2",
+      "Raichu-2",
+      "Tauros-3"
+    ]
+  },
+  "Aidan and Jerrell": {
+    "master-doubles": [
+      "Kingdra-2",
+      "Regirock-1",
+      "Typhlosion-3",
+      "Zapdos-1"
+    ]
+  },
+  "Aidan and Hans": {
+    "master-doubles": [
+      "Hypno-2",
+      "Gastrodon-2",
+      "Exploud-2",
+      "Dugtrio-3"
+    ]
+  },
+  "Aidan and Kenton": {
+    "master-doubles": [
+      "Bastiodon-2",
+      "Houndoom-2",
+      "Metagross-2",
+      "Probopass-2"
+    ]
+  },
+  "Carlo and Irene": {
+    "master-doubles": [
+      "Gastrodon-5",
+      "Typhlosion-4",
+      "Rhyperior-5,8 (Buck/Bertha)",
+      "Drapion-3"
+    ]
+  },
+  "Carlo and Dallin": {
+    "master-doubles": [
+      "Probopass-3",
+      "Umbreon-3",
+      "Feraligatr-4",
+      "Gliscor-3"
+    ]
+  },
+  "Carlo and Cortney": {
+    "master-doubles": [
+      "Mamoswine-3,5",
+      "Nidoking-3",
+      "Poliwrath-3",
+      "Cradily-2"
+    ]
+  },
+  "Carlo and Alonso": {
+    "master-doubles": [
+      "Articuno-4",
+      "Glalie-2",
+      "Magnezone-2",
+      "Latias-2"
+    ]
+  },
+  "Jerrell and Irene": {
+    "master-doubles": [
+      "Lanturn-4",
+      "Steelix-3",
+      "Ninetales-6",
+      "Starmie-3"
+    ]
+  },
+  "Jerrell and Auston": {
+    "master-doubles": [
+      "Espeon-2",
+      "Quagsire-3",
+      "Suicune-2",
+      "Ampharos-3"
+    ]
+  },
+  "Jerrell and Brant": {
+    "master-doubles": [
+      "Venusaur-6",
+      "Feraligatr-4",
+      "Drapion-3",
+      "Abomasnow-5"
+    ]
+  },
+  "Jerrell and Allie": {
+    "master-doubles": [
+      "Regice-1",
+      "Heatran-3",
+      "Floatzel-3",
+      "Jynx-2"
+    ]
+  },
+  "Kennedy and Blair": {
+    "master-doubles": [
+      "Regirock-5",
+      "Salamence-4",
+      "Gardevoir-5",
+      "Aerodactyl-3,6,7 (Riley/Marley)"
+    ]
+  },
+  "Kennedy and Harvey": {
+    "master-doubles": [
+      "Lucario-3,10 (Cynthia)",
+      "Infernape-4",
+      "Articuno-5",
+      "Heatran-6"
+    ]
+  },
+  "Kennedy and Sherman": {
+    "master-doubles": [
+      "Skarmory-3",
+      "Jynx-3",
+      "Toxicroak-2",
+      "Shuckle-2"
+    ]
+  },
+  "Kennedy and Aldo": {
+    "master-doubles": [
+      "Tangrowth-3",
+      "Umbreon-3",
+      "Dragonite-4",
+      "Gliscor-3"
+    ]
+  },
+  "Kennedy and Carlo": {
+    "master-doubles": [
+      "Skarmory-3",
+      "Glalie-3",
+      "Toxicroak-2",
+      "Medicham-2"
+    ]
+  },
+  "Hans and Benny": {
+    "master-doubles": [
+      "Jolteon-2",
+      "Froslass-3",
+      "Granbull-3",
+      "Espeon-2"
+    ]
+  },
+  "Hans and Kennedy": {
+    "master-doubles": [
+      "Heatran-6",
+      "Swampert-4",
+      "Hippowdon-3",
+      "Regigigas-6"
+    ]
+  },
+  "Layne and Darcy": {
+    "master-doubles": [
+      "Miltank-4",
+      "Honchkrow-3",
+      "Milotic-4",
+      "Gyarados-3,4"
+    ]
+  },
+  "Layne and Joy": {
+    "master-doubles": [
+      "Machamp-3",
+      "Claydol-3",
+      "Abomasnow-6,10 (Candice)",
+      "Probopass-3"
+    ]
+  },
+  "Layne and Cain": {
+    "master-doubles": [
+      "Golem-3",
+      "Politoed-2",
+      "Pinsir-3",
+      "Lanturn-3"
+    ]
+  },
+  "Layne and Noelle": {
+    "master-doubles": [
+      "Machamp-2",
+      "Yanmega-2",
+      "Cresselia-5",
+      "Alakazam-2",
+      "Wailord-2",
+      "Kangaskhan-2"
+    ]
+  },
+  "River and Alton": {
+    "master-doubles": [
+      "Starmie-1",
+      "Moltres-1",
+      "Abomasnow-3",
+      "Slowbro-2"
+    ]
+  },
+  "River and Sidney": {
+    "master-doubles": [
+      "Infernape-4",
+      "Cradily-4",
+      "Medicham-4",
+      "Slaking-3"
+    ]
+  },
+  "Kendel and Jaime": {
+    "master-doubles": [
+      "Moltres-4",
+      "Regigigas-5",
+      "Ampharos-2",
+      "Bastiodon-2"
+    ]
+  },
+  "Kendel and Aldo": {
+    "master-doubles": [
+      "Latias-5",
+      "Nidoking-4",
+      "Jolteon-3",
+      "Articuno-5"
+    ]
+  },
+  "Kenton and Cortney": {
+    "master-doubles": [
+      "Milotic-4",
+      "Porygon-Z-3",
+      "Mamoswine-3,5",
+      "Jolteon-3"
+    ]
+  },
+  "Kenton and Alma": {
+    "master-doubles": [
+      "Infernape-3",
+      "Togekiss-2",
+      "Sceptile-3",
+      "Dusknoir-2"
+    ]
+  },
+  "Kenton and Jaclyn": {
+    "master-doubles": [
+      "Heatran-3",
+      "Dragonite-3",
+      "Cradily-3",
+      "Regigigas-4"
+    ]
+  },
+  "Tavon and Harvey": {
+    "master-doubles": [
+      "Ludicolo-2",
+      "Lapras-2",
+      "Scizor-2",
+      "Gliscor-2"
+    ]
+  },
+  "Tavon and Kristy": {
+    "master-doubles": [
+      "Aerodactyl-3,6,7 (Riley/Marley)",
+      "Gyarados-3,4",
+      "Regigigas-6",
+      "Blaziken-5"
+    ]
+  },
+  "Chester and Tiffani": {
+    "master-doubles": [
+      "Rapidash-2",
+      "Magnezone-2",
+      "Zapdos-3",
+      "Skuntank-2"
+    ]
+  },
+  "Chester and Sidney": {
+    "master-doubles": [
+      "Jolteon-2",
+      "Exeggutor-2",
+      "Sceptile-3",
+      "Heracross-2"
+    ]
+  },
+  "Chester and Edmund": {
+    "master-doubles": [
+      "Togekiss-5",
+      "Weavile-3",
+      "Blissey-3",
+      "Tyranitar-5"
+    ]
+  },
+  "Chester and Tasha": {
+    "master-doubles": [
+      "Mamoswine-3,5",
+      "Claydol-3",
+      "Venusaur-6",
+      "Probopass-3"
+    ]
+  },
+  "Codi and Lionel": {
+    "master-doubles": [
+      "Regigigas-2",
+      "Raikou-2",
+      "Toxicroak-2",
+      "Latios-2"
+    ]
+  },
+  "Codi and Hernan": {
+    "master-doubles": [
+      "Gliscor-3",
+      "Hippowdon-3",
+      "Garchomp-3,8",
+      "Drapion-3"
+    ]
+  },
+  "Codi and River": {
+    "master-doubles": [
+      "Golem-2",
+      "Flareon-2",
+      "Heatran-2",
+      "Mismagius-2"
+    ]
+  },
+  "Allie and Coby": {
+    "master-doubles": [
+      "Gastrodon-3",
+      "Medicham-2",
+      "Heatran-2",
+      "Aggron-?"
+    ]
+  },
+  "Allie and Chester": {
+    "master-doubles": [
+      "Rhyperior-?",
+      "Arcanine-2",
+      "Scizor-2",
+      "Muk-3"
+    ]
+  },
+  "Anissa and Kegan": {
+    "master-doubles": [
+      "Walrein-2",
+      "Kingdra-2",
+      "Steelix-2",
+      "Ludicolo-2"
+    ]
+  },
+  "Anissa and Nadia": {
+    "master-doubles": [
+      "Kingdra-2",
+      "Regice-4",
+      "Charizard-3",
+      "Nidoking-3"
+    ]
+  },
+  "Christa and Benny": {
+    "master-doubles": [
+      "Cresselia-2",
+      "Meganium-3",
+      "Regirock-2",
+      "Slowking-2"
+    ]
+  },
+  "Christa and Gunner": {
+    "master-doubles": [
+      "Electrode-2",
+      "Ambipom-3",
+      "Dewgong-2",
+      "Slowbro-3"
+    ]
+  },
+  "Christa and Demetri": {
+    "master-doubles": [
+      "Honchkrow-2",
+      "Suicune-3",
+      "Latias-1",
+      "Manectric-3"
+    ]
+  },
+  "Madelyn and Ellis": {
+    "master-doubles": [
+      "Raikou-5",
+      "Medicham-4",
+      "Honchkrow-3",
+      "Salamence-4"
+    ]
+  },
+  "Madelyn and Sylvia": {
+    "master-doubles": [
+      "Scizor-2",
+      "Kangaskhan-3",
+      "Hypno-2",
+      "Vespiquen-2"
+    ]
+  },
+  "Madelyn and Jaime": {
+    "master-doubles": [
+      "Nidoking-4",
+      "Lucario-3,10 (Cynthia)",
+      "Leafeon-3",
+      "Slaking-3"
+    ]
+  },
+  "Madelyn and Josie": {
+    "master-doubles": [
+      "Aggron-?",
+      "Quagsire-3",
+      "Ambipom-3",
+      "Golem-2"
+    ]
+  },
+  "Madelyn and Kendel": {
+    "master-doubles": [
+      "Vaporeon-3",
+      "Breloom-5",
+      "Entei-5",
+      "Metagross-3"
+    ]
+  },
+  "Madelyn and Tavon": {
+    "master-doubles": [
+      "Registeel-2",
+      "Rhydon-3",
+      "Poliwrath-3",
+      "Gliscor-2"
+    ]
+  },
+  "Jaclyn and Kellen": {
+    "master-doubles": [
+      "Heatran-4",
+      "Donphan-3",
+      "Leafeon-2",
+      "Registeel-3"
+    ]
+  },
+  "Jaclyn and Lionel": {
+    "master-doubles": [
+      "Electivire-3",
+      "Rampardos-3,4 (Roark)",
+      "Snorlax-3",
+      "Heracross-4"
+    ]
+  },
+  "Jaclyn and Dallin": {
+    "master-doubles": [
+      "Weavile-3",
+      "Cradily-4",
+      "Dragonite-4",
+      "Slaking-3"
+    ]
+  },
+  "Jaclyn and Kaila": {
+    "master-doubles": [
+      "Latias-2",
+      "Suicune-3",
+      "Houndoom-3",
+      "Raikou-4"
+    ]
+  },
+  "Noelle and Kaila": {
+    "master-doubles": [
+      "Vespiquen-3",
+      "Absol-3",
+      "Empoleon-?",
+      "Regigigas-3"
+    ]
+  },
+  "Noelle and Madelyn": {
+    "master-doubles": [
+      "Electivire-3",
+      "Metagross-3",
+      "Rampardos-3,4 (Roark)",
+      "Politoed-5"
+    ]
+  },
+  "Haylee and Carley": {
+    "master-doubles": [
+      "Steelix-2",
+      "Jynx-2",
+      "Altaria-3",
+      "Victreebel-2"
+    ]
+  },
+  "Haylee and Rusty": {
+    "master-doubles": [
+      "Magmortar-3",
+      "Cradily-4",
+      "Togekiss-5",
+      "Venusaur-6"
+    ]
+  },
+  "Haylee and Mikel": {
+    "master-doubles": [
+      "Breloom-5",
+      "Claydol-3",
+      "Raikou-5",
+      "Heatran-6"
+    ]
+  },
+  "Haylee and Kennedy": {
+    "master-doubles": [
+      "Politoed-2",
+      "Lanturn-2",
+      "Victreebel-3",
+      "Latios-1"
+    ]
+  },
+  "Nadia and Turner": {
+    "master-doubles": [
+      "Wailord-2",
+      "Tangrowth-2",
+      "Tentacruel-2",
+      "Shiftry-3"
+    ]
+  },
+  "Nadia and Dalvin": {
+    "master-doubles": [
+      "Gengar-3",
+      "Milotic-3",
+      "Crobat-2",
+      "Pinsir-3"
+    ]
+  },
+  "Nadia and Madelyn": {
+    "master-doubles": [
+      "Regirock-5",
+      "Garchomp-3,8",
+      "Latias-5",
+      "Lapras-4",
+      "Vaporeon-3",
+      "Exeggutor-3",
+      "Entei-5",
+      "Lucario-3,10 (Cynthia)"
+    ]
+  },
+  "Yvette and Emilee": {
+    "master-doubles": [
+      "Flygon-2",
+      "Zapdos-3",
+      "Raikou-4",
+      "Medicham-3"
+    ]
+  },
+  "Yvette and Tiffani": {
+    "master-doubles": [
+      "Porygon-Z-3",
+      "Infernape-4",
+      "Regice-5",
+      "Heatran-6"
+    ]
+  },
+  "Yvette and Turner": {
+    "master-doubles": [
+      "Regigigas-5",
+      "Golduck-3",
+      "Aerodactyl-2",
+      "Regirock-1"
+    ]
+  },
+  "Yvette and Kendel": {
+    "master-doubles": [
+      "Slowking-2",
+      "Lanturn-3",
+      "Whiscash-2",
+      "Hippowdon-2"
+    ]
+  },
+  "Tasha and Emilee": {
+    "master-doubles": [
+      "Snorlax-3",
+      "Lanturn-4",
+      "Entei-5",
+      "Machamp-3"
+    ]
+  },
+  "Tasha and Darcy": {
+    "master-doubles": [
+      "Nidoking-2",
+      "Dugtrio-3",
+      "Drapion-2",
+      "Granbull-2",
+      "Pinsir-2",
+      "Breloom-2"
+    ]
+  },
+  "Tasha and Jaime": {
+    "master-doubles": [
+      "Leafeon-3",
+      "Breloom-5",
+      "Politoed-5",
+      "Metagross-3"
+    ]
+  },
+  "Tasha and Aldo": {
+    "master-doubles": [
+      "Vaporeon-2",
+      "Alakazam-2",
+      "Gyarados-2",
+      "Lickilicky-2"
+    ]
+  },
+  "Palmer": {
+    "regular-singles-21": [
+      "Milotic-1 (Palmer Classic)",
+      "Rhyperior-1 (Palmer Classic)",
+      "Dragonite-1 (Palmer Classic)",
+      "Cresselia-1 (Palmer Classic)",
+      "Regigigas-1 (Palmer Classic)",
+      "Heatran-1 (Palmer Classic)"
+    ],
+    "regular-singles-49": [
+      "Milotic-1 (Palmer Classic)",
+      "Rhyperior-1 (Palmer Classic)",
+      "Dragonite-1 (Palmer Classic)",
+      "Cresselia-1 (Palmer Classic)",
+      "Regigigas-1 (Palmer Classic)",
+      "Heatran-1 (Palmer Classic)"
+    ],
+    "regular-doubles-21": [
+      "Milotic-1 (Palmer Classic)",
+      "Rhyperior-1 (Palmer Classic)",
+      "Dragonite-1 (Palmer Classic)",
+      "Cresselia-1 (Palmer Classic)",
+      "Regigigas-1 (Palmer Classic)",
+      "Heatran-1 (Palmer Classic)"
+    ],
+    "regular-doubles-49": [
+      "Milotic-1 (Palmer Classic)",
+      "Rhyperior-1 (Palmer Classic)",
+      "Dragonite-1 (Palmer Classic)",
+      "Cresselia-1 (Palmer Classic)",
+      "Regigigas-1 (Palmer Classic)",
+      "Heatran-1 (Palmer Classic)"
+    ],
+    "master-singles-70": [
+      "Milotic-1 (Palmer Classic)",
+      "Rhyperior-1 (Palmer Classic)",
+      "Dragonite-1 (Palmer Classic)",
+      "Cresselia-1 (Palmer Classic)",
+      "Regigigas-1 (Palmer Classic)",
+      "Heatran-1 (Palmer Classic)"
+    ],
+    "master-doubles-70": [
+      "Empoleon-5 (Barry/Palmer)",
+      "Staraptor-5 (Barry/Palmer)",
+      "Rhyperior-10 (Barry/Palmer)",
+      "Heatran-12 (Barry/Palmer)",
+      "Heracross-5 (Barry/Palmer)",
+      "Infernape-7 (Barry/Palmer)",
+      "Dragonite-9,11 (Barry/Palmer)",
+      "Cresselia-11 (Barry/Palmer)",
+      "Torterra-5 (Barry/Palmer)",
+      "Snorlax-4 (Barry/Palmer)",
+      "Milotic-8 (Barry/Palmer)",
+      "Heatran-7,13 (Barry/Palmer)"
+    ]
+  },
+  "Roark": {
+    "master-singles-7": [
+      "Aerodactyl-4 (Roark)",
+      "Slowbro-4 (Roark)",
+      "Tyranitar-6 (Roark)",
+      "Tyranitar-7 (Roark)",
+      "Salamence-5 (Roark)",
+      "Rampardos-3,4 (Roark)",
+      "Lunatone-2 (Roark)",
+      "Torkoal-3 (Roark)",
+      "Rampardos-5 (Roark)"
+    ]
+  },
+  "Roark and Byron": {
+    "master-doubles-7": [
+      "Tyranitar-8 (Roark/Byron)",
+      "Rampardos-6 (Roark/Byron)",
+      "Scizor-5,7,8 (Crasher Wake)",
+      "Bastiodon-4 (Roark/Byron)",
+      "Rampardos-7 (Roark/Byron)",
+      "Tyranitar-9 (Roark/Byron)",
+      "Bronzong-4 (Roark/Byron)",
+      "Bastiodon-5 (Roark/Byron)",
+      "Aerodactyl-5 (Roark/Byron)",
+      "Metagross-5 (Roark/Byron)",
+      "Heatran-7,13 (Barry/Palmer)"
+    ]
+  },
+  "Gardenia": {
+    "master-singles-14": [
+      "Breloom-4",
+      "Cradily-4",
+      "Roserade-2,3",
+      "Rotom-Mow-1 (Gardenia)",
+      "Milotic-5 (Gardenia)",
+      "Roserade-4 (Gardenia)",
+      "Ninetales-7 (Gardenia)",
+      "Rotom-Mow-2 (Gardenia)",
+      "Venusaur-7 (Gardenia)"
+    ]
+  },
+  "Mira and Cheryl": {
+    "master-doubles-14": [
+      "Alakazam-6 (Mira/Cheryl)",
+      "Gengar-6 (Mira/Cheryl)",
+      "Umbreon-4 (Mira/Cheryl)",
+      "Blissey-4 (Mira/Cheryl)",
+      "Zapdos-9 (Mira/Cheryl)",
+      "Alakazam-7 (Mira/Cheryl)",
+      "Blissey-5 (Mira/Cheryl)",
+      "Porygon-Z-4 (Mira/Cheryl)",
+      "Gardevoir-6 (Mira/Cheryl)",
+      "Zapdos-10 (Mira/Cheryl)",
+      "Latios-7 (Mira/Cheryl)",
+      "Porygon-Z-5 (Mira/Cheryl)"
+    ]
+  },
+  "Maylene": {
+    "master-singles-21": [
+      "Breloom-4",
+      "Blaziken-6 (Maylene)",
+      "Empoleon-4 (Maylene)",
+      "Hitmontop-3 (Maylene)",
+      "Dragonite-4",
+      "Lucario-4 (Maylene)",
+      "Infernape-5 (Maylene)",
+      "Gallade-3 (Maylene)",
+      "Lucario-5 (Maylene)"
+    ]
+  },
+  "Gardenia and Fantina": {
+    "master-doubles-21": [
+      "Shiftry-5 (Gardenia/Fantina)",
+      "Breloom-8 (Gardenia/Fantina)",
+      "Sableye-2,3 (Saturn/Jupiter)",
+      "Gengar-7 (Gardenia/Fantina)",
+      "Venusaur-8 (Gardenia/Fantina)",
+      "Roserade-5 (Gardenia/Fantina)",
+      "Gengar-8,9 (Saturn/Jupiter)",
+      "Tangrowth-4 (Gardenia/Fantina)",
+      "Torterra-4 (Gardenia/Fantina)",
+      "Dusknoir-3 (Gardenia/Fantina)",
+      "Banette-2 (Gardenia/Fantina)"
+    ]
+  },
+  "Wake": {
+    "master-singles-28": [
+      "Swampert-?",
+      "Suicune-3",
+      "Floatzel-4 (Crasher Wake)",
+      "Politoed-6 (Crasher Wake)",
+      "Armaldo-4 (Crasher Wake)",
+      "Ludicolo-4 (Crasher Wake)",
+      "Pelipper-2",
+      "Scizor-5,7,8 (Crasher Wake)",
+      "Kingdra-5 (Crasher Wake)"
+    ]
+  },
+  "Jupiter and Saturn": {
+    "master-doubles-28": [
+      "Nidoking-5 (Saturn/Jupiter)",
+      "Skuntank-4,5 (Saturn/Jupiter)",
+      "Absol-4 (Saturn/Jupiter)",
+      "Sableye-4 (Fantina)",
+      "Gengar-8,9 (Saturn/Jupiter)",
+      "Toxicroak-4,5 (Saturn/Jupiter)",
+      "Sharpedo-2,3 (Saturn/Jupiter)",
+      "Crobat-3,4 (Mars/Cyrus)",
+      "Tyranitar-8 (Roark/Byron)"
+    ]
+  },
+  "Fantina": {
+    "master-singles-35": [
+      "Shedinja-3 (Fantina)",
+      "Dusknoir-4,5 (Fantina)",
+      "Mismagius-4 (Fantina)",
+      "Crawdaunt-2 (Fantina)",
+      "Gengar-10 (Fantina)",
+      "Sableye-4 (Fantina)",
+      "Spiritomb-1 (Fantina)",
+      "Dragonite-7,8,10 (Palmer Master)"
+    ]
+  },
+  "Maylene and Candice": {
+    "master-doubles-35": [
+      "Hitmontop-4,6 (Candice/Maylene)",
+      "Lucario-6,7 (Candice/Maylene)",
+      "Abomasnow-5",
+      "Froslass-5 (Candice/Maylene)",
+      "Articuno-6 (Candice/Maylene)",
+      "Blaziken-7 (Candice/Maylene)",
+      "Weavile-4 (Candice/Maylene)"
+    ]
+  },
+  "Byron": {
+    "master-singles-42": [
+      "Moltres-5,6 (Byron)",
+      "Metagross-6 (Byron)",
+      "Bastiodon-6 (Byron)",
+      "Scizor-1",
+      "Pelipper-5 (Byron)",
+      "Aggron-3 (Byron)",
+      "Metagross-7 (Byron)",
+      "Scizor-10 (Byron)",
+      "Heatran-2"
+    ]
+  },
+  "Marley and Riley": {
+    "master-doubles-42": [
+      "Arcanine-5 (Riley/Marley)",
+      "Aerodactyl-3,6,7 (Riley/Marley)",
+      "Salamence-6 (Riley/Marley)",
+      "Lucario-8,9 (Riley/Marley)",
+      "Arcanine-6 (Riley/Marley)",
+      "Starmie-4 (Riley/Marley)",
+      "Salamence-7 (Riley/Marley)",
+      "Metagross-8 (Riley/Marley)",
+      "Garchomp-9 (Riley/Marley)"
+    ]
+  },
+  "Candice": {
+    "master-singles-49": [
+      "Abomasnow-6,10 (Candice)",
+      "Regice-6 (Candice)",
+      "Cloyster-1",
+      "Heatran-9 (Candice)",
+      "Mamoswine-3,5",
+      "Glaceon-3 (Candice)",
+      "Lapras-4",
+      "Venusaur-9 (Candice)"
+    ]
+  },
+  "Buck and Bertha": {
+    "master-doubles-49": [
+      "Cresselia-8 (Buck/Bertha)",
+      "Claydol-4 (Buck/Bertha)",
+      "Rhyperior-6 (Buck/Bertha)",
+      "Steelix-4 (Buck/Bertha)",
+      "Regirock-6 (Buck/Bertha)",
+      "Claydol-5,6 (Buck/Bertha)",
+      "Hippowdon-4 (Buck/Bertha)",
+      "Rhyperior-7 (Buck/Bertha)",
+      "Donphan-4 (Buck/Bertha)",
+      "Rhyperior-5,8 (Buck/Bertha)"
+    ]
+  },
+  "Volkner": {
+    "master-singles-56": [
+      "Rotom-Wash-3 (Volkner)",
+      "Magnezone-4 (Volkner)",
+      "Luxray-3 (Volkner)",
+      "Zapdos-11 (Volkner)",
+      "Gyarados-1",
+      "Electivire-4 (Volkner)",
+      "Zapdos-12 (Volkner)",
+      "Rotom-Heat-1 (Volkner)",
+      "Swampert-6 (Volkner)"
+    ]
+  },
+  "Flint and Volkner": {
+    "master-doubles-56": [
+      "Blaziken-8 (Flint/Volkner)",
+      "Magmortar-4 (Flint/Volkner)",
+      "Rotom-Wash-4 (Flint/Volkner)",
+      "Electivire-5 (Flint/Volkner)",
+      "Rotom-Heat-2,3 (Mars/Cyrus)",
+      "Magmortar-5 (Flint/Volkner)",
+      "Electivire-6 (Flint/Volkner)",
+      "Zapdos-13,14 (Flint/Volkner)",
+      "Infernape-6 (Flint/Volkner)",
+      "Entei-6,7 (Mars/Cyrus)",
+      "Luxray-4 (Flint/Volkner)"
+    ]
+  },
+  "Cynthia": {
+    "master-singles-63": [
+      "Lucario-3,10 (Cynthia)",
+      "Togekiss-3",
+      "Garchomp-10 (Cynthia)",
+      "Togekiss-7 (Cynthia)",
+      "Milotic-6,7 (Palmer Master)",
+      "Garchomp-11 (Cynthia)",
+      "Gastrodon-6 (Cynthia)",
+      "Lucario-11 (Cynthia)",
+      "Garchomp-12 (Cynthia)"
+    ]
+  },
+  "Mars and Cyrus": {
+    "master-doubles-63": [
+      "Raichu-4 (Mars/Cyrus)",
+      "Bronzong-5 (Mars/Cyrus)",
+      "Gyarados-6 (Mars/Cyrus)",
+      "Salamence-8 (Mars/Cyrus)",
+      "Espeon-4 (Mars/Cyrus)",
+      "Togekiss-8 (Mars/Cyrus)",
+      "Weavile-4 (Candice/Maylene)",
+      "Entei-6,7 (Mars/Cyrus)",
+      "Crobat-3,4 (Mars/Cyrus)",
+      "Purugly-2 (Mars/Cyrus)",
+      "Rotom-Heat-2,3 (Mars/Cyrus)",
+      "Gyarados-7 (Mars/Cyrus)"
+    ]
+  }
+}

@@ -31,11 +31,12 @@ export interface FacilityMode {
 }
 
 export interface Trainer {
-  number: number
+  number?: number
   class: string
   name: string
-  battleRanges: string[]
-  boss?: string // mode id — if set, this trainer is the sole boss for that mode at their battle number
+  battleRanges?: string[]
+  modes?: string[]
+  boss?: string
 }
 
 export interface P1Option {
@@ -111,9 +112,9 @@ export interface GameConfig {
 
   // Trainer / opponent
   getTrainersForBattle: (battleNum: number, modeId?: string) => Trainer[]
-  getPokemonForTrainer: (trainerName: string) => string[]
+  getPokemonForTrainer: (trainerName: string, modeId?: string, battleNum?: number) => string[]
   getIVsForTrainer: (trainer: Trainer | null) => number
-  getBattleRange: (battleNum: number) => string
+  getBattleRange: (battleNum: number, modeId?: string) => string
 
   // Team
   buildP1Options: (ribbonMaster: StoredSet | null, pokemonSets: StoredSet[], modeLabels: string[]) => P1Option[]
@@ -136,6 +137,7 @@ export { emeraldConfig } from './gen3Battles'
 export { sunMoonConfig } from './gen7Battles'
 export { orasConfig } from './gen6Battles'
 export { gen4Config } from './gen4Battles'
+export { bdspConfig } from './bdspBattles'
 
 // Re-export DamageResult for the UI
 export type { DamageResult } from './gen3calc'

@@ -1,0 +1,5684 @@
+[
+  {
+    "class": "Youngster",
+    "name": "Lloyd",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Youngster",
+    "name": "Ben",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Youngster",
+    "name": "Ezekiel",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Lass",
+    "name": "Elory",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Lass",
+    "name": "Jenny",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Lass",
+    "name": "Arianna",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "School Kid",
+    "name": "Chaz",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "School Kid",
+    "name": "Everett",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "School Kid",
+    "name": "Lamont",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "School Kid",
+    "name": "Glorya",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "School Kid",
+    "name": "Toni",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "School Kid",
+    "name": "Cecilia",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Rich Boy",
+    "name": "Milton",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Rich Boy",
+    "name": "Cortez",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Rich Boy",
+    "name": "Jaden",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Lady",
+    "name": "Camille",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Lady",
+    "name": "Tiana",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Lady",
+    "name": "Marina",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Camper",
+    "name": "Nestor",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Camper",
+    "name": "Houston",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Camper",
+    "name": "Clark",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Picnicker",
+    "name": "Esther",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Picnicker",
+    "name": "Nichole",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Picnicker",
+    "name": "Martha",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Tuber",
+    "name": "Vernon",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Tuber",
+    "name": "Clifton",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Tuber",
+    "name": "Rick",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Tuber",
+    "name": "Ellen",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Tuber",
+    "name": "Aimee",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Tuber",
+    "name": "Tyra",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Guitarist",
+    "name": "Arnold",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Guitarist",
+    "name": "Marcel",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Guitarist",
+    "name": "Irvin",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Idol",
+    "name": "Elena",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Idol",
+    "name": "Viv",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Idol",
+    "name": "Selena",
+    "sets": {
+      "regular-singles": [
+        1,
+        2
+      ],
+      "regular-doubles": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "class": "Poké Fan",
+    "name": "Tate",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Poké Fan",
+    "name": "Brooks",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Poké Fan",
+    "name": "Dusty",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Poké Fan",
+    "name": "Brandy",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Poké Fan",
+    "name": "Marie",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Poké Fan",
+    "name": "Imani",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Waiter",
+    "name": "Darin",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Waiter",
+    "name": "Duane",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Waiter",
+    "name": "Gerard",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Waitress",
+    "name": "Carissa",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Waitress",
+    "name": "Cassie",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Waitress",
+    "name": "Alexia",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Bug Catcher",
+    "name": "Fred",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Bug Catcher",
+    "name": "Kenyon",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Bug Catcher",
+    "name": "Jaleel",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Ninja Boy",
+    "name": "Colt",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Ninja Boy",
+    "name": "Trever",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Ninja Boy",
+    "name": "Will",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Poké Kid",
+    "name": "Lillian",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Poké Kid",
+    "name": "Ruth",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Poké Kid",
+    "name": "Janelle",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Fisher",
+    "name": "Bennett",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Fisher",
+    "name": "Braxton",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Ruin Maniac",
+    "name": "Winston",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Ruin Maniac",
+    "name": "Gino",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Collector",
+    "name": "Jamison",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Collector",
+    "name": "Davis",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Parasol Lady",
+    "name": "Mikaela",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Parasol Lady",
+    "name": "Sharon",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Parasol Lady",
+    "name": "Mia",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Beauty",
+    "name": "Barbara",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Beauty",
+    "name": "Stacy",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Beauty",
+    "name": "Alena",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Aroma Lady",
+    "name": "Sadie",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Aroma Lady",
+    "name": "Kierra",
+    "sets": {
+      "regular-singles": [
+        2,
+        3
+      ],
+      "regular-doubles": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "class": "Aroma Lady",
+    "name": "Nikki",
+    "sets": {
+      "regular-singles": [
+        3
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Guitarist",
+    "name": "Herbert",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Guitarist",
+    "name": "Jimmie",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Bird Keeper",
+    "name": "Shayla",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Bird Keeper",
+    "name": "Tierra",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Bird Keeper",
+    "name": "Elise",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Sailor",
+    "name": "Kerry",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Sailor",
+    "name": "Reuben",
+    "sets": {
+      "regular-singles": [
+        3
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Hiker",
+    "name": "Madison",
+    "sets": {
+      "regular-singles": [
+        3
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Hiker",
+    "name": "Don",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Idol",
+    "name": "Alana",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Idol",
+    "name": "Carla",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Idol",
+    "name": "Liliana",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Jogger",
+    "name": "Keon",
+    "sets": {
+      "regular-singles": [
+        3
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Jogger",
+    "name": "Jovan",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Worker",
+    "name": "Kade",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Worker",
+    "name": "Antwan",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Rancher",
+    "name": "Sheldon",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Rancher",
+    "name": "Ezra",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Rancher",
+    "name": "Pierce",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Cowgirl",
+    "name": "Shawna",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Cowgirl",
+    "name": "Annie",
+    "sets": {
+      "regular-singles": [
+        3
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Cowgirl",
+    "name": "Rose",
+    "sets": {
+      "regular-singles": [
+        3
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Cameraman",
+    "name": "Rory",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Cameraman",
+    "name": "Codey",
+    "sets": {
+      "regular-singles": [
+        3
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Cameraman",
+    "name": "Sammy",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Reporter",
+    "name": "Valeria",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Reporter",
+    "name": "Shanice",
+    "sets": {
+      "regular-singles": [
+        3
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Reporter",
+    "name": "Callie",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Cyclist",
+    "name": "Cordell",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Cyclist",
+    "name": "Kaden",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Cyclist",
+    "name": "Devin",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Cyclist",
+    "name": "Karissa",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Black Belt",
+    "name": "Kolby",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Black Belt",
+    "name": "Jonas",
+    "sets": {
+      "regular-singles": [
+        3,
+        4
+      ],
+      "regular-doubles": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "class": "Veteran",
+    "name": "Leslie",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Scientist",
+    "name": "Jerrod",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Black Belt",
+    "name": "Irving",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Breeder",
+    "name": "Lester",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Psychic",
+    "name": "Jasper",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Breeder",
+    "name": "Larissa",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Clown",
+    "name": "Benito",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Clown",
+    "name": "Jesse",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Breeder",
+    "name": "Nico",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Roughneck",
+    "name": "Donnell",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Ace Trainer",
+    "name": "Herman",
+    "sets": {
+      "regular-singles": [
+        4,
+        5,
+        6
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Psychic",
+    "name": "Aliyah",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Breeder",
+    "name": "Sonia",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Veteran",
+    "name": "Santos",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Psychic",
+    "name": "Tina",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Madame",
+    "name": "Brianne",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Battle Girl",
+    "name": "Pamela",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Madame",
+    "name": "Kate",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Gentleman",
+    "name": "Grady",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Psychic",
+    "name": "Stewart",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Psychic",
+    "name": "Kolton",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Black Belt",
+    "name": "Vaughn",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Gentleman",
+    "name": "Jackie",
+    "sets": {
+      "regular-singles": [
+        4,
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Ranger",
+    "name": "Bradly",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Dragon Tamer",
+    "name": "Codie",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Youngster",
+    "name": "Tobias",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Youngster",
+    "name": "Reese",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Ranger",
+    "name": "Cyril",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Dragon Tamer",
+    "name": "Erich",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Ace Trainer",
+    "name": "Lincoln",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Dragon Tamer",
+    "name": "Garett",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Lass",
+    "name": "Donna",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Bug Catcher",
+    "name": "Daulton",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Ace Trainer",
+    "name": "Alaina",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "School Kid",
+    "name": "Floyd",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "School Kid",
+    "name": "Allyson",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Ace Trainer",
+    "name": "Harold",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "School Kid",
+    "name": "Ciara",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Lass",
+    "name": "McKenna",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Veteran",
+    "name": "Cruz",
+    "sets": {
+      "regular-singles": [
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Ace Trainer",
+    "name": "Regina",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Battle Girl",
+    "name": "Daniela",
+    "sets": {
+      "regular-singles": [
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Ranger",
+    "name": "Macy",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "School Kid",
+    "name": "Vance",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Ranger",
+    "name": "Kira",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Ace Trainer",
+    "name": "Natalia",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Ace Trainer",
+    "name": "Donnie",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Ranger",
+    "name": "Breana",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Madame",
+    "name": "Chelsie",
+    "sets": {
+      "regular-singles": [
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Bug Catcher",
+    "name": "Aric",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Dragon Tamer",
+    "name": "Rhett",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Ace Trainer",
+    "name": "Jane",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Breeder",
+    "name": "Pierre",
+    "sets": {
+      "regular-singles": [
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Roughneck",
+    "name": "Royce",
+    "sets": {
+      "regular-singles": [
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Battle Girl",
+    "name": "Melinda",
+    "sets": {
+      "regular-singles": [
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Black Belt",
+    "name": "Gene",
+    "sets": {
+      "regular-singles": [
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Rich Boy",
+    "name": "Quinten",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Scientist",
+    "name": "August",
+    "sets": {
+      "regular-singles": [
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Ranger",
+    "name": "Darrian",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Lady",
+    "name": "Kali",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Battle Girl",
+    "name": "Lorena",
+    "sets": {
+      "regular-singles": [
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Rich Boy",
+    "name": "Elmer",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Battle Girl",
+    "name": "Eva",
+    "sets": {
+      "regular-singles": [
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Lady",
+    "name": "Christy",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Ace Trainer",
+    "name": "Myron",
+    "sets": {
+      "regular-singles": [
+        5
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Ace Trainer",
+    "name": "Sasha",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Ninja Boy",
+    "name": "Elisha",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Ninja Boy",
+    "name": "Josef",
+    "sets": {
+      "regular-singles": [
+        5,
+        6
+      ],
+      "regular-doubles": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Breeder",
+    "name": "Kylee",
+    "sets": {
+      "regular-singles": [
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Psychic",
+    "name": "Melody",
+    "sets": {
+      "regular-singles": [
+        5
+      ],
+      "regular-doubles": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "class": "Idol",
+    "name": "Kyla",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Guitarist",
+    "name": "Markell",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Camper",
+    "name": "Leland",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Fisher",
+    "name": "Bronson",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Sailor",
+    "name": "Bernard",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Jogger",
+    "name": "Rico",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Bird Keeper",
+    "name": "Skylar",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Ruin Maniac",
+    "name": "Trace",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Picnicker",
+    "name": "Serena",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Guitarist",
+    "name": "Marquez",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Collector",
+    "name": "Josh",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Picnicker",
+    "name": "Kyra",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Poké Kid",
+    "name": "Tracy",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Idol",
+    "name": "Claudia",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Hiker",
+    "name": "Jessy",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "PI",
+    "name": "Emmett",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Jogger",
+    "name": "Dan",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Policeman",
+    "name": "Rex",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Fisher",
+    "name": "Camden",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Bird Keeper",
+    "name": "Paula",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "PI",
+    "name": "Quincy",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Policeman",
+    "name": "Tyron",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Collector",
+    "name": "Jim",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Guitarist",
+    "name": "Tayler",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Camper",
+    "name": "Justyn",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Poké Kid",
+    "name": "Juliana",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Idol",
+    "name": "Kari",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Poké Fan",
+    "name": "Ted",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Ruin Maniac",
+    "name": "Rocky",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Guitarist",
+    "name": "Tory",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Idol",
+    "name": "Maranda",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Hiker",
+    "name": "Stetson",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Poké Fan",
+    "name": "Cecil",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Poké Fan",
+    "name": "Selina",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Sailor",
+    "name": "Hugh",
+    "sets": {
+      "regular-singles": [
+        6,
+        7
+      ],
+      "regular-doubles": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "class": "Ace Trainer",
+    "name": "Dallin",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Psychic",
+    "name": "Clyde",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Breeder",
+    "name": "Blair",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Rancher",
+    "name": "Kellen",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Breeder",
+    "name": "Emilee",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Black Belt",
+    "name": "Daron",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Madame",
+    "name": "Kailey",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Psychic",
+    "name": "Clara",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Madame",
+    "name": "Mayra",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Rancher",
+    "name": "Alton",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Ace Trainer",
+    "name": "Cortney",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Cowgirl",
+    "name": "Margot",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Cowgirl",
+    "name": "Sophie",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Ace Trainer",
+    "name": "Jayden",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Psychic",
+    "name": "Alma",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Poké Fan",
+    "name": "Carley",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Ace Trainer",
+    "name": "Ellis",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Ace Trainer",
+    "name": "Celina",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Ranger",
+    "name": "Darcy",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Psychic",
+    "name": "Gunner",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Veteran",
+    "name": "Antony",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Breeder",
+    "name": "Tiffani",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Ranger",
+    "name": "Denver",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Black Belt",
+    "name": "Benny",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Ace Trainer",
+    "name": "Abbey",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Veteran",
+    "name": "Mikel",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Breeder",
+    "name": "Harvey",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Ranger",
+    "name": "Rusty",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Dragon Tamer",
+    "name": "Hernan",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Dragon Tamer",
+    "name": "Alonso",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Ace Trainer",
+    "name": "Irene",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Battle Girl",
+    "name": "Sylvia",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Pokémon Ranger",
+    "name": "Joy",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Ace Trainer",
+    "name": "Lionel",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Battle Girl",
+    "name": "Kristy",
+    "sets": {
+      "regular-singles": [
+        7
+      ],
+      "master-singles": true,
+      "regular-doubles": [
+        7
+      ]
+    }
+  },
+  {
+    "class": "Waiter",
+    "name": "Kelby",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Waiter",
+    "name": "Kevon",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Waitress",
+    "name": "Kaila",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Waitress",
+    "name": "Jaime",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Cameraman",
+    "name": "Barrett",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Cameraman",
+    "name": "Jess",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Reporter",
+    "name": "Johanna",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Reporter",
+    "name": "Josie",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Cyclist",
+    "name": "Demetri",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Cyclist",
+    "name": "Lyle",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Cyclist",
+    "name": "Kristi",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Cyclist",
+    "name": "Mariana",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "PI",
+    "name": "Auston",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "PI",
+    "name": "Coby",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Idol",
+    "name": "Sidney",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Idol",
+    "name": "Elaine",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Jogger",
+    "name": "Sherman",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Jogger",
+    "name": "Ryne",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Fisher",
+    "name": "Turner",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Fisher",
+    "name": "Bryon",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Sailor",
+    "name": "Cain",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Sailor",
+    "name": "Kegan",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Hiker",
+    "name": "Aldo",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Hiker",
+    "name": "Andreas",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Ruin Maniac",
+    "name": "Jaylin",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Ruin Maniac",
+    "name": "Titus",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Guitarist",
+    "name": "Tyrell",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Guitarist",
+    "name": "Dalvin",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Collector",
+    "name": "Edmund",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Collector",
+    "name": "Kelton",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Roughneck",
+    "name": "Brant",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Roughneck",
+    "name": "Aidan",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Scientist",
+    "name": "Carlo",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Scientist",
+    "name": "Jarred",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Gentleman",
+    "name": "Jerrell",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Gentleman",
+    "name": "Kennedy",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Worker",
+    "name": "Hans",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Worker",
+    "name": "Layne",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Clown",
+    "name": "River",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Clown",
+    "name": "Kendel",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Policeman",
+    "name": "Kenton",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Policeman",
+    "name": "Tavon",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "PI",
+    "name": "Chester",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "PI",
+    "name": "Codi",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Bird Keeper",
+    "name": "Allie",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Bird Keeper",
+    "name": "Anissa",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Parasol Lady",
+    "name": "Christa",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Parasol Lady",
+    "name": "Madelyn",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Beauty",
+    "name": "Jaclyn",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Beauty",
+    "name": "Noelle",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Aroma Lady",
+    "name": "Haylee",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Aroma Lady",
+    "name": "Nadia",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Idol",
+    "name": "Yvette",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Idol",
+    "name": "Tasha",
+    "sets": {
+      "master-singles": true
+    }
+  },
+  {
+    "class": "Tower Tycoon",
+    "name": "Palmer",
+    "battleNum": 21,
+    "boss": "regular"
+  },
+  {
+    "class": "Tower Tycoon",
+    "name": "Palmer",
+    "battleNum": 49,
+    "boss": "regular"
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Roark",
+    "rank": 1,
+    "boss": "master-singles",
+    "battleNum": 7
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Roark and Byron",
+    "rank": 1,
+    "boss": "master-doubles",
+    "battleNum": 7
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Gardenia",
+    "rank": 2,
+    "boss": "master-singles",
+    "battleNum": 14
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Mira and Cheryl",
+    "rank": 2,
+    "boss": "master-doubles",
+    "battleNum": 14
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Maylene",
+    "rank": 3,
+    "boss": "master-singles",
+    "battleNum": 21
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Gardenia and Fantina",
+    "rank": 3,
+    "boss": "master-doubles",
+    "battleNum": 21
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Wake",
+    "rank": 4,
+    "boss": "master-singles",
+    "battleNum": 28
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Jupiter and Saturn",
+    "rank": 4,
+    "boss": "master-doubles",
+    "battleNum": 28
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Fantina",
+    "rank": 5,
+    "boss": "master-singles",
+    "battleNum": 35
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Maylene and Candice",
+    "rank": 5,
+    "boss": "master-doubles",
+    "battleNum": 35
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Byron",
+    "rank": 6,
+    "boss": "master-singles",
+    "battleNum": 42
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Marley and Riley",
+    "rank": 6,
+    "boss": "master-doubles",
+    "battleNum": 42
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Candice",
+    "rank": 7,
+    "boss": "master-singles",
+    "battleNum": 49
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Buck and Bertha",
+    "rank": 7,
+    "boss": "master-doubles",
+    "battleNum": 49
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Volkner",
+    "rank": 8,
+    "boss": "master-singles",
+    "battleNum": 56
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Flint and Volkner",
+    "rank": 8,
+    "boss": "master-doubles",
+    "battleNum": 56
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Cynthia",
+    "rank": 9,
+    "boss": "master-singles",
+    "battleNum": 63
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Mars and Cyrus",
+    "rank": 9,
+    "boss": "master-doubles",
+    "battleNum": 63
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Palmer",
+    "rank": 10,
+    "boss": "master-singles",
+    "battleNum": 70
+  },
+  {
+    "class": "Gym Leader",
+    "name": "Barry and Palmer",
+    "rank": 10,
+    "boss": "master-doubles",
+    "battleNum": 70
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Myron and Jane",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Myron and Natalia",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Herman and Natalia",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Donnie and Sasha",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kellen and Alton",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kellen and Mikel",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kellen and Carlo",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Alton and Joy",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Alton and Lyle",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Alton and Andreas",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Alton and Tyrell",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Margot and Turner",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Margot and Christa",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Sophie and Irene",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Sophie and Benny",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Sophie and Kevon",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Sophie and Codi",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Blair and Kelby",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Blair and Dalvin",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Harvey and Sophie",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Harvey and Lyle",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Harvey and Edmund",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Emilee and Carlo",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Tiffani and Barrett",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Tiffani and Elaine",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Tiffani and Turner",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Tiffani and Kenton",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Ellis and Irene",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Ellis and Barrett",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Ellis and Sherman",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Ellis and Kelton",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Ellis and Layne",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Lionel and Ellis",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Lionel and Abbey",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Lionel and Kristi",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Lionel and Mariana",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Lionel and Tyrell",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Irene and Darcy",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Irene and Alonso",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Irene and Kevon",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Irene and Kaila",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Irene and Haylee",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Abbey and Carley",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Abbey and Brant",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Dallin and Barrett",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Dallin and Ryne",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Dallin and Jaylin",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Jayden and Josie",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Cortney and Celina",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Cortney and Tavon",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Cortney and Haylee",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Celina and Kevon",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Celina and Kendel",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Denver and Benny",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Denver and Kennedy",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Rusty and Elaine",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Rusty and Jarred",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Rusty and Kenton",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Rusty and Tavon",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Darcy and Bryon",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Joy and Brant",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Joy and Tasha",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Alonso and Daron",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Alonso and River",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Alonso and Yvette",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Hernan and Clyde",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Hernan and Kevon",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Hernan and Dalvin",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Benny and Mariana",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Benny and Layne",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Daron and Jaime",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Daron and Jess",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Sylvia and Lyle",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Sylvia and Dalvin",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Sylvia and Jaclyn",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kristy and Lionel",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kristy and Ryne",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kristy and Nadia",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Mikel and Denver",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Mikel and Lyle",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Antony and Haylee",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kailey and Madelyn",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kailey and Jaclyn",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Clyde and Tiffani",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Clyde and Jess",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Gunner and Kegan",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Gunner and Jerrell",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Clara and Cortney",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Clara and Jaime",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Alma and Irene",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Alma and Kristi",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Alma and Kelton",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kelby and Codi",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kelby and Haylee",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kevon and Carley",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kevon and Cortney",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kaila and Mayra",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Jaime and Jaylin",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Jaime and Jaclyn",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Jaime and Nadia",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Barrett and Sophie",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Jess and Emilee",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Jess and Abbey",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Johanna and Blair",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Johanna and Clyde",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Johanna and Yvette",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Josie and Clara",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Demetri and Margot",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Demetri and Titus",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Demetri and Layne",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Lyle and Jaylin",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Lyle and Anissa",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kristi and Sylvia",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kristi and Antony",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Mariana and Jayden",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Mariana and Tyrell",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Mariana and Jarred",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Auston and Brant",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Auston and Codi",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Coby and Clyde",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Sidney and Cain",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Sidney and Chester",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Sidney and Allie",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Elaine and Coby",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Elaine and Titus",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Elaine and Kennedy",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Sherman and Antony",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Sherman and Mayra",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Sherman and Ryne",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Sherman and Nadia",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Ryne and Alton",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Ryne and Hans",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Ryne and River",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Ryne and Tavon",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Turner and Jerrell",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Bryon and Dallin",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Bryon and Hernan",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Bryon and Kristi",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Bryon and Jarred",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Bryon and Kennedy",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Cain and Alton",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Cain and Auston",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Cain and Hans",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kegan and Noelle",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Aldo and Kellen",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Aldo and Blair",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Aldo and Kailey",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Aldo and Cain",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Aldo and Carlo",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Andreas and Kristy",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Andreas and Johanna",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Andreas and Kristi",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Andreas and Dalvin",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Andreas and Edmund",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Andreas and Tasha",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Jaylin and Denver",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Jaylin and Demetri",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Jaylin and Edmund",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Titus and Ryne",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Titus and Dalvin",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Titus and Edmund",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Tyrell and Kristy",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Tyrell and Mikel",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Tyrell and Mayra",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Tyrell and Alma",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Tyrell and Jerrell",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Dalvin and Kellen",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Dalvin and Andreas",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Edmund and Alton",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Edmund and Edmund",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Edmund and Brant",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Edmund and Jarred",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Edmund and Noelle",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kelton and Joy",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kelton and Anissa",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Brant and Sophie",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Brant and Kristy",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Brant and Chester",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Aidan and Brant",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Aidan and Jerrell",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Aidan and Hans",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Aidan and Kenton",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Carlo and Irene",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Carlo and Dallin",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Carlo and Cortney",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Carlo and Alonso",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Jerrell and Irene",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Jerrell and Auston",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Jerrell and Brant",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Jerrell and Allie",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kennedy and Blair",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kennedy and Harvey",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kennedy and Sherman",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kennedy and Aldo",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kennedy and Carlo",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Hans and Benny",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Hans and Kennedy",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Layne and Darcy",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Layne and Joy",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Layne and Cain",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Layne and Noelle",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "River and Alton",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "River and Sidney",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kendel and Jaime",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kendel and Aldo",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kenton and Cortney",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kenton and Alma",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Kenton and Jaclyn",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Tavon and Harvey",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Tavon and Kristy",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Chester and Tiffani",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Chester and Sidney",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Chester and Edmund",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Chester and Tasha",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Codi and Lionel",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Codi and Hernan",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Codi and River",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Allie and Coby",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Allie and Chester",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Anissa and Kegan",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Anissa and Nadia",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Christa and Benny",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Christa and Gunner",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Christa and Demetri",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Madelyn and Ellis",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Madelyn and Sylvia",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Madelyn and Jaime",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Madelyn and Josie",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Madelyn and Kendel",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Madelyn and Tavon",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Jaclyn and Kellen",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Jaclyn and Lionel",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Jaclyn and Dallin",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Jaclyn and Kaila",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Noelle and Kaila",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Noelle and Madelyn",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Haylee and Carley",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Haylee and Rusty",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Haylee and Mikel",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Haylee and Kennedy",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Nadia and Turner",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Nadia and Dalvin",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Nadia and Madelyn",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Yvette and Emilee",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Yvette and Tiffani",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Yvette and Turner",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Yvette and Kendel",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Tasha and Emilee",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Tasha and Darcy",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Tasha and Jaime",
+    "sets": {
+      "master-doubles": true
+    }
+  },
+  {
+    "class": "Trainer Pair",
+    "name": "Tasha and Aldo",
+    "sets": {
+      "master-doubles": true
+    }
+  }
+]
