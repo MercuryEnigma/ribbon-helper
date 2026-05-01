@@ -110,7 +110,7 @@ export default function App() {
             </NavLink>
             {ENABLE_BATTLE && (
               <NavLink to="/battle-facilities" className={({ isActive }) => isActive ? 'active' : ''}>
-                Battle Facilities<sup> (Beta)</sup>
+                Battle Facilities
               </NavLink>
             )}
           </nav>

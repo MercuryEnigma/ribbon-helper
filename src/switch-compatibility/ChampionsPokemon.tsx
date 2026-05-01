@@ -14,7 +14,34 @@ interface FilteredPokemon {
   key: string;
   name: string;
   data: PokemonData;
-  championsSource?: 'regulationMA' | 'globalChallenge';
+  championsSource?: 'regulationMA' | 'globalChallenge' | 'both';
+  shadowGamesSource?: 'colosseum' | 'xd' | 'both';
+  preEvoShadowSource?: 'colosseum' | 'xd' | 'both';
+}
+
+function getPreEvoShadowSource(
+  key: string,
+  pokemonDb: PokemonDatabase
+): 'colosseum' | 'xd' | 'both' | undefined {
+  const visited = new Set<string>();
+  let currentKey = pokemonDb[key]?.evolvesFrom ?? null;
+
+  while (currentKey && !visited.has(currentKey)) {
+    visited.add(currentKey);
+    const data = pokemonDb[currentKey];
+    if (!data) break;
+
+    const flags = data.flags || [];
+    const inCol = flags.includes('colShadow');
+    const inXD = flags.includes('xdShadow');
+    if (inCol || inXD) {
+      return inCol && inXD ? 'both' : inCol ? 'colosseum' : 'xd';
+    }
+
+    currentKey = data.evolvesFrom ?? null;
+  }
+
+  return undefined;
 }
 
 function filterChampionsPokemonByGames(
@@ -46,26 +73,28 @@ function filterChampionsPokemonByGames(
       displayName = getPokemonDisplayName(key, data);
     }
 
-    let matchesFilter = false;
-    let championsSource: 'regulationMA' | 'globalChallenge' | undefined;
+    // Actual membership — used for icon coloring regardless of filter
+    const championsSource: 'regulationMA' | 'globalChallenge' | 'both' =
+      hasRegulationMA && hasGlobalChallenge ? 'both'
+      : hasRegulationMA ? 'regulationMA'
+      : 'globalChallenge';
 
+    let matchesFilter = false;
     if (championsFilter === 'regulationMA') {
       matchesFilter = hasRegulationMA;
-      championsSource = 'regulationMA';
     } else if (championsFilter === 'globalChallenge') {
       matchesFilter = hasGlobalChallenge;
-      championsSource = 'globalChallenge';
     } else {
       matchesFilter = hasRegulationMA || hasGlobalChallenge;
-      if (hasRegulationMA) {
-        championsSource = 'regulationMA';
-      } else {
-        championsSource = 'globalChallenge';
-      }
     }
 
     if (matchesFilter) {
-      results.push({ key, name: displayName, data, championsSource });
+      const flags = data.flags || pokemonDb[data['data-source'] ?? '']?.flags || [];
+      const inCol = flags.includes('colShadow');
+      const inXD = flags.includes('xdShadow');
+      const shadowGamesSource = inCol && inXD ? 'both' : inCol ? 'colosseum' : inXD ? 'xd' : undefined;
+      const preEvoShadowSource = shadowGamesSource ? undefined : getPreEvoShadowSource(key, pokemonDb);
+      results.push({ key, name: displayName, data, championsSource, shadowGamesSource, preEvoShadowSource });
     }
   }
 
@@ -254,10 +283,15 @@ export default function ChampionsPokemon({ pokemonDb, onPokemonSelect }: Champio
                     {filteredPokemon.map((pokemon, index) => {
                       const iconProps = getPokemonIconProps(pokemon.key, pokemon.data, pokemonDb);
                       const uniqueKey = pokemon.championsSource ? `${pokemon.key}-${pokemon.championsSource}` : `${pokemon.key}-${index}`;
+                      const sourceClass = pokemon.shadowGamesSource === 'colosseum' ? 'champ-col'
+                        : pokemon.shadowGamesSource === 'xd' ? 'champ-xd'
+                        : pokemon.shadowGamesSource === 'both' ? 'champ-both'
+                        : pokemon.preEvoShadowSource ? 'champ-pre-evo'
+                        : '';
                       return (
                         <img
                           key={uniqueKey}
-                          className="pokemon-icon-grid-item"
+                          className={`pokemon-icon-grid-item${sourceClass ? ` ${sourceClass}` : ''}`}
                           alt={pokemon.name}
                           onClick={() => handlePokemonClick(uniqueKey)}
                           onMouseEnter={(e) => {
@@ -270,7 +304,10 @@ export default function ChampionsPokemon({ pokemonDb, onPokemonSelect }: Champio
                             const maxX = viewport ? viewport - safeMargin : centerX;
                             const clampedX = Math.min(Math.max(centerX, safeMargin), maxX);
 
-                            const gameName = pokemon.championsSource === 'regulationMA' ? 'Regulation M-A' : 'Global Challenge 2026';
+                            const gameName = pokemon.shadowGamesSource === 'colosseum' ? 'Colosseum'
+                              : pokemon.shadowGamesSource === 'xd' ? 'XD: Gale of Darkness'
+                              : pokemon.shadowGamesSource === 'both' ? 'Both'
+                              : '';
 
                             setHoveredPokemon({
                               name: pokemon.name,
@@ -287,6 +324,20 @@ export default function ChampionsPokemon({ pokemonDb, onPokemonSelect }: Champio
                         />
                       );
                     })}
+                  </div>
+                  <div className="border-legend">
+                    <div className="legend-item">
+                      <div className="legend-color champ-col"></div>
+                      <span>Colosseum</span>
+                    </div>
+                    <div className="legend-item">
+                      <div className="legend-color champ-xd"></div>
+                      <span>XD: Gale of Darkness</span>
+                    </div>
+                    <div className="legend-item">
+                      <div className="legend-color champ-pre-evo"></div>
+                      <span>Pre-evolution</span>
+                    </div>
                   </div>
                 </div>
                 <div
