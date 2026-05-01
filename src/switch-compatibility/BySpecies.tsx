@@ -5,6 +5,7 @@ import { getGamesForPokemon, getGameGroupNames, searchPokemonByName, getPokemonD
 import { getPokemonIconProps, getPokemonLargeImageProps } from './iconUtils';
 import { getAvailableRibbons } from './ribbonUtils';
 import ribbonsData from '../data/ribbons.json';
+import { REGULATION_MA_POKEMON, GLOBAL_CHALLENGE_POKEMON } from './championsData';
 
 interface BySpeciesProps {
   pokemonDb: PokemonDatabase;
@@ -75,6 +76,11 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
     return selectedPokemonData.flags.includes('colShadow') || selectedPokemonData.flags.includes('xdShadow');
   }, [selectedPokemonData]);
 
+  const isChampionsPokemon = useMemo(() => {
+    if (!selectedPokemon) return false;
+    return REGULATION_MA_POKEMON.has(selectedPokemon) || GLOBAL_CHALLENGE_POKEMON.has(selectedPokemon);
+  }, [selectedPokemon]);
+
   const availableGames = useMemo(() => {
     if (!pokemonDb || !selectedPokemon) return [];
     try {
@@ -88,7 +94,10 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
         if (flags.includes('xdShadow')) shadowGames.push('XD: Gale of Darkness');
         names.push(...shadowGames);
       }
-      const order = ['Colosseum', 'XD: Gale of Darkness', 'Let\'s Go Pikachu / Eevee', 'Sword / Shield', 'Brilliant Diamond / Shining Pearl', 'Legends: Arceus', 'Scarlet / Violet', 'Legends: Z-A'];
+      if (isChampionsPokemon) {
+        names.push('Champions');
+      }
+      const order = ['Colosseum', 'XD: Gale of Darkness', 'Let\'s Go Pikachu / Eevee', 'Sword / Shield', 'Brilliant Diamond / Shining Pearl', 'Legends: Arceus', 'Scarlet / Violet', 'Legends: Z-A', 'Champions'];
       return names
         .filter((name, idx, arr) => arr.indexOf(name) === idx)
         .sort((a, b) => {
@@ -102,7 +111,7 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
       console.error('Error getting available games:', error);
       return [];
     }
-  }, [pokemonDb, selectedPokemon, selectedPokemonData, isShadowPokemon]);
+  }, [pokemonDb, selectedPokemon, selectedPokemonData, isShadowPokemon, isChampionsPokemon]);
 
   const displayName = useMemo(() => {
     if (!pokemonDb || !selectedPokemonData) return '';
@@ -400,8 +409,8 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
                 </div>
               ) : (
                 visibleAvailableGames.map(game => (
-                  <div className={`pokedex-row${game === 'Colosseum' || game === 'XD: Gale of Darkness' ? ' shadow-row' : ''}`} key={game}>
-                    <div className={`pokedex-row-label${game === 'Colosseum' || game === 'XD: Gale of Darkness' ? ' shadow' : ''}`}>Available in</div>
+                  <div className={`pokedex-row${game === 'Colosseum' || game === 'XD: Gale of Darkness' ? ' shadow-row' : game === 'Champions' ? ' champions-row' : ''}`} key={game}>
+                    <div className={`pokedex-row-label${game === 'Colosseum' || game === 'XD: Gale of Darkness' ? ' shadow' : game === 'Champions' ? ' champions' : ''}`}>Available in</div>
                     <div className="pokedex-row-value">{game}</div>
                   </div>
                 ))

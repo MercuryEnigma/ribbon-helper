@@ -128,10 +128,6 @@ export function filterPokemonByGames(
     return [];
   }
 
-  if (selectedGameIds.length === 0) {
-    return [];
-  }
-
   const results: Array<{ key: string; name: string; data: PokemonData }> = [];
 
   try {
@@ -157,8 +153,8 @@ export function filterPokemonByGames(
         continue;
       }
 
-      // Check if this Pokemon is available in ALL selected games
-      const availableInAll = selectedGameIds.every(gameId =>
+      // No games selected → show all; otherwise require availability in ALL selected games
+      const availableInAll = selectedGameIds.length === 0 || selectedGameIds.every(gameId =>
         games.includes(gameId)
       );
 

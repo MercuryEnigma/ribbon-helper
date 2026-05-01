@@ -43,7 +43,7 @@ export interface GameTooltipDetail {
   isLastChance?: boolean;
 }
 
-export const GAME_TOOLTIPS: Record<'available' | 'shadow', Record<string, GameTooltipDetail>> = {
+export const GAME_TOOLTIPS: Record<'available' | 'shadow' | 'champions', Record<string, GameTooltipDetail>> = {
   available: {
     "Let's Go Pikachu / Eevee": {
       header: 'Transfer out only!',
@@ -110,6 +110,20 @@ export const GAME_TOOLTIPS: Record<'available' | 'shadow', Record<string, GameTo
     'Either': {
       header: 'Shared Pokemon',
       body: 'Makuhita and Togepi can both be captured in either game. Togepi is Japanese e-reader exclusive. The rest are exclusive to one game or the other, though some have shared evolutionary lines.'
+    }
+  },
+  champions: {
+    'Regulation M-A': {
+      header: 'Regulation M-A',
+      body: 'Pokemon available in Regulation M-A format.'
+    },
+    'Global Challenge 2026': {
+      header: 'Global Challenge 2026',
+      body: 'Pokemon available in the Global Challenge 2026 event.'
+    },
+    'Either': {
+      header: 'Either format',
+      body: 'Pokemon available in either Regulation M-A or Global Challenge 2026.'
     }
   }
 };

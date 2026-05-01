@@ -147,10 +147,7 @@ export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: Availab
         <h3>
           Available Pokémon ({filteredPokemon.length})
         </h3>
-        {selectedGames.length === 0 ? (
-          <p className="hint">Select one or more games above to see which Pokémon are available in all of them.</p>
-        ) : (
-          <>
+        <>
             {filteredPokemon.length === 0 ? (
               <p className="no-results">No Pokémon found that are available in all selected games.</p>
             ) : (
@@ -232,8 +229,7 @@ export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: Availab
                 </div>
               </div>
             )}
-          </>
-        )}
+        </>
       </div>
 
       {hoveredPokemon && (

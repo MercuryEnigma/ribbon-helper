@@ -20,6 +20,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 .mode-selector button,
@@ -935,6 +936,12 @@
   background:#e8dff9;
   border-color:#7c6aba;
   color:#2d2d2d;
+}
+
+.pokedex-row-label.champions{
+  background:#ccf5ff;
+  border-color:#0099e6;
+  color:#003d66;
 }
 
 .pokedex-row-value {
@@ -1923,6 +1930,221 @@
   color: #2d2d2d;
 }
 
+/* Champions Pokemon Styles */
+
+.champions-mode .mode-selector {
+  background: #00c8ff;
+  border-color: #0077cc;
+}
+
+.champions-mode .mode-selector button,
+.champions-mode .mode-selector a {
+  background: #80dfff;
+  border: 2px solid #0099e6;
+  color: #0a0a0a;
+}
+
+.champions-mode .mode-selector a.active {
+  background: #ccf5ff;
+  color: #0a0a0a;
+  border-color: #0077cc;
+}
+
+.champions-pokemon .champions-selector {
+  background: #b3f0ff;
+  border-color: #0077cc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.champions-pokemon .champions-selector h3 {
+  border-bottom-color: #0077cc;
+  color: #0a0a0a;
+}
+
+.champions-pokemon .champions-results h3 {
+  color: #0a0a0a;
+}
+
+.champions-filter-toggle {
+  display: flex;
+  gap: 0;
+  margin: 0.75rem 0;
+  background: #b3f0ff;
+  border-radius: 50px;
+  padding: 4px;
+  border: 2px solid #0077cc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.champions-filter-toggle button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #0a0a0a;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.champions-filter-toggle button:hover:not(.active) {
+  background: #ccf5ff;
+}
+
+.champions-filter-toggle button.active {
+  background: #ccf5ff;
+  color: #0a0a0a;
+  border: 1px solid #0099e6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  font-weight: 700;
+}
+
+.champions-pokemon .champions-checkbox {
+  background: #b3f0ff;
+  border-color: rgba(0, 119, 204, 0.45);
+  color: #0a0a0a;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.champions-pokemon .champions-checkbox:hover {
+  background: #80dfff;
+  border-color: rgba(0, 119, 204, 0.7);
+}
+
+.champions-pokemon .champions-checkbox:has(input:checked) {
+  background: #ccf5ff;
+  border-color: #0077cc;
+}
+
+.champions-pokemon .champions-checkbox:has(input:checked):hover {
+  background: #b3f0ff;
+  border-color: #005fa3;
+}
+
+.champions-pokemon .champions-checkbox input[type="checkbox"]:checked ~ .toggle-label {
+  font-weight: 600;
+}
+
+.champions-pokemon .champions-checkbox .toggle-check {
+  color: #0a0a0a;
+}
+
+.champions-pokemon .champions-checkbox .toggle-label {
+  color: #0a0a0a;
+  font-weight: 400;
+}
+
+.champions-pokemon .champions-checkbox:not(:has(input:checked)) .toggle-label {
+  color: #1a1a2e;
+}
+
+.champions-pokemon .champions-grid {
+  border-color: #0099e6;
+  box-shadow:
+    inset 0 0 0 4px #0077cc,
+    0 2px 8px rgba(0, 119, 204, 0.25);
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      #ccf5ff 0px,
+      #ccf5ff 5px,
+      #e6faff 5px,
+      #e6faff 18px
+    );
+}
+
+.champions-pokemon .champions-list {
+  scrollbar-color: #0099e6 #003d66;
+}
+
+.champions-pokemon .champions-list::-webkit-scrollbar-track,
+.champions-pokemon .champions-list ul::-webkit-scrollbar-track {
+  background: #003d66;
+}
+
+.champions-pokemon .champions-list::-webkit-scrollbar-thumb,
+.champions-pokemon .champions-list ul::-webkit-scrollbar-thumb {
+  background: #0099e6;
+}
+
+.champions-pokemon .champions-list::-webkit-scrollbar-thumb:hover,
+.champions-pokemon .champions-list ul::-webkit-scrollbar-thumb:hover {
+  background: #007ab8;
+}
+
+.champions-pokemon .champions-list li {
+  background: #ccf5ff;
+  border-color: #0099e6;
+  color: #0a0a0a;
+}
+
+.champions-pokemon .champions-list li:hover {
+  background: #0077cc;
+  border-color: #005fa3;
+  box-shadow: 0 2px 6px rgba(0, 119, 204, 0.45);
+  color: #fff;
+}
+
+.champions-pokemon .champions-list li:hover .pokemon-number {
+  color: #ccf5ff;
+}
+
+.champions-pokemon .champions-list li.highlighted {
+  background: #0077cc;
+  border-color: #005fa3;
+  box-shadow: 0 0 12px rgba(0, 230, 255, 0.9);
+  color: #fff;
+}
+
+.champions-pokemon .champions-list li.highlighted .pokemon-number {
+  color: #ccf5ff;
+}
+
+.champions-pokemon .champions-hint,
+.champions-pokemon .champions-no-results {
+  background: #e6faff;
+  border-color: #0077cc;
+  color: #0a0a0a;
+}
+
+.champions-filter-button {
+  position: relative;
+  display: flex;
+  flex: 1;
+}
+
+.champions-filter-button button {
+  flex: 1;
+}
+
+.champions-pokemon-tooltip {
+  position: fixed;
+  z-index: 1000;
+  background: #003d66;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-110%);
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.champions-pokemon-tooltip-header {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #00e5ff;
+}
+
+.champions-pokemon-tooltip-body {
+  font-size: 0.8rem;
+  color: #b3f0ff;
+  margin-top: 0.2rem;
+}
+
 /* Mobile Responsive Styles */
 @media (max-width: 900px) {
   .switch-compatibility {
@@ -1938,11 +2160,11 @@
 
   .mode-selector button,
   .mode-selector a {
-    flex: 1 1 auto;
-    min-width: 140px;
+    flex: 1 1 calc(50% - 0.5rem);
     padding: 0.6rem 1rem;
     font-size: 0.85rem;
     white-space: nowrap;
+    text-align: center;
   }
 
   /* Stack pokemon grid and list vertically */

@@ -1,6 +1,7 @@
 import { Routes, Route, NavLink, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import AvailablePokemon from './AvailablePokemon';
 import ShadowPokemon from './ShadowPokemon';
+import ChampionsPokemon from './ChampionsPokemon';
 import BySpecies from './BySpecies';
 import ErrorBoundary from './ErrorBoundary';
 import pokemonData from '../data/pokemon.json';
@@ -29,6 +30,17 @@ function ShadowSection() {
   return <ShadowPokemon pokemonDb={pokemonDb} onPokemonSelect={handlePokemonSelect} />;
 }
 
+function ChampionsSection() {
+  const navigate = useNavigate();
+  const pokemonDb = pokemonData as PokemonDatabase;
+
+  const handlePokemonSelect = (key: string) => {
+    navigate(`/game-compatibility/species?p=${key}`);
+  };
+
+  return <ChampionsPokemon pokemonDb={pokemonDb} onPokemonSelect={handlePokemonSelect} />;
+}
+
 function SpeciesPokemon() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -47,6 +59,7 @@ export default function SwitchCompatibility() {
   const pokemonDb = pokemonData as PokemonDatabase;
   const location = useLocation();
   const isShadowMode = location.pathname.includes('/shadow');
+  const isChampionsMode = location.pathname.includes('/champions');
 
   if (!pokemonDb || typeof pokemonDb !== 'object') {
     return (
@@ -59,8 +72,10 @@ export default function SwitchCompatibility() {
     );
   }
 
+  const modeClass = isShadowMode ? 'shadow-mode' : isChampionsMode ? 'champions-mode' : '';
+
   return (
-    <div className={`switch-compatibility ${isShadowMode ? 'shadow-mode' : ''}`}>
+    <div className={`switch-compatibility ${modeClass}`}>
       <div className="mode-selector">
         <NavLink
           to="/game-compatibility/games"
@@ -73,6 +88,12 @@ export default function SwitchCompatibility() {
           className={({ isActive }) => isActive ? 'active' : ''}
         >
           Shadow Pokemon by games
+        </NavLink>
+        <NavLink
+          to="/game-compatibility/champions"
+          className={({ isActive }) => isActive ? 'active' : ''}
+        >
+          Availability in Champions
         </NavLink>
         <NavLink
           to="/game-compatibility/species"
@@ -88,6 +109,7 @@ export default function SwitchCompatibility() {
             <Route path="/" element={<Navigate to="/game-compatibility/games" replace />} />
             <Route path="/games" element={<GamesSection />} />
             <Route path="/shadow" element={<ShadowSection />} />
+            <Route path="/champions" element={<ChampionsSection />} />
             <Route path="/species" element={<SpeciesPokemon />} />
           </Routes>
         </ErrorBoundary>
