@@ -17,12 +17,13 @@ interface FilteredPokemon {
   championsSource?: 'regulationMA' | 'globalChallenge' | 'both';
   shadowGamesSource?: 'colosseum' | 'xd' | 'both';
   preEvoShadowSource?: 'colosseum' | 'xd' | 'both';
+  preEvoName?: string;
 }
 
-function getPreEvoShadowSource(
+function getPreEvoShadowInfo(
   key: string,
   pokemonDb: PokemonDatabase
-): 'colosseum' | 'xd' | 'both' | undefined {
+): { source: 'colosseum' | 'xd' | 'both'; name: string } | undefined {
   const visited = new Set<string>();
   let currentKey = pokemonDb[key]?.evolvesFrom ?? null;
 
@@ -35,7 +36,9 @@ function getPreEvoShadowSource(
     const inCol = flags.includes('colShadow');
     const inXD = flags.includes('xdShadow');
     if (inCol || inXD) {
-      return inCol && inXD ? 'both' : inCol ? 'colosseum' : 'xd';
+      const source = inCol && inXD ? 'both' : inCol ? 'colosseum' : 'xd';
+      const name = data.names?.en ?? currentKey;
+      return { source, name };
     }
 
     currentKey = data.evolvesFrom ?? null;
@@ -93,8 +96,8 @@ function filterChampionsPokemonByGames(
       const inCol = flags.includes('colShadow');
       const inXD = flags.includes('xdShadow');
       const shadowGamesSource = inCol && inXD ? 'both' : inCol ? 'colosseum' : inXD ? 'xd' : undefined;
-      const preEvoShadowSource = shadowGamesSource ? undefined : getPreEvoShadowSource(key, pokemonDb);
-      results.push({ key, name: displayName, data, championsSource, shadowGamesSource, preEvoShadowSource });
+      const preEvoInfo = shadowGamesSource ? undefined : getPreEvoShadowInfo(key, pokemonDb);
+      results.push({ key, name: displayName, data, championsSource, shadowGamesSource, preEvoShadowSource: preEvoInfo?.source, preEvoName: preEvoInfo?.name });
     }
   }
 
@@ -209,7 +212,7 @@ export default function ChampionsPokemon({ pokemonDb, onPokemonSelect }: Champio
     <div className="available-pokemon champions-pokemon">
       <div className="game-selector champions-selector">
         <h3>Choose Games:</h3>
-        <div className="champions-filter-toggle">
+        {/* <div className="champions-filter-toggle">
           {[
             { key: 'regulationMA', label: 'Regulation M-A' },
             { key: 'either', label: 'Either' },
@@ -236,7 +239,7 @@ export default function ChampionsPokemon({ pokemonDb, onPokemonSelect }: Champio
               </div>
             );
           })}
-        </div>
+        </div> */}
         <div className="game-checkboxes">
           {GAME_GROUPS.map(group => {
             const allChecked = group.ids.every(id => selectedGamesSet.has(id));
@@ -304,10 +307,16 @@ export default function ChampionsPokemon({ pokemonDb, onPokemonSelect }: Champio
                             const maxX = viewport ? viewport - safeMargin : centerX;
                             const clampedX = Math.min(Math.max(centerX, safeMargin), maxX);
 
-                            const gameName = pokemon.shadowGamesSource === 'colosseum' ? 'Colosseum'
+                            const shadowGame = pokemon.shadowGamesSource === 'colosseum' ? 'Colosseum'
                               : pokemon.shadowGamesSource === 'xd' ? 'XD: Gale of Darkness'
                               : pokemon.shadowGamesSource === 'both' ? 'Both'
-                              : '';
+                              : null;
+                            const preEvoGame = pokemon.preEvoShadowSource === 'colosseum' ? 'Colosseum'
+                              : pokemon.preEvoShadowSource === 'xd' ? 'XD: Gale of Darkness'
+                              : pokemon.preEvoShadowSource === 'both' ? 'Both'
+                              : null;
+                            const gameName = shadowGame
+                              ?? (pokemon.preEvoName && preEvoGame ? `${pokemon.preEvoName}: ${preEvoGame}` : '');
 
                             setHoveredPokemon({
                               name: pokemon.name,

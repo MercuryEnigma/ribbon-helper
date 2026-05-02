@@ -409,9 +409,9 @@
 }
 
 .pokemon-icon-grid-item.champ-xd {
-  border: 2px solid #9c27b0;
+  border: 2px solid #66bb6a;
   border-radius: 4px;
-  box-shadow: 0 0 4px rgba(156, 39, 176, 0.6);
+  box-shadow: 0 0 4px rgba(102, 187, 106, 0.6);
 }
 
 .pokemon-icon-grid-item.champ-both {
@@ -426,8 +426,8 @@
 }
 
 .legend-color.champ-xd {
-  border-color: #9c27b0;
-  box-shadow: 0 0 3px rgba(156, 39, 176, 0.5);
+  border-color: #66bb6a;
+  box-shadow: 0 0 3px rgba(102, 187, 106, 0.5);
 }
 
 .legend-color.champ-both {
@@ -436,14 +436,14 @@
 }
 
 .pokemon-icon-grid-item.champ-pre-evo {
-  border: 2px solid #66bb6a;
+  border: 2px solid #9c27b0;
   border-radius: 4px;
-  box-shadow: 0 0 4px rgba(102, 187, 106, 0.6);
+  box-shadow: 0 0 4px rgba(156, 39, 176, 0.6);
 }
 
 .legend-color.champ-pre-evo {
-  border-color: #66bb6a;
-  box-shadow: 0 0 3px rgba(102, 187, 106, 0.5);
+  border-color: #9c27b0;
+  box-shadow: 0 0 3px rgba(156, 39, 176, 0.5);
 }
 
 /* Pokemon List - Right Side (45%) */
