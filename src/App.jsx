@@ -61,7 +61,9 @@ export default function App() {
 
   const getAcknowledgementDescription = () => {
     const path = location.pathname
-    if (path.startsWith('/battle-facilities')) {
+    if (path.startsWith('/guides')) {
+      return 'This guide use write-ups and infographics created by Psychic J as references. Their contributions to the Ribbon Master community are greatly appreciated and cannot be understated.'
+    } else if (path.startsWith('/battle-facilities')) {
       return 'This calculator is based on the work of Honko, gamut, and Zarel. It was optimized for players in the Pokémon Championship Series by Tapin, Firestorm, and squirrelboy1225, for Battle Spot Singles players by cant say and LegoFigure11, and for Battle Facilities by Eisenherz and SilverstarStream, and refined for obtaining ribbons by MercuryEnigma.'
     }
     return undefined
