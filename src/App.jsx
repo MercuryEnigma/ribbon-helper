@@ -6,16 +6,7 @@ import Acknowledgements from './components/Acknowledgements'
 import ContestMoves from './contest-moves/ContestMoves'
 import VisualDecoration from './visual-decoration/VisualDecoration'
 import BattleFacilities from './battle-facilities/BattleFacilities'
-
-const ENABLE_BATTLE = (() => {
-  if (typeof localStorage === 'undefined') return true
-  try {
-    const val = localStorage.getItem('enable_battle')
-    return val === null ? true : val === 'true'
-  } catch {
-    return true
-  }
-})()
+import Guides from './guides/Guides'
 
 export default function App() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false)
@@ -77,6 +68,8 @@ export default function App() {
   }
 
   const isContestMovesPage = location.pathname.includes('/contest-moves')
+  const getNavLinkClassName = modifier => ({ isActive }) =>
+    `nav-link nav-link--${modifier}${isActive ? ' active' : ''}`
 
   return (
     <div className="app">
@@ -96,23 +89,24 @@ export default function App() {
         </button> */}
         <div className="header-actions">
           <nav className="nav">
-            <NavLink to="/game-compatibility" className={({ isActive }) => isActive ? 'active' : ''}>
+            <NavLink to="/game-compatibility" className={getNavLinkClassName('pokemon')}>
               Pokémon
             </NavLink>
-            <NavLink to="/berry-blending" className={({ isActive }) => isActive ? 'active' : ''}>
-              Berry blending
+            <NavLink to="/guides" className={getNavLinkClassName('guides')}>
+              Guides
             </NavLink>
-            <NavLink to="/contest-moves" className={({ isActive }) => isActive ? 'active' : ''}>
+            <NavLink to="/battle-facilities" className={getNavLinkClassName('battle-facilities')}>
+              Battle Facilities
+            </NavLink>
+            <NavLink to="/berry-blending" className={getNavLinkClassName('berry-blending')}>
+              Berry Blending
+            </NavLink>
+            <NavLink to="/contest-moves" className={getNavLinkClassName('contest-moves')}>
               Contest Moves
             </NavLink>
-            <NavLink to="/visual-decoration" className={({ isActive }) => isActive ? 'active' : ''}>
+            <NavLink to="/visual-decoration" className={getNavLinkClassName('contest-visuals')}>
               Contest Visuals
             </NavLink>
-            {ENABLE_BATTLE && (
-              <NavLink to="/battle-facilities" className={({ isActive }) => isActive ? 'active' : ''}>
-                Battle Facilities
-              </NavLink>
-            )}
           </nav>
         </div>
       </header>
@@ -125,12 +119,10 @@ export default function App() {
             <Route path="/berry-blending/*" element={<BerryBlending />} />
             <Route path="/contest-moves/*" element={<ContestMoves />} />
             <Route path="/visual-decoration/*" element={<VisualDecoration />} />
-            {ENABLE_BATTLE && (
-              <>
-                <Route path="/battle-facilities" element={<Navigate to="/battle-facilities/emerald" replace />} />
-                <Route path="/battle-facilities/:game" element={<BattleFacilities />} />
-              </>
-            )}
+            <Route path="/battle-facilities" element={<Navigate to="/battle-facilities/emerald" replace />} />
+            <Route path="/battle-facilities/:game" element={<BattleFacilities />} />
+            <Route path="/guides" element={<Navigate to="/guides/footprint-ribbon" replace />} />
+            <Route path="/guides/:guideId" element={<Guides />} />
             <Route path="*" element={<Navigate to="/game-compatibility" replace />} />
           </Routes>
 

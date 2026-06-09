@@ -19,8 +19,7 @@ body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,R
 .navbar-brand-text{font-weight:700;font-size:1.4rem;color:#2d5580;text-shadow:1px 1px 2px rgba(255,255,255,0.8), -1px -1px 2px rgba(0,0,0,0.1)}
 .header-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end;width:100%}
 .nav{display:flex;gap:8px;flex-wrap:wrap;flex:1;justify-content:center}
-.nav button,
-.nav a{
+.nav-link{
   background:#f3f5fa;
   border:3px solid rgba(0,0,0,0.3);
   color:#0b0b0b;
@@ -33,92 +32,91 @@ body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,R
   letter-spacing:0.5px;
   box-shadow:0 4px 8px rgba(0,0,0,0.3);
   transition:all 0.2s ease;
-  flex:1 1 230px;
+  flex:1 1 calc((100% - 16px) / 3);
   min-width:200px;
-  max-width:260px;
+  max-width:calc((100% - 16px) / 3);
   text-align:center;
   text-decoration:none;
   display:inline-block;
 }
-.nav button.active,
-.nav a.active{
+.nav-link.active{
   font-weight:800;
 }
-.nav button:hover,
-.nav a:hover{
+.nav-link:hover{
   transform:translateY(-2px);
   box-shadow:0 6px 12px rgba(0,0,0,0.4);
 }
-.nav button:active,
-.nav a:active{
+.nav-link:active{
   transform:translateY(0);
   box-shadow:0 2px 4px rgba(0,0,0,0.3);
 }
-.nav button:nth-child(1),
-.nav a:nth-child(1){
+.nav-link--pokemon{
   background:#f4a54d;
   border-color:#c26b1a;
   color:#0b0b0b;
 }
-.nav button:nth-child(1).active,
-.nav a:nth-child(1).active{
+.nav-link--pokemon.active{
   background:#ffe9d2;
   border-color:#f58a3a;
   box-shadow:0 4px 12px rgba(179,63,18,0.35), 0 0 14px rgba(179,63,18,0.55);
   color:#0b0b0b;
   font-weight:800;
 }
-.nav button:nth-child(2),
-.nav a:nth-child(2){
+.nav-link--berry-blending{
   background:#f4d03f;
   border-color:#8b6914;
   color:#0b0b0b;
 }
-.nav button:nth-child(2).active,
-.nav a:nth-child(2).active{
+.nav-link--berry-blending.active{
   background:#fff7e6;
   border-color:#d66020;
   box-shadow:0 4px 12px rgba(214,96,32,0.35), 0 0 14px rgba(214,96,32,0.45);
   color:#0b0b0b;
-  }
-.nav button:nth-child(3),
-.nav a:nth-child(3){
+}
+.nav-link--contest-moves{
   background:#f5b2ae;
   border-color:#c94545;
   color:#0b0b0b;
 }
-.nav button:nth-child(3).active,
-.nav a:nth-child(3).active{
+.nav-link--contest-moves.active{
   background:#ffe8e6;
   border-color:#d94c45;
   box-shadow:0 4px 12px rgba(217,76,69,0.35), 0 0 14px rgba(217,76,69,0.45);
   color:#0b0b0b;
 }
-.nav button:nth-child(4),
-.nav a:nth-child(4){
+.nav-link--contest-visuals{
   background:#b7dcff;
   border-color:#3f73c4;
   color:#0b0b0b;
 }
-.nav button:nth-child(4).active,
-.nav a:nth-child(4).active{
+.nav-link--contest-visuals.active{
   background:#f0fffb;
   border-color:#34c4b8;
   box-shadow:0 4px 12px rgba(0,0,0,0.35), 0 0 16px rgba(52,196,184,0.5);
   color:#0b0b0b;
   font-weight:800;
 }
-.nav button:nth-child(5),
-.nav a:nth-child(5){
+.nav-link--battle-facilities{
   background:#6fbf6f;
   border-color:#3a7a3a;
   color:#0b0b0b;
 }
-.nav button:nth-child(5).active,
-.nav a:nth-child(5).active{
+.nav-link--battle-facilities.active{
   background:#e0f5e0;
   border-color:#4a9a4a;
   box-shadow:0 4px 12px rgba(58,122,58,0.35), 0 0 14px rgba(74,154,74,0.45);
+  color:#0b0b0b;
+  font-weight:800;
+}
+.nav-link--guides{
+  background:#f5a8cc;
+  border-color:#c94080;
+  color:#0b0b0b;
+}
+.nav-link--guides.active{
+  background:#fce4f0;
+  border-color:#d44b88;
+  box-shadow:0 4px 12px rgba(201,64,128,0.35), 0 0 14px rgba(212,75,136,0.45);
   color:#0b0b0b;
   font-weight:800;
 }
@@ -265,7 +263,7 @@ body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,R
     flex-wrap: wrap;
   }
 
-  .nav a, .nav button {
+  .nav-link {
     flex: 1 1 calc(50% - 0.25rem);
     padding: 0.65rem 1.25rem;
     font-size: 0.8rem;
@@ -288,7 +286,7 @@ body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,R
 }
 
 @media (max-width: 540px) {
-  .nav a, .nav button {
+  .nav-link {
     flex: 1 1 calc(50% - 0.25rem);
     padding: 0.5rem 0.75rem;
     font-size: 0.7rem;
@@ -300,7 +298,7 @@ body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,R
 }
 
 @media (max-width: 380px) {
-  .nav a, .nav button {
+  .nav-link {
     padding: 0.5rem 0.6rem;
     font-size: 0.65rem;
   }
