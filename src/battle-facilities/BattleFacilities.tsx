@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect, useCallback } from 'react'
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import {
   emeraldConfig,
+  rsConfig,
   sunMoonConfig,
   orasConfig,
   gen4Config,
@@ -27,6 +28,7 @@ import './battle-facilities.css'
 
 const GAME_OPTIONS: { slug: string; config: GameConfig }[] = [
   { slug: 'emerald', config: emeraldConfig },
+  { slug: 'rs', config: rsConfig },
   { slug: 'pthgss', config: gen4Config },
   { slug: 'oras', config: orasConfig },
   { slug: 'sunmoon', config: sunMoonConfig },
@@ -251,7 +253,25 @@ function BattleStatusAccordion({
   )
 }
 
-function MoveResults({ pokemonName, summary, opponentSpeed, isOpponent = false, results, onAbilityChange }: { pokemonName: string; summary?: PokeSummary; opponentSpeed?: number; isOpponent?: boolean; results: DamageResult[]; onAbilityChange?: (ability: string) => void }) {
+function MoveResults({
+  pokemonName,
+  summary,
+  opponentSpeed,
+  isOpponent = false,
+  results,
+  onAbilityChange,
+  natureOptions,
+  onNatureChange,
+}: {
+  pokemonName: string
+  summary?: PokeSummary
+  opponentSpeed?: number
+  isOpponent?: boolean
+  results: DamageResult[]
+  onAbilityChange?: (ability: string) => void
+  natureOptions?: readonly string[]
+  onNatureChange?: (nature: string) => void
+}) {
   const renderSpeed = () => {
     if (!summary) return null
     let className = ''
@@ -299,7 +319,22 @@ function MoveResults({ pokemonName, summary, opponentSpeed, isOpponent = false, 
             ) : (
               summary.ability
             )}
-            {' '}| {summary.nature} Nature | {renderSpeed()}
+            {' '}|{' '}
+            {natureOptions && onNatureChange ? (
+              <select
+                aria-label="Opponent nature"
+                value={summary.nature}
+                onChange={e => onNatureChange(e.target.value)}
+                className="bf-ability-select"
+              >
+                {natureOptions.map(nature => (
+                  <option key={nature} value={nature}>{nature}</option>
+                ))}
+              </select>
+            ) : (
+              summary.nature
+            )}
+            {' '}Nature | {renderSpeed()}
           </span>
           <span>EVs: {formatEvs(summary.evs)}</span>
         </div>
@@ -396,6 +431,7 @@ export default function BattleFacilities() {
   const [p1StatusOpen, setP1StatusOpen] = useState(false)
   const [p2StatusOpen, setP2StatusOpen] = useState(false)
   const [p2Ability, setP2Ability] = useState('')
+  const [p2Nature, setP2Nature] = useState('')
 
   const currentRibbon = mode.ribbon
 
@@ -420,6 +456,7 @@ export default function BattleFacilities() {
     setP1StatusOpen(false)
     setP2StatusOpen(false)
     setP2Ability('')
+    setP2Nature('')
     setSelectedTeamIdx(0)
     const newOptions = newConfig.buildP1Options(ribbonMasterSet, pokemonSets, newMode.teams[0]?.pokemon ?? [])
     setP1Label(newOptions[0]?.label ?? '')
@@ -496,12 +533,14 @@ export default function BattleFacilities() {
     if (!selectedP1 || !effectiveP2Label) return emptyCalc
 
     const result = config.runCalc({
+      modeId: mode.id,
       p1: selectedP1,
       p2Label: effectiveP2Label,
       p1Level,
       p2Level,
       p2Ivs,
       p2Ability,
+      p2Nature,
       weather,
       terrain,
       gravity,
@@ -512,7 +551,7 @@ export default function BattleFacilities() {
 
     if (!result) return emptyCalc
     return result
-  }, [config, selectedP1, effectiveP2Label, p1Level, p2Level, p2Ivs, weather, terrain, gravity, p1Side, p2Side, mode, p2Ability])
+  }, [config, selectedP1, effectiveP2Label, p1Level, p2Level, p2Ivs, weather, terrain, gravity, p1Side, p2Side, mode, p2Ability, p2Nature])
 
   // Sync maxHP/curHP when pokemon changes or side state resets
   useEffect(() => {
@@ -539,6 +578,7 @@ export default function BattleFacilities() {
   // Reset p2 side state + ability override when opponent pokemon changes (keep weather/terrain/gravity)
   useEffect(() => {
     setP2Ability('')
+    setP2Nature('')
     setP2Side(s => ({ ...config.defaultSideState(), maxHP: s.maxHP, curHP: s.maxHP }))
   }, [effectiveP2Label]) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -807,6 +847,8 @@ export default function BattleFacilities() {
             isOpponent={true}
             results={p2Results}
             onAbilityChange={setP2Ability}
+            natureOptions={config.opponentNatureOptions}
+            onNatureChange={setP2Nature}
           />
         </div>
       </div>

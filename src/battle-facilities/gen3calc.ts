@@ -1,4 +1,4 @@
-// Gen 3 (Emerald) battle facility calculator.
+// Shared Gen 3 battle facility calculator.
 // This file is responsible for:
 //   - TypeScript interfaces and Pokemon/FieldSide construction
 //   - Pre-calc helpers (checkAirLock)
@@ -18,9 +18,28 @@ import {
   type Gen3Side,
 } from '../damage-calc/gen3-damage-adv'
 
-export const MOVES_ADV = movesData as Record<string, { bp: number; type: string; category?: string; isSpread?: boolean; isBullet?: boolean; isSound?: boolean; isMLG?: boolean; hasSecondaryEffect?: boolean; acc?: number; makesContact?: boolean; hasRecoil?: number | string; hits?: number }>
+export type MoveDexEntry = {
+  bp: number
+  type: string
+  category?: string
+  isSpread?: boolean
+  isBullet?: boolean
+  isSound?: boolean
+  isMLG?: boolean
+  hasSecondaryEffect?: boolean
+  acc?: number
+  makesContact?: boolean
+  hasRecoil?: number | string
+  hits?: number
+}
+
+export type Gen3Setdex = Record<string, Record<string, SetdexEntry>>
+export type Gen3MoveDex = Record<string, MoveDexEntry>
+
+export const MOVES_ADV = movesData as Gen3MoveDex
 export const POKEDEX_ADV = pokedexData as Record<string, PokedexEntry>
-export const SETDEX_EM = setdexData as Record<string, Record<string, SetdexEntry>>
+export const SETDEX_EM = setdexData as Gen3Setdex
+export const GEN3_NATURES = Object.keys(NATURES)
 
 // --- Pokedex data ---
 export interface BaseStats {
@@ -60,6 +79,21 @@ export interface Pokemon extends Gen3Pokemon {
   ivs: Record<string, number>
   moves: MoveData[]
   resetCurAbility: () => void
+}
+
+const HIDDEN_POWER_TYPES = [
+  'Fighting', 'Flying', 'Poison', 'Ground', 'Rock', 'Bug', 'Ghost', 'Steel',
+  'Fire', 'Water', 'Grass', 'Electric', 'Psychic', 'Ice', 'Dragon', 'Dark',
+]
+
+function getHiddenPower(ivs: Record<string, number>): { bp: number; type: string } {
+  const ordered = [ivs.hp, ivs.at, ivs.df, ivs.sp, ivs.sa, ivs.sd]
+  const typeBits = ordered.reduce((sum, iv, index) => sum + (iv % 2) * (2 ** index), 0)
+  const powerBits = ordered.reduce((sum, iv, index) => sum + (Math.floor(iv / 2) % 2) * (2 ** index), 0)
+  return {
+    type: HIDDEN_POWER_TYPES[Math.floor(typeBits * 15 / 63)],
+    bp: Math.floor(powerBits * 40 / 63) + 30,
+  }
 }
 
 // --- Field / Side (UI input shape) ---
@@ -105,6 +139,7 @@ export function buildPokemon(
   setLabel: string,
   level: number = 50,
   ivs: number = 31,
+  moveDex: Gen3MoveDex = MOVES_ADV,
 ): Pokemon {
   const bs = dexEntry.bs
   const evs: Record<string, number> = {
@@ -127,11 +162,12 @@ export function buildPokemon(
 
   const moves: MoveData[] = set.moves.map(moveName => {
     if (!moveName) return { name: '(No Move)', bp: 0, type: 'Normal', hits: 1 } satisfies MoveData
-    const md = MOVES_ADV[moveName] || { bp: 0, type: "Normal" }
+    const hiddenPower = moveName === 'Hidden Power' ? getHiddenPower(ivsMap) : null
+    const md = moveDex[moveName] || { bp: 0, type: "Normal" }
     return {
       name: moveName,
-      bp: md.bp,
-      type: md.type,
+      bp: hiddenPower?.bp ?? md.bp,
+      type: hiddenPower?.type ?? md.type,
       category: md.category as MoveData['category'],
       isSpread: md.isSpread,
       isBullet: md.isBullet,
@@ -270,10 +306,10 @@ export function calculateAllMovesGen3(
 }
 
 // --- Helper: build a flat list of all set labels from the setdex ---
-export function getAllSetLabels(): string[] {
+export function getAllSetLabels(setdex: Gen3Setdex = SETDEX_EM): string[] {
   const labels: string[] = []
-  for (const species of Object.keys(SETDEX_EM)) {
-    for (const setLabel of Object.keys(SETDEX_EM[species])) {
+  for (const species of Object.keys(setdex)) {
+    for (const setLabel of Object.keys(setdex[species])) {
       labels.push(setLabel)
     }
   }
@@ -281,8 +317,8 @@ export function getAllSetLabels(): string[] {
 }
 
 // --- Helper: find species name and set data from a set label ---
-export function findSetByLabel(label: string): { species: string; set: SetdexEntry } | null {
-  for (const [species, sets] of Object.entries(SETDEX_EM)) {
+export function findSetByLabel(label: string, setdex: Gen3Setdex = SETDEX_EM): { species: string; set: SetdexEntry } | null {
+  for (const [species, sets] of Object.entries(setdex)) {
     if (label in sets) {
       return { species, set: sets[label] }
     }

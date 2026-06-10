@@ -12,7 +12,8 @@
     "deploy": "gh-pages -d dist",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "test:coverage": "vitest --coverage"
+    "test:coverage": "vitest --coverage",
+    "generate:rs-data": "node src/damage-calc/_scripts/generate_rs_battle_tower_data.mjs"
   },
   "homepage": "https://ribbon-helper.guide",
   "dependencies": {

@@ -1,0 +1,4512 @@
+{
+  "Sceptile": {
+    "Sceptile-1": {
+      "evs": {
+        "hp": 85,
+        "at": 85,
+        "df": 85,
+        "sa": 85,
+        "sd": 85,
+        "sp": 85
+      },
+      "moves": [
+        "Leaf Blade",
+        "Dragon Claw",
+        "Agility",
+        "Protect"
+      ],
+      "nature": "Docile",
+      "item": "Miracle Seed"
+    },
+    "Sceptile-2": {
+      "evs": {
+        "sd": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Leaf Blade",
+        "Endeavor",
+        "Earthquake",
+        "Rock Tomb"
+      ],
+      "nature": "Bashful",
+      "item": "Scope Lens"
+    },
+    "Sceptile-3": {
+      "evs": {
+        "sd": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Leaf Blade",
+        "Earthquake",
+        "Dragon Claw",
+        "Crunch"
+      ],
+      "nature": "Brave",
+      "item": "Scope Lens"
+    },
+    "Sceptile-4": {
+      "evs": {
+        "hp": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Giga Drain",
+        "Double Team",
+        "Leech Seed",
+        "Attract"
+      ],
+      "nature": "Quiet",
+      "item": "Leftovers"
+    },
+    "Sceptile-5": {
+      "evs": {
+        "df": 170,
+        "sd": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Leaf Blade",
+        "Earthquake",
+        "Rest",
+        "Crunch"
+      ],
+      "nature": "Brave",
+      "item": "Chesto Berry"
+    },
+    "Sceptile-6": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Leaf Blade",
+        "Detect",
+        "Dragon Claw",
+        "Crunch"
+      ],
+      "nature": "Hardy",
+      "item": "Shell Bell"
+    }
+  },
+  "Torchic": {
+    "Torchic-1": {
+      "evs": {
+        "sa": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Fire Spin",
+        "Protect",
+        "Sand Attack",
+        "Slash"
+      ],
+      "nature": "Relaxed",
+      "item": "King's Rock"
+    }
+  },
+  "Blaziken": {
+    "Blaziken-1": {
+      "evs": {
+        "hp": 85,
+        "at": 85,
+        "df": 85,
+        "sa": 85,
+        "sd": 85,
+        "sp": 85
+      },
+      "moves": [
+        "Blaze Kick",
+        "Mirror Move",
+        "Earthquake",
+        "Protect"
+      ],
+      "nature": "Docile",
+      "item": "Charcoal"
+    },
+    "Blaziken-2": {
+      "evs": {
+        "at": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Counter",
+        "Rock Slide",
+        "Focus Punch",
+        "Flamethrower"
+      ],
+      "nature": "Gentle",
+      "item": "Petaya Berry"
+    },
+    "Blaziken-3": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Blaze Kick",
+        "Rock Tomb",
+        "Endure",
+        "Reversal"
+      ],
+      "nature": "Rash",
+      "item": "Liechi Berry"
+    },
+    "Blaziken-4": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Blaze Kick",
+        "Earthquake",
+        "Rock Slide",
+        "Rest"
+      ],
+      "nature": "Brave",
+      "item": "Chesto Berry"
+    },
+    "Blaziken-5": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Focus Punch",
+        "Counter",
+        "Swagger",
+        "Rock Tomb"
+      ],
+      "nature": "Sassy",
+      "item": "Lum Berry"
+    },
+    "Blaziken-6": {
+      "evs": {
+        "at": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Blaze Kick",
+        "Sky Uppercut",
+        "Earthquake",
+        "Rock Slide"
+      ],
+      "nature": "Docile",
+      "item": "Salac Berry"
+    }
+  },
+  "Swampert": {
+    "Swampert-1": {
+      "evs": {
+        "hp": 85,
+        "at": 85,
+        "df": 85,
+        "sa": 85,
+        "sd": 85,
+        "sp": 85
+      },
+      "moves": [
+        "Protect",
+        "Ice Beam",
+        "Hyper Beam",
+        "Surf"
+      ],
+      "nature": "Docile",
+      "item": "Never-Melt Ice"
+    },
+    "Swampert-2": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Earthquake",
+        "Surf",
+        "Mud Shot",
+        "Blizzard"
+      ],
+      "nature": "Naive",
+      "item": "Leftovers"
+    },
+    "Swampert-3": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Surf",
+        "Earthquake",
+        "Mud Shot",
+        "Blizzard"
+      ],
+      "nature": "Serious",
+      "item": "Shell Bell"
+    },
+    "Swampert-4": {
+      "evs": {
+        "hp": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Muddy Water",
+        "Mud Shot",
+        "Mirror Coat",
+        "Ice Beam"
+      ],
+      "nature": "Hardy",
+      "item": "Shell Bell"
+    },
+    "Swampert-5": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Iron Tail",
+        "Curse",
+        "Double Team",
+        "Rest"
+      ],
+      "nature": "Lax",
+      "item": "Lum Berry"
+    },
+    "Swampert-6": {
+      "evs": {
+        "hp": 170,
+        "sa": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Surf",
+        "Earthquake",
+        "Ice Beam",
+        "Rock Tomb"
+      ],
+      "nature": "Sassy",
+      "item": "Petaya Berry"
+    }
+  },
+  "Mightyena": {
+    "Mightyena-1": {
+      "evs": {
+        "at": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Bite",
+        "Take Down",
+        "Roar",
+        "Howl"
+      ],
+      "nature": "Docile",
+      "item": "Pecha Berry"
+    }
+  },
+  "Zigzagoon": {
+    "Zigzagoon-1": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Flail",
+        "Sand Attack",
+        "Rest",
+        "Surf"
+      ],
+      "nature": "Sassy",
+      "item": "King's Rock"
+    }
+  },
+  "Linoone": {
+    "Linoone-1": {
+      "evs": {
+        "at": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Headbutt",
+        "Tail Whip",
+        "Surf",
+        "Dig"
+      ],
+      "nature": "Quirky",
+      "item": "Pecha Berry"
+    },
+    "Linoone-2": {
+      "evs": {
+        "at": 255,
+        "df": 255
+      },
+      "moves": [
+        "Iron Tail",
+        "Headbutt",
+        "Attract",
+        "Ice Beam"
+      ],
+      "nature": "Hardy",
+      "item": "Chesto Berry"
+    }
+  },
+  "Beautifly": {
+    "Beautifly-1": {
+      "evs": {
+        "hp": 85,
+        "at": 85,
+        "df": 85,
+        "sa": 85,
+        "sd": 85,
+        "sp": 85
+      },
+      "moves": [
+        "Absorb",
+        "Stun Spore",
+        "Gust",
+        "Safeguard"
+      ],
+      "nature": "Brave",
+      "item": "Miracle Seed"
+    }
+  },
+  "Dustox": {
+    "Dustox-1": {
+      "evs": {
+        "sp": 255
+      },
+      "moves": [
+        "Confusion",
+        "Silver Wind",
+        "Psybeam",
+        "Whirlwind"
+      ],
+      "nature": "Serious",
+      "item": "Silver Powder"
+    }
+  },
+  "Ludicolo": {
+    "Ludicolo-1": {
+      "evs": {
+        "at": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Thief",
+        "Fake Out",
+        "Surf",
+        "Rain Dance"
+      ],
+      "nature": "Hardy",
+      "item": ""
+    },
+    "Ludicolo-2": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Brick Break",
+        "Water Pulse",
+        "Rain Dance",
+        "Focus Punch"
+      ],
+      "nature": "Hasty",
+      "item": "Black Belt"
+    },
+    "Ludicolo-3": {
+      "evs": {
+        "hp": 255,
+        "df": 255
+      },
+      "moves": [
+        "Rain Dance",
+        "Surf",
+        "Protect",
+        "Toxic"
+      ],
+      "nature": "Hasty",
+      "item": "Petaya Berry"
+    },
+    "Ludicolo-4": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Rain Dance",
+        "Surf",
+        "Toxic",
+        "Double Team"
+      ],
+      "nature": "Hardy",
+      "item": "Leftovers"
+    },
+    "Ludicolo-5": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Rain Dance",
+        "Protect",
+        "Toxic",
+        "Surf"
+      ],
+      "nature": "Quiet",
+      "item": "Leftovers"
+    },
+    "Ludicolo-6": {
+      "evs": {
+        "sd": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Rain Dance",
+        "Leech Seed",
+        "Dive",
+        "Protect"
+      ],
+      "nature": "Brave",
+      "item": "Leftovers"
+    }
+  },
+  "Shiftry": {
+    "Shiftry-1": {
+      "evs": {
+        "df": 255
+      },
+      "moves": [
+        "Torment",
+        "Extrasensory",
+        "Solar Beam",
+        "Aerial Ace"
+      ],
+      "nature": "Naive",
+      "item": "Mental Herb"
+    },
+    "Shiftry-2": {
+      "evs": {
+        "df": 170,
+        "sa": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Frustration",
+        "Hyper Beam",
+        "Giga Drain",
+        "Torment"
+      ],
+      "nature": "Adamant",
+      "item": "Focus Band"
+    },
+    "Shiftry-3": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Torment",
+        "Feint Attack",
+        "Shadow Ball",
+        "Explosion"
+      ],
+      "nature": "Naive",
+      "item": "Scope Lens"
+    },
+    "Shiftry-4": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Feint Attack",
+        "Shadow Ball",
+        "Double Team",
+        "Rest"
+      ],
+      "nature": "Serious",
+      "item": "Chesto Berry"
+    }
+  },
+  "Swellow": {
+    "Swellow-1": {
+      "evs": {
+        "at": 255
+      },
+      "moves": [
+        "Peck",
+        "Wing Attack",
+        "Aerial Ace",
+        "Agility"
+      ],
+      "nature": "Gentle",
+      "item": "Sharp Beak"
+    },
+    "Swellow-2": {
+      "evs": {},
+      "moves": [
+        "Double Team",
+        "Fly",
+        "Toxic",
+        "Steel Wing"
+      ],
+      "nature": "Hasty",
+      "item": "Sharp Beak"
+    }
+  },
+  "Pelipper": {
+    "Pelipper-1": {
+      "evs": {
+        "df": 255
+      },
+      "moves": [
+        "Mist",
+        "Stockpile",
+        "Swallow",
+        "Spit Up"
+      ],
+      "nature": "Quirky",
+      "item": "Sitrus Berry"
+    }
+  },
+  "Gardevoir": {
+    "Gardevoir-1": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Confusion",
+        "Toxic",
+        "Torment",
+        "Protect"
+      ],
+      "nature": "Bold",
+      "item": "Twisted Spoon"
+    },
+    "Gardevoir-2": {
+      "evs": {
+        "df": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Reflect",
+        "Psychic",
+        "Imprison",
+        "Toxic"
+      ],
+      "nature": "Hasty",
+      "item": "Twisted Spoon"
+    },
+    "Gardevoir-3": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Psychic",
+        "Thunderbolt",
+        "Destiny Bond",
+        "Will-O-Wisp"
+      ],
+      "nature": "Brave",
+      "item": "Salac Berry"
+    },
+    "Gardevoir-4": {
+      "evs": {
+        "df": 170,
+        "sa": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Psychic",
+        "Shadow Ball",
+        "Destiny Bond",
+        "Snatch"
+      ],
+      "nature": "Relaxed",
+      "item": "Salac Berry"
+    },
+    "Gardevoir-5": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Shadow Ball",
+        "Psychic",
+        "Rest",
+        "Imprison"
+      ],
+      "nature": "Brave",
+      "item": "Chesto Berry"
+    }
+  },
+  "Masquerain": {
+    "Masquerain-1": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Stun Spore",
+        "Water Sport",
+        "Quick Attack",
+        "Gust"
+      ],
+      "nature": "Impish",
+      "item": "White Herb"
+    },
+    "Masquerain-2": {
+      "evs": {
+        "sa": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Toxic",
+        "Silver Wind",
+        "Attract",
+        "Ice Beam"
+      ],
+      "nature": "Quiet",
+      "item": "Persim Berry"
+    }
+  },
+  "Breloom": {
+    "Breloom-1": {
+      "evs": {
+        "df": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Cut",
+        "Leech Seed",
+        "Mega Drain",
+        "Stun Spore"
+      ],
+      "nature": "Sassy",
+      "item": "Quick Claw"
+    },
+    "Breloom-2": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Iron Tail",
+        "Focus Punch",
+        "Double Team",
+        "Leech Seed"
+      ],
+      "nature": "Lax",
+      "item": "Liechi Berry"
+    },
+    "Breloom-3": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Focus Punch",
+        "Counter",
+        "Mach Punch",
+        "Snatch"
+      ],
+      "nature": "Lax",
+      "item": "Shell Bell"
+    },
+    "Breloom-4": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Spore",
+        "Focus Punch",
+        "Brick Break",
+        "Sludge Bomb"
+      ],
+      "nature": "Sassy",
+      "item": "Salac Berry"
+    },
+    "Breloom-5": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Spore",
+        "Counter",
+        "Iron Tail",
+        "Giga Drain"
+      ],
+      "nature": "Sassy",
+      "item": "Salac Berry"
+    },
+    "Breloom-6": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Spore",
+        "Focus Punch",
+        "Sludge Bomb",
+        "Iron Tail"
+      ],
+      "nature": "Sassy",
+      "item": "Salac Berry"
+    }
+  },
+  "Vigoroth": {
+    "Vigoroth-1": {
+      "evs": {
+        "hp": 170,
+        "at": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Focus Punch",
+        "Reversal",
+        "Counter",
+        "Taunt"
+      ],
+      "nature": "Hardy",
+      "item": "Focus Band"
+    }
+  },
+  "Slaking": {
+    "Slaking-1": {
+      "evs": {
+        "hp": 255,
+        "df": 255
+      },
+      "moves": [
+        "Feint Attack",
+        "Counter",
+        "Scratch",
+        "Taunt"
+      ],
+      "nature": "Lax",
+      "item": "Black Glasses"
+    },
+    "Slaking-2": {
+      "evs": {
+        "df": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Curse",
+        "Amnesia",
+        "Yawn",
+        "Focus Punch"
+      ],
+      "nature": "Lax",
+      "item": "Leftovers"
+    },
+    "Slaking-3": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Hyper Beam",
+        "",
+        "",
+        "Earthquake"
+      ],
+      "nature": "Serious",
+      "item": "Choice Band"
+    },
+    "Slaking-4": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Yawn",
+        "Slash",
+        "Counter",
+        "Hyper Beam"
+      ],
+      "nature": "Docile",
+      "item": "Salac Berry"
+    }
+  },
+  "Kadabra": {
+    "Kadabra-1": {
+      "evs": {
+        "df": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Future Sight",
+        "Focus Punch",
+        "Skill Swap",
+        "Snatch"
+      ],
+      "nature": "Careful",
+      "item": "Leppa Berry"
+    }
+  },
+  "Alakazam": {
+    "Alakazam-1": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Psybeam",
+        "Snatch",
+        "Reflect",
+        "Hyper Beam"
+      ],
+      "nature": "Relaxed",
+      "item": "Twisted Spoon"
+    },
+    "Alakazam-2": {
+      "evs": {
+        "df": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Psychic",
+        "Reflect",
+        "Recover",
+        "Skill Swap"
+      ],
+      "nature": "Hasty",
+      "item": "Petaya Berry"
+    },
+    "Alakazam-3": {
+      "evs": {
+        "hp": 255,
+        "df": 255
+      },
+      "moves": [
+        "Psychic",
+        "Recover",
+        "Encore",
+        "Snatch"
+      ],
+      "nature": "Hasty",
+      "item": "Sitrus Berry"
+    },
+    "Alakazam-4": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Psychic",
+        "Thunder Punch",
+        "Reflect",
+        "Recover"
+      ],
+      "nature": "Hasty",
+      "item": "Ganlon Berry"
+    },
+    "Alakazam-5": {
+      "evs": {
+        "hp": 255,
+        "df": 255
+      },
+      "moves": [
+        "Psychic",
+        "Thunder Punch",
+        "Fire Punch",
+        "Recover"
+      ],
+      "nature": "Hasty",
+      "item": "Bright Powder"
+    },
+    "Alakazam-6": {
+      "evs": {
+        "hp": 255,
+        "df": 255
+      },
+      "moves": [
+        "Psychic",
+        "Trick",
+        "Recover",
+        "Snatch"
+      ],
+      "nature": "Hasty",
+      "item": "Choice Band"
+    }
+  },
+  "Ninjask": {
+    "Ninjask-1": {
+      "evs": {
+        "hp": 127,
+        "df": 127,
+        "sd": 127,
+        "sp": 127
+      },
+      "moves": [
+        "Sand Attack",
+        "Fury Cutter",
+        "Agility",
+        "Harden"
+      ],
+      "nature": "Quiet",
+      "item": "Silver Powder"
+    },
+    "Ninjask-2": {
+      "evs": {
+        "hp": 170,
+        "at": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Double Team",
+        "Slash",
+        "Swords Dance",
+        "Leech Life"
+      ],
+      "nature": "Lax",
+      "item": "Scope Lens"
+    }
+  },
+  "Shedinja": {
+    "Shedinja-1": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Confuse Ray",
+        "Shadow Ball",
+        "Toxic",
+        "Hyper Beam"
+      ],
+      "nature": "Hardy",
+      "item": "Bright Powder"
+    }
+  },
+  "Loudred": {
+    "Loudred-1": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Uproar",
+        "Stomp",
+        "Screech",
+        "Earthquake"
+      ],
+      "nature": "Modest",
+      "item": "Sitrus Berry"
+    }
+  },
+  "Exploud": {
+    "Exploud-1": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Hyper Beam",
+        "Howl",
+        "Uproar",
+        "Earthquake"
+      ],
+      "nature": "Hardy",
+      "item": "Leftovers"
+    },
+    "Exploud-2": {
+      "evs": {
+        "hp": 170,
+        "at": 170,
+        "sa": 170
+      },
+      "moves": [
+        "Blizzard",
+        "Flamethrower",
+        "Earthquake",
+        "Return"
+      ],
+      "nature": "Bashful",
+      "item": "Choice Band"
+    }
+  },
+  "Hariyama": {
+    "Hariyama-1": {
+      "evs": {
+        "sp": 255
+      },
+      "moves": [
+        "Strength",
+        "Fake Out",
+        "Facade",
+        "Sand Attack"
+      ],
+      "nature": "Hardy",
+      "item": "King's Rock"
+    },
+    "Hariyama-2": {
+      "evs": {
+        "sd": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Belly Drum",
+        "Endure",
+        "Earthquake",
+        "Reversal"
+      ],
+      "nature": "Sassy",
+      "item": "Salac Berry"
+    },
+    "Hariyama-3": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Cross Chop",
+        "Earthquake",
+        "Facade",
+        "Fake Out"
+      ],
+      "nature": "Gentle",
+      "item": "Scope Lens"
+    },
+    "Hariyama-4": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Cross Chop",
+        "Rock Tomb",
+        "Endure",
+        "Reversal"
+      ],
+      "nature": "Sassy",
+      "item": "Focus Band"
+    },
+    "Hariyama-5": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Revenge",
+        "Counter",
+        "Focus Punch",
+        "Reversal"
+      ],
+      "nature": "Sassy",
+      "item": "Salac Berry"
+    }
+  },
+  "Seaking": {
+    "Seaking-1": {
+      "evs": {
+        "sp": 255
+      },
+      "moves": [
+        "Peck",
+        "Flail",
+        "Fury Attack",
+        "Surf"
+      ],
+      "nature": "Hasty",
+      "item": "Mystic Water"
+    },
+    "Seaking-2": {
+      "evs": {
+        "sd": 255
+      },
+      "moves": [
+        "Rain Dance",
+        "Surf",
+        "Horn Attack",
+        "Horn Drill"
+      ],
+      "nature": "Lonely",
+      "item": "Mystic Water"
+    },
+    "Seaking-3": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Horn Drill",
+        "Agility",
+        "Sleep Talk",
+        "Rest"
+      ],
+      "nature": "Brave",
+      "item": "Leppa Berry"
+    }
+  },
+  "Gyarados": {
+    "Gyarados-1": {
+      "evs": {
+        "hp": 85,
+        "at": 85,
+        "df": 85,
+        "sa": 85,
+        "sd": 85,
+        "sp": 85
+      },
+      "moves": [
+        "Rain Dance",
+        "Surf",
+        "Water Pulse",
+        "Hyper Beam"
+      ],
+      "nature": "Impish",
+      "item": "Dragon Fang"
+    },
+    "Gyarados-2": {
+      "evs": {
+        "sa": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Thunder",
+        "Earthquake",
+        "Hydro Pump",
+        "Rain Dance"
+      ],
+      "nature": "Naughty",
+      "item": "Cheri Berry"
+    },
+    "Gyarados-3": {
+      "evs": {
+        "at": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Hyper Beam",
+        "Thunderbolt",
+        "Earthquake",
+        "Ice Beam"
+      ],
+      "nature": "Bold",
+      "item": "Shell Bell"
+    }
+  },
+  "Azumarill": {
+    "Azumarill-1": {
+      "evs": {
+        "at": 255,
+        "df": 255
+      },
+      "moves": [
+        "Bubble Beam",
+        "Tail Whip",
+        "Rain Dance",
+        "Rollout"
+      ],
+      "nature": "Hardy",
+      "item": "White Herb"
+    }
+  },
+  "Golem": {
+    "Golem-1": {
+      "evs": {
+        "at": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Magnitude",
+        "Explosion",
+        "Strength",
+        "Sandstorm"
+      ],
+      "nature": "Docile",
+      "item": "Soft Sand"
+    },
+    "Golem-2": {
+      "evs": {
+        "hp": 170,
+        "at": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Explosion",
+        "Earthquake",
+        "Rock Tomb",
+        "Flamethrower"
+      ],
+      "nature": "Impish",
+      "item": "Salac Berry"
+    },
+    "Golem-3": {
+      "evs": {
+        "sd": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Earthquake",
+        "Roar",
+        "Fire Blast",
+        "Explosion"
+      ],
+      "nature": "Serious",
+      "item": "Salac Berry"
+    }
+  },
+  "Nosepass": {
+    "Nosepass-1": {
+      "evs": {
+        "df": 170,
+        "sd": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Sandstorm",
+        "Rock Slide",
+        "Block",
+        "Thunder Wave"
+      ],
+      "nature": "Jolly",
+      "item": "Persim Berry"
+    }
+  },
+  "Delcatty": {
+    "Delcatty-1": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Attract",
+        "Tail Whip",
+        "Feint Attack",
+        "Dig"
+      ],
+      "nature": "Lonely",
+      "item": "Silk Scarf"
+    }
+  },
+  "Golbat": {
+    "Golbat-1": {
+      "evs": {
+        "sd": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Confuse Ray",
+        "Wing Attack",
+        "Mean Look",
+        "Bite"
+      ],
+      "nature": "Brave",
+      "item": "White Herb"
+    }
+  },
+  "Crobat": {
+    "Crobat-1": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Bite",
+        "Haze",
+        "Wing Attack",
+        "Steel Wing"
+      ],
+      "nature": "Timid",
+      "item": "Leppa Berry"
+    },
+    "Crobat-2": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Attract",
+        "Confuse Ray",
+        "Bite",
+        "Double Team"
+      ],
+      "nature": "Sassy",
+      "item": "Bright Powder"
+    },
+    "Crobat-3": {
+      "evs": {
+        "sd": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Toxic",
+        "Confuse Ray",
+        "Attract",
+        "Protect"
+      ],
+      "nature": "Hardy",
+      "item": "Bright Powder"
+    },
+    "Crobat-4": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Sludge Bomb",
+        "Bite",
+        "Air Cutter",
+        "Shadow Ball"
+      ],
+      "nature": "Brave",
+      "item": "Bright Powder"
+    }
+  },
+  "Tentacruel": {
+    "Tentacruel-1": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Constrict",
+        "Surf",
+        "Hyper Beam",
+        "Screech"
+      ],
+      "nature": "Impish",
+      "item": "Cheri Berry"
+    },
+    "Tentacruel-2": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Double Team",
+        "Toxic",
+        "Surf",
+        "Sludge Bomb"
+      ],
+      "nature": "Bold",
+      "item": "Mystic Water"
+    },
+    "Tentacruel-3": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Hydro Pump",
+        "Sludge Bomb",
+        "Giga Drain",
+        "Mirror Coat"
+      ],
+      "nature": "Rash",
+      "item": "Sitrus Berry"
+    }
+  },
+  "Sableye": {
+    "Sableye-1": {
+      "evs": {
+        "at": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Shadow Ball",
+        "Night Shade",
+        "Snatch",
+        "Fake Out"
+      ],
+      "nature": "Hardy",
+      "item": "Cheri Berry"
+    },
+    "Sableye-2": {
+      "evs": {
+        "df": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Shadow Ball",
+        "Snatch",
+        "Dig",
+        "Confuse Ray"
+      ],
+      "nature": "Hardy",
+      "item": "Spell Tag"
+    }
+  },
+  "Mawile": {
+    "Mawile-1": {
+      "evs": {
+        "at": 255
+      },
+      "moves": [
+        "Iron Defense",
+        "Sludge Bomb",
+        "Crunch",
+        "Strength"
+      ],
+      "nature": "Calm",
+      "item": "Metal Coat"
+    }
+  },
+  "Aggron": {
+    "Aggron-1": {
+      "evs": {
+        "df": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Earthquake",
+        "Brick Break",
+        "Metal Claw",
+        "Roar"
+      ],
+      "nature": "Relaxed",
+      "item": "Metal Coat"
+    },
+    "Aggron-2": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Double-Edge",
+        "Flamethrower",
+        "Iron Tail",
+        "Blizzard"
+      ],
+      "nature": "Bold",
+      "item": "Mental Herb"
+    },
+    "Aggron-3": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Double-Edge",
+        "Earthquake",
+        "Surf",
+        "Dragon Claw"
+      ],
+      "nature": "Gentle",
+      "item": "Liechi Berry"
+    }
+  },
+  "Machoke": {
+    "Machoke-1": {
+      "evs": {
+        "sp": 255
+      },
+      "moves": [
+        "Leer",
+        "Dig",
+        "Low Kick",
+        "Focus Punch"
+      ],
+      "nature": "Timid",
+      "item": "Chesto Berry"
+    }
+  },
+  "Machamp": {
+    "Machamp-1": {
+      "evs": {
+        "df": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Strength",
+        "Cross Chop",
+        "Earthquake",
+        "Flamethrower"
+      ],
+      "nature": "Hasty",
+      "item": "Black Belt"
+    },
+    "Machamp-2": {
+      "evs": {
+        "sd": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Cross Chop",
+        "Focus Punch",
+        "Rock Tomb",
+        "Encore"
+      ],
+      "nature": "Sassy",
+      "item": "Black Belt"
+    },
+    "Machamp-3": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Cross Chop",
+        "Flamethrower",
+        "Earthquake",
+        "Rock Slide"
+      ],
+      "nature": "Hardy",
+      "item": "Scope Lens"
+    },
+    "Machamp-4": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Cross Chop",
+        "Counter",
+        "Earthquake",
+        "Facade"
+      ],
+      "nature": "Serious",
+      "item": "Scope Lens"
+    },
+    "Machamp-5": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Cross Chop",
+        "Rock Slide",
+        "Dynamic Punch",
+        "Rock Tomb"
+      ],
+      "nature": "Hardy",
+      "item": "Scope Lens"
+    },
+    "Machamp-6": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Cross Chop",
+        "Counter",
+        "Rock Tomb",
+        "Flamethrower"
+      ],
+      "nature": "Hardy",
+      "item": "Scope Lens"
+    }
+  },
+  "Medicham": {
+    "Medicham-1": {
+      "evs": {
+        "df": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Reversal",
+        "Meditate",
+        "Confusion",
+        "Facade"
+      ],
+      "nature": "Hasty",
+      "item": "Scope Lens"
+    },
+    "Medicham-2": {
+      "evs": {
+        "hp": 85,
+        "at": 85,
+        "df": 85,
+        "sa": 85,
+        "sd": 85,
+        "sp": 85
+      },
+      "moves": [
+        "Calm Mind",
+        "Reversal",
+        "Rock Tomb",
+        "Psychic"
+      ],
+      "nature": "Relaxed",
+      "item": "Apicot Berry"
+    }
+  },
+  "Manectric": {
+    "Manectric-1": {
+      "evs": {
+        "sa": 255
+      },
+      "moves": [
+        "Thunder Wave",
+        "Bite",
+        "Spark",
+        "Quick Attack"
+      ],
+      "nature": "Rash",
+      "item": "Magnet"
+    },
+    "Manectric-2": {
+      "evs": {
+        "hp": 170,
+        "sa": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Thunder",
+        "Thunder Wave",
+        "Iron Tail",
+        "Roar"
+      ],
+      "nature": "Adamant",
+      "item": "Magnet"
+    },
+    "Manectric-3": {
+      "evs": {
+        "hp": 255,
+        "df": 255
+      },
+      "moves": [
+        "Thunderbolt",
+        "Crunch",
+        "Roar",
+        "Thief"
+      ],
+      "nature": "Hasty",
+      "item": ""
+    },
+    "Manectric-4": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Thunderbolt",
+        "Thunder Wave",
+        "Roar",
+        "Crunch"
+      ],
+      "nature": "Brave",
+      "item": "Petaya Berry"
+    },
+    "Manectric-5": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Thunder",
+        "Thunder Wave",
+        "Rest",
+        "Crunch"
+      ],
+      "nature": "Brave",
+      "item": "Chesto Berry"
+    },
+    "Manectric-6": {
+      "evs": {
+        "hp": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Thunderbolt",
+        "Thunder Wave",
+        "Attract",
+        "Crunch"
+      ],
+      "nature": "Quiet",
+      "item": "Petaya Berry"
+    }
+  },
+  "Magneton": {
+    "Magneton-1": {
+      "evs": {
+        "sp": 255
+      },
+      "moves": [
+        "Supersonic",
+        "Thunder Wave",
+        "Screech",
+        "Tri Attack"
+      ],
+      "nature": "Hardy",
+      "item": "Magnet"
+    },
+    "Magneton-2": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Zap Cannon",
+        "Supersonic",
+        "Toxic",
+        "Protect"
+      ],
+      "nature": "Adamant",
+      "item": "Persim Berry"
+    }
+  },
+  "Electrode": {
+    "Electrode-1": {
+      "evs": {
+        "sp": 255
+      },
+      "moves": [
+        "Light Screen",
+        "Thunderbolt",
+        "Swift",
+        "Rollout"
+      ],
+      "nature": "Serious",
+      "item": "Aspear Berry"
+    },
+    "Electrode-2": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Screech",
+        "Explosion",
+        "Mirror Coat",
+        "Protect"
+      ],
+      "nature": "Rash",
+      "item": "Lum Berry"
+    },
+    "Electrode-3": {
+      "evs": {
+        "hp": 255,
+        "df": 255
+      },
+      "moves": [
+        "Thunderbolt",
+        "Protect",
+        "Mirror Coat",
+        "Explosion"
+      ],
+      "nature": "Bashful",
+      "item": "Lum Berry"
+    },
+    "Electrode-4": {
+      "evs": {
+        "hp": 255,
+        "df": 255
+      },
+      "moves": [
+        "Thunderbolt",
+        "Screech",
+        "Mirror Coat",
+        "Explosion"
+      ],
+      "nature": "Modest",
+      "item": "Salac Berry"
+    },
+    "Electrode-5": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Thunder",
+        "Double Team",
+        "Mirror Coat",
+        "Explosion"
+      ],
+      "nature": "Bashful",
+      "item": "Liechi Berry"
+    }
+  },
+  "Illumise": {
+    "Illumise-1": {
+      "evs": {
+        "df": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Flatter",
+        "Covet",
+        "Wish",
+        "Facade"
+      ],
+      "nature": "Hardy",
+      "item": ""
+    }
+  },
+  "Vileplume": {
+    "Vileplume-1": {
+      "evs": {
+        "hp": 255
+      },
+      "moves": [
+        "Toxic",
+        "Moonlight",
+        "Giga Drain",
+        "Stun Spore"
+      ],
+      "nature": "Docile",
+      "item": "Miracle Seed"
+    }
+  },
+  "Bellossom": {
+    "Bellossom-1": {
+      "evs": {
+        "hp": 85,
+        "at": 85,
+        "df": 85,
+        "sa": 85,
+        "sd": 85,
+        "sp": 85
+      },
+      "moves": [
+        "Solar Beam",
+        "Petal Dance",
+        "Sweet Scent",
+        "Bullet Seed"
+      ],
+      "nature": "Naive",
+      "item": "Miracle Seed"
+    }
+  },
+  "Dodrio": {
+    "Dodrio-1": {
+      "evs": {
+        "hp": 85,
+        "at": 85,
+        "df": 85,
+        "sa": 85,
+        "sd": 85,
+        "sp": 85
+      },
+      "moves": [
+        "Pursuit",
+        "Tri Attack",
+        "Growl",
+        "Agility"
+      ],
+      "nature": "Serious",
+      "item": "Sharp Beak"
+    },
+    "Dodrio-2": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Drill Peck",
+        "Tri Attack",
+        "Agility",
+        "Facade"
+      ],
+      "nature": "Hardy",
+      "item": "Liechi Berry"
+    }
+  },
+  "Roselia": {
+    "Roselia-1": {
+      "evs": {
+        "sa": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Growth",
+        "Mega Drain",
+        "Toxic",
+        "Cut"
+      ],
+      "nature": "Naughty",
+      "item": "Miracle Seed"
+    }
+  },
+  "Swalot": {
+    "Swalot-1": {
+      "evs": {
+        "at": 102,
+        "df": 102,
+        "sa": 102,
+        "sd": 102,
+        "sp": 102
+      },
+      "moves": [
+        "Stockpile",
+        "Spit Up",
+        "Sludge",
+        "Poison Gas"
+      ],
+      "nature": "Hardy",
+      "item": "Lum Berry"
+    },
+    "Swalot-2": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Sludge Bomb",
+        "Snatch",
+        "Encore",
+        "Body Slam"
+      ],
+      "nature": "Hardy",
+      "item": "Cheri Berry"
+    }
+  },
+  "Sharpedo": {
+    "Sharpedo-1": {
+      "evs": {
+        "at": 170,
+        "sa": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Bite",
+        "Skull Bash",
+        "Rain Dance",
+        "Surf"
+      ],
+      "nature": "Relaxed",
+      "item": "Black Glasses"
+    },
+    "Sharpedo-2": {
+      "evs": {
+        "at": 170,
+        "sa": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Crunch",
+        "Surf",
+        "Earthquake",
+        "Protect"
+      ],
+      "nature": "Hardy",
+      "item": "King's Rock"
+    },
+    "Sharpedo-3": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Crunch",
+        "Double-Edge",
+        "Surf",
+        "Swagger"
+      ],
+      "nature": "Sassy",
+      "item": "King's Rock"
+    }
+  },
+  "Wailord": {
+    "Wailord-1": {
+      "evs": {
+        "df": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Water Spout",
+        "Rollout",
+        "Mist",
+        "Rain Dance"
+      ],
+      "nature": "Gentle",
+      "item": "Mystic Water"
+    },
+    "Wailord-2": {
+      "evs": {
+        "df": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Water Spout",
+        "Rest",
+        "Amnesia",
+        "Hail"
+      ],
+      "nature": "Hasty",
+      "item": "Apicot Berry"
+    },
+    "Wailord-3": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Hydro Pump",
+        "Earthquake",
+        "Attract",
+        "Fissure"
+      ],
+      "nature": "Timid",
+      "item": "Leppa Berry"
+    }
+  },
+  "Camerupt": {
+    "Camerupt-1": {
+      "evs": {
+        "at": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Dig",
+        "Ember",
+        "Growl",
+        "Rock Smash"
+      ],
+      "nature": "Bold",
+      "item": "Charcoal"
+    },
+    "Camerupt-2": {
+      "evs": {
+        "hp": 170,
+        "sa": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Earthquake",
+        "Overheat",
+        "Sunny Day",
+        "Rock Slide"
+      ],
+      "nature": "Careful",
+      "item": "Charcoal"
+    },
+    "Camerupt-3": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Earthquake",
+        "Eruption",
+        "Rock Slide",
+        "Flamethrower"
+      ],
+      "nature": "Naive",
+      "item": "Bright Powder"
+    }
+  },
+  "Magcargo": {
+    "Magcargo-1": {
+      "evs": {
+        "sa": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Flamethrower",
+        "Rock Throw",
+        "Harden",
+        "Amnesia"
+      ],
+      "nature": "Naughty",
+      "item": "Charcoal"
+    }
+  },
+  "Torkoal": {
+    "Torkoal-1": {
+      "evs": {
+        "at": 255,
+        "df": 255
+      },
+      "moves": [
+        "Flamethrower",
+        "Iron Defense",
+        "Body Slam",
+        "Protect"
+      ],
+      "nature": "Naughty",
+      "item": "Focus Band"
+    },
+    "Torkoal-2": {
+      "evs": {
+        "sa": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Flamethrower",
+        "Amnesia",
+        "Iron Tail",
+        "Rest"
+      ],
+      "nature": "Naive",
+      "item": "Leftovers"
+    },
+    "Torkoal-3": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Iron Defense",
+        "Toxic",
+        "Rest",
+        "Flamethrower"
+      ],
+      "nature": "Naive",
+      "item": "Lum Berry"
+    }
+  },
+  "Muk": {
+    "Muk-1": {
+      "evs": {
+        "at": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Sludge",
+        "Acid Armor",
+        "Giga Drain",
+        "Disable"
+      ],
+      "nature": "Hardy",
+      "item": "Rawst Berry"
+    },
+    "Muk-2": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Sludge Bomb",
+        "Thunderbolt",
+        "Flamethrower",
+        "Focus Punch"
+      ],
+      "nature": "Naive",
+      "item": "Poison Barb"
+    },
+    "Muk-3": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Sludge Bomb",
+        "Flamethrower",
+        "Thunderbolt",
+        "Explosion"
+      ],
+      "nature": "Gentle",
+      "item": "Quick Claw"
+    },
+    "Muk-4": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Sludge Bomb",
+        "Giga Drain",
+        "Rock Tomb",
+        "Explosion"
+      ],
+      "nature": "Rash",
+      "item": "Liechi Berry"
+    },
+    "Muk-5": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Sludge Bomb",
+        "Flamethrower",
+        "Thunderbolt",
+        "Shadow Punch"
+      ],
+      "nature": "Gentle",
+      "item": "Salac Berry"
+    }
+  },
+  "Weezing": {
+    "Weezing-1": {
+      "evs": {
+        "df": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Smog",
+        "Self-Destruct",
+        "Toxic",
+        "Sludge Bomb"
+      ],
+      "nature": "Bashful",
+      "item": "Poison Barb"
+    },
+    "Weezing-2": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Explosion",
+        "Sludge Bomb",
+        "Shadow Ball",
+        "Flamethrower"
+      ],
+      "nature": "Naive",
+      "item": "Quick Claw"
+    },
+    "Weezing-3": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Sludge Bomb",
+        "Thunderbolt",
+        "Fire Blast",
+        "Explosion"
+      ],
+      "nature": "Serious",
+      "item": "Salac Berry"
+    }
+  },
+  "Grumpig": {
+    "Grumpig-1": {
+      "evs": {
+        "df": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Odor Sleuth",
+        "Confuse Ray",
+        "Magic Coat",
+        "Psychic"
+      ],
+      "nature": "Hardy",
+      "item": "Salac Berry"
+    },
+    "Grumpig-2": {
+      "evs": {
+        "hp": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Magic Coat",
+        "Psychic",
+        "Reflect",
+        "Confuse Ray"
+      ],
+      "nature": "Lonely",
+      "item": "Twisted Spoon"
+    },
+    "Grumpig-3": {
+      "evs": {
+        "hp": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Trick",
+        "Skill Swap",
+        "Psychic",
+        "Rest"
+      ],
+      "nature": "Hardy",
+      "item": "Macho Brace"
+    },
+    "Grumpig-4": {
+      "evs": {
+        "hp": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Psychic",
+        "Confuse Ray",
+        "Trick",
+        "Reflect"
+      ],
+      "nature": "Quiet",
+      "item": "Macho Brace"
+    }
+  },
+  "Sandslash": {
+    "Sandslash-1": {
+      "evs": {
+        "df": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Sandstorm",
+        "Slash",
+        "Earthquake",
+        "Swift"
+      ],
+      "nature": "Adamant",
+      "item": "Bright Powder"
+    },
+    "Sandslash-2": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Sandstorm",
+        "Toxic",
+        "Slash",
+        "Earthquake"
+      ],
+      "nature": "Lax",
+      "item": "Bright Powder"
+    }
+  },
+  "Spinda": {
+    "Spinda-1": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Teeter Dance",
+        "Flail",
+        "Psych Up",
+        "Double-Edge"
+      ],
+      "nature": "Calm",
+      "item": "Cheri Berry"
+    }
+  },
+  "Skarmory": {
+    "Skarmory-1": {
+      "evs": {
+        "df": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Steel Wing",
+        "Sand Attack",
+        "Swift",
+        "Agility"
+      ],
+      "nature": "Relaxed",
+      "item": "Sitrus Berry"
+    },
+    "Skarmory-2": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Steel Wing",
+        "Agility",
+        "Torment",
+        "Facade"
+      ],
+      "nature": "Lax",
+      "item": "Metal Coat"
+    }
+  },
+  "Flygon": {
+    "Flygon-1": {
+      "evs": {
+        "hp": 255,
+        "df": 255
+      },
+      "moves": [
+        "Sand Attack",
+        "Sand Tomb",
+        "Facade",
+        "Toxic"
+      ],
+      "nature": "Hardy",
+      "item": "Quick Claw"
+    },
+    "Flygon-2": {
+      "evs": {
+        "hp": 127,
+        "df": 127,
+        "sa": 127,
+        "sd": 127
+      },
+      "moves": [
+        "Crunch",
+        "Dragon Claw",
+        "Earthquake",
+        "Flamethrower"
+      ],
+      "nature": "Naive",
+      "item": "Dragon Fang"
+    },
+    "Flygon-3": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Dragon Claw",
+        "Earthquake",
+        "Flamethrower",
+        "Crunch"
+      ],
+      "nature": "Serious",
+      "item": "Petaya Berry"
+    },
+    "Flygon-4": {
+      "evs": {
+        "at": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Dragon Claw",
+        "Earthquake",
+        "Iron Tail",
+        "Rock Tomb"
+      ],
+      "nature": "Impish",
+      "item": "Lum Berry"
+    },
+    "Flygon-5": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Protect",
+        "Dig",
+        "Toxic",
+        "Sandstorm"
+      ],
+      "nature": "Lax",
+      "item": "Bright Powder"
+    }
+  },
+  "Cacturne": {
+    "Cacturne-1": {
+      "evs": {
+        "sa": 255
+      },
+      "moves": [
+        "Poison Sting",
+        "Growth",
+        "Absorb",
+        "Solar Beam"
+      ],
+      "nature": "Hardy",
+      "item": "Poison Barb"
+    },
+    "Cacturne-2": {
+      "evs": {},
+      "moves": [
+        "Ingrain",
+        "Leech Seed",
+        "Protect",
+        "Frustration"
+      ],
+      "nature": "Hardy",
+      "item": "Leftovers"
+    },
+    "Cacturne-3": {
+      "evs": {
+        "at": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Dynamic Punch",
+        "Counter",
+        "Feint Attack",
+        "Giga Drain"
+      ],
+      "nature": "Relaxed",
+      "item": "Scope Lens"
+    }
+  },
+  "Altaria": {
+    "Altaria-1": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Dragon Claw",
+        "Dragon Dance",
+        "Toxic",
+        "Double Team"
+      ],
+      "nature": "Docile",
+      "item": "Dragon Fang"
+    },
+    "Altaria-2": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Dragon Dance",
+        "Mirror Move",
+        "Dragon Claw",
+        "Earthquake"
+      ],
+      "nature": "Rash",
+      "item": "Sitrus Berry"
+    }
+  },
+  "Zangoose": {
+    "Zangoose-1": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Strength",
+        "Taunt",
+        "Crush Claw",
+        "Detect"
+      ],
+      "nature": "Hardy",
+      "item": "Mental Herb"
+    },
+    "Zangoose-2": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Facade",
+        "Thunderbolt",
+        "Crush Claw",
+        "Detect"
+      ],
+      "nature": "Calm",
+      "item": "Black Glasses"
+    }
+  },
+  "Seviper": {
+    "Seviper-1": {
+      "evs": {
+        "df": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Screech",
+        "Glare",
+        "Dig",
+        "Poison Fang"
+      ],
+      "nature": "Hardy",
+      "item": "Poison Barb"
+    },
+    "Seviper-2": {
+      "evs": {
+        "at": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Sludge Bomb",
+        "Haze",
+        "Crunch",
+        "Flamethrower"
+      ],
+      "nature": "Naive",
+      "item": "Poison Barb"
+    }
+  },
+  "Lunatone": {
+    "Lunatone-1": {
+      "evs": {
+        "df": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Cosmic Power",
+        "Sandstorm",
+        "Psychic",
+        "Rock Throw"
+      ],
+      "nature": "Gentle",
+      "item": "Hard Stone"
+    }
+  },
+  "Solrock": {
+    "Solrock-1": {
+      "evs": {
+        "df": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Rock Throw",
+        "Sunny Day",
+        "Solar Beam",
+        "Sandstorm"
+      ],
+      "nature": "Mild",
+      "item": "Leftovers"
+    },
+    "Solrock-2": {
+      "evs": {
+        "hp": 170,
+        "at": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Earthquake",
+        "Light Screen",
+        "Rock Slide",
+        "Confusion"
+      ],
+      "nature": "Bashful",
+      "item": "Hard Stone"
+    }
+  },
+  "Whiscash": {
+    "Whiscash-1": {
+      "evs": {
+        "at": 255,
+        "df": 255
+      },
+      "moves": [
+        "Water Gun",
+        "Amnesia",
+        "Magnitude",
+        "Mud-Slap"
+      ],
+      "nature": "Lax",
+      "item": "Quick Claw"
+    },
+    "Whiscash-2": {
+      "evs": {
+        "hp": 170,
+        "sd": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Mud-Slap",
+        "Earthquake",
+        "Surf",
+        "Amnesia"
+      ],
+      "nature": "Bold",
+      "item": "Soft Sand"
+    },
+    "Whiscash-3": {
+      "evs": {
+        "at": 127,
+        "df": 127,
+        "sa": 127,
+        "sd": 127
+      },
+      "moves": [
+        "Earthquake",
+        "Surf",
+        "Rock Tomb",
+        "Attract"
+      ],
+      "nature": "Relaxed",
+      "item": "Petaya Berry"
+    }
+  },
+  "Crawdaunt": {
+    "Crawdaunt-1": {
+      "evs": {
+        "hp": 255
+      },
+      "moves": [
+        "Water Pulse",
+        "Knock Off",
+        "Harden",
+        "Cut"
+      ],
+      "nature": "Jolly",
+      "item": "Scope Lens"
+    },
+    "Crawdaunt-2": {
+      "evs": {
+        "hp": 85,
+        "at": 85,
+        "df": 85,
+        "sa": 85,
+        "sd": 85,
+        "sp": 85
+      },
+      "moves": [
+        "Guillotine",
+        "Crabhammer",
+        "Blizzard",
+        "Sludge Bomb"
+      ],
+      "nature": "Docile",
+      "item": "Scope Lens"
+    }
+  },
+  "Claydol": {
+    "Claydol-1": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Sandstorm",
+        "Reflect",
+        "Rock Tomb",
+        "Strength"
+      ],
+      "nature": "Serious",
+      "item": "Bright Powder"
+    },
+    "Claydol-2": {
+      "evs": {
+        "hp": 170,
+        "at": 170,
+        "df": 170
+      },
+      "moves": [
+        "Earthquake",
+        "Self-Destruct",
+        "Sandstorm",
+        "Protect"
+      ],
+      "nature": "Lax",
+      "item": "Pecha Berry"
+    }
+  },
+  "Cradily": {
+    "Cradily-1": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Rock Tomb",
+        "Confuse Ray",
+        "Ingrain",
+        "Earthquake"
+      ],
+      "nature": "Hardy",
+      "item": "Leftovers"
+    },
+    "Cradily-2": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Stockpile",
+        "Spit Up",
+        "Swallow",
+        "Double Team"
+      ],
+      "nature": "Lax",
+      "item": "Bright Powder"
+    }
+  },
+  "Armaldo": {
+    "Armaldo-1": {
+      "evs": {
+        "hp": 127,
+        "at": 127,
+        "df": 127,
+        "sd": 127
+      },
+      "moves": [
+        "Earthquake",
+        "Sandstorm",
+        "Protect",
+        "Slash"
+      ],
+      "nature": "Hardy",
+      "item": "Rawst Berry"
+    },
+    "Armaldo-2": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Earthquake",
+        "Hyper Beam",
+        "Slash",
+        "Swords Dance"
+      ],
+      "nature": "Lax",
+      "item": "Quick Claw"
+    }
+  },
+  "Wigglytuff": {
+    "Wigglytuff-1": {
+      "evs": {
+        "df": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Protect",
+        "Toxic",
+        "Double Team",
+        "Dig"
+      ],
+      "nature": "Lax",
+      "item": "Salac Berry"
+    }
+  },
+  "Milotic": {
+    "Milotic-1": {
+      "evs": {
+        "hp": 255,
+        "df": 255
+      },
+      "moves": [
+        "Surf",
+        "Attract",
+        "Recover",
+        "Toxic"
+      ],
+      "nature": "Hasty",
+      "item": "Ganlon Berry"
+    },
+    "Milotic-2": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Surf",
+        "Blizzard",
+        "Recover",
+        "Double Team"
+      ],
+      "nature": "Quiet",
+      "item": "Apicot Berry"
+    },
+    "Milotic-3": {
+      "evs": {
+        "df": 170,
+        "sd": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Surf",
+        "Toxic",
+        "Recover",
+        "Mirror Coat"
+      ],
+      "nature": "Brave",
+      "item": "Leftovers"
+    },
+    "Milotic-4": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Surf",
+        "Ice Beam",
+        "Recover",
+        "Double Team"
+      ],
+      "nature": "Adamant",
+      "item": "Apicot Berry"
+    },
+    "Milotic-5": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Surf",
+        "Ice Beam",
+        "Recover",
+        "Attract"
+      ],
+      "nature": "Brave",
+      "item": "Bright Powder"
+    }
+  },
+  "Castform": {
+    "Castform-1": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Weather Ball",
+        "Sunny Day",
+        "Rain Dance",
+        "Hail"
+      ],
+      "nature": "Lax",
+      "item": "Sitrus Berry"
+    }
+  },
+  "Starmie": {
+    "Starmie-1": {
+      "evs": {
+        "sa": 170,
+        "sd": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Rapid Spin",
+        "Water Pulse",
+        "Reflect",
+        "Skill Swap"
+      ],
+      "nature": "Hardy",
+      "item": "Mystic Water"
+    },
+    "Starmie-2": {
+      "evs": {
+        "hp": 170,
+        "at": 170,
+        "df": 170
+      },
+      "moves": [
+        "Recover",
+        "Rain Dance",
+        "Surf",
+        "Confuse Ray"
+      ],
+      "nature": "Naive",
+      "item": "Bright Powder"
+    },
+    "Starmie-3": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Light Screen",
+        "Thunderbolt",
+        "Surf",
+        "Rest"
+      ],
+      "nature": "Adamant",
+      "item": "Chesto Berry"
+    },
+    "Starmie-4": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Surf",
+        "Thunderbolt",
+        "Recover",
+        "Confuse Ray"
+      ],
+      "nature": "Brave",
+      "item": "Apicot Berry"
+    },
+    "Starmie-5": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Light Screen",
+        "Thunderbolt",
+        "Surf",
+        "Rest"
+      ],
+      "nature": "Quiet",
+      "item": "Chesto Berry"
+    },
+    "Starmie-6": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Surf",
+        "Thunderbolt",
+        "Blizzard",
+        "Psychic"
+      ],
+      "nature": "Brave",
+      "item": "King's Rock"
+    },
+    "Starmie-7": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Surf",
+        "Thunderbolt",
+        "Psychic",
+        "Ice Beam"
+      ],
+      "nature": "Quiet",
+      "item": "Lum Berry"
+    }
+  },
+  "Kecleon": {
+    "Kecleon-1": {
+      "evs": {
+        "df": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Tail Whip",
+        "Slash",
+        "Lick",
+        "Screech"
+      ],
+      "nature": "Brave",
+      "item": "Persim Berry"
+    },
+    "Kecleon-2": {
+      "evs": {
+        "hp": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Thunderbolt",
+        "Focus Punch",
+        "Iron Tail",
+        "Flamethrower"
+      ],
+      "nature": "Quiet",
+      "item": "Bright Powder"
+    },
+    "Kecleon-3": {
+      "evs": {
+        "hp": 255,
+        "df": 255
+      },
+      "moves": [
+        "Trick",
+        "Rest",
+        "Iron Tail",
+        "Disable"
+      ],
+      "nature": "Quirky",
+      "item": "Choice Band"
+    }
+  },
+  "Shuppet": {
+    "Shuppet-1": {
+      "evs": {
+        "df": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Will-O-Wisp",
+        "Night Shade",
+        "Feint Attack",
+        "Curse"
+      ],
+      "nature": "Hardy",
+      "item": "Scope Lens"
+    }
+  },
+  "Banette": {
+    "Banette-1": {
+      "evs": {
+        "df": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Shadow Ball",
+        "Hyper Beam",
+        "Thunderbolt",
+        "Skill Swap"
+      ],
+      "nature": "Careful",
+      "item": "Petaya Berry"
+    }
+  },
+  "Duskull": {
+    "Duskull-1": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Toxic",
+        "Confuse Ray",
+        "Shadow Ball",
+        "Will-O-Wisp"
+      ],
+      "nature": "Hardy",
+      "item": "Bright Powder"
+    }
+  },
+  "Dusclops": {
+    "Dusclops-1": {
+      "evs": {
+        "hp": 255
+      },
+      "moves": [
+        "Protect",
+        "Night Shade",
+        "Astonish",
+        "Will-O-Wisp"
+      ],
+      "nature": "Hardy",
+      "item": "Pecha Berry"
+    },
+    "Dusclops-2": {
+      "evs": {
+        "hp": 170,
+        "sd": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Mean Look",
+        "Night Shade",
+        "Skill Swap",
+        "Shadow Ball"
+      ],
+      "nature": "Naive",
+      "item": "Spell Tag"
+    },
+    "Dusclops-3": {
+      "evs": {
+        "at": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Shadow Ball",
+        "Will-O-Wisp",
+        "Blizzard",
+        "Psychic"
+      ],
+      "nature": "Careful",
+      "item": "Sitrus Berry"
+    },
+    "Dusclops-4": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Shadow Ball",
+        "Earthquake",
+        "Blizzard",
+        "Destiny Bond"
+      ],
+      "nature": "Naughty",
+      "item": "Spell Tag"
+    }
+  },
+  "Tropius": {
+    "Tropius-1": {
+      "evs": {
+        "df": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Sunny Day",
+        "Solar Beam",
+        "Synthesis",
+        "Razor Leaf"
+      ],
+      "nature": "Docile",
+      "item": "Leftovers"
+    },
+    "Tropius-2": {
+      "evs": {
+        "at": 170,
+        "sd": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Earthquake",
+        "Synthesis",
+        "Razor Leaf",
+        "Hyper Beam"
+      ],
+      "nature": "Bold",
+      "item": "Mental Herb"
+    },
+    "Tropius-3": {
+      "evs": {
+        "df": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Sunny Day",
+        "Synthesis",
+        "Solar Beam",
+        "Leech Seed"
+      ],
+      "nature": "Quiet",
+      "item": "Apicot Berry"
+    }
+  },
+  "Absol": {
+    "Absol-1": {
+      "evs": {
+        "at": 255
+      },
+      "moves": [
+        "Swords Dance",
+        "Iron Tail",
+        "Slash",
+        "Facade"
+      ],
+      "nature": "Lax",
+      "item": "King's Rock"
+    },
+    "Absol-2": {
+      "evs": {
+        "df": 170,
+        "sd": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Feint Attack",
+        "Double-Edge",
+        "Shadow Ball",
+        "Flamethrower"
+      ],
+      "nature": "Relaxed",
+      "item": "King's Rock"
+    },
+    "Absol-3": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Double-Edge",
+        "Facade",
+        "Swords Dance",
+        "Quick Attack"
+      ],
+      "nature": "Hardy",
+      "item": "Salac Berry"
+    }
+  },
+  "Ninetales": {
+    "Ninetales-1": {
+      "evs": {
+        "at": 170,
+        "df": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Confuse Ray",
+        "Fire Spin",
+        "Quick Attack",
+        "Flamethrower"
+      ],
+      "nature": "Hasty",
+      "item": "Rawst Berry"
+    },
+    "Ninetales-2": {
+      "evs": {
+        "df": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Flamethrower",
+        "Attract",
+        "Toxic",
+        "Confuse Ray"
+      ],
+      "nature": "Quiet",
+      "item": "Charcoal"
+    },
+    "Ninetales-3": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Confuse Ray",
+        "Overheat",
+        "Flamethrower",
+        "Iron Tail"
+      ],
+      "nature": "Quiet",
+      "item": "Sitrus Berry"
+    }
+  },
+  "Pikachu": {
+    "Pikachu-1": {
+      "evs": {
+        "df": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Quick Attack",
+        "Thunder Wave",
+        "Thunder Shock",
+        "Growl"
+      ],
+      "nature": "Hardy",
+      "item": "Oran Berry"
+    }
+  },
+  "Raichu": {
+    "Raichu-1": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Quick Attack",
+        "Agility",
+        "Light Screen",
+        "Thunderbolt"
+      ],
+      "nature": "Quiet",
+      "item": "Aspear Berry"
+    },
+    "Raichu-2": {
+      "evs": {
+        "hp": 85,
+        "at": 85,
+        "df": 85,
+        "sa": 85,
+        "sd": 85,
+        "sp": 85
+      },
+      "moves": [
+        "Thunderbolt",
+        "Double Team",
+        "Focus Punch",
+        "Attract"
+      ],
+      "nature": "Jolly",
+      "item": "Scope Lens"
+    },
+    "Raichu-3": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Thunderbolt",
+        "Thunder Wave",
+        "Reversal",
+        "Attract"
+      ],
+      "nature": "Serious",
+      "item": "Focus Band"
+    },
+    "Raichu-4": {
+      "evs": {
+        "at": 170,
+        "df": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Thunder",
+        "Reversal",
+        "Facade",
+        "Iron Tail"
+      ],
+      "nature": "Timid",
+      "item": "Liechi Berry"
+    }
+  },
+  "Golduck": {
+    "Golduck-1": {
+      "evs": {
+        "df": 170,
+        "sa": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Disable",
+        "Psych Up",
+        "Water Pulse",
+        "Brick Break"
+      ],
+      "nature": "Hardy",
+      "item": "Bright Powder"
+    },
+    "Golduck-2": {
+      "evs": {
+        "hp": 102,
+        "df": 102,
+        "sa": 102,
+        "sd": 102,
+        "sp": 102
+      },
+      "moves": [
+        "Surf",
+        "Attract",
+        "Calm Mind",
+        "Blizzard"
+      ],
+      "nature": "Hasty",
+      "item": "Pecha Berry"
+    },
+    "Golduck-3": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Surf",
+        "Cross Chop",
+        "Ice Beam",
+        "Hyper Beam"
+      ],
+      "nature": "Serious",
+      "item": "Liechi Berry"
+    },
+    "Golduck-4": {
+      "evs": {
+        "at": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Hydro Pump",
+        "Cross Chop",
+        "Blizzard",
+        "Psych Up"
+      ],
+      "nature": "Hardy",
+      "item": "Petaya Berry"
+    },
+    "Golduck-5": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Surf",
+        "Psychic",
+        "Ice Beam",
+        "Iron Tail"
+      ],
+      "nature": "Docile",
+      "item": "Salac Berry"
+    }
+  },
+  "Wobbuffet": {
+    "Wobbuffet-1": {
+      "evs": {
+        "hp": 255,
+        "df": 255
+      },
+      "moves": [
+        "Counter",
+        "Mirror Coat",
+        "Safeguard",
+        "Destiny Bond"
+      ],
+      "nature": "Calm",
+      "item": "Salac Berry"
+    },
+    "Wobbuffet-2": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Encore",
+        "Counter",
+        "Mirror Coat",
+        "Destiny Bond"
+      ],
+      "nature": "Serious",
+      "item": "Leftovers"
+    }
+  },
+  "Xatu": {
+    "Xatu-1": {
+      "evs": {
+        "df": 127,
+        "sa": 127,
+        "sd": 127,
+        "sp": 127
+      },
+      "moves": [
+        "Night Shade",
+        "Peck",
+        "Confuse Ray",
+        "Future Sight"
+      ],
+      "nature": "Hardy",
+      "item": "Twisted Spoon"
+    },
+    "Xatu-2": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Psychic",
+        "Rest",
+        "Confuse Ray",
+        "Toxic"
+      ],
+      "nature": "Brave",
+      "item": "White Herb"
+    }
+  },
+  "Girafarig": {
+    "Girafarig-1": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Strength",
+        "Psybeam",
+        "Agility",
+        "Earthquake"
+      ],
+      "nature": "Impish",
+      "item": "King's Rock"
+    },
+    "Girafarig-2": {
+      "evs": {
+        "at": 170,
+        "df": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Double Team",
+        "Crunch",
+        "Psychic",
+        "Earthquake"
+      ],
+      "nature": "Hardy",
+      "item": "Ganlon Berry"
+    }
+  },
+  "Donphan": {
+    "Donphan-1": {
+      "evs": {
+        "hp": 170,
+        "at": 170,
+        "df": 170
+      },
+      "moves": [
+        "Rock Smash",
+        "Rapid Spin",
+        "Flail",
+        "Horn Attack"
+      ],
+      "nature": "Impish",
+      "item": "King's Rock"
+    },
+    "Donphan-2": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Earthquake",
+        "Flail",
+        "Roar",
+        "Iron Tail"
+      ],
+      "nature": "Hardy",
+      "item": "White Herb"
+    }
+  },
+  "Pinsir": {
+    "Pinsir-1": {
+      "evs": {
+        "df": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Swords Dance",
+        "Harden",
+        "Cut",
+        "Seismic Toss"
+      ],
+      "nature": "Docile",
+      "item": "Chesto Berry"
+    },
+    "Pinsir-2": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Guillotine",
+        "Submission",
+        "Earthquake",
+        "Rock Tomb"
+      ],
+      "nature": "Hardy",
+      "item": "Soft Sand"
+    },
+    "Pinsir-3": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Guillotine",
+        "Earthquake",
+        "Double Team",
+        "Rock Tomb"
+      ],
+      "nature": "Lax",
+      "item": "Leppa Berry"
+    }
+  },
+  "Heracross": {
+    "Heracross-1": {
+      "evs": {
+        "hp": 170,
+        "at": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Horn Attack",
+        "Counter",
+        "Reversal",
+        "Leer"
+      ],
+      "nature": "Bold",
+      "item": "Quick Claw"
+    },
+    "Heracross-2": {
+      "evs": {
+        "at": 255,
+        "df": 255
+      },
+      "moves": [
+        "Facade",
+        "Reversal",
+        "Megahorn",
+        "Earthquake"
+      ],
+      "nature": "Hardy",
+      "item": "Focus Band"
+    },
+    "Heracross-3": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Megahorn",
+        "Reversal",
+        "Earthquake",
+        "Counter"
+      ],
+      "nature": "Hardy",
+      "item": "Salac Berry"
+    },
+    "Heracross-4": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Megahorn",
+        "Rock Tomb",
+        "Endure",
+        "Reversal"
+      ],
+      "nature": "Sassy",
+      "item": "Liechi Berry"
+    },
+    "Heracross-5": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Megahorn",
+        "Earthquake",
+        "Counter",
+        "Reversal"
+      ],
+      "nature": "Hardy",
+      "item": "Salac Berry"
+    },
+    "Heracross-6": {
+      "evs": {
+        "hp": 127,
+        "at": 127,
+        "df": 127,
+        "sd": 127
+      },
+      "moves": [
+        "Megahorn",
+        "Earthquake",
+        "Facade",
+        "Rock Tomb"
+      ],
+      "nature": "Hardy",
+      "item": "Liechi Berry"
+    }
+  },
+  "Rhydon": {
+    "Rhydon-1": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Strength",
+        "Rock Tomb",
+        "Stomp",
+        "Rock Smash"
+      ],
+      "nature": "Quirky",
+      "item": "Persim Berry"
+    },
+    "Rhydon-2": {
+      "evs": {
+        "sa": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Iron Tail",
+        "Earthquake",
+        "Surf",
+        "Fire Blast"
+      ],
+      "nature": "Rash",
+      "item": "Choice Band"
+    },
+    "Rhydon-3": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Earthquake",
+        "Megahorn",
+        "Horn Drill",
+        "Rock Slide"
+      ],
+      "nature": "Gentle",
+      "item": "Quick Claw"
+    }
+  },
+  "Glalie": {
+    "Glalie-1": {
+      "evs": {
+        "hp": 85,
+        "at": 85,
+        "df": 85,
+        "sa": 85,
+        "sd": 85,
+        "sp": 85
+      },
+      "moves": [
+        "Blizzard",
+        "Crunch",
+        "Icy Wind",
+        "Double Team"
+      ],
+      "nature": "Jolly",
+      "item": "Never-Melt Ice"
+    },
+    "Glalie-2": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Crunch",
+        "Blizzard",
+        "Hail",
+        "Earthquake"
+      ],
+      "nature": "Serious",
+      "item": "Salac Berry"
+    }
+  },
+  "Walrein": {
+    "Walrein-1": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sa": 170
+      },
+      "moves": [
+        "Hail",
+        "Encore",
+        "Ice Ball",
+        "Toxic"
+      ],
+      "nature": "Adamant",
+      "item": "Scope Lens"
+    },
+    "Walrein-2": {
+      "evs": {
+        "at": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Surf",
+        "Encore",
+        "Blizzard",
+        "Hyper Beam"
+      ],
+      "nature": "Hardy",
+      "item": "Salac Berry"
+    },
+    "Walrein-3": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Blizzard",
+        "Earthquake",
+        "Surf",
+        "Rock Slide"
+      ],
+      "nature": "Careful",
+      "item": "Never-Melt Ice"
+    },
+    "Walrein-4": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Surf",
+        "Ice Beam",
+        "Earthquake",
+        "Rest"
+      ],
+      "nature": "Naive",
+      "item": "Chesto Berry"
+    },
+    "Walrein-5": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Surf",
+        "Blizzard",
+        "Rock Slide",
+        "Sheer Cold"
+      ],
+      "nature": "Serious",
+      "item": "Salac Berry"
+    },
+    "Walrein-6": {
+      "evs": {
+        "hp": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Surf",
+        "Ice Beam",
+        "Fissure",
+        "Sheer Cold"
+      ],
+      "nature": "Hardy",
+      "item": "Leppa Berry"
+    }
+  },
+  "Huntail": {
+    "Huntail-1": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Rain Dance",
+        "Hydro Pump",
+        "Crunch",
+        "Blizzard"
+      ],
+      "nature": "Quiet",
+      "item": "Mystic Water"
+    }
+  },
+  "Gorebyss": {
+    "Gorebyss-1": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Psychic",
+        "Surf",
+        "Blizzard",
+        "Shadow Ball"
+      ],
+      "nature": "Adamant",
+      "item": "Pecha Berry"
+    }
+  },
+  "Relicanth": {
+    "Relicanth-1": {
+      "evs": {
+        "df": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Surf",
+        "Ancient Power",
+        "Rock Tomb",
+        "Harden"
+      ],
+      "nature": "Timid",
+      "item": "Mystic Water"
+    },
+    "Relicanth-2": {
+      "evs": {
+        "at": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Rock Tomb",
+        "Double-Edge",
+        "Surf",
+        "Earthquake"
+      ],
+      "nature": "Hardy",
+      "item": "Liechi Berry"
+    }
+  },
+  "Corsola": {
+    "Corsola-1": {
+      "evs": {
+        "df": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Recover",
+        "Mirror Coat",
+        "Hail",
+        "Surf"
+      ],
+      "nature": "Hardy",
+      "item": "Scope Lens"
+    }
+  },
+  "Lanturn": {
+    "Lanturn-1": {
+      "evs": {
+        "sp": 255
+      },
+      "moves": [
+        "Flail",
+        "Surf",
+        "Spark",
+        "Take Down"
+      ],
+      "nature": "Sassy",
+      "item": "Quick Claw"
+    },
+    "Lanturn-2": {
+      "evs": {
+        "df": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Thunder",
+        "Surf",
+        "Ice Beam",
+        "Rain Dance"
+      ],
+      "nature": "Adamant",
+      "item": "Quick Claw"
+    },
+    "Lanturn-3": {
+      "evs": {
+        "hp": 170,
+        "sa": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Thunderbolt",
+        "Surf",
+        "Thunder Wave",
+        "Blizzard"
+      ],
+      "nature": "Brave",
+      "item": "Salac Berry"
+    }
+  },
+  "Kingdra": {
+    "Kingdra-1": {
+      "evs": {
+        "at": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Agility",
+        "Dive",
+        "Ice Beam",
+        "Protect"
+      ],
+      "nature": "Hardy",
+      "item": "Mystic Water"
+    },
+    "Kingdra-2": {
+      "evs": {
+        "df": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Double Team",
+        "Rest",
+        "Surf",
+        "Dragon Breath"
+      ],
+      "nature": "Adamant",
+      "item": "Chesto Berry"
+    },
+    "Kingdra-3": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Surf",
+        "Toxic",
+        "Protect",
+        "Rest"
+      ],
+      "nature": "Adamant",
+      "item": "Chesto Berry"
+    },
+    "Kingdra-4": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Hydro Pump",
+        "Protect",
+        "Dragon Breath",
+        "Double Team"
+      ],
+      "nature": "Adamant",
+      "item": "Leftovers"
+    },
+    "Kingdra-5": {
+      "evs": {
+        "hp": 170,
+        "sa": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Hydro Pump",
+        "Blizzard",
+        "Hyper Beam",
+        "Disable"
+      ],
+      "nature": "Quiet",
+      "item": "Shell Bell"
+    }
+  },
+  "Metang": {
+    "Metang-1": {
+      "evs": {
+        "at": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Earthquake",
+        "Shadow Ball",
+        "Psychic",
+        "Meteor Mash"
+      ],
+      "nature": "Impish",
+      "item": "Metal Coat"
+    }
+  },
+  "Salamence": {
+    "Salamence-1": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Dragon Claw",
+        "Earthquake",
+        "Crunch",
+        "Rest"
+      ],
+      "nature": "Adamant",
+      "item": "Lum Berry"
+    },
+    "Salamence-2": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Dragon Claw",
+        "Earthquake",
+        "Flamethrower",
+        "Rock Tomb"
+      ],
+      "nature": "Serious",
+      "item": "King's Rock"
+    },
+    "Salamence-3": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Dragon Claw",
+        "Earthquake",
+        "Fire Blast",
+        "Hydro Pump"
+      ],
+      "nature": "Naughty",
+      "item": "Petaya Berry"
+    }
+  },
+  "Metagross": {
+    "Metagross-1": {
+      "evs": {
+        "hp": 170,
+        "at": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Meteor Mash",
+        "Psychic",
+        "Earthquake",
+        "Light Screen"
+      ],
+      "nature": "Hardy",
+      "item": "Shell Bell"
+    },
+    "Metagross-2": {
+      "evs": {
+        "at": 170,
+        "sa": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Meteor Mash",
+        "Psychic",
+        "Earthquake",
+        "Hyper Beam"
+      ],
+      "nature": "Hardy",
+      "item": "Quick Claw"
+    },
+    "Metagross-3": {
+      "evs": {
+        "sd": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Meteor Mash",
+        "Psychic",
+        "Pursuit",
+        "Rock Tomb"
+      ],
+      "nature": "Brave",
+      "item": "Liechi Berry"
+    },
+    "Metagross-4": {
+      "evs": {
+        "at": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Meteor Mash",
+        "Psychic",
+        "Shadow Ball",
+        "Earthquake"
+      ],
+      "nature": "Hardy",
+      "item": "Quick Claw"
+    }
+  },
+  "Regirock": {
+    "Regirock-1": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Rock Tomb",
+        "Earthquake",
+        "Thunderbolt",
+        "Explosion"
+      ],
+      "nature": "Sassy",
+      "item": "Quick Claw"
+    },
+    "Regirock-2": {
+      "evs": {
+        "at": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Earthquake",
+        "Ancient Power",
+        "Focus Punch",
+        "Explosion"
+      ],
+      "nature": "Gentle",
+      "item": "Bright Powder"
+    },
+    "Regirock-3": {
+      "evs": {
+        "at": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Earthquake",
+        "Rock Tomb",
+        "Facade",
+        "Explosion"
+      ],
+      "nature": "Gentle",
+      "item": "Quick Claw"
+    },
+    "Regirock-4": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Earthquake",
+        "Toxic",
+        "Superpower",
+        "Rest"
+      ],
+      "nature": "Serious",
+      "item": "Apicot Berry"
+    }
+  },
+  "Regice": {
+    "Regice-1": {
+      "evs": {
+        "hp": 255,
+        "df": 255
+      },
+      "moves": [
+        "Rest",
+        "Curse",
+        "Blizzard",
+        "Earthquake"
+      ],
+      "nature": "Mild",
+      "item": "Chesto Berry"
+    },
+    "Regice-2": {
+      "evs": {
+        "hp": 255,
+        "df": 255
+      },
+      "moves": [
+        "Ice Beam",
+        "Thunderbolt",
+        "Double Team",
+        "Rest"
+      ],
+      "nature": "Hasty",
+      "item": "Chesto Berry"
+    },
+    "Regice-3": {
+      "evs": {
+        "df": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Blizzard",
+        "Thunderbolt",
+        "Hail",
+        "Explosion"
+      ],
+      "nature": "Careful",
+      "item": "Shell Bell"
+    },
+    "Regice-4": {
+      "evs": {
+        "df": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Ice Beam",
+        "Thunderbolt",
+        "Ancient Power",
+        "Explosion"
+      ],
+      "nature": "Rash",
+      "item": "Lax Incense"
+    }
+  },
+  "Registeel": {
+    "Registeel-1": {
+      "evs": {
+        "at": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Rest",
+        "Iron Defense",
+        "Thunderbolt",
+        "Earthquake"
+      ],
+      "nature": "Mild",
+      "item": "Lum Berry"
+    },
+    "Registeel-2": {
+      "evs": {
+        "at": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Metal Claw",
+        "Earthquake",
+        "Thunderbolt",
+        "Explosion"
+      ],
+      "nature": "Gentle",
+      "item": "Quick Claw"
+    },
+    "Registeel-3": {
+      "evs": {
+        "at": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Metal Claw",
+        "Earthquake",
+        "Ancient Power",
+        "Explosion"
+      ],
+      "nature": "Gentle",
+      "item": "Quick Claw"
+    },
+    "Registeel-4": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Curse",
+        "Amnesia",
+        "Return",
+        "Rest"
+      ],
+      "nature": "Lax",
+      "item": "Leftovers"
+    }
+  },
+  "Latias": {
+    "Latias-1": {
+      "evs": {
+        "hp": 255,
+        "df": 255
+      },
+      "moves": [
+        "Mist Ball",
+        "Thunderbolt",
+        "Rest",
+        "Dragon Claw"
+      ],
+      "nature": "Mild",
+      "item": "Lum Berry"
+    },
+    "Latias-2": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Mist Ball",
+        "Reflect",
+        "Recover",
+        "Dragon Claw"
+      ],
+      "nature": "Brave",
+      "item": "Apicot Berry"
+    },
+    "Latias-3": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Mist Ball",
+        "Thunderbolt",
+        "Earthquake",
+        "Ice Beam"
+      ],
+      "nature": "Quiet",
+      "item": "Shell Bell"
+    },
+    "Latias-4": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Mist Ball",
+        "Recover",
+        "Attract",
+        "Dragon Claw"
+      ],
+      "nature": "Adamant",
+      "item": "Lum Berry"
+    }
+  },
+  "Latios": {
+    "Latios-1": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Luster Purge",
+        "Reflect",
+        "Recover",
+        "Dragon Claw"
+      ],
+      "nature": "Brave",
+      "item": "Apicot Berry"
+    },
+    "Latios-2": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Luster Purge",
+        "Ice Beam",
+        "Recover",
+        "Dragon Claw"
+      ],
+      "nature": "Quiet",
+      "item": "Shell Bell"
+    },
+    "Latios-3": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Luster Purge",
+        "Thunderbolt",
+        "Earthquake",
+        "Surf"
+      ],
+      "nature": "Quiet",
+      "item": "Shell Bell"
+    },
+    "Latios-4": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Luster Purge",
+        "Thunderbolt",
+        "Ice Beam",
+        "Dragon Claw"
+      ],
+      "nature": "Hardy",
+      "item": "King's Rock"
+    }
+  }
+}

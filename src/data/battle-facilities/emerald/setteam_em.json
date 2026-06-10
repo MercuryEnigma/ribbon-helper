@@ -114,5 +114,81 @@
       "nature": "Timid",
       "item": "Lum Berry"
     }
+  },
+  "Starmie": {
+    "Starmie (Emerald Singles)": {
+      "evs": {
+        "sa": 252,
+        "sd": 6,
+        "sp": 252
+      },
+      "ivs": {
+        "hp": 24,
+        "at": 27,
+        "df": 27,
+        "sa": 27,
+        "sd": 22,
+        "sp": 31
+      },
+      "moves": [
+        "Surf",
+        "Psychic",
+        "Ice Beam",
+        "Thunderbolt"
+      ],
+      "nature": "Modest",
+      "item": "Lum Berry"
+    }
+  },
+  "Forretress": {
+    "Forretress (Emerald Singles)": {
+      "evs": {
+        "hp": 248,
+        "sa": 4,
+        "sd": 252,
+        "sp": 6
+      },
+      "ivs": {
+        "hp": 26,
+        "at": 5,
+        "df": 22,
+        "sa": 25,
+        "sd": 23,
+        "sp": 31
+      },
+      "moves": [
+        "Toxic",
+        "Protect",
+        "Counter",
+        "Giga Drain"
+      ],
+      "nature": "Calm",
+      "item": "Leftovers"
+    }
+  },
+  "Flygon": {
+    "Flygon (Emerald Singles)": {
+      "evs": {
+        "hp": 6,
+        "at": 252,
+        "sp": 252
+      },
+      "ivs": {
+        "hp": 30,
+        "at": 31,
+        "df": 30,
+        "sa": 29,
+        "sd": 29,
+        "sp": 30
+      },
+      "moves": [
+        "Earthquake",
+        "Rock Slide",
+        "Fire Blast",
+        "Body Slam"
+      ],
+      "nature": "Jolly",
+      "item": "Choice Band"
+    }
   }
 }

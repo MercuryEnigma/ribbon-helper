@@ -1,0 +1,1052 @@
+[
+  {
+    "number": 1,
+    "class": "Youngster",
+    "name": "Alvin",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 2,
+    "class": "Bird Keeper",
+    "name": "Dirk",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 3,
+    "class": "Lady",
+    "name": "Cybil",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 4,
+    "class": "Black Belt",
+    "name": "Chen",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 5,
+    "class": "Ninja Boy",
+    "name": "Yoshi",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 6,
+    "class": "School Kid",
+    "name": "Tina",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 7,
+    "class": "Bug Maniac",
+    "name": "Corey",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 8,
+    "class": "Fisherman",
+    "name": "Gordon",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 9,
+    "class": "Tuber",
+    "name": "Ann",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 10,
+    "class": "Pokéfan",
+    "name": "Julia",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6"
+    ]
+  },
+  {
+    "number": 11,
+    "class": "Gentleman",
+    "name": "Gregory",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 12,
+    "class": "Camper",
+    "name": "Keith",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 13,
+    "class": "Triathlete",
+    "name": "Kendra",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 14,
+    "class": "Hiker",
+    "name": "Dev",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 15,
+    "class": "Battle Girl",
+    "name": "Cassie",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 16,
+    "class": "Psychic",
+    "name": "Julian",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 17,
+    "class": "Lass",
+    "name": "Joyce",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 18,
+    "class": "Guitarist",
+    "name": "Les",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 19,
+    "class": "Rich Boy",
+    "name": "Clinton",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 20,
+    "class": "Bug Catcher",
+    "name": "Lewis",
+    "ivs": 6,
+    "battleRanges": [
+      "1-6",
+      "8-13"
+    ]
+  },
+  {
+    "number": 21,
+    "class": "Picnicker",
+    "name": "Rachael",
+    "ivs": 9,
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 22,
+    "class": "Collector",
+    "name": "Harold",
+    "ivs": 9,
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 23,
+    "class": "Tuber",
+    "name": "Kipp",
+    "ivs": 9,
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 24,
+    "class": "Kindler",
+    "name": "Irwin",
+    "ivs": 9,
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 25,
+    "class": "Psychic",
+    "name": "Eileen",
+    "ivs": 9,
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 26,
+    "class": "Swimmer",
+    "name": "Anne",
+    "ivs": 9,
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 27,
+    "class": "Triathlete",
+    "name": "Ruth",
+    "ivs": 9,
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 28,
+    "class": "PokéManiac",
+    "name": "Jeremy",
+    "ivs": 9,
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 29,
+    "class": "Sailor",
+    "name": "Trevor",
+    "ivs": 9,
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 30,
+    "class": "Pokémon Breeder",
+    "name": "Colette",
+    "ivs": 9,
+    "battleRanges": [
+      "7",
+      "8-13",
+      "15-20"
+    ]
+  },
+  {
+    "number": 31,
+    "class": "Hex Maniac",
+    "name": "Paula",
+    "ivs": 12,
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 32,
+    "class": "Ruin Maniac",
+    "name": "Stanly",
+    "ivs": 12,
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 33,
+    "class": "Triathlete",
+    "name": "Troy",
+    "ivs": 12,
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 34,
+    "class": "School Kid",
+    "name": "Ed",
+    "ivs": 12,
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 35,
+    "class": "Pokémon Ranger",
+    "name": "Ellen",
+    "ivs": 12,
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 36,
+    "class": "Swimmer",
+    "name": "Arnie",
+    "ivs": 12,
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 37,
+    "class": "Triathlete",
+    "name": "Hal",
+    "ivs": 12,
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 38,
+    "class": "Beauty",
+    "name": "Lauren",
+    "ivs": 12,
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 39,
+    "class": "Aroma Lady",
+    "name": "Stacy",
+    "ivs": 12,
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 40,
+    "class": "Collector",
+    "name": "Daryl",
+    "ivs": 12,
+    "battleRanges": [
+      "14",
+      "15-20",
+      "22-27"
+    ]
+  },
+  {
+    "number": 41,
+    "class": "Triathlete",
+    "name": "Kathy",
+    "ivs": 15,
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 42,
+    "class": "Pokémon Ranger",
+    "name": "Harris",
+    "ivs": 15,
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 43,
+    "class": "Pokéfan",
+    "name": "Glenn",
+    "ivs": 15,
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 44,
+    "class": "Triathlete",
+    "name": "Nico",
+    "ivs": 15,
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 45,
+    "class": "Pokémon Breeder",
+    "name": "Bailey",
+    "ivs": 15,
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 46,
+    "class": "Parasol Lady",
+    "name": "Abbie",
+    "ivs": 15,
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 47,
+    "class": "Camper",
+    "name": "Al",
+    "ivs": 15,
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 48,
+    "class": "School Kid",
+    "name": "Peggy",
+    "ivs": 15,
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 49,
+    "class": "Beauty",
+    "name": "Naomi",
+    "ivs": 15,
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 50,
+    "class": "Ninja Boy",
+    "name": "Kenji",
+    "ivs": 15,
+    "battleRanges": [
+      "21",
+      "22-27",
+      "29-34"
+    ]
+  },
+  {
+    "number": 51,
+    "class": "Triathlete",
+    "name": "Ross",
+    "ivs": 18,
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 52,
+    "class": "Pokémon Ranger",
+    "name": "Edna",
+    "ivs": 18,
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 53,
+    "class": "Ruin Maniac",
+    "name": "Anton",
+    "ivs": 18,
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 54,
+    "class": "Swimmer",
+    "name": "Mitch",
+    "ivs": 18,
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 55,
+    "class": "Hex Maniac",
+    "name": "Rod",
+    "ivs": 18,
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 56,
+    "class": "Triathlete",
+    "name": "Rich",
+    "ivs": 18,
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 57,
+    "class": "Pokéfan",
+    "name": "Daniel",
+    "ivs": 18,
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 58,
+    "class": "Psychic",
+    "name": "Gloria",
+    "ivs": 18,
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 59,
+    "class": "Guitarist",
+    "name": "Nelson",
+    "ivs": 18,
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 60,
+    "class": "Kindler",
+    "name": "Ferris",
+    "ivs": 18,
+    "battleRanges": [
+      "28",
+      "29-34",
+      "36-41"
+    ]
+  },
+  {
+    "number": 61,
+    "class": "Aroma Lady",
+    "name": "Amanda",
+    "ivs": 21,
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 62,
+    "class": "Triathlete",
+    "name": "Mason",
+    "ivs": 21,
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 63,
+    "class": "Dragon Tamer",
+    "name": "Nate",
+    "ivs": 21,
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 64,
+    "class": "Lass",
+    "name": "Miriam",
+    "ivs": 21,
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 65,
+    "class": "PokéManiac",
+    "name": "Theo",
+    "ivs": 21,
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 66,
+    "class": "Triathlete",
+    "name": "Pamela",
+    "ivs": 21,
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 67,
+    "class": "Pokéfan",
+    "name": "Alissa",
+    "ivs": 21,
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 68,
+    "class": "Gentleman",
+    "name": "Arthur",
+    "ivs": 21,
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 69,
+    "class": "Swimmer",
+    "name": "Marcy",
+    "ivs": 21,
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 70,
+    "class": "Cooltrainer",
+    "name": "Miller",
+    "ivs": 21,
+    "battleRanges": [
+      "35",
+      "36-41",
+      "43-48"
+    ]
+  },
+  {
+    "number": 71,
+    "class": "Bird Keeper",
+    "name": "Oliver",
+    "ivs": 31,
+    "battleRanges": [
+      "42",
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 72,
+    "class": "Triathlete",
+    "name": "Molly",
+    "ivs": 31,
+    "battleRanges": [
+      "42",
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 73,
+    "class": "Bug Maniac",
+    "name": "Jason",
+    "ivs": 31,
+    "battleRanges": [
+      "42",
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 74,
+    "class": "Battle Girl",
+    "name": "Ava",
+    "ivs": 31,
+    "battleRanges": [
+      "42",
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 75,
+    "class": "Fisherman",
+    "name": "Hank",
+    "ivs": 31,
+    "battleRanges": [
+      "42",
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 76,
+    "class": "Sailor",
+    "name": "Peter",
+    "ivs": 31,
+    "battleRanges": [
+      "42",
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 77,
+    "class": "Expert",
+    "name": "Mindy",
+    "ivs": 31,
+    "battleRanges": [
+      "42",
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 78,
+    "class": "Bug Maniac",
+    "name": "Dwight",
+    "ivs": 31,
+    "battleRanges": [
+      "42",
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 79,
+    "class": "Pokémon Breeder",
+    "name": "Reena",
+    "ivs": 31,
+    "battleRanges": [
+      "42",
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 80,
+    "class": "Parasol Lady",
+    "name": "Megan",
+    "ivs": 31,
+    "battleRanges": [
+      "42",
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 81,
+    "class": "Triathlete",
+    "name": "Sierra",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 82,
+    "class": "Pokémon Ranger",
+    "name": "Arnold",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 83,
+    "class": "Black Belt",
+    "name": "Xin",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 84,
+    "class": "Cooltrainer",
+    "name": "Kelly",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 85,
+    "class": "Collector",
+    "name": "Vance",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 86,
+    "class": "Triathlete",
+    "name": "Toby",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 87,
+    "class": "Gentleman",
+    "name": "Norton",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 88,
+    "class": "Battle Girl",
+    "name": "Zoe",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 89,
+    "class": "Beauty",
+    "name": "Emma",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 90,
+    "class": "Hiker",
+    "name": "Vince",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 91,
+    "class": "Expert",
+    "name": "Marv",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 92,
+    "class": "Pokémon Breeder",
+    "name": "Todd",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 93,
+    "class": "Guitarist",
+    "name": "Gavin",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 94,
+    "class": "Psychic",
+    "name": "Quinn",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 95,
+    "class": "Cooltrainer",
+    "name": "Jenn",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 96,
+    "class": "Expert",
+    "name": "Joel",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 97,
+    "class": "Dragon Tamer",
+    "name": "Kyle",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 98,
+    "class": "Cooltrainer",
+    "name": "Bret",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 99,
+    "class": "Expert",
+    "name": "Carrie",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  },
+  {
+    "number": 100,
+    "class": "Lady",
+    "name": "Gillian",
+    "ivs": 31,
+    "battleRanges": [
+      "43-48",
+      "49+"
+    ]
+  }
+]

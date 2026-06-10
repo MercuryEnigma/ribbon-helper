@@ -34,6 +34,7 @@ export interface Trainer {
   number?: number
   class: string
   name: string
+  ivs?: number
   battleRanges?: string[]
   modes?: string[]
   boss?: string
@@ -61,12 +62,14 @@ export type SideStateFieldDef =
   | { type: 'select'; key: string; label: string; options: { value: number; label: string }[]; row?: number; disabled?: boolean }
 
 export interface CalcParams {
+  modeId: string
   p1: P1Option
   p2Label: string
   p1Level: number
   p2Level: number
   p2Ivs: number
   p2Ability: string
+  p2Nature?: string
   weather: string
   terrain?: string
   gravity?: boolean
@@ -102,6 +105,7 @@ export interface GameConfig {
   // Weather
   weatherOptions: readonly string[]
   weatherLabels: Record<string, string>
+  opponentNatureOptions?: readonly string[]
 
   // Terrain (optional — Gen 7+ only)
   terrainOptions?: readonly string[]
@@ -134,6 +138,7 @@ export interface GameConfig {
 // ──────────────────────────────────────────────
 
 export { emeraldConfig } from './gen3Battles'
+export { rsConfig } from './rsBattles'
 export { sunMoonConfig } from './gen7Battles'
 export { orasConfig } from './gen6Battles'
 export { gen4Config } from './gen4Battles'

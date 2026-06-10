@@ -52,6 +52,14 @@ export default function App() {
       return [{ name: 'SadisticMystic', url: 'https://docs.google.com/spreadsheets/d/1U2gGGy9nyGIKQcq9SVtIxKGJDNYAfhicEWr5ykQKM7k/copy' }]
     } else if (path.includes('/visual-decoration/bdsp-ball-stickers')) {
       return [{ name: 'Anubis', url: 'https://x.com/Sibuna_Switch' }]
+    } else if (path.startsWith('/battle-facilities/rs')) {
+      return [
+        { name: 'EisenCalc', url: 'https://eisencalc.com' },
+        { name: 'Bulbapedia R/S Battle Tower Trainers', url: 'https://bulbapedia.bulbagarden.net/wiki/List_of_Battle_Tower_Trainers_in_Pok%C3%A9mon_Ruby_and_Sapphire' },
+        { name: 'Bulbapedia R/S Battle Tower Pokemon', url: 'https://bulbapedia.bulbagarden.net/wiki/List_of_Battle_Tower_Pok%C3%A9mon_in_Pok%C3%A9mon_Ruby_and_Sapphire' },
+        { name: 'Altissimo RSE Battle Tower Trainers', url: 'https://altissimo1.github.io/Main-Series/RSE/battle-tower-trainers.html' },
+        { name: 'Altissimo RSE Battle Tower Pokemon', url: 'https://altissimo1.github.io/Main-Series/RSE/battle-tower-pokemon.html' },
+      ]
     } else if (path.startsWith('/battle-facilities')) {
       return [{ name: 'EisenCalc', url: 'https://eisencalc.com' }]
     }
