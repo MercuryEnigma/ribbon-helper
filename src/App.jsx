@@ -70,6 +70,16 @@ export default function App() {
         { name: 'Altissimo D/P Battle Tower Trainers', url: 'https://altissimo1.github.io/Main-Series/DPPt/battle-tower-trainers.html' },
         { name: 'Altissimo D/P Battle Tower', url: 'https://altissimo1.github.io/Main-Series/DPPt/battle-tower.html' },
       ]
+    } else if (path.startsWith('/battle-facilities/mt-battle')) {
+      return [
+        { name: 'EisenCalc', url: 'https://eisencalc.com' },
+        { name: 'Bulbapedia Mt. Battle', url: 'https://bulbapedia.bulbagarden.net/wiki/Mt._Battle#100-battle_challenge' },
+        { name: 'Bulbapedia Mt. Battle Areas 1-10', url: 'https://bulbapedia.bulbagarden.net/wiki/Mt._Battle_Area_1' },
+        { name: 'Altissimo Colosseum Story Mode Mt. Battle', url: 'https://altissimo1.github.io/Supplementary-Series/Orre/Colosseum/Story-Mode/mt-battle.html' },
+        { name: 'Altissimo Colosseum Battle Mode Singles', url: 'https://altissimo1.github.io/Supplementary-Series/Orre/Colosseum/Battle-Mode/mt-battle-singles.html' },
+        { name: 'Altissimo Colosseum Battle Mode Doubles', url: 'https://altissimo1.github.io/Supplementary-Series/Orre/Colosseum/Battle-Mode/mt-battle-doubles.html' },
+        { name: 'Altissimo XD Mt. Battle', url: 'https://altissimo1.github.io/Supplementary-Series/Orre/XD/mt-battle.html' },
+      ]
     } else if (path.startsWith('/battle-facilities')) {
       return [{ name: 'EisenCalc', url: 'https://eisencalc.com' }]
     }

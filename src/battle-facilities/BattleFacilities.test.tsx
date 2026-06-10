@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { fireEvent, render, screen } from '@testing-library/react'
+import { fireEvent, render, screen, within } from '@testing-library/react'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
 import BattleFacilities from './BattleFacilities'
 
@@ -48,5 +48,31 @@ describe('BattleFacilities routes', () => {
     const natureSelect = screen.getByLabelText('Opponent nature')
     fireEvent.change(natureSelect, { target: { value: 'Timid' } })
     expect(natureSelect).toHaveValue('Timid')
+  })
+
+  it('loads Mt. Battle with four modes and one opponent per battle', () => {
+    const view = render(
+      <MemoryRouter initialEntries={['/battle-facilities/mt-battle?mode=colosseum-story']}>
+        <Routes>
+          <Route path="/battle-facilities/:game" element={<BattleFacilities />} />
+        </Routes>
+      </MemoryRouter>,
+    )
+    const page = within(view.container)
+
+    expect(page.getByDisplayValue('Gamecube - Mt. Battle')).toBeInTheDocument()
+    expect(view.container.querySelectorAll('input[name="facility-mode"]')).toHaveLength(4)
+    expect(page.getByRole('radio', { name: 'Colosseum Story Mode' })).toBeChecked()
+    expect(page.getByRole('img', { name: 'Earth Ribbon' })).toBeInTheDocument()
+    expect(page.getByDisplayValue('Cooltrainer Stum')).toBeInTheDocument()
+
+    const opponentStatus = page.getByRole('button', { name: /Opponent Status/ })
+    fireEvent.click(opponentStatus)
+    const opponentLevel = within(opponentStatus.parentElement!).getAllByRole('spinbutton')[0]
+    expect(opponentLevel).toHaveValue(16)
+    expect(opponentLevel).toBeDisabled()
+
+    fireEvent.change(page.getByDisplayValue('1'), { target: { value: '10' } })
+    expect(page.getByDisplayValue('Area Leader Vander')).toBeInTheDocument()
   })
 })

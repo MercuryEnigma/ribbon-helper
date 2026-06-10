@@ -60,7 +60,9 @@ export interface SetdexEntry {
   ivs?: Partial<BaseStats>
   moves: string[]
   nature: string
+  ability?: string
   item: string
+  level?: number
   tier?: string
 }
 
@@ -181,6 +183,9 @@ export function buildPokemon(
     } satisfies MoveData
   })
 
+  const ability = set.ability && dexEntry.abilities.includes(set.ability)
+    ? set.ability
+    : dexEntry.abilities[0]
   const poke: Pokemon = {
     name: speciesName,
     setName: setLabel,
@@ -196,8 +201,8 @@ export function buildPokemon(
     evs,
     ivs: ivsMap,
     nature: set.nature,
-    ability: dexEntry.abilities[0],
-    curAbility: dexEntry.abilities[0],
+    ability,
+    curAbility: ability,
     isAbilityActivated: false,
     item: set.item,
     status: "Healthy",

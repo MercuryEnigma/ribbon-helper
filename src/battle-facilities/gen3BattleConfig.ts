@@ -33,6 +33,8 @@ interface Gen3GameConfigOptions {
   trainerPokemonForMode: (modeId: string) => Record<string, string[]>
   moveData?: Gen3MoveDex
   opponentNatureOptions?: readonly string[]
+  fixedOpponentAbilities?: boolean
+  opponentIvsLabel?: string
 }
 
 const GEN3_SIDE_STATE_FIELDS: SideStateFieldDef[] = [
@@ -148,7 +150,7 @@ export function createGen3GameConfig(options: Gen3GameConfigOptions): GameConfig
       : p2Match.set
     const p2Poke = buildPokemon(p2Match.species, p2Dex, effectiveP2Set, p2Label, p2Level, p2Ivs, moveData)
 
-    if (p2Ability && p2Dex.abilities.includes(p2Ability)) {
+    if (!options.fixedOpponentAbilities && p2Ability && p2Dex.abilities.includes(p2Ability)) {
       p2Poke.ability = p2Ability
       p2Poke.curAbility = p2Ability
     }
@@ -197,7 +199,7 @@ export function createGen3GameConfig(options: Gen3GameConfigOptions): GameConfig
       evs: p2Poke.evs,
       nature: p2Poke.nature,
       ability: p2Poke.ability,
-      abilities: p2Dex.abilities,
+      abilities: options.fixedOpponentAbilities ? [p2Poke.ability] : p2Dex.abilities,
       item: p2Poke.item,
       speed: calcCurrentSpeed(p2Poke, weather),
       stats: { atk: p2Poke.rawStats.at, def: p2Poke.rawStats.df, spa: p2Poke.rawStats.sa, spd: p2Poke.rawStats.sd, spe: p2Poke.rawStats.sp },
@@ -215,6 +217,7 @@ export function createGen3GameConfig(options: Gen3GameConfigOptions): GameConfig
     weatherOptions: ['', 'Sun', 'Rain', 'Sand', 'Hail'],
     weatherLabels: { '': 'None', Sun: 'Sun', Rain: 'Rain', Sand: 'Sand', Hail: 'Hail' },
     opponentNatureOptions: options.opponentNatureOptions,
+    opponentIvsLabel: options.opponentIvsLabel,
     getTrainersForBattle: options.getTrainersForBattle,
     getPokemonForTrainer,
     getIVsForTrainer: options.getIVsForTrainer,

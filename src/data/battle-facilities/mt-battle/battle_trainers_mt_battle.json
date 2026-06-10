@@ -1,0 +1,3610 @@
+{
+  "colosseum-story": [
+    {
+      "number": 1,
+      "class": "Cooltrainer",
+      "name": "Stum",
+      "ivs": 0,
+      "battleRanges": [
+        "1"
+      ]
+    },
+    {
+      "number": 2,
+      "class": "Rich Boy",
+      "name": "Cyus",
+      "ivs": 0,
+      "battleRanges": [
+        "2"
+      ]
+    },
+    {
+      "number": 3,
+      "class": "Researcher",
+      "name": "Mort",
+      "ivs": 0,
+      "battleRanges": [
+        "3"
+      ]
+    },
+    {
+      "number": 4,
+      "class": "Lady",
+      "name": "Auro",
+      "ivs": 0,
+      "battleRanges": [
+        "4"
+      ]
+    },
+    {
+      "number": 5,
+      "class": "Cooltrainer",
+      "name": "Lehan",
+      "ivs": 0,
+      "battleRanges": [
+        "5"
+      ]
+    },
+    {
+      "number": 6,
+      "class": "Roller Boy",
+      "name": "Pera",
+      "ivs": 0,
+      "battleRanges": [
+        "6"
+      ]
+    },
+    {
+      "number": 7,
+      "class": "Teacher",
+      "name": "Nevie",
+      "ivs": 0,
+      "battleRanges": [
+        "7"
+      ]
+    },
+    {
+      "number": 8,
+      "class": "Athlete",
+      "name": "Rinos",
+      "ivs": 0,
+      "battleRanges": [
+        "8"
+      ]
+    },
+    {
+      "number": 9,
+      "class": "Fun Old Lady",
+      "name": "Anges",
+      "ivs": 0,
+      "battleRanges": [
+        "9"
+      ]
+    },
+    {
+      "number": 10,
+      "class": "Area Leader",
+      "name": "Vander",
+      "ivs": 0,
+      "battleRanges": [
+        "10"
+      ]
+    },
+    {
+      "number": 11,
+      "class": "Fun Old Lady",
+      "name": "Gelvin",
+      "ivs": 0,
+      "battleRanges": [
+        "11"
+      ]
+    },
+    {
+      "number": 12,
+      "class": "Roller Boy",
+      "name": "Pabe",
+      "ivs": 0,
+      "battleRanges": [
+        "12"
+      ]
+    },
+    {
+      "number": 13,
+      "class": "Athlete",
+      "name": "Caden",
+      "ivs": 0,
+      "battleRanges": [
+        "13"
+      ]
+    },
+    {
+      "number": 14,
+      "class": "Rich Boy",
+      "name": "Lond",
+      "ivs": 0,
+      "battleRanges": [
+        "14"
+      ]
+    },
+    {
+      "number": 15,
+      "class": "Athlete",
+      "name": "Albac",
+      "ivs": 0,
+      "battleRanges": [
+        "15"
+      ]
+    },
+    {
+      "number": 16,
+      "class": "Lady",
+      "name": "Eloos",
+      "ivs": 0,
+      "battleRanges": [
+        "16"
+      ]
+    },
+    {
+      "number": 17,
+      "class": "Fun Old Man",
+      "name": "Metz",
+      "ivs": 0,
+      "battleRanges": [
+        "17"
+      ]
+    },
+    {
+      "number": 18,
+      "class": "Researcher",
+      "name": "Roeck",
+      "ivs": 0,
+      "battleRanges": [
+        "18"
+      ]
+    },
+    {
+      "number": 19,
+      "class": "Teacher",
+      "name": "Vona",
+      "ivs": 0,
+      "battleRanges": [
+        "19"
+      ]
+    },
+    {
+      "number": 20,
+      "class": "Area Leader",
+      "name": "Arth",
+      "ivs": 0,
+      "battleRanges": [
+        "20"
+      ]
+    },
+    {
+      "number": 21,
+      "class": "Guy",
+      "name": "Gris",
+      "ivs": 0,
+      "battleRanges": [
+        "21"
+      ]
+    },
+    {
+      "number": 22,
+      "class": "Fun Old Lady",
+      "name": "Desla",
+      "ivs": 0,
+      "battleRanges": [
+        "22"
+      ]
+    },
+    {
+      "number": 23,
+      "class": "Bodybuilder",
+      "name": "Eisen",
+      "ivs": 0,
+      "battleRanges": [
+        "23"
+      ]
+    },
+    {
+      "number": 24,
+      "class": "Cooltrainer",
+      "name": "Bedro",
+      "ivs": 0,
+      "battleRanges": [
+        "24"
+      ]
+    },
+    {
+      "number": 25,
+      "class": "Roller Boy",
+      "name": "Grel",
+      "ivs": 0,
+      "battleRanges": [
+        "25"
+      ]
+    },
+    {
+      "number": 26,
+      "class": "Teacher",
+      "name": "Loden",
+      "ivs": 0,
+      "battleRanges": [
+        "26"
+      ]
+    },
+    {
+      "number": 27,
+      "class": "Fun Old Man",
+      "name": "Taryn",
+      "ivs": 0,
+      "battleRanges": [
+        "27"
+      ]
+    },
+    {
+      "number": 28,
+      "class": "Glasses Man",
+      "name": "Solek",
+      "ivs": 0,
+      "battleRanges": [
+        "28"
+      ]
+    },
+    {
+      "number": 29,
+      "class": "Athlete",
+      "name": "Wina",
+      "ivs": 0,
+      "battleRanges": [
+        "29"
+      ]
+    },
+    {
+      "number": 30,
+      "class": "Area Leader",
+      "name": "Renson",
+      "ivs": 0,
+      "battleRanges": [
+        "30"
+      ]
+    },
+    {
+      "number": 31,
+      "class": "Lady in Suit",
+      "name": "Malla",
+      "ivs": 0,
+      "battleRanges": [
+        "31"
+      ]
+    },
+    {
+      "number": 32,
+      "class": "Cooltrainer",
+      "name": "Herton",
+      "ivs": 0,
+      "battleRanges": [
+        "32"
+      ]
+    },
+    {
+      "number": 33,
+      "class": "Fun Old Man",
+      "name": "Higson",
+      "ivs": 0,
+      "battleRanges": [
+        "33"
+      ]
+    },
+    {
+      "number": 34,
+      "class": "Fun Old Lady",
+      "name": "Allaw",
+      "ivs": 0,
+      "battleRanges": [
+        "34"
+      ]
+    },
+    {
+      "number": 35,
+      "class": "Glasses Man",
+      "name": "Delot",
+      "ivs": 0,
+      "battleRanges": [
+        "35"
+      ]
+    },
+    {
+      "number": 36,
+      "class": "Rich Boy",
+      "name": "Diek",
+      "ivs": 0,
+      "battleRanges": [
+        "36"
+      ]
+    },
+    {
+      "number": 37,
+      "class": "Roller Boy",
+      "name": "Warl",
+      "ivs": 0,
+      "battleRanges": [
+        "37"
+      ]
+    },
+    {
+      "number": 38,
+      "class": "Guy",
+      "name": "Rone",
+      "ivs": 0,
+      "battleRanges": [
+        "38"
+      ]
+    },
+    {
+      "number": 39,
+      "class": "Cooltrainer",
+      "name": "Neira",
+      "ivs": 0,
+      "battleRanges": [
+        "39"
+      ]
+    },
+    {
+      "number": 40,
+      "class": "Area Leader",
+      "name": "Trinch",
+      "ivs": 0,
+      "battleRanges": [
+        "40"
+      ]
+    },
+    {
+      "number": 41,
+      "class": "Researcher",
+      "name": "Vogi",
+      "ivs": 0,
+      "battleRanges": [
+        "41"
+      ]
+    },
+    {
+      "number": 42,
+      "class": "Glasses Man",
+      "name": "Terl",
+      "ivs": 0,
+      "battleRanges": [
+        "42"
+      ]
+    },
+    {
+      "number": 43,
+      "class": "Lady in Suit",
+      "name": "Sowa",
+      "ivs": 0,
+      "battleRanges": [
+        "43"
+      ]
+    },
+    {
+      "number": 44,
+      "class": "Fun Old Man",
+      "name": "Yudan",
+      "ivs": 0,
+      "battleRanges": [
+        "44"
+      ]
+    },
+    {
+      "number": 45,
+      "class": "Athlete",
+      "name": "Magro",
+      "ivs": 0,
+      "battleRanges": [
+        "45"
+      ]
+    },
+    {
+      "number": 46,
+      "class": "Roller Boy",
+      "name": "Toli",
+      "ivs": 0,
+      "battleRanges": [
+        "46"
+      ]
+    },
+    {
+      "number": 47,
+      "class": "Fun Old Lady",
+      "name": "Ropel",
+      "ivs": 0,
+      "battleRanges": [
+        "47"
+      ]
+    },
+    {
+      "number": 48,
+      "class": "Lady",
+      "name": "Vesey",
+      "ivs": 0,
+      "battleRanges": [
+        "48"
+      ]
+    },
+    {
+      "number": 49,
+      "class": "Teacher",
+      "name": "Kinson",
+      "ivs": 0,
+      "battleRanges": [
+        "49"
+      ]
+    },
+    {
+      "number": 50,
+      "class": "Area Leader",
+      "name": "Zentin",
+      "ivs": 0,
+      "battleRanges": [
+        "50"
+      ]
+    },
+    {
+      "number": 51,
+      "class": "Teacher",
+      "name": "Leine",
+      "ivs": 0,
+      "battleRanges": [
+        "51"
+      ]
+    },
+    {
+      "number": 52,
+      "class": "Glasses Man",
+      "name": "Laton",
+      "ivs": 0,
+      "battleRanges": [
+        "52"
+      ]
+    },
+    {
+      "number": 53,
+      "class": "Bodybuilder",
+      "name": "Besol",
+      "ivs": 0,
+      "battleRanges": [
+        "53"
+      ]
+    },
+    {
+      "number": 54,
+      "class": "Cooltrainer",
+      "name": "Boda",
+      "ivs": 0,
+      "battleRanges": [
+        "54"
+      ]
+    },
+    {
+      "number": 55,
+      "class": "Roller Boy",
+      "name": "Daga",
+      "ivs": 0,
+      "battleRanges": [
+        "55"
+      ]
+    },
+    {
+      "number": 56,
+      "class": "Guy",
+      "name": "Alten",
+      "ivs": 0,
+      "battleRanges": [
+        "56"
+      ]
+    },
+    {
+      "number": 57,
+      "class": "Lady in Suit",
+      "name": "Fial",
+      "ivs": 0,
+      "battleRanges": [
+        "57"
+      ]
+    },
+    {
+      "number": 58,
+      "class": "Fun Old Man",
+      "name": "Haken",
+      "ivs": 0,
+      "battleRanges": [
+        "58"
+      ]
+    },
+    {
+      "number": 59,
+      "class": "Lady",
+      "name": "Illa",
+      "ivs": 0,
+      "battleRanges": [
+        "59"
+      ]
+    },
+    {
+      "number": 60,
+      "class": "Area Leader",
+      "name": "Loko",
+      "ivs": 0,
+      "battleRanges": [
+        "60"
+      ]
+    },
+    {
+      "number": 61,
+      "class": "Roller Boy",
+      "name": "Gort",
+      "ivs": 0,
+      "battleRanges": [
+        "61"
+      ]
+    },
+    {
+      "number": 62,
+      "class": "Rich Boy",
+      "name": "Perd",
+      "ivs": 0,
+      "battleRanges": [
+        "62"
+      ]
+    },
+    {
+      "number": 63,
+      "class": "Researcher",
+      "name": "Mante",
+      "ivs": 0,
+      "battleRanges": [
+        "63"
+      ]
+    },
+    {
+      "number": 64,
+      "class": "Athlete",
+      "name": "Meton",
+      "ivs": 0,
+      "battleRanges": [
+        "64"
+      ]
+    },
+    {
+      "number": 65,
+      "class": "Fun Old Lady",
+      "name": "Lonno",
+      "ivs": 0,
+      "battleRanges": [
+        "65"
+      ]
+    },
+    {
+      "number": 66,
+      "class": "Lady in Suit",
+      "name": "Reme",
+      "ivs": 0,
+      "battleRanges": [
+        "66"
+      ]
+    },
+    {
+      "number": 67,
+      "class": "Cooltrainer",
+      "name": "Ferda",
+      "ivs": 0,
+      "battleRanges": [
+        "67"
+      ]
+    },
+    {
+      "number": 68,
+      "class": "Glasses Man",
+      "name": "Gilam",
+      "ivs": 0,
+      "battleRanges": [
+        "68"
+      ]
+    },
+    {
+      "number": 69,
+      "class": "Guy",
+      "name": "Odon",
+      "ivs": 0,
+      "battleRanges": [
+        "69"
+      ]
+    },
+    {
+      "number": 70,
+      "class": "Area Leader",
+      "name": "Athey",
+      "ivs": 0,
+      "battleRanges": [
+        "70"
+      ]
+    },
+    {
+      "number": 71,
+      "class": "Lady",
+      "name": "Caril",
+      "ivs": 0,
+      "battleRanges": [
+        "71"
+      ]
+    },
+    {
+      "number": 72,
+      "class": "Fun Old Man",
+      "name": "Chenek",
+      "ivs": 0,
+      "battleRanges": [
+        "72"
+      ]
+    },
+    {
+      "number": 73,
+      "class": "Roller Boy",
+      "name": "Tran",
+      "ivs": 0,
+      "battleRanges": [
+        "73"
+      ]
+    },
+    {
+      "number": 74,
+      "class": "Researcher",
+      "name": "Ribek",
+      "ivs": 0,
+      "battleRanges": [
+        "74"
+      ]
+    },
+    {
+      "number": 75,
+      "class": "Bodybuilder",
+      "name": "Vitalo",
+      "ivs": 0,
+      "battleRanges": [
+        "75"
+      ]
+    },
+    {
+      "number": 76,
+      "class": "Cooltrainer",
+      "name": "Daras",
+      "ivs": 0,
+      "battleRanges": [
+        "76"
+      ]
+    },
+    {
+      "number": 77,
+      "class": "Athlete",
+      "name": "Dian",
+      "ivs": 0,
+      "battleRanges": [
+        "77"
+      ]
+    },
+    {
+      "number": 78,
+      "class": "Glasses Man",
+      "name": "Hauf",
+      "ivs": 0,
+      "battleRanges": [
+        "78"
+      ]
+    },
+    {
+      "number": 79,
+      "class": "Fun Old Lady",
+      "name": "Naldo",
+      "ivs": 0,
+      "battleRanges": [
+        "79"
+      ]
+    },
+    {
+      "number": 80,
+      "class": "Area Leader",
+      "name": "Shobon",
+      "ivs": 0,
+      "battleRanges": [
+        "80"
+      ]
+    },
+    {
+      "number": 81,
+      "class": "Athlete",
+      "name": "Dobel",
+      "ivs": 0,
+      "battleRanges": [
+        "81"
+      ]
+    },
+    {
+      "number": 82,
+      "class": "Guy",
+      "name": "Keto",
+      "ivs": 0,
+      "battleRanges": [
+        "82"
+      ]
+    },
+    {
+      "number": 83,
+      "class": "Glasses Man",
+      "name": "Moit",
+      "ivs": 0,
+      "battleRanges": [
+        "83"
+      ]
+    },
+    {
+      "number": 84,
+      "class": "Fun Old Man",
+      "name": "Matso",
+      "ivs": 0,
+      "battleRanges": [
+        "84"
+      ]
+    },
+    {
+      "number": 85,
+      "class": "Bodybuilder",
+      "name": "Ritaco",
+      "ivs": 0,
+      "battleRanges": [
+        "85"
+      ]
+    },
+    {
+      "number": 86,
+      "class": "Lady",
+      "name": "Ristin",
+      "ivs": 0,
+      "battleRanges": [
+        "86"
+      ]
+    },
+    {
+      "number": 87,
+      "class": "Roller Boy",
+      "name": "Dorn",
+      "ivs": 0,
+      "battleRanges": [
+        "87"
+      ]
+    },
+    {
+      "number": 88,
+      "class": "Rich Boy",
+      "name": "Jurek",
+      "ivs": 0,
+      "battleRanges": [
+        "88"
+      ]
+    },
+    {
+      "number": 89,
+      "class": "Researcher",
+      "name": "Vonder",
+      "ivs": 0,
+      "battleRanges": [
+        "89"
+      ]
+    },
+    {
+      "number": 90,
+      "class": "Area Leader",
+      "name": "Norus",
+      "ivs": 0,
+      "battleRanges": [
+        "90"
+      ]
+    },
+    {
+      "number": 91,
+      "class": "Fun Old Man",
+      "name": "Tando",
+      "ivs": 0,
+      "battleRanges": [
+        "91"
+      ]
+    },
+    {
+      "number": 92,
+      "class": "Fun Old Lady",
+      "name": "Panne",
+      "ivs": 0,
+      "battleRanges": [
+        "92"
+      ]
+    },
+    {
+      "number": 93,
+      "class": "Rich Boy",
+      "name": "Quint",
+      "ivs": 0,
+      "battleRanges": [
+        "93"
+      ]
+    },
+    {
+      "number": 94,
+      "class": "Lady",
+      "name": "Kowly",
+      "ivs": 0,
+      "battleRanges": [
+        "94"
+      ]
+    },
+    {
+      "number": 95,
+      "class": "Athlete",
+      "name": "Crisom",
+      "ivs": 0,
+      "battleRanges": [
+        "95"
+      ]
+    },
+    {
+      "number": 96,
+      "class": "Athlete",
+      "name": "Raus",
+      "ivs": 0,
+      "battleRanges": [
+        "96"
+      ]
+    },
+    {
+      "number": 97,
+      "class": "Cooltrainer",
+      "name": "Trilo",
+      "ivs": 0,
+      "battleRanges": [
+        "97"
+      ]
+    },
+    {
+      "number": 98,
+      "class": "Cooltrainer",
+      "name": "Lomen",
+      "ivs": 0,
+      "battleRanges": [
+        "98"
+      ]
+    },
+    {
+      "number": 99,
+      "class": "Teacher",
+      "name": "Nacie",
+      "ivs": 0,
+      "battleRanges": [
+        "99"
+      ]
+    },
+    {
+      "number": 100,
+      "class": "Mt. BtlMaster",
+      "name": "Somek",
+      "ivs": 0,
+      "battleRanges": [
+        "100"
+      ]
+    }
+  ],
+  "colosseum-battle-singles": [
+    {
+      "number": 1,
+      "class": "Glasses Man",
+      "name": "Rood",
+      "ivs": 0,
+      "battleRanges": [
+        "1"
+      ]
+    },
+    {
+      "number": 2,
+      "class": "Athlete",
+      "name": "Sano",
+      "ivs": 0,
+      "battleRanges": [
+        "2"
+      ]
+    },
+    {
+      "number": 3,
+      "class": "Rider",
+      "name": "Eargle",
+      "ivs": 0,
+      "battleRanges": [
+        "3"
+      ]
+    },
+    {
+      "number": 4,
+      "class": "Lady",
+      "name": "Zoila",
+      "ivs": 0,
+      "battleRanges": [
+        "4"
+      ]
+    },
+    {
+      "number": 5,
+      "class": "Lady in Suit",
+      "name": "Secort",
+      "ivs": 0,
+      "battleRanges": [
+        "5"
+      ]
+    },
+    {
+      "number": 6,
+      "class": "Fun Old Man",
+      "name": "Grund",
+      "ivs": 0,
+      "battleRanges": [
+        "6"
+      ]
+    },
+    {
+      "number": 7,
+      "class": "Roller Boy",
+      "name": "Gars",
+      "ivs": 0,
+      "battleRanges": [
+        "7"
+      ]
+    },
+    {
+      "number": 8,
+      "class": "Hunter",
+      "name": "Ladin",
+      "ivs": 0,
+      "battleRanges": [
+        "8"
+      ]
+    },
+    {
+      "number": 9,
+      "class": "Bodybuilder",
+      "name": "Rapoz",
+      "ivs": 0,
+      "battleRanges": [
+        "9"
+      ]
+    },
+    {
+      "number": 10,
+      "class": "Area Leader",
+      "name": "Vannos",
+      "ivs": 0,
+      "battleRanges": [
+        "10"
+      ]
+    },
+    {
+      "number": 11,
+      "class": "Hunter",
+      "name": "Girod",
+      "ivs": 0,
+      "battleRanges": [
+        "11"
+      ]
+    },
+    {
+      "number": 12,
+      "class": "Rich Boy",
+      "name": "Denc",
+      "ivs": 0,
+      "battleRanges": [
+        "12"
+      ]
+    },
+    {
+      "number": 13,
+      "class": "Fun Old Lady",
+      "name": "Myog",
+      "ivs": 0,
+      "battleRanges": [
+        "13"
+      ]
+    },
+    {
+      "number": 14,
+      "class": "Bodybuilder",
+      "name": "Rogen",
+      "ivs": 0,
+      "battleRanges": [
+        "14"
+      ]
+    },
+    {
+      "number": 15,
+      "class": "Guy",
+      "name": "Ardo",
+      "ivs": 0,
+      "battleRanges": [
+        "15"
+      ]
+    },
+    {
+      "number": 16,
+      "class": "Teacher",
+      "name": "Feren",
+      "ivs": 0,
+      "battleRanges": [
+        "16"
+      ]
+    },
+    {
+      "number": 17,
+      "class": "Rider",
+      "name": "Maloo",
+      "ivs": 0,
+      "battleRanges": [
+        "17"
+      ]
+    },
+    {
+      "number": 18,
+      "class": "Researcher",
+      "name": "Doimo",
+      "ivs": 0,
+      "battleRanges": [
+        "18"
+      ]
+    },
+    {
+      "number": 19,
+      "class": "Cooltrainer",
+      "name": "Hebel",
+      "ivs": 0,
+      "battleRanges": [
+        "19"
+      ]
+    },
+    {
+      "number": 20,
+      "class": "Area Leader",
+      "name": "Erben",
+      "ivs": 0,
+      "battleRanges": [
+        "20"
+      ]
+    },
+    {
+      "number": 21,
+      "class": "St.Performer",
+      "name": "Sido",
+      "ivs": 0,
+      "battleRanges": [
+        "21"
+      ]
+    },
+    {
+      "number": 22,
+      "class": "Athlete",
+      "name": "Kimber",
+      "ivs": 0,
+      "battleRanges": [
+        "22"
+      ]
+    },
+    {
+      "number": 23,
+      "class": "Chaser",
+      "name": "Renfar",
+      "ivs": 0,
+      "battleRanges": [
+        "23"
+      ]
+    },
+    {
+      "number": 24,
+      "class": "Cooltrainer",
+      "name": "Rateis",
+      "ivs": 0,
+      "battleRanges": [
+        "24"
+      ]
+    },
+    {
+      "number": 25,
+      "class": "Fun Old Man",
+      "name": "Hoglo",
+      "ivs": 0,
+      "battleRanges": [
+        "25"
+      ]
+    },
+    {
+      "number": 26,
+      "class": "Lady in Suit",
+      "name": "Isette",
+      "ivs": 0,
+      "battleRanges": [
+        "26"
+      ]
+    },
+    {
+      "number": 27,
+      "class": "Bandana Guy",
+      "name": "Norel",
+      "ivs": 0,
+      "battleRanges": [
+        "27"
+      ]
+    },
+    {
+      "number": 28,
+      "class": "Lady",
+      "name": "Brena",
+      "ivs": 0,
+      "battleRanges": [
+        "28"
+      ]
+    },
+    {
+      "number": 29,
+      "class": "Worker",
+      "name": "Wagel",
+      "ivs": 0,
+      "battleRanges": [
+        "29"
+      ]
+    },
+    {
+      "number": 30,
+      "class": "Area Leader",
+      "name": "Leven",
+      "ivs": 0,
+      "battleRanges": [
+        "30"
+      ]
+    },
+    {
+      "number": 31,
+      "class": "Researcher",
+      "name": "Hildon",
+      "ivs": 0,
+      "battleRanges": [
+        "31"
+      ]
+    },
+    {
+      "number": 32,
+      "class": "Roller Boy",
+      "name": "Tary",
+      "ivs": 0,
+      "battleRanges": [
+        "32"
+      ]
+    },
+    {
+      "number": 33,
+      "class": "Hunter",
+      "name": "Sason",
+      "ivs": 0,
+      "battleRanges": [
+        "33"
+      ]
+    },
+    {
+      "number": 34,
+      "class": "Rich Boy",
+      "name": "Roex",
+      "ivs": 0,
+      "battleRanges": [
+        "34"
+      ]
+    },
+    {
+      "number": 35,
+      "class": "Athlete",
+      "name": "Deron",
+      "ivs": 0,
+      "battleRanges": [
+        "35"
+      ]
+    },
+    {
+      "number": 36,
+      "class": "Bodybuilder",
+      "name": "Tiana",
+      "ivs": 0,
+      "battleRanges": [
+        "36"
+      ]
+    },
+    {
+      "number": 37,
+      "class": "Cooltrainer",
+      "name": "Moril",
+      "ivs": 0,
+      "battleRanges": [
+        "37"
+      ]
+    },
+    {
+      "number": 38,
+      "class": "Fun Old Lady",
+      "name": "Grenay",
+      "ivs": 0,
+      "battleRanges": [
+        "38"
+      ]
+    },
+    {
+      "number": 39,
+      "class": "Rider",
+      "name": "Lohon",
+      "ivs": 0,
+      "battleRanges": [
+        "39"
+      ]
+    },
+    {
+      "number": 40,
+      "class": "Area Leader",
+      "name": "Slewis",
+      "ivs": 0,
+      "battleRanges": [
+        "40"
+      ]
+    },
+    {
+      "number": 41,
+      "class": "Fun Old Man",
+      "name": "Orsak",
+      "ivs": 0,
+      "battleRanges": [
+        "41"
+      ]
+    },
+    {
+      "number": 42,
+      "class": "Hunter",
+      "name": "Gohn",
+      "ivs": 0,
+      "battleRanges": [
+        "42"
+      ]
+    },
+    {
+      "number": 43,
+      "class": "Guy",
+      "name": "Deats",
+      "ivs": 0,
+      "battleRanges": [
+        "43"
+      ]
+    },
+    {
+      "number": 44,
+      "class": "Teacher",
+      "name": "Tash",
+      "ivs": 0,
+      "battleRanges": [
+        "44"
+      ]
+    },
+    {
+      "number": 45,
+      "class": "Glasses Man",
+      "name": "Acron",
+      "ivs": 0,
+      "battleRanges": [
+        "45"
+      ]
+    },
+    {
+      "number": 46,
+      "class": "Rider",
+      "name": "Kimery",
+      "ivs": 0,
+      "battleRanges": [
+        "46"
+      ]
+    },
+    {
+      "number": 47,
+      "class": "Bodybuilder",
+      "name": "Rawles",
+      "ivs": 0,
+      "battleRanges": [
+        "47"
+      ]
+    },
+    {
+      "number": 48,
+      "class": "Cooltrainer",
+      "name": "Rosno",
+      "ivs": 0,
+      "battleRanges": [
+        "48"
+      ]
+    },
+    {
+      "number": 49,
+      "class": "Chaser",
+      "name": "Mandev",
+      "ivs": 0,
+      "battleRanges": [
+        "49"
+      ]
+    },
+    {
+      "number": 50,
+      "class": "Area Leader",
+      "name": "Cryal",
+      "ivs": 0,
+      "battleRanges": [
+        "50"
+      ]
+    },
+    {
+      "number": 51,
+      "class": "Worker",
+      "name": "Demit",
+      "ivs": 0,
+      "battleRanges": [
+        "51"
+      ]
+    },
+    {
+      "number": 52,
+      "class": "St.Performer",
+      "name": "Lirel",
+      "ivs": 0,
+      "battleRanges": [
+        "52"
+      ]
+    },
+    {
+      "number": 53,
+      "class": "Bandana Guy",
+      "name": "Crag",
+      "ivs": 0,
+      "battleRanges": [
+        "53"
+      ]
+    },
+    {
+      "number": 54,
+      "class": "Lady",
+      "name": "Rene",
+      "ivs": 0,
+      "battleRanges": [
+        "54"
+      ]
+    },
+    {
+      "number": 55,
+      "class": "Athlete",
+      "name": "Gulor",
+      "ivs": 0,
+      "battleRanges": [
+        "55"
+      ]
+    },
+    {
+      "number": 56,
+      "class": "Lady in Suit",
+      "name": "Amell",
+      "ivs": 0,
+      "battleRanges": [
+        "56"
+      ]
+    },
+    {
+      "number": 57,
+      "class": "Rider",
+      "name": "Vium",
+      "ivs": 0,
+      "battleRanges": [
+        "57"
+      ]
+    },
+    {
+      "number": 58,
+      "class": "Roller Boy",
+      "name": "Bidix",
+      "ivs": 0,
+      "battleRanges": [
+        "58"
+      ]
+    },
+    {
+      "number": 59,
+      "class": "Researcher",
+      "name": "Nanot",
+      "ivs": 0,
+      "battleRanges": [
+        "59"
+      ]
+    },
+    {
+      "number": 60,
+      "class": "Area Leader",
+      "name": "Glydin",
+      "ivs": 0,
+      "battleRanges": [
+        "60"
+      ]
+    },
+    {
+      "number": 61,
+      "class": "Rich Boy",
+      "name": "Benit",
+      "ivs": 0,
+      "battleRanges": [
+        "61"
+      ]
+    },
+    {
+      "number": 62,
+      "class": "Bodybuilder",
+      "name": "Helmin",
+      "ivs": 0,
+      "battleRanges": [
+        "62"
+      ]
+    },
+    {
+      "number": 63,
+      "class": "Rider",
+      "name": "Rogin",
+      "ivs": 0,
+      "battleRanges": [
+        "63"
+      ]
+    },
+    {
+      "number": 64,
+      "class": "Hunter",
+      "name": "Cewan",
+      "ivs": 0,
+      "battleRanges": [
+        "64"
+      ]
+    },
+    {
+      "number": 65,
+      "class": "Fun Old Lady",
+      "name": "Perstin",
+      "ivs": 0,
+      "battleRanges": [
+        "65"
+      ]
+    },
+    {
+      "number": 66,
+      "class": "Cooltrainer",
+      "name": "Dazon",
+      "ivs": 0,
+      "battleRanges": [
+        "66"
+      ]
+    },
+    {
+      "number": 67,
+      "class": "Athlete",
+      "name": "Ziale",
+      "ivs": 0,
+      "battleRanges": [
+        "67"
+      ]
+    },
+    {
+      "number": 68,
+      "class": "Hunter",
+      "name": "Corvin",
+      "ivs": 0,
+      "battleRanges": [
+        "68"
+      ]
+    },
+    {
+      "number": 69,
+      "class": "Glasses Man",
+      "name": "Dunor",
+      "ivs": 0,
+      "battleRanges": [
+        "69"
+      ]
+    },
+    {
+      "number": 70,
+      "class": "Area Leader",
+      "name": "Vario",
+      "ivs": 0,
+      "battleRanges": [
+        "70"
+      ]
+    },
+    {
+      "number": 71,
+      "class": "Teacher",
+      "name": "Lisot",
+      "ivs": 0,
+      "battleRanges": [
+        "71"
+      ]
+    },
+    {
+      "number": 72,
+      "class": "Chaser",
+      "name": "Faul",
+      "ivs": 0,
+      "battleRanges": [
+        "72"
+      ]
+    },
+    {
+      "number": 73,
+      "class": "Cooltrainer",
+      "name": "Gilly",
+      "ivs": 0,
+      "battleRanges": [
+        "73"
+      ]
+    },
+    {
+      "number": 74,
+      "class": "Bodybuilder",
+      "name": "Chiod",
+      "ivs": 0,
+      "battleRanges": [
+        "74"
+      ]
+    },
+    {
+      "number": 75,
+      "class": "Guy",
+      "name": "Maton",
+      "ivs": 0,
+      "battleRanges": [
+        "75"
+      ]
+    },
+    {
+      "number": 76,
+      "class": "St.Performer",
+      "name": "Sirko",
+      "ivs": 0,
+      "battleRanges": [
+        "76"
+      ]
+    },
+    {
+      "number": 77,
+      "class": "Rider",
+      "name": "Zalla",
+      "ivs": 0,
+      "battleRanges": [
+        "77"
+      ]
+    },
+    {
+      "number": 78,
+      "class": "Worker",
+      "name": "Ordo",
+      "ivs": 0,
+      "battleRanges": [
+        "78"
+      ]
+    },
+    {
+      "number": 79,
+      "class": "Lady in Suit",
+      "name": "Jodin",
+      "ivs": 0,
+      "battleRanges": [
+        "79"
+      ]
+    },
+    {
+      "number": 80,
+      "class": "Area Leader",
+      "name": "Dessa",
+      "ivs": 0,
+      "battleRanges": [
+        "80"
+      ]
+    },
+    {
+      "number": 81,
+      "class": "Researcher",
+      "name": "Reman",
+      "ivs": 0,
+      "battleRanges": [
+        "81"
+      ]
+    },
+    {
+      "number": 82,
+      "class": "Bandana Guy",
+      "name": "Feek",
+      "ivs": 0,
+      "battleRanges": [
+        "82"
+      ]
+    },
+    {
+      "number": 83,
+      "class": "Roller Boy",
+      "name": "Aich",
+      "ivs": 0,
+      "battleRanges": [
+        "83"
+      ]
+    },
+    {
+      "number": 84,
+      "class": "Guy",
+      "name": "Wiler",
+      "ivs": 0,
+      "battleRanges": [
+        "84"
+      ]
+    },
+    {
+      "number": 85,
+      "class": "Athlete",
+      "name": "Menzon",
+      "ivs": 0,
+      "battleRanges": [
+        "85"
+      ]
+    },
+    {
+      "number": 86,
+      "class": "Fun Old Man",
+      "name": "Berlo",
+      "ivs": 0,
+      "battleRanges": [
+        "86"
+      ]
+    },
+    {
+      "number": 87,
+      "class": "Lady",
+      "name": "Sanol",
+      "ivs": 0,
+      "battleRanges": [
+        "87"
+      ]
+    },
+    {
+      "number": 88,
+      "class": "Rider",
+      "name": "Rebin",
+      "ivs": 0,
+      "battleRanges": [
+        "88"
+      ]
+    },
+    {
+      "number": 89,
+      "class": "Rich Boy",
+      "name": "Perc",
+      "ivs": 0,
+      "battleRanges": [
+        "89"
+      ]
+    },
+    {
+      "number": 90,
+      "class": "Area Leader",
+      "name": "Axley",
+      "ivs": 0,
+      "battleRanges": [
+        "90"
+      ]
+    },
+    {
+      "number": 91,
+      "class": "Cooltrainer",
+      "name": "Cruik",
+      "ivs": 0,
+      "battleRanges": [
+        "91"
+      ]
+    },
+    {
+      "number": 92,
+      "class": "Hunter",
+      "name": "Parel",
+      "ivs": 0,
+      "battleRanges": [
+        "92"
+      ]
+    },
+    {
+      "number": 93,
+      "class": "Athlete",
+      "name": "Nomol",
+      "ivs": 0,
+      "battleRanges": [
+        "93"
+      ]
+    },
+    {
+      "number": 94,
+      "class": "Fun Old Lady",
+      "name": "Desor",
+      "ivs": 0,
+      "battleRanges": [
+        "94"
+      ]
+    },
+    {
+      "number": 95,
+      "class": "Glasses Man",
+      "name": "Eldan",
+      "ivs": 0,
+      "battleRanges": [
+        "95"
+      ]
+    },
+    {
+      "number": 96,
+      "class": "Bodybuilder",
+      "name": "Eldora",
+      "ivs": 0,
+      "battleRanges": [
+        "96"
+      ]
+    },
+    {
+      "number": 97,
+      "class": "Hunter",
+      "name": "Lisan",
+      "ivs": 0,
+      "battleRanges": [
+        "97"
+      ]
+    },
+    {
+      "number": 98,
+      "class": "Teacher",
+      "name": "Massi",
+      "ivs": 0,
+      "battleRanges": [
+        "98"
+      ]
+    },
+    {
+      "number": 99,
+      "class": "Cooltrainer",
+      "name": "Tynan",
+      "ivs": 0,
+      "battleRanges": [
+        "99"
+      ]
+    },
+    {
+      "number": 100,
+      "class": "Mt. BtlMaster",
+      "name": "Infin",
+      "ivs": 0,
+      "battleRanges": [
+        "100"
+      ]
+    }
+  ],
+  "colosseum-battle-doubles": [
+    {
+      "number": 1,
+      "class": "Rich Boy",
+      "name": "Brot",
+      "ivs": 0,
+      "battleRanges": [
+        "1"
+      ]
+    },
+    {
+      "number": 2,
+      "class": "Teacher",
+      "name": "Keeda",
+      "ivs": 0,
+      "battleRanges": [
+        "2"
+      ]
+    },
+    {
+      "number": 3,
+      "class": "Guy",
+      "name": "Foler",
+      "ivs": 0,
+      "battleRanges": [
+        "3"
+      ]
+    },
+    {
+      "number": 4,
+      "class": "Athlete",
+      "name": "Pasha",
+      "ivs": 0,
+      "battleRanges": [
+        "4"
+      ]
+    },
+    {
+      "number": 5,
+      "class": "Glasses Man",
+      "name": "Bayel",
+      "ivs": 0,
+      "battleRanges": [
+        "5"
+      ]
+    },
+    {
+      "number": 6,
+      "class": "Rider",
+      "name": "Mayme",
+      "ivs": 0,
+      "battleRanges": [
+        "6"
+      ]
+    },
+    {
+      "number": 7,
+      "class": "Cooltrainer",
+      "name": "Shadd",
+      "ivs": 0,
+      "battleRanges": [
+        "7"
+      ]
+    },
+    {
+      "number": 8,
+      "class": "St.Performer",
+      "name": "Scherla",
+      "ivs": 0,
+      "battleRanges": [
+        "8"
+      ]
+    },
+    {
+      "number": 9,
+      "class": "Bandana Guy",
+      "name": "Delav",
+      "ivs": 0,
+      "battleRanges": [
+        "9"
+      ]
+    },
+    {
+      "number": 10,
+      "class": "Area Leader",
+      "name": "Elion",
+      "ivs": 0,
+      "battleRanges": [
+        "10"
+      ]
+    },
+    {
+      "number": 11,
+      "class": "Lady",
+      "name": "Nemi",
+      "ivs": 0,
+      "battleRanges": [
+        "11"
+      ]
+    },
+    {
+      "number": 12,
+      "class": "Fun Old Man",
+      "name": "Kelvor",
+      "ivs": 0,
+      "battleRanges": [
+        "12"
+      ]
+    },
+    {
+      "number": 13,
+      "class": "Athlete",
+      "name": "Varian",
+      "ivs": 0,
+      "battleRanges": [
+        "13"
+      ]
+    },
+    {
+      "number": 14,
+      "class": "Rider",
+      "name": "Wendo",
+      "ivs": 0,
+      "battleRanges": [
+        "14"
+      ]
+    },
+    {
+      "number": 15,
+      "class": "Fun Old Lady",
+      "name": "Karden",
+      "ivs": 0,
+      "battleRanges": [
+        "15"
+      ]
+    },
+    {
+      "number": 16,
+      "class": "Roller Boy",
+      "name": "Shail",
+      "ivs": 0,
+      "battleRanges": [
+        "16"
+      ]
+    },
+    {
+      "number": 17,
+      "class": "Hunter",
+      "name": "Basor",
+      "ivs": 0,
+      "battleRanges": [
+        "17"
+      ]
+    },
+    {
+      "number": 18,
+      "class": "Researcher",
+      "name": "Raburn",
+      "ivs": 0,
+      "battleRanges": [
+        "18"
+      ]
+    },
+    {
+      "number": 19,
+      "class": "Cooltrainer",
+      "name": "Veron",
+      "ivs": 0,
+      "battleRanges": [
+        "19"
+      ]
+    },
+    {
+      "number": 20,
+      "class": "Area Leader",
+      "name": "Altor",
+      "ivs": 0,
+      "battleRanges": [
+        "20"
+      ]
+    },
+    {
+      "number": 21,
+      "class": "Guy",
+      "name": "Klem",
+      "ivs": 0,
+      "battleRanges": [
+        "21"
+      ]
+    },
+    {
+      "number": 22,
+      "class": "Hunter",
+      "name": "Procio",
+      "ivs": 0,
+      "battleRanges": [
+        "22"
+      ]
+    },
+    {
+      "number": 23,
+      "class": "Athlete",
+      "name": "Dilasi",
+      "ivs": 0,
+      "battleRanges": [
+        "23"
+      ]
+    },
+    {
+      "number": 24,
+      "class": "Bodybuilder",
+      "name": "Mengel",
+      "ivs": 0,
+      "battleRanges": [
+        "24"
+      ]
+    },
+    {
+      "number": 25,
+      "class": "Chaser",
+      "name": "Klame",
+      "ivs": 0,
+      "battleRanges": [
+        "25"
+      ]
+    },
+    {
+      "number": 26,
+      "class": "St.Performer",
+      "name": "Lonen",
+      "ivs": 0,
+      "battleRanges": [
+        "26"
+      ]
+    },
+    {
+      "number": 27,
+      "class": "Glasses Man",
+      "name": "Omat",
+      "ivs": 0,
+      "battleRanges": [
+        "27"
+      ]
+    },
+    {
+      "number": 28,
+      "class": "Rider",
+      "name": "Stefet",
+      "ivs": 0,
+      "battleRanges": [
+        "28"
+      ]
+    },
+    {
+      "number": 29,
+      "class": "Cooltrainer",
+      "name": "Dillot",
+      "ivs": 0,
+      "battleRanges": [
+        "29"
+      ]
+    },
+    {
+      "number": 30,
+      "class": "Area Leader",
+      "name": "Kucher",
+      "ivs": 0,
+      "battleRanges": [
+        "30"
+      ]
+    },
+    {
+      "number": 31,
+      "class": "Bandana Guy",
+      "name": "Omak",
+      "ivs": 0,
+      "battleRanges": [
+        "31"
+      ]
+    },
+    {
+      "number": 32,
+      "class": "Bodybuilder",
+      "name": "Lunda",
+      "ivs": 0,
+      "battleRanges": [
+        "32"
+      ]
+    },
+    {
+      "number": 33,
+      "class": "Rich Boy",
+      "name": "Tark",
+      "ivs": 0,
+      "battleRanges": [
+        "33"
+      ]
+    },
+    {
+      "number": 34,
+      "class": "Teacher",
+      "name": "Drada",
+      "ivs": 0,
+      "battleRanges": [
+        "34"
+      ]
+    },
+    {
+      "number": 35,
+      "class": "Fun Old Man",
+      "name": "Aikon",
+      "ivs": 0,
+      "battleRanges": [
+        "35"
+      ]
+    },
+    {
+      "number": 36,
+      "class": "Rider",
+      "name": "Veston",
+      "ivs": 0,
+      "battleRanges": [
+        "36"
+      ]
+    },
+    {
+      "number": 37,
+      "class": "Lady",
+      "name": "Deasy",
+      "ivs": 0,
+      "battleRanges": [
+        "37"
+      ]
+    },
+    {
+      "number": 38,
+      "class": "Worker",
+      "name": "Kebile",
+      "ivs": 0,
+      "battleRanges": [
+        "38"
+      ]
+    },
+    {
+      "number": 39,
+      "class": "Researcher",
+      "name": "Doton",
+      "ivs": 0,
+      "battleRanges": [
+        "39"
+      ]
+    },
+    {
+      "number": 40,
+      "class": "Area Leader",
+      "name": "Vernice",
+      "ivs": 0,
+      "battleRanges": [
+        "40"
+      ]
+    },
+    {
+      "number": 41,
+      "class": "Cooltrainer",
+      "name": "Zoel",
+      "ivs": 0,
+      "battleRanges": [
+        "41"
+      ]
+    },
+    {
+      "number": 42,
+      "class": "Athlete",
+      "name": "Latrin",
+      "ivs": 0,
+      "battleRanges": [
+        "42"
+      ]
+    },
+    {
+      "number": 43,
+      "class": "Fun Old Lady",
+      "name": "Eskola",
+      "ivs": 0,
+      "battleRanges": [
+        "43"
+      ]
+    },
+    {
+      "number": 44,
+      "class": "Roller Boy",
+      "name": "Tobit",
+      "ivs": 0,
+      "battleRanges": [
+        "44"
+      ]
+    },
+    {
+      "number": 45,
+      "class": "Hunter",
+      "name": "Holso",
+      "ivs": 0,
+      "battleRanges": [
+        "45"
+      ]
+    },
+    {
+      "number": 46,
+      "class": "Bodybuilder",
+      "name": "Bergin",
+      "ivs": 0,
+      "battleRanges": [
+        "46"
+      ]
+    },
+    {
+      "number": 47,
+      "class": "Worker",
+      "name": "Hubor",
+      "ivs": 0,
+      "battleRanges": [
+        "47"
+      ]
+    },
+    {
+      "number": 48,
+      "class": "Chaser",
+      "name": "Bano",
+      "ivs": 0,
+      "battleRanges": [
+        "48"
+      ]
+    },
+    {
+      "number": 49,
+      "class": "Guy",
+      "name": "Votil",
+      "ivs": 0,
+      "battleRanges": [
+        "49"
+      ]
+    },
+    {
+      "number": 50,
+      "class": "Area Leader",
+      "name": "Konaik",
+      "ivs": 0,
+      "battleRanges": [
+        "50"
+      ]
+    },
+    {
+      "number": 51,
+      "class": "Cooltrainer",
+      "name": "Berki",
+      "ivs": 0,
+      "battleRanges": [
+        "51"
+      ]
+    },
+    {
+      "number": 52,
+      "class": "Rider",
+      "name": "Laret",
+      "ivs": 0,
+      "battleRanges": [
+        "52"
+      ]
+    },
+    {
+      "number": 53,
+      "class": "Glasses Man",
+      "name": "Lopar",
+      "ivs": 0,
+      "battleRanges": [
+        "53"
+      ]
+    },
+    {
+      "number": 54,
+      "class": "Hunter",
+      "name": "Alene",
+      "ivs": 0,
+      "battleRanges": [
+        "54"
+      ]
+    },
+    {
+      "number": 55,
+      "class": "Bodybuilder",
+      "name": "Banber",
+      "ivs": 0,
+      "battleRanges": [
+        "55"
+      ]
+    },
+    {
+      "number": 56,
+      "class": "Rich Boy",
+      "name": "Basto",
+      "ivs": 0,
+      "battleRanges": [
+        "56"
+      ]
+    },
+    {
+      "number": 57,
+      "class": "St.Performer",
+      "name": "Mino",
+      "ivs": 0,
+      "battleRanges": [
+        "57"
+      ]
+    },
+    {
+      "number": 58,
+      "class": "Bandana Guy",
+      "name": "Kitel",
+      "ivs": 0,
+      "battleRanges": [
+        "58"
+      ]
+    },
+    {
+      "number": 59,
+      "class": "Worker",
+      "name": "Ronix",
+      "ivs": 0,
+      "battleRanges": [
+        "59"
+      ]
+    },
+    {
+      "number": 60,
+      "class": "Area Leader",
+      "name": "Atrice",
+      "ivs": 0,
+      "battleRanges": [
+        "60"
+      ]
+    },
+    {
+      "number": 61,
+      "class": "Researcher",
+      "name": "Platen",
+      "ivs": 0,
+      "battleRanges": [
+        "61"
+      ]
+    },
+    {
+      "number": 62,
+      "class": "Lady",
+      "name": "Talmen",
+      "ivs": 0,
+      "battleRanges": [
+        "62"
+      ]
+    },
+    {
+      "number": 63,
+      "class": "Rider",
+      "name": "Trank",
+      "ivs": 0,
+      "battleRanges": [
+        "63"
+      ]
+    },
+    {
+      "number": 64,
+      "class": "Teacher",
+      "name": "Larial",
+      "ivs": 0,
+      "battleRanges": [
+        "64"
+      ]
+    },
+    {
+      "number": 65,
+      "class": "Hunter",
+      "name": "Arek",
+      "ivs": 0,
+      "battleRanges": [
+        "65"
+      ]
+    },
+    {
+      "number": 66,
+      "class": "Athlete",
+      "name": "Mazzel",
+      "ivs": 0,
+      "battleRanges": [
+        "66"
+      ]
+    },
+    {
+      "number": 67,
+      "class": "Bodybuilder",
+      "name": "Velis",
+      "ivs": 0,
+      "battleRanges": [
+        "67"
+      ]
+    },
+    {
+      "number": 68,
+      "class": "Fun Old Man",
+      "name": "Wogort",
+      "ivs": 0,
+      "battleRanges": [
+        "68"
+      ]
+    },
+    {
+      "number": 69,
+      "class": "Cooltrainer",
+      "name": "Detta",
+      "ivs": 0,
+      "battleRanges": [
+        "69"
+      ]
+    },
+    {
+      "number": 70,
+      "class": "Area Leader",
+      "name": "Langot",
+      "ivs": 0,
+      "battleRanges": [
+        "70"
+      ]
+    },
+    {
+      "number": 71,
+      "class": "Roller Boy",
+      "name": "Hites",
+      "ivs": 0,
+      "battleRanges": [
+        "71"
+      ]
+    },
+    {
+      "number": 72,
+      "class": "Fun Old Lady",
+      "name": "Gohon",
+      "ivs": 0,
+      "battleRanges": [
+        "72"
+      ]
+    },
+    {
+      "number": 73,
+      "class": "Bodybuilder",
+      "name": "Lazko",
+      "ivs": 0,
+      "battleRanges": [
+        "73"
+      ]
+    },
+    {
+      "number": 74,
+      "class": "Rich Boy",
+      "name": "Puros",
+      "ivs": 0,
+      "battleRanges": [
+        "74"
+      ]
+    },
+    {
+      "number": 75,
+      "class": "Chaser",
+      "name": "Krigon",
+      "ivs": 0,
+      "battleRanges": [
+        "75"
+      ]
+    },
+    {
+      "number": 76,
+      "class": "Hunter",
+      "name": "Zelmo",
+      "ivs": 0,
+      "battleRanges": [
+        "76"
+      ]
+    },
+    {
+      "number": 77,
+      "class": "Worker",
+      "name": "Chean",
+      "ivs": 0,
+      "battleRanges": [
+        "77"
+      ]
+    },
+    {
+      "number": 78,
+      "class": "Bandana Guy",
+      "name": "Crace",
+      "ivs": 0,
+      "battleRanges": [
+        "78"
+      ]
+    },
+    {
+      "number": 79,
+      "class": "Rider",
+      "name": "Jorner",
+      "ivs": 0,
+      "battleRanges": [
+        "79"
+      ]
+    },
+    {
+      "number": 80,
+      "class": "Area Leader",
+      "name": "Mortac",
+      "ivs": 0,
+      "battleRanges": [
+        "80"
+      ]
+    },
+    {
+      "number": 81,
+      "class": "Athlete",
+      "name": "Gatik",
+      "ivs": 0,
+      "battleRanges": [
+        "81"
+      ]
+    },
+    {
+      "number": 82,
+      "class": "Lady",
+      "name": "Kylet",
+      "ivs": 0,
+      "battleRanges": [
+        "82"
+      ]
+    },
+    {
+      "number": 83,
+      "class": "Researcher",
+      "name": "Durel",
+      "ivs": 0,
+      "battleRanges": [
+        "83"
+      ]
+    },
+    {
+      "number": 84,
+      "class": "St.Performer",
+      "name": "Volivia",
+      "ivs": 0,
+      "battleRanges": [
+        "84"
+      ]
+    },
+    {
+      "number": 85,
+      "class": "Hunter",
+      "name": "Spez",
+      "ivs": 0,
+      "battleRanges": [
+        "85"
+      ]
+    },
+    {
+      "number": 86,
+      "class": "Guy",
+      "name": "Botken",
+      "ivs": 0,
+      "battleRanges": [
+        "86"
+      ]
+    },
+    {
+      "number": 87,
+      "class": "Bodybuilder",
+      "name": "Felmon",
+      "ivs": 0,
+      "battleRanges": [
+        "87"
+      ]
+    },
+    {
+      "number": 88,
+      "class": "Hunter",
+      "name": "Bolza",
+      "ivs": 0,
+      "battleRanges": [
+        "88"
+      ]
+    },
+    {
+      "number": 89,
+      "class": "Rider",
+      "name": "Finson",
+      "ivs": 0,
+      "battleRanges": [
+        "89"
+      ]
+    },
+    {
+      "number": 90,
+      "class": "Area Leader",
+      "name": "Neblek",
+      "ivs": 0,
+      "battleRanges": [
+        "90"
+      ]
+    },
+    {
+      "number": 91,
+      "class": "Glasses Man",
+      "name": "Boren",
+      "ivs": 0,
+      "battleRanges": [
+        "91"
+      ]
+    },
+    {
+      "number": 92,
+      "class": "Fun Old Lady",
+      "name": "Flegal",
+      "ivs": 0,
+      "battleRanges": [
+        "92"
+      ]
+    },
+    {
+      "number": 93,
+      "class": "Athlete",
+      "name": "Aleja",
+      "ivs": 0,
+      "battleRanges": [
+        "93"
+      ]
+    },
+    {
+      "number": 94,
+      "class": "Teacher",
+      "name": "Elnor",
+      "ivs": 0,
+      "battleRanges": [
+        "94"
+      ]
+    },
+    {
+      "number": 95,
+      "class": "Fun Old Man",
+      "name": "Freyer",
+      "ivs": 0,
+      "battleRanges": [
+        "95"
+      ]
+    },
+    {
+      "number": 96,
+      "class": "Cooltrainer",
+      "name": "Atilo",
+      "ivs": 0,
+      "battleRanges": [
+        "96"
+      ]
+    },
+    {
+      "number": 97,
+      "class": "Cooltrainer",
+      "name": "Desid",
+      "ivs": 0,
+      "battleRanges": [
+        "97"
+      ]
+    },
+    {
+      "number": 98,
+      "class": "Roller Boy",
+      "name": "Polet",
+      "ivs": 0,
+      "battleRanges": [
+        "98"
+      ]
+    },
+    {
+      "number": 99,
+      "class": "Bodybuilder",
+      "name": "Foalck",
+      "ivs": 0,
+      "battleRanges": [
+        "99"
+      ]
+    },
+    {
+      "number": 100,
+      "class": "Mt. BtlMaster",
+      "name": "Inity",
+      "ivs": 0,
+      "battleRanges": [
+        "100"
+      ]
+    }
+  ],
+  "xd": [
+    {
+      "number": 1,
+      "class": "Beauty",
+      "name": "Miru",
+      "ivs": 0,
+      "battleRanges": [
+        "1"
+      ]
+    },
+    {
+      "number": 2,
+      "class": "Casual Dude",
+      "name": "Cridel",
+      "ivs": 0,
+      "battleRanges": [
+        "2"
+      ]
+    },
+    {
+      "number": 3,
+      "class": "Cooltrainer",
+      "name": "Bardo",
+      "ivs": 0,
+      "battleRanges": [
+        "3"
+      ]
+    },
+    {
+      "number": 4,
+      "class": "Navigator",
+      "name": "Robell",
+      "ivs": 0,
+      "battleRanges": [
+        "4"
+      ]
+    },
+    {
+      "number": 5,
+      "class": "Fun Old Man",
+      "name": "Kabin",
+      "ivs": 0,
+      "battleRanges": [
+        "5"
+      ]
+    },
+    {
+      "number": 6,
+      "class": "Matron",
+      "name": "Ezella",
+      "ivs": 0,
+      "battleRanges": [
+        "6"
+      ]
+    },
+    {
+      "number": 7,
+      "class": "Casual Dude",
+      "name": "Horbit",
+      "ivs": 0,
+      "battleRanges": [
+        "7"
+      ]
+    },
+    {
+      "number": 8,
+      "class": "Beauty",
+      "name": "Eloff",
+      "ivs": 0,
+      "battleRanges": [
+        "8"
+      ]
+    },
+    {
+      "number": 9,
+      "class": "Cooltrainer",
+      "name": "Dibsin",
+      "ivs": 0,
+      "battleRanges": [
+        "9"
+      ]
+    },
+    {
+      "number": 10,
+      "class": "Area Leader",
+      "name": "Vander",
+      "ivs": 0,
+      "battleRanges": [
+        "10"
+      ]
+    },
+    {
+      "number": 11,
+      "class": "Chaser",
+      "name": "Dabil",
+      "ivs": 0,
+      "battleRanges": [
+        "11"
+      ]
+    },
+    {
+      "number": 12,
+      "class": "Chaser",
+      "name": "Cidlor",
+      "ivs": 0,
+      "battleRanges": [
+        "12"
+      ]
+    },
+    {
+      "number": 13,
+      "class": "Sailor",
+      "name": "Gratin",
+      "ivs": 0,
+      "battleRanges": [
+        "13"
+      ]
+    },
+    {
+      "number": 14,
+      "class": "Researcher",
+      "name": "Hardig",
+      "ivs": 0,
+      "battleRanges": [
+        "14"
+      ]
+    },
+    {
+      "number": 15,
+      "class": "Hunter",
+      "name": "Goling",
+      "ivs": 0,
+      "battleRanges": [
+        "15"
+      ]
+    },
+    {
+      "number": 16,
+      "class": "Chaser",
+      "name": "Jeol",
+      "ivs": 0,
+      "battleRanges": [
+        "16"
+      ]
+    },
+    {
+      "number": 17,
+      "class": "Rider",
+      "name": "Echart",
+      "ivs": 0,
+      "battleRanges": [
+        "17"
+      ]
+    },
+    {
+      "number": 18,
+      "class": "Bodybuilder",
+      "name": "Delf",
+      "ivs": 0,
+      "battleRanges": [
+        "18"
+      ]
+    },
+    {
+      "number": 19,
+      "class": "Bodybuilder",
+      "name": "Dolam",
+      "ivs": 0,
+      "battleRanges": [
+        "19"
+      ]
+    },
+    {
+      "number": 20,
+      "class": "Area Leader",
+      "name": "Eldof",
+      "ivs": 0,
+      "battleRanges": [
+        "20"
+      ]
+    },
+    {
+      "number": 21,
+      "class": "Sailor",
+      "name": "Grestly",
+      "ivs": 0,
+      "battleRanges": [
+        "21"
+      ]
+    },
+    {
+      "number": 22,
+      "class": "Navigator",
+      "name": "Folop",
+      "ivs": 0,
+      "battleRanges": [
+        "22"
+      ]
+    },
+    {
+      "number": 23,
+      "class": "Casual Dude",
+      "name": "Kwane",
+      "ivs": 0,
+      "battleRanges": [
+        "23"
+      ]
+    },
+    {
+      "number": 24,
+      "class": "Casual Guy",
+      "name": "Napol",
+      "ivs": 0,
+      "battleRanges": [
+        "24"
+      ]
+    },
+    {
+      "number": 25,
+      "class": "Chaser",
+      "name": "Koiyt",
+      "ivs": 0,
+      "battleRanges": [
+        "25"
+      ]
+    },
+    {
+      "number": 26,
+      "class": "Rider",
+      "name": "Atill",
+      "ivs": 0,
+      "battleRanges": [
+        "26"
+      ]
+    },
+    {
+      "number": 27,
+      "class": "Curmudgeon",
+      "name": "Metson",
+      "ivs": 0,
+      "battleRanges": [
+        "27"
+      ]
+    },
+    {
+      "number": 28,
+      "class": "Bodybuilder",
+      "name": "Jespon",
+      "ivs": 0,
+      "battleRanges": [
+        "28"
+      ]
+    },
+    {
+      "number": 29,
+      "class": "Cooltrainer",
+      "name": "Mopar",
+      "ivs": 0,
+      "battleRanges": [
+        "29"
+      ]
+    },
+    {
+      "number": 30,
+      "class": "Area Leader",
+      "name": "Taria",
+      "ivs": 0,
+      "battleRanges": [
+        "30"
+      ]
+    },
+    {
+      "number": 31,
+      "class": "Chaser",
+      "name": "Atles",
+      "ivs": 0,
+      "battleRanges": [
+        "31"
+      ]
+    },
+    {
+      "number": 32,
+      "class": "Beauty",
+      "name": "Niven",
+      "ivs": 0,
+      "battleRanges": [
+        "32"
+      ]
+    },
+    {
+      "number": 33,
+      "class": "Chaser",
+      "name": "Fopaw",
+      "ivs": 0,
+      "battleRanges": [
+        "33"
+      ]
+    },
+    {
+      "number": 34,
+      "class": "Matron",
+      "name": "Petil",
+      "ivs": 0,
+      "battleRanges": [
+        "34"
+      ]
+    },
+    {
+      "number": 35,
+      "class": "Beauty",
+      "name": "Nevah",
+      "ivs": 0,
+      "battleRanges": [
+        "35"
+      ]
+    },
+    {
+      "number": 36,
+      "class": "Bodybuilder",
+      "name": "Selor",
+      "ivs": 0,
+      "battleRanges": [
+        "36"
+      ]
+    },
+    {
+      "number": 37,
+      "class": "Supertrainer",
+      "name": "Pixen",
+      "ivs": 0,
+      "battleRanges": [
+        "37"
+      ]
+    },
+    {
+      "number": 38,
+      "class": "Newscaster",
+      "name": "Edin",
+      "ivs": 0,
+      "battleRanges": [
+        "38"
+      ]
+    },
+    {
+      "number": 39,
+      "class": "Cooltrainer",
+      "name": "Roze",
+      "ivs": 0,
+      "battleRanges": [
+        "39"
+      ]
+    },
+    {
+      "number": 40,
+      "class": "Area Leader",
+      "name": "Boyden",
+      "ivs": 0,
+      "battleRanges": [
+        "40"
+      ]
+    },
+    {
+      "number": 41,
+      "class": "Researcher",
+      "name": "Hombol",
+      "ivs": 0,
+      "battleRanges": [
+        "41"
+      ]
+    },
+    {
+      "number": 42,
+      "class": "Bodybuilder",
+      "name": "Jiler",
+      "ivs": 0,
+      "battleRanges": [
+        "42"
+      ]
+    },
+    {
+      "number": 43,
+      "class": "Navigator",
+      "name": "Carlon",
+      "ivs": 0,
+      "battleRanges": [
+        "43"
+      ]
+    },
+    {
+      "number": 44,
+      "class": "Chaser",
+      "name": "Kuxor",
+      "ivs": 0,
+      "battleRanges": [
+        "44"
+      ]
+    },
+    {
+      "number": 45,
+      "class": "Hunter",
+      "name": "Lesk",
+      "ivs": 0,
+      "battleRanges": [
+        "45"
+      ]
+    },
+    {
+      "number": 46,
+      "class": "Rider",
+      "name": "Mobid",
+      "ivs": 0,
+      "battleRanges": [
+        "46"
+      ]
+    },
+    {
+      "number": 47,
+      "class": "Chaser",
+      "name": "Blist",
+      "ivs": 0,
+      "battleRanges": [
+        "47"
+      ]
+    },
+    {
+      "number": 48,
+      "class": "Sailor",
+      "name": "Knook",
+      "ivs": 0,
+      "battleRanges": [
+        "48"
+      ]
+    },
+    {
+      "number": 49,
+      "class": "Casual Dude",
+      "name": "Burdon",
+      "ivs": 0,
+      "battleRanges": [
+        "49"
+      ]
+    },
+    {
+      "number": 50,
+      "class": "Area Leader",
+      "name": "Calus",
+      "ivs": 0,
+      "battleRanges": [
+        "50"
+      ]
+    },
+    {
+      "number": 51,
+      "class": "Fun Old Man",
+      "name": "Doost",
+      "ivs": 0,
+      "battleRanges": [
+        "51"
+      ]
+    },
+    {
+      "number": 52,
+      "class": "Curmudgeon",
+      "name": "Jimer",
+      "ivs": 0,
+      "battleRanges": [
+        "52"
+      ]
+    },
+    {
+      "number": 53,
+      "class": "Matron",
+      "name": "Crex",
+      "ivs": 0,
+      "battleRanges": [
+        "53"
+      ]
+    },
+    {
+      "number": 54,
+      "class": "Chaser",
+      "name": "Feeply",
+      "ivs": 0,
+      "battleRanges": [
+        "54"
+      ]
+    },
+    {
+      "number": 55,
+      "class": "Rider",
+      "name": "Jacen",
+      "ivs": 0,
+      "battleRanges": [
+        "55"
+      ]
+    },
+    {
+      "number": 56,
+      "class": "Newscaster",
+      "name": "Dibel",
+      "ivs": 0,
+      "battleRanges": [
+        "56"
+      ]
+    },
+    {
+      "number": 57,
+      "class": "Bodybuilder",
+      "name": "Kevy",
+      "ivs": 0,
+      "battleRanges": [
+        "57"
+      ]
+    },
+    {
+      "number": 58,
+      "class": "Cooltrainer",
+      "name": "Gabsen",
+      "ivs": 0,
+      "battleRanges": [
+        "58"
+      ]
+    },
+    {
+      "number": 59,
+      "class": "Cooltrainer",
+      "name": "Degin",
+      "ivs": 0,
+      "battleRanges": [
+        "59"
+      ]
+    },
+    {
+      "number": 60,
+      "class": "Area Leader",
+      "name": "Hampy",
+      "ivs": 0,
+      "battleRanges": [
+        "60"
+      ]
+    },
+    {
+      "number": 61,
+      "class": "Chaser",
+      "name": "Melin",
+      "ivs": 0,
+      "battleRanges": [
+        "61"
+      ]
+    },
+    {
+      "number": 62,
+      "class": "Hunter",
+      "name": "Gibson",
+      "ivs": 0,
+      "battleRanges": [
+        "62"
+      ]
+    },
+    {
+      "number": 63,
+      "class": "Newscaster",
+      "name": "Idlon",
+      "ivs": 0,
+      "battleRanges": [
+        "63"
+      ]
+    },
+    {
+      "number": 64,
+      "class": "Chaser",
+      "name": "Hobol",
+      "ivs": 0,
+      "battleRanges": [
+        "64"
+      ]
+    },
+    {
+      "number": 65,
+      "class": "Chaser",
+      "name": "Keller",
+      "ivs": 0,
+      "battleRanges": [
+        "65"
+      ]
+    },
+    {
+      "number": 66,
+      "class": "Fun Old Man",
+      "name": "Ebilo",
+      "ivs": 0,
+      "battleRanges": [
+        "66"
+      ]
+    },
+    {
+      "number": 67,
+      "class": "Matron",
+      "name": "Tulon",
+      "ivs": 0,
+      "battleRanges": [
+        "67"
+      ]
+    },
+    {
+      "number": 68,
+      "class": "Curmudgeon",
+      "name": "Okor",
+      "ivs": 0,
+      "battleRanges": [
+        "68"
+      ]
+    },
+    {
+      "number": 69,
+      "class": "Casual Guy",
+      "name": "Ebzor",
+      "ivs": 0,
+      "battleRanges": [
+        "69"
+      ]
+    },
+    {
+      "number": 70,
+      "class": "Area Leader",
+      "name": "Nocon",
+      "ivs": 0,
+      "battleRanges": [
+        "70"
+      ]
+    },
+    {
+      "number": 71,
+      "class": "Sailor",
+      "name": "Ordes",
+      "ivs": 0,
+      "battleRanges": [
+        "71"
+      ]
+    },
+    {
+      "number": 72,
+      "class": "Navigator",
+      "name": "Ovun",
+      "ivs": 0,
+      "battleRanges": [
+        "72"
+      ]
+    },
+    {
+      "number": 73,
+      "class": "Bodybuilder",
+      "name": "Adeson",
+      "ivs": 0,
+      "battleRanges": [
+        "73"
+      ]
+    },
+    {
+      "number": 74,
+      "class": "Bodybuilder",
+      "name": "Robit",
+      "ivs": 0,
+      "battleRanges": [
+        "74"
+      ]
+    },
+    {
+      "number": 75,
+      "class": "Cooltrainer",
+      "name": "Noxon",
+      "ivs": 0,
+      "battleRanges": [
+        "75"
+      ]
+    },
+    {
+      "number": 76,
+      "class": "Worker",
+      "name": "Releo",
+      "ivs": 0,
+      "battleRanges": [
+        "76"
+      ]
+    },
+    {
+      "number": 77,
+      "class": "Casual Dude",
+      "name": "Cark",
+      "ivs": 0,
+      "battleRanges": [
+        "77"
+      ]
+    },
+    {
+      "number": 78,
+      "class": "Beauty",
+      "name": "Minot",
+      "ivs": 0,
+      "battleRanges": [
+        "78"
+      ]
+    },
+    {
+      "number": 79,
+      "class": "Cooltrainer",
+      "name": "Lask",
+      "ivs": 0,
+      "battleRanges": [
+        "79"
+      ]
+    },
+    {
+      "number": 80,
+      "class": "Area Leader",
+      "name": "Naday",
+      "ivs": 0,
+      "battleRanges": [
+        "80"
+      ]
+    },
+    {
+      "number": 81,
+      "class": "Sailor",
+      "name": "Hols",
+      "ivs": 0,
+      "battleRanges": [
+        "81"
+      ]
+    },
+    {
+      "number": 82,
+      "class": "Bodybuilder",
+      "name": "Albah",
+      "ivs": 0,
+      "battleRanges": [
+        "82"
+      ]
+    },
+    {
+      "number": 83,
+      "class": "Casual Guy",
+      "name": "Ginner",
+      "ivs": 0,
+      "battleRanges": [
+        "83"
+      ]
+    },
+    {
+      "number": 84,
+      "class": "Rider",
+      "name": "Copin",
+      "ivs": 0,
+      "battleRanges": [
+        "84"
+      ]
+    },
+    {
+      "number": 85,
+      "class": "Bodybuilder",
+      "name": "Koren",
+      "ivs": 0,
+      "battleRanges": [
+        "85"
+      ]
+    },
+    {
+      "number": 86,
+      "class": "Casual Dude",
+      "name": "Laks",
+      "ivs": 0,
+      "battleRanges": [
+        "86"
+      ]
+    },
+    {
+      "number": 87,
+      "class": "Chaser",
+      "name": "Kippen",
+      "ivs": 0,
+      "battleRanges": [
+        "87"
+      ]
+    },
+    {
+      "number": 88,
+      "class": "Hunter",
+      "name": "Nasom",
+      "ivs": 0,
+      "battleRanges": [
+        "88"
+      ]
+    },
+    {
+      "number": 89,
+      "class": "Supertrainer",
+      "name": "Nimblis",
+      "ivs": 0,
+      "battleRanges": [
+        "89"
+      ]
+    },
+    {
+      "number": 90,
+      "class": "Area Leader",
+      "name": "Ragen",
+      "ivs": 0,
+      "battleRanges": [
+        "90"
+      ]
+    },
+    {
+      "number": 91,
+      "class": "Researcher",
+      "name": "Newin",
+      "ivs": 0,
+      "battleRanges": [
+        "91"
+      ]
+    },
+    {
+      "number": 92,
+      "class": "Fun Old Man",
+      "name": "Roben",
+      "ivs": 0,
+      "battleRanges": [
+        "92"
+      ]
+    },
+    {
+      "number": 93,
+      "class": "Chaser",
+      "name": "Rillian",
+      "ivs": 0,
+      "battleRanges": [
+        "93"
+      ]
+    },
+    {
+      "number": 94,
+      "class": "Bodybuilder",
+      "name": "Solog",
+      "ivs": 0,
+      "battleRanges": [
+        "94"
+      ]
+    },
+    {
+      "number": 95,
+      "class": "Worker",
+      "name": "Saken",
+      "ivs": 0,
+      "battleRanges": [
+        "95"
+      ]
+    },
+    {
+      "number": 96,
+      "class": "Newscaster",
+      "name": "Sivil",
+      "ivs": 0,
+      "battleRanges": [
+        "96"
+      ]
+    },
+    {
+      "number": 97,
+      "class": "Cooltrainer",
+      "name": "Flostin",
+      "ivs": 0,
+      "battleRanges": [
+        "97"
+      ]
+    },
+    {
+      "number": 98,
+      "class": "Cooltrainer",
+      "name": "Tetil",
+      "ivs": 0,
+      "battleRanges": [
+        "98"
+      ]
+    },
+    {
+      "number": 99,
+      "class": "Supertrainer",
+      "name": "Libal",
+      "ivs": 0,
+      "battleRanges": [
+        "99"
+      ]
+    },
+    {
+      "number": 100,
+      "class": "Mt Btlmaster",
+      "name": "Battlus",
+      "ivs": 0,
+      "battleRanges": [
+        "100"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2667 @@
+{
+  "colosseum-story": {
+    "Stum": [
+      "Taillow (Battle 1-1)",
+      "Hoothoot (Battle 1-2)"
+    ],
+    "Cyus": [
+      "Sunkern (Battle 2-1)",
+      "Hoppip (Battle 2-2)"
+    ],
+    "Mort": [
+      "Igglybuff (Battle 3-1)",
+      "Electrike (Battle 3-2)"
+    ],
+    "Auro": [
+      "Azurill (Battle 4-1)",
+      "Sentret (Battle 4-2)"
+    ],
+    "Lehan": [
+      "Togepi (Battle 5-1)",
+      "Vulpix (Battle 5-2)"
+    ],
+    "Pera": [
+      "Magikarp (Battle 6-1)",
+      "Zubat (Battle 6-2)"
+    ],
+    "Nevie": [
+      "Poochyena (Battle 7-1)",
+      "Swinub (Battle 7-2)"
+    ],
+    "Rinos": [
+      "Wooper (Battle 8-1)",
+      "Trapinch (Battle 8-2)"
+    ],
+    "Anges": [
+      "Duskull (Battle 9-1)",
+      "Ralts (Battle 9-2)"
+    ],
+    "Vander": [
+      "Zigzagoon (Battle 10-1)",
+      "Whismur (Battle 10-2)",
+      "Skitty (Battle 10-3)",
+      "Slakoth (Battle 10-4)",
+      "Jigglypuff (Battle 10-5)"
+    ],
+    "Gelvin": [
+      "Wynaut (Battle 11-1)",
+      "Pichu (Battle 11-2)"
+    ],
+    "Pabe": [
+      "Zubat (Battle 12-1)",
+      "Whismur (Battle 12-2)",
+      "Grimer (Battle 12-3)"
+    ],
+    "Caden": [
+      "Beldum (Battle 13-1)",
+      "Barboach (Battle 13-2)"
+    ],
+    "Lond": [
+      "Lotad (Battle 14-1)",
+      "Seedot (Battle 14-2)"
+    ],
+    "Albac": [
+      "Geodude (Battle 15-1)",
+      "Sandshrew (Battle 15-2)"
+    ],
+    "Eloos": [
+      "Marill (Battle 16-1)",
+      "Jigglypuff (Battle 16-2)"
+    ],
+    "Metz": [
+      "Abra (Battle 17-1)",
+      "Shuppet (Battle 17-2)"
+    ],
+    "Roeck": [
+      "Mareep (Battle 18-1)",
+      "Magnemite (Battle 18-2)",
+      "Voltorb (Battle 18-3)"
+    ],
+    "Vona": [
+      "Spheal (Battle 19-1)",
+      "Carvanha (Battle 19-2)"
+    ],
+    "Arth": [
+      "Pineco (Battle 20-1)",
+      "Ledyba (Battle 20-2)",
+      "Surskit (Battle 20-3)",
+      "Nincada (Battle 20-4)",
+      "Anorith (Battle 20-5)"
+    ],
+    "Gris": [
+      "Wurmple (Battle 21-1)",
+      "Silcoon (Battle 21-2)",
+      "Cascoon (Battle 21-3)"
+    ],
+    "Desla": [
+      "Kirlia (Battle 22-1)",
+      "Kirlia (Battle 22-2)"
+    ],
+    "Eisen": [
+      "Aron (Battle 23-1)",
+      "Phanpy (Battle 23-2)",
+      "Sandshrew (Battle 23-3)"
+    ],
+    "Bedro": [
+      "Wingull (Battle 24-1)",
+      "Bagon (Battle 24-2)"
+    ],
+    "Grel": [
+      "Oddish (Battle 25-1)",
+      "Gulpin (Battle 25-2)"
+    ],
+    "Loden": [
+      "Larvitar (Battle 26-1)",
+      "Houndour (Battle 26-2)"
+    ],
+    "Taryn": [
+      "Natu (Battle 27-1)",
+      "Duskull (Battle 27-2)"
+    ],
+    "Solek": [
+      "Machop (Battle 28-1)",
+      "Slakoth (Battle 28-2)",
+      "Zigzagoon (Battle 28-3)"
+    ],
+    "Wina": [
+      "Geodude (Battle 29-1)",
+      "Mawile (Battle 29-2)"
+    ],
+    "Renson": [
+      "Staryu (Battle 30-1)",
+      "Horsea (Battle 30-2)",
+      "Corphish (Battle 30-3)",
+      "Goldeen (Battle 30-4)",
+      "Surskit (Battle 30-5)"
+    ],
+    "Malla": [
+      "Togepi (Battle 31-1)",
+      "Slakoth (Battle 31-2)"
+    ],
+    "Herton": [
+      "Taillow (Battle 32-1)",
+      "Doduo (Battle 32-2)"
+    ],
+    "Higson": [
+      "Natu (Battle 33-1)",
+      "Corphish (Battle 33-2)"
+    ],
+    "Allaw": [
+      "Abra (Battle 34-1)",
+      "Clamperl (Battle 34-2)"
+    ],
+    "Delot": [
+      "Magnemite (Battle 35-1)",
+      "Voltorb (Battle 35-2)"
+    ],
+    "Diek": [
+      "Cacnea (Battle 36-1)",
+      "Shroomish (Battle 36-2)"
+    ],
+    "Warl": [
+      "Gulpin (Battle 37-1)",
+      "Grimer (Battle 37-2)"
+    ],
+    "Rone": [
+      "Anorith (Battle 38-1)",
+      "Pineco (Battle 38-2)",
+      "Volbeat (Battle 38-3)",
+      "Illumise (Battle 38-4)"
+    ],
+    "Neira": [
+      "Numel (Battle 39-1)",
+      "Bagon (Battle 39-2)"
+    ],
+    "Trinch": [
+      "Nosepass (Battle 40-1)",
+      "Lileep (Battle 40-2)",
+      "Phanpy (Battle 40-3)",
+      "Rhyhorn (Battle 40-4)",
+      "Barboach (Battle 40-5)"
+    ],
+    "Vogi": [
+      "Pikachu (Battle 41-1)",
+      "Chinchou (Battle 41-2)"
+    ],
+    "Terl": [
+      "Delcatty (Battle 42-1)",
+      "Spinda (Battle 42-2)",
+      "Vigoroth (Battle 42-3)"
+    ],
+    "Sowa": [
+      "Noctowl (Battle 43-1)",
+      "Linoone (Battle 43-2)"
+    ],
+    "Yudan": [
+      "Sableye (Battle 44-1)",
+      "Nuzleaf (Battle 44-2)"
+    ],
+    "Magro": [
+      "Mawile (Battle 45-1)",
+      "Corsola (Battle 45-2)",
+      "Graveler (Battle 45-3)"
+    ],
+    "Toli": [
+      "Koffing (Battle 46-1)",
+      "Grimer (Battle 46-2)",
+      "Dustox (Battle 46-3)",
+      "Gloom (Battle 46-4)"
+    ],
+    "Ropel": [
+      "Kadabra (Battle 47-1)",
+      "Natu (Battle 47-2)",
+      "Medicham (Battle 47-3)"
+    ],
+    "Vesey": [
+      "Lombre (Battle 48-1)",
+      "Luvdisc (Battle 48-2)",
+      "Tentacool (Battle 48-3)",
+      "Seadra (Battle 48-4)"
+    ],
+    "Kinson": [
+      "Sealeo (Battle 49-1)",
+      "Houndour (Battle 49-2)",
+      "Spinda (Battle 49-3)"
+    ],
+    "Zentin": [
+      "Beautifly (Battle 50-1)",
+      "Swellow (Battle 50-2)",
+      "Masquerain (Battle 50-3)",
+      "Golbat (Battle 50-4)",
+      "Pelipper (Battle 50-5)"
+    ],
+    "Leine": [
+      "Voltorb (Battle 51-1)",
+      "Magnemite (Battle 51-2)",
+      "Chinchou (Battle 51-3)"
+    ],
+    "Laton": [
+      "Cacnea (Battle 52-1)",
+      "Phanpy (Battle 52-2)",
+      "Aipom (Battle 52-3)",
+      "Nosepass (Battle 52-4)"
+    ],
+    "Besol": [
+      "Lileep (Battle 53-1)",
+      "Skiploom (Battle 53-2)",
+      "Ledian (Battle 53-3)"
+    ],
+    "Boda": [
+      "Delibird (Battle 54-1)",
+      "Rhyhorn (Battle 54-2)",
+      "Anorith (Battle 54-3)"
+    ],
+    "Daga": [
+      "Houndour (Battle 55-1)",
+      "Vibrava (Battle 55-2)",
+      "Staryu (Battle 55-3)",
+      "Delcatty (Battle 55-4)"
+    ],
+    "Alten": [
+      "Beautifly (Battle 56-1)",
+      "Teddiursa (Battle 56-2)",
+      "Skiploom (Battle 56-3)",
+      "Clamperl (Battle 56-4)"
+    ],
+    "Fial": [
+      "Luvdisc (Battle 57-1)",
+      "Goldeen (Battle 57-2)",
+      "Luvdisc (Battle 57-3)",
+      "Goldeen (Battle 57-4)"
+    ],
+    "Haken": [
+      "Nuzleaf (Battle 58-1)",
+      "Koffing (Battle 58-2)",
+      "Nosepass (Battle 58-3)",
+      "Mawile (Battle 58-4)"
+    ],
+    "Illa": [
+      "Corsola (Battle 59-1)",
+      "Volbeat (Battle 59-2)",
+      "Illumise (Battle 59-3)",
+      "Roselia (Battle 59-4)"
+    ],
+    "Loko": [
+      "Wigglytuff (Battle 60-1)",
+      "Azumarill (Battle 60-2)",
+      "Ariados (Battle 60-3)",
+      "Wailmer (Battle 60-4)",
+      "Wobbuffet (Battle 60-5)"
+    ],
+    "Gort": [
+      "Yanma (Battle 61-1)",
+      "Masquerain (Battle 61-2)",
+      "Ledian (Battle 61-3)",
+      "Ariados (Battle 61-4)"
+    ],
+    "Perd": [
+      "Lunatone (Battle 62-1)",
+      "Solrock (Battle 62-2)",
+      "Dunsparce (Battle 62-3)",
+      "Sandslash (Battle 62-4)"
+    ],
+    "Mante": [
+      "Delibird (Battle 63-1)",
+      "Clamperl (Battle 63-2)",
+      "Dustox (Battle 63-3)",
+      "Magcargo (Battle 63-4)"
+    ],
+    "Meton": [
+      "Ninjask (Battle 64-1)",
+      "Dodrio (Battle 64-2)",
+      "Jumpluff (Battle 64-3)",
+      "Linoone (Battle 64-4)"
+    ],
+    "Lonno": [
+      "Murkrow (Battle 65-1)",
+      "Misdreavus (Battle 65-2)",
+      "Banette (Battle 65-3)",
+      "Sableye (Battle 65-4)"
+    ],
+    "Reme": [
+      "Azumarill (Battle 66-1)",
+      "Girafarig (Battle 66-2)",
+      "Roselia (Battle 66-3)",
+      "Bellossom (Battle 66-4)"
+    ],
+    "Ferda": [
+      "Swellow (Battle 67-1)",
+      "Sneasel (Battle 67-2)",
+      "Girafarig (Battle 67-3)",
+      "Vigoroth (Battle 67-4)"
+    ],
+    "Gilam": [
+      "Sharpedo (Battle 68-1)",
+      "Camerupt (Battle 68-2)",
+      "Chimecho (Battle 68-3)",
+      "Medicham (Battle 68-4)"
+    ],
+    "Odon": [
+      "Granbull (Battle 69-1)",
+      "Pupitar (Battle 69-2)",
+      "Mantine (Battle 69-3)",
+      "Sealeo (Battle 69-4)"
+    ],
+    "Athey": [
+      "Mawile (Battle 70-1)",
+      "Machoke (Battle 70-2)",
+      "Quagsire (Battle 70-3)",
+      "Dusclops (Battle 70-4)",
+      "Altaria (Battle 70-5)"
+    ],
+    "Caril": [
+      "Wigglytuff (Battle 71-1)",
+      "Sunflora (Battle 71-2)",
+      "Noctowl (Battle 71-3)",
+      "Piloswine (Battle 71-4)"
+    ],
+    "Chenek": [
+      "Seviper (Battle 72-1)",
+      "Swalot (Battle 72-2)",
+      "Golbat (Battle 72-3)",
+      "Kadabra (Battle 72-4)"
+    ],
+    "Tran": [
+      "Gligar (Battle 73-1)",
+      "Sneasel (Battle 73-2)",
+      "Hitmontop (Battle 73-3)",
+      "Grumpig (Battle 73-4)"
+    ],
+    "Ribek": [
+      "Masquerain (Battle 74-1)",
+      "Mightyena (Battle 74-2)",
+      "Stantler (Battle 74-3)",
+      "Granbull (Battle 74-4)"
+    ],
+    "Vitalo": [
+      "Dusclops (Battle 75-1)",
+      "Lanturn (Battle 75-2)",
+      "Skarmory (Battle 75-3)",
+      "Vileplume (Battle 75-4)"
+    ],
+    "Daras": [
+      "Glalie (Battle 76-1)",
+      "Breloom (Battle 76-2)",
+      "Swellow (Battle 76-3)",
+      "Rhydon (Battle 76-4)"
+    ],
+    "Dian": [
+      "Metang (Battle 77-1)",
+      "Granbull (Battle 77-2)",
+      "Jumpluff (Battle 77-3)",
+      "Xatu (Battle 77-4)"
+    ],
+    "Hauf": [
+      "Tropius (Battle 78-1)",
+      "Absol (Battle 78-2)",
+      "Lairon (Battle 78-3)",
+      "Exploud (Battle 78-4)"
+    ],
+    "Naldo": [
+      "Torkoal (Battle 79-1)",
+      "Shiftry (Battle 79-2)",
+      "Noctowl (Battle 79-3)",
+      "Relicanth (Battle 79-4)"
+    ],
+    "Shobon": [
+      "Hariyama (Battle 80-1)",
+      "Cacturne (Battle 80-2)",
+      "Weezing (Battle 80-3)",
+      "Golem (Battle 80-4)",
+      "Starmie (Battle 80-5)"
+    ],
+    "Dobel": [
+      "Girafarig (Battle 81-1)",
+      "Ninjask (Battle 81-2)",
+      "Zangoose (Battle 81-3)",
+      "Dodrio (Battle 81-4)"
+    ],
+    "Keto": [
+      "Breloom (Battle 82-1)",
+      "Sharpedo (Battle 82-2)",
+      "Camerupt (Battle 82-3)",
+      "Forretress (Battle 82-4)"
+    ],
+    "Moit": [
+      "Banette (Battle 83-1)",
+      "Magneton (Battle 83-2)",
+      "Mantine (Battle 83-3)",
+      "Whiscash (Battle 83-4)"
+    ],
+    "Matso": [
+      "Raichu (Battle 84-1)",
+      "Lombre (Battle 84-2)",
+      "Electrode (Battle 84-3)",
+      "Altaria (Battle 84-4)"
+    ],
+    "Ritaco": [
+      "Crawdaunt (Battle 85-1)",
+      "Octillery (Battle 85-2)",
+      "Huntail (Battle 85-3)",
+      "Golduck (Battle 85-4)"
+    ],
+    "Ristin": [
+      "Bellossom (Battle 86-1)",
+      "Gorebyss (Battle 86-2)",
+      "Miltank (Battle 86-3)",
+      "Ampharos (Battle 86-4)"
+    ],
+    "Dorn": [
+      "Skarmory (Battle 87-1)",
+      "Xatu (Battle 87-2)",
+      "Shiftry (Battle 87-3)",
+      "Rhydon (Battle 87-4)"
+    ],
+    "Jurek": [
+      "Weezing (Battle 88-1)",
+      "Muk (Battle 88-2)",
+      "Altaria (Battle 88-3)",
+      "Donphan (Battle 88-4)"
+    ],
+    "Vonder": [
+      "Cradily (Battle 89-1)",
+      "Armaldo (Battle 89-2)",
+      "Heracross (Battle 89-3)",
+      "Ninetales (Battle 89-4)"
+    ],
+    "Norus": [
+      "Tropius (Battle 90-1)",
+      "Ludicolo (Battle 90-2)",
+      "Vileplume (Battle 90-3)",
+      "Bellossom (Battle 90-4)",
+      "Shiftry (Battle 90-5)"
+    ],
+    "Tando": [
+      "Golem (Battle 91-1)",
+      "Relicanth (Battle 91-2)",
+      "Cacturne (Battle 91-3)",
+      "Sandslash (Battle 91-4)"
+    ],
+    "Panne": [
+      "Golbat (Battle 92-1)",
+      "Swalot (Battle 92-2)",
+      "Muk (Battle 92-3)",
+      "Tentacruel (Battle 92-4)"
+    ],
+    "Quint": [
+      "Grumpig (Battle 93-1)",
+      "Kadabra (Battle 93-2)",
+      "Metang (Battle 93-3)",
+      "Lunatone (Battle 93-4)"
+    ],
+    "Kowly": [
+      "Castform (Battle 94-1)",
+      "Sunflora (Battle 94-2)",
+      "Vileplume (Battle 94-3)",
+      "Bellossom (Battle 94-4)"
+    ],
+    "Crisom": [
+      "Mantine (Battle 95-1)",
+      "Seaking (Battle 95-2)",
+      "Huntail (Battle 95-3)",
+      "Gorebyss (Battle 95-4)"
+    ],
+    "Raus": [
+      "Electrode (Battle 96-1)",
+      "Misdreavus (Battle 96-2)",
+      "Ninetales (Battle 96-3)",
+      "Camerupt (Battle 96-4)"
+    ],
+    "Trilo": [
+      "Feraligatr (Battle 97-1)",
+      "Typhlosion (Battle 97-2)",
+      "Meganium (Battle 97-3)",
+      "Breloom (Battle 97-4)",
+      "Ampharos (Battle 97-5)"
+    ],
+    "Lomen": [
+      "Blaziken (Battle 98-1)",
+      "Sceptile (Battle 98-2)",
+      "Swampert (Battle 98-3)",
+      "Altaria (Battle 98-4)",
+      "Glalie (Battle 98-5)"
+    ],
+    "Nacie": [
+      "Crawdaunt (Battle 99-1)",
+      "Magneton (Battle 99-2)",
+      "Shedinja (Battle 99-3)",
+      "Heracross (Battle 99-4)",
+      "Gardevoir (Battle 99-5)"
+    ],
+    "Somek": [
+      "Pinsir (Battle 100-1)",
+      "Claydol (Battle 100-2)",
+      "Crobat (Battle 100-3)",
+      "Gligar (Battle 100-4)",
+      "Flygon (Battle 100-5)",
+      "Gyarados (Battle 100-6)"
+    ]
+  },
+  "colosseum-battle-singles": {
+    "Rood": [
+      "Sunkern (Battle 1-1)",
+      "Magikarp (Battle 1-2)",
+      "Wurmple (Battle 1-3)",
+      "Azurill (Battle 1-4)",
+      "Ralts (Battle 1-5)",
+      "Silcoon (Battle 1-6)"
+    ],
+    "Sano": [
+      "Wooper (Battle 2-1)",
+      "Cascoon (Battle 2-2)",
+      "Feebas (Battle 2-3)",
+      "Nincada (Battle 2-4)",
+      "Lotad (Battle 2-5)",
+      "Igglybuff (Battle 2-6)"
+    ],
+    "Eargle": [
+      "Pichu (Battle 3-1)",
+      "Makuhita (Battle 3-2)",
+      "Poochyena (Battle 3-3)",
+      "Duskull (Battle 3-4)",
+      "Seedot (Battle 3-5)",
+      "Zigzagoon (Battle 3-6)"
+    ],
+    "Zoila": [
+      "Marill (Battle 4-1)",
+      "Zubat (Battle 4-2)",
+      "Barboach (Battle 4-3)",
+      "Slugma (Battle 4-4)",
+      "Ledyba (Battle 4-5)",
+      "Skitty (Battle 4-6)"
+    ],
+    "Secort": [
+      "Togepi (Battle 5-1)",
+      "Hoppip (Battle 5-2)",
+      "Smeargle (Battle 5-3)",
+      "Taillow (Battle 5-4)",
+      "Trapinch (Battle 5-5)",
+      "Shedinja (Battle 5-6)"
+    ],
+    "Grund": [
+      "Wynaut (Battle 6-1)",
+      "Swinub (Battle 6-2)",
+      "Sentret (Battle 6-3)",
+      "Hoothoot (Battle 6-4)",
+      "Kirlia (Battle 6-5)",
+      "Wingull (Battle 6-6)"
+    ],
+    "Gars": [
+      "Jigglypuff (Battle 7-1)",
+      "Meditite (Battle 7-2)",
+      "Spheal (Battle 7-3)",
+      "Mareep (Battle 7-4)",
+      "Geodude (Battle 7-5)",
+      "Spinarak (Battle 7-6)"
+    ],
+    "Ladin": [
+      "Electrike (Battle 8-1)",
+      "Vulpix (Battle 8-2)",
+      "Slakoth (Battle 8-3)",
+      "Pineco (Battle 8-4)",
+      "Shuppet (Battle 8-5)",
+      "Horsea (Battle 8-6)"
+    ],
+    "Rapoz": [
+      "Shroomish (Battle 9-1)",
+      "Whismur (Battle 9-2)",
+      "Snorunt (Battle 9-3)",
+      "Surskit (Battle 9-4)",
+      "Pikachu (Battle 9-5)",
+      "Sandshrew (Battle 9-6)"
+    ],
+    "Vannos": [
+      "Baltoy (Battle 10-1)",
+      "Beldum (Battle 10-2)",
+      "Bagon (Battle 10-3)",
+      "Remoraid (Battle 10-4)",
+      "Slaking (Battle 10-5)",
+      "Larvitar (Battle 10-6)"
+    ],
+    "Girod": [
+      "Gulpin (Battle 11-1)",
+      "Torchic (Battle 11-2)",
+      "Carvanha (Battle 11-3)",
+      "Numel (Battle 11-4)",
+      "Treecko (Battle 11-5)",
+      "Corphish (Battle 11-6)"
+    ],
+    "Denc": [
+      "Cyndaquil (Battle 12-1)",
+      "Abra (Battle 12-2)",
+      "Doduo (Battle 12-3)",
+      "Machop (Battle 12-4)",
+      "Totodile (Battle 12-5)",
+      "Swablu (Battle 12-6)"
+    ],
+    "Myog": [
+      "Mudkip (Battle 13-1)",
+      "Chikorita (Battle 13-2)",
+      "Goldeen (Battle 13-3)",
+      "Oddish (Battle 13-4)",
+      "Psyduck (Battle 13-5)",
+      "Natu (Battle 13-6)"
+    ],
+    "Rogen": [
+      "Magnemite (Battle 14-1)",
+      "Voltorb (Battle 14-2)",
+      "Chinchou (Battle 14-3)",
+      "Flaaffy (Battle 14-4)",
+      "Plusle (Battle 14-5)",
+      "Minun (Battle 14-6)"
+    ],
+    "Ardo": [
+      "Spoink (Battle 15-1)",
+      "Grimer (Battle 15-2)",
+      "Nincada (Battle 15-3)",
+      "Aron (Battle 15-4)",
+      "Luvdisc (Battle 15-5)",
+      "Houndour (Battle 15-6)"
+    ],
+    "Feren": [
+      "Tentacool (Battle 16-1)",
+      "Lombre (Battle 16-2)",
+      "Staryu (Battle 16-3)",
+      "Clamperl (Battle 16-4)",
+      "Corsola (Battle 16-5)",
+      "Wailmer (Battle 16-6)"
+    ],
+    "Maloo": [
+      "Cacnea (Battle 17-1)",
+      "Nuzleaf (Battle 17-2)",
+      "Skiploom (Battle 17-3)",
+      "Lileep (Battle 17-4)",
+      "Gloom (Battle 17-5)",
+      "Grovyle (Battle 17-6)"
+    ],
+    "Doimo": [
+      "Phanpy (Battle 18-1)",
+      "Delibird (Battle 18-2)",
+      "Koffing (Battle 18-3)",
+      "Vibrava (Battle 18-4)",
+      "Teddiursa (Battle 18-5)",
+      "Rhyhorn (Battle 18-6)"
+    ],
+    "Hebel": [
+      "Anorith (Battle 19-1)",
+      "Beautifly (Battle 19-2)",
+      "Dustox (Battle 19-3)",
+      "Ledian (Battle 19-4)",
+      "Ariados (Battle 19-5)",
+      "Yanma (Battle 19-6)"
+    ],
+    "Erben": [
+      "Graveler (Battle 20-1)",
+      "Roselia (Battle 20-2)",
+      "Loudred (Battle 20-3)",
+      "Wobbuffet (Battle 20-4)",
+      "Delcatty (Battle 20-5)",
+      "Machoke (Battle 20-6)"
+    ],
+    "Sido": [
+      "Nosepass (Battle 21-1)",
+      "Aipom (Battle 21-2)",
+      "Sableye (Battle 21-3)",
+      "Spinda (Battle 21-4)",
+      "Mawile (Battle 21-5)",
+      "Combusken (Battle 21-6)"
+    ],
+    "Kimber": [
+      "Volbeat (Battle 22-1)",
+      "Marshtomp (Battle 22-2)",
+      "Illumise (Battle 22-3)",
+      "Jigglypuff (Battle 22-4)",
+      "Kadabra (Battle 22-5)",
+      "Spheal (Battle 22-6)"
+    ],
+    "Renfar": [
+      "Wooper (Battle 23-1)",
+      "Shroomish (Battle 23-2)",
+      "Marill (Battle 23-3)",
+      "Makuhita (Battle 23-4)",
+      "Lotad (Battle 23-5)",
+      "Whismur (Battle 23-6)"
+    ],
+    "Rateis": [
+      "Nincada (Battle 24-1)",
+      "Zubat (Battle 24-2)",
+      "Swinub (Battle 24-3)",
+      "Sentret (Battle 24-4)",
+      "Pineco (Battle 24-5)",
+      "Taillow (Battle 24-6)"
+    ],
+    "Hoglo": [
+      "Slugma (Battle 25-1)",
+      "Vulpix (Battle 25-2)",
+      "Numel (Battle 25-3)",
+      "Quilava (Battle 25-4)",
+      "Torchic (Battle 25-5)",
+      "Combusken (Battle 25-6)"
+    ],
+    "Isette": [
+      "Shedinja (Battle 26-1)",
+      "Pikachu (Battle 26-2)",
+      "Seedot (Battle 26-3)",
+      "Gulpin (Battle 26-4)",
+      "Poochyena (Battle 26-5)",
+      "Snubbull (Battle 26-6)"
+    ],
+    "Norel": [
+      "Zigzagoon (Battle 27-1)",
+      "Togepi (Battle 27-2)",
+      "Skitty (Battle 27-3)",
+      "Doduo (Battle 27-4)",
+      "Teddiursa (Battle 27-5)",
+      "Loudred (Battle 27-6)"
+    ],
+    "Brena": [
+      "Hoothoot (Battle 28-1)",
+      "Ledyba (Battle 28-2)",
+      "Wingull (Battle 28-3)",
+      "Swablu (Battle 28-4)",
+      "Natu (Battle 28-5)",
+      "Delibird (Battle 28-6)"
+    ],
+    "Wagel": [
+      "Spinarak (Battle 29-1)",
+      "Oddish (Battle 29-2)",
+      "Grimer (Battle 29-3)",
+      "Tentacool (Battle 29-4)",
+      "Koffing (Battle 29-5)",
+      "Roselia (Battle 29-6)"
+    ],
+    "Leven": [
+      "Geodude (Battle 30-1)",
+      "Sandshrew (Battle 30-2)",
+      "Baltoy (Battle 30-3)",
+      "Larvitar (Battle 30-4)",
+      "Trapinch (Battle 30-5)",
+      "Rhyhorn (Battle 30-6)"
+    ],
+    "Hildon": [
+      "Hoppip (Battle 31-1)",
+      "Smeargle (Battle 31-2)",
+      "Wynaut (Battle 31-3)",
+      "Surskit (Battle 31-4)",
+      "Kirlia (Battle 31-5)",
+      "Slakoth (Battle 31-6)"
+    ],
+    "Tary": [
+      "Meditite (Battle 32-1)",
+      "Magnemite (Battle 32-2)",
+      "Shuppet (Battle 32-3)",
+      "Aron (Battle 32-4)",
+      "Barboach (Battle 32-5)",
+      "Mareep (Battle 32-6)"
+    ],
+    "Sason": [
+      "Duskull (Battle 33-1)",
+      "Treecko (Battle 33-2)",
+      "Horsea (Battle 33-3)",
+      "Snorunt (Battle 33-4)",
+      "Abra (Battle 33-5)",
+      "Remoraid (Battle 33-6)"
+    ],
+    "Roex": [
+      "Bagon (Battle 34-1)",
+      "Goldeen (Battle 34-2)",
+      "Bayleef (Battle 34-3)",
+      "Murkrow (Battle 34-4)",
+      "Spoink (Battle 34-5)",
+      "Machop (Battle 34-6)"
+    ],
+    "Deron": [
+      "Corphish (Battle 35-1)",
+      "Cacnea (Battle 35-2)",
+      "Carvanha (Battle 35-3)",
+      "Phanpy (Battle 35-4)",
+      "Electrike (Battle 35-5)",
+      "Beldum (Battle 35-6)"
+    ],
+    "Tiana": [
+      "Mudkip (Battle 36-1)",
+      "Totodile (Battle 36-2)",
+      "Psyduck (Battle 36-3)",
+      "Chinchou (Battle 36-4)",
+      "Luvdisc (Battle 36-5)",
+      "Staryu (Battle 36-6)"
+    ],
+    "Moril": [
+      "Voltorb (Battle 37-1)",
+      "Lombre (Battle 37-2)",
+      "Clamperl (Battle 37-3)",
+      "Nuzleaf (Battle 37-4)",
+      "Vibrava (Battle 37-5)",
+      "Teddiursa (Battle 37-6)"
+    ],
+    "Grenay": [
+      "Graveler (Battle 38-1)",
+      "Aipom (Battle 38-2)",
+      "Nosepass (Battle 38-3)",
+      "Anorith (Battle 38-4)",
+      "Lileep (Battle 38-5)",
+      "Spinda (Battle 38-6)"
+    ],
+    "Lohon": [
+      "Corsola (Battle 39-1)",
+      "Skiploom (Battle 39-2)",
+      "Machoke (Battle 39-3)",
+      "Plusle (Battle 39-4)",
+      "Beautifly (Battle 39-5)",
+      "Linoone (Battle 39-6)"
+    ],
+    "Slewis": [
+      "Kadabra (Battle 40-1)",
+      "Mawile (Battle 40-2)",
+      "Dustox (Battle 40-3)",
+      "Swellow (Battle 40-4)",
+      "Grovyle (Battle 40-5)",
+      "Marshtomp (Battle 40-6)"
+    ],
+    "Orsak": [
+      "Ledian (Battle 41-1)",
+      "Sableye (Battle 41-2)",
+      "Flaaffy (Battle 41-3)",
+      "Yanma (Battle 41-4)",
+      "Volbeat (Battle 41-5)",
+      "Gloom (Battle 41-6)"
+    ],
+    "Gohn": [
+      "Minun (Battle 42-1)",
+      "Ariados (Battle 42-2)",
+      "Rhyhorn (Battle 42-3)",
+      "Houndour (Battle 42-4)",
+      "Corphish (Battle 42-5)",
+      "Wobbuffet (Battle 42-6)"
+    ],
+    "Deats": [
+      "Remoraid (Battle 43-1)",
+      "Carvanha (Battle 43-2)",
+      "Croconaw (Battle 43-3)",
+      "Mudkip (Battle 43-4)",
+      "Pikachu (Battle 43-5)",
+      "Chinchou (Battle 43-6)"
+    ],
+    "Tash": [
+      "Dunsparce (Battle 44-1)",
+      "Geodude (Battle 44-2)",
+      "Illumise (Battle 44-3)",
+      "Aron (Battle 44-4)",
+      "Sandshrew (Battle 44-5)",
+      "Lileep (Battle 44-6)"
+    ],
+    "Acron": [
+      "Snorunt (Battle 45-1)",
+      "Grimer (Battle 45-2)",
+      "Psyduck (Battle 45-3)",
+      "Magnemite (Battle 45-4)",
+      "Cyndaquil (Battle 45-5)",
+      "Larvitar (Battle 45-6)"
+    ],
+    "Kimery": [
+      "Machop (Battle 46-1)",
+      "Gulpin (Battle 46-2)",
+      "Snubbull (Battle 46-3)",
+      "Goldeen (Battle 46-4)",
+      "Luvdisc (Battle 46-5)",
+      "Bagon (Battle 46-6)"
+    ],
+    "Rawles": [
+      "Chimecho (Battle 47-1)",
+      "Doduo (Battle 47-2)",
+      "Abra (Battle 47-3)",
+      "Treecko (Battle 47-4)",
+      "Voltorb (Battle 47-5)",
+      "Staryu (Battle 47-6)"
+    ],
+    "Rosno": [
+      "Skiploom (Battle 48-1)",
+      "Oddish (Battle 48-2)",
+      "Bellossom (Battle 48-3)",
+      "Chikorita (Battle 48-4)",
+      "Lombre (Battle 48-5)",
+      "Cacnea (Battle 48-6)"
+    ],
+    "Mandev": [
+      "Delibird (Battle 49-1)",
+      "Flaaffy (Battle 49-2)",
+      "Spoink (Battle 49-3)",
+      "Swablu (Battle 49-4)",
+      "Tentacool (Battle 49-5)",
+      "Numel (Battle 49-6)"
+    ],
+    "Cryal": [
+      "Bayleef (Battle 50-1)",
+      "Quilava (Battle 50-2)",
+      "Croconaw (Battle 50-3)",
+      "Murkrow (Battle 50-4)",
+      "Medicham (Battle 50-5)",
+      "Sealeo (Battle 50-6)"
+    ],
+    "Demit": [
+      "Masquerain (Battle 51-1)",
+      "Ninjask (Battle 51-2)",
+      "Zangoose (Battle 51-3)",
+      "Swellow (Battle 51-4)",
+      "Girafarig (Battle 51-5)",
+      "Golbat (Battle 51-6)"
+    ],
+    "Lirel": [
+      "Nuzleaf (Battle 52-1)",
+      "Loudred (Battle 52-2)",
+      "Delcatty (Battle 52-3)",
+      "Roselia (Battle 52-4)",
+      "Sharpedo (Battle 52-5)",
+      "Grumpig (Battle 52-6)"
+    ],
+    "Crag": [
+      "Togetic (Battle 53-1)",
+      "Magcargo (Battle 53-2)",
+      "Azumarill (Battle 53-3)",
+      "Sudowoodo (Battle 53-4)",
+      "Masquerain (Battle 53-5)",
+      "Pupitar (Battle 53-6)"
+    ],
+    "Rene": [
+      "Furret (Battle 54-1)",
+      "Dunsparce (Battle 54-2)",
+      "Linoone (Battle 54-3)",
+      "Wigglytuff (Battle 54-4)",
+      "Vigoroth (Battle 54-5)",
+      "Kecleon (Battle 54-6)"
+    ],
+    "Gulor": [
+      "Castform (Battle 55-1)",
+      "Natu (Battle 55-2)",
+      "Wailmer (Battle 55-3)",
+      "Metang (Battle 55-4)",
+      "Shelgon (Battle 55-5)",
+      "Mightyena (Battle 55-6)"
+    ],
+    "Amell": [
+      "Sunflora (Battle 56-1)",
+      "Quagsire (Battle 56-2)",
+      "Gligar (Battle 56-3)",
+      "Sneasel (Battle 56-4)",
+      "Qwilfish (Battle 56-5)",
+      "Noctowl (Battle 56-6)"
+    ],
+    "Vium": [
+      "Pelipper (Battle 57-1)",
+      "Lairon (Battle 57-2)",
+      "Dusclops (Battle 57-3)",
+      "Forretress (Battle 57-4)",
+      "Sandslash (Battle 57-5)",
+      "Skarmory (Battle 57-6)"
+    ],
+    "Bidix": [
+      "Lunatone (Battle 58-1)",
+      "Jumpluff (Battle 58-2)",
+      "Solrock (Battle 58-3)",
+      "Seadra (Battle 58-4)",
+      "Misdreavus (Battle 58-5)",
+      "Seaking (Battle 58-6)"
+    ],
+    "Nanot": [
+      "Manectric (Battle 59-1)",
+      "Cacturne (Battle 59-2)",
+      "Piloswine (Battle 59-3)",
+      "Seviper (Battle 59-4)",
+      "Breloom (Battle 59-5)",
+      "Smeargle (Battle 59-6)"
+    ],
+    "Glydin": [
+      "Sneasel (Battle 60-1)",
+      "Sharpedo (Battle 60-2)",
+      "Seadra (Battle 60-3)",
+      "Golbat (Battle 60-4)",
+      "Hitmontop (Battle 60-5)",
+      "Girafarig (Battle 60-6)"
+    ],
+    "Benit": [
+      "Ninjask (Battle 61-1)",
+      "Dodrio (Battle 61-2)",
+      "Tropius (Battle 61-3)",
+      "Mantine (Battle 61-4)",
+      "Xatu (Battle 61-5)",
+      "Salamence (Battle 61-6)"
+    ],
+    "Helmin": [
+      "Camerupt (Battle 62-1)",
+      "Lanturn (Battle 62-2)",
+      "Vileplume (Battle 62-3)",
+      "Swalot (Battle 62-4)",
+      "Absol (Battle 62-5)",
+      "Stantler (Battle 62-6)"
+    ],
+    "Rogin": [
+      "Whiscash (Battle 63-1)",
+      "Crawdaunt (Battle 63-2)",
+      "Ludicolo (Battle 63-3)",
+      "Octillery (Battle 63-4)",
+      "Huntail (Battle 63-5)",
+      "Relicanth (Battle 63-6)"
+    ],
+    "Cewan": [
+      "Grumpig (Battle 64-1)",
+      "Hariyama (Battle 64-2)",
+      "Granbull (Battle 64-3)",
+      "Banette (Battle 64-4)",
+      "Torkoal (Battle 64-5)",
+      "Raichu (Battle 64-6)"
+    ],
+    "Perstin": [
+      "Shiftry (Battle 65-1)",
+      "Electrode (Battle 65-2)",
+      "Exploud (Battle 65-3)",
+      "Tentacruel (Battle 65-4)",
+      "Golem (Battle 65-5)",
+      "Glalie (Battle 65-6)"
+    ],
+    "Dazon": [
+      "Bellossom (Battle 66-1)",
+      "Rhydon (Battle 66-2)",
+      "Gorebyss (Battle 66-3)",
+      "Weezing (Battle 66-4)",
+      "Magneton (Battle 66-5)",
+      "Alakazam (Battle 66-6)"
+    ],
+    "Ziale": [
+      "Cradily (Battle 67-1)",
+      "Pinsir (Battle 67-2)",
+      "Armaldo (Battle 67-3)",
+      "Miltank (Battle 67-4)",
+      "Claydol (Battle 67-5)",
+      "Wailord (Battle 67-6)"
+    ],
+    "Corvin": [
+      "Donphan (Battle 68-1)",
+      "Golduck (Battle 68-2)",
+      "Zangoose (Battle 68-3)",
+      "Ampharos (Battle 68-4)",
+      "Heracross (Battle 68-5)",
+      "Houndoom (Battle 68-6)"
+    ],
+    "Dunor": [
+      "Muk (Battle 69-1)",
+      "Sharpedo (Battle 69-2)",
+      "Ninetales (Battle 69-3)",
+      "Porygon2 (Battle 69-4)",
+      "Machamp (Battle 69-5)",
+      "Gardevoir (Battle 69-6)"
+    ],
+    "Vario": [
+      "Slaking (Battle 70-1)",
+      "Gyarados (Battle 70-2)",
+      "Aggron (Battle 70-3)",
+      "Walrein (Battle 70-4)",
+      "Manectric (Battle 70-5)",
+      "Cacturne (Battle 70-6)"
+    ],
+    "Lisot": [
+      "Kingdra (Battle 71-1)",
+      "Muk (Battle 71-2)",
+      "Heracross (Battle 71-3)",
+      "Shiftry (Battle 71-4)",
+      "Alakazam (Battle 71-5)",
+      "Breloom (Battle 71-6)"
+    ],
+    "Faul": [
+      "Milotic (Battle 72-1)",
+      "Houndoom (Battle 72-2)",
+      "Claydol (Battle 72-3)",
+      "Starmie (Battle 72-4)",
+      "Magneton (Battle 72-5)",
+      "Seviper (Battle 72-6)"
+    ],
+    "Gilly": [
+      "Meganium (Battle 73-1)",
+      "Ninetales (Battle 73-2)",
+      "Weezing (Battle 73-3)",
+      "Sandslash (Battle 73-4)",
+      "Gardevoir (Battle 73-5)",
+      "Umbreon (Battle 73-6)"
+    ],
+    "Chiod": [
+      "Blaziken (Battle 74-1)",
+      "Wailord (Battle 74-2)",
+      "Ampharos (Battle 74-3)",
+      "Golem (Battle 74-4)",
+      "Bellossom (Battle 74-5)",
+      "Skarmory (Battle 74-6)"
+    ],
+    "Maton": [
+      "Feraligatr (Battle 75-1)",
+      "Machamp (Battle 75-2)",
+      "Ursaring (Battle 75-3)",
+      "Rhydon (Battle 75-4)",
+      "Torkoal (Battle 75-5)",
+      "Tropius (Battle 75-6)"
+    ],
+    "Sirko": [
+      "Sceptile (Battle 76-1)",
+      "Armaldo (Battle 76-2)",
+      "Grumpig (Battle 76-3)",
+      "Exploud (Battle 76-4)",
+      "Forretress (Battle 76-5)",
+      "Glalie (Battle 76-6)"
+    ],
+    "Zalla": [
+      "Jirachi (Battle 77-1)",
+      "Absol (Battle 77-2)",
+      "Flygon (Battle 77-3)",
+      "Kirlia (Battle 77-4)",
+      "Mightyena (Battle 77-5)",
+      "Dusclops (Battle 77-6)"
+    ],
+    "Ordo": [
+      "Typhlosion (Battle 78-1)",
+      "Pinsir (Battle 78-2)",
+      "Cradily (Battle 78-3)",
+      "Ludicolo (Battle 78-4)",
+      "Xatu (Battle 78-5)",
+      "Lairon (Battle 78-6)"
+    ],
+    "Jodin": [
+      "Swampert (Battle 79-1)",
+      "Donphan (Battle 79-2)",
+      "Miltank (Battle 79-3)",
+      "Raichu (Battle 79-4)",
+      "Banette (Battle 79-5)",
+      "Piloswine (Battle 79-6)"
+    ],
+    "Dessa": [
+      "Groudon (Battle 80-1)",
+      "Castform (Battle 80-2)",
+      "Shuckle (Battle 80-3)",
+      "Electrode (Battle 80-4)",
+      "Jumpluff (Battle 80-5)",
+      "Swalot (Battle 80-6)"
+    ],
+    "Reman": [
+      "Chimecho (Battle 81-1)",
+      "Wigglytuff (Battle 81-2)",
+      "Azumarill (Battle 81-3)",
+      "Qwilfish (Battle 81-4)",
+      "Sunflora (Battle 81-5)",
+      "Pelipper (Battle 81-6)"
+    ],
+    "Feek": [
+      "Metang (Battle 82-1)",
+      "Sealeo (Battle 82-2)",
+      "Furret (Battle 82-3)",
+      "Sudowoodo (Battle 82-4)",
+      "Piloswine (Battle 82-5)",
+      "Medicham (Battle 82-6)"
+    ],
+    "Aich": [
+      "Tropius (Battle 83-1)",
+      "Pupitar (Battle 83-2)",
+      "Shelgon (Battle 83-3)",
+      "Jumpluff (Battle 83-4)",
+      "Sandslash (Battle 83-5)",
+      "Gligar (Battle 83-6)"
+    ],
+    "Wiler": [
+      "Sneasel (Battle 84-1)",
+      "Lunatone (Battle 84-2)",
+      "Solrock (Battle 84-3)",
+      "Kecleon (Battle 84-4)",
+      "Seviper (Battle 84-5)",
+      "Lairon (Battle 84-6)"
+    ],
+    "Menzon": [
+      "Breloom (Battle 85-1)",
+      "Seadra (Battle 85-2)",
+      "Quagsire (Battle 85-3)",
+      "Noctowl (Battle 85-4)",
+      "Vigoroth (Battle 85-5)",
+      "Misdreavus (Battle 85-6)"
+    ],
+    "Berlo": [
+      "Espeon (Battle 86-1)",
+      "Tentacruel (Battle 86-2)",
+      "Camerupt (Battle 86-3)",
+      "Stantler (Battle 86-4)",
+      "Seaking (Battle 86-5)",
+      "Magcargo (Battle 86-6)"
+    ],
+    "Sanol": [
+      "Metagross (Battle 87-1)",
+      "Shiftry (Battle 87-2)",
+      "Raichu (Battle 87-3)",
+      "Crobat (Battle 87-4)",
+      "Mantine (Battle 87-5)",
+      "Hitmontop (Battle 87-6)"
+    ],
+    "Rebin": [
+      "Blaziken (Battle 88-1)",
+      "Vileplume (Battle 88-2)",
+      "Lanturn (Battle 88-3)",
+      "Glalie (Battle 88-4)",
+      "Granbull (Battle 88-5)",
+      "Banette (Battle 88-6)"
+    ],
+    "Perc": [
+      "Starmie (Battle 89-1)",
+      "Huntail (Battle 89-2)",
+      "Gorebyss (Battle 89-3)",
+      "Octillery (Battle 89-4)",
+      "Whiscash (Battle 89-5)",
+      "Crawdaunt (Battle 89-6)"
+    ],
+    "Axley": [
+      "Regirock (Battle 90-1)",
+      "Regice (Battle 90-2)",
+      "Registeel (Battle 90-3)",
+      "Relicanth (Battle 90-4)",
+      "Wailord (Battle 90-5)",
+      "Flygon (Battle 90-6)"
+    ],
+    "Cruik": [
+      "Entei (Battle 91-1)",
+      "Golem (Battle 91-2)",
+      "Muk (Battle 91-3)",
+      "Torkoal (Battle 91-4)",
+      "Manectric (Battle 91-5)",
+      "Tentacruel (Battle 91-6)"
+    ],
+    "Parel": [
+      "Swampert (Battle 92-1)",
+      "Alakazam (Battle 92-2)",
+      "Ludicolo (Battle 92-3)",
+      "Walrein (Battle 92-4)",
+      "Golduck (Battle 92-5)",
+      "Exploud (Battle 92-6)"
+    ],
+    "Nomol": [
+      "Raikou (Battle 93-1)",
+      "Ninetales (Battle 93-2)",
+      "Weezing (Battle 93-3)",
+      "Shuckle (Battle 93-4)",
+      "Armaldo (Battle 93-5)",
+      "Xatu (Battle 93-6)"
+    ],
+    "Desor": [
+      "Meganium (Battle 94-1)",
+      "Typhlosion (Battle 94-2)",
+      "Feraligatr (Battle 94-3)",
+      "Espeon (Battle 94-4)",
+      "Umbreon (Battle 94-5)",
+      "Pinsir (Battle 94-6)"
+    ],
+    "Eldan": [
+      "Latias (Battle 95-1)",
+      "Ursaring (Battle 95-2)",
+      "Houndoom (Battle 95-3)",
+      "Miltank (Battle 95-4)",
+      "Electrode (Battle 95-5)",
+      "Gyarados (Battle 95-6)"
+    ],
+    "Eldora": [
+      "Suicune (Battle 96-1)",
+      "Ampharos (Battle 96-2)",
+      "Claydol (Battle 96-3)",
+      "Stantler (Battle 96-4)",
+      "Porygon2 (Battle 96-5)",
+      "Donphan (Battle 96-6)"
+    ],
+    "Lisan": [
+      "Metagross (Battle 97-1)",
+      "Cradily (Battle 97-2)",
+      "Machamp (Battle 97-3)",
+      "Skarmory (Battle 97-4)",
+      "Rhydon (Battle 97-5)",
+      "Hariyama (Battle 97-6)"
+    ],
+    "Massi": [
+      "Latios (Battle 98-1)",
+      "Kingdra (Battle 98-2)",
+      "Flygon (Battle 98-3)",
+      "Altaria (Battle 98-4)",
+      "Salamence (Battle 98-5)",
+      "Sceptile (Battle 98-6)"
+    ],
+    "Tynan": [
+      "Heracross (Battle 99-1)",
+      "Wobbuffet (Battle 99-2)",
+      "Milotic (Battle 99-3)",
+      "Dodrio (Battle 99-4)",
+      "Cacturne (Battle 99-5)",
+      "Sableye (Battle 99-6)"
+    ],
+    "Infin": [
+      "Gardevoir (Battle 100-1)",
+      "Altaria (Battle 100-2)",
+      "Kyogre (Battle 100-3)",
+      "Crobat (Battle 100-4)",
+      "Magneton (Battle 100-5)",
+      "Aggron (Battle 100-6)"
+    ]
+  },
+  "colosseum-battle-doubles": {
+    "Brot": [
+      "Poochyena (Battle 1-1)",
+      "Pineco (Battle 1-2)",
+      "Swinub (Battle 1-3)",
+      "Sandshrew (Battle 1-4)",
+      "Slakoth (Battle 1-5)",
+      "Mareep (Battle 1-6)"
+    ],
+    "Keeda": [
+      "Ralts (Battle 2-1)",
+      "Shroomish (Battle 2-2)",
+      "Sentret (Battle 2-3)",
+      "Vulpix (Battle 2-4)",
+      "Duskull (Battle 2-5)",
+      "Spinarak (Battle 2-6)"
+    ],
+    "Foler": [
+      "Magikarp (Battle 3-1)",
+      "Feebas (Battle 3-2)",
+      "Azurill (Battle 3-3)",
+      "Spoink (Battle 3-4)",
+      "Hoppip (Battle 3-5)",
+      "Wynaut (Battle 3-6)"
+    ],
+    "Pasha": [
+      "Whismur (Battle 4-1)",
+      "Shuppet (Battle 4-2)",
+      "Slugma (Battle 4-3)",
+      "Nincada (Battle 4-4)",
+      "Barboach (Battle 4-5)",
+      "Meditite (Battle 4-6)"
+    ],
+    "Bayel": [
+      "Pichu (Battle 5-1)",
+      "Baltoy (Battle 5-2)",
+      "Lotad (Battle 5-3)",
+      "Snubbull (Battle 5-4)",
+      "Ledyba (Battle 5-5)",
+      "Marill (Battle 5-6)"
+    ],
+    "Mayme": [
+      "Sunkern (Battle 6-1)",
+      "Togepi (Battle 6-2)",
+      "Wurmple (Battle 6-3)",
+      "Aron (Battle 6-4)",
+      "Shedinja (Battle 6-5)",
+      "Makuhita (Battle 6-6)"
+    ],
+    "Shadd": [
+      "Skitty (Battle 7-1)",
+      "Jigglypuff (Battle 7-2)",
+      "Kirlia (Battle 7-3)",
+      "Surskit (Battle 7-4)",
+      "Trapinch (Battle 7-5)",
+      "Zigzagoon (Battle 7-6)"
+    ],
+    "Scherla": [
+      "Beldum (Battle 8-1)",
+      "Machop (Battle 8-2)",
+      "Electrike (Battle 8-3)",
+      "Horsea (Battle 8-4)",
+      "Snorunt (Battle 8-5)",
+      "Numel (Battle 8-6)"
+    ],
+    "Delav": [
+      "Clamperl (Battle 9-1)",
+      "Magnemite (Battle 9-2)",
+      "Seedot (Battle 9-3)",
+      "Igglybuff (Battle 9-4)",
+      "Koffing (Battle 9-5)",
+      "Geodude (Battle 9-6)"
+    ],
+    "Elion": [
+      "Zubat (Battle 10-1)",
+      "Doduo (Battle 10-2)",
+      "Hoothoot (Battle 10-3)",
+      "Swablu (Battle 10-4)",
+      "Taillow (Battle 10-5)",
+      "Wingull (Battle 10-6)"
+    ],
+    "Nemi": [
+      "Silcoon (Battle 11-1)",
+      "Cascoon (Battle 11-2)",
+      "Volbeat (Battle 11-3)",
+      "Illumise (Battle 11-4)",
+      "Plusle (Battle 11-5)",
+      "Minun (Battle 11-6)"
+    ],
+    "Kelvor": [
+      "Spheal (Battle 12-1)",
+      "Gulpin (Battle 12-2)",
+      "Mawile (Battle 12-3)",
+      "Lileep (Battle 12-4)",
+      "Wooper (Battle 12-5)",
+      "Pelipper (Battle 12-6)"
+    ],
+    "Varian": [
+      "Pikachu (Battle 13-1)",
+      "Psyduck (Battle 13-2)",
+      "Treecko (Battle 13-3)",
+      "Larvitar (Battle 13-4)",
+      "Mudkip (Battle 13-5)",
+      "Torchic (Battle 13-6)"
+    ],
+    "Wendo": [
+      "Oddish (Battle 14-1)",
+      "Teddiursa (Battle 14-2)",
+      "Phanpy (Battle 14-3)",
+      "Chikorita (Battle 14-4)",
+      "Totodile (Battle 14-5)",
+      "Cyndaquil (Battle 14-6)"
+    ],
+    "Karden": [
+      "Bagon (Battle 15-1)",
+      "Chinchou (Battle 15-2)",
+      "Carvanha (Battle 15-3)",
+      "Grimer (Battle 15-4)",
+      "Abra (Battle 15-5)",
+      "Houndour (Battle 15-6)"
+    ],
+    "Shail": [
+      "Qwilfish (Battle 16-1)",
+      "Luvdisc (Battle 16-2)",
+      "Tentacool (Battle 16-3)",
+      "Corphish (Battle 16-4)",
+      "Remoraid (Battle 16-5)",
+      "Goldeen (Battle 16-6)"
+    ],
+    "Basor": [
+      "Cacnea (Battle 17-1)",
+      "Skiploom (Battle 17-2)",
+      "Nuzleaf (Battle 17-3)",
+      "Gloom (Battle 17-4)",
+      "Lombre (Battle 17-5)",
+      "Roselia (Battle 17-6)"
+    ],
+    "Raburn": [
+      "Sentret (Battle 18-1)",
+      "Vibrava (Battle 18-2)",
+      "Rhyhorn (Battle 18-3)",
+      "Delibird (Battle 18-4)",
+      "Voltorb (Battle 18-5)",
+      "Natu (Battle 18-6)"
+    ],
+    "Veron": [
+      "Graveler (Battle 19-1)",
+      "Swablu (Battle 19-2)",
+      "Plusle (Battle 19-3)",
+      "Minun (Battle 19-4)",
+      "Wailmer (Battle 19-5)",
+      "Pupitar (Battle 19-6)"
+    ],
+    "Altor": [
+      "Anorith (Battle 20-1)",
+      "Ledian (Battle 20-2)",
+      "Beautifly (Battle 20-3)",
+      "Ariados (Battle 20-4)",
+      "Dustox (Battle 20-5)",
+      "Yanma (Battle 20-6)"
+    ],
+    "Klem": [
+      "Marill (Battle 21-1)",
+      "Geodude (Battle 21-2)",
+      "Jigglypuff (Battle 21-3)",
+      "Voltorb (Battle 21-4)",
+      "Wailmer (Battle 21-5)",
+      "Phanpy (Battle 21-6)"
+    ],
+    "Procio": [
+      "Ledian (Battle 22-1)",
+      "Torkoal (Battle 22-2)",
+      "Chimecho (Battle 22-3)",
+      "Smeargle (Battle 22-4)",
+      "Sandslash (Battle 22-5)",
+      "Corsola (Battle 22-6)"
+    ],
+    "Dilasi": [
+      "Wooper (Battle 23-1)",
+      "Gligar (Battle 23-2)",
+      "Cacnea (Battle 23-3)",
+      "Flaaffy (Battle 23-4)",
+      "Swinub (Battle 23-5)",
+      "Numel (Battle 23-6)"
+    ],
+    "Mengel": [
+      "Beautifly (Battle 24-1)",
+      "Sunflora (Battle 24-2)",
+      "Roselia (Battle 24-3)",
+      "Volbeat (Battle 24-4)",
+      "Illumise (Battle 24-5)",
+      "Dustox (Battle 24-6)"
+    ],
+    "Klame": [
+      "Nosepass (Battle 25-1)",
+      "Clamperl (Battle 25-2)",
+      "Machoke (Battle 25-3)",
+      "Ariados (Battle 25-4)",
+      "Medicham (Battle 25-5)",
+      "Delcatty (Battle 25-6)"
+    ],
+    "Lonen": [
+      "Furret (Battle 26-1)",
+      "Linoone (Battle 26-2)",
+      "Togetic (Battle 26-3)",
+      "Vigoroth (Battle 26-4)",
+      "Dunsparce (Battle 26-5)",
+      "Castform (Battle 26-6)"
+    ],
+    "Omat": [
+      "Shelgon (Battle 27-1)",
+      "Sealeo (Battle 27-2)",
+      "Lairon (Battle 27-3)",
+      "Linoone (Battle 27-4)",
+      "Sunflora (Battle 27-5)",
+      "Metang (Battle 27-6)"
+    ],
+    "Stefet": [
+      "Staryu (Battle 28-1)",
+      "Aipom (Battle 28-2)",
+      "Smeargle (Battle 28-3)",
+      "Spinda (Battle 28-4)",
+      "Flaaffy (Battle 28-5)",
+      "Loudred (Battle 28-6)"
+    ],
+    "Dillot": [
+      "Noctowl (Battle 29-1)",
+      "Beautifly (Battle 29-2)",
+      "Wigglytuff (Battle 29-3)",
+      "Forretress (Battle 29-4)",
+      "Banette (Battle 29-5)",
+      "Xatu (Battle 29-6)"
+    ],
+    "Kucher": [
+      "Quilava (Battle 30-1)",
+      "Marshtomp (Battle 30-2)",
+      "Bayleef (Battle 30-3)",
+      "Combusken (Battle 30-4)",
+      "Croconaw (Battle 30-5)",
+      "Grovyle (Battle 30-6)"
+    ],
+    "Omak": [
+      "Dunsparce (Battle 31-1)",
+      "Snubbull (Battle 31-2)",
+      "Houndour (Battle 31-3)",
+      "Swablu (Battle 31-4)",
+      "Carvanha (Battle 31-5)",
+      "Taillow (Battle 31-6)"
+    ],
+    "Lunda": [
+      "Spinda (Battle 32-1)",
+      "Kecleon (Battle 32-2)",
+      "Kadabra (Battle 32-3)",
+      "Volbeat (Battle 32-4)",
+      "Zigzagoon (Battle 32-5)",
+      "Grumpig (Battle 32-6)"
+    ],
+    "Tark": [
+      "Vulpix (Battle 33-1)",
+      "Bellossom (Battle 33-2)",
+      "Taillow (Battle 33-3)",
+      "Sandshrew (Battle 33-4)",
+      "Kirlia (Battle 33-5)",
+      "Togepi (Battle 33-6)"
+    ],
+    "Drada": [
+      "Kecleon (Battle 34-1)",
+      "Seadra (Battle 34-2)",
+      "Seaking (Battle 34-3)",
+      "Girafarig (Battle 34-4)",
+      "Skiploom (Battle 34-5)",
+      "Snubbull (Battle 34-6)"
+    ],
+    "Aikon": [
+      "Mightyena (Battle 35-1)",
+      "Magcargo (Battle 35-2)",
+      "Wigglytuff (Battle 35-3)",
+      "Azumarill (Battle 35-4)",
+      "Sudowoodo (Battle 35-5)",
+      "Sneasel (Battle 35-6)"
+    ],
+    "Veston": [
+      "Chinchou (Battle 36-1)",
+      "Huntail (Battle 36-2)",
+      "Whiscash (Battle 36-3)",
+      "Torkoal (Battle 36-4)",
+      "Cacnea (Battle 36-5)",
+      "Spoink (Battle 36-6)"
+    ],
+    "Deasy": [
+      "Ninjask (Battle 37-1)",
+      "Stantler (Battle 37-2)",
+      "Tropius (Battle 37-3)",
+      "Gulpin (Battle 37-4)",
+      "Mantine (Battle 37-5)",
+      "Pikachu (Battle 37-6)"
+    ],
+    "Kebile": [
+      "Anorith (Battle 38-1)",
+      "Claydol (Battle 38-2)",
+      "Wailord (Battle 38-3)",
+      "Rhyhorn (Battle 38-4)",
+      "Psyduck (Battle 38-5)",
+      "Pinsir (Battle 38-6)"
+    ],
+    "Doton": [
+      "Seadra (Battle 39-1)",
+      "Vibrava (Battle 39-2)",
+      "Lairon (Battle 39-3)",
+      "Vigoroth (Battle 39-4)",
+      "Nuzleaf (Battle 39-5)",
+      "Lombre (Battle 39-6)"
+    ],
+    "Vernice": [
+      "Tentacruel (Battle 40-1)",
+      "Ampharos (Battle 40-2)",
+      "Phanpy (Battle 40-3)",
+      "Ninetales (Battle 40-4)",
+      "Relicanth (Battle 40-5)",
+      "Sealeo (Battle 40-6)"
+    ],
+    "Zoel": [
+      "Pelipper (Battle 41-1)",
+      "Gligar (Battle 41-2)",
+      "Delibird (Battle 41-3)",
+      "Golbat (Battle 41-4)",
+      "Masquerain (Battle 41-5)",
+      "Yanma (Battle 41-6)"
+    ],
+    "Latrin": [
+      "Gyarados (Battle 42-1)",
+      "Quilava (Battle 42-2)",
+      "Pupitar (Battle 42-3)",
+      "Shelgon (Battle 42-4)",
+      "Whiscash (Battle 42-5)",
+      "Croconaw (Battle 42-6)"
+    ],
+    "Eskola": [
+      "Azumarill (Battle 43-1)",
+      "Machamp (Battle 43-2)",
+      "Swalot (Battle 43-3)",
+      "Kadabra (Battle 43-4)",
+      "Walrein (Battle 43-5)",
+      "Jumpluff (Battle 43-6)"
+    ],
+    "Tobit": [
+      "Electrike (Battle 44-1)",
+      "Skarmory (Battle 44-2)",
+      "Electrode (Battle 44-3)",
+      "Koffing (Battle 44-4)",
+      "Corphish (Battle 44-5)",
+      "Exploud (Battle 44-6)"
+    ],
+    "Holso": [
+      "Nuzleaf (Battle 45-1)",
+      "Vileplume (Battle 45-2)",
+      "Croconaw (Battle 45-3)",
+      "Bellossom (Battle 45-4)",
+      "Golem (Battle 45-5)",
+      "Altaria (Battle 45-6)"
+    ],
+    "Bergin": [
+      "Furret (Battle 46-1)",
+      "Medicham (Battle 46-2)",
+      "Marshtomp (Battle 46-3)",
+      "Xatu (Battle 46-4)",
+      "Zangoose (Battle 46-5)",
+      "Seviper (Battle 46-6)"
+    ],
+    "Hubor": [
+      "Roselia (Battle 47-1)",
+      "Sharpedo (Battle 47-2)",
+      "Breloom (Battle 47-3)",
+      "Slugma (Battle 47-4)",
+      "Wigglytuff (Battle 47-5)",
+      "Flaaffy (Battle 47-6)"
+    ],
+    "Bano": [
+      "Misdreavus (Battle 48-1)",
+      "Wobbuffet (Battle 48-2)",
+      "Quagsire (Battle 48-3)",
+      "Swellow (Battle 48-4)",
+      "Golbat (Battle 48-5)",
+      "Sandslash (Battle 48-6)"
+    ],
+    "Votil": [
+      "Kadabra (Battle 49-1)",
+      "Linoone (Battle 49-2)",
+      "Corsola (Battle 49-3)",
+      "Ledian (Battle 49-4)",
+      "Dodrio (Battle 49-5)",
+      "Piloswine (Battle 49-6)"
+    ],
+    "Konaik": [
+      "Shuckle (Battle 50-1)",
+      "Wobbuffet (Battle 50-2)",
+      "Dusclops (Battle 50-3)",
+      "Wynaut (Battle 50-4)",
+      "Cradily (Battle 50-5)",
+      "Milotic (Battle 50-6)"
+    ],
+    "Berki": [
+      "Latias (Battle 51-1)",
+      "Delcatty (Battle 51-2)",
+      "Illumise (Battle 51-3)",
+      "Kirlia (Battle 51-4)",
+      "Miltank (Battle 51-5)",
+      "Luvdisc (Battle 51-6)"
+    ],
+    "Laret": [
+      "Blaziken (Battle 52-1)",
+      "Camerupt (Battle 52-2)",
+      "Magcargo (Battle 52-3)",
+      "Torkoal (Battle 52-4)",
+      "Typhlosion (Battle 52-5)",
+      "Houndoom (Battle 52-6)"
+    ],
+    "Lopar": [
+      "Mightyena (Battle 53-1)",
+      "Masquerain (Battle 53-2)",
+      "Hitmontop (Battle 53-3)",
+      "Mawile (Battle 53-4)",
+      "Granbull (Battle 53-5)",
+      "Stantler (Battle 53-6)"
+    ],
+    "Alene": [
+      "Croconaw (Battle 54-1)",
+      "Murkrow (Battle 54-2)",
+      "Pikachu (Battle 54-3)",
+      "Muk (Battle 54-4)",
+      "Bellossom (Battle 54-5)",
+      "Machoke (Battle 54-6)"
+    ],
+    "Banber": [
+      "Crawdaunt (Battle 55-1)",
+      "Grimer (Battle 55-2)",
+      "Cradily (Battle 55-3)",
+      "Swalot (Battle 55-4)",
+      "Loudred (Battle 55-5)",
+      "Sudowoodo (Battle 55-6)"
+    ],
+    "Basto": [
+      "Octillery (Battle 56-1)",
+      "Azumarill (Battle 56-2)",
+      "Seaking (Battle 56-3)",
+      "Tentacruel (Battle 56-4)",
+      "Luvdisc (Battle 56-5)",
+      "Qwilfish (Battle 56-6)"
+    ],
+    "Mino": [
+      "Murkrow (Battle 57-1)",
+      "Houndoom (Battle 57-2)",
+      "Absol (Battle 57-3)",
+      "Sableye (Battle 57-4)",
+      "Shiftry (Battle 57-5)",
+      "Sneasel (Battle 57-6)"
+    ],
+    "Kitel": [
+      "Cacturne (Battle 58-1)",
+      "Spinda (Battle 58-2)",
+      "Grumpig (Battle 58-3)",
+      "Smeargle (Battle 58-4)",
+      "Magcargo (Battle 58-5)",
+      "Shedinja (Battle 58-6)"
+    ],
+    "Ronix": [
+      "Combusken (Battle 59-1)",
+      "Tropius (Battle 59-2)",
+      "Kecleon (Battle 59-3)",
+      "Whiscash (Battle 59-4)",
+      "Sneasel (Battle 59-5)",
+      "Swalot (Battle 59-6)"
+    ],
+    "Atrice": [
+      "Piloswine (Battle 60-1)",
+      "Wailord (Battle 60-2)",
+      "Gloom (Battle 60-3)",
+      "Pinsir (Battle 60-4)",
+      "Tentacruel (Battle 60-5)",
+      "Weezing (Battle 60-6)"
+    ],
+    "Platen": [
+      "Sableye (Battle 61-1)",
+      "Dusclops (Battle 61-2)",
+      "Kingdra (Battle 61-3)",
+      "Shelgon (Battle 61-4)",
+      "Hariyama (Battle 61-5)",
+      "Weezing (Battle 61-6)"
+    ],
+    "Talmen": [
+      "Raichu (Battle 62-1)",
+      "Lanturn (Battle 62-2)",
+      "Ariados (Battle 62-3)",
+      "Pupitar (Battle 62-4)",
+      "Meganium (Battle 62-5)",
+      "Aipom (Battle 62-6)"
+    ],
+    "Trank": [
+      "Loudred (Battle 63-1)",
+      "Octillery (Battle 63-2)",
+      "Crobat (Battle 63-3)",
+      "Quagsire (Battle 63-4)",
+      "Lunatone (Battle 63-5)",
+      "Banette (Battle 63-6)"
+    ],
+    "Larial": [
+      "Slaking (Battle 64-1)",
+      "Jumpluff (Battle 64-2)",
+      "Machamp (Battle 64-3)",
+      "Xatu (Battle 64-4)",
+      "Rhydon (Battle 64-5)",
+      "Gyarados (Battle 64-6)"
+    ],
+    "Arek": [
+      "Delibird (Battle 65-1)",
+      "Dodrio (Battle 65-2)",
+      "Murkrow (Battle 65-3)",
+      "Altaria (Battle 65-4)",
+      "Gligar (Battle 65-5)",
+      "Pelipper (Battle 65-6)"
+    ],
+    "Mazzel": [
+      "Quilava (Battle 66-1)",
+      "Sealeo (Battle 66-2)",
+      "Girafarig (Battle 66-3)",
+      "Miltank (Battle 66-4)",
+      "Golem (Battle 66-5)",
+      "Bayleef (Battle 66-6)"
+    ],
+    "Velis": [
+      "Armaldo (Battle 67-1)",
+      "Cradily (Battle 67-2)",
+      "Nosepass (Battle 67-3)",
+      "Corsola (Battle 67-4)",
+      "Sudowoodo (Battle 67-5)",
+      "Lairon (Battle 67-6)"
+    ],
+    "Wogort": [
+      "Shiftry (Battle 68-1)",
+      "Mightyena (Battle 68-2)",
+      "Umbreon (Battle 68-3)",
+      "Absol (Battle 68-4)",
+      "Cacturne (Battle 68-5)",
+      "Crawdaunt (Battle 68-6)"
+    ],
+    "Detta": [
+      "Kingdra (Battle 69-1)",
+      "Golbat (Battle 69-2)",
+      "Swampert (Battle 69-3)",
+      "Skarmory (Battle 69-4)",
+      "Feraligatr (Battle 69-5)",
+      "Starmie (Battle 69-6)"
+    ],
+    "Langot": [
+      "Vileplume (Battle 70-1)",
+      "Altaria (Battle 70-2)",
+      "Ursaring (Battle 70-3)",
+      "Furret (Battle 70-4)",
+      "Banette (Battle 70-5)",
+      "Golem (Battle 70-6)"
+    ],
+    "Hites": [
+      "Medicham (Battle 71-1)",
+      "Porygon2 (Battle 71-2)",
+      "Nosepass (Battle 71-3)",
+      "Breloom (Battle 71-4)",
+      "Magneton (Battle 71-5)",
+      "Masquerain (Battle 71-6)"
+    ],
+    "Gohon": [
+      "Raichu (Battle 72-1)",
+      "Golduck (Battle 72-2)",
+      "Donphan (Battle 72-3)",
+      "Pinsir (Battle 72-4)",
+      "Grovyle (Battle 72-5)",
+      "Wigglytuff (Battle 72-6)"
+    ],
+    "Lazko": [
+      "Blaziken (Battle 73-1)",
+      "Vigoroth (Battle 73-2)",
+      "Hariyama (Battle 73-3)",
+      "Wobbuffet (Battle 73-4)",
+      "Tentacruel (Battle 73-5)",
+      "Milotic (Battle 73-6)"
+    ],
+    "Puros": [
+      "Breloom (Battle 74-1)",
+      "Gardevoir (Battle 74-2)",
+      "Ludicolo (Battle 74-3)",
+      "Weezing (Battle 74-4)",
+      "Forretress (Battle 74-5)",
+      "Shuckle (Battle 74-6)"
+    ],
+    "Krigon": [
+      "Typhlosion (Battle 75-1)",
+      "Misdreavus (Battle 75-2)",
+      "Camerupt (Battle 75-3)",
+      "Lunatone (Battle 75-4)",
+      "Ampharos (Battle 75-5)",
+      "Solrock (Battle 75-6)"
+    ],
+    "Zelmo": [
+      "Chimecho (Battle 76-1)",
+      "Magneton (Battle 76-2)",
+      "Manectric (Battle 76-3)",
+      "Claydol (Battle 76-4)",
+      "Sceptile (Battle 76-5)",
+      "Feraligatr (Battle 76-6)"
+    ],
+    "Chean": [
+      "Huntail (Battle 77-1)",
+      "Electrode (Battle 77-2)",
+      "Gorebyss (Battle 77-3)",
+      "Relicanth (Battle 77-4)",
+      "Wailord (Battle 77-5)",
+      "Octillery (Battle 77-6)"
+    ],
+    "Crace": [
+      "Muk (Battle 78-1)",
+      "Grumpig (Battle 78-2)",
+      "Glalie (Battle 78-3)",
+      "Lanturn (Battle 78-4)",
+      "Noctowl (Battle 78-5)",
+      "Quagsire (Battle 78-6)"
+    ],
+    "Jorner": [
+      "Heracross (Battle 79-1)",
+      "Togetic (Battle 79-2)",
+      "Dodrio (Battle 79-3)",
+      "Flygon (Battle 79-4)",
+      "Aggron (Battle 79-5)",
+      "Alakazam (Battle 79-6)"
+    ],
+    "Mortac": [
+      "Gardevoir (Battle 80-1)",
+      "Muk (Battle 80-2)",
+      "Banette (Battle 80-3)",
+      "Dusclops (Battle 80-4)",
+      "Misdreavus (Battle 80-5)",
+      "Ninetales (Battle 80-6)"
+    ],
+    "Gatik": [
+      "Heracross (Battle 81-1)",
+      "Tropius (Battle 81-2)",
+      "Chimecho (Battle 81-3)",
+      "Sharpedo (Battle 81-4)",
+      "Sunflora (Battle 81-5)",
+      "Dusclops (Battle 81-6)"
+    ],
+    "Kylet": [
+      "Piloswine (Battle 82-1)",
+      "Golduck (Battle 82-2)",
+      "Raichu (Battle 82-3)",
+      "Shiftry (Battle 82-4)",
+      "Ninetales (Battle 82-5)",
+      "Miltank (Battle 82-6)"
+    ],
+    "Durel": [
+      "Zangoose (Battle 83-1)",
+      "Seviper (Battle 83-2)",
+      "Donphan (Battle 83-3)",
+      "Ursaring (Battle 83-4)",
+      "Sableye (Battle 83-5)",
+      "Mawile (Battle 83-6)"
+    ],
+    "Volivia": [
+      "Heracross (Battle 84-1)",
+      "Swellow (Battle 84-2)",
+      "Milotic (Battle 84-3)",
+      "Ninjask (Battle 84-4)",
+      "Weezing (Battle 84-5)",
+      "Ninetales (Battle 84-6)"
+    ],
+    "Spez": [
+      "Metagross (Battle 85-1)",
+      "Cacturne (Battle 85-2)",
+      "Shuckle (Battle 85-3)",
+      "Registeel (Battle 85-4)",
+      "Cradily (Battle 85-5)",
+      "Armaldo (Battle 85-6)"
+    ],
+    "Botken": [
+      "Sceptile (Battle 86-1)",
+      "Granbull (Battle 86-2)",
+      "Swampert (Battle 86-3)",
+      "Regirock (Battle 86-4)",
+      "Skarmory (Battle 86-5)",
+      "Blaziken (Battle 86-6)"
+    ],
+    "Felmon": [
+      "Crawdaunt (Battle 87-1)",
+      "Claydol (Battle 87-2)",
+      "Crobat (Battle 87-3)",
+      "Slaking (Battle 87-4)",
+      "Exploud (Battle 87-5)",
+      "Ludicolo (Battle 87-6)"
+    ],
+    "Bolza": [
+      "Swellow (Battle 88-1)",
+      "Hariyama (Battle 88-2)",
+      "Miltank (Battle 88-3)",
+      "Alakazam (Battle 88-4)",
+      "Jumpluff (Battle 88-5)",
+      "Sharpedo (Battle 88-6)"
+    ],
+    "Finson": [
+      "Togetic (Battle 89-1)",
+      "Absol (Battle 89-2)",
+      "Shedinja (Battle 89-3)",
+      "Golduck (Battle 89-4)",
+      "Walrein (Battle 89-5)",
+      "Shuckle (Battle 89-6)"
+    ],
+    "Neblek": [
+      "Starmie (Battle 90-1)",
+      "Regice (Battle 90-2)",
+      "Porygon2 (Battle 90-3)",
+      "Electrode (Battle 90-4)",
+      "Magneton (Battle 90-5)",
+      "Solrock (Battle 90-6)"
+    ],
+    "Boren": [
+      "Metagross (Battle 91-1)",
+      "Walrein (Battle 91-2)",
+      "Granbull (Battle 91-3)",
+      "Lanturn (Battle 91-4)",
+      "Delcatty (Battle 91-5)",
+      "Flygon (Battle 91-6)"
+    ],
+    "Flegal": [
+      "Meganium (Battle 92-1)",
+      "Typhlosion (Battle 92-2)",
+      "Feraligatr (Battle 92-3)",
+      "Espeon (Battle 92-4)",
+      "Umbreon (Battle 92-5)",
+      "Ursaring (Battle 92-6)"
+    ],
+    "Aleja": [
+      "Latios (Battle 93-1)",
+      "Sceptile (Battle 93-2)",
+      "Armaldo (Battle 93-3)",
+      "Camerupt (Battle 93-4)",
+      "Glalie (Battle 93-5)",
+      "Manectric (Battle 93-6)"
+    ],
+    "Elnor": [
+      "Ninjask (Battle 94-1)",
+      "Latias (Battle 94-2)",
+      "Kingdra (Battle 94-3)",
+      "Golem (Battle 94-4)",
+      "Ampharos (Battle 94-5)",
+      "Porygon2 (Battle 94-6)"
+    ],
+    "Freyer": [
+      "Rhydon (Battle 95-1)",
+      "Manectric (Battle 95-2)",
+      "Flygon (Battle 95-3)",
+      "Gyarados (Battle 95-4)",
+      "Mantine (Battle 95-5)",
+      "Dodrio (Battle 95-6)"
+    ],
+    "Atilo": [
+      "Jirachi (Battle 96-1)",
+      "Espeon (Battle 96-2)",
+      "Xatu (Battle 96-3)",
+      "Medicham (Battle 96-4)",
+      "Gardevoir (Battle 96-5)",
+      "Girafarig (Battle 96-6)"
+    ],
+    "Desid": [
+      "Suicune (Battle 97-1)",
+      "Raikou (Battle 97-2)",
+      "Entei (Battle 97-3)",
+      "Aggron (Battle 97-4)",
+      "Donphan (Battle 97-5)",
+      "Salamence (Battle 97-6)"
+    ],
+    "Polet": [
+      "Groudon (Battle 98-1)",
+      "Shiftry (Battle 98-2)",
+      "Vileplume (Battle 98-3)",
+      "Castform (Battle 98-4)",
+      "Alakazam (Battle 98-5)",
+      "Houndoom (Battle 98-6)"
+    ],
+    "Foalck": [
+      "Kyogre (Battle 99-1)",
+      "Seaking (Battle 99-2)",
+      "Relicanth (Battle 99-3)",
+      "Gorebyss (Battle 99-4)",
+      "Huntail (Battle 99-5)",
+      "Mantine (Battle 99-6)"
+    ],
+    "Inity": [
+      "Salamence (Battle 100-1)",
+      "Starmie (Battle 100-2)",
+      "Machamp (Battle 100-3)",
+      "Crobat (Battle 100-4)",
+      "Rhydon (Battle 100-5)",
+      "Ludicolo (Battle 100-6)"
+    ]
+  },
+  "xd": {
+    "Miru": [
+      "Wurmple (Battle 1-1)",
+      "Wingull (Battle 1-2)"
+    ],
+    "Cridel": [
+      "Corphish (Battle 2-1)",
+      "Swablu (Battle 2-2)"
+    ],
+    "Bardo": [
+      "Doduo (Battle 3-1)",
+      "Spoink (Battle 3-2)"
+    ],
+    "Robell": [
+      "Hoothoot (Battle 4-1)"
+    ],
+    "Kabin": [
+      "Shroomish (Battle 5-1)"
+    ],
+    "Ezella": [
+      "Poochyena (Battle 6-1)",
+      "Sunkern (Battle 6-2)"
+    ],
+    "Horbit": [
+      "Spinarak (Battle 7-1)",
+      "Taillow (Battle 7-2)"
+    ],
+    "Eloff": [
+      "Pineco (Battle 8-1)",
+      "Nincada (Battle 8-2)",
+      "Surskit (Battle 8-3)"
+    ],
+    "Dibsin": [
+      "Chikorita (Battle 9-1)",
+      "Skitty (Battle 9-2)",
+      "Baltoy (Battle 9-3)"
+    ],
+    "Vander": [
+      "Machop (Battle 10-1)",
+      "Zigzagoon (Battle 10-2)",
+      "Whismur (Battle 10-3)"
+    ],
+    "Dabil": [
+      "Cyndaquil (Battle 11-1)"
+    ],
+    "Cidlor": [
+      "Natu (Battle 12-1)",
+      "Wooper (Battle 12-2)"
+    ],
+    "Gratin": [
+      "Wynaut (Battle 13-1)",
+      "Shuckle (Battle 13-2)"
+    ],
+    "Hardig": [
+      "Seedot (Battle 14-1)",
+      "Ledyba (Battle 14-2)"
+    ],
+    "Goling": [
+      "Snubbull (Battle 15-1)",
+      "Feebas (Battle 15-2)",
+      "Totodile (Battle 15-3)"
+    ],
+    "Jeol": [
+      "Torchic (Battle 16-1)",
+      "Mareep (Battle 16-2)"
+    ],
+    "Echart": [
+      "Ralts (Battle 17-1)"
+    ],
+    "Delf": [
+      "Slugma (Battle 18-1)",
+      "Silcoon (Battle 18-2)"
+    ],
+    "Dolam": [
+      "Larvitar (Battle 19-1)",
+      "Togepi (Battle 19-2)",
+      "Wurmple (Battle 19-3)"
+    ],
+    "Eldof": [
+      "Mudkip (Battle 20-1)",
+      "Wingull (Battle 20-2)",
+      "Lotad (Battle 20-3)"
+    ],
+    "Grestly": [
+      "Raichu (Battle 21-1)"
+    ],
+    "Folop": [
+      "Goldeen (Battle 22-1)",
+      "Togetic (Battle 22-2)"
+    ],
+    "Kwane": [
+      "Phanpy (Battle 23-1)",
+      "Flaaffy (Battle 23-2)",
+      "Koffing (Battle 23-3)"
+    ],
+    "Napol": [
+      "Mightyena (Battle 24-1)",
+      "Nosepass (Battle 24-2)"
+    ],
+    "Koiyt": [
+      "Lileep (Battle 25-1)"
+    ],
+    "Atill": [
+      "Teddiursa (Battle 26-1)",
+      "Forretress (Battle 26-2)"
+    ],
+    "Metson": [
+      "Corsola (Battle 27-1)",
+      "Linoone (Battle 27-2)",
+      "Houndour (Battle 27-3)"
+    ],
+    "Jespon": [
+      "Masquerain (Battle 28-1)",
+      "Corphish (Battle 28-2)"
+    ],
+    "Mopar": [
+      "Quagsire (Battle 29-1)",
+      "Sealeo (Battle 29-2)"
+    ],
+    "Taria": [
+      "Furret (Battle 30-1)",
+      "Spinda (Battle 30-2)",
+      "Electrike (Battle 30-3)"
+    ],
+    "Atles": [
+      "Tentacool (Battle 31-1)",
+      "Rhyhorn (Battle 31-2)"
+    ],
+    "Niven": [
+      "Kirlia (Battle 32-1)"
+    ],
+    "Fopaw": [
+      "Luvdisc (Battle 33-1)",
+      "Loudred (Battle 33-2)"
+    ],
+    "Petil": [
+      "Beldum (Battle 34-1)",
+      "Corsola (Battle 34-2)",
+      "Qwilfish (Battle 34-3)"
+    ],
+    "Nevah": [
+      "Chimecho (Battle 35-1)",
+      "Cacnea (Battle 35-2)"
+    ],
+    "Selor": [
+      "Grimer (Battle 36-1)"
+    ],
+    "Pixen": [
+      "Kecleon (Battle 37-1)",
+      "Gligar (Battle 37-2)"
+    ],
+    "Edin": [
+      "Gloom (Battle 38-1)",
+      "Ariados (Battle 38-2)",
+      "Yanma (Battle 38-3)"
+    ],
+    "Roze": [
+      "Graveler (Battle 39-1)",
+      "Nuzleaf (Battle 39-2)"
+    ],
+    "Boyden": [
+      "Anorith (Battle 40-1)",
+      "Wigglytuff (Battle 40-2)",
+      "Hitmontop (Battle 40-3)"
+    ],
+    "Hombol": [
+      "Lombre (Battle 41-1)",
+      "Graveler (Battle 41-2)"
+    ],
+    "Jiler": [
+      "Delcatty (Battle 42-1)",
+      "Gloom (Battle 42-2)",
+      "Ariados (Battle 42-3)"
+    ],
+    "Carlon": [
+      "Wailmer (Battle 43-1)",
+      "Ledian (Battle 43-2)",
+      "Hitmontop (Battle 43-3)",
+      "Skiploom (Battle 43-4)"
+    ],
+    "Kuxor": [
+      "Sneasel (Battle 44-1)",
+      "Grovyle (Battle 44-2)",
+      "Shelgon (Battle 44-3)"
+    ],
+    "Lesk": [
+      "Raichu (Battle 45-1)",
+      "Nuzleaf (Battle 45-2)"
+    ],
+    "Mobid": [
+      "Masquerain (Battle 46-1)",
+      "Combusken (Battle 46-2)",
+      "Quagsire (Battle 46-3)"
+    ],
+    "Blist": [
+      "Croconaw (Battle 47-1)",
+      "Sudowoodo (Battle 47-2)",
+      "Kirlia (Battle 47-3)",
+      "Loudred (Battle 47-4)"
+    ],
+    "Knook": [
+      "Quilava (Battle 48-1)",
+      "Machoke (Battle 48-2)",
+      "Sealeo (Battle 48-3)"
+    ],
+    "Burdon": [
+      "Bayleef (Battle 49-1)",
+      "Wailmer (Battle 49-2)",
+      "Misdreavus (Battle 49-3)"
+    ],
+    "Calus": [
+      "Grovyle (Battle 50-1)",
+      "Mightyena (Battle 50-2)",
+      "Marshtomp (Battle 50-3)",
+      "Combusken (Battle 50-4)",
+      "Sableye (Battle 50-5)"
+    ],
+    "Doost": [
+      "Rhyhorn (Battle 51-1)",
+      "Phanpy (Battle 51-2)"
+    ],
+    "Jimer": [
+      "Numel (Battle 52-1)",
+      "Cacnea (Battle 52-2)",
+      "Lairon (Battle 52-3)",
+      "Houndour (Battle 52-4)"
+    ],
+    "Crex": [
+      "Flaaffy (Battle 53-1)",
+      "Kadabra (Battle 53-2)",
+      "Vibrava (Battle 53-3)"
+    ],
+    "Feeply": [
+      "Metang (Battle 54-1)",
+      "Pupitar (Battle 54-2)"
+    ],
+    "Jacen": [
+      "Duskull (Battle 55-1)",
+      "Shedinja (Battle 55-2)",
+      "Chimecho (Battle 55-3)",
+      "Koffing (Battle 55-4)"
+    ],
+    "Dibel": [
+      "Linoone (Battle 56-1)",
+      "Furret (Battle 56-2)",
+      "Kecleon (Battle 56-3)"
+    ],
+    "Kevy": [
+      "Wigglytuff (Battle 57-1)",
+      "Vigoroth (Battle 57-2)"
+    ],
+    "Gabsen": [
+      "Dustox (Battle 58-1)",
+      "Anorith (Battle 58-2)",
+      "Forretress (Battle 58-3)",
+      "Lileep (Battle 58-4)"
+    ],
+    "Degin": [
+      "Corsola (Battle 59-1)",
+      "Clamperl (Battle 59-2)",
+      "Togetic (Battle 59-3)"
+    ],
+    "Hampy": [
+      "Solrock (Battle 60-1)",
+      "Lunatone (Battle 60-2)",
+      "Castform (Battle 60-3)",
+      "Exploud (Battle 60-4)"
+    ],
+    "Melin": [
+      "Swellow (Battle 61-1)",
+      "Golbat (Battle 61-2)",
+      "Murkrow (Battle 61-3)"
+    ],
+    "Gibson": [
+      "Plusle (Battle 62-1)",
+      "Minun (Battle 62-2)",
+      "Pidgeotto (Battle 62-3)",
+      "Dugtrio (Battle 62-4)"
+    ],
+    "Idlon": [
+      "Linoone (Battle 63-1)",
+      "Furret (Battle 63-2)",
+      "Vigoroth (Battle 63-3)",
+      "Electabuzz (Battle 63-4)"
+    ],
+    "Hobol": [
+      "Ninjask (Battle 64-1)",
+      "Jumpluff (Battle 64-2)",
+      "Medicham (Battle 64-3)",
+      "Raichu (Battle 64-4)"
+    ],
+    "Keller": [
+      "Crobat (Battle 65-1)",
+      "Manectric (Battle 65-2)",
+      "Sceptile (Battle 65-3)",
+      "Electrode (Battle 65-4)",
+      "Starmie (Battle 65-5)"
+    ],
+    "Ebilo": [
+      "Roselia (Battle 66-1)",
+      "Spinda (Battle 66-2)",
+      "Beautifly (Battle 66-3)"
+    ],
+    "Tulon": [
+      "Golduck (Battle 67-1)",
+      "Ampharos (Battle 67-2)",
+      "Gorebyss (Battle 67-3)",
+      "Magneton (Battle 67-4)"
+    ],
+    "Okor": [
+      "Gloom (Battle 68-1)",
+      "Sunflora (Battle 68-2)",
+      "Vileplume (Battle 68-3)"
+    ],
+    "Ebzor": [
+      "Kirlia (Battle 69-1)",
+      "Girafarig (Battle 69-2)",
+      "Kadabra (Battle 69-3)",
+      "Lunatone (Battle 69-4)"
+    ],
+    "Nocon": [
+      "Gardevoir (Battle 70-1)",
+      "Typhlosion (Battle 70-2)",
+      "Espeon (Battle 70-3)",
+      "Houndoom (Battle 70-4)",
+      "Alakazam (Battle 70-5)"
+    ],
+    "Ordes": [
+      "Dustox (Battle 71-1)",
+      "Kecleon (Battle 71-2)",
+      "Ledian (Battle 71-3)"
+    ],
+    "Ovun": [
+      "Lombre (Battle 72-1)",
+      "Mantine (Battle 72-2)",
+      "Tentacool (Battle 72-3)"
+    ],
+    "Adeson": [
+      "Bellossom (Battle 73-1)",
+      "Togetic (Battle 73-2)",
+      "Hitmontop (Battle 73-3)",
+      "Altaria (Battle 73-4)"
+    ],
+    "Robit": [
+      "Claydol (Battle 74-1)",
+      "Grumpig (Battle 74-2)",
+      "Cradily (Battle 74-3)",
+      "Tentacruel (Battle 74-4)"
+    ],
+    "Noxon": [
+      "Umbreon (Battle 75-1)",
+      "Ludicolo (Battle 75-2)",
+      "Milotic (Battle 75-3)",
+      "Articuno (Battle 75-4)",
+      "Regice (Battle 75-5)"
+    ],
+    "Releo": [
+      "Ursaring (Battle 76-1)",
+      "Qwilfish (Battle 76-2)",
+      "Ariados (Battle 76-3)"
+    ],
+    "Cark": [
+      "Rhydon (Battle 77-1)",
+      "Dodrio (Battle 77-2)",
+      "Solrock (Battle 77-3)"
+    ],
+    "Minot": [
+      "Mightyena (Battle 78-1)",
+      "Shiftry (Battle 78-2)",
+      "Sharpedo (Battle 78-3)",
+      "Crawdaunt (Battle 78-4)"
+    ],
+    "Lask": [
+      "Breloom (Battle 79-1)",
+      "Swampert (Battle 79-2)",
+      "Tyranitar (Battle 79-3)",
+      "Armaldo (Battle 79-4)"
+    ],
+    "Naday": [
+      "Blaziken (Battle 80-1)",
+      "Gyarados (Battle 80-2)",
+      "Salamence (Battle 80-3)",
+      "Machamp (Battle 80-4)",
+      "Heracross (Battle 80-5)"
+    ],
+    "Hols": [
+      "Wobbuffet (Battle 81-1)",
+      "Grimer (Battle 81-2)",
+      "Swalot (Battle 81-3)",
+      "Exploud (Battle 81-4)"
+    ],
+    "Albah": [
+      "Wailmer (Battle 82-1)",
+      "Azumarill (Battle 82-2)",
+      "Castform (Battle 82-3)",
+      "Wailord (Battle 82-4)"
+    ],
+    "Ginner": [
+      "Whiscash (Battle 83-1)",
+      "Shedinja (Battle 83-2)",
+      "Lanturn (Battle 83-3)",
+      "Quagsire (Battle 83-4)"
+    ],
+    "Copin": [
+      "Glalie (Battle 84-1)",
+      "Tropius (Battle 84-2)",
+      "Walrein (Battle 84-3)",
+      "Dunsparce (Battle 84-4)"
+    ],
+    "Koren": [
+      "Hariyama (Battle 85-1)",
+      "Slaking (Battle 85-2)",
+      "Wigglytuff (Battle 85-3)"
+    ],
+    "Laks": [
+      "Clamperl (Battle 86-1)",
+      "Forretress (Battle 86-2)",
+      "Rhyhorn (Battle 86-3)",
+      "Pelipper (Battle 86-4)"
+    ],
+    "Kippen": [
+      "Shelgon (Battle 87-1)",
+      "Magcargo (Battle 87-2)",
+      "Metang (Battle 87-3)",
+      "Torkoal (Battle 87-4)",
+      "Koffing (Battle 87-5)"
+    ],
+    "Nasom": [
+      "Sandslash (Battle 88-1)",
+      "Golem (Battle 88-2)",
+      "Miltank (Battle 88-3)"
+    ],
+    "Nimblis": [
+      "Weezing (Battle 89-1)",
+      "Pineco (Battle 89-2)",
+      "Seedot (Battle 89-3)",
+      "Sudowoodo (Battle 89-4)",
+      "Graveler (Battle 89-5)",
+      "Nosepass (Battle 89-6)"
+    ],
+    "Ragen": [
+      "Regirock (Battle 90-1)",
+      "Aggron (Battle 90-2)",
+      "Metagross (Battle 90-3)",
+      "Gligar (Battle 90-4)",
+      "Skarmory (Battle 90-5)"
+    ],
+    "Newin": [
+      "Ludicolo (Battle 91-1)",
+      "Kingdra (Battle 91-2)",
+      "Gorebyss (Battle 91-3)",
+      "Huntail (Battle 91-4)",
+      "Lanturn (Battle 91-5)",
+      "Milotic (Battle 91-6)"
+    ],
+    "Roben": [
+      "Tyranitar (Battle 92-1)",
+      "Cacturne (Battle 92-2)",
+      "Sandslash (Battle 92-3)",
+      "Gligar (Battle 92-4)",
+      "Aggron (Battle 92-5)"
+    ],
+    "Rillian": [
+      "Espeon (Battle 93-1)",
+      "Umbreon (Battle 93-2)",
+      "Entei (Battle 93-3)",
+      "Suicune (Battle 93-4)",
+      "Raikou (Battle 93-5)"
+    ],
+    "Solog": [
+      "Sceptile (Battle 94-1)",
+      "Swampert (Battle 94-2)",
+      "Blaziken (Battle 94-3)",
+      "Meganium (Battle 94-4)",
+      "Feraligatr (Battle 94-5)",
+      "Typhlosion (Battle 94-6)"
+    ],
+    "Saken": [
+      "Gyarados (Battle 95-1)",
+      "Rhydon (Battle 95-2)",
+      "Starmie (Battle 95-3)",
+      "Mantine (Battle 95-4)",
+      "Manectric (Battle 95-5)"
+    ],
+    "Sivil": [
+      "Ninjask (Battle 96-1)",
+      "Togetic (Battle 96-2)",
+      "Armaldo (Battle 96-3)",
+      "Breloom (Battle 96-4)",
+      "Ursaring (Battle 96-5)",
+      "Miltank (Battle 96-6)"
+    ],
+    "Flostin": [
+      "Crobat (Battle 97-1)",
+      "Swellow (Battle 97-2)",
+      "Heracross (Battle 97-3)",
+      "Hariyama (Battle 97-4)",
+      "Machamp (Battle 97-5)"
+    ],
+    "Tetil": [
+      "Shiftry (Battle 98-1)",
+      "Jumpluff (Battle 98-2)",
+      "Houndoom (Battle 98-3)",
+      "Castform (Battle 98-4)",
+      "Flygon (Battle 98-5)"
+    ],
+    "Libal": [
+      "Electrode (Battle 99-1)",
+      "Regirock (Battle 99-2)",
+      "Glalie (Battle 99-3)",
+      "Shedinja (Battle 99-4)",
+      "Registeel (Battle 99-5)",
+      "Regice (Battle 99-6)"
+    ],
+    "Battlus": [
+      "Dusclops (Battle 100-1)",
+      "Latios (Battle 100-2)",
+      "Latias (Battle 100-3)",
+      "Salamence (Battle 100-4)",
+      "Metagross (Battle 100-5)",
+      "Slaking (Battle 100-6)"
+    ]
+  }
+}

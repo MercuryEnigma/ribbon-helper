@@ -90,6 +90,14 @@ export interface CalcResult {
 // SideState uses Record<string, any> so each gen can add its own fields
 export type SideState = Record<string, any>
 
+export interface OpponentLevelParams {
+  modeId: string
+  battleNum: number
+  trainer: Trainer | null
+  pokemonLabel: string
+  p1Level: number
+}
+
 // ──────────────────────────────────────────────
 // GameConfig interface
 // ──────────────────────────────────────────────
@@ -119,6 +127,8 @@ export interface GameConfig {
   getPokemonForTrainer: (trainerName: string, modeId?: string, battleNum?: number) => string[]
   getIVsForTrainer: (trainer: Trainer | null) => number
   getBattleRange: (battleNum: number, modeId?: string) => string
+  getOpponentLevel?: (params: OpponentLevelParams) => number | undefined
+  opponentIvsLabel?: string
 
   // Team
   buildP1Options: (ribbonMaster: StoredSet | null, pokemonSets: StoredSet[], modeLabels: string[]) => P1Option[]
@@ -139,6 +149,7 @@ export interface GameConfig {
 
 export { emeraldConfig } from './gen3Battles'
 export { rsConfig } from './rsBattles'
+export { mtBattleConfig } from './mtBattleBattles'
 export { sunMoonConfig } from './gen7Battles'
 export { orasConfig } from './gen6Battles'
 export { gen4Config } from './gen4Battles'

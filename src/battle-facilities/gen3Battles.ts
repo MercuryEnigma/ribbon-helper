@@ -80,7 +80,7 @@ function getTrainersForBattle(battleNum: number): Trainer[] {
 }
 
 export const emeraldConfig = createGen3GameConfig({
-  title: 'Emerald - Battle Frontier Tower',
+  title: 'Emerald - Battle Tower',
   modes: EMERALD_MODES,
   teamData: teamData as Gen3Setdex,
   getTrainersForBattle,

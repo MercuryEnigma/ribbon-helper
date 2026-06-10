@@ -3,6 +3,7 @@ import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import {
   emeraldConfig,
   rsConfig,
+  mtBattleConfig,
   sunMoonConfig,
   orasConfig,
   gen4Config,
@@ -30,6 +31,7 @@ import './battle-facilities.css'
 const GAME_OPTIONS: { slug: string; config: GameConfig }[] = [
   { slug: 'rs', config: rsConfig },
   { slug: 'emerald', config: emeraldConfig },
+  { slug: 'mt-battle', config: mtBattleConfig },
   { slug: 'dp', config: dpConfig },
   { slug: 'pthgss', config: gen4Config },
   { slug: 'oras', config: orasConfig },
@@ -114,12 +116,13 @@ function formatEvs(evs: Partial<Record<string, number>>): string {
 }
 
 function BattleStatusAccordion({
-  label, side, level, maxLevel, onLevelChange, onChange, open, onToggle, fieldDefs, summary,
+  label, side, level, maxLevel, levelDisabled, onLevelChange, onChange, open, onToggle, fieldDefs, summary,
 }: {
   label: string
   side: SideState
   level: number
   maxLevel?: number
+  levelDisabled?: boolean
   onLevelChange: (lvl: number) => void
   onChange: (s: SideState) => void
   open: boolean
@@ -156,6 +159,7 @@ function BattleStatusAccordion({
               min={1}
               max={maxLevel ?? 100}
               value={level}
+              disabled={levelDisabled}
               onChange={e => {
                 const n = parseInt(e.target.value) || 1
                 const cap = maxLevel ?? 100
@@ -529,6 +533,14 @@ export default function BattleFacilities() {
   }, [availableSets, p2Label])
 
   const p2Ivs = config.getIVsForTrainer(selectedTrainer)
+  const configuredP2Level = config.getOpponentLevel?.({
+    modeId: mode.id,
+    battleNum,
+    trainer: selectedTrainer,
+    pokemonLabel: effectiveP2Label,
+    p1Level,
+  })
+  const effectiveP2Level = configuredP2Level ?? p2Level
 
   const emptyCalc = { p1Results: [] as DamageResult[], p2Results: [] as DamageResult[], p1MaxHP: 0, p2MaxHP: 0, p1Summary: undefined as PokeSummary | undefined, p2Summary: undefined as PokeSummary | undefined }
   const { p1Results, p2Results, p1MaxHP, p2MaxHP, p1Summary, p2Summary } = useMemo(() => {
@@ -539,7 +551,7 @@ export default function BattleFacilities() {
       p1: selectedP1,
       p2Label: effectiveP2Label,
       p1Level,
-      p2Level,
+      p2Level: effectiveP2Level,
       p2Ivs,
       p2Ability,
       p2Nature,
@@ -553,7 +565,7 @@ export default function BattleFacilities() {
 
     if (!result) return emptyCalc
     return result
-  }, [config, selectedP1, effectiveP2Label, p1Level, p2Level, p2Ivs, weather, terrain, gravity, p1Side, p2Side, mode, p2Ability, p2Nature])
+  }, [config, selectedP1, effectiveP2Label, p1Level, effectiveP2Level, p2Ivs, weather, terrain, gravity, p1Side, p2Side, mode, p2Ability, p2Nature])
 
   // Sync maxHP/curHP when pokemon changes or side state resets
   useEffect(() => {
@@ -799,7 +811,7 @@ export default function BattleFacilities() {
                   title="Reset to battle 1"
                 >Reset</button>
                 {config.getBattleRange(battleNum, mode.id) && <span className="bf-range-badge">{config.getBattleRange(battleNum, mode.id)}</span>}
-                <span className="bf-range-badge">{p2Ivs} IVs</span>
+                <span className="bf-range-badge">{config.opponentIvsLabel ?? `${p2Ivs} IVs`}</span>
               </div>
               <div className="bf-trainer-row">
                 <span className="bf-row-label">Trainer</span>
@@ -901,8 +913,9 @@ export default function BattleFacilities() {
           <BattleStatusAccordion
             label="Opponent"
             side={p2Side}
-            level={p2Level}
+            level={effectiveP2Level}
             maxLevel={mode.maxLevel}
+            levelDisabled={configuredP2Level !== undefined}
             onLevelChange={handleP2LevelChange}
             onChange={setP2Side}
             open={p2StatusOpen}
