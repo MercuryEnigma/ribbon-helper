@@ -18,7 +18,8 @@ const RS_MODES: FacilityMode[] = [
     maxLevel: 50,
     format: 'singles',
     teams: [
-      { name: "Venty's Latios / Metagross / Suicune", url: 'https://pokepast.es/9f353ea337d86f51', description: 'Recommended team:', pokemon: ['Latios (RS Singles)', 'Metagross (RS Singles)', 'Suicune (RS Singles)'] },
+      { name: "Psychic J's Salamence / Registeel / Latios", url: 'https://pokepast.es/8569c37ec0f62507', description: 'Recommended team:', pokemon: ['Salamence (Psychic J RS Singles)', 'Registeel (Psychic J RS Singles)', 'Latios (Psychic J RS Singles)'] },
+      { name: "Venty's Latios / Metagross / Suicune", url: 'https://pokepast.es/9f353ea337d86f51', description: 'Emerald team:', pokemon: ['Latios (RS Singles)', 'Metagross (RS Singles)', 'Suicune (RS Singles)'] },
     ],
     ribbon: { name: 'Winning Ribbon', description: 'Win a full 7-set from battle 50-56 onwards. The Battle Tower awards the Winning Ribbon.', icon: '/images/ribbons/winning-ribbon.png' },
   },
@@ -29,7 +30,8 @@ const RS_MODES: FacilityMode[] = [
     maxLevel: 100,
     format: 'singles',
     teams: [
-      { name: "Venty's Latios / Metagross / Suicune", url: 'https://pokepast.es/9f353ea337d86f51', description: 'Recommended team:', pokemon: ['Latios (RS Singles)', 'Metagross (RS Singles)', 'Suicune (RS Singles)'] },
+      { name: "Psychic J's Salamence / Registeel / Latios", url: 'https://pokepast.es/8569c37ec0f62507', description: 'Recommended team:', pokemon: ['Salamence (Psychic J RS Singles)', 'Registeel (Psychic J RS Singles)', 'Latios (Psychic J RS Singles)'] },
+      { name: "Venty's Latios / Metagross / Suicune", url: 'https://pokepast.es/9f353ea337d86f51', description: 'Emerald team:', pokemon: ['Latios (RS Singles)', 'Metagross (RS Singles)', 'Suicune (RS Singles)'] },
     ],
     ribbon: { name: 'Victory Ribbon', description: 'Win a full 7-set from battle 50-56 onwards. The Battle Tower awards the Victory Ribbon.', icon: '/images/ribbons/victory-ribbon.png' },
   },

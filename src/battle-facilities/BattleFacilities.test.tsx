@@ -20,5 +20,15 @@ describe('BattleFacilities routes', () => {
     const natureSelect = screen.getByLabelText('Opponent nature')
     fireEvent.change(natureSelect, { target: { value: 'Adamant' } })
     expect(natureSelect).toHaveValue('Adamant')
+
+    expect(screen.getByRole('link', { name: "Psychic J's Salamence / Registeel / Latios" }).closest('li'))
+      .toHaveTextContent("Recommended team: Psychic J's Salamence / Registeel / Latios")
+    expect(screen.getByRole('link', { name: "Venty's Latios / Metagross / Suicune" }).closest('li'))
+      .toHaveTextContent("Emerald team: Venty's Latios / Metagross / Suicune")
+
+    expect(screen.getByDisplayValue("Psychic J's Salamence / Registeel / Latios")).toBeInTheDocument()
+    expect(screen.getByRole('option', { name: 'Salamence (Psychic J RS Singles)' })).toBeInTheDocument()
+    expect(screen.getByRole('option', { name: 'Registeel (Psychic J RS Singles)' })).toBeInTheDocument()
+    expect(screen.getByRole('option', { name: 'Latios (Psychic J RS Singles)' })).toBeInTheDocument()
   })
 })

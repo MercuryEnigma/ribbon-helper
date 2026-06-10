@@ -14,6 +14,21 @@
       ],
       "nature": "Timid",
       "item": "Lum Berry"
+    },
+    "Latios (Psychic J RS Singles)": {
+      "evs": {
+        "hp": 4,
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Dragon Claw",
+        "Psychic",
+        "Thunderbolt",
+        "Ice Beam"
+      ],
+      "nature": "Modest",
+      "item": "Lum Berry"
     }
   },
   "Metagross": {
@@ -46,6 +61,40 @@
         "Ice Beam",
         "Calm Mind",
         "Rest"
+      ],
+      "nature": "Bold",
+      "item": "Leftovers"
+    }
+  },
+  "Salamence": {
+    "Salamence (Psychic J RS Singles)": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Earthquake",
+        "Rock Slide",
+        "Aerial Ace",
+        "Brick Break"
+      ],
+      "nature": "Adamant",
+      "item": "Choice Band"
+    }
+  },
+  "Registeel": {
+    "Registeel (Psychic J RS Singles)": {
+      "evs": {
+        "hp": 252,
+        "df": 100,
+        "sd": 152,
+        "sp": 6
+      },
+      "moves": [
+        "Toxic",
+        "Seismic Toss",
+        "Amnesia",
+        "Iron Defense"
       ],
       "nature": "Bold",
       "item": "Leftovers"

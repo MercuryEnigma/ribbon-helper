@@ -29,6 +29,41 @@ describe('Ruby/Sapphire Battle Tower config', () => {
     expect(rsConfig.modes.every(mode => mode.format === 'singles')).toBe(true)
   })
 
+  it('includes Psychic J\'s Salamence and Registeel team in both modes', () => {
+    for (const mode of rsConfig.modes) {
+      const team = mode.teams.find(entry => entry.url === 'https://pokepast.es/8569c37ec0f62507')
+      expect(mode.teams[0]).toBe(team)
+      expect(team?.description).toBe('Recommended team:')
+      expect(mode.teams[1].description).toBe('Emerald team:')
+      expect(team?.pokemon).toEqual([
+        'Salamence (Psychic J RS Singles)',
+        'Registeel (Psychic J RS Singles)',
+        'Latios (Psychic J RS Singles)',
+      ])
+
+      const options = rsConfig.buildP1Options(null, [], team?.pokemon ?? [])
+      expect(options.map(option => option.species)).toEqual(['Salamence', 'Registeel', 'Latios'])
+      expect(options[0].set).toMatchObject({
+        evs: { at: 252, sp: 252 },
+        moves: ['Earthquake', 'Rock Slide', 'Aerial Ace', 'Brick Break'],
+        nature: 'Adamant',
+        item: 'Choice Band',
+      })
+      expect(options[1].set).toMatchObject({
+        evs: { hp: 252, df: 100, sd: 152, sp: 6 },
+        moves: ['Toxic', 'Seismic Toss', 'Amnesia', 'Iron Defense'],
+        nature: 'Bold',
+        item: 'Leftovers',
+      })
+      expect(options[2].set).toMatchObject({
+        evs: { hp: 4, sa: 252, sp: 252 },
+        moves: ['Dragon Claw', 'Psychic', 'Thunderbolt', 'Ice Beam'],
+        nature: 'Modest',
+        item: 'Lum Berry',
+      })
+    }
+  })
+
   it('uses the R/S trainer progression and listed IVs', () => {
     expect(rsConfig.getBattleRange(1)).toBe('1-6')
     expect(rsConfig.getBattleRange(7)).toBe('7')
