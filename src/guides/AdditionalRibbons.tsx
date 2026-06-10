@@ -63,7 +63,12 @@ const additionalRibbons: Guide = {
       ribbonId: 'earth-ribbon',
       content: (
         <>
-          <p>In Pokémon Colosseum or Pokémon XD: Gale of Darkness, clear the Mt. Battle 100-Trainer challenge in Battle Mode without changing the registered party. The Ribbon is awarded to the Pokémon that complete the challenge.</p>
+          <p>In Pokémon Colosseum or Pokémon XD: Gale of Darkness, clear the Mt. Battle 100-Trainer challenge without changing the registered party. The ribbon is awarded to the Pokémon that complete the challenge.</p>
+          <ul>
+            <li>Colosseum: Clear in Story Mode to receive the ribbon, and also receive a Time Flute just before Battle 100.</li>
+            <li>Colosseum: You do <strong>not</strong> receive a ribbon in Battle Mode, receiving Ho-oh instead.</li>
+            <li>XD: Gale of Darkness: Clear in Story Mode to recieve the ribbon, and also receive a Johto starter with its elemental "ultimate move."</li>
+          </ul>
         </>
       ),
     },
@@ -71,7 +76,8 @@ const additionalRibbons: Guide = {
       ribbonId: 'national-ribbon',
       content: (
         <>
-          <p>Purify a Shadow Pokémon in Pokémon Colosseum or Pokémon XD: Gale of Darkness. Non-Shadow Pokémon cannot obtain this Ribbon.</p>
+          <p>Purify a Shadow Pokémon in Pokémon Colosseum or Pokémon XD: Gale of Darkness.</p>
+          <ul><li>Non-Shadow Pokémon cannot obtain this Ribbon.</li></ul>
         </>
       ),
     },
@@ -79,7 +85,8 @@ const additionalRibbons: Guide = {
       ribbonId: 'hisui-ribbon',
       content: (
         <>
-          <p>In Pokémon Legends: Arceus, visit Dagero's Photography Studio in Jubilife Village and choose "Prepare a Pokémon" with the Pokémon. Taking or saving the final photo is not required. The Ribbon is hidden in Legends: Arceus but appears after transfer to later games.</p>
+          <p>In Pokémon Legends: Arceus, visit Dagero's Photography Studio in Jubilife Village and choose "Prepare a Pokémon" with the Pokémon. Taking or saving the final photo is not required.</p>
+          <ul><li>The Ribbon is hidden in Legends: Arceus but appears after transfer to later games.</li></ul>
         </>
       ),
     },

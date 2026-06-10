@@ -20,12 +20,15 @@ import {
 
 export { computeGen4Speed }
 
-export const MOVES_DPP = movesData as unknown as Record<string, { bp: number; type: string; category?: string; isSpread?: boolean; isSound?: boolean; isPunch?: boolean; hasSecondaryEffect?: boolean; acc?: number; makesContact?: boolean; hasRecoil?: number | string; hits?: number; isMLG?: boolean }>
+export type Gen4MoveDex = Record<string, { bp: number; type: string; category?: string; isSpread?: boolean; isSound?: boolean; isPunch?: boolean; hasSecondaryEffect?: boolean; acc?: number; makesContact?: boolean; hasRecoil?: number | string; hits?: number; maxMultiHits?: number; isMLG?: boolean }>
+export type Gen4Setdex = Record<string, Record<string, SetdexEntry>>
+
+export const MOVES_DPP = movesData as unknown as Gen4MoveDex
 export const POKEDEX_DPP = pokedexData as Record<string, PokedexEntry>
-export const SETDEX_PTHGSS = setdexData as Record<string, Record<string, SetdexEntry>>
+export const SETDEX_PTHGSS = setdexData as Gen4Setdex
 
 // --- Natures (for stat calculation) ---
-const NATURES: Record<string, [string, string]> = {
+const NATURE_MODIFIERS: Record<string, [string, string]> = {
   "Adamant": ["at","sa"], "Bashful": ["",""], "Bold": ["df","at"],
   "Brave": ["at","sp"], "Calm": ["sd","at"], "Careful": ["sd","sa"],
   "Docile": ["",""], "Gentle": ["sd","df"], "Hardy": ["",""],
@@ -36,6 +39,7 @@ const NATURES: Record<string, [string, string]> = {
   "Relaxed": ["df","sp"], "Sassy": ["sd","sp"], "Serious": ["",""],
   "Timid": ["sp","at"],
 }
+export const GEN4_NATURES = Object.keys(NATURE_MODIFIERS)
 
 // --- Pokedex data ---
 export interface BaseStats {
@@ -109,7 +113,7 @@ function calcHP(base: number, iv: number, ev: number, level: number): number {
 }
 
 function calcStat(base: number, iv: number, ev: number, level: number, nature: string, statName: string): number {
-  const natureMods = NATURES[nature] ?? ["",""]
+  const natureMods = NATURE_MODIFIERS[nature] ?? ["",""]
   const natureMult = natureMods[0] === statName ? 1.1 : natureMods[1] === statName ? 0.9 : 1
   return Math.floor((Math.floor((base * 2 + iv + Math.floor(ev / 4)) * level / 100) + 5) * natureMult)
 }
@@ -122,6 +126,7 @@ export function buildPokemon(
   setLabel: string,
   level = 50,
   ivs = 31,
+  moveData: Gen4MoveDex = MOVES_DPP,
 ): Pokemon {
   const bs = dexEntry.bs
   const evs: Record<string, number> = {
@@ -143,7 +148,7 @@ export function buildPokemon(
 
   const moves: MoveData[] = set.moves.map(moveName => {
     if (!moveName) return { name: '(No Move)', bp: 0, type: 'Normal', category: 'Physical', hits: 1 } satisfies MoveData
-    const md = MOVES_DPP[moveName] || { bp: 0, type: "Normal" }
+    const md = moveData[moveName] || { bp: 0, type: "Normal" }
     return {
       name: moveName,
       bp: md.bp,
@@ -284,8 +289,8 @@ export function calculateAllMovesGen4(
 }
 
 // --- Helper: find species + set from a set label ---
-export function findSetByLabel(label: string): { species: string; set: SetdexEntry } | null {
-  for (const [species, sets] of Object.entries(SETDEX_PTHGSS)) {
+export function findSetByLabel(label: string, setdex: Gen4Setdex = SETDEX_PTHGSS): { species: string; set: SetdexEntry } | null {
+  for (const [species, sets] of Object.entries(setdex)) {
     if (label in sets) return { species, set: sets[label] }
   }
   return null

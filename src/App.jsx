@@ -60,6 +60,16 @@ export default function App() {
         { name: 'Altissimo RSE Battle Tower Trainers', url: 'https://altissimo1.github.io/Main-Series/RSE/battle-tower-trainers.html' },
         { name: 'Altissimo RSE Battle Tower Pokemon', url: 'https://altissimo1.github.io/Main-Series/RSE/battle-tower-pokemon.html' },
       ]
+    } else if (path.startsWith('/battle-facilities/dp')) {
+      return [
+        { name: 'EisenCalc', url: 'https://eisencalc.com' },
+        { name: 'Bulbapedia D/P Battle Tower Trainers', url: 'https://bulbapedia.bulbagarden.net/wiki/List_of_Battle_Tower_Trainers_in_Pok%C3%A9mon_Diamond_and_Pearl' },
+        { name: 'Bulbapedia D/P Battle Tower Pokemon Group 1', url: 'https://bulbapedia.bulbagarden.net/wiki/List_of_Battle_Tower_Pok%C3%A9mon_in_Pok%C3%A9mon_Diamond_and_Pearl/Group_1' },
+        { name: 'Bulbapedia D/P Battle Tower Pokemon Group 2', url: 'https://bulbapedia.bulbagarden.net/wiki/List_of_Battle_Tower_Pok%C3%A9mon_in_Pok%C3%A9mon_Diamond_and_Pearl/Group_2' },
+        { name: 'Altissimo D/P Battle Tower Pokemon', url: 'https://altissimo1.github.io/Main-Series/DPPt/battle-tower-pokemon.html' },
+        { name: 'Altissimo D/P Battle Tower Trainers', url: 'https://altissimo1.github.io/Main-Series/DPPt/battle-tower-trainers.html' },
+        { name: 'Altissimo D/P Battle Tower', url: 'https://altissimo1.github.io/Main-Series/DPPt/battle-tower.html' },
+      ]
     } else if (path.startsWith('/battle-facilities')) {
       return [{ name: 'EisenCalc', url: 'https://eisencalc.com' }]
     }

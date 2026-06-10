@@ -31,4 +31,22 @@ describe('BattleFacilities routes', () => {
     expect(screen.getByRole('option', { name: 'Registeel (Psychic J RS Singles)' })).toBeInTheDocument()
     expect(screen.getByRole('option', { name: 'Latios (Psychic J RS Singles)' })).toBeInTheDocument()
   })
+
+  it('loads the Diamond/Pearl calculator and requested mode', () => {
+    render(
+      <MemoryRouter initialEntries={['/battle-facilities/dp?mode=singles']}>
+        <Routes>
+          <Route path="/battle-facilities/:game" element={<BattleFacilities />} />
+        </Routes>
+      </MemoryRouter>,
+    )
+
+    expect(screen.getByDisplayValue('Diamond / Pearl - Battle Tower')).toBeInTheDocument()
+    expect(screen.getByRole('radio', { name: 'Singles' })).toBeChecked()
+    expect(screen.getByRole('img', { name: 'Ability Ribbon' })).toBeInTheDocument()
+
+    const natureSelect = screen.getByLabelText('Opponent nature')
+    fireEvent.change(natureSelect, { target: { value: 'Timid' } })
+    expect(natureSelect).toHaveValue('Timid')
+  })
 })

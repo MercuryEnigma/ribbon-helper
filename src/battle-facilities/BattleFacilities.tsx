@@ -6,6 +6,7 @@ import {
   sunMoonConfig,
   orasConfig,
   gen4Config,
+  dpConfig,
   bdspConfig,
   type GameConfig,
   type SideState,
@@ -27,8 +28,9 @@ import {
 import './battle-facilities.css'
 
 const GAME_OPTIONS: { slug: string; config: GameConfig }[] = [
-  { slug: 'emerald', config: emeraldConfig },
   { slug: 'rs', config: rsConfig },
+  { slug: 'emerald', config: emeraldConfig },
+  { slug: 'dp', config: dpConfig },
   { slug: 'pthgss', config: gen4Config },
   { slug: 'oras', config: orasConfig },
   { slug: 'sunmoon', config: sunMoonConfig },

@@ -1,0 +1,823 @@
+{
+  "Alakazam": {
+    "Alakazam-1 (Mira DP)": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sa": 170
+      },
+      "moves": [
+        "Psycho Cut",
+        "Disable",
+        "Recover",
+        "Trick Room"
+      ],
+      "nature": "Modest",
+      "item": "Iron Ball"
+    },
+    "Alakazam-2 (Mira DP)": {
+      "evs": {
+        "df": 170,
+        "sa": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Psychic",
+        "Calm Mind",
+        "Shadow Ball",
+        "Future Sight"
+      ],
+      "nature": "Quiet",
+      "item": "Colbur Berry"
+    },
+    "Alakazam-3 (Mira DP)": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Psychic",
+        "Shadow Ball",
+        "Charge Beam",
+        "Energy Ball"
+      ],
+      "nature": "Timid",
+      "item": "Sitrus Berry"
+    },
+    "Alakazam-4 (Mira DP)": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Psychic",
+        "Shadow Ball",
+        "Energy Ball",
+        "Focus Blast"
+      ],
+      "nature": "Timid",
+      "item": "Bright Powder"
+    }
+  },
+  "Espeon": {
+    "Espeon-1 (Mira DP)": {
+      "evs": {
+        "hp": 170,
+        "at": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Morning Sun",
+        "Tail Whip",
+        "Sand Attack",
+        "Last Resort"
+      ],
+      "nature": "Adamant",
+      "item": "Leftovers"
+    },
+    "Espeon-2 (Mira DP)": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Reflect",
+        "Shadow Ball",
+        "Future Sight",
+        "Morning Sun"
+      ],
+      "nature": "Timid",
+      "item": "Bright Powder"
+    },
+    "Espeon-3 (Mira DP)": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Calm Mind",
+        "Psychic",
+        "Shadow Ball",
+        "Hyper Beam"
+      ],
+      "nature": "Modest",
+      "item": "Razor Claw"
+    },
+    "Espeon-4 (Mira DP)": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Psychic",
+        "Shadow Ball",
+        "Swift",
+        "Charm"
+      ],
+      "nature": "Timid",
+      "item": "Lum Berry"
+    }
+  },
+  "Exeggutor": {
+    "Exeggutor-1 (Mira DP)": {
+      "evs": {
+        "hp": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Curse",
+        "Leech Seed",
+        "Double Team",
+        "Substitute"
+      ],
+      "nature": "Calm",
+      "item": "Leftovers"
+    },
+    "Exeggutor-2 (Mira DP)": {
+      "evs": {
+        "sd": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Leech Seed",
+        "Worry Seed",
+        "Bullet Seed",
+        "Egg Bomb"
+      ],
+      "nature": "Jolly",
+      "item": "Miracle Seed"
+    },
+    "Exeggutor-3 (Mira DP)": {
+      "evs": {
+        "hp": 170,
+        "sa": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Sunny Day",
+        "Solar Beam",
+        "Psychic",
+        "Sludge Bomb"
+      ],
+      "nature": "Modest",
+      "item": "Expert Belt"
+    },
+    "Exeggutor-4 (Mira DP)": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Sunny Day",
+        "Explosion",
+        "Egg Bomb",
+        "Wood Hammer"
+      ],
+      "nature": "Adamant",
+      "item": "Focus Sash"
+    }
+  },
+  "Gardevoir": {
+    "Gardevoir-1 (Mira DP)": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Psychic",
+        "Shadow Ball",
+        "Thunder Wave",
+        "Confuse Ray"
+      ],
+      "nature": "Timid",
+      "item": "Lum Berry"
+    },
+    "Gardevoir-2 (Mira DP)": {
+      "evs": {
+        "df": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Calm Mind",
+        "Psychic",
+        "Thunderbolt",
+        "Rest"
+      ],
+      "nature": "Modest",
+      "item": "Chesto Berry"
+    },
+    "Gardevoir-3 (Mira DP)": {
+      "evs": {
+        "df": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Psychic",
+        "Thunderbolt",
+        "Energy Ball",
+        "Focus Blast"
+      ],
+      "nature": "Modest",
+      "item": "Bright Powder"
+    },
+    "Gardevoir-4 (Mira DP)": {
+      "evs": {
+        "df": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Psychic",
+        "Shadow Ball",
+        "Thunderbolt",
+        "Hyper Beam"
+      ],
+      "nature": "Modest",
+      "item": "Choice Specs"
+    }
+  },
+  "Gengar": {
+    "Gengar-1 (Mira DP)": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Shadow Ball",
+        "Psychic",
+        "Energy Ball",
+        "Skill Swap"
+      ],
+      "nature": "Modest",
+      "item": "Scope Lens"
+    },
+    "Gengar-2 (Mira DP)": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Explosion",
+        "Thunder Punch",
+        "Poison Jab",
+        "Shadow Claw"
+      ],
+      "nature": "Adamant",
+      "item": "Payapa Berry"
+    },
+    "Gengar-3 (Mira DP)": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Hypnosis",
+        "Dream Eater",
+        "Shadow Ball",
+        "Focus Blast"
+      ],
+      "nature": "Timid",
+      "item": "Bright Powder"
+    },
+    "Gengar-4 (Mira DP)": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Shadow Ball",
+        "Sludge Bomb",
+        "Thunderbolt",
+        "Destiny Bond"
+      ],
+      "nature": "Modest",
+      "item": "Life Orb"
+    }
+  },
+  "Glaceon": {
+    "Glaceon-1 (Mira DP)": {
+      "evs": {
+        "hp": 170,
+        "at": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Mirror Coat",
+        "Tail Whip",
+        "Sand Attack",
+        "Last Resort"
+      ],
+      "nature": "Brave",
+      "item": "Leftovers"
+    },
+    "Glaceon-2 (Mira DP)": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Hyper Beam",
+        "Mirror Coat",
+        "Avalanche",
+        "Last Resort"
+      ],
+      "nature": "Naughty",
+      "item": "Focus Sash"
+    },
+    "Glaceon-3 (Mira DP)": {
+      "evs": {
+        "sa": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Yawn",
+        "Water Pulse",
+        "Ice Beam",
+        "Shadow Ball"
+      ],
+      "nature": "Calm",
+      "item": "Bright Powder"
+    },
+    "Glaceon-4 (Mira DP)": {
+      "evs": {
+        "sa": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Hail",
+        "Blizzard",
+        "Shadow Ball",
+        "Mirror Coat"
+      ],
+      "nature": "Modest",
+      "item": "Wise Glasses"
+    }
+  },
+  "Latias": {
+    "Latias-1 (Mira DP)": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Psychic",
+        "Energy Ball",
+        "Grass Knot",
+        "Recover"
+      ],
+      "nature": "Timid",
+      "item": "Colbur Berry"
+    },
+    "Latias-2 (Mira DP)": {
+      "evs": {
+        "hp": 255,
+        "df": 255
+      },
+      "moves": [
+        "Calm Mind",
+        "Dragon Pulse",
+        "Psychic",
+        "Roost"
+      ],
+      "nature": "Modest",
+      "item": "Lum Berry"
+    },
+    "Latias-3 (Mira DP)": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Psychic",
+        "Dragon Pulse",
+        "Thunderbolt",
+        "Surf"
+      ],
+      "nature": "Timid",
+      "item": "Bright Powder"
+    },
+    "Latias-4 (Mira DP)": {
+      "evs": {
+        "hp": 255,
+        "df": 255
+      },
+      "moves": [
+        "Mist Ball",
+        "Draco Meteor",
+        "Calm Mind",
+        "Safeguard"
+      ],
+      "nature": "Bold",
+      "item": "Leftovers"
+    }
+  },
+  "Latios": {
+    "Latios-1 (Mira DP)": {
+      "evs": {
+        "hp": 255,
+        "at": 255
+      },
+      "moves": [
+        "Dragon Dance",
+        "Recover",
+        "Dragon Claw",
+        "Shadow Claw"
+      ],
+      "nature": "Adamant",
+      "item": "Lum Berry"
+    },
+    "Latios-2 (Mira DP)": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Psychic",
+        "Dragon Pulse",
+        "Ice Beam",
+        "Shadow Ball"
+      ],
+      "nature": "Timid",
+      "item": "Expert Belt"
+    },
+    "Latios-3 (Mira DP)": {
+      "evs": {
+        "df": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Luster Purge",
+        "Water Pulse",
+        "Dragon Breath",
+        "Recover"
+      ],
+      "nature": "Modest",
+      "item": "Haban Berry"
+    },
+    "Latios-4 (Mira DP)": {
+      "evs": {
+        "hp": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Draco Meteor",
+        "Psychic",
+        "Thunder",
+        "Hyper Beam"
+      ],
+      "nature": "Modest",
+      "item": "White Herb"
+    }
+  },
+  "Magmortar": {
+    "Magmortar-1 (Mira DP)": {
+      "evs": {
+        "at": 255,
+        "df": 255
+      },
+      "moves": [
+        "Overheat",
+        "Focus Punch",
+        "Confuse Ray",
+        "Smokescreen"
+      ],
+      "nature": "Brave",
+      "item": "White Herb"
+    },
+    "Magmortar-2 (Mira DP)": {
+      "evs": {
+        "df": 255,
+        "sd": 255
+      },
+      "moves": [
+        "Earthquake",
+        "Flamethrower",
+        "Smokescreen",
+        "Will-O-Wisp"
+      ],
+      "nature": "Docile",
+      "item": "Sitrus Berry"
+    },
+    "Magmortar-3 (Mira DP)": {
+      "evs": {
+        "at": 255,
+        "df": 255
+      },
+      "moves": [
+        "Flare Blitz",
+        "Thunder Punch",
+        "Earthquake",
+        "Brick Break"
+      ],
+      "nature": "Adamant",
+      "item": "Passho Berry"
+    },
+    "Magmortar-4 (Mira DP)": {
+      "evs": {
+        "df": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Fire Blast",
+        "Psychic",
+        "Focus Blast",
+        "Confuse Ray"
+      ],
+      "nature": "Modest",
+      "item": "Shuca Berry"
+    }
+  },
+  "Magnezone": {
+    "Magnezone-1 (Mira DP)": {
+      "evs": {
+        "at": 255,
+        "df": 255
+      },
+      "moves": [
+        "Swagger",
+        "Psych Up",
+        "Charge Beam",
+        "Magnet Bomb"
+      ],
+      "nature": "Impish",
+      "item": "Quick Claw"
+    },
+    "Magnezone-2 (Mira DP)": {
+      "evs": {
+        "df": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Magnet Rise",
+        "Rain Dance",
+        "Thunder",
+        "Flash Cannon"
+      ],
+      "nature": "Bold",
+      "item": "Bright Powder"
+    },
+    "Magnezone-3 (Mira DP)": {
+      "evs": {
+        "df": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Magnet Rise",
+        "Charge Beam",
+        "Flash Cannon",
+        "Thunder Wave"
+      ],
+      "nature": "Modest",
+      "item": "Shuca Berry"
+    },
+    "Magnezone-4 (Mira DP)": {
+      "evs": {
+        "hp": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Thunderbolt",
+        "Tri Attack",
+        "Flash Cannon",
+        "Explosion"
+      ],
+      "nature": "Quiet",
+      "item": "Silk Scarf"
+    }
+  },
+  "Porygon-Z": {
+    "Porygon-Z-1 (Mira DP)": {
+      "evs": {
+        "hp": 255,
+        "df": 255
+      },
+      "moves": [
+        "Tri Attack",
+        "Shadow Ball",
+        "Recycle",
+        "Conversion 2"
+      ],
+      "nature": "Bold",
+      "item": "Sitrus Berry"
+    },
+    "Porygon-Z-2 (Mira DP)": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Charge Beam",
+        "Ice Beam",
+        "Signal Beam",
+        "Conversion 2"
+      ],
+      "nature": "Timid",
+      "item": "Bright Powder"
+    },
+    "Porygon-Z-3 (Mira DP)": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Charge Beam",
+        "Tri Attack",
+        "Magnet Rise",
+        "Conversion"
+      ],
+      "nature": "Timid",
+      "item": "Leftovers"
+    },
+    "Porygon-Z-4 (Mira DP)": {
+      "evs": {
+        "hp": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Tri Attack",
+        "Shadow Ball",
+        "Thunderbolt",
+        "Recover"
+      ],
+      "nature": "Modest",
+      "item": "Expert Belt"
+    }
+  },
+  "Roserade": {
+    "Roserade-1 (Mira DP)": {
+      "evs": {
+        "at": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Leech Seed",
+        "Ingrain",
+        "Giga Drain",
+        "Substitute"
+      ],
+      "nature": "Serious",
+      "item": "Big Root"
+    },
+    "Roserade-2 (Mira DP)": {
+      "evs": {
+        "hp": 170,
+        "sa": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Water Sport",
+        "Worry Seed",
+        "Grass Knot",
+        "Toxic"
+      ],
+      "nature": "Careful",
+      "item": "Miracle Seed"
+    },
+    "Roserade-3 (Mira DP)": {
+      "evs": {
+        "df": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Sleep Powder",
+        "Sludge Bomb",
+        "Shadow Ball",
+        "Giga Drain"
+      ],
+      "nature": "Modest",
+      "item": "Coba Berry"
+    },
+    "Roserade-4 (Mira DP)": {
+      "evs": {
+        "sa": 170,
+        "sd": 170,
+        "sp": 170
+      },
+      "moves": [
+        "Sludge Bomb",
+        "Shadow Ball",
+        "Energy Ball",
+        "Hyper Beam"
+      ],
+      "nature": "Modest",
+      "item": "Rose Incense"
+    }
+  },
+  "Togekiss": {
+    "Togekiss-1 (Mira DP)": {
+      "evs": {
+        "at": 255,
+        "df": 255
+      },
+      "moves": [
+        "Extreme Speed",
+        "Aerial Ace",
+        "Steel Wing",
+        "Roost"
+      ],
+      "nature": "Adamant",
+      "item": "Wide Lens"
+    },
+    "Togekiss-2 (Mira DP)": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Toxic",
+        "Double Team",
+        "Substitute",
+        "Air Slash"
+      ],
+      "nature": "Bold",
+      "item": "Leftovers"
+    },
+    "Togekiss-3 (Mira DP)": {
+      "evs": {
+        "hp": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Water Pulse",
+        "Flamethrower",
+        "Silver Wind",
+        "Ancient Power"
+      ],
+      "nature": "Modest",
+      "item": "Scope Lens"
+    },
+    "Togekiss-4 (Mira DP)": {
+      "evs": {
+        "hp": 255,
+        "sa": 255
+      },
+      "moves": [
+        "Air Slash",
+        "Aura Sphere",
+        "Psychic",
+        "Shadow Ball"
+      ],
+      "nature": "Modest",
+      "item": "Expert Belt"
+    }
+  },
+  "Zapdos": {
+    "Zapdos-1 (Mira DP)": {
+      "evs": {
+        "hp": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Double Team",
+        "Roost",
+        "Discharge",
+        "Pluck"
+      ],
+      "nature": "Timid",
+      "item": "Bright Powder"
+    },
+    "Zapdos-2 (Mira DP)": {
+      "evs": {
+        "hp": 170,
+        "df": 170,
+        "sd": 170
+      },
+      "moves": [
+        "Detect",
+        "Toxic",
+        "Drill Peck",
+        "Thunderbolt"
+      ],
+      "nature": "Docile",
+      "item": "Focus Band"
+    },
+    "Zapdos-3 (Mira DP)": {
+      "evs": {
+        "at": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Drill Peck",
+        "U-turn",
+        "Steel Wing",
+        "Ancient Power"
+      ],
+      "nature": "Jolly",
+      "item": "King's Rock"
+    },
+    "Zapdos-4 (Mira DP)": {
+      "evs": {
+        "sa": 255,
+        "sp": 255
+      },
+      "moves": [
+        "Rain Dance",
+        "Thunder",
+        "Charge Beam",
+        "Drill Peck"
+      ],
+      "nature": "Timid",
+      "item": "Sharp Beak"
+    }
+  }
+}

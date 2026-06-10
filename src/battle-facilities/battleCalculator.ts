@@ -142,6 +142,7 @@ export { rsConfig } from './rsBattles'
 export { sunMoonConfig } from './gen7Battles'
 export { orasConfig } from './gen6Battles'
 export { gen4Config } from './gen4Battles'
+export { dpConfig } from './dpBattles'
 export { bdspConfig } from './bdspBattles'
 
 // Re-export DamageResult for the UI
