@@ -210,10 +210,12 @@ export default function HomeMerger() {
         </div>
         <div className="trainer-card-body">
           <div className="trainer-card-info">
+            <p className="home-analysis__warning">
+              This is still in Beta mode. Results may be inaccurate.
+            </p>
             <p className="guide-description">
               Take several overlapping screenshots of a Pokémon's summary in the
-              Pokémon HOME mobile app, then upload them together to create one unified image
-              and check its ribbons.
+              Pokémon HOME mobile app, then upload them together to check its ribbons.
             </p>
             <div className="trainer-card-divider" />
 
@@ -348,7 +350,7 @@ export default function HomeMerger() {
                     onClick={() => handleMerge(state.files)}
                     className="home-merger__btn home-merger__btn--primary"
                   >
-                    Merge
+                    Check ribbons
                   </button>
                   <button onClick={reset} className="home-merger__btn">
                     Clear
