@@ -34,7 +34,15 @@ describe('Mt. Battle config', () => {
     expect(mtBattleConfig.modes.map(mode => mode.defaultLevel)).toEqual([15, 50, 50, 9])
     expect(mtBattleConfig.modes.map(mode => mode.format)).toEqual(['doubles', 'singles', 'doubles', 'doubles'])
     expect(mtBattleConfig.modes.every(mode => mode.maxBattle === 100)).toBe(true)
-    expect(mtBattleConfig.modes.every(mode => mode.ribbon.name === 'Earth Ribbon')).toBe(true)
+    expect(mtBattleConfig.modes.map(mode => mode.ribbon.name)).toEqual([
+      'Earth Ribbon',
+      '',
+      '',
+      'Earth Ribbon',
+    ])
+    expect(mtBattleConfig.modes.slice(1, 3).every(mode =>
+      mode.ribbon.description.includes('receive Ho-oh') && mode.ribbon.icon === ''
+    )).toBe(true)
   })
 
   it.each(MODE_IDS)('maps every %s battle number to exactly one opponent', modeId => {

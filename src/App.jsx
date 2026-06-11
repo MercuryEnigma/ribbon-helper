@@ -7,6 +7,7 @@ import ContestMoves from './contest-moves/ContestMoves'
 import VisualDecoration from './visual-decoration/VisualDecoration'
 import BattleFacilities from './battle-facilities/BattleFacilities'
 import Guides from './guides/Guides'
+import HomeMerger from './home-merger/HomeMerger'
 
 export default function App() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false)
@@ -152,6 +153,7 @@ export default function App() {
             <Route path="/battle-facilities" element={<Navigate to="/battle-facilities/emerald" replace />} />
             <Route path="/battle-facilities/:game" element={<BattleFacilities />} />
             <Route path="/guides" element={<Navigate to="/guides/footprint-ribbon" replace />} />
+            <Route path="/guides/stitching" element={<HomeMerger />} />
             <Route path="/guides/:guideId" element={<Guides />} />
             <Route path="*" element={<Navigate to="/game-compatibility" replace />} />
           </Routes>

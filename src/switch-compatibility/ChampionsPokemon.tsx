@@ -345,7 +345,7 @@ export default function ChampionsPokemon({ pokemonDb, onPokemonSelect }: Champio
                     </div>
                     <div className="legend-item">
                       <div className="legend-color champ-pre-evo"></div>
-                      <span>Pre-evolution</span>
+                      <span>Pre-evo Shadow</span>
                     </div>
                   </div>
                 </div>

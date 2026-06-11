@@ -40,6 +40,7 @@ export default function Guides() {
             {GUIDES.map(guideOption => (
               <option key={guideOption.id} value={guideOption.id}>{guideOption.title}</option>
             ))}
+            <option value="stitching">Stitch Summary</option>
           </select>
           <span className="trainer-card-pokeball" aria-hidden="true" />
         </div>
