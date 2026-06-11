@@ -197,14 +197,14 @@ export default function HomeMerger() {
           <span className="trainer-card-pokeball" aria-hidden="true" />
           <select
             className="trainer-card-selector"
-            value="stitching"
+            value="ribbon-checker"
             onChange={event => navigate(`/guides/${event.target.value}`)}
             aria-label="Select ribbon guide"
           >
             {GUIDES.map(guide => (
               <option key={guide.id} value={guide.id}>{guide.title}</option>
             ))}
-            <option value="stitching">Ribbon Checker</option>
+            <option value="ribbon-checker">Ribbon Checker</option>
           </select>
           <span className="trainer-card-pokeball" aria-hidden="true" />
         </div>
