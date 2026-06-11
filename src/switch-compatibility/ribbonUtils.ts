@@ -1,4 +1,4 @@
-import type { PokemonDatabase } from './types';
+import type { PokemonData, PokemonDatabase } from './types';
 import ribbonsData from '../data/ribbons.json';
 
 export interface RibbonsByGame {
@@ -8,15 +8,28 @@ export interface RibbonsByGame {
   'again': string[];
 }
 
-export type RibbonsMap = {
-  [key in 'Colo/XD' | 'RSE' | 'DPPt' | 'HGSS' | 'Transfer' | 'XY' | 'ORAS' | 'SM / USUM' | 'SwSh' | 'BDSP' | 'PLA' | 'SV' | 'PLZA']?: RibbonsByGame;
-};
+export type RibbonGameGroup =
+  | 'Colo/XD'
+  | 'RSE'
+  | 'DPPt'
+  | 'HGSS'
+  | 'Transfer'
+  | 'XY'
+  | 'ORAS'
+  | 'SM / USUM'
+  | 'SwSh'
+  | 'BDSP'
+  | 'PLA'
+  | 'SV'
+  | 'PLZA';
+
+export type RibbonsMap = Partial<Record<RibbonGameGroup, RibbonsByGame>>;
 
 const MEMORY_RIBBONS = ['battle-memory-ribbon', 'battle-memory-ribbon-gold', 'contest-memory-ribbon', 'contest-memory-ribbon-gold'];
 export type MERGE_TYPES = 'battle' | 'contest';
 
 // Game groupings
-const GAME_GROUPS: Record<string, string[]> = {
+const GAME_GROUPS: Record<RibbonGameGroup, string[]> = {
   'Colo/XD': ['colosseum', 'xd'],
   'RSE': ['ruby', 'sapphire', 'emerald'],
   'DPPt': ['diamond', 'pearl', 'platinum'],
@@ -25,7 +38,7 @@ const GAME_GROUPS: Record<string, string[]> = {
   'XY': ['x', 'y'],
   'ORAS': ['or', 'as'],
   'SM / USUM': ['sun', 'moon', 'usun', 'umoon'],
-  'SwSh': ['swh', 'sh'],
+  'SwSh': ['sw', 'sh'],
   'BDSP': ['bd', 'sp'],
   'PLA': ['pla'],
   'SV': ['scar', 'vio'],
@@ -40,8 +53,8 @@ const GENERATION_GAMES: Record<string, string[]> = {
   'Gen 6': ['x', 'y', 'or', 'as'],
   'VC': [], // No ribbons but can get later generation ribbons
   'Gen 7': ['sun', 'moon', 'usun', 'umoon'],
-  'GO': ['swh', 'sh', 'bd', 'sp', 'pla', 'scar', 'vio'], // GO Pokemon can access Switch games
-  'Switch': ['swh', 'sh', 'bd', 'sp', 'pla', 'scar', 'vio'],
+  'GO': ['sw', 'sh', 'bd', 'sp', 'pla', 'scar', 'vio'], // GO Pokemon can access Switch games
+  'Switch': ['sw', 'sh', 'bd', 'sp', 'pla', 'scar', 'vio'],
   'PLZA': ['plza']
 };
 
@@ -49,7 +62,7 @@ const GENERATION_GAMES: Record<string, string[]> = {
 const GENERATION_ORDER = ['Gen 3', 'Gen 4', 'Gen 5', 'Gen 6', 'VC', 'Gen 7', 'GO', 'Switch', 'PLZA'];
 
 // Game group generation
-const GAME_GROUP_GENERATION: Record<string, number> = {
+const GAME_GROUP_GENERATION: Record<RibbonGameGroup, number> = {
   'Colo/XD': 3,
   'RSE': 3,
   'DPPt': 4,
@@ -61,7 +74,8 @@ const GAME_GROUP_GENERATION: Record<string, number> = {
   'SwSh': 8,
   'BDSP': 8,
   'PLA': 8,
-  'SV': 9
+  'SV': 9,
+  'PLZA': 10
 };
 
 interface RibbonData {
@@ -78,8 +92,29 @@ interface RibbonData {
 /**
  * Checks if a Pokemon can access a specific game
  */
-function canAccessGame(pokemonKey: string, game: string, pokemonDb: PokemonDatabase): boolean {
+function getEffectivePokemonData(
+  pokemonKey: string,
+  pokemonDb: PokemonDatabase,
+): PokemonData | null {
   const pokemonData = pokemonDb[pokemonKey];
+  if (!pokemonData) return null;
+
+  const sourceKey = pokemonData['data-source'];
+  if (!sourceKey || !pokemonDb[sourceKey]) return pokemonData;
+
+  const sourceData = pokemonDb[sourceKey];
+  return {
+    ...sourceData,
+    ...pokemonData,
+    games: pokemonData.games ?? sourceData.games,
+    flags: pokemonData.flags ?? sourceData.flags,
+    mythical: pokemonData.mythical ?? sourceData.mythical,
+    voiceless: pokemonData.voiceless ?? sourceData.voiceless,
+  };
+}
+
+function canAccessGame(pokemonKey: string, game: string, pokemonDb: PokemonDatabase): boolean {
+  const pokemonData = getEffectivePokemonData(pokemonKey, pokemonDb);
   if (!pokemonData) return false;
 
   // Check if pokemon has the game in its game list
@@ -133,7 +168,6 @@ function canObtainRibbon(
 
   // Check generation requirement - Pokemon can only move up in generations
   // A ribbon is accessible if it's available in ANY game from the starting generation or later
-  const ribbonGen = ribbonData.gen;
   const hasAccessibleGame = GENERATION_ORDER.slice(startGenIndex).some(gen => {
     const games = GENERATION_GAMES[gen];
     return ribbonData.available !== null && ribbonData.available.some(game => games.includes(game));
@@ -154,7 +188,7 @@ function canObtainRibbon(
   }
 
   // Check if mythical Pokemon are banned
-  const pokemonData = pokemonDb[pokemonKey];
+  const pokemonData = getEffectivePokemonData(pokemonKey, pokemonDb);
   if (ribbonData.nomythical && pokemonData?.mythical) {
     return false;
   }
@@ -174,9 +208,10 @@ function canObtainRibbon(
   }
 
   if (ribbonKey === 'footprint-ribbon') {
-    // In BDSP specifically, level must be 70 or lower
-    // Exception: voiceless Pokemon can always get it
-    if (gameGroup === 'BDSP' && !pokemonData?.voiceless && level > 70) {
+    // Pokemon originating in Gen 5 or later must gain 30 levels. At level 71+
+    // that is impossible; voiceless Pokemon use friendship instead.
+    const genFiveIndex = GENERATION_ORDER.indexOf('Gen 5');
+    if (startGenIndex >= genFiveIndex && !pokemonData?.voiceless && level > 70) {
       return false;
     }
   }
@@ -203,7 +238,7 @@ export function getAvailableRibbons(
   const ribbonFirstAppearance: Map<string, string> = new Map();
 
   // Process each game group in generation order
-  const sortedGroups = Object.keys(GAME_GROUPS).sort((a, b) => {
+  const sortedGroups = (Object.keys(GAME_GROUPS) as RibbonGameGroup[]).sort((a, b) => {
     return GAME_GROUP_GENERATION[a] - GAME_GROUP_GENERATION[b];
   });
 
@@ -223,7 +258,7 @@ export function getAvailableRibbons(
       }
 
       if (memoryRibbons.length > 0) {
-        result[groupName as keyof RibbonsMap] = {
+        result[groupName] = {
           'available-ribbons': memoryRibbons,
           'first-introduced': memoryRibbons,
           'last-chance': [],
@@ -320,7 +355,7 @@ export function getAvailableRibbons(
     }
 
     if (availableRibbons.length > 0) {
-      result[groupName as keyof RibbonsMap] = {
+      result[groupName] = {
         'available-ribbons': availableRibbons,
         'first-introduced': firstIntroduced,
         'last-chance': lastChance,

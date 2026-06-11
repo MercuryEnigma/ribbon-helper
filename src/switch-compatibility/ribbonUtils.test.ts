@@ -6,12 +6,12 @@ const mockPokemonDb: PokemonDatabase = {
   'ralts': {
     natdex: 280,
     names: { en: 'Ralts' },
-    games: ['ruby', 'sapphire', 'emerald', 'colosseum', 'xd', 'diamond', 'pearl', 'platinum', 'hg', 'ss', 'black', 'white', 'black2', 'white2', 'x', 'y', 'or', 'as', 'sun', 'moon', 'usun', 'umoon', 'swh', 'sh', 'bd', 'sp', 'scar', 'vio']
+    games: ['ruby', 'sapphire', 'emerald', 'colosseum', 'xd', 'diamond', 'pearl', 'platinum', 'hg', 'ss', 'black', 'white', 'black2', 'white2', 'x', 'y', 'or', 'as', 'sun', 'moon', 'usun', 'umoon', 'sw', 'sh', 'bd', 'sp', 'scar', 'vio']
   },
   'sudowoodo': {
     natdex: 185,
     names: { en: 'Sudowoodo' },
-    games: ['colosseum', 'xd', 'diamond', 'pearl', 'platinum', 'hg', 'ss', 'x', 'y', 'or', 'as', 'sun', 'moon', 'usun', 'umoon', 'swh', 'sh', 'bd', 'sp', 'pla', 'scar', 'vio']
+    games: ['colosseum', 'xd', 'diamond', 'pearl', 'platinum', 'hg', 'ss', 'x', 'y', 'or', 'as', 'sun', 'moon', 'usun', 'umoon', 'sw', 'sh', 'bd', 'sp', 'pla', 'scar', 'vio']
   },
   'spinda': {
     natdex: 327,
@@ -26,24 +26,24 @@ const mockPokemonDb: PokemonDatabase = {
   'mew': {
     natdex: 151,
     names: { en: 'Mew' },
-    games: ['ruby', 'sapphire', 'emerald', 'diamond', 'pearl', 'platinum', 'hg', 'ss', 'x', 'y', 'or', 'as', 'sun', 'moon', 'usun', 'umoon', 'swh', 'sh', 'bd', 'sp', 'scar', 'vio'],
+    games: ['ruby', 'sapphire', 'emerald', 'diamond', 'pearl', 'platinum', 'hg', 'ss', 'x', 'y', 'or', 'as', 'sun', 'moon', 'usun', 'umoon', 'sw', 'sh', 'bd', 'sp', 'scar', 'vio'],
     mythical: true
   },
   'ho-oh': {
     natdex: 250,
     names: { en: 'Ho-Oh' },
-    games: ['colosseum', 'xd', 'diamond', 'pearl', 'platinum', 'hg', 'ss', 'x', 'y', 'or', 'as', 'sun', 'moon', 'usun', 'umoon', 'swh', 'sh', 'bd', 'sp', 'scar', 'vio']
+    games: ['colosseum', 'xd', 'diamond', 'pearl', 'platinum', 'hg', 'ss', 'x', 'y', 'or', 'as', 'sun', 'moon', 'usun', 'umoon', 'sw', 'sh', 'bd', 'sp', 'scar', 'vio']
   },
   'jirachi': {
     natdex: 385,
     names: { en: 'Jirachi' },
-    games: ['ruby', 'sapphire', 'emerald', 'colosseum', 'xd', 'diamond', 'pearl', 'platinum', 'hg', 'ss', 'x', 'y', 'or', 'as', 'sun', 'moon', 'usun', 'umoon', 'swh', 'sh', 'bd', 'sp', 'scar', 'vio'],
+    games: ['ruby', 'sapphire', 'emerald', 'colosseum', 'xd', 'diamond', 'pearl', 'platinum', 'hg', 'ss', 'x', 'y', 'or', 'as', 'sun', 'moon', 'usun', 'umoon', 'sw', 'sh', 'bd', 'sp', 'scar', 'vio'],
     mythical: true
   },
   'mewtwo': {
     natdex: 150,
     names: { en: 'Mewtwo' },
-    games: ['diamond', 'pearl', 'platinum', 'hg', 'ss', 'x', 'y', 'or', 'as', 'sun', 'moon', 'usun', 'umoon', 'swh', 'sh', 'bd', 'sp', 'scar', 'vio']
+    games: ['diamond', 'pearl', 'platinum', 'hg', 'ss', 'x', 'y', 'or', 'as', 'sun', 'moon', 'usun', 'umoon', 'sw', 'sh', 'bd', 'sp', 'scar', 'vio']
   }
 };
 

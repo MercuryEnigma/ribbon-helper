@@ -21,7 +21,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^7.9.6"
+    "react-router-dom": "^7.9.6",
+    "tesseract.js": "^6.0.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.9.1",
