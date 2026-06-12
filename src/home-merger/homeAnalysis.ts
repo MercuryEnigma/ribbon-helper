@@ -11,9 +11,10 @@ import {
 } from './pokemonIdentity';
 import { parseHomeOrigin, type OriginMatch } from './originParser';
 import { resolveHomeRibbonOrder } from './homeRibbonOrder';
+import { extractSummaryDetails, type SummaryDetails } from './summaryDetails';
 
 export type HomeAnalysisProgress = (
-  stage: 'layout' | 'ribbons' | 'ocr',
+  stage: 'layout' | 'ribbons' | 'ocr' | 'details',
   detail: string,
   progress: number,
 ) => void;
@@ -23,6 +24,7 @@ export interface HomeRecognitionResult {
   identity: PokemonIdentityMatch;
   formOptions: PokemonIdentityCandidate[];
   origin: OriginMatch;
+  details: SummaryDetails;
   ribbonMatches: RibbonCellMatch[];
   detectedRibbonIds: string[];
 }
@@ -59,9 +61,18 @@ export async function analyzeHomeSummary(
     (detail, progress) => onProgress?.('ocr', detail, progress),
   );
   const identity = matchPokemonIdentity(ocr.identityText, POKEMON_DB);
-  const baseKey = identity.candidates[0]?.baseKey;
+  const bestIdentity = identity.candidates[0];
+  const baseKey = bestIdentity?.baseKey;
   const formOptions = baseKey ? getFormOptions(baseKey, POKEMON_DB) : [];
   const origin = parseHomeOrigin(ocr.trainerNotesText);
+  onProgress?.('details', 'Reading nickname and trainer details', 0.95);
+  const details = await extractSummaryDetails(
+    canvas,
+    image,
+    ocr,
+    bestIdentity?.pokemonKey ?? '',
+    POKEMON_DB,
+  );
   const detectedRibbonIds = ribbonMatches
     .filter(match => match.accepted)
     .map(match => match.best.ribbonId);
@@ -71,6 +82,7 @@ export async function analyzeHomeSummary(
     identity,
     formOptions,
     origin,
+    details,
     ribbonMatches,
     detectedRibbonIds,
   };

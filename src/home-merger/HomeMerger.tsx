@@ -1,5 +1,5 @@
-import { useState, useCallback, useMemo, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useCallback, useEffect, useMemo, useRef } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { GUIDES } from '../guides/guideRegistry';
 import pokemonData from '../data/pokemon.json';
 import ribbonsData from '../data/ribbons.json';
@@ -21,6 +21,24 @@ import {
   type PokemonIdentityCandidate,
 } from './pokemonIdentity';
 import { HOME_ORIGINS, type HomeOrigin } from './originParser';
+import { BALL_NAMES, ORIGINAL_BALL_IDS } from './ballMatcher';
+import {
+  HOME_LANGUAGES,
+  NATURE_NAMES,
+  resolvePokemonGender,
+  sanitizeForFilename,
+  type HomeGender,
+  type HomeLanguage,
+  type HomeNature,
+} from './summaryDetails';
+import {
+  ribbonsGuideFilename,
+  serializeRibbonsGuideBackup,
+  shouldShowJsonExport,
+  validateRibbonsGuideDraft,
+  type RibbonsGuideExportDraft,
+  type RibbonsGuideShiny,
+} from './ribbonsGuideExport';
 import firstScreenshot from '../../home-images/ribbondol/IMG_8750.PNG';
 import secondScreenshot from '../../home-images/ribbondol/IMG_8751.PNG';
 import thirdScreenshot from '../../home-images/ribbondol/IMG_8752.PNG';
@@ -32,8 +50,32 @@ type MergerState =
   | { type: 'idle' }
   | { type: 'ready'; files: File[] }
   | { type: 'processing'; step: number; total: number; detail: string }
-  | { type: 'done'; url: string; filename: string; canvas: HTMLCanvasElement }
+  | { type: 'done'; url: string; canvas: HTMLCanvasElement }
   | { type: 'error'; message: string };
+
+interface DetailsState {
+  nickname: string;
+  gender: HomeGender | '';
+  shiny: RibbonsGuideShiny;
+  language: HomeLanguage | '';
+  nature: HomeNature | '';
+  ball: string;
+  strangeBallDetected: boolean;
+  ot: string;
+  idNo: string;
+}
+
+const EMPTY_DETAILS: DetailsState = {
+  nickname: '',
+  gender: '',
+  shiny: '',
+  language: '',
+  nature: '',
+  ball: '',
+  strangeBallDetected: false,
+  ot: '',
+  idNo: '',
+};
 
 type AnalysisState =
   | { type: 'idle' }
@@ -57,14 +99,27 @@ const SPECIES_OPTIONS = Object.entries(POKEMON_DB)
   }))
   .sort((a, b) => a.dexNumber - b.dexNumber);
 
+function getHomeAppUrl(): string {
+  const ua = typeof navigator !== 'undefined' ? navigator.userAgent : '';
+  if (/iPhone|iPad|iPod/i.test(ua)) {
+    return 'https://apps.apple.com/app/pokemon-home/id1483397026';
+  }
+  if (/Android/i.test(ua)) {
+    return 'https://play.google.com/store/apps/details?id=jp.pokemon.pokemonhome';
+  }
+  return 'https://home.pokemon.com/';
+}
+
 export default function HomeMerger() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [state, setState] = useState<MergerState>({ type: 'idle' });
   const [analysis, setAnalysis] = useState<AnalysisState>({ type: 'idle' });
   const [selectedBaseKey, setSelectedBaseKey] = useState('');
   const [selectedFormKey, setSelectedFormKey] = useState('auto');
   const [level, setLevel] = useState(50);
   const [origin, setOrigin] = useState<HomeOrigin | ''>('');
+  const [details, setDetails] = useState<DetailsState>(EMPTY_DETAILS);
   const [cellSelections, setCellSelections] = useState<string[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const objectUrlRef = useRef<string | null>(null);
@@ -100,6 +155,17 @@ export default function HomeMerger() {
       setSelectedFormKey('auto');
       setLevel(result.identity.recognizedLevel ?? 50);
       setOrigin(result.origin.origin ?? '');
+      setDetails({
+        nickname: result.details.nickname ?? '',
+        gender: result.details.gender ?? '',
+        shiny: result.details.shiny ? 'star' : '',
+        language: result.details.language ?? '',
+        nature: result.details.nature ?? '',
+        ball: result.details.ball === 'strange' ? '' : result.details.ball ?? '',
+        strangeBallDetected: result.details.ball === 'strange',
+        ot: result.details.ot ?? '',
+        idNo: result.details.idNo ?? '',
+      });
       setCellSelections(result.ribbonMatches.map(match => (
         match.accepted ? match.best.ribbonId : ''
       )));
@@ -128,7 +194,7 @@ export default function HomeMerger() {
       const url = URL.createObjectURL(blob);
       if (objectUrlRef.current) URL.revokeObjectURL(objectUrlRef.current);
       objectUrlRef.current = url;
-      setState({ type: 'done', url, filename: 'merged-home.PNG', canvas: merged });
+      setState({ type: 'done', url, canvas: merged });
       void handleAnalyze(merged);
     } catch (err) {
       setState({
@@ -149,10 +215,15 @@ export default function HomeMerger() {
     setSelectedBaseKey('');
     setSelectedFormKey('auto');
     setOrigin('');
+    setDetails(EMPTY_DETAILS);
     setCellSelections([]);
     if (fileInputRef.current) fileInputRef.current.value = '';
   }, []);
 
+  const downloadName = useMemo(() => {
+    const base = sanitizeForFilename(details.nickname);
+    return `${base || 'merged'}-home.png`;
+  }, [details.nickname]);
   const formOptions = useMemo(
     () => selectedBaseKey ? getFormOptions(selectedBaseKey, POKEMON_DB) : [],
     [selectedBaseKey],
@@ -160,6 +231,28 @@ export default function HomeMerger() {
   const selectedPokemonKey = (
     selectedFormKey === 'auto' ? selectedBaseKey : selectedFormKey
   );
+  useEffect(() => {
+    if (analysis.type !== 'done' || !selectedPokemonKey) return;
+    const nextGender = resolvePokemonGender(
+      selectedPokemonKey,
+      POKEMON_DB,
+      analysis.result.details.detectedGender,
+    );
+    setDetails(current => (
+      current.gender === nextGender
+        ? current
+        : { ...current, gender: nextGender ?? '' }
+    ));
+  }, [analysis, selectedPokemonKey]);
+
+  const selectedSpeciesName = useMemo(() => {
+    const selected = POKEMON_DB[selectedPokemonKey];
+    if (!selected) return '';
+    const source = selected['data-source']
+      ? POKEMON_DB[selected['data-source']]
+      : undefined;
+    return selected.names?.en ?? source?.names?.en ?? '';
+  }, [selectedPokemonKey]);
   const detectedRibbonIds = useMemo(
     () => cellSelections.filter(Boolean),
     [cellSelections],
@@ -188,6 +281,62 @@ export default function HomeMerger() {
     level,
     origin,
     selectedPokemonKey,
+  ]);
+  const jsonExportDraft = useMemo<RibbonsGuideExportDraft>(() => ({
+    species: selectedPokemonKey,
+    speciesName: selectedSpeciesName,
+    gender: details.gender,
+    shiny: details.shiny,
+    nickname: details.nickname,
+    language: details.language,
+    ball: details.ball,
+    strangeBallDetected: details.strangeBallDetected,
+    level,
+    nature: details.nature,
+    trainerName: details.ot,
+    trainerId: details.idNo,
+    origin,
+    originPhrase: (
+      analysis.type === 'done'
+      && origin === analysis.result.origin.origin
+    ) ? analysis.result.origin.matchedPhrase : null,
+    ribbons: detectedRibbonIds,
+  }), [
+    analysis,
+    details,
+    detectedRibbonIds,
+    level,
+    origin,
+    selectedPokemonKey,
+    selectedSpeciesName,
+  ]);
+  const jsonValidation = useMemo(
+    () => validateRibbonsGuideDraft(jsonExportDraft),
+    [jsonExportDraft],
+  );
+  const showJsonExport = shouldShowJsonExport(searchParams);
+  const handleJsonDownload = useCallback(() => {
+    if (!jsonValidation.valid) return;
+    const blob = new Blob(
+      [serializeRibbonsGuideBackup(jsonExportDraft)],
+      { type: 'application/json' },
+    );
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = ribbonsGuideFilename(
+      details.nickname,
+      selectedSpeciesName,
+    );
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  }, [
+    details.nickname,
+    jsonExportDraft,
+    jsonValidation.valid,
+    selectedSpeciesName,
   ]);
 
   return (
@@ -251,6 +400,14 @@ export default function HomeMerger() {
                         Leave some content from the previous screenshot visible each time.
                         This overlap lets the tool find where the images belong.
                       </p>
+                      <a
+                        className="home-merger__app-link"
+                        href={getHomeAppUrl()}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Open the Pokémon HOME app ↗
+                      </a>
                     </div>
                   </div>
                   <div className="home-merger__example-grid home-merger__example-grid--two">
@@ -273,7 +430,7 @@ export default function HomeMerger() {
                     <div>
                       <h3>Upload every screenshot at once</h3>
                       <p>
-                        Tap the file picker below and select all screenshots in one selection.
+                        Tap the file picker and select all screenshots in one selection.
                         They are sorted by filename, so keep them in the order they were taken.
                       </p>
                     </div>
@@ -292,20 +449,66 @@ export default function HomeMerger() {
                     ))}
                     <span>3 screenshots selected together</span>
                   </div>
+                  <div className="home-merger__step-widget">
+                    {state.type === 'idle' && (
+                      <label className="home-merger__dropzone">
+                        <input
+                          ref={fileInputRef}
+                          type="file"
+                          multiple
+                          accept="image/png,.png,.PNG"
+                          onChange={e => handleFiles(e.target.files)}
+                          className="home-merger__file-input"
+                        />
+                        <span className="home-merger__dropzone-icon" aria-hidden="true">📁</span>
+                        <span className="home-merger__dropzone-text">Select all screenshots at once</span>
+                        <span className="home-merger__dropzone-hint">2 or more PNG screenshots required</span>
+                      </label>
+                    )}
+                    {state.type === 'ready' && (
+                      <div className="home-merger__ready">
+                        <p className="home-merger__file-count">{state.files.length} files selected (sorted by name):</p>
+                        <ol className="home-merger__file-list">
+                          {state.files.map(f => (
+                            <li key={f.name} className="home-merger__file-item">{f.name}</li>
+                          ))}
+                        </ol>
+                        <div className="home-merger__actions">
+                          <button
+                            onClick={() => handleMerge(state.files)}
+                            className="home-merger__btn home-merger__btn--primary"
+                          >
+                            Check ribbons
+                          </button>
+                          <button onClick={reset} className="home-merger__btn">
+                            Clear
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </li>
 
                 <li className="home-merger__step">
                   <div className="home-merger__step-copy">
                     <span className="home-merger__step-number" aria-hidden="true">4</span>
                     <div>
-                      <h3>Merge, check, and download</h3>
+                      <h3>Check the ribbons</h3>
                       <p>
-                        Select Merge to create the unified image. The checker reads the
-                        Pokémon and origin, then identifies ribbons from their fixed Pokémon
-                        HOME order and surrounding icons. It reports owned, remaining, missed,
-                        and special extra ribbons or marks, including Jumbo and Mini size marks.
-                        You can still edit a result if the screenshot was unusual, then download
-                        the finished image.
+                        Select Check ribbons to stitch the screenshots into one image and
+                        analyze it. The checker reads the merged image to identify the
+                        Pokémon, its nickname, level, and origin game, plus details such as
+                        shininess, gender, language, Poké Ball, OT, and ID No. It then
+                        detects each ribbon and mark using the fixed order Pokémon HOME
+                        displays them in.
+                      </p>
+                      <p>
+                        Review the detected species, form, origin, and ribbon grid — you can
+                        correct anything the checker misread. The results then show which
+                        ribbons this Pokémon already owns, which it can still earn, which
+                        are permanently missed, and any special ribbons or marks it has,
+                        including the Jumbo and Mini size marks. You can also download the
+                        merged image.
                       </p>
                     </div>
                   </div>
@@ -319,44 +522,8 @@ export default function HomeMerger() {
               </ol>
             </section>
 
-            <div className="trainer-card-divider" />
-
-            {state.type === 'idle' && (
-              <label className="home-merger__dropzone">
-                <input
-                  ref={fileInputRef}
-                  type="file"
-                  multiple
-                  accept="image/png,.png,.PNG"
-                  onChange={e => handleFiles(e.target.files)}
-                  className="home-merger__file-input"
-                />
-                <span className="home-merger__dropzone-icon" aria-hidden="true">📁</span>
-                <span className="home-merger__dropzone-text">Select all screenshots at once</span>
-                <span className="home-merger__dropzone-hint">2 or more PNG screenshots required</span>
-              </label>
-            )}
-
-            {state.type === 'ready' && (
-              <div className="home-merger__ready">
-                <p className="home-merger__file-count">{state.files.length} files selected (sorted by name):</p>
-                <ol className="home-merger__file-list">
-                  {state.files.map(f => (
-                    <li key={f.name} className="home-merger__file-item">{f.name}</li>
-                  ))}
-                </ol>
-                <div className="home-merger__actions">
-                  <button
-                    onClick={() => handleMerge(state.files)}
-                    className="home-merger__btn home-merger__btn--primary"
-                  >
-                    Check ribbons
-                  </button>
-                  <button onClick={reset} className="home-merger__btn">
-                    Clear
-                  </button>
-                </div>
-              </div>
+            {state.type !== 'idle' && state.type !== 'ready' && (
+              <div className="trainer-card-divider" />
             )}
 
             {state.type === 'processing' && (
@@ -380,10 +547,10 @@ export default function HomeMerger() {
                 <div className="home-merger__actions">
                   <a
                     href={state.url}
-                    download={state.filename}
+                    download={downloadName}
                     className="home-merger__btn home-merger__btn--primary"
                   >
-                    Download {state.filename}
+                    Download {downloadName}
                   </a>
                   <button onClick={reset} className="home-merger__btn">
                     Start over
@@ -395,9 +562,20 @@ export default function HomeMerger() {
                   selectedFormKey={selectedFormKey}
                   level={level}
                   origin={origin}
+                  details={details}
                   formOptions={formOptions}
                   cellSelections={cellSelections}
                   collection={collectionAnalysis}
+                  showJsonExport={showJsonExport}
+                  jsonFilename={ribbonsGuideFilename(
+                    details.nickname,
+                    selectedSpeciesName,
+                  )}
+                  jsonErrors={jsonValidation.errors}
+                  onJsonDownload={handleJsonDownload}
+                  onDetailsChange={patch => {
+                    setDetails(current => ({ ...current, ...patch }));
+                  }}
                   onSpeciesChange={pokemonKey => {
                     setSelectedBaseKey(pokemonKey);
                     setSelectedFormKey('auto');
@@ -436,9 +614,15 @@ interface AnalysisPanelProps {
   selectedFormKey: string;
   level: number;
   origin: HomeOrigin | '';
+  details: DetailsState;
   formOptions: PokemonIdentityCandidate[];
   cellSelections: string[];
   collection: RibbonCollectionAnalysis | null;
+  showJsonExport: boolean;
+  jsonFilename: string;
+  jsonErrors: string[];
+  onJsonDownload: () => void;
+  onDetailsChange: (patch: Partial<DetailsState>) => void;
   onSpeciesChange: (pokemonKey: string) => void;
   onFormChange: (pokemonKey: string) => void;
   onLevelChange: (level: number) => void;
@@ -453,9 +637,15 @@ function AnalysisPanel({
   selectedFormKey,
   level,
   origin,
+  details,
   formOptions,
   cellSelections,
   collection,
+  showJsonExport,
+  jsonFilename,
+  jsonErrors,
+  onJsonDownload,
+  onDetailsChange,
   onSpeciesChange,
   onFormChange,
   onLevelChange,
@@ -571,6 +761,149 @@ function AnalysisPanel({
           </span>
         </div>
       </div>
+
+      <div className="home-analysis__details">
+        <label>
+          <span>Nickname</span>
+          <input
+            type="text"
+            maxLength={12}
+            value={details.nickname}
+            onChange={event => onDetailsChange({ nickname: event.target.value })}
+          />
+        </label>
+
+        <label>
+          <span>Gender</span>
+          <select
+            value={details.gender}
+            onChange={event => {
+              onDetailsChange({ gender: event.target.value as HomeGender | '' });
+            }}
+          >
+            <option value="">Select gender</option>
+            <option value="unknown">Genderless / Unknown</option>
+            <option value="male">♂ Male</option>
+            <option value="female">♀ Female</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Language</span>
+          <select
+            value={details.language}
+            onChange={event => {
+              onDetailsChange({
+                language: event.target.value as HomeLanguage | '',
+              });
+            }}
+          >
+            <option value="">Unknown</option>
+            {HOME_LANGUAGES.map(tag => (
+              <option key={tag} value={tag}>{tag}</option>
+            ))}
+          </select>
+        </label>
+
+        <label>
+          <span>Shiny</span>
+          <select
+            value={details.shiny}
+            onChange={event => {
+              onDetailsChange({
+                shiny: event.target.value as RibbonsGuideShiny,
+              });
+            }}
+          >
+            <option value="">Normal</option>
+            <option value="star">Star Shiny</option>
+            <option value="square">Square Shiny</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Nature</span>
+          <select
+            value={details.nature}
+            onChange={event => {
+              onDetailsChange({
+                nature: event.target.value as HomeNature | '',
+              });
+            }}
+          >
+            <option value="">Unknown</option>
+            {Object.entries(NATURE_NAMES).map(([natureId, name]) => (
+              <option key={natureId} value={natureId}>{name}</option>
+            ))}
+          </select>
+        </label>
+
+        <label>
+          <span>Poké Ball</span>
+          <div className="home-analysis__cell-control">
+            {details.ball && (
+              <img
+                src={`${import.meta.env.BASE_URL}images/balls/${details.ball}.png`}
+                alt=""
+              />
+            )}
+            <select
+              value={details.ball}
+              onChange={event => onDetailsChange({ ball: event.target.value })}
+            >
+              <option value="">
+                {details.strangeBallDetected ? 'Select original ball' : 'Unknown'}
+              </option>
+              {ORIGINAL_BALL_IDS.map(ballId => (
+                <option key={ballId} value={ballId}>{BALL_NAMES[ballId]}</option>
+              ))}
+            </select>
+          </div>
+          {details.strangeBallDetected && (
+            <small>HOME shows a Strange Ball; choose the original ball.</small>
+          )}
+        </label>
+
+        <label>
+          <span>OT</span>
+          <input
+            type="text"
+            maxLength={12}
+            value={details.ot}
+            onChange={event => onDetailsChange({ ot: event.target.value })}
+          />
+        </label>
+
+        <label>
+          <span>ID No.</span>
+          <input
+            type="text"
+            inputMode="numeric"
+            maxLength={6}
+            value={details.idNo}
+            onChange={event => onDetailsChange({ idNo: event.target.value })}
+          />
+        </label>
+      </div>
+
+      {showJsonExport && (
+        <section className="home-analysis__json-export">
+          <h3>Ribbons.Guide JSON</h3>
+          <button
+            type="button"
+            className="home-merger__btn home-merger__btn--primary"
+            disabled={jsonErrors.length > 0}
+            onClick={onJsonDownload}
+          >
+            Download {jsonFilename}
+          </button>
+          {jsonErrors.length > 0 && (
+            <ul>
+              {jsonErrors.map(error => <li key={error}>{error}</li>)}
+            </ul>
+          )}
+        </section>
+      )}
 
       {(!selectedBaseKey || !origin) && (
         <p className="home-analysis__warning">
