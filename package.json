@@ -15,7 +15,8 @@
     "test:coverage": "vitest --coverage",
     "generate:rs-data": "node src/damage-calc/_scripts/generate_rs_battle_tower_data.mjs",
     "generate:dp-data": "node src/damage-calc/_scripts/generate_dp_battle_tower_data.mjs",
-    "generate:mt-battle-data": "node src/damage-calc/_scripts/generate_mt_battle_data.mjs"
+    "generate:mt-battle-data": "node src/damage-calc/_scripts/generate_mt_battle_data.mjs",
+    "generate:swsh-data": "node src/damage-calc/_scripts/generate_swsh_battle_tower_data.mjs"
   },
   "homepage": "https://ribbon-helper.guide",
   "dependencies": {

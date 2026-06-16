@@ -1,0 +1,167 @@
+{
+  "Barraskewda": {
+    "Barraskewda (SwSh Singles)": {
+      "evs": {
+        "hp": 6,
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Liquidation",
+        "Close Combat",
+        "Poison Jab",
+        "Protect"
+      ],
+      "nature": "Adamant",
+      "item": "Life Orb",
+      "ability": "Swift Swim",
+      "level": 50
+    }
+  },
+  "Ludicolo": {
+    "Ludicolo (SwSh Singles)": {
+      "evs": {
+        "df": 6,
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Energy Ball",
+        "Scald",
+        "Ice Beam",
+        "Fake Out"
+      ],
+      "nature": "Modest",
+      "item": "Assault Vest",
+      "ability": "Swift Swim",
+      "level": 50
+    }
+  },
+  "Pelipper": {
+    "Pelipper (SwSh Singles)": {
+      "evs": {
+        "sa": 252,
+        "sd": 6,
+        "sp": 252
+      },
+      "moves": [
+        "Hurricane",
+        "Scald",
+        "Tailwind",
+        "Protect"
+      ],
+      "nature": "Timid",
+      "item": "Focus Sash",
+      "ability": "Drizzle",
+      "level": 50
+    }
+  },
+  "Dracovish": {
+    "Dracovish (SwSh Singles 2)": {
+      "evs": {
+        "at": 252,
+        "df": 4,
+        "sp": 252
+      },
+      "moves": [
+        "Fishious Rend",
+        "Psychic Fangs",
+        "Outrage",
+        "Crunch"
+      ],
+      "nature": "Adamant",
+      "item": "Choice Scarf",
+      "ability": "Strong Jaw"
+    }
+  },
+  "Zacian-Crowned": {
+    "Zacian (SwSh Singles 2)": {
+      "evs": {
+        "at": 252,
+        "df": 4,
+        "sp": 252
+      },
+      "moves": [
+        "Iron Head",
+        "Play Rough",
+        "Close Combat",
+        "Crunch"
+      ],
+      "nature": "Adamant",
+      "item": "Rusted Sword",
+      "ability": "Intrepid Sword"
+    }
+  },
+  "Calyrex-Shadow": {
+    "Calyrex-Shadow (SwSh Doubles)": {
+      "evs": {
+        "df": 6,
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Expanding Force",
+        "Astral Barrage",
+        "Pollen Puff",
+        "Protect"
+      ],
+      "nature": "Modest",
+      "item": "Life Orb",
+      "ability": "As One"
+    }
+  },
+  "Tapu Lele": {
+    "Tapu Lele (SwSh Doubles)": {
+      "evs": {
+        "df": 6,
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Dazzling Gleam",
+        "Psychic",
+        "Shadow Ball",
+        "Energy Ball"
+      ],
+      "nature": "Modest",
+      "item": "Choice Scarf",
+      "ability": "Psychic Surge"
+    }
+  },
+  "Kyurem-W": {
+    "Kyurem-White (SwSh Doubles)": {
+      "evs": {
+        "hp": 132,
+        "df": 120,
+        "sa": 252,
+        "sd": 6
+      },
+      "moves": [
+        "Freeze-Dry",
+        "Dragon Pulse",
+        "Earth Power",
+        "Blizzard"
+      ],
+      "nature": "Modest",
+      "item": "Assault Vest",
+      "ability": "Turboblaze"
+    }
+  },
+  "Zeraora": {
+    "Zeraora (SwSh Doubles)": {
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Plasma Fists",
+        "Close Combat",
+        "Fire Punch",
+        "Outrage"
+      ],
+      "nature": "Adamant",
+      "item": "Focus Sash",
+      "ability": "Volt Absorb"
+    }
+  }
+}

@@ -75,4 +75,22 @@ describe('BattleFacilities routes', () => {
     fireEvent.change(page.getByDisplayValue('1'), { target: { value: '10' } })
     expect(page.getByDisplayValue('Area Leader Vander')).toBeInTheDocument()
   })
+
+  it('loads the Sword/Shield calculator and requested mode', () => {
+    const view = render(
+      <MemoryRouter initialEntries={['/battle-facilities/swsh?mode=doubles']}>
+        <Routes>
+          <Route path="/battle-facilities/:game" element={<BattleFacilities />} />
+        </Routes>
+      </MemoryRouter>,
+    )
+    const page = within(view.container)
+
+    expect(page.getByDisplayValue('Sword / Shield - Battle Tower')).toBeInTheDocument()
+    expect(page.getByRole('radio', { name: 'Doubles' })).toBeChecked()
+    expect(page.getByRole('img', { name: 'Tower Master Ribbon' })).toBeInTheDocument()
+    expect(page.getByText('Rank 1')).toBeInTheDocument()
+    expect(page.getByText('16 IVs')).toBeInTheDocument()
+    expect(page.getByDisplayValue('Calyrex-Shadow (SwSh Doubles)')).toBeInTheDocument()
+  })
 })

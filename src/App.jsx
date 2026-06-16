@@ -81,6 +81,14 @@ export default function App() {
         { name: 'Altissimo Colosseum Battle Mode Doubles', url: 'https://altissimo1.github.io/Supplementary-Series/Orre/Colosseum/Battle-Mode/mt-battle-doubles.html' },
         { name: 'Altissimo XD Mt. Battle', url: 'https://altissimo1.github.io/Supplementary-Series/Orre/XD/mt-battle.html' },
       ]
+    } else if (path.startsWith('/battle-facilities/swsh')) {
+      return [
+        { name: 'EisenCalc', url: 'https://eisencalc.com' },
+        { name: 'Bulbapedia Sw/Sh Battle Tower Trainers', url: 'https://bulbapedia.bulbagarden.net/wiki/List_of_Battle_Tower_Trainers_in_Pok%C3%A9mon_Sword_and_Shield' },
+        { name: 'Bulbapedia Sw/Sh Battle Tower Pokemon', url: 'https://bulbapedia.bulbagarden.net/wiki/List_of_Battle_Tower_Pok%C3%A9mon_in_Pok%C3%A9mon_Sword_and_Shield' },
+        { name: 'Altissimo Sw/Sh Battle Tower Trainers', url: 'https://altissimo1.github.io/Main-Series/SwSh/battle-tower-trainers.html' },
+        { name: 'Altissimo Sw/Sh Battle Tower Pokemon', url: 'https://altissimo1.github.io/Main-Series/SwSh/battle-tower-pokemon.html' },
+      ]
     } else if (path.startsWith('/battle-facilities')) {
       return [{ name: 'EisenCalc', url: 'https://eisencalc.com' }]
     }

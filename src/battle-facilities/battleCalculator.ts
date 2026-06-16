@@ -98,6 +98,13 @@ export interface OpponentLevelParams {
   p1Level: number
 }
 
+export interface OpponentPokemonParams {
+  modeId: string
+  battleNum: number
+  trainer: Trainer | null
+  pokemonLabel: string
+}
+
 // ──────────────────────────────────────────────
 // GameConfig interface
 // ──────────────────────────────────────────────
@@ -126,8 +133,10 @@ export interface GameConfig {
   getTrainersForBattle: (battleNum: number, modeId?: string) => Trainer[]
   getPokemonForTrainer: (trainerName: string, modeId?: string, battleNum?: number) => string[]
   getIVsForTrainer: (trainer: Trainer | null) => number
+  getIVsForPokemon?: (params: OpponentPokemonParams) => number
   getBattleRange: (battleNum: number, modeId?: string) => string
   getOpponentLevel?: (params: OpponentLevelParams) => number | undefined
+  getOpponentIvsLabel?: (params: OpponentPokemonParams) => string
   opponentIvsLabel?: string
 
   // Team
@@ -155,6 +164,7 @@ export { orasConfig } from './gen6Battles'
 export { gen4Config } from './gen4Battles'
 export { dpConfig } from './dpBattles'
 export { bdspConfig } from './bdspBattles'
+export { swshConfig } from './swshBattles'
 
 // Re-export DamageResult for the UI
 export type { DamageResult } from './gen3calc'

@@ -1,0 +1,1558 @@
+[
+  {
+    "number": 0,
+    "class": "Youngster",
+    "name": "Benedict",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 1
+  },
+  {
+    "number": 1,
+    "class": "Youngster",
+    "name": "Marko",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 1
+  },
+  {
+    "number": 2,
+    "class": "Youngster",
+    "name": "Brent",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 1
+  },
+  {
+    "number": 3,
+    "class": "Lass",
+    "name": "Ellie",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 2
+  },
+  {
+    "number": 4,
+    "class": "Lass",
+    "name": "Ava",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 2
+  },
+  {
+    "number": 5,
+    "class": "Lass",
+    "name": "Moira",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 2
+  },
+  {
+    "number": 6,
+    "class": "Schoolboy",
+    "name": "Finley",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 3
+  },
+  {
+    "number": 7,
+    "class": "Schoolboy",
+    "name": "Reu",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 3
+  },
+  {
+    "number": 8,
+    "class": "Schoolboy",
+    "name": "Theodore",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 3
+  },
+  {
+    "number": 9,
+    "class": "Schoolgirl",
+    "name": "Zara",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 3
+  },
+  {
+    "number": 10,
+    "class": "Schoolgirl",
+    "name": "Dusk",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 3
+  },
+  {
+    "number": 11,
+    "class": "Schoolgirl",
+    "name": "Holly",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 3
+  },
+  {
+    "number": 12,
+    "class": "Poké Kid♂",
+    "name": "Albert",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 4
+  },
+  {
+    "number": 13,
+    "class": "Poké Kid♂",
+    "name": "Blake",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 4
+  },
+  {
+    "number": 14,
+    "class": "Poké Kid♂",
+    "name": "Robin",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 4
+  },
+  {
+    "number": 15,
+    "class": "Poké Kid♀",
+    "name": "Alex",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 5
+  },
+  {
+    "number": 16,
+    "class": "Poké Kid♀",
+    "name": "Dromena",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 5
+  },
+  {
+    "number": 17,
+    "class": "Poké Kid♀",
+    "name": "Penelope",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 5
+  },
+  {
+    "number": 18,
+    "class": "Office Worker♂",
+    "name": "Clarence",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 6
+  },
+  {
+    "number": 19,
+    "class": "Office Worker♂",
+    "name": "Stanley",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 6
+  },
+  {
+    "number": 20,
+    "class": "Office Worker♂",
+    "name": "Hugo",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 6
+  },
+  {
+    "number": 21,
+    "class": "Office Worker♀",
+    "name": "Sayla",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 7
+  },
+  {
+    "number": 22,
+    "class": "Office Worker♀",
+    "name": "Orla",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 7
+  },
+  {
+    "number": 23,
+    "class": "Office Worker♀",
+    "name": "Thea",
+    "minRank": 1,
+    "maxRank": 3,
+    "dynamaxBand": false,
+    "sourceRoster": 7
+  },
+  {
+    "number": 24,
+    "class": "Youngster",
+    "name": "Stan",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 8
+  },
+  {
+    "number": 25,
+    "class": "Youngster",
+    "name": "Brenner",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 8
+  },
+  {
+    "number": 26,
+    "class": "Lass",
+    "name": "Kushi",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 9
+  },
+  {
+    "number": 27,
+    "class": "Lass",
+    "name": "Darcie",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 9
+  },
+  {
+    "number": 28,
+    "class": "Schoolboy",
+    "name": "Bon",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 10
+  },
+  {
+    "number": 29,
+    "class": "Schoolboy",
+    "name": "Albie",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 10
+  },
+  {
+    "number": 30,
+    "class": "Schoolgirl",
+    "name": "Sienna",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 10
+  },
+  {
+    "number": 31,
+    "class": "Schoolgirl",
+    "name": "Silky",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 10
+  },
+  {
+    "number": 32,
+    "class": "Poké Kid♂",
+    "name": "Fero",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 11
+  },
+  {
+    "number": 33,
+    "class": "Poké Kid♂",
+    "name": "Avit",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 11
+  },
+  {
+    "number": 34,
+    "class": "Poké Kid♀",
+    "name": "Kaelie",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 12
+  },
+  {
+    "number": 35,
+    "class": "Poké Kid♀",
+    "name": "Katherine",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 11
+  },
+  {
+    "number": 36,
+    "class": "Office Worker♂",
+    "name": "Diego",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 13
+  },
+  {
+    "number": 37,
+    "class": "Office Worker♂",
+    "name": "Patton",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 13
+  },
+  {
+    "number": 38,
+    "class": "Office Worker♀",
+    "name": "Stella",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 14
+  },
+  {
+    "number": 39,
+    "class": "Office Worker♀",
+    "name": "Krysia",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 14
+  },
+  {
+    "number": 40,
+    "class": "Pokémon Breeder♂",
+    "name": "Matthew",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 15
+  },
+  {
+    "number": 41,
+    "class": "Pokémon Breeder♂",
+    "name": "Winslow",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 16
+  },
+  {
+    "number": 42,
+    "class": "Pokémon Breeder♀",
+    "name": "Waylin",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 15
+  },
+  {
+    "number": 43,
+    "class": "Pokémon Breeder♀",
+    "name": "Therme",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 15
+  },
+  {
+    "number": 44,
+    "class": "Worker♂",
+    "name": "Columban",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 17
+  },
+  {
+    "number": 45,
+    "class": "Worker♂",
+    "name": "Egbert",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 17
+  },
+  {
+    "number": 46,
+    "class": "Worker♀",
+    "name": "Rikke",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 18
+  },
+  {
+    "number": 47,
+    "class": "Worker♀",
+    "name": "Isabelle",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 18
+  },
+  {
+    "number": 48,
+    "class": "Black Belt",
+    "name": "Mornix",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 19
+  },
+  {
+    "number": 49,
+    "class": "Black Belt",
+    "name": "Tsapeli",
+    "minRank": 4,
+    "maxRank": 9,
+    "dynamaxBand": false,
+    "sourceRoster": 19
+  },
+  {
+    "number": 50,
+    "class": "Hiker",
+    "name": "Jung",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 20
+  },
+  {
+    "number": 51,
+    "class": "Hiker",
+    "name": "Graymond",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 20
+  },
+  {
+    "number": 52,
+    "class": "Backpacker",
+    "name": "Celinda",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 21
+  },
+  {
+    "number": 53,
+    "class": "Backpacker",
+    "name": "Ajani",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 21
+  },
+  {
+    "number": 54,
+    "class": "Cabbie",
+    "name": "Feng",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 22
+  },
+  {
+    "number": 55,
+    "class": "Cabbie",
+    "name": "Daltz",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 22
+  },
+  {
+    "number": 56,
+    "class": "Fisher",
+    "name": "Maggie",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 23
+  },
+  {
+    "number": 57,
+    "class": "Fisher",
+    "name": "Bate",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 23
+  },
+  {
+    "number": 58,
+    "class": "Police Officer",
+    "name": "Nick",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 24
+  },
+  {
+    "number": 59,
+    "class": "Police Officer",
+    "name": "Booker",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 24
+  },
+  {
+    "number": 60,
+    "class": "Model",
+    "name": "Astraea",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 25
+  },
+  {
+    "number": 61,
+    "class": "Model",
+    "name": "Berti",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 25
+  },
+  {
+    "number": 62,
+    "class": "Café Master",
+    "name": "Finn",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 26
+  },
+  {
+    "number": 63,
+    "class": "Café Master",
+    "name": "Vassallo",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 26
+  },
+  {
+    "number": 64,
+    "class": "Madame",
+    "name": "Isla",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 27
+  },
+  {
+    "number": 65,
+    "class": "Madame",
+    "name": "Laguna",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 27
+  },
+  {
+    "number": 66,
+    "class": "Musician",
+    "name": "Gig",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 28
+  },
+  {
+    "number": 67,
+    "class": "Musician",
+    "name": "Jay",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 28
+  },
+  {
+    "number": 68,
+    "class": "Dancer",
+    "name": "Tricia",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 29
+  },
+  {
+    "number": 69,
+    "class": "Dancer",
+    "name": "Tiff",
+    "minRank": 6,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 29
+  },
+  {
+    "number": 70,
+    "class": "Youngster",
+    "name": "Noel",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 30
+  },
+  {
+    "number": 71,
+    "class": "Lass",
+    "name": "Maya",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 31
+  },
+  {
+    "number": 72,
+    "class": "Schoolboy",
+    "name": "York",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 32
+  },
+  {
+    "number": 73,
+    "class": "Schoolgirl",
+    "name": "Gelete",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 33
+  },
+  {
+    "number": 74,
+    "class": "Poké Kid♂",
+    "name": "Savvas",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 34
+  },
+  {
+    "number": 75,
+    "class": "Poké Kid♀",
+    "name": "Madi",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 35
+  },
+  {
+    "number": 76,
+    "class": "Office Worker♂",
+    "name": "Keanu",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 36
+  },
+  {
+    "number": 77,
+    "class": "Office Worker♀",
+    "name": "Hertz",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 37
+  },
+  {
+    "number": 78,
+    "class": "Pokémon Breeder♂",
+    "name": "Raise",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 38
+  },
+  {
+    "number": 79,
+    "class": "Pokémon Breeder♀",
+    "name": "Madlyn",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 39
+  },
+  {
+    "number": 80,
+    "class": "Worker♂",
+    "name": "Cornelius",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 40
+  },
+  {
+    "number": 81,
+    "class": "Worker♀",
+    "name": "Ann",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 41
+  },
+  {
+    "number": 82,
+    "class": "League Staff♂",
+    "name": "Davis",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 42
+  },
+  {
+    "number": 83,
+    "class": "League Staff♀",
+    "name": "Oratoria",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 42
+  },
+  {
+    "number": 84,
+    "class": "Doctor♂",
+    "name": "Wenson",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 43
+  },
+  {
+    "number": 85,
+    "class": "Doctor♀",
+    "name": "Lia",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 44
+  },
+  {
+    "number": 86,
+    "class": "Artist",
+    "name": "Elwood",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 45
+  },
+  {
+    "number": 87,
+    "class": "Beauty",
+    "name": "Mika",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 46
+  },
+  {
+    "number": 88,
+    "class": "Gentleman",
+    "name": "Wellington",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 47
+  },
+  {
+    "number": 89,
+    "class": "Madame",
+    "name": "Fairamay",
+    "minRank": 8,
+    "maxRank": 10,
+    "dynamaxBand": false,
+    "sourceRoster": 47
+  },
+  {
+    "number": 90,
+    "class": "Schoolboy",
+    "name": "McKinzie",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 48
+  },
+  {
+    "number": 91,
+    "class": "Schoolboy",
+    "name": "Walden",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 48
+  },
+  {
+    "number": 92,
+    "class": "Schoolgirl",
+    "name": "Waldna",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 49
+  },
+  {
+    "number": 93,
+    "class": "Schoolgirl",
+    "name": "Rennie",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 49
+  },
+  {
+    "number": 94,
+    "class": "Poké Kid♂",
+    "name": "Curon",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 50
+  },
+  {
+    "number": 95,
+    "class": "Poké Kid♂",
+    "name": "Cadet",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 50
+  },
+  {
+    "number": 96,
+    "class": "Poké Kid♀",
+    "name": "Agila",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 51
+  },
+  {
+    "number": 97,
+    "class": "Poké Kid♀",
+    "name": "Laelia",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 51
+  },
+  {
+    "number": 98,
+    "class": "Office Worker♂",
+    "name": "Freeman",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 52
+  },
+  {
+    "number": 99,
+    "class": "Office Worker♂",
+    "name": "Marvo",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 52
+  },
+  {
+    "number": 100,
+    "class": "Office Worker♀",
+    "name": "Prudence",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 53
+  },
+  {
+    "number": 101,
+    "class": "Office Worker♀",
+    "name": "Russet",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 53
+  },
+  {
+    "number": 102,
+    "class": "Rail Staff",
+    "name": "Gunter",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 54
+  },
+  {
+    "number": 103,
+    "class": "Rail Staff",
+    "name": "Frost",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 54
+  },
+  {
+    "number": 104,
+    "class": "Cook",
+    "name": "Tayster",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 55
+  },
+  {
+    "number": 105,
+    "class": "Cook",
+    "name": "Brodo",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 55
+  },
+  {
+    "number": 106,
+    "class": "Worker♂",
+    "name": "Alby",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 56
+  },
+  {
+    "number": 107,
+    "class": "Worker♂",
+    "name": "Ultan",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 57
+  },
+  {
+    "number": 108,
+    "class": "Worker♀",
+    "name": "Cyl",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 58
+  },
+  {
+    "number": 109,
+    "class": "Worker♀",
+    "name": "Mason",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 58
+  },
+  {
+    "number": 110,
+    "class": "League Staff♂",
+    "name": "Claus",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 59
+  },
+  {
+    "number": 111,
+    "class": "League Staff♂",
+    "name": "Harvey",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 60
+  },
+  {
+    "number": 112,
+    "class": "League Staff♀",
+    "name": "Aya",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 60
+  },
+  {
+    "number": 113,
+    "class": "League Staff♀",
+    "name": "Rachael",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 60
+  },
+  {
+    "number": 114,
+    "class": "Cameraman",
+    "name": "North",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 61
+  },
+  {
+    "number": 115,
+    "class": "Cameraman",
+    "name": "Selmer",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 61
+  },
+  {
+    "number": 116,
+    "class": "Reporter",
+    "name": "Sayen",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 61
+  },
+  {
+    "number": 117,
+    "class": "Reporter",
+    "name": "Narra",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 61
+  },
+  {
+    "number": 118,
+    "class": "Model",
+    "name": "Trinn",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 62
+  },
+  {
+    "number": 119,
+    "class": "Model",
+    "name": "Nebula",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 62
+  },
+  {
+    "number": 120,
+    "class": "Café Master",
+    "name": "Heaton",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 63
+  },
+  {
+    "number": 121,
+    "class": "Café Master",
+    "name": "Rister",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 63
+  },
+  {
+    "number": 122,
+    "class": "Backpacker",
+    "name": "Crawly",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 64
+  },
+  {
+    "number": 123,
+    "class": "Office Worker♀",
+    "name": "Lila",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 53
+  },
+  {
+    "number": 124,
+    "class": "Musician",
+    "name": "Desmond",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 64
+  },
+  {
+    "number": 125,
+    "class": "Musician",
+    "name": "Civaro",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 64
+  },
+  {
+    "number": 126,
+    "class": "Dancer",
+    "name": "Rondo",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 65
+  },
+  {
+    "number": 127,
+    "class": "Dancer",
+    "name": "Haily",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 65
+  },
+  {
+    "number": 128,
+    "class": "Police Officer",
+    "name": "Blau",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 66
+  },
+  {
+    "number": 129,
+    "class": "Police Officer",
+    "name": "Sheriff",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 66
+  },
+  {
+    "number": 130,
+    "class": "Beauty",
+    "name": "Ghia",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 67
+  },
+  {
+    "number": 131,
+    "class": "Beauty",
+    "name": "Rita",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 67
+  },
+  {
+    "number": 132,
+    "class": "Youngster",
+    "name": "Nasser",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 61
+  },
+  {
+    "number": 133,
+    "class": "Youngster",
+    "name": "Bartholomew",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 61
+  },
+  {
+    "number": 134,
+    "class": "Lass",
+    "name": "Laramie",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 68
+  },
+  {
+    "number": 135,
+    "class": "Lass",
+    "name": "Mindy",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 68
+  },
+  {
+    "number": 136,
+    "class": "Postman",
+    "name": "Townsend",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 69
+  },
+  {
+    "number": 137,
+    "class": "Postman",
+    "name": "Walker",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 69
+  },
+  {
+    "number": 138,
+    "class": "Doctor♂",
+    "name": "Fingal",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 70
+  },
+  {
+    "number": 139,
+    "class": "Doctor♂",
+    "name": "Niel",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 70
+  },
+  {
+    "number": 140,
+    "class": "Doctor♀",
+    "name": "Angie",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 71
+  },
+  {
+    "number": 141,
+    "class": "Doctor♀",
+    "name": "Gracia",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 71
+  },
+  {
+    "number": 142,
+    "class": "Cabbie",
+    "name": "Nav",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 72
+  },
+  {
+    "number": 143,
+    "class": "Cabbie",
+    "name": "Tosh",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 72
+  },
+  {
+    "number": 144,
+    "class": "Pokémon Breeder♀",
+    "name": "Rei",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 73
+  },
+  {
+    "number": 145,
+    "class": "Pokémon Breeder♀",
+    "name": "Greta",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 73
+  },
+  {
+    "number": 146,
+    "class": "Pokémon Breeder♂",
+    "name": "Chad",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 74
+  },
+  {
+    "number": 147,
+    "class": "Pokémon Breeder♂",
+    "name": "Reese",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 74
+  },
+  {
+    "number": 148,
+    "class": "Gentleman",
+    "name": "Wilde",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 75
+  },
+  {
+    "number": 149,
+    "class": "Gentleman",
+    "name": "Rich",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 75
+  },
+  {
+    "number": 150,
+    "class": "Madame",
+    "name": "Navin",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 75
+  },
+  {
+    "number": 151,
+    "class": "Madame",
+    "name": "Tansy",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 75
+  },
+  {
+    "number": 152,
+    "class": "Artist",
+    "name": "Anselm",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 76
+  },
+  {
+    "number": 153,
+    "class": "Artist",
+    "name": "Hardy",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 76
+  },
+  {
+    "number": 154,
+    "class": "Black Belt",
+    "name": "Ulster",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 77
+  },
+  {
+    "number": 155,
+    "class": "Black Belt",
+    "name": "Wotson",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 77
+  },
+  {
+    "number": 156,
+    "class": "Black Belt",
+    "name": "Goodwin",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 77
+  },
+  {
+    "number": 157,
+    "class": "Fisher",
+    "name": "Adrienne",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 78
+  },
+  {
+    "number": 158,
+    "class": "Fisher",
+    "name": "Chelsea",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 78
+  },
+  {
+    "number": 159,
+    "class": "Hiker",
+    "name": "Torren",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 79
+  },
+  {
+    "number": 160,
+    "class": "Hiker",
+    "name": "Gram",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 79
+  },
+  {
+    "number": 161,
+    "class": "Hiker",
+    "name": "Nat",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 79
+  },
+  {
+    "number": 162,
+    "class": "Backpacker",
+    "name": "Ulva",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 64
+  },
+  {
+    "number": 163,
+    "class": "Backpacker",
+    "name": "Polly",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": false,
+    "sourceRoster": 64
+  },
+  {
+    "number": 164,
+    "class": "League Staff♂",
+    "name": "Lazlo",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": true,
+    "sourceRoster": 80
+  },
+  {
+    "number": 165,
+    "class": "League Staff♀",
+    "name": "Allegra",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": true,
+    "sourceRoster": 80
+  },
+  {
+    "number": 166,
+    "class": "Youngster",
+    "name": "Ander",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": true,
+    "sourceRoster": 81
+  },
+  {
+    "number": 167,
+    "class": "Lass",
+    "name": "Hestia",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": true,
+    "sourceRoster": 82
+  },
+  {
+    "number": 168,
+    "class": "Poké Kid♂",
+    "name": "Alan",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": true,
+    "sourceRoster": 83
+  },
+  {
+    "number": 169,
+    "class": "Poké Kid♀",
+    "name": "Eva",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": true,
+    "sourceRoster": 84
+  },
+  {
+    "number": 170,
+    "class": "Police Officer",
+    "name": "Cooper",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": true,
+    "sourceRoster": 85
+  },
+  {
+    "number": 171,
+    "class": "Beauty",
+    "name": "Becka",
+    "minRank": "MAX",
+    "maxRank": "MAX",
+    "dynamaxBand": true,
+    "sourceRoster": 86
+  },
+  {
+    "number": 999,
+    "class": "Champion",
+    "name": "Leon",
+    "minRank": 3,
+    "maxRank": "MAX",
+    "boss": "leon"
+  }
+]

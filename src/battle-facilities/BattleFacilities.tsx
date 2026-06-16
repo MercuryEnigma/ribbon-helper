@@ -9,6 +9,7 @@ import {
   gen4Config,
   dpConfig,
   bdspConfig,
+  swshConfig,
   type GameConfig,
   type SideState,
   type PokeSummary,
@@ -37,6 +38,7 @@ const GAME_OPTIONS: { slug: string; config: GameConfig }[] = [
   { slug: 'oras', config: orasConfig },
   { slug: 'sunmoon', config: sunMoonConfig },
   { slug: 'bdsp', config: bdspConfig },
+  { slug: 'swsh', config: swshConfig },
 ]
 
 const STATUS_OPTIONS = ['Healthy', 'Poisoned', 'Badly Poisoned', 'Burned', 'Paralyzed', 'Asleep', 'Frozen'] as const
@@ -532,7 +534,14 @@ export default function BattleFacilities() {
     return availableSets[0] || ''
   }, [availableSets, p2Label])
 
-  const p2Ivs = config.getIVsForTrainer(selectedTrainer)
+  const opponentPokemonParams = {
+    modeId: mode.id,
+    battleNum,
+    trainer: selectedTrainer,
+    pokemonLabel: effectiveP2Label,
+  }
+  const p2Ivs = config.getIVsForPokemon?.(opponentPokemonParams) ?? config.getIVsForTrainer(selectedTrainer)
+  const opponentIvsLabel = config.getOpponentIvsLabel?.(opponentPokemonParams) ?? config.opponentIvsLabel ?? `${p2Ivs} IVs`
   const configuredP2Level = config.getOpponentLevel?.({
     modeId: mode.id,
     battleNum,
@@ -811,7 +820,7 @@ export default function BattleFacilities() {
                   title="Reset to battle 1"
                 >Reset</button>
                 {config.getBattleRange(battleNum, mode.id) && <span className="bf-range-badge">{config.getBattleRange(battleNum, mode.id)}</span>}
-                <span className="bf-range-badge">{config.opponentIvsLabel ?? `${p2Ivs} IVs`}</span>
+                <span className="bf-range-badge">{opponentIvsLabel}</span>
               </div>
               <div className="bf-trainer-row">
                 <span className="bf-row-label">Trainer</span>
