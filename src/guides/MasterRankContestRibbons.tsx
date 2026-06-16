@@ -50,7 +50,7 @@ function createCategoryEntry(category: MasterRankCategory): RibbonGuideEntry {
 
 const masterRankContestRibbons: Guide = {
   id: 'master-rank-contest-ribbons',
-  title: 'Master Rank Contest Ribbons',
+  title: 'Master Contest Ribbons',
   description: (
     <>
       <p>Earn the Master Rank Ribbon for all five contest categories in Omega Ruby and Alpha Sapphire or Brilliant Diamond and Shining Pearl.</p>

@@ -276,6 +276,18 @@
 
 /* ── Responsive ── */
 @media (max-width: 540px) {
+  .guides-wrapper {
+    padding-top: 14px;
+  }
+
+  .trainer-card-header {
+    padding: 20px 22px 18px;
+  }
+
+  .trainer-card-pokeball {
+    display: none;
+  }
+
   .guide-entry-header {
     flex-direction: column;
     align-items: center;
@@ -295,8 +307,10 @@
   }
 
   .trainer-card-selector {
+    width: 100%;
     font-size: 1rem;
     letter-spacing: 1.5px;
+    padding: 8px 14px;
   }
 
   .trainer-card-guide .voiceless-pokemon-list {

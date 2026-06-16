@@ -132,7 +132,7 @@ export default function App() {
               Pokémon
             </NavLink>
             <NavLink to="/guides" className={getNavLinkClassName('guides')}>
-              Guides
+              Ribbons
             </NavLink>
             <NavLink to="/battle-facilities" className={getNavLinkClassName('battle-facilities')}>
               Battle Facilities
@@ -160,7 +160,7 @@ export default function App() {
             <Route path="/visual-decoration/*" element={<VisualDecoration />} />
             <Route path="/battle-facilities" element={<Navigate to="/battle-facilities/emerald" replace />} />
             <Route path="/battle-facilities/:game" element={<BattleFacilities />} />
-            <Route path="/guides" element={<Navigate to="/guides/footprint-ribbon" replace />} />
+            <Route path="/guides" element={<Navigate to="/guides/ribbon-checker" replace />} />
             <Route path="/guides/ribbon-checker" element={<HomeMerger />} />
             <Route path="/guides/:guideId" element={<Guides />} />
             <Route path="*" element={<Navigate to="/game-compatibility" replace />} />

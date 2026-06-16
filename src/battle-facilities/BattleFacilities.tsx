@@ -37,8 +37,8 @@ const GAME_OPTIONS: { slug: string; config: GameConfig }[] = [
   { slug: 'pthgss', config: gen4Config },
   { slug: 'oras', config: orasConfig },
   { slug: 'sunmoon', config: sunMoonConfig },
-  { slug: 'bdsp', config: bdspConfig },
   { slug: 'swsh', config: swshConfig },
+  { slug: 'bdsp', config: bdspConfig },
 ]
 
 const STATUS_OPTIONS = ['Healthy', 'Poisoned', 'Badly Poisoned', 'Burned', 'Paralyzed', 'Asleep', 'Frozen'] as const

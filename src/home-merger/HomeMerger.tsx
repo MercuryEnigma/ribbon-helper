@@ -102,12 +102,12 @@ const SPECIES_OPTIONS = Object.entries(POKEMON_DB)
 function getHomeAppUrl(): string {
   const ua = typeof navigator !== 'undefined' ? navigator.userAgent : '';
   if (/iPhone|iPad|iPod/i.test(ua)) {
-    return 'https://apps.apple.com/app/pokemon-home/id1483397026';
+    return 'https://apps.apple.com/us/app/pok%C3%A9mon-home/id1485352913';
   }
   if (/Android/i.test(ua)) {
     return 'https://play.google.com/store/apps/details?id=jp.pokemon.pokemonhome';
   }
-  return 'https://home.pokemon.com/';
+  return 'https://home.pokemon.com/en-us/';
 }
 
 export default function HomeMerger() {
