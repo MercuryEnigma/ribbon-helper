@@ -36,12 +36,12 @@ describe('Sword/Shield Battle Tower config', () => {
     expect(swshConfig.modes[0].teams.map(team => team.name))
       .toEqual(['Barraskewda / Ludicolo / Pelipper', 'Dracovish / Zacian'])
     expect(swshConfig.modes[1].teams.map(team => team.name))
-      .toEqual(['Calyrex-Shadow / Tapu Lele'])
+      .toEqual(['Calyrex-Shadow / Tapu Lele', 'Barraskewda / Ludicolo / Pelipper'])
 
     expect(swshConfig.buildP1Options(null, [], swshConfig.modes[0].teams[0].pokemon).map(option => option.label))
-      .toEqual(['Barraskewda (SwSh Singles)', 'Ludicolo (SwSh Singles)', 'Pelipper (SwSh Singles)'])
+      .toEqual(['Barraskewda (Psychic J Rain)', 'Ludicolo (Psychic J Rain)', 'Pelipper (Psychic J Rain)'])
     expect(swshConfig.buildP1Options(null, [], swshConfig.modes[0].teams[1].pokemon).map(option => option.label))
-      .toEqual(['Dracovish (SwSh Singles 2)', 'Zacian (SwSh Singles 2)'])
+      .toEqual(['Dracovish (SwSh Singles)', 'Zacian (SwSh Singles)'])
   })
 
   it('derives ranks and Leon battles from battle number', () => {
@@ -115,7 +115,7 @@ describe('Sword/Shield Battle Tower config', () => {
   })
 
   it('supports selecting alternate Gen 8 abilities', () => {
-    const p1 = swshConfig.buildP1Options(null, [], ['Barraskewda (SwSh Singles)'])[0]
+    const p1 = swshConfig.buildP1Options(null, [], ['Barraskewda (Psychic J Rain)'])[0]
     const side = swshConfig.defaultSideState()
     const result = swshConfig.runCalc({
       modeId: 'singles',
@@ -137,7 +137,7 @@ describe('Sword/Shield Battle Tower config', () => {
   })
 
   it('preserves Dynamax metadata but calculates regular non-Dynamax HP', () => {
-    const p1 = swshConfig.buildP1Options(null, [], ['Barraskewda (SwSh Singles)'])[0]
+    const p1 = swshConfig.buildP1Options(null, [], ['Barraskewda (Psychic J Rain)'])[0]
     const side = swshConfig.defaultSideState()
     const result = swshConfig.runCalc({
       modeId: 'singles',

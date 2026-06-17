@@ -1,6 +1,6 @@
 {
   "Barraskewda": {
-    "Barraskewda (SwSh Singles)": {
+    "Barraskewda (Psychic J Rain)": {
       "evs": {
         "hp": 6,
         "at": 252,
@@ -19,7 +19,7 @@
     }
   },
   "Ludicolo": {
-    "Ludicolo (SwSh Singles)": {
+    "Ludicolo (Psychic J Rain)": {
       "evs": {
         "df": 6,
         "sa": 252,
@@ -38,7 +38,7 @@
     }
   },
   "Pelipper": {
-    "Pelipper (SwSh Singles)": {
+    "Pelipper (Psychic J Rain)": {
       "evs": {
         "sa": 252,
         "sd": 6,
@@ -57,7 +57,7 @@
     }
   },
   "Dracovish": {
-    "Dracovish (SwSh Singles 2)": {
+    "Dracovish (SwSh Singles)": {
       "evs": {
         "at": 252,
         "df": 4,
@@ -75,7 +75,7 @@
     }
   },
   "Zacian-Crowned": {
-    "Zacian (SwSh Singles 2)": {
+    "Zacian (SwSh Singles)": {
       "evs": {
         "at": 252,
         "df": 4,

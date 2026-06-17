@@ -37,15 +37,15 @@ for (const [species, sets] of Object.entries(TEAM_SWSH)) {
 const SINGLES_RAIN_TEAM = {
   name: 'Barraskewda / Ludicolo / Pelipper',
   url: 'https://pokepast.es/88b227ec32852609',
-  description: 'Recommended singles team:',
-  pokemon: ['Barraskewda (SwSh Singles)', 'Ludicolo (SwSh Singles)', 'Pelipper (SwSh Singles)'],
+  description: 'Recommended SwSh team:',
+  pokemon: ['Barraskewda (Psychic J Rain)', 'Ludicolo (Psychic J Rain)', 'Pelipper (Psychic J Rain)'],
 }
 
 const SINGLES_DRACOVISH_TEAM = {
   name: 'Dracovish / Zacian',
   url: 'https://pokepast.es/38879e9b5717be76',
-  description: 'Recommended singles team:',
-  pokemon: ['Dracovish (SwSh Singles 2)', 'Zacian (SwSh Singles 2)'],
+  description: 'Easy singles team:',
+  pokemon: ['Dracovish (SwSh Singles)', 'Zacian (SwSh Singles)'],
 }
 
 const DOUBLES_TEAM = {
@@ -80,7 +80,7 @@ const SWSH_MODES: FacilityMode[] = [
     defaultLevel: 50,
     format: 'doubles',
     maxLevel: 50,
-    teams: [DOUBLES_TEAM],
+    teams: [DOUBLES_TEAM, SINGLES_RAIN_TEAM],
     ribbon: {
       name: 'Tower Master Ribbon',
       description: 'Defeat Leon at Max Rank in the Battle Tower for the Tower Master Ribbon.',
