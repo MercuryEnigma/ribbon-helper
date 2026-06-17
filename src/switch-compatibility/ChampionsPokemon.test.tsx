@@ -4,7 +4,7 @@ import ChampionsPokemon from './ChampionsPokemon';
 import type { PokemonDatabase, PokemonNames } from './types';
 
 const mockChampionsSets = vi.hoisted(() => ({
-  regulationMA: new Set(['ma-only', 'shared', 'ma-sw-only', 'ma-bdsp-only']),
+  regulationMA: new Set(['ma-only', 'shared', 'ma-sw-only', 'ma-bdsp-only', 'shadow-base', 'shadow-form']),
   regulationMB: new Set(['mb-only', 'shared'])
 }));
 
@@ -59,11 +59,31 @@ const mockDb: PokemonDatabase = {
     gender: 'both',
     natdex: 5,
     games: ['bd', 'sp']
+  },
+  'shadow-base': {
+    names: names('Shadow Base'),
+    gender: 'both',
+    natdex: 6,
+    games: allDefaultGames,
+    flags: ['xdShadow']
+  },
+  'shadow-form': {
+    'data-source': 'shadow-base',
+    forms: names('Regional Form'),
+    gender: 'both',
+    natdex: 6,
+    games: allDefaultGames
   }
 };
 
 function renderChampionsPokemon() {
   return render(<ChampionsPokemon pokemonDb={mockDb} onPokemonSelect={vi.fn()} />);
+}
+
+function getGridIcon(altText: string): HTMLElement {
+  return screen
+    .getAllByAltText(altText)
+    .find(element => element.classList.contains('pokemon-icon-grid-item')) as HTMLElement;
 }
 
 describe('ChampionsPokemon', () => {
@@ -121,5 +141,12 @@ describe('ChampionsPokemon', () => {
 
     expect(screen.getByText('M-A SW Only')).toBeInTheDocument();
     expect(screen.queryByText('M-A BDSP Only')).not.toBeInTheDocument();
+  });
+
+  it('does not inherit shadow borders from a base Pokemon onto regional forms', () => {
+    renderChampionsPokemon();
+
+    expect(getGridIcon('Shadow Base')).toHaveClass('champ-xd');
+    expect(getGridIcon('Shadow Base (Regional Form)')).not.toHaveClass('champ-xd');
   });
 });
