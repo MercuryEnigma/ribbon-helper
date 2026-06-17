@@ -40,6 +40,10 @@ export default function App() {
   // Determine acknowledgements based on current route
   const getAcknowledgements = () => {
     const path = location.pathname
+    const battleFacilityResources = [
+      { name: 'EisenCalc', url: 'https://eisencalc.com' },
+      { name: 'Altissimo', url: 'https://altissimo1.github.io/index.html' },
+    ]
 
     if (path.startsWith('/game-compatibility')) {
       return [{ name: 'Ribbons.guide', url: 'https://ribbons.guide' }]
@@ -55,7 +59,7 @@ export default function App() {
       return [{ name: 'Anubis', url: 'https://x.com/Sibuna_Switch' }]
     } else if (path.startsWith('/battle-facilities/rs')) {
       return [
-        { name: 'EisenCalc', url: 'https://eisencalc.com' },
+        ...battleFacilityResources,
         { name: 'Bulbapedia R/S Battle Tower Trainers', url: 'https://bulbapedia.bulbagarden.net/wiki/List_of_Battle_Tower_Trainers_in_Pok%C3%A9mon_Ruby_and_Sapphire' },
         { name: 'Bulbapedia R/S Battle Tower Pokemon', url: 'https://bulbapedia.bulbagarden.net/wiki/List_of_Battle_Tower_Pok%C3%A9mon_in_Pok%C3%A9mon_Ruby_and_Sapphire' },
         { name: 'Altissimo RSE Battle Tower Trainers', url: 'https://altissimo1.github.io/Main-Series/RSE/battle-tower-trainers.html' },
@@ -63,7 +67,7 @@ export default function App() {
       ]
     } else if (path.startsWith('/battle-facilities/dp')) {
       return [
-        { name: 'EisenCalc', url: 'https://eisencalc.com' },
+        ...battleFacilityResources,
         { name: 'Bulbapedia D/P Battle Tower Trainers', url: 'https://bulbapedia.bulbagarden.net/wiki/List_of_Battle_Tower_Trainers_in_Pok%C3%A9mon_Diamond_and_Pearl' },
         { name: 'Bulbapedia D/P Battle Tower Pokemon Group 1', url: 'https://bulbapedia.bulbagarden.net/wiki/List_of_Battle_Tower_Pok%C3%A9mon_in_Pok%C3%A9mon_Diamond_and_Pearl/Group_1' },
         { name: 'Bulbapedia D/P Battle Tower Pokemon Group 2', url: 'https://bulbapedia.bulbagarden.net/wiki/List_of_Battle_Tower_Pok%C3%A9mon_in_Pok%C3%A9mon_Diamond_and_Pearl/Group_2' },
@@ -73,7 +77,7 @@ export default function App() {
       ]
     } else if (path.startsWith('/battle-facilities/mt-battle')) {
       return [
-        { name: 'EisenCalc', url: 'https://eisencalc.com' },
+        ...battleFacilityResources,
         { name: 'Bulbapedia Mt. Battle', url: 'https://bulbapedia.bulbagarden.net/wiki/Mt._Battle#100-battle_challenge' },
         { name: 'Bulbapedia Mt. Battle Areas 1-10', url: 'https://bulbapedia.bulbagarden.net/wiki/Mt._Battle_Area_1' },
         { name: 'Altissimo Colosseum Story Mode Mt. Battle', url: 'https://altissimo1.github.io/Supplementary-Series/Orre/Colosseum/Story-Mode/mt-battle.html' },
@@ -83,14 +87,14 @@ export default function App() {
       ]
     } else if (path.startsWith('/battle-facilities/swsh')) {
       return [
-        { name: 'EisenCalc', url: 'https://eisencalc.com' },
+        ...battleFacilityResources,
         { name: 'Bulbapedia Sw/Sh Battle Tower Trainers', url: 'https://bulbapedia.bulbagarden.net/wiki/List_of_Battle_Tower_Trainers_in_Pok%C3%A9mon_Sword_and_Shield' },
         { name: 'Bulbapedia Sw/Sh Battle Tower Pokemon', url: 'https://bulbapedia.bulbagarden.net/wiki/List_of_Battle_Tower_Pok%C3%A9mon_in_Pok%C3%A9mon_Sword_and_Shield' },
         { name: 'Altissimo Sw/Sh Battle Tower Trainers', url: 'https://altissimo1.github.io/Main-Series/SwSh/battle-tower-trainers.html' },
         { name: 'Altissimo Sw/Sh Battle Tower Pokemon', url: 'https://altissimo1.github.io/Main-Series/SwSh/battle-tower-pokemon.html' },
       ]
     } else if (path.startsWith('/battle-facilities')) {
-      return [{ name: 'EisenCalc', url: 'https://eisencalc.com' }]
+      return battleFacilityResources
     }
 
     return []
