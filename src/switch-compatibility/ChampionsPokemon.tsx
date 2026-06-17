@@ -3,7 +3,7 @@ import type { PokemonDatabase, PokemonData } from './types';
 import { GAME_TOOLTIPS } from './types';
 import { GAME_GROUPS, getPokemonDisplayName } from './utils';
 import { getPokemonIconProps } from './iconUtils';
-import { REGULATION_MA_POKEMON, GLOBAL_CHALLENGE_POKEMON } from './championsData';
+import { REGULATION_MA_POKEMON, REGULATION_MB_POKEMON } from './championsData';
 
 interface ChampionsPokemonProps {
   pokemonDb: PokemonDatabase;
@@ -14,11 +14,19 @@ interface FilteredPokemon {
   key: string;
   name: string;
   data: PokemonData;
-  championsSource?: 'regulationMA' | 'globalChallenge' | 'both';
+  championsSource?: 'regulationMA' | 'regulationMB' | 'both';
   shadowGamesSource?: 'colosseum' | 'xd' | 'both';
   preEvoShadowSource?: 'colosseum' | 'xd' | 'both';
   preEvoName?: string;
 }
+
+type ChampionsFilter = 'regulationMA' | 'regulationMB' | 'any';
+
+const CHAMPIONS_FILTER_OPTIONS: Array<{ value: ChampionsFilter; label: string }> = [
+  { value: 'regulationMA', label: 'Regulation M-A' },
+  { value: 'regulationMB', label: 'Regulation M-B' },
+  { value: 'any', label: 'Any' }
+];
 
 function getPreEvoShadowInfo(
   key: string,
@@ -50,7 +58,7 @@ function getPreEvoShadowInfo(
 function filterChampionsPokemonByGames(
   pokemonDb: PokemonDatabase,
   selectedGames: string[],
-  championsFilter: 'regulationMA' | 'globalChallenge' | 'either'
+  championsFilter: ChampionsFilter
 ): FilteredPokemon[] {
   if (!pokemonDb) return [];
 
@@ -58,9 +66,9 @@ function filterChampionsPokemonByGames(
 
   for (const [key, data] of Object.entries(pokemonDb)) {
     const hasRegulationMA = REGULATION_MA_POKEMON.has(key);
-    const hasGlobalChallenge = GLOBAL_CHALLENGE_POKEMON.has(key);
+    const hasRegulationMB = REGULATION_MB_POKEMON.has(key);
 
-    if (!hasRegulationMA && !hasGlobalChallenge) continue;
+    if (!hasRegulationMA && !hasRegulationMB) continue;
 
     const pokemonGames = Array.isArray(data.games) ? data.games : [];
     const hasAllGames = selectedGames.length === 0 || selectedGames.every(gameId => pokemonGames.includes(gameId));
@@ -77,18 +85,18 @@ function filterChampionsPokemonByGames(
     }
 
     // Actual membership — used for icon coloring regardless of filter
-    const championsSource: 'regulationMA' | 'globalChallenge' | 'both' =
-      hasRegulationMA && hasGlobalChallenge ? 'both'
+    const championsSource: 'regulationMA' | 'regulationMB' | 'both' =
+      hasRegulationMA && hasRegulationMB ? 'both'
       : hasRegulationMA ? 'regulationMA'
-      : 'globalChallenge';
+      : 'regulationMB';
 
     let matchesFilter = false;
     if (championsFilter === 'regulationMA') {
       matchesFilter = hasRegulationMA;
-    } else if (championsFilter === 'globalChallenge') {
-      matchesFilter = hasGlobalChallenge;
+    } else if (championsFilter === 'regulationMB') {
+      matchesFilter = hasRegulationMB;
     } else {
-      matchesFilter = hasRegulationMA || hasGlobalChallenge;
+      matchesFilter = hasRegulationMA || hasRegulationMB;
     }
 
     if (matchesFilter) {
@@ -117,15 +125,13 @@ function filterChampionsPokemonByGames(
   return results;
 }
 
-type ChampionsFilter = 'regulationMA' | 'globalChallenge' | 'either';
-
 export default function ChampionsPokemon({ pokemonDb, onPokemonSelect }: ChampionsPokemonProps) {
   const [selectedGames, setSelectedGames] = useState<string[]>(() =>
     GAME_GROUPS
       .filter(group => group.name !== "Let's Go Pikachu / Eevee" && group.name !== 'Legends: Z-A')
       .flatMap(group => group.ids)
   );
-  const [championsFilter, setChampionsFilter] = useState<ChampionsFilter>('either');
+  const [championsFilter, setChampionsFilter] = useState<ChampionsFilter>('any');
   const [gridHeight, setGridHeight] = useState<number | null>(null);
   const [highlightedPokemon, setHighlightedPokemon] = useState<string | null>(null);
   const [hoveredPokemon, setHoveredPokemon] = useState<{
@@ -212,34 +218,23 @@ export default function ChampionsPokemon({ pokemonDb, onPokemonSelect }: Champio
     <div className="available-pokemon champions-pokemon">
       <div className="game-selector champions-selector">
         <h3>Choose Games:</h3>
-        {/* <div className="champions-filter-toggle">
-          {[
-            { key: 'regulationMA', label: 'Regulation M-A' },
-            { key: 'either', label: 'Either' },
-            { key: 'globalChallenge', label: 'Global Challenge 2026' }
-          ].map(option => {
-            const detail = GAME_TOOLTIPS.champions[option.label];
-            return (
-              <div key={option.key} className="champions-filter-button has-tooltip">
-                <button
-                  className={championsFilter === option.key ? 'active' : ''}
-                  onClick={() => setChampionsFilter(option.key as ChampionsFilter)}
-                >
+        <div className="champions-format-control">
+          <label htmlFor="champions-format-select">Champions format:</label>
+          <div className="champions-format-select-wrap">
+            <select
+              id="champions-format-select"
+              className="champions-format-select"
+              value={championsFilter}
+              onChange={(event) => setChampionsFilter(event.target.value as ChampionsFilter)}
+            >
+              {CHAMPIONS_FILTER_OPTIONS.map(option => (
+                <option key={option.value} value={option.value}>
                   {option.label}
-                </button>
-                {detail && (!isMobile || detail.isLastChance) && (
-                  <div className="game-tooltip-card">
-                    <div className={`game-tooltip-header${detail.isLastChance ? ' last-chance' : ''}`}>
-                      {detail.header}
-                      {detail.isLastChance && <span className="game-tooltip-subline">(Last Chance!)</span>}
-                    </div>
-                    <div className="game-tooltip-body">{detail.body}</div>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div> */}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
         <div className="game-checkboxes">
           {GAME_GROUPS.map(group => {
             const allChecked = group.ids.every(id => selectedGamesSet.has(id));

@@ -117,13 +117,13 @@ export const GAME_TOOLTIPS: Record<'available' | 'shadow' | 'champions', Record<
       header: 'Regulation M-A',
       body: 'Pokemon available in Regulation M-A format.'
     },
-    'Global Challenge 2026': {
-      header: 'Global Challenge 2026',
-      body: 'Pokemon available in the Global Challenge 2026 event.'
+    'Regulation M-B': {
+      header: 'Regulation M-B',
+      body: 'Pokemon available in Regulation M-B format.'
     },
-    'Either': {
-      header: 'Either format',
-      body: 'Pokemon available in either Regulation M-A or Global Challenge 2026.'
+    'Any': {
+      header: 'Any format',
+      body: 'Pokemon available in Regulation M-A or Regulation M-B.'
     }
   }
 };

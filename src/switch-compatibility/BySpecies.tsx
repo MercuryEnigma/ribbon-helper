@@ -5,7 +5,7 @@ import { getGamesForPokemon, getGameGroupNames, searchPokemonByName, getPokemonD
 import { getPokemonIconProps, getPokemonLargeImageProps } from './iconUtils';
 import { getAvailableRibbons } from './ribbonUtils';
 import ribbonsData from '../data/ribbons.json';
-import { REGULATION_MA_POKEMON, GLOBAL_CHALLENGE_POKEMON } from './championsData';
+import { isChampionsPokemon as isChampionsPokemonKey } from './championsData';
 
 interface BySpeciesProps {
   pokemonDb: PokemonDatabase;
@@ -78,7 +78,7 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
 
   const isChampionsPokemon = useMemo(() => {
     if (!selectedPokemon) return false;
-    return REGULATION_MA_POKEMON.has(selectedPokemon) || GLOBAL_CHALLENGE_POKEMON.has(selectedPokemon);
+    return isChampionsPokemonKey(selectedPokemon);
   }, [selectedPokemon]);
 
   const availableGames = useMemo(() => {
