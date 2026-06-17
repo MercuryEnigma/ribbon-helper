@@ -100,7 +100,9 @@ function filterChampionsPokemonByGames(
     }
 
     if (matchesFilter) {
-      const flags = data.flags || pokemonDb[data['data-source'] ?? '']?.flags || [];
+      // Shadow eligibility is form-specific. Do not inherit base flags for
+      // regional/form variants like Paldean Tauros.
+      const flags = data.flags || [];
       const inCol = flags.includes('colShadow');
       const inXD = flags.includes('xdShadow');
       const shadowGamesSource = inCol && inXD ? 'both' : inCol ? 'colosseum' : inXD ? 'xd' : undefined;
