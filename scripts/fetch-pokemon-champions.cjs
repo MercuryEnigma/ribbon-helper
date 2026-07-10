@@ -4,6 +4,8 @@
 // Outputs:
 //   src/data/pokemon_champions.json  — regulation slug → [pokemon key, ...]
 //
+// Regulation M-B is maintained manually in the output file and preserved here.
+//
 // Usage: node scripts/fetch-pokemon-champions.cjs
 
 const fs = require('fs')
@@ -11,7 +13,6 @@ const path = require('path')
 
 const REGULATIONS = {
   'regulation-m-a': 'https://www.serebii.net/pokemonchampions/recruit/regularrosterm-a.shtml',
-  'global-challenge-2026': 'https://www.serebii.net/pokemonchampions/recruit/regularrosterm-a.shtml',
 }
 
 const OUT_PATH = path.join(__dirname, '../src/data/pokemon_champions.json')
@@ -164,6 +165,9 @@ async function main() {
   const natdexLookup = buildNatdexLookup(db)
   const allKeys = new Set(Object.keys(db))
 
+  const existingResult = fs.existsSync(OUT_PATH)
+    ? JSON.parse(fs.readFileSync(OUT_PATH, 'utf8'))
+    : {}
   const result = {}
 
   for (const [slug, url] of Object.entries(REGULATIONS)) {
@@ -205,6 +209,10 @@ async function main() {
 
     console.log(`  Resolved ${keys.length} unique Pokémon`)
     result[slug] = keys
+  }
+
+  if (Array.isArray(existingResult['regulation-m-b'])) {
+    result['regulation-m-b'] = existingResult['regulation-m-b']
   }
 
   fs.writeFileSync(OUT_PATH, JSON.stringify(result, null, 2))

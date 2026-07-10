@@ -3,7 +3,7 @@ import contestEffects from '../data/contest_effects_dppt.json';
 import {
   MovesMap,
   type ContestType,
-  getTypeAppealModifier,
+  OPPOSITE_TYPES,
   sortMovesByPriority,
   getMoveRoleForMove,
   type MoveInfoForSorting
@@ -28,7 +28,7 @@ type SuperArchetype =
   | 'NEXT_FIRST'   // Move that makes next move go first
   | 'NEXT_LAST'    // Move that makes next move go last
   | 'DOUBLE'       // Move that doubles the next turn's appeal
-  | 'VOLTAGE_BONUS' // Move that gives +4 appeal if same contest type
+  | 'VOLTAGE_BONUS' // Move that gives bonus appeal if Judge Voltage goes up
   | 'REPEAT'       // Move that can be repeated up to 2 times consecutively
   | 'NONE';        // Standard move with no special effect
 
@@ -45,7 +45,7 @@ interface SuperContestState {
   skipNext: boolean;    // Whether this turn should be skipped
   endAll: boolean;      // Whether all future turns should be skipped
   turn: number;         // Current turn number (0-3)
-  contestType?: ContestType;  // Contest type for appeal bonuses/penalties (undefined if 'all')
+  contestType?: ContestType;  // Contest type for Judge Voltage move effects (undefined if 'all')
   doubleNext: boolean;  // Whether the next turn's appeal should be doubled
   consecutiveUses: number;  // Number of times the current move has been used consecutively
 }
@@ -85,9 +85,9 @@ function classifyEffect(effect: any): SuperArchetype {
 /**
  * Organizes available moves into pools by their archetype.
  * This allows the strategy simulator to quickly select moves of the needed type.
- * Within each pool, moves are sorted by type (matching > neutral > opposite), then priority/appeal.
+ * Within each pool, moves are sorted by their DPPt appeal, then priority/level.
  * @param availableMoves Map of move names to their set of learn methods
- * @param contestType The contest type for type-based sorting (undefined if 'all')
+ * @param contestType The contest type for move effects that depend on Judge Voltage (undefined if 'all')
  * @returns Object mapping each archetype to an array of moves with that archetype
  */
 function buildMovePools(availableMoves: MovesMap, contestType?: ContestType): Record<SuperArchetype, MoveInfo[]> {
@@ -123,49 +123,56 @@ function buildMovePools(availableMoves: MovesMap, contestType?: ContestType): Re
     });
   }
 
-  // Sort each pool
-  for (const [archetype, pool] of Object.entries(pools) as [SuperArchetype, MoveInfo[]][]) {
-    if (archetype === 'NONE') {
-      // For NONE archetype: sort by type modifier, then appeal, then priority/level
-      pool.sort((a, b) => {
-        // Primary: type modifier (matching > neutral > opposite)
-        if (contestType) {
-          const modA = getTypeAppealModifier(a.type, contestType);
-          const modB = getTypeAppealModifier(b.type, contestType);
-          if (modA !== modB) {
-            return modB - modA; // Higher modifier first (+1 > 0 > -1)
-          }
-        }
+  // Sort each pool: highest DPPt appeal first, then moves that keep the
+  // Judge's Voltage down, then priority/level.
+  for (const pool of Object.values(pools)) {
+    pool.sort((a, b) => {
+      const appealA = getBaseAppeal(a, contestType);
+      const appealB = getBaseAppeal(b, contestType);
+      if (appealA !== appealB) {
+        return appealB - appealA; // Higher appeal first
+      }
 
-        // Secondary: base appeal
-        const appealA = a.effect?.appeal ?? 0;
-        const appealB = b.effect?.appeal ?? 0;
-        if (appealA !== appealB) {
-          return appealB - appealA; // Higher appeal first
-        }
+      const voltageA = getVoltageChange(a.type, contestType);
+      const voltageB = getVoltageChange(b.type, contestType);
+      if (voltageA !== voltageB) {
+        return voltageA - voltageB; // Lower Voltage impact first
+      }
 
-        // Tertiary: priority/level
-        return sortMovesByPriority(a, b);
-      });
-    } else {
-      // For specific archetypes: sort by type modifier, then priority/level
-      pool.sort((a, b) => {
-        // Primary: type modifier (matching > neutral > opposite)
-        if (contestType) {
-          const modA = getTypeAppealModifier(a.type, contestType);
-          const modB = getTypeAppealModifier(b.type, contestType);
-          if (modA !== modB) {
-            return modB - modA; // Higher modifier first (+1 > 0 > -1)
-          }
-        }
-
-        // Secondary: priority/level
-        return sortMovesByPriority(a, b);
-      });
-    }
+      return sortMovesByPriority(a, b);
+    });
   }
 
   return pools;
+}
+
+/**
+ * How a move shifts the Judge's Voltage: +1 if the move's type matches the
+ * contest, -1 if it is an opposite type, 0 otherwise. Raising the Voltage
+ * earns no hearts by itself (only moves with an explicit Voltage effect
+ * benefit), and any contestant can claim the jackpot when the meter fills,
+ * so on equal appeal off-type moves are preferred to suppress the meter.
+ */
+function getVoltageChange(moveType: ContestType, contestType?: ContestType): number {
+  if (!contestType) return 0;
+  if (moveType === contestType) return 1;
+  if (OPPOSITE_TYPES[contestType]?.includes(moveType)) return -1;
+  return 0;
+}
+
+function getBaseAppeal(move: MoveInfo, contestType?: ContestType): number {
+  const effect = move.effect || {};
+  let appeal = effect.appeal ?? 0;
+
+  if (
+    typeof effect.voltage_bonus === 'number' &&
+    contestType &&
+    move.type === contestType
+  ) {
+    appeal += effect.voltage_bonus;
+  }
+
+  return appeal;
 }
 
 /**
@@ -207,13 +214,10 @@ function computeAppeal(
     appeal = 4;
   }
 
-  // Voltage bonus: gives +4 appeal if same contest type (not "all")
+  // Some DPPt moves earn extra appeal when their move type raises Judge Voltage.
   if (move.archetype === 'VOLTAGE_BONUS' && state.contestType && move.type === state.contestType) {
-    appeal = 4;
+    appeal += effect.voltage_bonus ?? 0;
   }
-
-  // Contest type bonus/penalty
-  appeal += getTypeAppealModifier(move.type, state.contestType);
 
   // Double appeal if previous move set doubleNext flag
   if (state.doubleNext) {
@@ -269,9 +273,23 @@ function chooseMoveFromPool(
     return pool[0];
   }
 
-  // For free choice: pick the move that maximizes immediate appeal
+  // For free choice: pick the move that maximizes immediate appeal,
+  // preferring lower Voltage impact on ties.
   // Avoid repeating moves and END moves
   let best: { move: MoveInfo; appeal: number } | null = null;
+
+  const consider = (candidate: MoveInfo) => {
+    const simulated = computeAppeal(candidate, state).appeal;
+    if (
+      !best ||
+      simulated > best.appeal ||
+      (simulated === best.appeal &&
+        getVoltageChange(candidate.type, state.contestType) <
+          getVoltageChange(best.move.type, state.contestType))
+    ) {
+      best = { move: candidate, appeal: simulated };
+    }
+  };
 
   for (const [archKey, list] of Object.entries(pools) as [SuperArchetype, MoveInfo[]][]) {
     if (list.length === 0) continue;
@@ -285,19 +303,12 @@ function chooseMoveFromPool(
       if (candidate1.archetype !== 'REPEAT' || state.consecutiveUses >= 2) {
         // Cannot use candidate1, try candidate2
         if (list.length < 2) continue;
-        const candidate2 = list[1];
-        const simulated2 = computeAppeal(candidate2, state).appeal;
-        if (!best || simulated2 > best.appeal) {
-          best = { move: candidate2, appeal: simulated2 };
-        }
+        consider(list[1]);
         continue;
       }
     }
 
-    const simulated1 = computeAppeal(candidate1, state).appeal;
-    if (!best || simulated1 > best.appeal) {
-      best = { move: candidate1, appeal: simulated1 };
-    }
+    consider(candidate1);
 
     if (list.length < 2) continue;
     const candidate2 = list[1];
@@ -307,10 +318,7 @@ function chooseMoveFromPool(
         continue;
       }
     }
-    const simulated2 = computeAppeal(candidate2, state).appeal;
-    if (!best || simulated2 > best.appeal) {
-      best = { move: candidate2, appeal: simulated2 };
-    }
+    consider(candidate2);
   }
 
   return best ? best.move : null;
@@ -320,7 +328,7 @@ function chooseMoveFromPool(
  * Simulates a complete 4-turn contest performance using a specific strategy.
  * @param pools Available moves organized by archetype
  * @param strategy The sequence of archetypes to use (defines move selection pattern)
- * @param contestType The contest type for appeal bonuses/penalties (undefined if 'all')
+ * @param contestType The contest type for move effects that depend on Judge Voltage (undefined if 'all')
  * @returns Total appeal and move sequence, or null if strategy cannot be executed
  */
 function simulateStrategy(
@@ -428,10 +436,10 @@ function getBestPresetStrategy(
 
 /**
  * Greedy fallback strategy that picks moves with highest appeal.
- * Sorts moves by base appeal plus contest type modifier, then selects top moves
+ * Sorts moves by DPPt appeal, then selects top moves
  * while avoiding skip/end moves (except on last turn) and same move repetitions.
  * @param pools Available moves organized by archetype
- * @param contestType The contest type for appeal bonuses/penalties (undefined if 'all')
+ * @param contestType The contest type for move effects that depend on Judge Voltage (undefined if 'all')
  * @returns Total and sequence of 4 contest moves, or empty array if no moves available
  */
 function getGreedyAttempt(
@@ -442,11 +450,22 @@ function getGreedyAttempt(
   const allMoves = Object.values(pools).flat();
   if (allMoves.length === 0) return { total: 0, seq: [] };
 
-  // Sort by base appeal + type modifier (descending)
+  // Sort by base appeal plus explicit move effects (descending), preferring
+  // moves that keep the Judge's Voltage down on ties.
   allMoves.sort((a, b) => {
-    const appealA = (a.effect?.appeal ?? 0) + getTypeAppealModifier(a.type, contestType);
-    const appealB = (b.effect?.appeal ?? 0) + getTypeAppealModifier(b.type, contestType);
-    return appealB - appealA;
+    const appealA = getBaseAppeal(a, contestType);
+    const appealB = getBaseAppeal(b, contestType);
+    if (appealA !== appealB) {
+      return appealB - appealA;
+    }
+
+    const voltageA = getVoltageChange(a.type, contestType);
+    const voltageB = getVoltageChange(b.type, contestType);
+    if (voltageA !== voltageB) {
+      return voltageA - voltageB;
+    }
+
+    return sortMovesByPriority(a, b);
   });
 
   let state: SuperContestState = {
