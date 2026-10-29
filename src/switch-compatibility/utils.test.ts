@@ -72,9 +72,9 @@ describe('filterPokemonByGames', () => {
     },
   };
 
-  it('should return empty array when no games selected', () => {
+  it('should return all Pokemon when no games selected', () => {
     const result = filterPokemonByGames(mockDb, []);
-    expect(result).toEqual([]);
+    expect(result.map(p => p.key)).toEqual(['bulbasaur', 'pikachu', 'meowth']);
   });
 
   it('should filter Pokemon available in all selected games', () => {
@@ -325,7 +325,7 @@ describe('searchPokemonByName', () => {
 
 describe('GAME_GROUPS', () => {
   it('should have correct number of game groups', () => {
-    expect(GAME_GROUPS).toHaveLength(5);
+    expect(GAME_GROUPS).toHaveLength(7);
   });
 
   it('should have all required groups', () => {

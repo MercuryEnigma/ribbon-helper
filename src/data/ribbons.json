@@ -546,7 +546,9 @@
 			"sapphire",
 			"emerald",
 			"fr",
-			"lg"
+			"lg",
+			"fr-switch",
+			"lg-switch"
 		],
 		"names": {
 			"en": "Champion Ribbon",

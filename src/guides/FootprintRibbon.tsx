@@ -60,6 +60,7 @@ const footprintRibbon: Guide = {
               </ul>
             </li>
             <li>Virtual Console Pokémon transferred at level 71 or higher have the same problem unless they use the BDSP friendship exception.</li>
+            <li>Pokémon from FireRed and LeafGreen on Switch can only obtain this Ribbon in Brilliant Diamond and Shining Pearl.</li>
           </ul>
           <h3>Voiceless Pokémon</h3>
           <p>These Pokémon use friendship in Brilliant Diamond and Shining Pearl:</p>

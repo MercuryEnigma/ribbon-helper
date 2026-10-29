@@ -130,7 +130,7 @@ function filterChampionsPokemonByGames(
 export default function ChampionsPokemon({ pokemonDb, onPokemonSelect }: ChampionsPokemonProps) {
   const [selectedGames, setSelectedGames] = useState<string[]>(() =>
     GAME_GROUPS
-      .filter(group => group.name !== "Let's Go Pikachu / Eevee" && group.name !== 'Legends: Z-A')
+      .filter(group => !GAME_TOOLTIPS.available[group.name]?.isLastChance)
       .flatMap(group => group.ids)
   );
   const [championsFilter, setChampionsFilter] = useState<ChampionsFilter>('any');
@@ -240,7 +240,7 @@ export default function ChampionsPokemon({ pokemonDb, onPokemonSelect }: Champio
         <div className="game-checkboxes">
           {GAME_GROUPS.map(group => {
             const allChecked = group.ids.every(id => selectedGamesSet.has(id));
-            const special = GAME_TOOLTIPS.champions[group.name];
+            const special = GAME_TOOLTIPS.champions[group.name] ?? GAME_TOOLTIPS.available[group.name];
             return (
               <label
                 key={group.name}
@@ -248,6 +248,7 @@ export default function ChampionsPokemon({ pokemonDb, onPokemonSelect }: Champio
               >
                 <input
                   type="checkbox"
+                  aria-label={group.name}
                   checked={allChecked}
                   onChange={() => toggleGame(group.ids)}
                 />

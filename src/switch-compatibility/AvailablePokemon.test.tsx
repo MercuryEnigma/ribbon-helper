@@ -30,43 +30,43 @@ describe('AvailablePokemon', () => {
     expect(screen.getByText('Choose Games:')).toBeInTheDocument();
   });
 
-  it('should show hint when no games selected', () => {
+  it('should show all Pokemon when no games selected', () => {
     render(<AvailablePokemon pokemonDb={mockDb} />);
 
     // Deselect all games by clicking each checked checkbox
-    const swordShieldCheckbox = screen.getByLabelText(/Sword \/ Shield/i);
-    const bdspCheckbox = screen.getByLabelText(/Brilliant Diamond \/ Shining Pearl/i);
-    const legendsCheckbox = screen.getByLabelText(/Legends: Arceus/i);
-    const scarletCheckbox = screen.getByLabelText(/Scarlet \/ Violet/i);
+    const swordShieldCheckbox = screen.getByRole('checkbox', { name: /Sword \/ Shield/i });
+    const bdspCheckbox = screen.getByRole('checkbox', { name: /Brilliant Diamond \/ Shining Pearl/i });
+    const legendsCheckbox = screen.getByRole('checkbox', { name: /Legends: Arceus/i });
+    const scarletCheckbox = screen.getByRole('checkbox', { name: /Scarlet \/ Violet/i });
 
     fireEvent.click(swordShieldCheckbox);
     fireEvent.click(bdspCheckbox);
     fireEvent.click(legendsCheckbox);
     fireEvent.click(scarletCheckbox);
 
-    expect(screen.getByText(/Select one or more games/i)).toBeInTheDocument();
+    expect(screen.getByText(/Available Pokémon \(3\)/i)).toBeInTheDocument();
   });
 
   it('should display all game checkboxes', () => {
     render(<AvailablePokemon pokemonDb={mockDb} />);
-    expect(screen.getByLabelText(/Let's Go Pikachu \/ Eevee/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/Sword \/ Shield/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/Brilliant Diamond \/ Shining Pearl/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/Legends: Arceus/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/Scarlet \/ Violet/i)).toBeInTheDocument();
+    expect(screen.getByRole('checkbox', { name: /Let's Go Pikachu \/ Eevee/i })).toBeInTheDocument();
+    expect(screen.getByRole('checkbox', { name: /Sword \/ Shield/i })).toBeInTheDocument();
+    expect(screen.getByRole('checkbox', { name: /Brilliant Diamond \/ Shining Pearl/i })).toBeInTheDocument();
+    expect(screen.getByRole('checkbox', { name: /Legends: Arceus/i })).toBeInTheDocument();
+    expect(screen.getByRole('checkbox', { name: /Scarlet \/ Violet/i })).toBeInTheDocument();
   });
 
   it('should filter Pokemon when games are selected', () => {
     render(<AvailablePokemon pokemonDb={mockDb} />);
 
     // First deselect all default-selected games
-    fireEvent.click(screen.getByLabelText(/Sword \/ Shield/i));
-    fireEvent.click(screen.getByLabelText(/Brilliant Diamond \/ Shining Pearl/i));
-    fireEvent.click(screen.getByLabelText(/Legends: Arceus/i));
-    fireEvent.click(screen.getByLabelText(/Scarlet \/ Violet/i));
+    fireEvent.click(screen.getByRole('checkbox', { name: /Sword \/ Shield/i }));
+    fireEvent.click(screen.getByRole('checkbox', { name: /Brilliant Diamond \/ Shining Pearl/i }));
+    fireEvent.click(screen.getByRole('checkbox', { name: /Legends: Arceus/i }));
+    fireEvent.click(screen.getByRole('checkbox', { name: /Scarlet \/ Violet/i }));
 
     // Now select only Sword/Shield
-    const swordShieldCheckbox = screen.getByLabelText(/Sword \/ Shield/i);
+    const swordShieldCheckbox = screen.getByRole('checkbox', { name: /Sword \/ Shield/i });
     fireEvent.click(swordShieldCheckbox);
 
     // All 3 Pokemon are in Sword/Shield
@@ -79,14 +79,14 @@ describe('AvailablePokemon', () => {
     render(<AvailablePokemon pokemonDb={mockDb} />);
 
     // First deselect all default-selected games
-    fireEvent.click(screen.getByLabelText(/Sword \/ Shield/i));
-    fireEvent.click(screen.getByLabelText(/Brilliant Diamond \/ Shining Pearl/i));
-    fireEvent.click(screen.getByLabelText(/Legends: Arceus/i));
-    fireEvent.click(screen.getByLabelText(/Scarlet \/ Violet/i));
+    fireEvent.click(screen.getByRole('checkbox', { name: /Sword \/ Shield/i }));
+    fireEvent.click(screen.getByRole('checkbox', { name: /Brilliant Diamond \/ Shining Pearl/i }));
+    fireEvent.click(screen.getByRole('checkbox', { name: /Legends: Arceus/i }));
+    fireEvent.click(screen.getByRole('checkbox', { name: /Scarlet \/ Violet/i }));
 
     // Select both Sword/Shield and Let's Go
-    const swordShieldCheckbox = screen.getByLabelText(/Sword \/ Shield/i);
-    const letsGoCheckbox = screen.getByLabelText(/Let's Go/i);
+    const swordShieldCheckbox = screen.getByRole('checkbox', { name: /Sword \/ Shield/i });
+    const letsGoCheckbox = screen.getByRole('checkbox', { name: /Let's Go/i });
 
     fireEvent.click(swordShieldCheckbox);
     fireEvent.click(letsGoCheckbox);
@@ -100,7 +100,7 @@ describe('AvailablePokemon', () => {
   it('should deselect games when clicked again', () => {
     render(<AvailablePokemon pokemonDb={mockDb} />);
 
-    const swordShieldCheckbox = screen.getByLabelText(/Sword \/ Shield/i) as HTMLInputElement;
+    const swordShieldCheckbox = screen.getByRole('checkbox', { name: /Sword \/ Shield/i }) as HTMLInputElement;
 
     // Starts checked by default
     expect(swordShieldCheckbox.checked).toBe(true);
@@ -110,25 +110,25 @@ describe('AvailablePokemon', () => {
     expect(swordShieldCheckbox.checked).toBe(false);
 
     // Deselect remaining games
-    fireEvent.click(screen.getByLabelText(/Brilliant Diamond \/ Shining Pearl/i));
-    fireEvent.click(screen.getByLabelText(/Legends: Arceus/i));
-    fireEvent.click(screen.getByLabelText(/Scarlet \/ Violet/i));
+    fireEvent.click(screen.getByRole('checkbox', { name: /Brilliant Diamond \/ Shining Pearl/i }));
+    fireEvent.click(screen.getByRole('checkbox', { name: /Legends: Arceus/i }));
+    fireEvent.click(screen.getByRole('checkbox', { name: /Scarlet \/ Violet/i }));
 
-    // Should show hint when no games selected
-    expect(screen.getByText(/Select one or more games/i)).toBeInTheDocument();
+    // No selected games means no availability restriction
+    expect(screen.getByText(/Available Pokémon \(3\)/i)).toBeInTheDocument();
   });
 
   it('should display Pokemon count', () => {
     render(<AvailablePokemon pokemonDb={mockDb} />);
 
     // First deselect all default-selected games
-    fireEvent.click(screen.getByLabelText(/Sword \/ Shield/i));
-    fireEvent.click(screen.getByLabelText(/Brilliant Diamond \/ Shining Pearl/i));
-    fireEvent.click(screen.getByLabelText(/Legends: Arceus/i));
-    fireEvent.click(screen.getByLabelText(/Scarlet \/ Violet/i));
+    fireEvent.click(screen.getByRole('checkbox', { name: /Sword \/ Shield/i }));
+    fireEvent.click(screen.getByRole('checkbox', { name: /Brilliant Diamond \/ Shining Pearl/i }));
+    fireEvent.click(screen.getByRole('checkbox', { name: /Legends: Arceus/i }));
+    fireEvent.click(screen.getByRole('checkbox', { name: /Scarlet \/ Violet/i }));
 
     // Now select only Sword/Shield
-    const swordShieldCheckbox = screen.getByLabelText(/Sword \/ Shield/i);
+    const swordShieldCheckbox = screen.getByRole('checkbox', { name: /Sword \/ Shield/i });
     fireEvent.click(swordShieldCheckbox);
 
     expect(screen.getByText(/Available Pokémon \(3\)/i)).toBeInTheDocument();
@@ -137,7 +137,7 @@ describe('AvailablePokemon', () => {
   it('should handle empty database gracefully', () => {
     render(<AvailablePokemon pokemonDb={{}} />);
 
-    const swordShieldCheckbox = screen.getByLabelText(/Sword \/ Shield/i);
+    const swordShieldCheckbox = screen.getByRole('checkbox', { name: /Sword \/ Shield/i });
     fireEvent.click(swordShieldCheckbox);
 
     expect(screen.getByText(/No Pokémon found/i)).toBeInTheDocument();
@@ -146,7 +146,7 @@ describe('AvailablePokemon', () => {
   it('should handle null database gracefully', () => {
     render(<AvailablePokemon pokemonDb={null as any} />);
 
-    const swordShieldCheckbox = screen.getByLabelText(/Sword \/ Shield/i);
+    const swordShieldCheckbox = screen.getByRole('checkbox', { name: /Sword \/ Shield/i });
     fireEvent.click(swordShieldCheckbox);
 
     // Should not crash and should show appropriate message

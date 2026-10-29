@@ -594,7 +594,7 @@
 	},
 	"frlg": {
 		"names": {
-			"en": "FireRed/LeafGreen",
+			"en": "FireRed/LeafGreen (GBA)",
 			"es-es": "RojoFuego/VerdeHoja",
 			"fr": "Rouge Feu/Vert Feuille",
 			"de": "Feuerrot/Blattgrün",
@@ -610,7 +610,7 @@
 	},
 	"fr": {
 		"names": {
-			"en": "FireRed",
+			"en": "FireRed (GBA)",
 			"es-es": "RojoFuego",
 			"fr": "Rouge Feu",
 			"de": "Feuerrot",
@@ -625,7 +625,7 @@
 	},
 	"lg": {
 		"names": {
-			"en": "LeafGreen",
+			"en": "LeafGreen (GBA)",
 			"es-es": "VerdeHoja",
 			"fr": "Vert Feuille",
 			"de": "Blattgrün",
@@ -637,6 +637,27 @@
 		},
 		"partOf": "frlg",
 		"platformIcon": "gba"
+	},
+	"frlg-switch": {
+		"names": {
+			"en": "FireRed/LeafGreen (Switch)"
+		},
+		"gen": 8,
+		"combo": true
+	},
+	"fr-switch": {
+		"names": {
+			"en": "FireRed (Switch)"
+		},
+		"partOf": "frlg-switch",
+		"platformIcon": "switch"
+	},
+	"lg-switch": {
+		"names": {
+			"en": "LeafGreen (Switch)"
+		},
+		"partOf": "frlg-switch",
+		"platformIcon": "switch"
 	},
 	"coloxd": {
 		"names": {

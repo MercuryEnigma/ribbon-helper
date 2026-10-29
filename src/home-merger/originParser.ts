@@ -8,6 +8,7 @@ export const HOME_ORIGINS = [
   'GO',
   'Switch',
   'PLZA',
+  'FRLG (Switch)',
 ] as const;
 
 export type HomeOrigin = typeof HOME_ORIGINS[number];
@@ -24,6 +25,10 @@ interface OriginRule {
 }
 
 const ORIGIN_RULES: OriginRule[] = [
+  {
+    origin: 'FRLG (Switch)',
+    phrases: ['firered switch', 'leafgreen switch', 'fire red switch', 'leaf green switch'],
+  },
   {
     origin: 'VC',
     phrases: [
@@ -83,6 +88,8 @@ export function parseHomeOrigin(text: string): OriginMatch {
   };
 
   for (const rule of ORIGIN_RULES) {
+    // Never guess FRLG from partial overlap with ambiguous Kanto / GBA text.
+    if (rule.origin === 'FRLG (Switch)') continue;
     for (const phrase of rule.phrases) {
       const phraseTokens = phrase.split(' ');
       const matching = phraseTokens.filter(token => tokens.has(token)).length;

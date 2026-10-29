@@ -158,6 +158,12 @@ export function mapRibbonsGuideOrigin(
 ): { originmark: string; origingame: string | null } {
   const phrase = matchedPhrase?.toLowerCase() ?? '';
 
+  // Verified against ribbons.guide/data/{games,origins}.json.
+  // Check the manually confirmed origin before any ambiguous region phrase.
+  if (origin === 'FRLG (Switch)') {
+    return { originmark: 'gba', origingame: 'frlg-switch' };
+  }
+
   if (origin === 'VC') {
     return { originmark: 'game-boy', origingame: 'vc' };
   }

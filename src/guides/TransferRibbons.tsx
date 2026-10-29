@@ -10,6 +10,7 @@ const transferRibbons: Guide = {
       content: (
         <>
           <p>Awarded when a Pokémon with at least one, but not all, old Contest Ribbon is transferred from Generation V to Pokémon Bank. The source Ribbons are replaced by this memory Ribbon.</p>
+          <p>Pokémon from FireRed and LeafGreen on Switch transfer directly to HOME. They cannot earn the old Contest or Tower Ribbons, so they cannot receive either memory Ribbon.</p>
         </>
       ),
     },

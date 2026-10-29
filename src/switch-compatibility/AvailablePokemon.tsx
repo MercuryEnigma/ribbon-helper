@@ -12,7 +12,7 @@ interface AvailablePokemonProps {
 export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: AvailablePokemonProps) {
   const [selectedGames, setSelectedGames] = useState<string[]>(() =>
     GAME_GROUPS
-      .filter(group => group.name !== "Let's Go Pikachu / Eevee" && group.name !== 'Legends: Z-A')
+      .filter(group => !GAME_TOOLTIPS.available[group.name]?.isLastChance)
       .flatMap(group => group.ids)
   );
   const [gridHeight, setGridHeight] = useState<number | null>(null);
@@ -121,6 +121,7 @@ export default function AvailablePokemon({ pokemonDb, onPokemonSelect }: Availab
               >
                 <input
                   type="checkbox"
+                  aria-label={group.name}
                   checked={allChecked}
                   onChange={() => toggleGame(group.ids)}
                 />

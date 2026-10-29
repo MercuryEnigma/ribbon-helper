@@ -1,7 +1,11 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render as renderComponent, screen, fireEvent, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import BySpecies from './BySpecies';
+import { MemoryRouter } from 'react-router-dom';
+import type { ReactElement } from 'react';
+
+const render = (ui: ReactElement) => renderComponent(ui, { wrapper: MemoryRouter });
 import type { PokemonDatabase } from './types';
 
 const mockDb: PokemonDatabase = {

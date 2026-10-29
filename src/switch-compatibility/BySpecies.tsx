@@ -388,15 +388,9 @@ export default function BySpecies({ pokemonDb, initialPokemonKey, onPokemonSelec
                     }}
                     autoComplete="off"
                   >
-                    {availableGenerations.has('Gen 3') && <option value="Gen 3">Gen 3</option>}
-                    {availableGenerations.has('Gen 4') && <option value="Gen 4">Gen 4</option>}
-                    {availableGenerations.has('Gen 5') && <option value="Gen 5">Gen 5</option>}
-                    {availableGenerations.has('Gen 6') && <option value="Gen 6">Gen 6</option>}
-                    {availableGenerations.has('VC') && <option value="VC">VC</option>}
-                    {availableGenerations.has('Gen 7') && <option value="Gen 7">Gen 7</option>}
-                    {availableGenerations.has('GO') && <option value="GO">GO</option>}
-                    {availableGenerations.has('Switch') && <option value="Switch">Switch</option>}
-                    {availableGenerations.has('PLZA') && <option value="PLZA">PLZA</option>}
+                    {GENERATION_ORDER.filter(origin => availableGenerations.has(origin)).map(origin => (
+                      <option key={origin} value={origin}>{origin}</option>
+                    ))}
                   </select>
                 )}
               </div>

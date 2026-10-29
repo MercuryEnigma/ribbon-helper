@@ -30,7 +30,7 @@ export interface PokemonDatabase {
   [key: string]: PokemonData;
 }
 
-export type SwitchGame = 'lgp' | 'lge' | 'sw' | 'sh' | 'bd' | 'sp' | 'pla' | 'scar' | 'vio' | 'plza';
+export type SwitchGame = 'fr-switch' | 'lg-switch' | 'lgp' | 'lge' | 'sw' | 'sh' | 'bd' | 'sp' | 'pla' | 'scar' | 'vio' | 'plza';
 
 export interface SwitchGameInfo {
   id: SwitchGame;
@@ -45,6 +45,11 @@ export interface GameTooltipDetail {
 
 export const GAME_TOOLTIPS: Record<'available' | 'shadow' | 'champions', Record<string, GameTooltipDetail>> = {
   available: {
+    'FireRed / LeafGreen (Switch)': {
+      header: 'Transfer out only!',
+      body: 'Pokemon can only originate from these games. Once transferred to HOME, they cannot return. Has Champion ribbon, awarded for entering the Hall of Fame even though it is not displayed in these games. Master Rank ribbon is only available in Sword / Shield for Pokemon from these games.',
+      isLastChance: true
+    },
     "Let's Go Pikachu / Eevee": {
       header: 'Transfer out only!',
       body: 'Pokemon can only originate from these games or be transfered via Go Park. Once a Pokemon transfers to another game, it cannot return to Let\'s Go Pikachu / Eevee. There are no ribbons.',
@@ -73,6 +78,11 @@ export const GAME_TOOLTIPS: Record<'available' | 'shadow' | 'champions', Record<
     }
   },
   shadow: {
+    'FireRed / LeafGreen (Switch)': {
+      header: 'Transfer out only!',
+      body: 'Shadow Pokemon cannot transfer to FireRed / LeafGreen on Switch. Pokemon transferred to HOME cannot return.',
+      isLastChance: true
+    },
     "Let's Go Pikachu / Eevee": {
       header: 'Transfer out only!',
       body: 'Shadow Pokemon cannot transfer to Let\'s Go Pikachu / Eevee. There are no ribbons.',

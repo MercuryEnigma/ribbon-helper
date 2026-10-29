@@ -9,6 +9,7 @@ export interface RibbonsByGame {
 }
 
 export type RibbonGameGroup =
+  | 'FRLG (Switch)'
   | 'Colo/XD'
   | 'RSE'
   | 'DPPt'
@@ -30,6 +31,7 @@ export type MERGE_TYPES = 'battle' | 'contest';
 
 // Game groupings
 const GAME_GROUPS: Record<RibbonGameGroup, string[]> = {
+  'FRLG (Switch)': ['fr-switch', 'lg-switch'],
   'Colo/XD': ['colosseum', 'xd'],
   'RSE': ['ruby', 'sapphire', 'emerald'],
   'DPPt': ['diamond', 'pearl', 'platinum'],
@@ -53,16 +55,18 @@ const GENERATION_GAMES: Record<string, string[]> = {
   'Gen 6': ['x', 'y', 'or', 'as'],
   'VC': [], // No ribbons but can get later generation ribbons
   'Gen 7': ['sun', 'moon', 'usun', 'umoon'],
+  'FRLG (Switch)': ['fr-switch', 'lg-switch'],
   'GO': ['sw', 'sh', 'bd', 'sp', 'pla', 'scar', 'vio'], // GO Pokemon can access Switch games
   'Switch': ['sw', 'sh', 'bd', 'sp', 'pla', 'scar', 'vio'],
   'PLZA': ['plza']
 };
 
 // Generation order for "moving up"
-const GENERATION_ORDER = ['Gen 3', 'Gen 4', 'Gen 5', 'Gen 6', 'VC', 'Gen 7', 'GO', 'Switch', 'PLZA'];
+const GENERATION_ORDER = ['Gen 3', 'Gen 4', 'Gen 5', 'Gen 6', 'VC', 'Gen 7', 'FRLG (Switch)', 'GO', 'Switch', 'PLZA'];
 
 // Game group generation
 const GAME_GROUP_GENERATION: Record<RibbonGameGroup, number> = {
+  'FRLG (Switch)': 8,
   'Colo/XD': 3,
   'RSE': 3,
   'DPPt': 4,
@@ -198,6 +202,12 @@ function canObtainRibbon(
     return false;
   }
 
+  // FRLG Switch origins can earn Master Rank in SwSh, but not SV.
+  if (ribbonKey === 'master-rank-ribbon' && gameGroup === 'SV'
+    && GENERATION_ORDER[startGenIndex] === 'FRLG (Switch)') {
+    return false;
+  }
+
   // Special ribbon requirements
   if (ribbonKey === 'national-ribbon' && !isShadow) {
     return false;
@@ -275,6 +285,11 @@ export function getAvailableRibbons(
 
     // Special case: Spinda cannot transfer to BDSP unless starting from Switch generation
     if (pokemonKey === 'spinda' && groupName === 'BDSP' && generation !== 'Switch') {
+      continue;
+    }
+
+    // FRLG (Switch) is transfer-out only; only Pokemon that originate there can visit it.
+    if (groupName === 'FRLG (Switch)' && generation !== 'FRLG (Switch)') {
       continue;
     }
 

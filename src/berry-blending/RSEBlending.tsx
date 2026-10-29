@@ -167,40 +167,50 @@ export default function RSEBlending() {
       {berryKit ? (
         <div className="berry-kit">
           <h4>Optimal Pokeblocks:</h4>
-          <div className="kit-blocks">
-            {berryKit.blocks.map((block, index) => {
-              const firstBerry = block.berries[0];
-              const imageUrl = getBerryImageUrl(firstBerry);
-              const berries = [...block.berries];
-              while (berries.length < 4) {
-                berries.push('');
-              }
-              const playersLabel =
-                block.players === 1 && block["blend-master"]
-                  ? 'w/ Master'
-                  : block.players === 1 && block.npc > 0
-                    ? `w/ ${block.npc} NPC${block.npc === 1 ? '' : 's'}`
-                    : `${block.players}P`;
-              return (
-                <div key={index} className="block-item">
-                  <div className="block-players">{playersLabel}</div>
-                  <div className="block-header">
-                    {imageUrl && (
-                      <img src={imageUrl} alt={block.description} title={block.description} className="berry-icon" />
-                    )}
-                    <div className="block-name">{block.name}</div>
-                  </div>
-                  <div className="block-berry-grid">
-                    {berries.map((berry, berryIndex) => (
-                      <div key={`${block.name}-berry-${berryIndex}`} className="block-berry">
-                        {berry}
+          <table className="rse-turn-table">
+            <thead>
+              <tr>
+                <th scope="col">Turn</th>
+                <th scope="col">Pokeblock</th>
+                <th scope="col">Berries</th>
+                <th scope="col">Blending with</th>
+              </tr>
+            </thead>
+            <tbody>
+              {berryKit.blocks.map((block, index) => {
+                const firstBerry = block.berries[0];
+                const imageUrl = getBerryImageUrl(firstBerry);
+                const playerBerries = block.berries.slice(0, block.players);
+                const npcBerries = block.berries.slice(block.players);
+                const playersLabel =
+                  block.players === 1 && block["blend-master"]
+                    ? 'Blend Master'
+                    : block.players === 1 && block.npc > 0
+                      ? `${block.npc} NPC${block.npc === 1 ? '' : 's'}`
+                      : `${block.players} players`;
+                return (
+                  <tr key={index}>
+                    <th scope="row" className="turn-label">Pokeblock #{index + 1}</th>
+                    <td className="turn-pokeblock">
+                      <div className="block-header">
+                        {imageUrl && (
+                          <img src={imageUrl} alt="" title={block.description} className="berry-icon" />
+                        )}
+                        <span className="block-name">{block.name} Pokeblock</span>
                       </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+                    </td>
+                    <td className="turn-berries">
+                      <strong>{playerBerries.join(', ')}</strong>
+                      {npcBerries.length > 0 && (
+                        <small className="npc-berries">(NPC: {npcBerries.join(', ')})</small>
+                      )}
+                    </td>
+                    <td className="turn-partners">{playersLabel}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
 
           <div className="kit-stats">
             <div className="stat-row">

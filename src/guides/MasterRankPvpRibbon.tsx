@@ -13,6 +13,7 @@ const masterRankPvpRibbon: Guide = {
           <ul>
             <li>I recommend using a rental team to climb to Master Ball tier, then switching to a personal team containing the Ribbon Master for the qualifying win.</li>
             <li>I recommend checking the current regulation before choosing a game because species eligibility changes between formats.</li>
+            <li>Pokémon from FireRed and LeafGreen on Switch can only obtain this Ribbon in Sword and Shield. They cannot obtain it in Scarlet and Violet.</li>
             <li>The r/ribbonmasters Discord community hosts weekend "Fight Nights" for Sword / Shield and Scarlet / Violet.</li>
           </ul>
         </>

@@ -2,6 +2,8 @@ import type { PokemonDatabase, PokemonData, SwitchGame, SwitchGameInfo } from '.
 import games from '../data/games.json';
 
 export const SWITCH_GAMES: SwitchGameInfo[] = [
+  { id: 'fr-switch', name: 'FireRed / LeafGreen (Switch)' },
+  { id: 'lg-switch', name: 'FireRed / LeafGreen (Switch)' },
   { id: 'lgp', name: "Let's Go Pikachu / Eevee" },
   { id: 'lge', name: "Let's Go Pikachu / Eevee" },
   { id: 'sw', name: 'Sword / Shield' },
@@ -15,6 +17,7 @@ export const SWITCH_GAMES: SwitchGameInfo[] = [
 ];
 
 export const GAME_GROUPS = [
+  { ids: ['fr-switch', 'lg-switch'], name: 'FireRed / LeafGreen (Switch)' },
   { ids: ['lgp', 'lge'], name: "Let's Go Pikachu / Eevee" },
   { ids: ['sw', 'sh'], name: 'Sword / Shield' },
   { ids: ['bd', 'sp'], name: 'Brilliant Diamond / Shining Pearl' },
@@ -24,7 +27,7 @@ export const GAME_GROUPS = [
 ];
 
 // Generation order for dropdown and selection
-export const GENERATION_ORDER = ['Gen 3', 'Gen 4', 'Gen 5', 'Gen 6', 'VC', 'Gen 7', 'GO', 'Switch', 'PLZA'] as const;
+export const GENERATION_ORDER = ['Gen 3', 'Gen 4', 'Gen 5', 'Gen 6', 'VC', 'Gen 7', 'FRLG (Switch)', 'GO', 'Switch', 'PLZA'] as const;
 
 export const EXCLUDED_GO_POKEMON = new Set([
   'pichu-spiky-eared',
@@ -444,7 +447,7 @@ export function getAvailableGenerations(
   })();
 
   const generations = new Set<string>();
-  const switchGames = ['lgpe', 'lgp', 'lge', 'swsh', 'sw', 'sh', 'bdsp', 'bd', 'sp', 'pla', 'sv', 'scar', 'vio'];
+  const switchGames = ['frlg-switch', 'fr-switch', 'lg-switch', 'lgpe', 'lgp', 'lge', 'swsh', 'sw', 'sh', 'bdsp', 'bd', 'sp', 'pla', 'sv', 'scar', 'vio'];
 
   if (!EXCLUDED_GO_POKEMON.has(pokemonKey)) {
     generations.add('GO');
@@ -456,6 +459,13 @@ export function getAvailableGenerations(
 
     if (gameId === 'plza') {
       generations.add('PLZA');
+      continue;
+    }
+
+    // FRLG needs a distinct origin because its Master Rank eligibility differs
+    // from other Switch origins.
+    if (gameId === 'fr-switch' || gameId === 'lg-switch') {
+      generations.add('FRLG (Switch)');
       continue;
     }
 

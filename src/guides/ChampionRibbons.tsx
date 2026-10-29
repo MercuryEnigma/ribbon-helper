@@ -10,6 +10,7 @@ const championRibbons: Guide = {
       content: (
         <>
           <p>Enter the Hall of Fame in Ruby, Sapphire, Emerald, FireRed, or LeafGreen. The Ribbon is obtained in FireRed and LeafGreen even though those games cannot display it.</p>
+          <p>FireRed and LeafGreen on Switch also award this Ribbon. Obtain it before transferring to Pokémon HOME, where it becomes visible. Pokémon cannot return to these games or transfer in from HOME.</p>
         </>
       ),
     },

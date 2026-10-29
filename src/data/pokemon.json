@@ -55,7 +55,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "ivysaur": {
@@ -114,7 +116,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "bulbasaur"
   },
@@ -175,7 +179,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "ivysaur"
   },
@@ -235,7 +241,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "charmeleon": {
@@ -294,7 +302,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "charmander"
   },
@@ -354,7 +364,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "charmeleon"
   },
@@ -414,7 +426,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "wartortle": {
@@ -473,7 +487,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "squirtle"
   },
@@ -533,7 +549,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "wartortle"
   },
@@ -590,7 +608,9 @@
       "sw",
       "sh",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "metapod": {
@@ -647,7 +667,9 @@
       "sw",
       "sh",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "caterpie"
   },
@@ -705,7 +727,9 @@
       "sw",
       "sh",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -764,7 +788,9 @@
       "umoon",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "kakuna": {
@@ -820,7 +846,9 @@
       "umoon",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "weedle"
   },
@@ -876,7 +904,9 @@
       "umoon",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -935,7 +965,9 @@
       "umoon",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "pidgeotto": {
@@ -990,7 +1022,9 @@
       "umoon",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -1049,7 +1083,9 @@
       "umoon",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "pidgeotto"
   },
@@ -1105,7 +1141,9 @@
       "lgp",
       "lge",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "rattata-alola": {
@@ -1173,7 +1211,9 @@
       "lgp",
       "lge",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -1245,7 +1285,9 @@
       "lgp",
       "lge",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -1302,7 +1344,9 @@
       "lgp",
       "lge",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "spearow"
   },
@@ -1360,7 +1404,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "arbok": {
@@ -1417,7 +1463,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -1484,7 +1532,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "pichu"
   },
@@ -1909,7 +1959,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "pikachu"
   },
@@ -1987,7 +2039,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "sandshrew-alola": {
@@ -2061,7 +2115,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "sandshrew"
   },
@@ -2135,7 +2191,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "nidorina": {
@@ -2191,7 +2249,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "nidoran-f"
   },
@@ -2248,7 +2308,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "nidorina"
   },
@@ -2305,7 +2367,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "nidorino": {
@@ -2361,7 +2425,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "nidoran-m"
   },
@@ -2418,7 +2484,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "nidorino"
   },
@@ -2479,7 +2547,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "cleffa"
   },
@@ -2540,7 +2610,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "clefairy"
   },
@@ -2600,7 +2672,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -2679,7 +2753,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "vulpix"
   },
@@ -2757,7 +2833,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "igglybuff"
   },
@@ -2817,7 +2895,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "jigglypuff"
   },
@@ -2877,7 +2957,9 @@
       "pla",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "golbat": {
@@ -2936,7 +3018,9 @@
       "pla",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "zubat"
   },
@@ -2995,7 +3079,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "gloom": {
@@ -3054,7 +3140,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "oddish"
   },
@@ -3114,7 +3202,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "gloom"
   },
@@ -3171,7 +3261,9 @@
       "lge",
       "pla",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -3230,7 +3322,9 @@
       "lge",
       "pla",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "paras"
   },
@@ -3287,7 +3381,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "venomoth": {
@@ -3344,7 +3440,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -3406,7 +3504,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "diglett-alola": {
@@ -3480,7 +3580,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -3560,7 +3662,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -3650,7 +3754,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "meowth"
   },
@@ -3728,7 +3834,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "golduck": {
@@ -3787,7 +3895,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -3848,7 +3958,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "primeape": {
@@ -3907,7 +4019,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -3969,7 +4083,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -4039,7 +4155,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "growlithe"
   },
@@ -4108,7 +4226,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "poliwhirl": {
@@ -4166,7 +4286,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "poliwag"
   },
@@ -4225,7 +4347,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -4287,7 +4411,9 @@
       "pla",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "kadabra": {
@@ -4346,7 +4472,9 @@
       "pla",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "abra"
   },
@@ -4406,7 +4534,9 @@
       "pla",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "kadabra"
   },
@@ -4465,7 +4595,9 @@
       "pla",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "machoke": {
@@ -4523,7 +4655,9 @@
       "pla",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "machop"
   },
@@ -4582,7 +4716,9 @@
       "pla",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "machoke"
   },
@@ -4640,7 +4776,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "weepinbell": {
@@ -4697,7 +4835,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -4758,7 +4898,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "weepinbell"
   },
@@ -4818,7 +4960,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "tentacruel": {
@@ -4877,7 +5021,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "tentacool"
   },
@@ -4935,7 +5081,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "geodude-alola": {
@@ -5006,7 +5154,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "geodude"
   },
@@ -5079,7 +5229,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "graveler"
   },
@@ -5152,7 +5304,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "ponyta-galar": {
@@ -5217,7 +5371,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -5289,7 +5445,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "slowpoke-galar": {
@@ -5359,7 +5517,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "slowpoke"
   },
@@ -5432,7 +5592,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "magneton": {
@@ -5492,7 +5654,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -5553,7 +5717,9 @@
       "umoon",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -5622,7 +5788,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "dodrio": {
@@ -5679,7 +5847,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -5739,7 +5909,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -5798,7 +5970,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "seel"
   },
@@ -5855,7 +6029,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -5928,7 +6104,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "grimer"
   },
@@ -6002,7 +6180,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -6063,7 +6243,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "shellder"
   },
@@ -6124,7 +6306,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "haunter": {
@@ -6184,7 +6368,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "gastly"
   },
@@ -6245,7 +6431,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "haunter"
   },
@@ -6304,7 +6492,9 @@
       "umoon",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "drowzee": {
@@ -6360,7 +6550,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "hypno": {
@@ -6417,7 +6609,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -6477,7 +6671,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "kingler": {
@@ -6533,7 +6729,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "krabby"
   },
@@ -6590,7 +6788,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -6658,7 +6858,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "voltorb"
   },
@@ -6729,7 +6931,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "exeggutor": {
@@ -6787,7 +6991,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -6867,7 +7073,9 @@
       "sh",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "marowak": {
@@ -6924,7 +7132,9 @@
       "sh",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -7002,7 +7212,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -7064,7 +7276,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -7125,7 +7339,9 @@
       "sun",
       "moon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -7188,7 +7404,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "weezing": {
@@ -7246,7 +7464,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "koffing"
   },
@@ -7318,7 +7538,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "rhydon": {
@@ -7378,7 +7600,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -7441,7 +7665,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -7502,7 +7728,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -7562,7 +7790,9 @@
       "sh",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -7623,7 +7853,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "seadra": {
@@ -7681,7 +7913,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "horsea"
   },
@@ -7739,7 +7973,9 @@
       "sw",
       "sh",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "seaking": {
@@ -7796,7 +8032,9 @@
       "sw",
       "sh",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "goldeen"
   },
@@ -7855,7 +8093,9 @@
       "sh",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "starmie": {
@@ -7913,7 +8153,9 @@
       "sh",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -7975,7 +8217,9 @@
       "moon",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -8052,7 +8296,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -8111,7 +8357,9 @@
       "sun",
       "moon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "smoochum"
   },
@@ -8171,7 +8419,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -8234,7 +8484,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -8295,7 +8547,9 @@
       "sh",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -8356,7 +8610,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -8475,7 +8731,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "gyarados": {
@@ -8536,7 +8794,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "magikarp"
   },
@@ -8595,7 +8855,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -8656,7 +8918,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "eevee": {
@@ -8719,7 +8983,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "vaporeon": {
@@ -8779,7 +9045,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "eevee"
   },
@@ -8840,7 +9108,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "eevee"
   },
@@ -8901,7 +9171,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "eevee"
   },
@@ -8963,7 +9235,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "omanyte": {
@@ -9019,7 +9293,9 @@
       "sun",
       "moon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "omastar": {
@@ -9075,7 +9351,9 @@
       "sun",
       "moon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "omanyte"
   },
@@ -9133,7 +9411,9 @@
       "sun",
       "moon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "kabutops": {
@@ -9189,7 +9469,9 @@
       "sun",
       "moon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "kabuto"
   },
@@ -9247,7 +9529,9 @@
       "sh",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "snorlax": {
@@ -9306,7 +9590,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -9368,7 +9654,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -9439,7 +9727,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -9510,7 +9800,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -9582,7 +9874,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "dragonair": {
@@ -9641,7 +9935,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "dratini"
   },
@@ -9701,7 +9997,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow",
@@ -9765,7 +10063,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "restricted"
@@ -10346,7 +10646,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "furret": {
@@ -10394,7 +10696,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -10549,7 +10853,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -10599,7 +10905,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -10652,7 +10960,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -10704,7 +11014,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -10758,7 +11070,9 @@
       "pla",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "golbat"
   },
@@ -10912,7 +11226,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "pichu-spiky-eared": {
@@ -10986,7 +11302,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "igglybuff": {
@@ -11037,7 +11355,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "togepi": {
@@ -11086,7 +11406,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow",
@@ -11139,7 +11461,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -11191,7 +11515,9 @@
       "sun",
       "moon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -11244,7 +11570,9 @@
       "sun",
       "moon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "natu"
   },
@@ -11450,7 +11778,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "gloom"
   },
@@ -11501,7 +11831,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "azurill"
   },
@@ -11552,7 +11884,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "marill"
   },
@@ -11660,7 +11994,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "poliwhirl"
   },
@@ -11709,7 +12045,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "skiploom": {
@@ -11757,7 +12095,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -11809,7 +12149,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "skiploom"
   },
@@ -12012,7 +12354,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -12066,7 +12410,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "wooper-paldea": {
@@ -12126,7 +12472,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -12286,7 +12634,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -12340,7 +12690,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "slowpoke"
   },
@@ -12402,7 +12754,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -12455,7 +12809,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "unown-b": {
@@ -12509,7 +12865,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "unown-f": {
@@ -12603,7 +12961,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "unown-r": {
@@ -12697,7 +13057,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "wynaut"
   },
@@ -12906,7 +13268,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -13013,7 +13377,9 @@
       "umoon",
       "colosseum",
       "xd",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "onix"
   },
@@ -13165,7 +13531,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -13231,7 +13599,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -13339,7 +13709,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -13394,7 +13766,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -13562,7 +13936,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -13613,7 +13989,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -13668,7 +14046,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow"
@@ -13723,7 +14103,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -13833,7 +14215,9 @@
       "sun",
       "moon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -13886,7 +14270,9 @@
       "sun",
       "moon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "remoraid"
   },
@@ -13938,7 +14324,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -13990,7 +14378,9 @@
       "sun",
       "moon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -14045,7 +14435,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -14204,7 +14596,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "seadra"
   },
@@ -14253,7 +14647,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "donphan": {
@@ -14302,7 +14698,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "phanpy"
   },
@@ -14356,7 +14754,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "porygon"
   },
@@ -14512,7 +14912,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "hitmontop": {
@@ -14562,7 +14964,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -14614,7 +15018,9 @@
       "sun",
       "moon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "elekid": {
@@ -14665,7 +15071,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "magby": {
@@ -14716,7 +15124,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "miltank": {
@@ -14818,7 +15228,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "chansey"
   },
@@ -14869,7 +15281,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -14922,7 +15336,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -14975,7 +15391,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow"
@@ -15029,7 +15447,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "pupitar": {
@@ -15081,7 +15501,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "evolvesFrom": "larvitar"
   },
@@ -15133,7 +15555,9 @@
       "xd",
       "scar",
       "vio",
-      "plza"
+      "plza",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "colShadow",
@@ -15188,7 +15612,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "xdShadow",
@@ -15242,7 +15668,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "restricted"
@@ -17536,7 +17964,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "nosepass": {
@@ -20486,7 +20916,9 @@
       "usun",
       "umoon",
       "colosseum",
-      "xd"
+      "xd",
+      "fr-switch",
+      "lg-switch"
     ]
   },
   "snorunt": {
@@ -21755,7 +22187,9 @@
       "colosseum",
       "xd",
       "scar",
-      "vio"
+      "vio",
+      "fr-switch",
+      "lg-switch"
     ],
     "flags": [
       "overSeventy",
@@ -33469,7 +33903,7 @@
       "plza"
     ],
     "evolvesFrom": "espurr"
-  },
+    },
   "meowstic-f": {
     "data-source": "meowstic",
     "forms": {
