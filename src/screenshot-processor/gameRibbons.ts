@@ -82,6 +82,24 @@ function drawTiles(tiles: HTMLCanvasElement[]) {
   return { canvas, layout };
 }
 
+/** Insert blank screen space while retaining the game's panel borders and footer. */
+function extendScreen(frame: HTMLCanvasElement, game: SwitchScreenshotGame, extra: number) {
+  const canvas = document.createElement('canvas');
+  canvas.width = frame.width; canvas.height = frame.height + extra;
+  const context = canvas.getContext('2d')!;
+  const panel = {
+    swsh: { right: 623, seam: 397, summarySeam: 120 },
+    bdsp: { right: 664, seam: 468, summarySeam: 120 },
+    sv: { right: 650, seam: 580, summarySeam: 580 },
+  }[game];
+  for (const [x, width, seam] of [[0, panel.right, panel.seam], [panel.right, frame.width - panel.right, panel.summarySeam]]) {
+    context.drawImage(frame, x, 0, width, seam, x, 0, width, seam);
+    if (extra) context.drawImage(frame, x, seam - 1, width, 1, x, seam, width, extra);
+    context.drawImage(frame, x, seam, width, frame.height - seam, x, seam + extra, width, frame.height - seam);
+  }
+  return canvas;
+}
+
 /** Register only the scrolling ribbon panel, not the fixed model and UI.
  * Small overlaps matter: BDSP's viewport can cut a row in half between shots. */
 function panelOffset(first: HTMLCanvasElement, second: HTMLCanvasElement): { offset: number; score: number } | null {
@@ -156,13 +174,26 @@ export async function consolidateGameRibbons(frames: HTMLCanvasElement[], game: 
     kept.push(tiles[index]); pixels.push(image);
   });
   const grid = drawTiles(kept);
-  const canvas = document.createElement('canvas'); canvas.width = 1280; canvas.height = Math.max(720, grid.canvas.height + 130);
+  const stride = profile.grid.width / 5;
+  const height = Math.ceil(kept.length / 5) * stride;
+  const extra = Math.max(0, Math.ceil(height - profile.grid.height));
+  const canvas = extendScreen(frames[0], game, extra);
   const context = canvas.getContext('2d')!;
-  context.fillStyle = `rgb(${profile.background.join(',')})`; context.fillRect(0, 0, canvas.width, canvas.height);
-  context.drawImage(frames[0], 0, 0);
-  context.fillStyle = `rgb(${BACKGROUND.join(',')})`; context.fillRect(0, 86, 650, canvas.height - 86);
-  context.drawImage(grid.canvas, 40, 115);
-  context.fillStyle = '#f1f4f8'; context.font = '16px sans-serif'; context.fillText('Consolidated ribbons', 40, 106);
-  const layout = { ...grid.layout, cells: grid.layout.cells.map(cell => ({ ...cell, x: cell.x + 40, y: cell.y + 115 })) };
-  return { canvas, layout, verifiedRibbonIds: kept.map(tile => CAPTION_IDS.get(tile)) };
+  // Sample the original empty panel, preserving its own color rather than
+  // exposing the contrasting background used privately for icon recognition.
+  context.drawImage(frames[0], profile.grid.x - 6, profile.grid.y + 10, 2, 2,
+    profile.grid.x, profile.grid.y, profile.grid.width, profile.grid.height + extra);
+  const cells = kept.map((tile, index) => {
+    const left = profile.grid.x + (index % 5) * stride;
+    const top = profile.grid.y + Math.floor(index / 5) * stride;
+    if (game === 'swsh') {
+      context.save(); context.shadowColor = '#0003'; context.shadowBlur = 3; context.shadowOffsetY = 2;
+      context.fillStyle = '#fff'; context.fillRect(left + 3, top + 3, stride - 10, stride - 10); context.restore();
+    }
+    const size = stride * .8, inset = (stride - size) / 2;
+    context.drawImage(tile, left + inset, top + inset, size, size);
+    return { x: left + inset, y: top + inset, width: size, height: size, row: Math.floor(index / 5), column: index % 5 };
+  });
+  const layout = { ...grid.layout, cells, background: profile.background };
+  return { canvas, layout, recognition: grid, verifiedRibbonIds: kept.map(tile => CAPTION_IDS.get(tile)) };
 }

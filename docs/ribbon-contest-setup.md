@@ -98,8 +98,18 @@ confirm a cross-origin Form submission.
 
 ## Screenshots and answer checking
 
-Screenshots stay in the participant's browser. Only the confirmed Pokémon/ribbon
-values are prefilled; no screenshot evidence is stored or sent to Google Forms.
+Screenshots stay in the participant's browser unless they manually attach the
+combined image to the optional **Image of your pokemon** file-upload question.
+The review step includes a checked-by-default image-sharing checkbox, community
+display notice, and a **Download combined image** link. Unchecking hides the
+download link and attachment reminder; it does not change or reload the Google
+Form. Participants may leave the optional upload question blank.
+Only the confirmed Pokémon/ribbon values are prefilled. Google Forms cannot
+prefill file attachments: participants must download and attach the image
+themselves. Google requires sign-in for file uploads and stores uploaded files
+in the Form's managed Drive folder. The site does not directly upload to Drive,
+expose a community folder link, or confirm file attachment. Use the new-tab
+Form link if embedded sign-in or file upload is unavailable.
 The shared `ScreenshotProcessor` and `ScreenshotUpload` component are used by both
 Ribbon Checker and Ribbon Contest. Select 1–12 PNG/JPEG screenshots from one game;
 the game is detected automatically. HOME summaries are stitched vertically, while

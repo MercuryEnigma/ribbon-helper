@@ -18,7 +18,7 @@ export interface ScreenshotAnalysis extends HomeRecognitionResult {
   identityConfirmed: boolean;
 }
 export interface ProcessedScreenshots { canvas: HTMLCanvasElement; analysis: ScreenshotAnalysis; fileCount: number; }
-type Prepared = { game: ScreenshotGame; original: HTMLCanvasElement; layout?: Awaited<ReturnType<typeof consolidateGameRibbons>>['layout']; verifiedRibbonIds?: (string | undefined)[] };
+type Prepared = { game: ScreenshotGame; original: HTMLCanvasElement; layout?: Awaited<ReturnType<typeof consolidateGameRibbons>>['layout']; recognition?: Awaited<ReturnType<typeof consolidateGameRibbons>>['recognition']; verifiedRibbonIds?: (string | undefined)[] };
 const POKEMON = pokemonData as PokemonDatabase;
 
 /** The single entry point used by Ribbon Checker and Ribbon Contest. All OCR
@@ -56,7 +56,7 @@ export class ScreenshotProcessor {
         const normalized = frames.map(frame => scaleCanvas(frame, 1280 / frame.width));
         const consolidated = await consolidateGameRibbons(normalized, game, detail => progress(detail, .3));
         canvas = consolidated.canvas;
-        prepared = { game, original: normalized[0], layout: consolidated.layout, verifiedRibbonIds: consolidated.verifiedRibbonIds };
+        prepared = { game, original: normalized[0], layout: consolidated.layout, recognition: consolidated.recognition, verifiedRibbonIds: consolidated.verifiedRibbonIds };
       }
       this.prepared.set(canvas, prepared);
       const analysis = await this.analyzePrepared(canvas, prepared, progress);
@@ -101,8 +101,9 @@ export class ScreenshotProcessor {
     const ocr: HomeOcrResult = { identityText: text.text, identityConfidence: text.confidence, identityLines: [], trainerNotesText: '', trainerNotesConfidence: 0,
       nicknameText: nickname ?? '', nicknameConfidence: text.confidence, languageText: '', languageConfidence: 0, trainerNameText: '', trainerNameConfidence: 0, trainerIdText: '', trainerIdConfidence: 0 };
     progress('Reading the consolidated ribbon grid', .75);
-    const ribbonMatches = await matchRibbonGrid(canvas, prepared.layout!, (count, total) => progress(`Matching ribbon ${count} of ${total}`, .75 + count / total * .2), GAME_RIBBON_ACCEPTANCE);
+    const ribbonMatches = await matchRibbonGrid(prepared.recognition!.canvas, prepared.recognition!.layout, (count, total) => progress(`Matching ribbon ${count} of ${total}`, .75 + count / total * .2), GAME_RIBBON_ACCEPTANCE);
     ribbonMatches.forEach((match, index) => {
+      match.cell = prepared.layout!.cells[index];
       const caption = prepared.verifiedRibbonIds?.[index];
       if (caption) ribbonMatches[index] = { ...match, best: { ribbonId: caption, score: 0 }, accepted: true, confidence: 1, margin: 1 };
     });

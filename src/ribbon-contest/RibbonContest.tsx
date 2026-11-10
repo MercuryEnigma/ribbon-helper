@@ -45,6 +45,7 @@ export default function RibbonContest({ loadRounds = defaultLoader, formConfig =
   const [ribbonIds, setRibbonIds] = useState<string[]>([]);
   const [ribbonSearch, setRibbonSearch] = useState('');
   const [confirmed, setConfirmed] = useState(false);
+  const [includeImage, setIncludeImage] = useState(true);
   const run = useRef(0);
   const activeImageUrl = useRef<string | null>(null);
   const rounds = definitions.map(definition => roundAt(definition, now));
@@ -98,7 +99,7 @@ export default function RibbonContest({ loadRounds = defaultLoader, formConfig =
     run.current++;
     if (activeImageUrl.current) URL.revokeObjectURL(activeImageUrl.current);
     activeImageUrl.current = null;
-    setImage(null); setPokemon(''); setRibbonIds([]); setConfirmed(false); setProgress(''); setError('');
+    setImage(null); setPokemon(''); setRibbonIds([]); setConfirmed(false); setIncludeImage(true); setProgress(''); setError('');
   }
 
   async function upload(files: File[]) {
@@ -119,7 +120,7 @@ export default function RibbonContest({ loadRounds = defaultLoader, formConfig =
       <span className="trainer-card-pokeball" aria-hidden="true" />
       <select className="trainer-card-selector" value="ribbon-contest" aria-label="Select ribbon guide" onChange={event => navigate(`/guides/${event.target.value}`)}>
         {GUIDES.map(guide => <option key={guide.id} value={guide.id}>{guide.title}</option>)}
-        <option value="ribbon-checker">Ribbon Checker</option><option value="ribbon-contest" hidden disabled>Ribbon Contest</option>
+        <option value="ribbon-checker">Ribbon Checker</option><option value="ribbon-contest" hidden disabled>Ribbon Puzzles</option>
       </select>
       <span className="trainer-card-pokeball" aria-hidden="true" />
     </div>
@@ -158,7 +159,7 @@ export default function RibbonContest({ loadRounds = defaultLoader, formConfig =
               </StepHeading>
               <div className="home-merger__step-widget">
                 <ScreenshotUpload onFiles={files => void upload(files)} busy={!!progress} hasImage={!!image} />
-                <p className="home-analysis__privacy">Screenshots are not saved.</p>
+                <p className="home-analysis__privacy">Screenshots stay on your device unless you choose to attach one in Google Forms.</p>
                 {progress && <div className="home-merger__processing" role="status"><progress className="home-merger__progress" aria-label="Reading screenshots" /><p className="home-merger__status">{progress}…</p></div>}
                 {error && <p role="alert" className="home-merger__error-msg">{error}</p>}
               </div>
@@ -179,10 +180,13 @@ export default function RibbonContest({ loadRounds = defaultLoader, formConfig =
                   <fieldset className="rc-ribbons"><legend>Visible ribbons and marks</legend>{RIBBON_OPTIONS.filter(item => !ribbonSearch || `${item.name} ${item.key}`.toLowerCase().includes(ribbonSearch.toLowerCase())).map(item => <label key={item.key}><input type="checkbox" checked={ribbonIds.includes(item.key)} onChange={event => { setRibbonIds(previous => event.target.checked ? [...previous, item.key] : previous.filter(id => id !== item.key)); setConfirmed(false); }} /><img loading="lazy" src={`${import.meta.env.BASE_URL}images/ribbons/${item.key}.png`} alt="" /><span>{item.name}<small>{item.key}</small></span></label>)}</fieldset>
                 </details>
                 {!!image.candidates.length && <details className="home-analysis__corrections"><summary>Uncertain suggestions ({image.candidates.length})</summary><p className="rc-supporting-text">These were not selected automatically. Check them against the image.</p><ul className="rc-suggestions">{[...new Map(image.candidates.map(candidate => [candidate.key, candidate])).values()].map(candidate => <li key={candidate.key}>{ribbonName(candidate.key)} ({Math.round(candidate.confidence * 100)}% similarity)</li>)}</ul></details>}
-                <label className="rc-confirm"><input type="checkbox" checked={confirmed} onChange={event => setConfirmed(event.target.checked)} /><span>I have checked the Pokémon and selected only ribbons visible in my screenshot.</span></label>
-                {reviewed && <p className={correct ? 'rc-verdict rc-verdict--correct' : 'home-analysis__warning'} role="status">{correct ? 'Correct! Your Pokémon has all the required ribbons. Submit your entry below.' : 'That Pokémon and ribbon set does not match the puzzle. Check your answer and try again.'}</p>}
-                {confirmed && !pokemon && <p className="home-analysis__warning" role="status">Select the Pokémon to check your answer.</p>}
-                {confirmed && pokemon && !ribbonIds.length && <p className="home-analysis__warning" role="status">Select the ribbons visible in your screenshot to check your answer.</p>}
+                <label className="rc-confirm"><input type="checkbox" checked={includeImage} onChange={event => setIncludeImage(event.target.checked)} aria-describedby="rc-image-help" /><span>Include any image of your Pokémon with your entry. We will display them with the rest of the community submissions!</span></label>
+                <p className="rc-supporting-text" id="rc-image-help">{includeImage ? 'Download the combined image, then attach it to “Image of your pokemon” in the form.' : 'Attach any image to “Image of your pokemon”, or leave it blank.'}</p>
+                {includeImage && <div className="home-merger__actions"><a className="home-merger__btn" href={image.imageUrl} download={`ribbon-contest-${pokemon || 'pokemon'}-${image.game}.png`}>Download combined image</a></div>}
+                <label className="rc-confirm"><input type="checkbox" checked={confirmed} onChange={event => setConfirmed(event.target.checked)} /><span>I have verified the Pokémon information is accurate.</span></label>
+                {reviewed && <p className={correct ? 'rc-verdict rc-verdict--correct' : 'home-analysis__warning'} role="status">{correct ? 'Correct! Your Pokémon solved the puzzle! Submit your entry below.' : 'Not quite. That Pokémon does not solve the puzzle. Check the puzzle and try again.'}</p>}
+                {confirmed && !pokemon && <p className="home-analysis__warning" role="status">Select the Pokémon species.</p>}
+                {confirmed && pokemon && !ribbonIds.length && <p className="home-analysis__warning" role="status">Select the ribbons this Pokémon has received.</p>}
                 {preparedForm.error && <p className="home-merger__error-msg" role="alert">{preparedForm.error}</p>}
               </div>}
             </li>
@@ -190,14 +194,14 @@ export default function RibbonContest({ loadRounds = defaultLoader, formConfig =
           <li className="home-merger__step rc-step-full">
             <StepHeading number={3} title="Submit your entry"><p>{form ? 'Enter your Discord handle and click Submit in the form. Google Forms will confirm when your entry is received.' : 'The submission form will appear here once your reviewed answer is correct.'}</p></StepHeading>
             {form && <div className="home-merger__step-widget">
+              {includeImage && <p className="rc-supporting-text">Attach your downloaded image to “Image of your pokemon” in the form.</p>}
               <div className="home-merger__actions"><a className="home-merger__btn" href={form.external} target="_blank" rel="noreferrer">Open form in a new tab ↗</a><button className="home-merger__btn" type="button" onClick={clearUpload}>Start another attempt</button></div>
               <iframe className="rc-form" title="Ribbon Contest submission form" src={form.embedded} />
-              <p className="home-analysis__privacy">Keep the prefilled Pokémon and ribbons unchanged when submitting.</p>
             </div>}
           </li>
         </ol>
         </section>}
-        {round.state !== 'open' && <p className="home-analysis__privacy">{round.state === 'closed' ? 'This round has closed.' : 'Uploads open when the round begins.'}</p>}
+        {round.state !== 'open' && <p className="home-analysis__privacy">{round.state === 'closed' ? 'This puzzle has concluded.' : 'Come back soon when the puzzle starts.'}</p>}
       </>}
     </div></div>
   </div></div>;
