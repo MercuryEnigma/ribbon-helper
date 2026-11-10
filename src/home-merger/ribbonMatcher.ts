@@ -196,6 +196,7 @@ export async function matchRibbonGrid(
   canvas: HTMLCanvasElement,
   layout: RibbonGridLayout,
   onProgress?: RibbonMatchProgress,
+  acceptance = { confidence: .72, margin: .012 },
 ): Promise<RibbonCellMatch[]> {
   referencePromise ??= loadReferences();
   const references = await referencePromise;
@@ -222,7 +223,7 @@ export async function matchRibbonGrid(
       alternatives: ranked.slice(1),
       confidence,
       margin,
-      accepted: confidence >= 0.72 && margin >= 0.012,
+      accepted: confidence >= acceptance.confidence && margin >= acceptance.margin,
     });
     onProgress?.(index + 1, layout.cells.length);
   }

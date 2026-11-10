@@ -1,0 +1,5 @@
+.screenshot-upload { position: relative; }
+.screenshot-upload .home-merger__file-input { display: block; position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+.screenshot-upload:focus-within { outline: 3px solid #b92f6b; outline-offset: 3px; }
+.screenshot-upload--busy { opacity: .6; cursor: wait; }
+.screenshot-upload--busy .home-merger__file-input { cursor: wait; }

@@ -5,12 +5,10 @@ import pokemonData from '../data/pokemon.json';
 import ribbonsData from '../data/ribbons.json';
 import type { PokemonDatabase } from '../switch-compatibility/types';
 import { getAvailableRibbons } from '../switch-compatibility/ribbonUtils';
-import { mergeAll } from './ocrMerge';
-import { loadFileToCanvas, canvasToBlob } from './imageUtils';
-import {
-  analyzeHomeSummary,
-  type HomeRecognitionResult,
-} from './homeAnalysis';
+import { canvasToBlob } from './imageUtils';
+import ScreenshotUpload from '../screenshot-processor/ScreenshotUpload';
+import { screenshotProcessor, type ScreenshotAnalysis } from '../screenshot-processor/ScreenshotProcessor';
+import { SCREENSHOT_GAME_NAMES, type ScreenshotGame } from '../screenshot-processor/gameLayouts';
 import {
   classifyRibbonCollection,
   type EligibleRibbon,
@@ -50,7 +48,7 @@ type MergerState =
   | { type: 'idle' }
   | { type: 'ready'; files: File[] }
   | { type: 'processing'; step: number; total: number; detail: string }
-  | { type: 'done'; url: string; canvas: HTMLCanvasElement }
+  | { type: 'done'; url: string; canvas: HTMLCanvasElement; game: ScreenshotGame }
   | { type: 'error'; message: string };
 
 interface DetailsState {
@@ -80,7 +78,7 @@ const EMPTY_DETAILS: DetailsState = {
 type AnalysisState =
   | { type: 'idle' }
   | { type: 'processing'; detail: string; progress: number }
-  | { type: 'done'; result: HomeRecognitionResult }
+  | { type: 'done'; result: ScreenshotAnalysis }
   | { type: 'error'; message: string };
 
 interface RibbonMetadata {
@@ -125,10 +123,25 @@ export default function HomeMerger() {
   const objectUrlRef = useRef<string | null>(null);
   const analysisRunRef = useRef(0);
 
-  const handleFiles = useCallback((files: FileList | null) => {
-    if (!files || files.length < 2) return;
-    const sorted = Array.from(files).sort((a, b) => a.name.localeCompare(b.name));
+  const handleFiles = useCallback((files: File[]) => {
+    if (!files.length) return;
+    const sorted = Array.from(files).sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
     setState({ type: 'ready', files: sorted });
+  }, []);
+
+  const applyRecognition = useCallback((result: ScreenshotAnalysis) => {
+    const bestIdentity = result.identityConfirmed ? result.identity.candidates[0] : undefined;
+    setSelectedBaseKey(bestIdentity?.baseKey ?? '');
+    setSelectedFormKey(bestIdentity && bestIdentity.pokemonKey !== bestIdentity.baseKey ? bestIdentity.pokemonKey : 'auto');
+    setLevel(result.identity.recognizedLevel ?? 50);
+    setOrigin(result.origin.origin ?? '');
+    setDetails({
+      nickname: result.details.nickname ?? '', gender: result.details.gender ?? '', shiny: result.details.shiny ? 'star' : '',
+      language: result.details.language ?? '', nature: result.details.nature ?? '', ball: result.details.ball === 'strange' ? '' : result.details.ball ?? '',
+      strangeBallDetected: result.details.ball === 'strange', ot: result.details.ot ?? '', idNo: result.details.idNo ?? '',
+    });
+    setCellSelections(result.ribbonMatches.map(match => match.accepted ? match.best.ribbonId : ''));
+    setAnalysis({ type: 'done', result });
   }, []);
 
   const handleAnalyze = useCallback(async (canvas: HTMLCanvasElement) => {
@@ -140,9 +153,9 @@ export default function HomeMerger() {
     });
 
     try {
-      const result = await analyzeHomeSummary(
+      const result = await screenshotProcessor.analyze(
         canvas,
-        (_stage, detail, progress) => {
+        (detail, progress) => {
           if (analysisRunRef.current === run) {
             setAnalysis({ type: 'processing', detail, progress });
           }
@@ -150,26 +163,7 @@ export default function HomeMerger() {
       );
       if (analysisRunRef.current !== run) return;
 
-      const bestIdentity = result.identity.candidates[0];
-      setSelectedBaseKey(bestIdentity?.baseKey ?? '');
-      setSelectedFormKey('auto');
-      setLevel(result.identity.recognizedLevel ?? 50);
-      setOrigin(result.origin.origin ?? '');
-      setDetails({
-        nickname: result.details.nickname ?? '',
-        gender: result.details.gender ?? '',
-        shiny: result.details.shiny ? 'star' : '',
-        language: result.details.language ?? '',
-        nature: result.details.nature ?? '',
-        ball: result.details.ball === 'strange' ? '' : result.details.ball ?? '',
-        strangeBallDetected: result.details.ball === 'strange',
-        ot: result.details.ot ?? '',
-        idNo: result.details.idNo ?? '',
-      });
-      setCellSelections(result.ribbonMatches.map(match => (
-        match.accepted ? match.best.ribbonId : ''
-      )));
-      setAnalysis({ type: 'done', result });
+      applyRecognition(result);
     } catch (error) {
       if (analysisRunRef.current !== run) return;
       setAnalysis({
@@ -177,32 +171,38 @@ export default function HomeMerger() {
         message: error instanceof Error ? error.message : String(error),
       });
     }
-  }, []);
+  }, [applyRecognition]);
 
   const handleMerge = useCallback(async (files: File[]) => {
-    setState({ type: 'processing', step: 0, total: files.length - 1, detail: 'Loading images…' });
+    const run = ++analysisRunRef.current;
+    setState({ type: 'processing', step: 0, total: 1, detail: 'Loading images…' });
     setAnalysis({ type: 'idle' });
 
     try {
-      const canvases = await Promise.all(files.map(loadFileToCanvas));
-
-      const merged = await mergeAll(canvases, (step, total, detail) => {
-        setState({ type: 'processing', step, total, detail });
+      const result = await screenshotProcessor.process(files, (detail, progress) => {
+        if (analysisRunRef.current === run) setState({ type: 'processing', step: progress, total: 1, detail });
       });
-
-      const blob = await canvasToBlob(merged);
+      if (analysisRunRef.current !== run) return;
+      const blob = await canvasToBlob(result.canvas);
+      if (analysisRunRef.current !== run) return;
       const url = URL.createObjectURL(blob);
       if (objectUrlRef.current) URL.revokeObjectURL(objectUrlRef.current);
       objectUrlRef.current = url;
-      setState({ type: 'done', url, canvas: merged });
-      void handleAnalyze(merged);
+      setState({ type: 'done', url, canvas: result.canvas, game: result.analysis.game });
+      applyRecognition(result.analysis);
     } catch (err) {
+      if (analysisRunRef.current !== run) return;
       setState({
         type: 'error',
         message: err instanceof Error ? err.message : String(err),
       });
     }
-  }, [handleAnalyze]);
+  }, [applyRecognition]);
+
+  useEffect(() => () => {
+    analysisRunRef.current++;
+    if (objectUrlRef.current) URL.revokeObjectURL(objectUrlRef.current);
+  }, []);
 
   const reset = useCallback(() => {
     analysisRunRef.current++;
@@ -222,8 +222,8 @@ export default function HomeMerger() {
 
   const downloadName = useMemo(() => {
     const base = sanitizeForFilename(details.nickname);
-    return `${base || 'merged'}-home.png`;
-  }, [details.nickname]);
+    return `${base || 'merged'}-${state.type === 'done' ? state.game : 'screenshots'}.png`;
+  }, [details.nickname, state]);
   const formOptions = useMemo(
     () => selectedBaseKey ? getFormOptions(selectedBaseKey, POKEMON_DB) : [],
     [selectedBaseKey],
@@ -359,12 +359,10 @@ export default function HomeMerger() {
         </div>
         <div className="trainer-card-body">
           <div className="trainer-card-info">
-            <p className="home-analysis__warning">
-              This is still in Beta mode. Results may be inaccurate.
-            </p>
             <p className="guide-description">
-              Take several overlapping screenshots of a Pokémon's summary in the
-              Pokémon HOME mobile app, then upload them together to check its ribbons.
+              Upload one or more ribbon-screen screenshots from Pokémon HOME,
+              Sword/Shield, BDSP, or Scarlet/Violet. The checker detects the game
+              and combines the screenshots automatically.
             </p>
             <div className="trainer-card-divider" />
 
@@ -377,10 +375,11 @@ export default function HomeMerger() {
                   <div className="home-merger__step-copy">
                     <span className="home-merger__step-number" aria-hidden="true">1</span>
                     <div>
-                      <h3>Take the first screenshot</h3>
+                      <h3>Take a ribbon-screen screenshot</h3>
                       <p>
-                        Open the Pokémon's summary in the Pokémon HOME mobile app and take
-                        a screenshot at the top of the page.
+                        Open your Pokémon's ribbons in HOME, Sword/Shield, BDSP, or
+                        Scarlet/Violet. Use the full screenshot so the checker can
+                        recognize the game. For HOME, start at the top of its summary.
                       </p>
                     </div>
                   </div>
@@ -395,10 +394,11 @@ export default function HomeMerger() {
                   <div className="home-merger__step-copy">
                     <span className="home-merger__step-number" aria-hidden="true">2</span>
                     <div>
-                      <h3>Scroll down and take more screenshots</h3>
+                      <h3>Include every ribbon row</h3>
                       <p>
-                        Leave some content from the previous screenshot visible each time.
-                        This overlap lets the tool find where the images belong.
+                        If the ribbons do not fit in one screenshot, scroll down and
+                        take more. Keep some overlap between images so partially
+                        visible rows can be joined. Use one Pokémon and game per upload.
                       </p>
                       <a
                         className="home-merger__app-link"
@@ -451,19 +451,7 @@ export default function HomeMerger() {
                   </div>
                   <div className="home-merger__step-widget">
                     {state.type === 'idle' && (
-                      <label className="home-merger__dropzone">
-                        <input
-                          ref={fileInputRef}
-                          type="file"
-                          multiple
-                          accept="image/png,.png,.PNG"
-                          onChange={e => handleFiles(e.target.files)}
-                          className="home-merger__file-input"
-                        />
-                        <span className="home-merger__dropzone-icon" aria-hidden="true">📁</span>
-                        <span className="home-merger__dropzone-text">Select all screenshots at once</span>
-                        <span className="home-merger__dropzone-hint">2 or more PNG screenshots required</span>
-                      </label>
+                      <ScreenshotUpload inputRef={fileInputRef} onFiles={handleFiles} />
                     )}
                     {state.type === 'ready' && (
                       <div className="home-merger__ready">
@@ -495,12 +483,10 @@ export default function HomeMerger() {
                     <div>
                       <h3>Check the ribbons</h3>
                       <p>
-                        Select Check ribbons to stitch the screenshots into one image and
-                        analyze it. The checker reads the merged image to identify the
-                        Pokémon, its nickname, level, and origin game, plus details such as
-                        shininess, gender, language, Poké Ball, OT, and ID No. It then
-                        detects each ribbon and mark using the fixed order Pokémon HOME
-                        displays them in.
+                        Select Check ribbons to combine the images and read their ribbons.
+                        The game is detected automatically. Species recognition uses OCR;
+                        if the screen shows only a nickname, select the Pokémon yourself.
+                        Complete HOME summaries also provide origin and trainer details.
                       </p>
                       <p>
                         Review the detected species, form, origin, and ribbon grid — you can
@@ -508,7 +494,7 @@ export default function HomeMerger() {
                         ribbons this Pokémon already owns, which it can still earn, which
                         are permanently missed, and any special ribbons or marks it has,
                         including the Jumbo and Mini size marks. You can also download the
-                        merged image.
+                        consolidated image.
                       </p>
                     </div>
                   </div>
@@ -541,7 +527,7 @@ export default function HomeMerger() {
               <div className="home-merger__done">
                 <img
                   src={state.url}
-                  alt="Merged Pokémon HOME screenshot"
+                  alt="Consolidated Pokémon ribbon screenshots"
                   className="home-merger__preview"
                 />
                 <div className="home-merger__actions">
@@ -688,13 +674,16 @@ function AnalysisPanel({
     <section className="home-analysis" aria-labelledby="home-analysis-title">
       <h2 id="home-analysis-title">Ribbon analysis</h2>
       <p className="home-analysis__privacy">
-        Analysis runs in your browser. Version 1 expects an English Pokémon HOME summary.
+        {SCREENSHOT_GAME_NAMES[result.game]} detected. Analysis runs in your browser
+        using English screenshots.
       </p>
+      {result.warnings.map(warning => <p className="home-analysis__warning" key={warning}>{warning}</p>)}
 
       <div className="home-analysis__identity">
         <label>
           <span>Pokémon</span>
           <select
+            aria-label="Pokémon"
             value={selectedBaseKey}
             onChange={event => onSpeciesChange(event.target.value)}
           >

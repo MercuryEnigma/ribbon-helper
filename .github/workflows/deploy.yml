@@ -24,6 +24,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_RIBBON_CONTEST_SHEET_URL: ${{ vars.RIBBON_CONTEST_SHEET_URL }}
 
       - name: Configure git author
         run: |

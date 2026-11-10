@@ -36,6 +36,15 @@ export interface HomeOcrResult {
 
 export type OcrProgress = (status: string, progress: number) => void;
 
+/** Sparse English text from a game screenshot; game layouts do not use HOME's
+ * Trainer Notes or summary-coordinate assumptions. */
+export async function readGameScreenshotText(canvas: HTMLCanvasElement, onProgress?: OcrProgress) {
+  activeProgress = onProgress;
+  try {
+    return await recognizeCrop(canvas, { x: 0, y: 0, width: canvas.width, height: canvas.height }, { maxScale: 1.5 });
+  } finally { activeProgress = undefined; }
+}
+
 let activeProgress: OcrProgress | undefined;
 let workerPromise: Promise<any> | null = null;
 
@@ -51,7 +60,7 @@ async function getWorker() {
           Number.isFinite(message.progress) ? message.progress : 0,
         ),
       })
-    ));
+    )).catch(error => { workerPromise = null; throw error; });
   }
   return workerPromise;
 }

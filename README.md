@@ -24,6 +24,9 @@ Ribbon Helper is a comprehensive React app for Pokémon ribbon hunters. It provi
   - *DPPt accessories*: Page-ordered list for each Super Contest theme.
   - *BDSP ball stickers*: Score-ordered grouping for ball stickers for each Super Contest Show type.
 
+- **Ribbon Contest**: Scheduled puzzles and hints with screenshot review and an embedded submission Form at `/guides/ribbon-contest`. See [Google Sheet/Form setup](docs/ribbon-contest-setup.md).
+- **Ribbon Checker**: Upload one or more screenshots from HOME, Sword/Shield, BDSP, or Scarlet/Violet. Shares automatic game detection, image consolidation, OCR, and ribbon recognition with Ribbon Contest.
+
 ## Getting Started
 
 Install dependencies:
