@@ -129,9 +129,10 @@ export default function RibbonContest({ loadRounds = defaultLoader, formConfig =
   return <div className="guides-wrapper ribbon-contest"><div className="trainer-card">
     <div className="trainer-card-header">
       <span className="trainer-card-pokeball" aria-hidden="true" />
-      <select className="trainer-card-selector" value="ribbon-contest" aria-label="Select ribbon guide" onChange={event => navigate(`/guides/${event.target.value}`)}>
+      <select className="trainer-card-selector" value="ribbon-puzzles" aria-label="Select ribbon guide" onChange={event => navigate(`/guides/${event.target.value}`)}>
         {GUIDES.map(guide => <option key={guide.id} value={guide.id}>{guide.title}</option>)}
-        <option value="ribbon-checker">Ribbon Checker</option><option value="ribbon-contest" hidden disabled>Ribbon Puzzles</option>
+        <option value="ribbon-checker">Ribbon Checker</option>
+        <option value="ribbon-puzzles" hidden disabled>Ribbon Puzzles</option>
       </select>
       <span className="trainer-card-pokeball" aria-hidden="true" />
     </div>
@@ -162,7 +163,7 @@ export default function RibbonContest({ loadRounds = defaultLoader, formConfig =
             {round.solution && <div className="home-merger__step-widget home-analysis rc-solution"><h3>Answer: {pokemonName(round.solution.pokemon)}</h3><div className="home-analysis__ribbon-list">{round.solution.ribbonIds.map(id => <article key={id}><img src={`${import.meta.env.BASE_URL}images/ribbons/${id}.png`} alt="" /><strong>{ribbonName(id)}</strong></article>)}</div></div>}
           </section>
           {round.state === 'open' && <section className="home-merger__instructions" aria-labelledby="rc-instructions">
-            <h2 className="home-merger__instructions-title" id="rc-instructions">How to enter the Ribbon Contest</h2>
+            <h2 className="home-merger__instructions-title" id="rc-instructions">How to enter the Ribbon Puzzles</h2>
             <ol className="home-merger__steps">
             <li className="home-merger__step rc-step-full">
               <StepHeading number={1} title="Check your answer"><p>Select the Pokémon species and the ribbons that solve the puzzle, then click Check.</p></StepHeading>
@@ -191,7 +192,7 @@ export default function RibbonContest({ loadRounds = defaultLoader, formConfig =
               {correct && image && <figure className="home-merger__example"><a className="home-merger__example-link" href={image.imageUrl} target="_blank" rel="noreferrer"><img className="home-merger__example-image" src={image.imageUrl} alt="Your uploaded ribbon screenshot" /></a><figcaption>Open your screenshot ↗</figcaption></figure>}
               {correct && image && <div className="home-merger__step-widget">
                 <p className="home-analysis__privacy">{SCREENSHOT_GAME_NAMES[image.game]} detected.</p>
-                <div className="home-merger__actions"><a className="home-merger__btn" href={image.imageUrl} download={`ribbon-contest-${pokemon || 'pokemon'}-${image.game}.png`}>Download combined image</a></div>
+                <div className="home-merger__actions"><a className="home-merger__btn" href={image.imageUrl} download={`ribbon-puzzles-${pokemon || 'pokemon'}-${image.game}.png`}>Download combined image</a></div>
               </div>}
             </li>
 
@@ -200,7 +201,7 @@ export default function RibbonContest({ loadRounds = defaultLoader, formConfig =
             {preparedForm.error && <p className="home-merger__error-msg" role="alert">{preparedForm.error}</p>}
             {form && <div className="home-merger__step-widget">
               <div className="home-merger__actions"><a className="home-merger__btn" href={form.external} target="_blank" rel="noreferrer">Open form in a new tab ↗</a><button className="home-merger__btn" type="button" onClick={clearUpload}>Start another attempt</button></div>
-              <iframe className="rc-form" title="Ribbon Contest submission form" src={form.embedded} />
+              <iframe className="rc-form" title="Ribbon Puzzles submission form" src={form.embedded} />
             </div>}
           </li>
         </ol>

@@ -1,6 +1,7 @@
-# Ribbon Contest setup
+# Ribbon Puzzles setup
 
-This page runs entirely on GitHub Pages. It reads a public Google Sheet CSV,
+The page at `/guides/ribbon-puzzles` runs entirely on GitHub Pages. The old
+`/guides/ribbon-contest` link redirects to the new URL. It reads a public Google Sheet CSV,
 processes screenshots in the browser, and embeds a prefilled Google Form. Google
 Forms writes entries to its linked Submissions tab. No Apps Script, API key,
 Google sign-in integration, or backend deployment is needed.
@@ -112,7 +113,7 @@ in the Form's managed Drive folder. The site does not directly upload to Drive,
 expose a community folder link, or confirm file attachment. Use the new-tab
 Form link if embedded sign-in or file upload is unavailable.
 The shared `ScreenshotProcessor` and `ScreenshotUpload` component are used by both
-Ribbon Checker and Ribbon Contest. Select 1–12 PNG/JPEG screenshots from one game;
+Ribbon Checker and Ribbon Puzzles. Select 1–12 PNG/JPEG screenshots from one game;
 the game is detected automatically. HOME summaries are stitched vertically, while
 Switch ribbon panels are consolidated without repeating the fixed summary area.
 Overlapping ribbons are deduplicated, and BDSP's partially visible rows are joined.

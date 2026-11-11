@@ -99,13 +99,13 @@ try {
     await page.getByLabel('Pokémon', { exact: true }).selectOption('claydol');
     assert.equal(await page.getByLabel('Pokémon', { exact: true }).inputValue(), 'claydol');
 
-    console.log('Verifying answer-first Ribbon Contest flow and Form prefill');
+    console.log('Verifying answer-first Ribbon Puzzles flow and Form prefill');
     await page.route('https://docs.google.com/spreadsheets/**', route => route.fulfill({ contentType: 'text/csv', body: 'contest number,title,puzzle text,opening time,closing time,reveal time,answer Pokémon,answer Ribbons\n1,Local verification,Fixture puzzle,2020-01-01,2099-01-01,2099-02-01,Claydol,Tower Master Ribbon' }));
-    await page.goto(new URL('/guides/ribbon-contest', site).href);
+    await page.goto(new URL('/guides/ribbon-puzzles', site).href);
     await page.getByRole('heading', { name: 'Check your answer', exact: true }).waitFor();
     assert.equal(await page.locator('.home-merger__step-number').count(), 3);
     assert.equal(await page.getByLabel('Upload screenshots').count(), 0);
-    assert.equal(await page.getByTitle('Ribbon Contest submission form').count(), 0);
+    assert.equal(await page.getByTitle('Ribbon Puzzles submission form').count(), 0);
     await page.getByRole('button', { name: 'Check', exact: true }).click();
     await page.getByText('Select the Pokémon species.', { exact: true }).waitFor();
     await page.getByLabel('Pokémon', { exact: true }).selectOption('bulbasaur');
@@ -118,17 +118,17 @@ try {
     assert.equal(await page.getByLabel('Upload screenshots').count(), 0);
     await page.getByRole('button', { name: 'Check', exact: true }).click();
     await page.getByText('Correct! Your Pokémon solved the puzzle! Upload your screenshots below.').waitFor();
-    assert.equal(await page.getByTitle('Ribbon Contest submission form').count(), 0);
+    assert.equal(await page.getByTitle('Ribbon Puzzles submission form').count(), 0);
     await page.getByLabel('Upload screenshots').setInputFiles(sample);
     await page.getByAltText('Your uploaded ribbon screenshot').waitFor();
-    await page.getByTitle('Ribbon Contest submission form').waitFor();
-    const url = new URL(await page.getByTitle('Ribbon Contest submission form').getAttribute('src'));
+    await page.getByTitle('Ribbon Puzzles submission form').waitFor();
+    const url = new URL(await page.getByTitle('Ribbon Puzzles submission form').getAttribute('src'));
     assert.equal(url.searchParams.get('entry.911552280'), 'claydol');
     assert.equal(url.searchParams.get('entry.2097695600'), 'tower-master-ribbon', 'Form uses the manually checked ribbons, not screenshot detections');
     assert.equal(await page.getByLabel('Pokémon', { exact: true }).inputValue(), 'claydol');
     assert.ok(await page.getByRole('link', { name: 'Download combined image', exact: true }).isVisible());
     await requiredRibbon.uncheck();
-    assert.equal(await page.getByTitle('Ribbon Contest submission form').count(), 0);
+    assert.equal(await page.getByTitle('Ribbon Puzzles submission form').count(), 0);
     assert.equal(await page.getByLabel('Upload screenshots').count(), 0);
     await page.getByRole('checkbox', { name: /^Effort Ribbon/ }).check();
     await page.getByRole('button', { name: 'Check', exact: true }).click();
@@ -136,11 +136,11 @@ try {
     await requiredRibbon.check();
     await page.getByRole('button', { name: 'Check', exact: true }).click();
     await page.getByLabel('Upload screenshots').waitFor();
-    assert.equal(await page.getByTitle('Ribbon Contest submission form').count(), 0, 'Edited answers require a new upload');
+    assert.equal(await page.getByTitle('Ribbon Puzzles submission form').count(), 0, 'Edited answers require a new upload');
     await page.setViewportSize({ width: 390, height: 844 });
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), 'Contest uploader fits a phone viewport');
     await page.getByLabel('Pokémon', { exact: true }).selectOption('bulbasaur');
-    assert.equal(await page.getByTitle('Ribbon Contest submission form').count(), 0);
+    assert.equal(await page.getByTitle('Ribbon Puzzles submission form').count(), 0);
     console.log('Both upload flows, answer-first contest gating, manual-answer preservation, and Form prefilling verified. No Form responses submitted.');
   }
   console.log(`Consolidated PNGs and report: ${output}`);

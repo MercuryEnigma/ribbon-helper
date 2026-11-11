@@ -167,7 +167,8 @@ export default function App() {
             <Route path="/battle-facilities/:game" element={<BattleFacilities />} />
             <Route path="/guides" element={<Navigate to="/guides/ribbon-checker" replace />} />
             <Route path="/guides/ribbon-checker" element={<HomeMerger />} />
-            <Route path="/guides/ribbon-contest" element={<RibbonContest />} />
+            <Route path="/guides/ribbon-puzzles" element={<RibbonContest />} />
+            <Route path="/guides/ribbon-contest" element={<Navigate to="/guides/ribbon-puzzles" replace />} />
             <Route path="/guides/:guideId" element={<Guides />} />
             <Route path="*" element={<Navigate to="/game-compatibility" replace />} />
           </Routes>
