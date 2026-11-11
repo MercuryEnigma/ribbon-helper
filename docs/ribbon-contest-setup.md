@@ -56,7 +56,7 @@ contest number	title	puzzle text	opening time	closing time	reveal time	hint 1 te
 - Blank hint text omits that hint. A hint with no release time, or with a time
   before opening, appears when the round opens.
 - **reveal time** (or **verdict-release time**) remains accepted for compatibility
-  with existing Sheets. Answer checking now happens immediately after review,
+  with existing Sheets. Answer checking now happens when the participant clicks Check,
   regardless of that field. The full solution appears after closing. Opening is
   inclusive and closing is exclusive.
 
@@ -88,11 +88,14 @@ Keep the Form published and accessible to anyone with its responder link. Leave
 email collection and the one-response limit off. Its existing Sheet link writes
 native entries to **Submissions**; no extra columns or script triggers are needed.
 
-The puzzle appears above a three-step flow: upload, review/check, and submit.
-After image processing, participants review the selections and confirm them.
-The page immediately reports whether the Pokémon and required ribbons match.
-Only a correct answer unlocks the prefilled Form and its new-tab fallback link.
-Changing the Pokémon or ribbons hides the Form and requires review again.
+The puzzle appears above a three-step flow: **Check your answer**, **Upload your
+screenshots**, and **Submit your entry**. Participants select the species and
+ribbons manually, then click **Check**. An incorrect answer prompts another try;
+a correct answer unlocks screenshot uploads. After a screenshot is processed,
+the prefilled Form and its new-tab fallback appear. The Form uses the manually
+checked species and ribbons; screenshot recognition does not overwrite them.
+Changing the Pokémon or ribbons clears the image and locks the later steps until
+the new answer is checked and screenshots are uploaded again.
 Google Forms provides the submission confirmation. The site cannot inspect or
 confirm a cross-origin Form submission.
 
@@ -100,10 +103,8 @@ confirm a cross-origin Form submission.
 
 Screenshots stay in the participant's browser unless they manually attach the
 combined image to the optional **Image of your pokemon** file-upload question.
-The review step includes a checked-by-default image-sharing checkbox, community
-display notice, and a **Download combined image** link. Unchecking hides the
-download link and attachment reminder; it does not change or reload the Google
-Form. Participants may leave the optional upload question blank.
+The upload step includes a **Download combined image** link once the image is
+ready. Participants may leave the optional upload question blank.
 Only the confirmed Pokémon/ribbon values are prefilled. Google Forms cannot
 prefill file attachments: participants must download and attach the image
 themselves. Google requires sign-in for file uploads and stores uploaded files
@@ -116,14 +117,15 @@ the game is detected automatically. HOME summaries are stitched vertically, whil
 Switch ribbon panels are consolidated without repeating the fixed summary area.
 Overlapping ribbons are deduplicated, and BDSP's partially visible rows are joined.
 
-Species recognition uses OCR only. When a screen shows a nickname or unreadable
-text, the Pokémon field stays empty so the participant can select it. No visual
-species model or external sprite downloads are required. Review uncertain ribbons
-before submitting. A single HOME image needs the complete summary/ribbon section;
+The shared processor uses OCR for species recognition. The contest keeps the
+answer selected in step 1, even when recognition finds different information or
+only reads a nickname. Check that the combined screenshot shows the Pokémon and
+ribbons you intend to submit. No visual species model or external sprite downloads
+are required. A single HOME image needs the complete summary/ribbon section;
 otherwise upload its overlapping screenshots together.
 
 The page does not save an answer-check history. A correct answer unlocks submission
-for the current reviewed selections; it does not prove that a Form was submitted.
+after a screenshot upload for the current checked selections; it does not prove that a Form was submitted.
 Participants should keep the prefilled Pokémon and ribbons unchanged inside the
 Google Form. No screenshot or answer-check data is written to local storage.
 
@@ -133,12 +135,14 @@ Google Form. No screenshot or answer-check data is written to local storage.
 2. Add a round and verify its puzzle, hints, dates, and after-close solution.
 3. Test actual screenshots from Scarlet/Violet, Sword/Shield, BDSP, and HOME.
    Check recognition accuracy against real screenshots before launch.
-4. Review an image and verify all three fields in the embedded and new-tab Forms.
+4. Check a correct answer, upload an image, and verify all three prefilled fields
+   in the embedded and new-tab Forms.
    Submit a test entry and check Google Forms' confirmation and its native Sheet row.
 5. Test an incorrect Pokémon and a missing required ribbon: both should show a
-   mismatch and keep the Form hidden. Extra ribbons are allowed.
-6. Confirm a correct answer: the Form should appear immediately. Editing a selection
-   should hide it until the new answer has been reviewed and checked again.
+   mismatch and keep uploads and the Form locked. Extra ribbons are allowed.
+6. Check a correct answer: uploads should unlock. After an upload, the Form should
+   appear using the manual selections. Editing a selection should clear the image
+   and require another check and upload.
 
 ```sh
 npm run build
