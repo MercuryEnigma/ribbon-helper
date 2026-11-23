@@ -16,5 +16,5 @@ export const RIBBON_OPTIONS = Object.entries(ribbonData).map(([key, value]) => (
   key, name: value.names.en,
 })).sort((a, b) => a.name.localeCompare(b.name) || a.key.localeCompare(b.key));
 
-export const pokemonName = (key: string) => POKEMON_OPTIONS.find(option => option.key === key)?.name ?? key;
+export const pokemonName = (key: string) => key === 'any-pokemon' ? 'Any Pokémon' : POKEMON_OPTIONS.find(option => option.key === key)?.name ?? key;
 export const ribbonName = (key: string) => RIBBON_OPTIONS.find(option => option.key === key)?.name ?? key;

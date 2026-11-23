@@ -25,7 +25,7 @@ export function sheetCsvUrl(value: string): string {
 
 export async function loadContestSheet(url: string, signal?: AbortSignal) {
   const response = await fetch(sheetCsvUrl(url), { signal, credentials: 'omit', cache: 'no-store' });
-  if (!response.ok) throw new Error('Contest information is unavailable. Please try again later.');
+  if (!response.ok) throw new Error('Scavenger hunts are unavailable. Please try again later.');
   const csv = await response.text();
   if (/^\s*</.test(csv) || csv.length > 2 * 1024 * 1024) throw new Error('The contest link did not return a CSV file. Publish the Contest info tab as CSV.');
   return parseContests(csv);

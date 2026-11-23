@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect, useMemo, useRef } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
-import { GUIDES } from '../guides/guideRegistry';
+import { useSearchParams } from 'react-router-dom';
+import CommunityHeader from '../guides/CommunityHeader';
 import pokemonData from '../data/pokemon.json';
 import ribbonsData from '../data/ribbons.json';
 import type { PokemonDatabase } from '../switch-compatibility/types';
@@ -109,7 +109,6 @@ function getHomeAppUrl(): string {
 }
 
 export default function HomeMerger() {
-  const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const [state, setState] = useState<MergerState>({ type: 'idle' });
   const [analysis, setAnalysis] = useState<AnalysisState>({ type: 'idle' });
@@ -342,21 +341,7 @@ export default function HomeMerger() {
   return (
     <div className="guides-wrapper">
       <div className="trainer-card">
-        <div className="trainer-card-header">
-          <span className="trainer-card-pokeball" aria-hidden="true" />
-          <select
-            className="trainer-card-selector"
-            value="ribbon-checker"
-            onChange={event => navigate(`/guides/${event.target.value}`)}
-            aria-label="Select ribbon guide"
-          >
-            {GUIDES.map(guide => (
-              <option key={guide.id} value={guide.id}>{guide.title}</option>
-            ))}
-            <option value="ribbon-checker">Ribbon Checker</option>
-          </select>
-          <span className="trainer-card-pokeball" aria-hidden="true" />
-        </div>
+        <CommunityHeader section="ribbon-checker" />
         <div className="trainer-card-body">
           <div className="trainer-card-info">
             <p className="guide-description">

@@ -1,3 +1,8 @@
+export interface RibbonRequirement {
+  ribbonId: string;
+  excluded: boolean;
+}
+
 export interface ContestDefinition {
   number: number;
   id: string;
@@ -7,7 +12,7 @@ export interface ContestDefinition {
   closesAt: string;
   verdictAt: string | null;
   hints: { number: number; text: string; releasesAt: string }[];
-  answer: { pokemon: string; ribbonIds: string[] };
+  answer: { pokemon: string; ribbonIds: string[]; ribbonRequirements?: RibbonRequirement[][] };
 }
 
 export interface ContestRound extends ContestDefinition {

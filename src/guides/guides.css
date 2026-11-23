@@ -62,6 +62,55 @@
   border-bottom: 3px solid #d97aaa;
 }
 
+.community-header {
+  flex-direction: column;
+  gap: 12px;
+}
+
+.community-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
+}
+
+.community-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  padding: 9px 12px;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.community-tab:hover,
+.community-tab.active {
+  background: #fff0f7;
+  border-color: #fff0f7;
+  color: #8b2252;
+}
+
+.community-tab:focus-visible,
+.community-header .trainer-card-selector:focus-visible {
+  outline: 3px solid #4a1535;
+  outline-offset: 3px;
+}
+
+.community-header .trainer-card-selector {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
 /* Pokéball circle icons flanking the dropdown */
 .trainer-card-pokeball {
   display: inline-block;

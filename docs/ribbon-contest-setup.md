@@ -1,4 +1,4 @@
-# Ribbon Puzzles setup
+# Ribbon Scavenger Hunt setup
 
 The page at `/guides/ribbon-puzzles` runs entirely on GitHub Pages. The old
 `/guides/ribbon-contest` link redirects to the new URL. It reads a public Google Sheet CSV,
@@ -6,7 +6,7 @@ processes screenshots in the browser, and embeds a prefilled Google Form. Google
 Forms writes entries to its linked Submissions tab. No Apps Script, API key,
 Google sign-in integration, or backend deployment is needed.
 
-## Publish just the contest information
+## Publish just the scavenger hunt information
 
 Keep the spreadsheet's general sharing **Restricted**. In **File → Share → Publish
 to web**, select **Contest info**, choose **CSV**, and publish that individual tab.
@@ -15,7 +15,7 @@ Google documents individual-tab publishing in its
 [publishing guide](https://support.google.com/docs/answer/183965?hl=en).
 
 The supplied published CSV link is already configured in
-`src/ribbon-contest/config.ts`. Updating contest rows does not require rebuilding
+`src/ribbon-contest/config.ts`. Updating scavenger hunt rows does not require rebuilding
 the website. It reloads the feed every minute; Google may cache published changes
 for several minutes. Leave automatic republishing enabled in Sheets.
 
@@ -27,7 +27,7 @@ only the Contest info tab keeps the rest of the workbook private.
 
 ## Contest info columns
 
-Your published tab's shorter layout is supported directly. Use one row per round
+Your published tab's shorter layout is supported directly. Use one row per scavenger hunt
 with this tab-separated header in A1:
 
 ```text
@@ -38,7 +38,9 @@ contest number	title	puzzle text	opening time	closing time	reveal time	hint 1 te
   The original 15-column layout also works: **number**, an optional **round ID**,
   **verdict-release time**, and **required ribbon IDs** are accepted aliases.
 - Number, title, puzzle text, opening/closing times, answer Pokémon, and answer
-  ribbons are required. Keep past rows to display previous puzzles and solutions.
+  ribbons are required. The answer ribbons cell must contain at least one
+  requirement, which can require or exclude a ribbon or mark. Keep past rows to
+  display previous scavenger hunts and solutions.
 - Readable Pokémon and ribbon names work, for example `Milotic` and
   `Skillful Battler Ribbon, Expert Battler Ribbon, Training Ribbon`.
   [The ID reference](ribbon-contest-ids.md) also provides precise keys, for example
@@ -46,8 +48,22 @@ contest number	title	puzzle text	opening time	closing time	reveal time	hint 1 te
   such as Cool Ribbon, which has different versions across generations.
   Shortened names such as `Effort` also work when omitting “Ribbon” or “Mark”
   still identifies exactly one entry.
-  Extra ribbons are allowed. A base species accepts its forms; a form-specific
-  answer requires that exact form.
+  Extra ribbons and marks are allowed unless explicitly excluded. A base species
+  accepts its forms; a form-specific answer requires that exact form.
+- Set **answer Pokémon** to `Any pokemon` (or `Any Pokémon`, case-insensitive)
+  to accept any species or form. Participants still select their actual Pokémon.
+- In **answer Ribbons**, commas (including `, `), semicolons, newlines, and `&`
+  mean **AND**. Use `|` for **OR** alternatives and prefix a ribbon with `!` for
+  **NOT**. For example, `Effort | Training, !Best Friends` accepts either Effort
+  or Training, requires Best Friends to be absent, and allows other ribbons.
+  OR alternatives are evaluated within each AND clause. Names and IDs both work.
+  These are the sheet’s supported operators: `, ` for AND, `|` for OR, and `!`
+  for NOT. Semicolons, newlines, and `&` also mean AND. Blank clauses and unknown
+  ribbons invalidate the row. An answer containing only NOT requirements can pass
+  with no ribbons or marks selected. Select only ribbons and marks the Pokémon
+  actually has; an excluded ribbon or mark must be absent from the Pokémon.
+  Category shorthand such as `Any Champion ribbon` is not supported; list each
+  accepted Champion ribbon as an OR alternative.
 - Set the Sheet timezone to **Los Angeles**. Format schedule cells as
   `yyyy-mm-dd hh:mm:ss`. The reader also supports US `M/D/YYYY H:mm:ss` dates
   and ISO timestamps with explicit timezone offsets.
@@ -55,14 +71,14 @@ contest number	title	puzzle text	opening time	closing time	reveal time	hint 1 te
   `America/Los_Angeles`, independent of the participant's timezone. During the
   repeated autumn hour, use an ISO offset if you need the second occurrence.
 - Blank hint text omits that hint. A hint with no release time, or with a time
-  before opening, appears when the round opens.
+  before opening, appears when the scavenger hunt starts.
 - **reveal time** (or **verdict-release time**) remains accepted for compatibility
   with existing Sheets. Answer checking now happens when the participant clicks Check,
   regardless of that field. The full solution appears after closing. Opening is
   inclusive and closing is exclusive.
 
 **The entire published tab is public, including answers and future hints.**
-Scheduling controls the page display, not access to the source data. Round windows
+Scheduling controls the page display, not access to the source data. Scavenger hunt windows
 use the participant's browser clock and answer checks run locally; this is not
 tamper-proof contest judging. Organizers use actual Google Form responses and timestamps to
 determine eligible entries and first completions.
@@ -78,7 +94,7 @@ the three existing entry IDs:
 | Species | `911552280` | Pokémon key |
 | Ribbons | `2097695600` | Comma-separated ribbon IDs |
 
-Participants fill **Discord handler** themselves, then click **Submit** in the
+Participants enter their Discord handle in **Discord handler**, then click **Submit** in the
 embedded Form. You can rename the labels without changing these entry IDs; naming
 the contest-number question **Round ID** makes its purpose clearer. No submission
 reference question is required. A different Form needs its responder URL and
@@ -89,7 +105,7 @@ Keep the Form published and accessible to anyone with its responder link. Leave
 email collection and the one-response limit off. Its existing Sheet link writes
 native entries to **Submissions**; no extra columns or script triggers are needed.
 
-The puzzle appears above a three-step flow: **Check your answer**, **Upload your
+The riddle appears above a three-step flow: **Check your answer**, **Upload your
 screenshots**, and **Submit your entry**. Participants select the species and
 ribbons manually, then click **Check**. An incorrect answer prompts another try;
 a correct answer unlocks screenshot uploads. After a screenshot is processed,
@@ -113,12 +129,12 @@ in the Form's managed Drive folder. The site does not directly upload to Drive,
 expose a community folder link, or confirm file attachment. Use the new-tab
 Form link if embedded sign-in or file upload is unavailable.
 The shared `ScreenshotProcessor` and `ScreenshotUpload` component are used by both
-Ribbon Checker and Ribbon Puzzles. Select 1–12 PNG/JPEG screenshots from one game;
+Ribbon Checker and Ribbon Scavenger Hunt. Select 1–12 PNG/JPEG screenshots from one game;
 the game is detected automatically. HOME summaries are stitched vertically, while
 Switch ribbon panels are consolidated without repeating the fixed summary area.
 Overlapping ribbons are deduplicated, and BDSP's partially visible rows are joined.
 
-The shared processor uses OCR for species recognition. The contest keeps the
+The shared processor uses OCR for species recognition. The scavenger hunt keeps the
 answer selected in step 1, even when recognition finds different information or
 only reads a nickname. Check that the combined screenshot shows the Pokémon and
 ribbons you intend to submit. No visual species model or external sprite downloads
@@ -133,14 +149,17 @@ Google Form. No screenshot or answer-check data is written to local storage.
 ## Verify before launch
 
 1. Confirm the published CSV opens without signing in. Keep Submissions private.
-2. Add a round and verify its puzzle, hints, dates, and after-close solution.
+2. Add a scavenger hunt and verify its riddle, hints, dates, and after-close solution.
 3. Test actual screenshots from Scarlet/Violet, Sword/Shield, BDSP, and HOME.
    Check recognition accuracy against real screenshots before launch.
 4. Check a correct answer, upload an image, and verify all three prefilled fields
    in the embedded and new-tab Forms.
    Submit a test entry and check Google Forms' confirmation and its native Sheet row.
-5. Test an incorrect Pokémon and a missing required ribbon: both should show a
-   mismatch and keep uploads and the Form locked. Extra ribbons are allowed.
+5. Test an incorrect Pokémon, a missing required ribbon, and a selected excluded
+   ribbon: each should show a mismatch and keep uploads and the Form locked.
+   Extra ribbons and marks are allowed unless explicitly excluded. Test both OR
+   alternatives, an `Any pokemon` answer with different species, and a NOT-only
+   answer with no ribbons or marks selected.
 6. Check a correct answer: uploads should unlock. After an upload, the Form should
    appear using the manual selections. Editing a selection should clear the image
    and require another check and upload.

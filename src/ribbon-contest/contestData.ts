@@ -1,13 +1,14 @@
 import pokemonData from '../data/pokemon.json';
 import ribbonsData from '../data/ribbons.json';
 import type { PokemonDatabase } from '../switch-compatibility/types';
-import type { ContestAnswer, ContestDefinition, ContestRound } from './types';
+import type { ContestAnswer, ContestDefinition, ContestRound, RibbonRequirement } from './types';
 import { POKEMON_OPTIONS, RIBBON_OPTIONS } from './catalog';
 
 export const CONTEST_HEADERS = ['number', 'round ID', 'title', 'puzzle text', 'opening time', 'closing time', 'verdict-release time', 'hint 1 text', 'hint 1 time', 'hint 2 text', 'hint 2 time', 'hint 3 text', 'hint 3 time', 'answer Pokémon', 'required ribbon IDs'];
 const POKEMON = pokemonData as PokemonDatabase;
 const RIBBONS = new Set(Object.keys(ribbonsData));
 const normalize = (value: string) => value.normalize('NFKC').trim().toLowerCase();
+export const ANY_POKEMON = 'any-pokemon';
 const HEADER_ALIASES: Record<string, string[]> = {
   number: ['contest number'], 'verdict-release time': ['reveal time'],
   'answer Pokémon': ['answer Pokemon'], 'required ribbon IDs': ['answer Ribbons'],
@@ -32,6 +33,15 @@ export function resolveRibbon(value: string): string {
   const matches = exact.length ? exact : RIBBON_OPTIONS.filter(option => normalize(option.name).replace(/ (?:ribbon|mark)$/, '') === key);
   if (matches.length !== 1) throw new Error(`Use an unambiguous ribbon name or ID: ${value}`);
   return matches[0].key;
+}
+
+/** Commas retain the sheet's AND meaning. Alternatives within each clause are OR. */
+export function parseRibbonRequirements(value: string): RibbonRequirement[][] {
+  return value.split(/[,;\n&]/).map(clause => clause.split(/\|/).map(term => {
+    const text = term.trim();
+    const excluded = text.startsWith('!');
+    return { ribbonId: resolveRibbon(excluded ? text.slice(1).trim() : text), excluded };
+  }));
 }
 const zonedFormat = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Los_Angeles', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' });
 function wallClock(time: number) {
@@ -103,25 +113,34 @@ export function parseContests(csv: string): ContestDefinition[] {
   });
   if ([0, 2, 3, 4, 5, 13, 14].some(index => columns[index] < 0)) throw new Error('The contest CSV needs number, title, puzzle text, opening/closing time, answer Pokémon, and required ribbons.');
   const seen = new Set<string>();
-  return rows.map(row => {
-    const text = (index: number) => (row[columns[index]] ?? '').trim();
-    const id = text(1) || text(0), pokemon = resolvePokemon(text(13));
-    const rawRibbons = text(14).split(/[,;\n]+/).map(value => value.trim()).filter(Boolean);
-    const ribbonIds = [...new Set(rawRibbons.map(resolveRibbon))];
-    if (!id || seen.has(id)) throw new Error('Every contest needs a unique round ID.');
-    seen.add(id);
-    if (!text(0) || !Number.isFinite(Number(text(0))) || !text(2) || !text(3)) throw new Error(`Number, title and puzzle are required: ${id}`);
-    if (!ribbonIds.length) throw new Error(`Required ribbons are missing: ${id}`);
-    const opensAt = parseContestTime(text(4), true)!, closesAt = parseContestTime(text(5), true)!;
-    if (Date.parse(closesAt) <= Date.parse(opensAt)) throw new Error(`Closing must follow opening: ${id}`);
-    const hints: ContestDefinition['hints'] = [];
-    for (let index = 0; index < 3; index++) {
-      if (!text(7 + index * 2)) continue;
-      const time = parseContestTime(text(8 + index * 2)) ?? opensAt;
-      hints.push({ number: index + 1, text: text(7 + index * 2), releasesAt: Date.parse(time) < Date.parse(opensAt) ? opensAt : time });
+  return rows.flatMap(row => {
+    try {
+      const text = (index: number) => (row[columns[index]] ?? '').trim();
+      const id = text(1) || text(0);
+      const pokemon = /^any pok[eé]mon$/i.test(normalize(text(13))) ? ANY_POKEMON : resolvePokemon(text(13));
+      const ribbonRequirements = parseRibbonRequirements(text(14));
+      const ribbonIds = [...new Set(ribbonRequirements.flat().map(term => term.ribbonId))];
+      const hasOperators = ribbonRequirements.some(group => group.length > 1 || group.some(term => term.excluded));
+      if (!id || seen.has(id)) throw new Error('Every contest needs a unique round ID.');
+      if (!text(0) || !Number.isFinite(Number(text(0))) || !text(2) || !text(3)) throw new Error(`Number, title and puzzle are required: ${id}`);
+      if (!ribbonIds.length) throw new Error(`Required ribbons are missing: ${id}`);
+      const opensAt = parseContestTime(text(4), true)!, closesAt = parseContestTime(text(5), true)!;
+      if (Date.parse(closesAt) <= Date.parse(opensAt)) throw new Error(`Closing must follow opening: ${id}`);
+      const hints: ContestDefinition['hints'] = [];
+      for (let index = 0; index < 3; index++) {
+        if (!text(7 + index * 2)) continue;
+        const time = parseContestTime(text(8 + index * 2)) ?? opensAt;
+        hints.push({ number: index + 1, text: text(7 + index * 2), releasesAt: Date.parse(time) < Date.parse(opensAt) ? opensAt : time });
+      }
+      const verdictAt = parseContestTime(text(6));
+      // Only valid puzzles reserve an ID, so an incomplete draft cannot hide a later row.
+      seen.add(id);
+      return [{ number: Number(text(0)), id, title: text(2), puzzle: text(3), opensAt, closesAt,
+        verdictAt, hints, answer: { pokemon, ribbonIds, ...(hasOperators ? { ribbonRequirements } : {}) } }];
+    } catch {
+      // Sheet rows may contain drafts or invalid values. Keep loading other puzzles.
+      return [];
     }
-    return { number: Number(text(0)), id, title: text(2), puzzle: text(3), opensAt, closesAt,
-      verdictAt: parseContestTime(text(6)), hints, answer: { pokemon, ribbonIds } };
   }).sort((a, b) => a.number - b.number || a.id.localeCompare(b.id));
 }
 
@@ -133,8 +152,9 @@ export function roundAt(round: ContestDefinition, now: number): ContestRound {
 
 export function checkAnswer(round: ContestDefinition, entry: ContestAnswer): boolean {
   const expected = POKEMON[round.answer.pokemon], actual = POKEMON[entry.pokemon];
-  if (!expected || !actual) return false;
-  const speciesMatch = expected['data-source'] ? entry.pokemon === round.answer.pokemon
-    : (actual['data-source'] ?? entry.pokemon) === round.answer.pokemon;
-  return speciesMatch && round.answer.ribbonIds.every(id => entry.ribbonIds.includes(id));
+  if (!actual || (!expected && round.answer.pokemon !== ANY_POKEMON)) return false;
+  const speciesMatch = round.answer.pokemon === ANY_POKEMON || (expected['data-source'] ? entry.pokemon === round.answer.pokemon
+    : (actual['data-source'] ?? entry.pokemon) === round.answer.pokemon);
+  const requirements = round.answer.ribbonRequirements ?? round.answer.ribbonIds.map(ribbonId => [{ ribbonId, excluded: false }]);
+  return speciesMatch && requirements.every(group => group.some(term => entry.ribbonIds.includes(term.ribbonId) !== term.excluded));
 }

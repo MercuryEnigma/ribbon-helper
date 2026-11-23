@@ -1,7 +1,8 @@
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import gamesData from '../data/games.json'
 import ribbonsData from '../data/ribbons.json'
-import { getGuideById, GUIDES } from './guideRegistry'
+import { getGuideById } from './guideRegistry'
+import CommunityHeader from './CommunityHeader'
 import './guides.css'
 
 interface RibbonEntry {
@@ -23,27 +24,12 @@ function gameIdsToNames(ids: string[]): string {
 
 export default function Guides() {
   const { guideId } = useParams<{ guideId: string }>()
-  const navigate = useNavigate()
   const guide = getGuideById(guideId)
 
   return (
     <div className="guides-wrapper">
       <div className="trainer-card">
-        <div className="trainer-card-header">
-          <span className="trainer-card-pokeball" aria-hidden="true" />
-          <select
-            className="trainer-card-selector"
-            value={guide.id}
-            onChange={event => navigate(`/guides/${event.target.value}`)}
-            aria-label="Select ribbon guide"
-          >
-            {GUIDES.map(guideOption => (
-              <option key={guideOption.id} value={guideOption.id}>{guideOption.title}</option>
-            ))}
-            <option value="ribbon-checker">Ribbon Checker</option>
-          </select>
-          <span className="trainer-card-pokeball" aria-hidden="true" />
-        </div>
+        <CommunityHeader section="guides" guideId={guide.id} />
 
         <div className="trainer-card-body">
           <div className="trainer-card-info">
